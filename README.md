@@ -1,5 +1,7 @@
 # Writing Room
 
+**Online verwenden:** https://bernhardgmeiner.github.io/writing-room/
+
 **Direkt verwenden:** `index.html` ist das fertige Werkzeug (eine Datei, offline, im Browser öffnen), `karten-abcd.pdf` sind die Abstimmungskarten zum Ausdrucken. Alles Weitere in diesem Repository ist der Quellcode dazu.
 
 
