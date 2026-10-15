@@ -1,0 +1,423 @@
+{
+  "id": "g9-email-if-i-were-you",
+  "title": "If I were you …",
+  "titleDe": "Rat an einen Freund",
+  "grade": 9,
+  "level": "A2+/B1",
+  "theme": "Freund:innen & Familie",
+  "textType": "email",
+  "modes": [
+    "full",
+    "frame"
+  ],
+  "lengths": {
+    "short": {
+      "label": "around 200 words",
+      "min": 180,
+      "max": 220
+    },
+    "long": {
+      "label": "around 250 words",
+      "min": 225,
+      "max": 275
+    }
+  },
+  "minutes": {
+    "full": {
+      "short": 50,
+      "long": 60
+    },
+    "frame": {
+      "short": 60,
+      "long": 70
+    }
+  },
+  "task": {
+    "situation": "You have received an email from Ravi, an English friend you met at a summer camp last year. Ravi promised his best friend, Chloe, that he would come to her birthday party last Saturday. But he completely forgot and went to a football match with his uncle instead. Now Chloe is angry and hasn’t answered any of his messages. Ravi asks you what he should do.",
+    "instruction": "Write a reply to Ravi. In your email you should:",
+    "points": [
+      "show that you understand how Ravi feels",
+      "advise him how to apologise to Chloe",
+      "suggest what he could do to make it up to her"
+    ],
+    "words": {
+      "short": "Write around 200 words.",
+      "long": "Write around 250 words."
+    },
+    "de": "Informelle Antwort-E-Mail an einen englischen Freund, der den Geburtstag seiner besten Freundin vergessen und damit ein Versprechen gebrochen hat. Drei Inhaltspunkte: Verständnis zeigen; raten, wie er sich entschuldigen soll; vorschlagen, wie er es wiedergutmachen kann. Freundlicher, persönlicher Ton, Kurzformen erlaubt."
+  },
+  "meta": {
+    "from": "camp.buddy@classmail.example",
+    "to": "ravi.desai@classmail.example",
+    "subjectSlot": "subject"
+  },
+  "focus": {
+    "label": "should / could / if I were you",
+    "labelDe": "Ratschläge: should, could, if I were you",
+    "min": {
+      "short": 5,
+      "long": 6
+    },
+    "note": "Marked: phrases for giving advice and making suggestions: should / shouldn’t, could and If I were you, I’d … (from ‘If’ to ‘I’d’). Other modal verbs (can, will, would, might) are not marked."
+  },
+  "topicWords": [
+    "chloe",
+    "ravi",
+    "party",
+    "birthday",
+    "sorry"
+  ],
+  "gaps": [
+    {
+      "id": "NAME",
+      "step": "signoff",
+      "q": "Who is writing to Ravi? First name only.",
+      "qDe": "Ruft einen Vornamen für die Person, die Ravi antwortet. Keine Namen von Mitschüler:innen oder Lehrer:innen.",
+      "type": "text",
+      "default": "Leonie",
+      "max": 20
+    }
+  ],
+  "steps": [
+    {
+      "id": "subject",
+      "slot": "subject",
+      "part": "Subject",
+      "q": "What do we write in the subject line?",
+      "de": "Die Betreffzeile sagt in wenigen Wörtern, worum es in der Antwort geht.",
+      "own": "Short and friendly: what is your reply about?",
+      "ownDe": "Kurz und freundlich: Worum geht es in eurer Antwort?",
+      "options": [
+        {
+          "l": "A",
+          "id": "re",
+          "label": "A reply",
+          "text": "Re: Chloe’s birthday party",
+          "why": "‘Re:’ shows that this is a reply, so Ravi finds it at once."
+        },
+        {
+          "l": "B",
+          "id": "panic",
+          "label": "Calm him down",
+          "text": "Don’t panic, Ravi!",
+          "why": "Friendly and short. It already tells Ravi that things are not so bad."
+        },
+        {
+          "l": "C",
+          "id": "advice",
+          "label": "Name the topic",
+          "text": "My advice about Chloe",
+          "why": "Clear: Ravi knows what the email is about before he opens it."
+        }
+      ]
+    },
+    {
+      "id": "greeting",
+      "slot": "greeting",
+      "part": "Greeting",
+      "q": "How do we greet Ravi?",
+      "de": "Hier wählen wir die Anrede für einen Freund. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the greeting. Then leave one line free.",
+      "ownDe": "Anrede abschreiben, danach eine Zeile frei lassen.",
+      "options": [
+        {
+          "l": "A",
+          "id": "hi",
+          "label": "Hi",
+          "text": "{{Hi Ravi,}}",
+          "why": "Friendly and informal, just right for a friend."
+        },
+        {
+          "l": "B",
+          "id": "hey",
+          "label": "Hey",
+          "text": "{{Hey Ravi,}}",
+          "why": "Very informal and relaxed, fine for a good friend."
+        },
+        {
+          "l": "C",
+          "id": "dear",
+          "label": "Dear",
+          "text": "{{Dear Ravi,}}",
+          "why": "‘Dear’ with a first name is warm and works in a personal email too."
+        }
+      ]
+    },
+    {
+      "id": "opening",
+      "slot": "opening",
+      "part": "Introduction",
+      "q": "Introduction: how do we react to Ravi’s email?",
+      "de": "Die Einleitung reagiert auf Ravis E-Mail und kündigt Hilfe an. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then finish the paragraph: react to Ravi’s news and say that you want to help.",
+      "ownDe": "Gerüst abschreiben, dann den Absatz fertigschreiben: auf Ravis Nachricht reagieren und Hilfe anbieten.",
+      "options": [
+        {
+          "l": "A",
+          "id": "thanks",
+          "label": "Thank him and react",
+          "text": "{{Thanks for your email.}} I was sorry to hear about you and Chloe, but I’m glad you wrote to me. {{I think I’ve got a few ideas}} that might help.",
+          "why": "It thanks Ravi, reacts to his news and tells him what the email will bring."
+        },
+        {
+          "l": "B",
+          "id": "trap",
+          "label": "Thank him for his news",
+          "trap": true,
+          "crit": "TA",
+          "text": "Thanks for your email! Guess what happened to me last weekend: my volleyball team won the regional cup, and I scored the last point! Anyway, about Chloe: I’m sure it’s not a big deal.",
+          "reject": "Ravi is upset, but this opening is mostly about our own weekend, and ‘it’s not a big deal’ shows that we don’t take his problem seriously.",
+          "rejectDe": "Ravi geht es schlecht, aber die Einleitung handelt fast nur vom eigenen Wochenende, und „it’s not a big deal“ nimmt sein Problem nicht ernst."
+        },
+        {
+          "l": "C",
+          "id": "week",
+          "label": "React with feeling",
+          "text": "{{Thanks for writing to me. What a horrible week}} you’ve had! I’ve read your email twice and thought about you and Chloe a lot. {{Here are a few ideas}} that might help you.",
+          "why": "An exclamation shows that we care, and the last sentence leads to our advice."
+        }
+      ]
+    },
+    {
+      "id": "feel",
+      "slot": "feel",
+      "part": "Body paragraph 1",
+      "q": "Body paragraph 1: how do we show that we understand Ravi?",
+      "de": "Erster Inhaltspunkt: Verständnis für Ravi zeigen. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then add two sentences of your own that show you understand Ravi.",
+      "ownDe": "Gerüst abschreiben, dann zwei eigene Sätze ergänzen, die Verständnis für Ravi zeigen.",
+      "options": [
+        {
+          "l": "A",
+          "id": "sorry",
+          "label": "Show sympathy",
+          "text": "{{First of all, I can imagine how}} terrible you feel. Forgetting a party can happen to anyone, and you didn’t do it on purpose. {{You [[shouldn’t]] be too hard on yourself.}} It was a mistake, and you can still fix it.",
+          "why": "It shows sympathy and gives Ravi hope before the advice starts."
+        },
+        {
+          "l": "B",
+          "id": "sides",
+          "label": "See both sides",
+          "text": "{{I understand why you feel so bad, but}} I understand Chloe, too. She was probably looking forward to seeing you, so she must be really disappointed. {{Still, you [[shouldn’t]] give up on}} your friendship. It’s worth saving.",
+          "why": "Understanding for Ravi and for Chloe prepares honest advice."
+        },
+        {
+          "l": "C",
+          "id": "cousin",
+          "label": "A similar story",
+          "text": "{{Believe me, I know exactly how you feel.}} Last year I forgot my cousin’s birthday, and she didn’t speak to me for a week. I felt awful, but we’re close again now. {{That’s why you [[shouldn’t]] lose hope:}} this can be fixed.",
+          "why": "A short story of our own shows Ravi that he is not alone and that things can get better."
+        }
+      ]
+    },
+    {
+      "id": "apology",
+      "slot": "apology",
+      "part": "Body paragraph 2",
+      "q": "Body paragraph 2: how should Ravi apologise?",
+      "de": "Zweiter Inhaltspunkt: Ratschläge, wie Ravi sich bei Chloe entschuldigen soll. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then give Ravi two pieces of advice in your own words.",
+      "ownDe": "Gerüst abschreiben, dann Ravi zwei eigene Ratschläge geben.",
+      "options": [
+        {
+          "l": "A",
+          "id": "face",
+          "label": "Talk face to face",
+          "text": "{{So how [[should]] you say sorry? [[If I were you, I’d]] talk to Chloe face to face}} instead of sending another message. Tell her honestly what happened, and don’t make excuses. {{You [[shouldn’t]] blame}} the football match or your uncle because that will only make her angrier.",
+          "why": "A question leads to the advice, ‘If I were you, I’d …’ gives it, and ‘shouldn’t’ warns Ravi what not to do."
+        },
+        {
+          "l": "B",
+          "id": "letter",
+          "label": "Write a letter",
+          "text": "{{To put things right, the first thing you [[should]] do is apologise properly.}} Chloe isn’t answering your messages, so you [[could]] write her a real letter by hand. {{In the letter, explain}} what happened and tell her how much your friendship means to you.",
+          "why": "‘Should’ for the most important advice, ‘could’ for a softer suggestion."
+        },
+        {
+          "l": "C",
+          "id": "trap",
+          "label": "Go and see her",
+          "trap": true,
+          "crit": "LSA",
+          "text": "If I would be you, I would go to her house and explain her what happened. Don’t send another message because she is still angry. You should also make her a small present, for example a card with a nice photo of you two from the summer.",
+          "reject": "Three typical mistakes: ‘If I would be you’ (→ If I were you), ‘explain her’ (→ explain to her) and ‘make her a present’ (→ give her a present).",
+          "rejectDe": "Drei typische Fehler: If I would be you → If I were you, explain her → explain to her, make a present (Geschenk machen) → give a present."
+        }
+      ]
+    },
+    {
+      "id": "patience",
+      "slot": "patience",
+      "part": "Body paragraph 2",
+      "len": "long",
+      "q": "What else should Ravi keep in mind when he says sorry?",
+      "de": "Der Absatz geht weiter: ein weiterer Rat zur Entschuldigung. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then add one more piece of advice in your own words.",
+      "ownDe": "Gerüst abschreiben, dann einen weiteren Rat mit eigenen Worten ergänzen.",
+      "options": [
+        {
+          "l": "A",
+          "id": "time",
+          "label": "Give her time",
+          "text": "{{Try to be patient. Chloe may need}} a few days before she is ready to forgive you, {{so you [[shouldn’t]] call her}} every hour or ask other people to talk to her for you. That might feel like pressure, and it won’t help.",
+          "why": "A short imperative adds a new tip, and ‘shouldn’t’ explains what Ravi must avoid and why."
+        },
+        {
+          "l": "B",
+          "id": "friend",
+          "label": "Ask a friend",
+          "text": "{{It [[could]] also help to talk to}} one of Chloe’s close friends first. They probably know how she feels and when it is a good moment to speak to her. {{Just don’t ask them}} to apologise for you. Only you can do that.",
+          "why": "Another idea with ‘could’, plus a clear limit: the apology is Ravi’s job."
+        }
+      ],
+      "join": true
+    },
+    {
+      "id": "makeup",
+      "slot": "makeup",
+      "part": "Body paragraph 3",
+      "q": "Body paragraph 3: what could Ravi do to make it up to Chloe?",
+      "de": "Dritter Inhaltspunkt: Vorschläge, wie Ravi seinen Fehler wiedergutmachen kann. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then suggest one idea of your own and say why it would help.",
+      "ownDe": "Gerüst abschreiben, dann eine eigene Idee vorschlagen und sagen, warum sie helfen würde.",
+      "options": [
+        {
+          "l": "A",
+          "id": "trap",
+          "label": "A picnic and a cake",
+          "trap": true,
+          "crit": "LSR",
+          "text": "After the apology, you could have a picnic with her. The picnic is in the park. Chloe likes the park. You bring a cake. There is ‘Sorry!’ on the cake. Chloe sees the cake. She is happy. You are friends again.",
+          "reject": "The idea is good, but the sentences are very short and simple, and ‘the park’, ‘the cake’ and ‘Chloe’ come again and again. Join your ideas: a picnic in the park that Chloe loves, with a cake that says ‘Sorry!’ …",
+          "rejectDe": "Gute Idee, aber nur sehr kurze, einfache Sätze mit vielen Wiederholungen. Gedanken verbinden, z. B. mit Relativsätzen (that, which) und Linking words."
+        },
+        {
+          "l": "B",
+          "id": "surprise",
+          "label": "A late birthday surprise",
+          "text": "{{After your apology, you [[could]] organise}} a small late birthday surprise for her. What about a picnic in her favourite park, or a cake with ‘Sorry!’ on it? {{But you [[shouldn’t]] make it too big,}} or it might look like you are trying to buy her forgiveness.",
+          "why": "‘Could’ and ‘What about …?’ make suggestions, and ‘shouldn’t’ adds a sensible warning."
+        },
+        {
+          "l": "C",
+          "id": "together",
+          "label": "Spend time together",
+          "text": "{{When you’ve said sorry, you [[could]] invite her}} to something she loves, like a concert, the ice rink or a day at the lake. {{The most important thing is}} that you spend time together. Maybe you [[should]] let her choose the plan this time.",
+          "why": "A concrete suggestion with examples, then the reason behind it."
+        }
+      ]
+    },
+    {
+      "id": "closing",
+      "slot": "closing",
+      "part": "Conclusion",
+      "q": "Conclusion: how do we end the email?",
+      "de": "Der Schluss fasst die Ratschläge kurz zusammen, macht Mut und bittet um eine Antwort. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then add one encouraging sentence of your own for Ravi.",
+      "ownDe": "Gerüst abschreiben, dann einen eigenen Satz ergänzen, der Ravi Mut macht.",
+      "options": [
+        {
+          "l": "A",
+          "id": "luck",
+          "label": "Wish him luck",
+          "text": "{{Good luck, Ravi!}} I know you feel bad now, but if you say sorry honestly and show Chloe that she matters to you, she’ll forgive you. {{Write back soon and tell me how it went.}}",
+          "why": "It sums up the advice in one sentence, encourages Ravi and asks for a reply."
+        },
+        {
+          "l": "B",
+          "id": "news",
+          "label": "A little news from us",
+          "text": "{{Well, I hope my ideas help.}} An honest apology and a little time together can fix a lot. Things are fine here, although I’ve got two tests next week. {{Let me know}} what happens, and keep your chin up!",
+          "why": "It picks up the advice, adds a little own news and keeps Ravi’s problem the main topic."
+        },
+        {
+          "l": "C",
+          "id": "trap",
+          "label": "Wish him luck and ask for news",
+          "trap": true,
+          "crit": "CC",
+          "text": "Good luck, Ravi! I’m sure Chloe will forgive you. Nevertheless, you’ve been friends for years, and one forgotten party can’t destroy that. Otherwise, write back soon and tell me how it went.",
+          "reject": "The linking words don’t fit: ‘Nevertheless’ introduces a contrast, but here a reason follows (→ After all). ‘Otherwise’ means ‘if not’, not ‘apart from that’ (→ Anyway).",
+          "rejectDe": "Die Linking words passen nicht: Nevertheless kündigt einen Gegensatz an, hier folgt aber ein Grund (→ After all). Otherwise heißt „falls nicht“, nicht „sonst noch“ (→ Anyway)."
+        }
+      ]
+    },
+    {
+      "id": "signoff",
+      "slot": "signoff",
+      "part": "Sign-off",
+      "q": "How do we sign off?",
+      "de": "Am Ende stehen die Grußformel und darunter der Vorname, den ihr gleich selbst bestimmt. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the closing formula and, on the next line, the first name we chose.",
+      "ownDe": "Grußformel abschreiben, darunter den gewählten Vornamen.",
+      "options": [
+        {
+          "l": "A",
+          "id": "care",
+          "label": "Take care",
+          "text": "{{Take care,}}\n{NAME}",
+          "why": "Friendly and caring, a good ending when a friend has a problem."
+        },
+        {
+          "l": "B",
+          "id": "speak",
+          "label": "Speak soon",
+          "text": "{{Speak soon,}}\n{NAME}",
+          "why": "Informal, and it shows that we want to hear from Ravi again."
+        },
+        {
+          "l": "C",
+          "id": "wishes",
+          "label": "Best wishes",
+          "text": "{{Best wishes,}}\n{NAME}",
+          "why": "Polite and friendly, good for many personal emails."
+        }
+      ]
+    }
+  ],
+  "order": [
+    "subject",
+    "greeting",
+    "opening",
+    "feel",
+    "apology",
+    "patience",
+    "makeup",
+    "closing",
+    "signoff"
+  ],
+  "checks": [
+    {
+      "en": "A subject line that fits the reply"
+    },
+    {
+      "en": "Informal greeting and sign-off for a friend"
+    },
+    {
+      "en": "Each content point has its own body paragraph, in the order of the task"
+    },
+    {
+      "en": "All three content points: understanding, how to apologise, how to make it up"
+    },
+    {
+      "en": "A range of advice phrases: should, shouldn’t, could, If I were you, I’d …"
+    },
+    {
+      "en": "Each piece of advice comes with a reason or an example"
+    },
+    {
+      "en": "Friendly, personal tone: contractions are fine, mistakes are not"
+    },
+    {
+      "en": "The last paragraph encourages Ravi and asks him to write back"
+    }
+  ],
+  "teacher": {
+    "aim": "Die Klasse baut gemeinsam eine informelle Antwort-E-Mail (A2+/B1) an einen Freund, der den Geburtstag seiner besten Freundin vergessen hat, und übt dabei Ratschläge und Vorschläge mit should / shouldn’t, could und If I were you, I’d … sowie die Konventionen der informellen E-Mail.",
+    "prep": "A/B/C/D-Karten austeilen (eine Garnitur pro Person), Hefte bereitlegen. Beamer im Vollbild. Im Gerüst-Modus den eingebauten Timer nutzen: 5 min pro Absatz, bei Bedarf +1. Die Aufgabe am Beamer enthält alles Nötige.",
+    "heft": "Neue Seite: Datum rechts oben, darunter „Email“ als Überschrift (wie am Beamer). Darunter der E-Mail-Kopf mit vier Zeilen (To, From, Date, Subject) wie am Beamer; der Betreff kommt nach der ersten Entscheidung in die Subject-Zeile, der Name erst unter die Grußformel. Anrede in einer eigenen Zeile, dann eine Zeile frei. Fünf Absätze, jeder nach einer Leerzeile, am Rand die Randwörter Intro, Body 1, Body 2, Body 3, Conclusion. Vor der Grußformel eine Zeile frei, dann Grußformel und Name in zwei eigenen Zeilen. Ratschlag-Wendungen grün unterstreichen.",
+    "flow": "Volltext kurz (50 min): 5 min Aufgabe lesen, 8 Entscheidungen (Betreff, Anrede und Grußformel je ca. 1 min, die fünf Absätze je ca. 2 min), Abschreiben ca. 20 min, 5 min Checkliste. Volltext lang (ca. 60 min): wie kurz, dazu eine Fortsetzung von Body 2 (Geduld oder Hilfe einer Freundin bzw. eines Freundes); das sind eine Entscheidung und rund 45 Wörter Abschreiben mehr. In einer Doppelstunde die restliche Zeit für die Besprechung der Fallen nutzen und die Hausübung zu zweit beginnen. Gerüst kurz (realistisch ca. 60 min): 5 min Aufgabe; Betreff, Anrede und Grußformel je ca. 1 min; pro Absatz 1 min Entscheidung, 5–6 min eigenes Schreiben, 1 min Vergleich mit dem Modell; am Ende 5 min Checkliste. In einer 50-Minuten-Stunde bei der Conclusion nur abstimmen und das Gerüst abschreiben lassen, den eigenen Satz als Hausübung. Gerüst lang (ca. 70 min): gleicher Rhythmus wie kurz, dazu die Fortsetzung von Body 2 mit ca. 7 min (Entscheidung, eigenes Schreiben, Vergleich). In einer Doppelstunde danach eine Vergleichsrunde zu zweit.",
+    "traps": "Introduction B (TA): erzählt fast nur vom eigenen Wochenende und nimmt Ravis Problem nicht ernst. Body 2 C (LSA): If I would be you (→ If I were you), explain her (→ explain to her), make her a present (→ give her a present). Body 3 A (LSR): nur sehr kurze, einfache Sätze, dieselben Wörter immer wieder (the park, the cake, Chloe). Conclusion C (CC): Nevertheless vor einem Grund, Otherwise im Sinn von „sonst noch“. Kürzel: TA = Erfüllung der Aufgabenstellung, CC = Kohärenz und Kohäsion, LSR = Spektrum sprachlicher Mittel, LSA = Sprachrichtigkeit.",
+    "notes": "Aufbau: Jede E-Mail hat fünf Absätze (Einleitung, drei Hauptabsätze mit je einem Inhaltspunkt, Schluss); die lange Fassung macht Body 2 länger, sie fügt keinen Absatz hinzu. Thema Freundschaft: Es geht um einen alltäglichen Fehler (vergessene Party, gebrochenes Versprechen), nicht um Mobbing. Im Gerüst-Modus nicht nach eigenen Streitigkeiten fragen; die Ratschläge beziehen sich auf Ravi und Chloe. Ravi, Chloe und die Adressen sind erfunden; für die Namenslücke nur erfundene Vornamen verwenden, keine Namen von Mitschüler:innen oder Lehrer:innen. Fokus: Nach Body 2 an der Tafel sammeln: If I were you, I’d … (nie „If I would be“), You should / shouldn’t …, You could …, What about …?, Why don’t you …? Differenzierung: Schnelle ergänzen im Gerüst-Modus einen Satz mit „Why don’t you …?“. Hausübung: Ravis Antwort (ca. 80 Wörter): Was hat er gemacht, und wie hat Chloe reagiert?"
+  }
+}

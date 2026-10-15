@@ -1,0 +1,447 @@
+{
+  "id": "g10-blog-street-art-weekend",
+  "title": "Street art weekend",
+  "titleDe": "Street Art: Kunst oder Vandalismus?",
+  "grade": 10,
+  "level": "B1",
+  "theme": "Kultur & Kreativität",
+  "textType": "blog",
+  "modes": [
+    "full",
+    "frame"
+  ],
+  "lengths": {
+    "short": {
+      "label": "around 250 words",
+      "min": 225,
+      "max": 275
+    },
+    "long": {
+      "label": "around 350 words",
+      "min": 315,
+      "max": 385
+    }
+  },
+  "minutes": {
+    "full": {
+      "short": 50,
+      "long": 90
+    },
+    "frame": {
+      "short": 60,
+      "long": 100
+    }
+  },
+  "task": {
+    "situation": "Your school’s English blog is running a series called ‘My cultural weekend’. Last weekend you went on a street-art tour in Vienna or to a street-art festival in Graz, and now you want to write about it for the blog.",
+    "instruction": "Write a blog post. In your blog post you should:",
+    "points": [
+      "describe the tour or festival you went to",
+      "give your opinion on whether street art is art or vandalism",
+      "recommend the experience to your readers"
+    ],
+    "words": {
+      "short": "Give your blog post a title. Write around 250 words.",
+      "long": "Give your blog post a title. Write around 350 words."
+    },
+    "de": "Blogbeitrag für den Englisch-Blog der Schule (Titel, Username, Datum, lockerer und persönlicher Ton, Kurzformen erlaubt, Leser:innen direkt ansprechen, zum Kommentieren einladen). Drei Inhaltspunkte: Erlebnis beschreiben, Meinung zu Street Art (Kunst oder Vandalismus?), Empfehlung. Den Titel wählen wir ganz zum Schluss."
+  },
+  "meta": {
+    "user": "colour_hunter"
+  },
+  "focus": {
+    "label": "opinion and evaluation phrases",
+    "labelDe": "Meinung und Bewertung",
+    "min": {
+      "short": 5,
+      "long": 7
+    },
+    "note": "Marked: phrases that give, report or ask for an opinion, or that judge something (To be honest, In my opinion, I’m sure that, What surprised me most, The highlight for me, Best of all, is perfect for …). Single adjectives such as ‘amazing’ are not marked."
+  },
+  "topicWords": [
+    "street",
+    "art",
+    "artist",
+    "artists",
+    "wall",
+    "walls",
+    "tour",
+    "festival",
+    "picture",
+    "pictures"
+  ],
+  "gaps": [
+    {
+      "id": "FRIEND",
+      "step": "describe",
+      "q": "Who came with us? Give our best friend a first name.",
+      "qDe": "Ruft einen Vornamen für die beste Freundin oder den besten Freund. Keine Namen von Mitschüler:innen oder Lehrer:innen.",
+      "type": "text",
+      "default": "Zara",
+      "max": 20
+    },
+    {
+      "id": "ARTIST",
+      "step": "artist",
+      "q": "What is the street artist’s name? Many street artists use a short artist name.",
+      "qDe": "Wie heißt die Street-Art-Künstlerin oder der Street-Art-Künstler? Gern ein kurzer, erfundener Künstlername. Keine Namen von Mitschüler:innen oder Lehrer:innen.",
+      "type": "text",
+      "default": "Nova",
+      "max": 20
+    }
+  ],
+  "steps": [
+    {
+      "id": "story",
+      "part": "Story",
+      "q": "Where did we go last weekend?",
+      "de": "Wählt das Erlebnis, über das wir bloggen.",
+      "options": [
+        {
+          "l": "A",
+          "id": "tour",
+          "label": "A street-art tour in Vienna",
+          "teaser": "A guided walk along the Donaukanal, where some walls are open for everyone to paint."
+        },
+        {
+          "l": "B",
+          "id": "festival",
+          "label": "A street-art festival in Graz",
+          "teaser": "‘Wall Stories’: three days, artists from ten countries, huge pictures painted live."
+        }
+      ]
+    },
+    {
+      "id": "intro",
+      "slot": "intro",
+      "part": "Introduction",
+      "q": "How do we open our blog post?",
+      "de": "Der erste Absatz führt die Leser:innen zu unserem Wochenende. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then finish the introduction in your own words: talk to your readers and make them curious.",
+      "ownDe": "Gerüst abschreiben, dann den Einstieg mit eigenen Worten fertigschreiben: Leser:innen ansprechen, neugierig machen.",
+      "options": [
+        {
+          "l": "A",
+          "id": "question",
+          "label": "Greet readers and ask a question",
+          "text": "{{Hi everyone! Have you ever really looked at}} the colourful pictures on walls, bridges and old factory buildings? {{[[To be honest,]]}} I never used to. I always walked straight past them. {{That all changed a few days ago,}} and now I see art everywhere I go.",
+          "why": "A greeting, a question and an honest admission speak to readers directly, like in a conversation."
+        },
+        {
+          "l": "B",
+          "id": "scene",
+          "label": "Start with a scene",
+          "text": "{{Picture this:}} it’s a sunny Saturday, and I’m standing in front of a wall that’s taller than a house. It’s covered in bright colours, faces and words. {{I’m not in a museum, though.}} {{I’m in the middle of the city,}} and [[I love that]] the art is free for everyone.",
+          "why": "Present tense and ‘Picture this’ put readers right next to the writer."
+        },
+        {
+          "l": "C",
+          "id": "trap",
+          "label": "Jump right in",
+          "trap": true,
+          "crit": "CC",
+          "text": "It was amazing, and I took more than fifty photos of it. My favourite was the one with the giant fox, and the colours were incredible. We stayed there for three hours, and it was worth every minute. You should definitely go there too!",
+          "reject": "Readers never find out what ‘it’ and ‘there’ refer to: street art, the tour and the festival are not mentioned at all. An introduction first makes clear what the post is about.",
+          "rejectDe": "Leser:innen erfahren nie, worauf sich „it“ und „there“ beziehen: Street Art, Tour oder Festival werden gar nicht genannt. Die Einleitung macht zuerst klar, worum es geht."
+        }
+      ]
+    },
+    {
+      "id": "describe",
+      "slot": "describe",
+      "part": "Body paragraph 1",
+      "q": "Content point 1: what did we see and do?",
+      "de": "Erster Inhaltspunkt: was wir bei der Tour oder beim Festival gesehen und erlebt haben. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then describe what we saw, with two details of your own. You can invent them.",
+      "ownDe": "Gerüst abschreiben, dann mit zwei eigenen Details beschreiben, was wir gesehen haben. Die Details dürfen erfunden sein.",
+      "options": [
+        {
+          "l": "A",
+          "id": "overview",
+          "label": "The whole experience",
+          "text": {
+            "by": "story",
+            "map": {
+              "tour": "{{Last Saturday, my best friend}} {FRIEND} {{and I joined}} a street-art tour along the Donaukanal in Vienna. Our guide showed us huge spray-painted pictures, tiny stencils and paper posters glued onto the walls. {{[[What surprised me most was]]}} that some walls along the canal are ‘legal walls’ where anyone can paint, so the pictures change almost every week.",
+              "festival": "{{Last Saturday, my best friend}} {FRIEND} {{and I went to}} ‘Wall Stories’, a three-day street-art festival in Graz. Artists from ten countries painted huge pictures on old buildings. {{[[What surprised me most was]]}} how fast it all happened. {{In fact,}} a wall that was grey in the morning was a colourful jungle by the evening."
+            }
+          },
+          "why": "Gives the facts first (who, when, where) and then one surprising detail."
+        },
+        {
+          "l": "B",
+          "id": "trap",
+          "label": "Tell the story",
+          "trap": true,
+          "crit": "LSA",
+          "text": {
+            "by": "story",
+            "map": {
+              "tour": "Last Saturday I have been on a street-art tour along the Donaukanal with my best friend {FRIEND}. We were very surprised over the size of the pictures, and our guide explained us the story behind every picture. Some of the paintings were as big as a house, and others were so small that we almost walked past them.",
+              "festival": "Last Saturday I have been at a street-art festival in Graz with my best friend {FRIEND}. We were very surprised over the size of the pictures, and the artists explained us how they plan such huge works. Some of them stood on high ladders, and one artist even worked from a crane to reach the top of the wall."
+            }
+          },
+          "reject": "Three typical mistakes: ‘last Saturday I have been’ (→ last Saturday I was), ‘surprised over’ (→ surprised at / by) and ‘explained us’ (→ explained to us).",
+          "rejectDe": "Drei typische Fehler: last Saturday + Present perfect (→ last Saturday I was), surprised over → surprised at / by, explained us → explained to us."
+        },
+        {
+          "l": "C",
+          "id": "highlight",
+          "label": "Zoom in on the highlight",
+          "text": {
+            "by": "story",
+            "map": {
+              "tour": "{{My best friend}} {FRIEND} {{and I spent}} Saturday afternoon on a street-art tour along the Donaukanal in Vienna. {{[[The highlight for me was]]}} a giant portrait of an old woman under a bridge. Up close, it was just a mess of lines and dots. {{However,}} when we stepped back, a face with kind, tired eyes suddenly appeared.",
+              "festival": "{{My best friend}} {FRIEND} {{and I spent}} Saturday at ‘Wall Stories’, a three-day street-art festival in Graz. {{[[The highlight for me was]]}} watching an artist paint a giant fox on a school wall. At ten in the morning, there were just a few grey lines. {{However,}} by six in the evening, the fox was running through a colourful forest."
+            }
+          },
+          "why": "Zooms in on one work of art. Readers can see it in their minds."
+        }
+      ]
+    },
+    {
+      "id": "artist",
+      "slot": "artist",
+      "part": "Body paragraph 1",
+      "len": "long",
+      "q": "What else did we learn?",
+      "de": "Der Absatz geht weiter mit etwas, das wir an diesem Tag gelernt haben. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then add what we learnt in your own words.",
+      "ownDe": "Gerüst abschreiben, dann mit eigenen Worten ergänzen, was wir gelernt haben.",
+      "options": [
+        {
+          "l": "A",
+          "id": "meet",
+          "label": "We met an artist",
+          "text": "{{During a short break, we met}} {ARTIST}, {{a local artist who has been painting walls}} for more than ten years. “{{[[For me,]] a wall is like}} a giant sketchbook,” {ARTIST} told us. “In a gallery, not many people see your work. Out here, everybody does.” {{[[I couldn’t agree more:]]}} the street is the biggest gallery of all.",
+          "why": "A short quote brings in a real voice and shows the artist’s point of view."
+        },
+        {
+          "l": "B",
+          "id": "skill",
+          "label": "How it’s done",
+          "text": "{{I also learnt that}} street art takes much more planning than I thought. Many artists make small sketches first or cut stencils out of cardboard. {{Others draw a grid on the wall to make sure that}} the picture keeps the right shape when it gets bigger. {{In other words, [[it’s a real craft]],}} not just a quick spray.",
+          "why": "Explains the skill behind street art and ends with a clear judgement: ‘it’s a real craft’."
+        },
+        {
+          "l": "C",
+          "id": "trap",
+          "label": "More about our day",
+          "trap": true,
+          "crit": "TA",
+          "text": "By the way, the weather was great on Saturday. It was 24 degrees and sunny, so we bought ice cream twice and sat by the water for a while. Later we went to a pizza place near the station, and the pizza there was really good and not expensive. I can really recommend it.",
+          "reject": "Weather, ice cream and pizza have nothing to do with street art. Irrelevant details do not count towards the task and make readers lose interest.",
+          "rejectDe": "Wetter, Eis und Pizza haben mit Street Art nichts zu tun. Irrelevante Details zählen nicht und langweilen."
+        }
+      ],
+      "join": true
+    },
+    {
+      "id": "opinion",
+      "slot": "opinion",
+      "part": "Body paragraph 2",
+      "q": "Content point 2: is street art art or vandalism?",
+      "de": "Zweiter Inhaltspunkt: unsere Meinung zu Street Art zwischen Kunst und Vandalismus. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then complete the blogger’s opinion in your own words and add one reason for it.",
+      "ownDe": "Gerüst abschreiben, dann die Meinung aus dem Blog mit eigenen Worten fertigschreiben und eine Begründung ergänzen.",
+      "options": [
+        {
+          "l": "A",
+          "id": "trap",
+          "label": "Art versus graffiti",
+          "trap": true,
+          "crit": "LSR",
+          "text": "Street art is good. I think it is good because it is nice and it is colourful. Graffiti is bad because it is not nice. I think street art is art and graffiti is not art. The pictures are nice and the colours are nice. It is very good that there is street art in the city.",
+          "reject": "Very basic and repetitive: ‘good’, ‘nice’, ‘it is’ and ‘I think’ again and again. Use more precise words (beautiful, creative, damage, permission) and vary your sentences.",
+          "rejectDe": "Sehr einfach und wiederholend (good, nice, it is, I think). Genauere Wörter und abwechslungsreiche Sätze verwenden."
+        },
+        {
+          "l": "B",
+          "id": "depends",
+          "label": "It depends",
+          "text": "{{Some people call pictures like these vandalism, but [[it’s not that simple]].}} {{[[In my opinion,]]}} it depends on whether the artist has permission. Pictures on walls meant for painting are real art, since they brighten up grey places and make people think. {{On the other hand,}} spraying your name on somebody’s house without asking is simply damage.",
+          "why": "A balanced opinion with a clear reason and a contrast. ‘In my opinion’ shows where the writer stands."
+        },
+        {
+          "l": "C",
+          "id": "art",
+          "label": "Definitely art",
+          "text": "{{After last weekend, [[I’m sure that]]}} street art is real art. It takes creativity and skill, and the pictures can express ideas about our world, for example about climate change or friendship. {{What’s more, street art brings colour to}} places that would otherwise be grey and boring. Of course, artists should always ask for permission first.",
+          "why": "A clear opinion with examples. The last sentence shows that the writer has thought about the other side."
+        }
+      ]
+    },
+    {
+      "id": "others",
+      "slot": "others",
+      "part": "Body paragraph 2",
+      "len": "long",
+      "q": "What do other people think?",
+      "de": "Der Absatz geht weiter mit einer anderen Sicht auf Street Art. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then describe another person’s view or another side of the topic.",
+      "ownDe": "Gerüst abschreiben, dann eine andere Sichtweise beschreiben.",
+      "options": [
+        {
+          "l": "A",
+          "id": "grandad",
+          "label": "My grandad’s view",
+          "text": "{{Not everyone likes street art as much as I do.}} My grandad, for instance, [[thinks that]] most paintings on walls make the city look dirty. {{Still, when I showed him my photos,}} he was quite surprised. {{In the end,}} he even admitted that some of them were ‘actually rather beautiful’.",
+          "why": "A family member’s view makes the post personal and shows another side."
+        },
+        {
+          "l": "B",
+          "id": "cost",
+          "label": "The cost of cleaning",
+          "text": "{{There is another side to the story, too.}} Cleaning illegal graffiti off trains, bus stops and houses costs cities a lot of money. {{That’s why [[I think]] we need}} more walls where painting is allowed. {{They give young artists a place to}} practise, while the rest of the city stays clean.",
+          "why": "Looks at a real problem and suggests a solution. ‘That’s why I think’ links the problem to the writer’s opinion."
+        }
+      ],
+      "join": true
+    },
+    {
+      "id": "recommend",
+      "slot": "recommend",
+      "part": "Body paragraph 3",
+      "q": "Content point 3: how do we recommend it to our readers?",
+      "de": "Dritter Inhaltspunkt: Wir empfehlen das Erlebnis unseren Leser:innen weiter. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then add your own tips or reasons why readers should go.",
+      "ownDe": "Gerüst abschreiben, dann eigene Tipps oder Gründe ergänzen, warum man hingehen sollte.",
+      "options": [
+        {
+          "l": "A",
+          "id": "tips",
+          "label": "Practical tips",
+          "text": {
+            "by": "story",
+            "map": {
+              "tour": "{{Whatever you think about street art, [[you should definitely]]}} book a tour. {{Here are my top tips:}} wear comfortable shoes because you’ll walk for about two hours, and charge your phone so that you can take lots of photos. Many tours are in English, which means [[they’re great for]] international visitors.",
+              "festival": "{{Whatever you think about street art,}} put next year’s festival in your calendar now. {{Here are my top tips:}} go early so that you can watch a picture grow line by line, and charge your phone because you’ll want to take lots of photos. {{[[Best of all,]]}} entry is free!"
+            }
+          },
+          "why": "Practical tips with reasons. Readers know exactly what to do."
+        },
+        {
+          "l": "B",
+          "id": "everyone",
+          "label": "Who will love it",
+          "text": "{{Art or not, a day like ours [[is perfect for]] almost everyone.}} Photography fans will love it because there’s a new picture around every corner, and art lovers will learn about techniques. {{Even if you’re not into art, [[it’s a great way to]]}} spend time outside with friends. {{[[Best of all,]]}} it might inspire you to start sketching your own ideas.",
+          "why": "Speaks to different groups of readers and ends with a strong reason to go."
+        }
+      ]
+    },
+    {
+      "id": "concl",
+      "slot": "concl",
+      "part": "Conclusion",
+      "q": "How do we end our blog post?",
+      "de": "Der letzte Absatz beendet unseren Blogbeitrag. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then finish with your own question or invitation to your readers.",
+      "ownDe": "Gerüst abschreiben, dann mit einer eigenen Frage oder Einladung an die Leser:innen enden.",
+      "options": [
+        {
+          "l": "A",
+          "id": "ask",
+          "label": "Ask for comments",
+          "text": "{{Since that Saturday, I’ve looked at every wall with new eyes,}} and I hope you’ll go and see for yourself. {{So, [[what do you think?]]}} Is street art a gift to our cities or just a mess? Tell me in the comments below!",
+          "why": "Looks back on the weekend, asks readers for their opinion and invites them to comment."
+        },
+        {
+          "l": "B",
+          "id": "trap",
+          "label": "Sum it up",
+          "trap": true,
+          "crit": "TA",
+          "text": "In conclusion, it can be said that street art is a controversial phenomenon in modern society. On the basis of the arguments above, it should be regarded as a legitimate form of art. Thank you very much for reading this text about street art and graffiti.",
+          "reject": "This is the ending of an essay, not of a blog post: it sums up arguments about ‘modern society’ and does not invite readers to comment. A blog post ends by talking to its readers and asking for their ideas.",
+          "rejectDe": "Das ist ein Essay-Schluss, kein Blog-Ende: Niemand wird zum Kommentieren eingeladen. Ein Blog endet mit einer Frage oder Einladung an die Leser:innen."
+        },
+        {
+          "l": "C",
+          "id": "challenge",
+          "label": "Give readers a challenge",
+          "text": "{{Until you can go yourself, here’s a little challenge:}} on your way to school tomorrow, look at the walls around you, not at your phone. {{Let me know in the comments}} what you find, and tell me [[what you think]]: is it art or vandalism?",
+          "why": "Gives readers something to do and a reason to come back and comment."
+        }
+      ]
+    },
+    {
+      "id": "title",
+      "slot": "title",
+      "part": "Title",
+      "q": "Now that the blog post is finished, which title do we choose?",
+      "de": "Der Titel kommt zuletzt und soll neugierig machen und zum Inhalt passen.",
+      "own": "Short and catchy: make readers curious about our weekend.",
+      "ownDe": "Kurz und treffend: Der Titel soll neugierig auf unser Wochenende machen.",
+      "options": [
+        {
+          "l": "A",
+          "id": "question",
+          "label": "A question",
+          "text": "Art or vandalism? Here’s what I think",
+          "why": "Picks up the big question of the post and makes readers curious about the answer."
+        },
+        {
+          "l": "B",
+          "id": "lookup",
+          "label": "A playful title",
+          "text": "Look up! The walls are talking",
+          "why": "Short, playful and personal: typical for a blog."
+        },
+        {
+          "l": "C",
+          "id": "place",
+          "label": "Name the place",
+          "text": {
+            "by": "story",
+            "map": {
+              "tour": "The Donaukanal: Vienna’s open-air gallery",
+              "festival": "Wall Stories: three days of colour in Graz"
+            }
+          },
+          "why": "Tells readers where to go and sounds like an invitation."
+        }
+      ]
+    }
+  ],
+  "order": [
+    "title",
+    "intro",
+    "describe",
+    "artist",
+    "opinion",
+    "others",
+    "recommend",
+    "concl"
+  ],
+  "checks": [
+    {
+      "en": "A title that makes readers curious, with user name and date under it"
+    },
+    {
+      "en": "A friendly opening that speaks to readers directly"
+    },
+    {
+      "en": "All three content points: the experience, our opinion, a recommendation"
+    },
+    {
+      "en": "Five paragraphs: each body paragraph opens with a clear link to the one before"
+    },
+    {
+      "en": "Clear opinions with reasons, in precise words, not just ‘good’ and ‘nice’"
+    },
+    {
+      "en": "Informal, conversational register: contractions are fine, mistakes are not"
+    },
+    {
+      "en": "The post ends with an invitation to comment"
+    }
+  ],
+  "teacher": {
+    "aim": "Die Klasse baut gemeinsam einen Blogbeitrag (B1) über ein Street-Art-Wochenende und übt dabei Blog-Konventionen (persönlicher, lockerer Ton, Leser:innen ansprechen, Einladung zum Kommentieren) und Wendungen, mit denen man eine Meinung äußert und etwas bewertet.",
+    "prep": "A/B/C/D-Karten austeilen, Hefte bereitlegen. Beamer im Vollbild. Im Gerüst-Modus den eingebauten Timer nutzen: 5 min pro Absatz, bei Bedarf +1. Optional: zwei, drei eigene Fotos von Street Art als Einstieg zeigen. Die Aufgabe am Beamer enthält alles Nötige.",
+    "heft": "Neue Seite: Datum rechts oben, darunter „Blog post“ als Überschrift (wie am Beamer). Dann 2 Zeilen für den Titel frei lassen (der Titel kommt zuletzt), darunter Username und Datum in einer Zeile (wie am Beamer). Jeder der fünf Absätze beginnt nach einer Leerzeile, am Rand steht das Kurzwort: Intro, Body 1, Body 2, Body 3, Conclusion. Fortsetzungen (nur lang) gehören ohne neue Zeile zum selben Absatz. Wendungen für Meinung und Bewertung grün unterstreichen.",
+    "flow": "Volltext kurz (50 min): 5 min Aufgabe und Kopf, 7 Entscheidungen à ca. 2 min, Abschreiben ca. 20 min, 5 min Checkliste. Volltext lang (Doppelstunde): wie kurz, dazu zwei Fortsetzungen: Body 1 wird um eine Begegnung mit Künstler:in oder die Technik länger, Body 2 um eine andere Sichtweise. Das gemeinsame Schreiben dauert ca. 65 min; die restliche Zeit für die Besprechung der Fallen und den Beginn der Hausübung nutzen. Gerüst kurz (realistisch ca. 60 min): 5 min Aufgabe und Kopf; pro Absatz 1 min Entscheidung, 5–6 min eigenes Schreiben, 1 min Vergleich mit dem Modell; am Ende 5 min Checkliste. In einer 50-Minuten-Stunde den Schluss noch abstimmen und das Gerüst abschreiben lassen; Schluss fertigschreiben und eigenen Titel finden als Hausübung. Gerüst lang: Doppelstunde (100 min), gleicher Rhythmus, dazwischen Zeit für eine Vergleichsrunde zu zweit.",
+    "traps": "Introduction C (CC): unklarer Bezug („it“, „there“), Street Art, Tour oder Festival werden nie genannt. Body 1 B (LSA): last Saturday I have been, surprised over, explained us. Body 1, Fortsetzung C (TA, nur lang): irrelevante Details (Wetter, Eis, Pizza). Body 2 A (LSR): good, nice, it is, I think in Dauerschleife. Conclusion B (TA): Essay-Schluss statt Blog-Ende, keine Einladung zum Kommentieren. Kürzel: TA = Erfüllung der Aufgabenstellung, CC = Kohärenz und Kohäsion, LSR = Spektrum sprachlicher Mittel, LSA = Sprachrichtigkeit.",
+    "notes": "Der Blogbeitrag hat in beiden Längen genau fünf Absätze (Intro, drei Body paragraphs mit je einem Inhaltspunkt, Conclusion); die lange Fassung macht Body 1 und Body 2 länger, statt neue Absätze anzuhängen. Wertehaltung: Wir loben kein illegales Sprayen. Alle gültigen Meinungsabsätze trennen Kunst mit Erlaubnis von Sachbeschädigung. Legale Flächen zum Bemalen gibt es in Wien wirklich (u. a. am Donaukanal), das Festival „Wall Stories“ in Graz ist erfunden. Für die Namenslücken nur erfundene Namen verwenden, keine Namen von Mitschüler:innen oder Lehrer:innen. Fokus: markiert sind Wendungen, die eine Meinung äußern, wiedergeben oder erfragen oder etwas bewerten; einzelne Adjektive (amazing, colourful) zählen nicht. Differenzierung: Schnelle ergänzen im Gerüst-Modus ein eigenes Beispiel für eine bemalte Wand, die sie kennen oder sich ausdenken. Hausübung: Blog-Kommentar (ca. 150 Wörter) als Antwort auf den Blogbeitrag, mit eigener Meinung."
+  }
+}

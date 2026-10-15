@@ -1,0 +1,310 @@
+{
+  "id": "g5-postcard-seaside-holiday",
+  "title": "Greetings from the seaside",
+  "titleDe": "Urlaubspostkarte vom Meer",
+  "grade": 5,
+  "level": "A1",
+  "theme": "Reisen & andere Länder",
+  "textType": "postcard",
+  "modes": [
+    "full"
+  ],
+  "lengths": {
+    "short": {
+      "label": "around 60 words",
+      "min": 50,
+      "max": 70
+    }
+  },
+  "minutes": {
+    "full": {
+      "short": 50
+    }
+  },
+  "task": {
+    "situation": "You are on holiday by the sea with your family. Write a postcard to your grandpa Josef. He lives in Innsbruck.",
+    "instruction": "Write a postcard. Tell Grandpa:",
+    "points": [
+      "where you are and what your holiday home is like",
+      "what the weather is like",
+      "what you do and what you eat"
+    ],
+    "words": {
+      "short": "Write around 60 words."
+    },
+    "de": "Eine Urlaubspostkarte an Opa Josef: wo ihr seid und wohnt, wie das Wetter ist, was ihr macht und was ihr esst."
+  },
+  "meta": {
+    "to": "Josef Gruber\nPostkartenweg 4\n6020 Innsbruck\nAustria"
+  },
+  "focus": {
+    "label": "there is / there are",
+    "labelDe": "there is / there are",
+    "min": {
+      "short": 2
+    },
+    "note": "Marked: every there is / there are."
+  },
+  "topicWords": [],
+  "gaps": [
+    {
+      "id": "NAME",
+      "step": "signoff",
+      "q": "Which first name do we sign with?",
+      "qDe": "Ruft einen Vornamen für den Text am Beamer. Keine Namen von Mitschüler:innen oder Lehrer:innen. Im Heft dürft ihr mit eurem eigenen Namen unterschreiben.",
+      "type": "text",
+      "default": "Zara",
+      "max": 20
+    }
+  ],
+  "steps": [
+    {
+      "id": "place",
+      "part": "Place",
+      "q": "Where is our holiday?",
+      "de": "Hier wählt ihr, wo unser Urlaub am Meer ist.",
+      "options": [
+        {
+          "l": "A",
+          "id": "croatia",
+          "label": "Croatia",
+          "teaser": "Warm, blue sea, pine trees and little islands."
+        },
+        {
+          "l": "B",
+          "id": "cornwall",
+          "label": "Cornwall",
+          "teaser": "The south-west of England: big waves, sandy beaches and fishing boats."
+        },
+        {
+          "l": "C",
+          "id": "greece",
+          "label": "Greece",
+          "teaser": "A small Greek island with white houses and lots of cats."
+        }
+      ]
+    },
+    {
+      "id": "greeting",
+      "slot": "greeting",
+      "part": "Greeting",
+      "q": "How do we start the postcard?",
+      "de": "Mit der Anrede beginnt unsere Karte an Opa Josef. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "dear",
+          "label": "Dear …,",
+          "text": "Dear Grandpa,",
+          "why": "‘Dear’ is always right on a card to your family."
+        },
+        {
+          "l": "B",
+          "id": "hi",
+          "label": "Hi …,",
+          "text": "Hi Grandpa,",
+          "why": "‘Hi’ is short and friendly."
+        },
+        {
+          "l": "C",
+          "id": "hello",
+          "label": "Hello …!",
+          "text": "Hello, Grandpa Josef!",
+          "why": "With his name, the card sounds very personal."
+        }
+      ]
+    },
+    {
+      "id": "where",
+      "slot": "where",
+      "part": "Our holiday home",
+      "q": "Where are we, and what is our holiday home like?",
+      "de": "Hier sagen wir, wo wir sind und wo wir wohnen. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "camp",
+          "label": "A campsite",
+          "why": "It says where we are and what we can see.",
+          "text": {
+            "by": "place",
+            "map": {
+              "croatia": "We are at a campsite in Croatia. [[There are]] lots of tents under tall pine trees.",
+              "cornwall": "We are at a campsite in Cornwall. [[There are]] lots of tents on a green hill.",
+              "greece": "We are at a campsite on a Greek island. [[There are]] lots of tents near the beach."
+            }
+          }
+        },
+        {
+          "l": "B",
+          "id": "hotel",
+          "label": "A hotel",
+          "why": "Grandpa learns about our hotel and one special thing there.",
+          "text": {
+            "by": "place",
+            "map": {
+              "croatia": "We are in a hotel in Split, in Croatia. [[There is]] a pool on the roof!",
+              "cornwall": "We are in a little hotel in Cornwall. [[There is]] a garden with a view of the sea.",
+              "greece": "We are in a white hotel on a Greek island. [[There is]] a pool next to the sea."
+            }
+          }
+        },
+        {
+          "l": "C",
+          "id": "flat",
+          "label": "A holiday flat",
+          "why": "A holiday flat is like a little home by the sea.",
+          "text": {
+            "by": "place",
+            "map": {
+              "croatia": "We are in a holiday flat in Croatia. [[There are]] two small bedrooms and a big balcony.",
+              "cornwall": "We are in a holiday flat in Cornwall. [[There are]] fishing boats under our window.",
+              "greece": "We are in a holiday flat on a Greek island. [[There are]] cats in every street here!"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "weather",
+      "slot": "weather",
+      "part": "Weather",
+      "q": "What is the weather like?",
+      "de": "Hier erzählen wir Opa vom Wetter. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "sunny",
+          "label": "Sunny and warm",
+          "text": "The weather is great. It is sunny and warm, and the sky is blue.",
+          "why": "Short, clear sentences, and Grandpa can almost feel the sun."
+        },
+        {
+          "l": "B",
+          "id": "sunsea",
+          "label": "Sun and sea",
+          "text": "It is sunny every day, but the sea is warm and very blue.",
+          "trap": true,
+          "crit": "CC",
+          "reject": "‘But’ shows a difference. Sun and a warm sea are both good things, so use ‘and’.",
+          "rejectDe": "„But“ zeigt einen Gegensatz. Sonne und warmes Meer passen zusammen, also „and“."
+        },
+        {
+          "l": "C",
+          "id": "windy",
+          "label": "Warm and windy",
+          "text": "It is warm, but it is very windy. [[There are]] big waves, and I love them!",
+          "why": "‘But’ shows a difference here: warm, but windy. The big waves make it exciting."
+        }
+      ]
+    },
+    {
+      "id": "days",
+      "slot": "days",
+      "part": "Every day",
+      "q": "What do we do, and what do we eat?",
+      "de": "Hier geht es darum, was wir jeden Tag machen und essen. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "shells",
+          "label": "Swimming and dinner",
+          "text": "Every morning I swim in the sea and look for shells. In the evening [[there is]] fish or pizza for dinner.",
+          "why": "It tells Grandpa about the morning and the evening."
+        },
+        {
+          "l": "B",
+          "id": "boat",
+          "label": "A boat trip",
+          "why": "A boat trip and food from this place make the card special.",
+          "text": {
+            "by": "place",
+            "map": {
+              "croatia": "In the afternoon we go on a boat trip to an island. [[There is]] a little restaurant, and we eat fish there.",
+              "cornwall": "In the afternoon we go on a boat trip. Back in town, [[there is]] a little shop with the best fish and chips!",
+              "greece": "In the afternoon we go on a boat trip to a little beach. [[There is]] a café there with a great Greek salad!"
+            }
+          }
+        },
+        {
+          "l": "C",
+          "id": "icecream",
+          "label": "The beach and ice cream",
+          "text": "Every afternoon we play on the beach. There is two ice cream shops, and I become a big ice cream every day.",
+          "trap": true,
+          "crit": "LSA",
+          "reject": "Two mistakes: there are two shops, not there is. And I get an ice cream, not I become one.",
+          "rejectDe": "Zwei Fehler: „there are two shops“ (Mehrzahl!) und „get“ statt „become“ – „become“ heißt „werden“, nicht „bekommen“."
+        }
+      ]
+    },
+    {
+      "id": "signoff",
+      "slot": "signoff",
+      "part": "Sign-off",
+      "q": "How do we sign the postcard?",
+      "de": "Mit Grußformel und Namen endet die Postkarte. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "love",
+          "label": "Love,",
+          "text": "Love,\n{NAME}",
+          "why": "The classic ending for a card to your family."
+        },
+        {
+          "l": "B",
+          "id": "lots",
+          "label": "Lots of love,",
+          "text": "Lots of love,\n{NAME}",
+          "why": "A bit warmer than ‘Love’: great for Grandpa."
+        },
+        {
+          "l": "C",
+          "id": "soon",
+          "label": "See you soon,",
+          "text": "See you soon,\n{NAME}",
+          "why": "It tells Grandpa that we want to see him again."
+        }
+      ]
+    }
+  ],
+  "order": [
+    "greeting",
+    "where",
+    "weather",
+    "days",
+    "signoff"
+  ],
+  "checks": [
+    {
+      "en": "The postcard starts with a greeting"
+    },
+    {
+      "en": "It says where we are and what our holiday home is like"
+    },
+    {
+      "en": "It says what the weather is like"
+    },
+    {
+      "en": "It says what we do and what we eat"
+    },
+    {
+      "en": "There is + one thing, there are + two or more things"
+    },
+    {
+      "en": "The sign-off and the name are on their own lines"
+    },
+    {
+      "en": "The address is on the right half"
+    }
+  ],
+  "teacher": {
+    "aim": "Die Klasse schreibt gemeinsam eine kurze Urlaubspostkarte an den Opa und übt there is / there are.",
+    "prep": "A/B/C/D-Karten austeilen, Beamer im Vollbild. Die Aufgabe am Beamer stellt Opa Josef und die Situation vor. Einsatz ab: there is / there are, Present simple mit I und we, einfache Wetterwörter (sunny, warm, windy). Bei Bedarf Wörter an die Tafel: campsite (Campingplatz), balcony (Balkon), fishing (Angeln), weather (Wetter).",
+    "heft": "Neue Seite: Datum rechts, „Postcard“ als Überschrift. Einen Strich in der Mitte der Seite ziehen: links die Nachricht, rechts die Adresse von Opa Josef und ein Kästchen für die Briefmarke. Grußformel und Name stehen auf eigenen Zeilen. Alle Formen von there is / there are grün unterstreichen.",
+    "flow": "Volltext (50 min): 5 min Aufgabe und Adresse abschreiben · Urlaubsort wählen 2 min · 5 Textentscheidungen à ca. 2 min, zusammen ca. 10 min · Abschreiben nach jeder Entscheidung (1. Klasse: ca. 6–8 Wörter pro Minute), zusammen ca. 15 min · 5 min Checkliste · 10 min Puffer, Briefmarke zeichnen.",
+    "traps": "Weather B (CC, Kohärenz und Kohäsion): „but“ ohne Gegensatz, richtig wäre „and“; Option C zeigt den richtigen Gebrauch von „but“ (warm, but windy). Every day C (LSA, Sprachrichtigkeit): „there is two shops“ statt „there are“ und „I become an ice cream“ (false friend: become = werden, bekommen = get).",
+    "notes": "Cornwall liegt im Südwesten Englands, Split ist eine Stadt an der Küste Kroatiens. Im Heft darf jede:r mit dem eigenen Namen unterschreiben. Differenzierung: Schnelle zeichnen die Vorderseite der Postkarte oder schreiben einen Satz mehr mit there is / there are. Hausübung: eine zweite Postkarte an eine Freundin oder einen Freund mit einem anderen Urlaubsort und anderen Entscheidungen."
+  }
+}

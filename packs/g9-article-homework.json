@@ -1,0 +1,370 @@
+{
+  "id": "g9-article-homework",
+  "title": "Homework: help or headache?",
+  "titleDe": "Hausübungen – Hilfe oder Last?",
+  "grade": 9,
+  "level": "A2+/B1",
+  "theme": "Schule & Lernen",
+  "textType": "article",
+  "modes": [
+    "full",
+    "frame"
+  ],
+  "lengths": {
+    "short": {
+      "label": "around 200 words",
+      "min": 180,
+      "max": 220
+    },
+    "long": {
+      "label": "around 250 words",
+      "min": 225,
+      "max": 275
+    }
+  },
+  "minutes": {
+    "full": {
+      "short": 50,
+      "long": 60
+    },
+    "frame": {
+      "short": 60,
+      "long": 70
+    }
+  },
+  "task": {
+    "situation": "Your school magazine is planning an issue about learning. The editor has asked students to write articles about homework for teenage readers.",
+    "instruction": "Write an article. In your article you should:",
+    "points": [
+      "describe how homework can help students",
+      "explain what the limits of homework are",
+      "suggest how homework could work better"
+    ],
+    "words": {
+      "short": "Give your article a title. Write around 200 words.",
+      "long": "Give your article a title. Write around 250 words."
+    },
+    "de": "Artikel für die Schulzeitung zum Thema Hausübungen, Zielgruppe Jugendliche. Drei Inhaltspunkte: Nutzen beschreiben, Grenzen erklären, Verbesserungen vorschlagen. Den Titel wählen wir ganz zum Schluss."
+  },
+  "meta": {
+    "publication": "School magazine · Issue ‘Learning’"
+  },
+  "focus": {
+    "label": "contrast linkers",
+    "labelDe": "Linking words (Gegensatz)",
+    "min": {
+      "short": 5,
+      "long": 6
+    },
+    "note": "Marked: linking words that show a contrast or a concession (although, even though, even if, while, however, on the other hand, in contrast, though, even so, instead of, despite, yet). The simple ‘but’ is not marked."
+  },
+  "topicWords": [
+    "homework",
+    "students",
+    "teachers"
+  ],
+  "gaps": [
+    {
+      "id": "NAME",
+      "step": "voices",
+      "q": "Which student do we quote? First name only.",
+      "qDe": "Ruft einen Vornamen für die Person, die wir zitieren. Keine Namen von Mitschüler:innen oder Lehrer:innen.",
+      "type": "text",
+      "default": "Noor",
+      "max": 20
+    }
+  ],
+  "steps": [
+    {
+      "id": "intro",
+      "slot": "intro",
+      "part": "Introduction",
+      "q": "How do we open the article?",
+      "de": "Der erste Absatz macht die Leser:innen neugierig auf das Thema Hausübungen. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then finish the introduction in your own words: make readers curious about homework.",
+      "ownDe": "Gerüst abschreiben, dann den Einstieg mit eigenen Worten fertigschreiben: Leser:innen neugierig machen.",
+      "options": [
+        {
+          "l": "A",
+          "id": "question",
+          "label": "Ask the readers a question",
+          "text": "{{Do you ever sit at your desk}} late in the evening with a maths sheet that never ends? {{You are not alone, [[although]] some friends}} may claim they finish in ten minutes.",
+          "why": "A question speaks to readers directly, and the joke about friends makes them smile."
+        },
+        {
+          "l": "B",
+          "id": "task",
+          "label": "Introduce the topic",
+          "trap": true,
+          "crit": "LSR",
+          "text": "Our school magazine has asked students to write articles about homework. In this article, I will describe how homework can help students, explain what the limits of homework are and suggest how homework could work better.",
+          "reject": "This copies the task almost word for word and gives readers no reason to read on. Use your own words and start with a hook.",
+          "rejectDe": "Das ist fast wörtlich aus der Aufgabe abgeschrieben und macht niemanden neugierig. Eigene Worte und ein Einstieg, der packt."
+        },
+        {
+          "l": "C",
+          "id": "argue",
+          "label": "Start with an argument at home",
+          "text": "{{Few school topics cause as many arguments at home as}} homework. Parents often see it as useful practice, [[while]] their children would rather spend the afternoon with friends. {{Who is right?}}",
+          "why": "Two opposite views and a short question lead straight into the topic."
+        }
+      ]
+    },
+    {
+      "id": "voices",
+      "slot": "voices",
+      "part": "Introduction",
+      "q": "What do students in our year say?",
+      "de": "Die Einleitung geht weiter: Schüler:innen kommen selbst zu Wort, mit einer kurzen Umfrage oder einem Zitat. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then add in your own words what the students in our year say.",
+      "ownDe": "Gerüst abschreiben, dann mit eigenen Worten ergänzen, was die Schüler:innen unseres Jahrgangs sagen.",
+      "options": [
+        {
+          "l": "A",
+          "id": "survey",
+          "label": "A quick survey",
+          "text": "{{When we asked students in our year, the answers were mixed.}} Some find short tasks helpful before a test. {{[[In contrast,]] others}} say long projects eat up their weekends.",
+          "why": "A small survey shows both sides of the question, and ‘In contrast’ links the two groups."
+        },
+        {
+          "l": "B",
+          "id": "quote",
+          "label": "One student’s view",
+          "text": "{{“Some homework is really useful,” says}} {NAME}, a student in our year. “Three worksheets on a Friday afternoon, [[though,]] feel like a punishment.”",
+          "why": "A short quote brings in a real voice with both sides. ‘Though’ in the middle of the sentence adds the contrast."
+        },
+        {
+          "l": "C",
+          "id": "views",
+          "label": "Different opinions",
+          "trap": true,
+          "crit": "CC",
+          "text": "Students in our year had mixed views. Many said short tasks help them before a test. However, the tasks also show them what to practise. Others, on the other hand, agreed completely.",
+          "reject": "The linking words don’t fit: ‘However’ adds another advantage, not a contrast, and ‘on the other hand’ introduces people who agree. The ‘mixed views’ never appear.",
+          "rejectDe": "Die Linking words passen nicht: However leitet keinen Gegensatz ein, on the other hand steht vor Zustimmung. Die „mixed views“ fehlen."
+        }
+      ],
+      "join": true
+    },
+    {
+      "id": "help",
+      "slot": "help",
+      "part": "Body paragraph 1",
+      "q": "Body paragraph 1: how can homework help students?",
+      "de": "Erster Inhaltspunkt: wie Hausübungen beim Lernen helfen können. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then add one example of how homework helps and finish the last sentence.",
+      "ownDe": "Gerüst abschreiben, dann ein Beispiel ergänzen, wie Hausübungen helfen, und den letzten Satz fertigschreiben.",
+      "options": [
+        {
+          "l": "A",
+          "id": "practice",
+          "label": "Practice before tests",
+          "text": "{{To begin with, homework gives us time to practise}} what we learnt in class. New words and maths formulas only stay in our heads if we use them again. {{[[Even though]] it can be boring,}} this practice often makes tests easier.",
+          "why": "A clear topic sentence, an example and a result. ‘Even though’ admits the boring side."
+        },
+        {
+          "l": "B",
+          "id": "skills",
+          "label": "Skills for life",
+          "text": "{{For me, the biggest benefit of homework is}} the skills it teaches. By doing it regularly, we learn to plan our week, work alone and meet deadlines. {{These skills are useful [[even if]]}} we never use a maths formula again.",
+          "why": "Names the biggest benefit in the topic sentence and looks beyond marks."
+        }
+      ]
+    },
+    {
+      "id": "limits",
+      "slot": "limits",
+      "part": "Body paragraph 2",
+      "q": "Body paragraph 2: what are the limits of homework?",
+      "de": "Zweiter Inhaltspunkt: wo Hausübungen an ihre Grenzen stoßen. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then explain the problem in your own words with one example.",
+      "ownDe": "Gerüst abschreiben, dann das Problem mit eigenen Worten und einem Beispiel erklären.",
+      "options": [
+        {
+          "l": "A",
+          "id": "busy",
+          "label": "Time and pressure",
+          "trap": true,
+          "crit": "LSA",
+          "text": "Homework also has its limits. When teachers give too much, the most students work on their homework until late in the evening and have no time more for sport, music or friends. Many of them complain over stress, and tired students do not learn better.",
+          "reject": "Three typical mistakes: ‘the most students’ (→ most students), ‘no time more’ (→ no time left) and ‘complain over’ (→ complain about).",
+          "rejectDe": "Drei typische Fehler: the most students → most students, no time more (wörtlich „keine Zeit mehr“) → no time left, complain over → complain about."
+        },
+        {
+          "l": "B",
+          "id": "toomuch",
+          "label": "Too much at once",
+          "text": "{{[[However,]] homework also has clear limits.}} {{When several teachers}} give a lot on the same day, students may spend hours at their desks with no time for sport or friends. {{Tired students}} rarely learn anything new at eleven at night.",
+          "why": "‘However’ turns from the benefits to the problems. The example makes the problem easy to imagine."
+        },
+        {
+          "l": "C",
+          "id": "fair",
+          "label": "Not fair for everyone",
+          "text": "{{[[On the other hand,]] homework is not fair for everyone.}} Some students have parents who can explain fractions or check an English essay. Others have nobody to ask at home. {{In that case,}} homework tests the family, not the student.",
+          "why": "A less obvious limit with a clear contrast between two groups and a short, strong last sentence."
+        }
+      ]
+    },
+    {
+      "id": "tips",
+      "slot": "tips",
+      "part": "Body paragraph 3",
+      "q": "Body paragraph 3: how could homework work better?",
+      "de": "Dritter Inhaltspunkt: Vorschläge, wie Hausübungen besser funktionieren könnten. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then add your own suggestion and say why it would help.",
+      "ownDe": "Gerüst abschreiben, dann einen eigenen Vorschlag ergänzen und begründen.",
+      "options": [
+        {
+          "l": "A",
+          "id": "afternoon",
+          "label": "A typical afternoon",
+          "trap": true,
+          "crit": "TA",
+          "text": "On a normal day, I get home at half past three. After a snack, I start with the subject that is due first. Usually I am finished by six, so I still have time for football practice in the evening.",
+          "reject": "This describes one student’s afternoon, but the task asks you to suggest how homework could work better. Content point 3 is missing.",
+          "rejectDe": "Das beschreibt nur einen Nachmittag. Gefragt sind Vorschläge, wie Hausübungen besser funktionieren: Inhaltspunkt 3 fehlt."
+        },
+        {
+          "l": "B",
+          "id": "quality",
+          "label": "Quality, not quantity",
+          "text": "{{How could homework work better? [[Above all]], it should be}} short and have a clear aim. Teachers could plan the week together so that big tasks do not all come at once. {{[[Instead of]] ten similar exercises,}} three good ones are often enough.",
+          "why": "The question turns from the problems to the solutions. ‘Instead of’ compares the old way with a better one."
+        },
+        {
+          "l": "C",
+          "id": "routine",
+          "label": "What students can do",
+          "text": "{{Luckily, students themselves can make homework work better.}} {{[[While]] it is tempting to}} leave everything until Sunday evening, a fixed time each afternoon makes the work feel smaller. {{Another good habit is to ask}} the teacher early when something is unclear.",
+          "why": "‘Luckily’ turns from the problems to the solutions. ‘While’ admits a temptation that every reader knows."
+        }
+      ]
+    },
+    {
+      "id": "teachers",
+      "slot": "teachers",
+      "part": "Body paragraph 3",
+      "len": "long",
+      "q": "What else could help?",
+      "de": "Der Absatz geht weiter: noch ein Vorschlag, diesmal für die Lehrer:innen. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then add one more idea for teachers in your own words.",
+      "ownDe": "Gerüst abschreiben, dann mit eigenen Worten noch eine Idee für Lehrer:innen ergänzen.",
+      "options": [
+        {
+          "l": "A",
+          "id": "choice",
+          "label": "Choice of tasks",
+          "text": "{{One more idea is for teachers. Some already let students choose}} between two or three tasks, for example a short video or a written text. {{[[Although]] this takes more time to plan,}} students often work harder on a task they have chosen themselves.",
+          "why": "A concrete example from teachers that fits the suggestions before it."
+        },
+        {
+          "l": "B",
+          "id": "feedback",
+          "label": "Short feedback",
+          "text": "{{Feedback from teachers could help, too.}} One short comment on each piece of homework shows students what to practise next, [[even if]] there is no mark. {{Most of us read}} a comment more carefully than a number anyway.",
+          "why": "Adds a second, simple suggestion and explains why it would work."
+        }
+      ],
+      "join": true
+    },
+    {
+      "id": "concl",
+      "slot": "concl",
+      "part": "Conclusion",
+      "q": "How do we end the article?",
+      "de": "Der Schluss beantwortet die Frage des Artikels und rundet ihn ab. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then complete the ending in your own words with a clear message.",
+      "ownDe": "Gerüst abschreiben, dann den Schluss mit eigenen Worten und einer klaren Botschaft fertigschreiben.",
+      "options": [
+        {
+          "l": "A",
+          "id": "depends",
+          "label": "A balanced answer",
+          "text": "{{So, is homework a help or a headache?}} The honest answer is: it can be both. {{[[Despite]] its limits,}} it is worth doing if it is well planned.",
+          "why": "Asks the main question once more and gives a balanced answer that sums up benefits, limits and suggestions."
+        },
+        {
+          "l": "B",
+          "id": "honest",
+          "label": "An honest ending",
+          "text": "Let’s be honest: homework will never be anyone’s favourite hobby. {{[[Yet]] if teachers and students plan it together,}} it can turn from a late-night headache into a real help.",
+          "why": "A friendly, honest tone. The last sentence brings together the problems, the benefits and the suggestions."
+        }
+      ]
+    },
+    {
+      "id": "title",
+      "slot": "title",
+      "part": "Title",
+      "q": "Now that the article is finished, which title do we choose?",
+      "de": "Der Titel kommt zuletzt und soll neugierig machen und zum Inhalt passen.",
+      "own": "Short and catchy: make teenagers want to read the article.",
+      "ownDe": "Kurz und treffend: Der Titel soll Jugendliche neugierig auf den Artikel machen.",
+      "options": [
+        {
+          "l": "A",
+          "id": "question",
+          "label": "A question with two sides",
+          "text": "Homework: help or headache?",
+          "why": "Short, catchy and it shows both sides of the topic."
+        },
+        {
+          "l": "B",
+          "id": "less",
+          "label": "A short slogan",
+          "text": "Less is more: the homework question",
+          "why": "A well-known phrase that makes readers curious about our answer."
+        },
+        {
+          "l": "C",
+          "id": "really",
+          "label": "A direct question",
+          "text": "Do we really need homework?",
+          "why": "A direct question that every student wants to see answered."
+        }
+      ]
+    }
+  ],
+  "order": [
+    "title",
+    "intro",
+    "voices",
+    "help",
+    "limits",
+    "tips",
+    "teachers",
+    "concl"
+  ],
+  "checks": [
+    {
+      "en": "A title that makes readers curious"
+    },
+    {
+      "en": "Each content point has its own body paragraph, in the order of the task"
+    },
+    {
+      "en": "An introduction with a hook, not words copied from the task"
+    },
+    {
+      "en": "All three content points: benefits, limits, suggestions"
+    },
+    {
+      "en": "Each body paragraph opens with a topic sentence linked to the paragraph before"
+    },
+    {
+      "en": "Contrast linkers really show a contrast (however, although, while …)"
+    },
+    {
+      "en": "Neutral, friendly register for teenage readers"
+    }
+  ],
+  "teacher": {
+    "aim": "Die Klasse baut gemeinsam einen Artikel (A2+/B1) über Nutzen und Grenzen von Hausübungen mit drei Inhaltspunkten und übt dabei Linking words, die einen Gegensatz oder eine Einschränkung ausdrücken (although, however, on the other hand, while …).",
+    "prep": "A/B/C/D-Karten austeilen (eine Garnitur pro Person), Hefte bereitlegen. Beamer im Vollbild. Im Gerüst-Modus den eingebauten Timer nutzen: 5 min pro Absatz, bei Bedarf +1. Die Aufgabe am Beamer enthält alles Nötige.",
+    "heft": "Neue Seite: Datum rechts oben, darunter „Article“ als Überschrift (wie am Beamer). Dann 2 Zeilen für den Titel frei lassen, der Titel kommt zuletzt. Fünf Absätze, jeder beginnt nach einer Leerzeile; am Rand stehen die Randwörter Intro, Body 1, Body 2, Body 3, Conclusion. Eine Fortsetzung wird ohne neue Zeile im selben Absatz weitergeschrieben. Linking words für Gegensätze grün unterstreichen.",
+    "flow": "Volltext kurz (50 min): 5 min Aufgabe lesen, 7 Entscheidungen à ca. 2 min, Abschreiben ca. 20 min, 5 min Checkliste. Volltext lang (ca. 60 min): wie kurz, dazu eine Fortsetzung von Body 3 (noch ein Vorschlag für Lehrer:innen); das sind eine Entscheidung und rund 35 Wörter Abschreiben mehr. In einer Doppelstunde die restliche Zeit für die Besprechung der Fallen nutzen und die Hausübung zu zweit beginnen. Gerüst kurz (realistisch ca. 60 min): 5 min Aufgabe; pro Absatz 1 min Entscheidung, 5–6 min eigenes Schreiben, 1 min Vergleich mit dem Modell; die Fortsetzung der Einleitung (Stimmen aus dem Jahrgang) braucht ca. 4 min; am Ende 5 min Checkliste. In einer 50-Minuten-Stunde den Schluss noch abstimmen und das Gerüst abschreiben lassen; Schluss fertigschreiben und eigenen Titel finden als Hausübung. Gerüst lang (ca. 70 min): gleicher Rhythmus wie kurz, dazu die Fortsetzung von Body 3, ca. 5 min. In einer Doppelstunde danach eine Vergleichsrunde zu zweit.",
+    "traps": "Introduction B (LSR): Aufgabenstellung fast wörtlich übernommen, kein Einstieg. Introduction, Fortsetzung C (CC): However und on the other hand ohne echten Gegensatz. Body 2 A (LSA): the most students, no time more, complain over. Body 3 A (TA): beschreibt einen Nachmittag statt Vorschläge, Inhaltspunkt 3 fehlt. Kürzel: TA = Erfüllung der Aufgabenstellung, CC = Kohärenz und Kohäsion, LSR = Spektrum sprachlicher Mittel, LSA = Sprachrichtigkeit.",
+    "notes": "Aufbau: Jeder Text hat genau fünf Absätze (Einleitung, drei Hauptteil-Absätze, Schluss); die lange Fassung macht Body 3 länger, sie fügt keinen Absatz hinzu. Fokus: markiert sind Linking words für Gegensatz und Einschränkung; das einfache „but“ wird nicht markiert. Nach der CC-Falle in der Einleitung lohnt eine Minute an der Tafel: Welches Linking word hätte gepasst (Also, In addition; others disagreed)? Für die Namenslücke nur erfundene Vornamen verwenden, keine Namen von Mitschüler:innen oder Lehrer:innen. Differenzierung: Schnelle schreiben im Gerüst-Modus einen zusätzlichen Satz mit einem anderen Gegensatz-Linker (whereas, nevertheless). Hausübung: zweite Fassung mit zwei anderen Entscheidungen oder ein Brief an die Redaktion der Schulzeitung mit der eigenen Meinung."
+  }
+}

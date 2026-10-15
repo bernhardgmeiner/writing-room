@@ -1,0 +1,395 @@
+{
+  "id": "g8-story-wrong-suitcase",
+  "title": "The wrong suitcase",
+  "titleDe": "Der vertauschte Koffer",
+  "grade": 8,
+  "level": "A2+",
+  "theme": "Reisen & andere Länder",
+  "textType": "story",
+  "modes": [
+    "full"
+  ],
+  "lengths": {
+    "short": {
+      "label": "around 150 words",
+      "min": 135,
+      "max": 165
+    }
+  },
+  "minutes": {
+    "full": {
+      "short": 50
+    }
+  },
+  "task": {
+    "situation": "In July, Amir and Leyla, 14-year-old twins, flew from Vienna to Edinburgh in Scotland with their mum. At the airport, they took the wrong red suitcase by mistake, and inside there was a big surprise. You decide whose suitcase it was: Mr Fraser is a magician, Ms Kaur is a museum guide and Ms Reid plays the bagpipes. Write a story about the mix-up.",
+    "instruction": "Write a story with:",
+    "points": [
+      "the arrival and the mix-up at the airport",
+      "the surprise in the suitcase",
+      "what people said on the phone and at the meeting",
+      "a happy ending when the family meets the owner"
+    ],
+    "words": {
+      "short": "Write around 150 words. Use reported speech for what people said."
+    },
+    "de": "Gemeinsame Geschichte über einen vertauschten Koffer in Edinburgh: die Ankunft, die Überraschung im fremden Koffer, was die Leute am Telefon und beim Treffen gesagt haben (in indirekter Rede) und ein Happy End. Zuerst wählt ihr, was im fremden Koffer ist. Den Titel wählen wir zuletzt."
+  },
+  "meta": {},
+  "focus": {
+    "label": "reported speech",
+    "labelDe": "Indirekte Rede (reported speech)",
+    "min": {
+      "short": 4
+    },
+    "note": "Marked: every reporting verb with the word that starts the reported part (said that, told her that, explained that, asked if, asked the twins to). The verbs after it move one step into the past (is → was, can → could)."
+  },
+  "topicWords": [
+    "amir",
+    "leyla",
+    "twins",
+    "mum",
+    "suitcase",
+    "suitcases",
+    "fraser",
+    "kaur",
+    "reid",
+    "edinburgh",
+    "hotel",
+    "airport",
+    "costume",
+    "dinosaur",
+    "bagpipes",
+    "kilt",
+    "magician",
+    "museum",
+    "hat",
+    "owner"
+  ],
+  "gaps": [
+    {
+      "id": "HOTEL",
+      "step": "beginning",
+      "q": "What is the name of the hotel? Invent a short name (without the word ‘Hotel’).",
+      "qDe": "Erfindet einen kurzen Namen für das Hotel, zum Beispiel Blue Door oder Seagull. Ohne das Wort „Hotel“ und kein echter Hotelname.",
+      "type": "text",
+      "default": "Blue Door",
+      "max": 20
+    }
+  ],
+  "steps": [
+    {
+      "id": "inside",
+      "part": "The surprise",
+      "q": "What is in the wrong suitcase? We decide now, but our readers find out later!",
+      "de": "Hier entscheidet ihr, was im fremden Koffer ist und wem er gehört.",
+      "options": [
+        {
+          "l": "A",
+          "id": "magic",
+          "label": "A magician’s things",
+          "teaser": "A black top hat, a toy rabbit and lots of colourful scarves. They belong to Mr Fraser."
+        },
+        {
+          "l": "B",
+          "id": "dino",
+          "label": "A dinosaur costume",
+          "teaser": "A huge green costume with a long tail and big plastic teeth. It belongs to Ms Kaur."
+        },
+        {
+          "l": "C",
+          "id": "pipes",
+          "label": "Bagpipes",
+          "teaser": "A set of bagpipes and a red and green kilt, packed very carefully. They belong to Ms Reid."
+        }
+      ]
+    },
+    {
+      "id": "beginning",
+      "slot": "beginning",
+      "part": "Beginning",
+      "q": "How does our story start? Who? Where? When?",
+      "de": "Der Anfang stellt die Familie vor und erzählt die Ankunft am Flughafen. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "time",
+          "label": "Start with the time and place",
+          "why": "Readers know at once who, where and when, and the story moves quickly to the hotel.",
+          "text": "On a warm July afternoon, Amir, his twin sister Leyla and their mum landed in Edinburgh. Amir grabbed a red suitcase from the baggage belt, and they took a taxi to the {HOTEL} Hotel."
+        },
+        {
+          "l": "B",
+          "id": "trap",
+          "label": "Start at the baggage belt",
+          "trap": true,
+          "crit": "CC",
+          "reject": "‘If’ is for something that may happen. For something that really happened, use ‘when’: When their red suitcase appeared on the belt, …",
+          "rejectDe": "„if“ heißt „falls“; für etwas, das wirklich passiert ist, steht „when“ (als).",
+          "text": "On a warm July afternoon, Amir, Leyla and their mum landed in Edinburgh. If their red suitcase appeared on the belt, Amir grabbed it at once. Then they took a taxi to the {HOTEL} Hotel."
+        },
+        {
+          "l": "C",
+          "id": "speech",
+          "label": "Start with direct speech",
+          "why": "Direct speech puts us right into the busy airport, and the next sentence tells us who is there.",
+          "text": "“There’s our suitcase!” Leyla shouted. It was July, and she, her twin brother Amir and their mum had just landed in Edinburgh. Amir grabbed the red suitcase, and they took a taxi to the {HOTEL} Hotel."
+        }
+      ]
+    },
+    {
+      "id": "discovery",
+      "slot": "discovery",
+      "part": "The suitcase",
+      "q": "What do they find at the hotel?",
+      "de": "Hier merkt die Familie, dass es nicht ihr Koffer ist. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "open",
+          "label": "Leyla opens it",
+          "why": "Leyla’s scream and the strange things make the surprise funny and exciting.",
+          "text": {
+            "by": "inside",
+            "map": {
+              "magic": "In their room, Leyla opened the suitcase and screamed. There were no clothes inside, only a black top hat, a toy rabbit and lots of colourful scarves. It wasn’t their suitcase!",
+              "dino": "In their room, Leyla opened the suitcase and screamed. There were no clothes inside, only a huge green dinosaur costume with a long tail. It wasn’t their suitcase!",
+              "pipes": "In their room, Leyla opened the suitcase and screamed. There were no clothes inside, only a set of bagpipes and a red and green kilt. It wasn’t their suitcase!"
+            }
+          }
+        },
+        {
+          "l": "B",
+          "id": "tag",
+          "label": "Mum notices first",
+          "why": "Mum notices the problem first, and her words are in reported speech.",
+          "text": {
+            "by": "inside",
+            "map": {
+              "magic": "Upstairs, Mum looked at the case more closely and frowned. She [[said that]] it wasn’t their suitcase. Inside, they found a top hat, a toy rabbit and colourful scarves.",
+              "dino": "Upstairs, Mum looked at the case more closely and frowned. She [[said that]] it wasn’t their suitcase. Inside, they found a huge green dinosaur costume with a long tail.",
+              "pipes": "Upstairs, Mum looked at the case more closely and frowned. She [[said that]] it wasn’t their suitcase. Inside, they found some bagpipes and a red and green kilt."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "call",
+      "slot": "call",
+      "part": "Phone call",
+      "q": "How do they find the owner?",
+      "de": "Hier erfahren wir, was am Telefon gesagt wurde. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "airport",
+          "label": "Mum calls the airport",
+          "why": "Two reported sentences: we learn what the woman said without direct speech.",
+          "text": "Mum phoned the airport at once. A friendly woman [[told her that]] another passenger had their suitcase. She [[said that]] they could swap the cases the next day."
+        },
+        {
+          "l": "B",
+          "id": "ring",
+          "label": "The phone rings",
+          "why": "A surprise call keeps the story moving, and we learn what the man said and asked.",
+          "text": "Soon, Mum’s phone rang. A man from the airport [[told her that]] there were two red suitcases on their flight. He [[asked if]] they could meet the owner the next day."
+        },
+        {
+          "l": "C",
+          "id": "card",
+          "label": "A card in the suitcase",
+          "why": "The twins act like detectives, and we hear the owner for the first time.",
+          "text": {
+            "by": "inside",
+            "map": {
+              "magic": "Under the hat, Amir found a card with a phone number. When Mum called it, a man [[said that]] he had their suitcase and [[asked if]] they could meet the next day.",
+              "dino": "Under the costume, Amir found a card with a phone number. When Mum called it, a woman [[said that]] she had their suitcase and [[asked if]] they could meet the next day.",
+              "pipes": "Under the kilt, Amir found a card with a phone number. When Mum called it, a woman [[said that]] she had their suitcase and [[asked if]] they could meet the next day."
+            }
+          }
+        },
+        {
+          "l": "D",
+          "id": "trap",
+          "label": "Questions on the phone",
+          "trap": true,
+          "crit": "LSA",
+          "reject": "Two mistakes: a reported question has no ‘did’ and normal word order: ‘where they were staying’ (not ‘where did they stay’) and ‘what the hotel was called’ (not ‘what was the hotel called’).",
+          "rejectDe": "Zwei Fehler: In der indirekten Frage steht kein did und die normale Wortstellung: „where they were staying“ und „what the hotel was called“.",
+          "text": "Mum phoned the airport at once. A friendly woman asked her where did they stay and what was the hotel called. Then she said that another passenger had their suitcase."
+        }
+      ]
+    },
+    {
+      "id": "meeting",
+      "slot": "meeting",
+      "part": "Meeting",
+      "q": "Where do they meet the owner, and what does the owner tell them?",
+      "de": "Hier lernt die Familie die Person kennen, der der Koffer gehört. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "lobby",
+          "label": "At the hotel",
+          "why": "Short and clear: the owner brings the suitcase back, and reported speech tells us why it was so important.",
+          "text": {
+            "by": "inside",
+            "map": {
+              "magic": "The next morning, Mr Fraser brought their suitcase to the hotel. He [[told the twins that]] he was a magician and needed his top hat for a show that day.",
+              "dino": "The next morning, Ms Kaur brought their suitcase to the hotel. She [[told the twins that]] she was a museum guide and needed the costume for a dinosaur day.",
+              "pipes": "The next morning, Ms Reid brought their suitcase to the hotel. She [[told the twins that]] she played the bagpipes and needed them for her sister’s wedding."
+            }
+          }
+        },
+        {
+          "l": "B",
+          "id": "cafe",
+          "label": "At a café",
+          "why": "A new place and a short description, then the owner explains everything.",
+          "text": {
+            "by": "inside",
+            "map": {
+              "magic": "They met the owner at a café near the castle. Mr Fraser had a red beard and a friendly face. He [[explained that]] he was a magician with a show at four.",
+              "dino": "They met the owner at a café near the castle. Ms Kaur had a big, warm smile. She [[explained that]] she was a museum guide and needed the costume on Saturday.",
+              "pipes": "They met the owner at a café near the castle. Ms Reid wore a green jacket. She [[explained that]] she was playing the bagpipes at her sister’s wedding that afternoon."
+            }
+          }
+        },
+        {
+          "l": "C",
+          "id": "trap",
+          "label": "Back to the airport",
+          "trap": true,
+          "crit": "TA",
+          "reject": "The task says that the family meets the owner. Readers want to know whose strange suitcase it was!",
+          "rejectDe": "Laut Aufgabe trifft die Familie die Person, der der Koffer gehört. Die Leser:innen wollen wissen, wem er gehört.",
+          "text": "The next day, Mum took the wrong suitcase back to the airport. Their own suitcase came to the hotel by taxi that evening, but they never found out whose the other one was."
+        }
+      ]
+    },
+    {
+      "id": "ending",
+      "slot": "ending",
+      "part": "Ending",
+      "q": "How does our story end?",
+      "de": "Der Schluss erzählt das Happy End. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "invite",
+          "label": "An invitation",
+          "why": "The owner says thank you with an invitation, so the mix-up ends with a happy day.",
+          "text": {
+            "by": "inside",
+            "map": {
+              "magic": "Before he left, Mr Fraser [[asked the twins to]] come to his show. There, Leyla even helped him with a trick on stage, and Amir filmed everything.",
+              "dino": "Before she left, Ms Kaur [[asked the twins to]] visit the museum. There, Amir put on the dinosaur costume for a photo, and Leyla laughed until she cried.",
+              "pipes": "Before she left, Ms Reid [[asked the twins to]] come to a concert in the park. When she played there on Sunday, the whole family clapped and danced."
+            }
+          }
+        },
+        {
+          "l": "B",
+          "id": "gift",
+          "label": "A thank-you",
+          "why": "The owner says thank you, and Leyla’s words give the story a funny last line.",
+          "text": {
+            "by": "inside",
+            "map": {
+              "magic": "Mr Fraser was so happy that he showed the twins a card trick. That evening, Leyla [[told Amir that]] it was the best mix-up ever. He agreed.",
+              "dino": "Ms Kaur was so happy that she gave the twins free tickets for the museum. That evening, Leyla [[told Amir that]] it was the best mix-up ever. He agreed.",
+              "pipes": "Ms Reid was so happy that she played a short Scottish song for the twins. That evening, Leyla [[told Amir that]] it was the best mix-up ever. He agreed."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "title",
+      "slot": "title",
+      "part": "Title",
+      "q": "Our story is finished. Which title do we choose?",
+      "de": "Zum Schluss wählen wir den Titel unserer Geschichte.",
+      "options": [
+        {
+          "l": "A",
+          "id": "trap",
+          "label": "The happy ending",
+          "trap": true,
+          "crit": "TA",
+          "reject": "This title tells readers how the story ends. Keep the surprise for the story!",
+          "rejectDe": "Der Titel verrät schon das Ende. Die Überraschung soll erst in der Geschichte kommen.",
+          "text": {
+            "by": "inside",
+            "map": {
+              "magic": "Mr Fraser gets his hat back",
+              "dino": "Ms Kaur gets her dinosaur back",
+              "pipes": "Ms Reid gets her bagpipes back"
+            }
+          }
+        },
+        {
+          "l": "B",
+          "id": "question",
+          "label": "A question",
+          "why": "A question makes readers curious, and it keeps the secret.",
+          "text": "Whose suitcase is this?"
+        },
+        {
+          "l": "C",
+          "id": "place",
+          "label": "Name the place",
+          "why": "The place and the mix-up together: readers know it is a travel story.",
+          "text": "Mix-up in Edinburgh"
+        },
+        {
+          "l": "D",
+          "id": "words",
+          "label": "Somebody’s words",
+          "why": "Short and surprising: these words sound like the moment of the discovery.",
+          "text": "Not our suitcase!"
+        }
+      ]
+    }
+  ],
+  "order": [
+    "title",
+    "beginning",
+    "discovery",
+    "call",
+    "meeting",
+    "ending"
+  ],
+  "checks": [
+    {
+      "en": "A title that makes readers curious but does not tell the end"
+    },
+    {
+      "en": "Beginning: who, where and when"
+    },
+    {
+      "en": "The mix-up, the surprise, the phone call and the meeting are all in the story"
+    },
+    {
+      "en": "Reported speech: said that, told her that, asked if, asked the twins to"
+    },
+    {
+      "en": "In reported speech, the verbs move into the past: is → was, can → could"
+    },
+    {
+      "en": "Reported questions have no ‘did’: asked where they were staying"
+    },
+    {
+      "en": "A happy ending: the family meets the owner"
+    }
+  ],
+  "teacher": {
+    "aim": "Die Klasse schreibt gemeinsam eine lustige Reisegeschichte über einen vertauschten Koffer und übt dabei die indirekte Rede: said that, told somebody that, explained that, asked if und asked somebody to, mit der Rückverschiebung der Zeiten.",
+    "prep": "A/B/C/D-Karten austeilen, Beamer im Vollbild, Hefte bereit. Einsatz ab: indirekte Rede mit said/told/asked und Rückverschiebung (is → was, has → had, can → could), indirekte Fragen mit if und Fragewort. Wörter bei Bedarf erklären: baggage belt (Gepäckband), bagpipes (Dudelsack), kilt (Schottenrock), swap (tauschen).",
+    "heft": "Neue Seite: Datum (rechts) und „Story“ als Überschrift (wie am Beamer), darunter 2 Zeilen für den Titel frei lassen (er kommt zuletzt). Jeder Teil beginnt nach einer Leerzeile, am Rand steht der Name des Teils wie am Beamer: Beginning, The suitcase, Phone call, Meeting, Ending. Am Ende die Ausdrücke der indirekten Rede grün unterstreichen.",
+    "flow": "Volltext (50 min): 4 min Aufgabe und Heft vorbereiten · 7 Entscheidungen (die erste ist eine reine Wahl: Was ist im Koffer?) à ca. 2 min, zusammen ca. 14 min · Abschreiben nach jeder Entscheidung (rund 150 Wörter), zusammen ca. 22 min · 5 min Checkliste und indirekte Rede markieren · 5 min Puffer. Wenn die Zeit knapp wird: Checkliste als Hausübung.",
+    "traps": "Beginning B (CC, Kohärenz und Kohäsion): „If“ statt „When“ (deutsch „wenn“), obwohl das Ereignis wirklich passiert ist. Phone call D (LSA, Sprachrichtigkeit): Wortstellung in indirekten Fragen: „where did they stay“ statt where they were staying, „what was the hotel called“ statt what the hotel was called. Meeting C (TA, Erfüllung der Aufgabenstellung): Die Familie trifft die Besitzerin oder den Besitzer nie, ein Inhaltspunkt fehlt. Title A (TA, Erfüllung der Aufgabenstellung): Der Titel verrät das Ende.",
+    "notes": "Alle Personen sind frei erfunden; Edinburgh ist nur der Schauplatz. Der Koffer enthält nur harmlose, lustige Dinge, und alle Beteiligten sind freundlich. Den Hotelnamen ruft die Klasse selbst (kurz halten, keine echten Hotelnamen). Nach dem Abschreiben zwei markierte Sätze gemeinsam in direkte Rede zurückverwandeln („Another passenger has your suitcase.“). Differenzierung: Schnelle schreiben einen zusätzlichen Satz mit „Mum asked the owner if …“. Hausübung: zweite Fassung mit einem anderen Kofferinhalt und einem anderen Treffpunkt."
+  }
+}

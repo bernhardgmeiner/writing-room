@@ -1,0 +1,313 @@
+{
+  "id": "g8-blog-new-zealand",
+  "title": "Kia ora, New Zealand!",
+  "titleDe": "Blogbeitrag aus Neuseeland",
+  "grade": 8,
+  "level": "A2+",
+  "theme": "Reisen & andere Länder",
+  "textType": "blog",
+  "modes": [
+    "full"
+  ],
+  "lengths": {
+    "short": {
+      "label": "around 150 words",
+      "min": 135,
+      "max": 165
+    }
+  },
+  "minutes": {
+    "full": {
+      "short": 50
+    }
+  },
+  "task": {
+    "situation": "This summer, our blogger spent two weeks on the North Island of New Zealand with their parents and their little brother. Remember: when it is summer in Austria, it is winter in New Zealand. Now it is time for a post on the family’s travel blog.",
+    "instruction": "Write a blog post in which you:",
+    "points": [
+      "describe one place you visited and what you did there",
+      "tell readers what you learnt about Māori culture",
+      "write about something typical of New Zealand that surprised you"
+    ],
+    "words": {
+      "short": "Write around 150 words."
+    },
+    "de": "Gemeinsamer Reiseblog über zwei Wochen Familienurlaub auf der Nordinsel Neuseelands: ein Ort, die Kultur der Māori und eine typisch neuseeländische Überraschung. Linking words für Gründe und Folgen verbinden die Gedanken. Der Titel kommt zuletzt."
+  },
+  "meta": {
+    "user": "halfway_round_the_world"
+  },
+  "focus": {
+    "label": "linking words: reason and result",
+    "labelDe": "Linking words: Grund und Folge",
+    "min": {
+      "short": 5
+    },
+    "note": "Marked: linking words that give a reason or a result (because, because of, so, that’s why, as a result, thanks to)."
+  },
+  "topicWords": [
+    "kiwi",
+    "zealand",
+    "māori"
+  ],
+  "gaps": [
+    {
+      "id": "SHEEP",
+      "step": "surprise",
+      "q": "How many sheep did Mum count? Shout a number.",
+      "qDe": "Wie viele Schafe hat Mama gezählt? Ruft eine Zahl zwischen 100 und 999.",
+      "type": "number",
+      "default": 312,
+      "min": 100,
+      "max": 999
+    }
+  ],
+  "steps": [
+    {
+      "id": "intro",
+      "slot": "intro",
+      "part": "Introduction",
+      "q": "How do we start our travel blog post?",
+      "de": "Mit der Einleitung beginnt unser Blogbeitrag, und die Leser:innen erfahren, wo wir waren. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "kiaora",
+          "label": "Greet readers in Māori",
+          "why": "A Māori greeting is a friendly start and shows at once where the trip went.",
+          "text": "Kia ora, everyone! That’s ‘hello’ in Māori. We’ve just spent two weeks on New Zealand’s North Island, and I’m still tired [[because]] the trip home took more than a day!"
+        },
+        {
+          "l": "B",
+          "id": "winter",
+          "label": "Start with a surprise",
+          "why": "A surprising fact makes readers curious, and ‘because’ explains it.",
+          "text": "Imagine needing a warm jacket in July! We’ve just spent two weeks on New Zealand’s North Island. [[Because]] the country lies in the southern half of the world, it was winter there!"
+        },
+        {
+          "l": "C",
+          "id": "distance",
+          "label": "Start with a number",
+          "why": "A big number shows how far away New Zealand is, and ‘so’ gives the result.",
+          "text": "New Zealand is about 18,000 kilometres from Austria, [[so]] getting there took more than a day. We’ve just spent two weeks on the North Island, and here are my highlights."
+        }
+      ]
+    },
+    {
+      "id": "stop",
+      "slot": "stop",
+      "part": "Body 1",
+      "q": "Which place do we describe?",
+      "de": "Erster Inhaltspunkt: ein Ort, den wir besucht haben. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "beach",
+          "label": "Hot Water Beach",
+          "why": "An unusual place and a fun activity; ‘as a result’ shows what the hot water makes possible.",
+          "text": "Our first stop was Hot Water Beach. Hot water flows under the sand there. [[As a result]], you can dig your own warm pool with a spade. In winter, that felt amazing!"
+        },
+        {
+          "l": "B",
+          "id": "trap",
+          "label": "Lake Taupō",
+          "trap": true,
+          "crit": "LSA",
+          "reject": "Two mistakes: ‘Two weeks ago, we have visited’ (→ we visited) and ‘I buyed’ (→ I bought).",
+          "rejectDe": "Zwei Fehler: Mit ago steht das Past simple (we visited), und buy ist unregelmäßig: I bought.",
+          "text": "Two weeks ago, we have visited Lake Taupō, the biggest lake in New Zealand. It is so big that it looks like the sea, and I buyed a postcard of it for my grandma."
+        },
+        {
+          "l": "C",
+          "id": "caves",
+          "label": "The Waitomo Caves",
+          "why": "A magical moment in the dark, and ‘that’s why’ explains what the cave looks like.",
+          "text": "Inside the Waitomo Caves, we floated through the dark in a small boat. Thousands of glowworms shine on the ceiling to catch flies. [[That’s why]] it looks like a sky full of tiny blue stars."
+        },
+        {
+          "l": "D",
+          "id": "skytower",
+          "label": "The Sky Tower in Auckland",
+          "why": "Facts about the city and a funny family moment make the paragraph lively.",
+          "text": "We went up Auckland’s 328-metre Sky Tower. Part of the floor at the top is glass. [[That’s why]] Mum didn’t want to walk on it, but my little brother lay down on it!"
+        }
+      ]
+    },
+    {
+      "id": "culture",
+      "slot": "culture",
+      "part": "Body 2",
+      "q": "What did we learn about Māori culture?",
+      "de": "Zweiter Inhaltspunkt: was wir über die Kultur der Māori gelernt haben. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "pounamu",
+          "label": "A green stone",
+          "why": "Explains a Māori tradition, and ‘so’ shows what follows from it.",
+          "text": "A Māori artist showed us how to make pendants from pounamu, a green stone. For Māori people, the stone is a treasure, [[so]] a pendant is often given as a gift to someone special."
+        },
+        {
+          "l": "B",
+          "id": "marae",
+          "label": "A Māori meeting house",
+          "why": "A visit described in detail, and ‘so’ shows what follows from a Māori belief.",
+          "text": "A guide took us to a marae, a Māori meeting place. Each carving in its meeting house tells a family story. The house is seen as an ancestor’s body, [[so]] visitors take off their shoes."
+        },
+        {
+          "l": "C",
+          "id": "waka",
+          "label": "A huge canoe",
+          "why": "An impressive number and a clear result: readers can picture the canoe.",
+          "text": "At Waitangi, we saw a huge Māori canoe, a waka. It is 35 metres long, [[so]] more than 70 people are needed to paddle it. It goes out on the water every February."
+        },
+        {
+          "l": "D",
+          "id": "trap",
+          "label": "Our days in Wellington",
+          "trap": true,
+          "crit": "TA",
+          "reject": "This is about the hotel, not about Māori culture. The second point of the task is missing.",
+          "rejectDe": "Hier geht es um das Hotel, nicht um die Kultur der Māori. Der zweite Inhaltspunkt fehlt.",
+          "text": "In Wellington, we stayed in a hotel with a pool. The breakfast was amazing: there were pancakes, eggs and fresh fruit every morning. However, the Wi-Fi was slow, so I couldn’t upload any photos."
+        }
+      ]
+    },
+    {
+      "id": "surprise",
+      "slot": "surprise",
+      "part": "Body 3",
+      "q": "What surprised us in New Zealand?",
+      "de": "Dritter Inhaltspunkt: etwas typisch Neuseeländisches, das uns überrascht hat. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "trap",
+          "label": "Kiwi birds",
+          "trap": true,
+          "crit": "CC",
+          "reject": "‘Therefore’ means ‘that’s why’. But the size of the bird is not the reason why it comes out at night.",
+          "rejectDe": "Therefore heißt „deshalb“. Die Größe des Vogels ist aber nicht der Grund, warum er nachts aktiv ist.",
+          "text": "Kiwi birds are about as big as chickens. Therefore, they can’t fly and only come out at night. We watched one in a dark kiwi house. It was looking for worms with its long beak."
+        },
+        {
+          "l": "B",
+          "id": "left",
+          "label": "Driving on the left",
+          "why": "A surprise that every Austrian can imagine, and a funny family moment as the result.",
+          "text": "In New Zealand, people drive on the left, and even the controls in the car are the other way round. [[That’s why]] Dad switched on the windscreen wipers every time he wanted to turn!"
+        },
+        {
+          "l": "C",
+          "id": "weather",
+          "label": "Four seasons in one day",
+          "why": "A surprise that many visitors talk about, and ‘because of that’ shows what it meant for us.",
+          "text": "The weather in New Zealand changes very quickly. In one afternoon, we had sunshine, rain, hail and a rainbow. [[Because of that]], we always carried sunglasses and a raincoat!"
+        },
+        {
+          "l": "D",
+          "id": "sheep",
+          "label": "Sheep everywhere",
+          "why": "A surprising fact and a funny family story with a number.",
+          "text": "In New Zealand, there are more than four sheep for every person! [[Because of]] a huge flock on the road, we once waited for ten minutes. Mum counted {SHEEP} sheep!"
+        }
+      ]
+    },
+    {
+      "id": "ending",
+      "slot": "ending",
+      "part": "Conclusion",
+      "q": "How do we end our blog post?",
+      "de": "Im Schluss sprechen wir die Leser:innen direkt an. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "bucket",
+          "label": "Ask about the readers’ bucket lists",
+          "why": "Sums up the trip and asks a question that readers can answer in the comments.",
+          "text": "[[Thanks to]] all these adventures, it was the trip of a lifetime. Is New Zealand on your bucket list, too? Tell me in the comments!"
+        },
+        {
+          "l": "B",
+          "id": "unpack",
+          "label": "Ask about the readers’ dream places",
+          "why": "Shows what the trip changed for us and asks a question that invites comments.",
+          "text": "[[Thanks to]] this trip, I want to travel much more. Which place in New Zealand would you love to visit? Write it in the comments!"
+        },
+        {
+          "l": "C",
+          "id": "tips",
+          "label": "Ask for tips for the next trip",
+          "why": "Looks ahead to the next trip and asks readers for help.",
+          "text": "Two weeks was much too short. [[As a result]], we are planning a trip to the South Island. Any tips? Leave a comment below!"
+        }
+      ]
+    },
+    {
+      "id": "title",
+      "slot": "title",
+      "part": "Title",
+      "q": "Our blog post is finished. Which title do we choose?",
+      "de": "Zum Schluss wählen wir den Titel unseres Blogbeitrags.",
+      "options": [
+        {
+          "l": "A",
+          "id": "back",
+          "label": "Back home",
+          "why": "Short and catchy: from Austria, you can hardly travel any further.",
+          "text": "Back from the other side of the world!"
+        },
+        {
+          "l": "B",
+          "id": "upside",
+          "label": "Everything different",
+          "why": "New Zealand lies in the southern half of the world, and many things there were different for us.",
+          "text": "Upside down: two weeks in New Zealand"
+        },
+        {
+          "l": "C",
+          "id": "surprises",
+          "label": "Make them curious",
+          "why": "Numbers make readers curious: what were the surprises?",
+          "text": "Two weeks, one island, a hundred surprises"
+        }
+      ]
+    }
+  ],
+  "order": [
+    "title",
+    "intro",
+    "stop",
+    "culture",
+    "surprise",
+    "ending"
+  ],
+  "checks": [
+    {
+      "en": "A title that fits the whole post"
+    },
+    {
+      "en": "The introduction says where we travelled and makes readers curious"
+    },
+    {
+      "en": "A place, Māori culture and a Kiwi surprise are all in the post"
+    },
+    {
+      "en": "The trip is told in the past simple: we visited, we went …"
+    },
+    {
+      "en": "Every reason and result word fits its meaning: because, so, that’s why, thanks to …"
+    },
+    {
+      "en": "The post ends with a question for the readers"
+    }
+  ],
+  "teacher": {
+    "aim": "Die Klasse baut gemeinsam einen Reiseblog über eine Familienreise auf die Nordinsel Neuseelands und übt dabei Linking words für Gründe und Folgen (because, because of, so, that’s why, as a result, thanks to).",
+    "prep": "A/B/C/D-Karten austeilen, Hefte bereitlegen, Beamer im Vollbild. Einsatz ab: Past simple (auch unregelmäßige Verben), Present perfect mit just, die Linking words because und so. Bei Bedarf Wörter an die Tafel: spade (Schaufel), glowworm (leuchtende Insektenlarve), pendant (Anhänger), treasure (Schatz), ancestor (Vorfahr:in), carving (Schnitzerei), paddle (paddeln), controls (Bedienelemente), windscreen wipers (Scheibenwischer), flock (Herde), hail (Hagel), ceiling (Decke), bucket list (Liste mit Lebensträumen), float (treiben), lie down – lay (sich hinlegen).",
+    "heft": "Neue Seite: Datum rechts oben, darunter „Blog post“ als Überschrift (wie am Beamer). Dann 2 Zeilen für den Titel frei lassen (der Titel kommt zuletzt), darunter Username und Datum in einer Zeile (wie am Beamer). Jeder Absatz beginnt nach einer Leerzeile, am Rand steht der Name des Teils wie am Beamer: Introduction, Body 1, Body 2, Body 3, Conclusion. Linking words für Grund und Folge grün unterstreichen.",
+    "flow": "Volltext (50 min): 5 min Aufgabe lesen (Juli = Winter in Neuseeland, die Familie war auf der Nordinsel) · 6 Entscheidungen à ca. 2–3 min, bei Body 1, Body 2 und Body 3 zuerst 1 min still lesen, zusammen ca. 15 min · Abschreiben nach jeder Entscheidung, zusammen ca. 20 min · 5 min Checkliste · 5 min Puffer. Wenn die Zeit knapp wird: Checkliste als Hausübung.",
+    "traps": "Body 1 B (LSA, Sprachrichtigkeit): „Two weeks ago, we have visited“ (mit ago steht das Past simple) und „I buyed“ statt „I bought“. Body 2 D (TA, Erfüllung der Aufgabenstellung): nur Hotel und Frühstück, der Inhaltspunkt Māori-Kultur fehlt. Body 3 A (CC, Kohärenz und Kohäsion): „Therefore“ ohne echten Grund (die Größe des Kiwis ist nicht der Grund, warum er nicht fliegen kann und nachtaktiv ist).",
+    "notes": "Die Fakten sind geprüft: Österreich–Auckland rund 18.000 km Luftlinie, Anreise mit Umstieg über 24 Stunden; an der Hot Water Beach (Coromandel) steigt rund um die Ebbe heißes Quellwasser durch den Sand, man gräbt sich mit Schaufeln einen eigenen Pool, auch im Winter; Lake Taupō ist der größte See Neuseelands; in den Waitomo Caves leuchten die Larven einer Pilzmücke: Das Licht lockt kleine Insekten an, die an klebrigen Fäden hängen bleiben; Sky Tower 328 m mit Glasboden-Elementen; pounamu (Grünstein, Jade) gilt bei den Māori als Taonga (Schatz) und wird oft als besonderes Geschenk weitergegeben; die verbreitete Regel, man dürfe pounamu nicht für sich selbst kaufen, ist laut Māori-Schnitzer:innen eher moderner Aberglaube; im Versammlungshaus (wharenui) eines marae stellen die Schnitzereien Vorfahr:innen dar, das Haus gilt als Körper einer Vorfahrin oder eines Vorfahren, Schuhe bleiben draußen; das große Kriegskanu in Waitangi ist rund 35 m lang, braucht mindestens 76 Paddler:innen und wird jedes Jahr am Waitangi Day (6. Februar) zu Wasser gelassen; in Neuseeland herrscht Linksverkehr, bei den meisten Autos sitzen Blinker und Scheibenwischer seitenverkehrt; Kiwis (Vögel) sind etwa hühnergroß, flugunfähig und vor allem nachtaktiv; in Neuseeland leben rund 23,4 Millionen Schafe (Stand Juni 2025) und rund 5,3 Millionen Menschen (mehr als vier Schafe pro Person); das Wetter wechselt besonders im Frühling oft mehrmals am Tag („four seasons in one day“). Am Beamer steht Māori mit Strich über dem a (wie im Englischen üblich); im Heft ist auch Maori ohne Strich in Ordnung. Nicht markiert sind Linking words, die keinen Grund und keine Folge ausdrücken (and, but). Differenzierung: Schnelle schreiben einen zusätzlichen Satz mit that’s why oder because of über einen weiteren Moment der Reise. Hausübung: ein Blog-Kommentar (ca. 60 Wörter) als Antwort auf die Frage im Schluss, mit mindestens drei Linking words für Grund und Folge."
+  }
+}

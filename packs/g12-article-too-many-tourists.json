@@ -1,0 +1,447 @@
+{
+  "id": "g12-article-too-many-tourists",
+  "title": "Too many tourists?",
+  "titleDe": "Zu viele Tourist:innen? Overtourism in kleinen Orten",
+  "grade": 12,
+  "level": "B2",
+  "theme": "Umwelt & Nachhaltigkeit",
+  "textType": "article",
+  "modes": [
+    "full",
+    "frame"
+  ],
+  "lengths": {
+    "short": {
+      "label": "around 250 words",
+      "min": 225,
+      "max": 275
+    },
+    "long": {
+      "label": "around 400 words",
+      "min": 360,
+      "max": 440
+    }
+  },
+  "minutes": {
+    "full": {
+      "short": 50,
+      "long": 100
+    },
+    "frame": {
+      "short": 60,
+      "long": 100
+    }
+  },
+  "task": {
+    "situation": "‘Off the Map’, an online travel magazine for young people, is preparing a special issue on responsible travel. The editors have asked readers for articles on the question ‘Too many tourists?’, focusing on small places that attract more visitors than they can handle.",
+    "instruction": "Write an article in which you:",
+    "points": [
+      "explain why some small places attract more visitors than they can cope with",
+      "describe how large numbers of visitors affect local people and the environment",
+      "suggest what visitors and local communities can do about the problem"
+    ],
+    "words": {
+      "short": "Give your article a title. Write around 250 words.",
+      "long": "Give your article a title. Write around 400 words."
+    },
+    "de": "Ein Artikel für ein Online-Reisemagazin für junge Leute über Overtourism in kleinen Orten. Drei Inhaltspunkte: Ursachen erklären, Folgen für Bewohner:innen und Umwelt beschreiben, Lösungen für Gäste und Gemeinden vorschlagen. Den Titel wählen wir ganz zum Schluss."
+  },
+  "meta": {
+    "publication": "Off the Map · online travel magazine for young people"
+  },
+  "focus": {
+    "label": "cause and effect",
+    "labelDe": "Ursache und Wirkung",
+    "min": {
+      "short": 5,
+      "long": 7
+    },
+    "note": "Marked: words and phrases that link causes and effects: lead to, result in, cause (verb), due to, owing to, because of, thanks to, as a result. ‘Because’ and ‘so’ are not marked."
+  },
+  "topicWords": [
+    "tourists",
+    "tourist",
+    "tourism",
+    "visitors",
+    "visitor",
+    "village",
+    "villages",
+    "locals",
+    "local",
+    "guests",
+    "lake",
+    "places",
+    "small",
+    "overtourism"
+  ],
+  "gaps": [
+    {
+      "id": "VILLAGE",
+      "step": "intro",
+      "q": "Our example village needs an invented name. What is it called?",
+      "qDe": "Erfindet einen Namen (ein Wort) für unser Beispieldorf, keinen echten Ort.",
+      "type": "text",
+      "default": "Grünwieden",
+      "max": 14
+    }
+  ],
+  "steps": [
+    {
+      "id": "intro",
+      "slot": "intro",
+      "part": "Introduction",
+      "q": "How do we open the article?",
+      "de": "Der erste Absatz stellt unser Beispieldorf vor und führt zur Frage des Artikels. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then describe the village in your own words and end with a question.",
+      "ownDe": "Gerüst abschreiben, dann das Dorf mit eigenen Worten beschreiben und mit einer Frage enden.",
+      "options": [
+        {
+          "l": "A",
+          "id": "scene",
+          "label": "Start with a scene",
+          "text": "{{At seven in the morning, {VILLAGE} is still quiet.}} By ten, the first coaches have arrived, and hundreds of visitors are pushing through the narrow lanes to photograph the lake. {{For its 800 inhabitants,}} this is a normal summer day. Success, or simply too much?",
+          "why": "A short scene shows the problem before we name it, and the question leads into the article."
+        },
+        {
+          "l": "B",
+          "id": "trap",
+          "label": "Start with a personal experience",
+          "trap": true,
+          "crit": "TA",
+          "text": "I am seventeen, I love travelling, and last summer my family and I spent a week in {VILLAGE}. We swam in the lake every day, ate far too much ice cream and took hundreds of photos. It was a wonderful holiday, and I can recommend the village to everyone.",
+          "reject": "This is a holiday diary that praises the village. It misses the purpose of the article: the problem of too many visitors does not appear at all.",
+          "rejectDe": "Das ist ein Urlaubstagebuch, das das Dorf lobt. Das Thema des Artikels, zu viele Gäste, kommt gar nicht vor."
+        },
+        {
+          "l": "C",
+          "id": "question",
+          "label": "Speak to the readers",
+          "text": "{{Have you ever travelled somewhere quiet, only to find}} half the world already there? {{That is everyday life in {VILLAGE},}} a lakeside village in the Alps with 800 inhabitants and, on summer days, several thousand visitors. {{So when does tourism become}} too much?",
+          "why": "A question that many travellers know from their own trips, then the facts about our village."
+        }
+      ]
+    },
+    {
+      "id": "causes",
+      "slot": "causes",
+      "part": "Body paragraph 1",
+      "q": "Body paragraph 1: why do some small places attract more visitors than they can cope with?",
+      "de": "Erster Inhaltspunkt: warum manche kleine Orte mehr Gäste anziehen, als sie verkraften. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then explain one cause in your own words and say what it leads to.",
+      "ownDe": "Gerüst abschreiben, dann eine Ursache mit eigenen Worten erklären und sagen, wozu sie führt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "trap",
+          "label": "Social media and cheap travel",
+          "trap": true,
+          "crit": "CC",
+          "text": "Social media and cheap travel are the main reasons why small places become overcrowded. Thousands of visitors at a viewpoint lead to one beautiful photo online, and crowded car parks result in cheaper flights. Soon a quiet village is famous all over the world.",
+          "reject": "Cause and effect are the wrong way round: one photo online leads to thousands of visitors, and cheap flights result in crowded car parks, not the other way round.",
+          "rejectDe": "Ursache und Wirkung sind vertauscht: Das Foto führt zu den Besucher:innen, die billigen Flüge führen zu vollen Parkplätzen, nicht umgekehrt."
+        },
+        {
+          "l": "B",
+          "id": "photo",
+          "label": "One photo, thousands of visitors",
+          "text": "{{The crowds often start with a single picture.}} A photo of a boathouse at sunrise goes viral, and suddenly everyone wants the same shot. {{Cheap flights and coach tours do the rest, [[leading to]]}} crowds that a small village was never built for.",
+          "why": "It shows a chain of causes step by step, and ‘leading to’ makes the result clear."
+        },
+        {
+          "l": "C",
+          "id": "reach",
+          "label": "Easy to reach",
+          "text": "{{Villages like this are often too easy to reach.}} Day-trippers from nearby cities and larger resorts can arrive in the morning and be gone by evening. {{[[As a result,]] a village with one main street}} has to cope with the crowds of a small town.",
+          "why": "A clear cause in the topic sentence, and ‘As a result’ leads to the effect."
+        }
+      ]
+    },
+    {
+      "id": "causes2",
+      "slot": "causes2",
+      "part": "Body paragraph 1",
+      "len": "long",
+      "q": "Which other cause do we add?",
+      "de": "Der Absatz geht weiter: eine weitere Ursache. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then explain this cause in your own words with an example.",
+      "ownDe": "Gerüst abschreiben, dann die Ursache mit eigenen Worten und einem Beispiel erklären.",
+      "options": [
+        {
+          "l": "A",
+          "id": "screen",
+          "label": "Film and TV locations",
+          "text": "{{Films and TV series can have the same effect.}} When a popular show is filmed in a small town, fans from all over the world want to see the locations. {{For a place that was never on any tourist map,}} this can [[result in]] a sudden rush that nobody had planned for.",
+          "why": "A cause that many readers know from their own favourite series."
+        },
+        {
+          "l": "B",
+          "id": "timing",
+          "label": "Everyone at the same time",
+          "text": "{{Timing makes the problem worse.}} Most visitors come in the same few summer weeks and at weekends, [[due to]] school holidays and fixed working hours. {{The same village that feels empty in November}} is overflowing in August, with queues for the boat, the car park and even the toilets.",
+          "why": "It explains why the crowds come all at once, with a contrast between November and August."
+        }
+      ],
+      "join": true
+    },
+    {
+      "id": "effects",
+      "slot": "effects",
+      "part": "Body paragraph 2",
+      "q": "Body paragraph 2: how do large numbers of visitors affect local people and the environment?",
+      "de": "Zweiter Inhaltspunkt: die Folgen für Bewohner:innen und Umwelt. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then describe one effect on people and one on nature in your own words.",
+      "ownDe": "Gerüst abschreiben, dann eine Folge für die Menschen und eine für die Natur mit eigenen Worten beschreiben.",
+      "options": [
+        {
+          "l": "A",
+          "id": "homes",
+          "label": "Homes and nature",
+          "text": "{{For local people, the effects are felt every day.}} Rents have risen [[owing to]] the many flats that have become holiday rentals, and young families are moving away. {{Nature suffers too:}} litter and heavy traffic [[cause]] damage to the very lake that visitors come to see.",
+          "why": "It covers people and nature, and the effects are linked to their causes."
+        },
+        {
+          "l": "B",
+          "id": "crowds",
+          "label": "Crowds and traffic",
+          "text": "{{Daily life is the first thing to change.}} Locals queue behind tourists in the supermarket, and coaches block the only road. {{The environment pays a price as well:}} heavy traffic [[causes]] air pollution, and litter piles up along the lake shore.",
+          "why": "Everyday scenes make the effects easy to picture, for people and for nature."
+        },
+        {
+          "l": "C",
+          "id": "trap",
+          "label": "Prices and rubbish",
+          "trap": true,
+          "crit": "LSA",
+          "text": "Most of the effects are bad for the local people. Due to tourists come every day, the prices of flats and food have raised a lot. That is why move many young families away, and the lake is full of rubbish.",
+          "reject": "Three typical mistakes: ‘Due to tourists come’ (→ Because tourists come; due to + noun), ‘have raised’ (→ have risen) and ‘That is why move many young families away’ (→ That is why many young families move away: subject before verb).",
+          "rejectDe": "Drei typische Fehler: due to + Nebensatz (→ because), raise statt rise (→ have risen), deutsche Wortstellung nach „That is why“ (→ many young families move away)."
+        }
+      ]
+    },
+    {
+      "id": "nature",
+      "slot": "nature",
+      "part": "Body paragraph 2",
+      "len": "long",
+      "q": "Which other effect on nature do we describe?",
+      "de": "Der Absatz geht weiter: weitere Folgen für die Umwelt. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then describe another effect on nature in your own words.",
+      "ownDe": "Gerüst abschreiben, dann eine weitere Folge für die Natur mit eigenen Worten beschreiben.",
+      "options": [
+        {
+          "l": "A",
+          "id": "water",
+          "label": "Water and waste",
+          "text": "{{Out of sight, water and waste systems are under strain.}} A sewage system designed for a small village has to deal with thousands of guests, and in dry summers water can run short [[because of]] the extra demand. {{Even wildlife is affected,}} as boats and drones disturb nesting birds.",
+          "why": "It shows effects that visitors do not see, which makes the article more informative."
+        },
+        {
+          "l": "B",
+          "id": "paths",
+          "label": "Paths and plants",
+          "text": "{{Popular hiking areas show the damage most clearly.}} Walkers trample rare plants on their way to the best viewpoints, and birds abandon their nests [[because of]] constant noise. {{Once this kind of damage is done,}} it can take decades to repair.",
+          "why": "Concrete examples from the countryside and a strong last sentence about the long-term effect."
+        }
+      ],
+      "join": true
+    },
+    {
+      "id": "balance",
+      "slot": "balance",
+      "part": "Body paragraph 2",
+      "q": "What is the positive side of tourism?",
+      "de": "Der Absatz geht weiter: was der Tourismus einem Ort bringt. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then name one advantage of tourism for a small place in your own words.",
+      "ownDe": "Gerüst abschreiben, dann einen Vorteil des Tourismus für einen kleinen Ort mit eigenen Worten nennen.",
+      "options": [
+        {
+          "l": "A",
+          "id": "jobs",
+          "label": "Jobs and money",
+          "text": "{{To be fair, tourism is not the enemy.}} In many Alpine valleys, hotels and restaurants provide most jobs, and without visitors many more young people would leave. {{[[Thanks to]] this income,}} villages can afford swimming pools and bus services for local people.",
+          "why": "It gives the other side a fair hearing with concrete advantages."
+        },
+        {
+          "l": "B",
+          "id": "culture",
+          "label": "Traditions stay alive",
+          "text": "{{Still, it would be unfair to blame visitors for everything.}} {{[[Thanks to]] them,}} crafts, local dishes and festivals stay alive, and many places could not afford a museum without guests. {{The problem is not tourism itself but}} too many people at once.",
+          "why": "It defends tourism and then says exactly where the problem lies, which leads to the solutions."
+        }
+      ],
+      "join": true
+    },
+    {
+      "id": "solutions",
+      "slot": "solutions",
+      "part": "Body paragraph 3",
+      "q": "Body paragraph 3: what can visitors and local communities do?",
+      "de": "Dritter Inhaltspunkt: Vorschläge für Gäste und Gemeinden. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then suggest one thing a village and one thing visitors can do.",
+      "ownDe": "Gerüst abschreiben, dann je einen Vorschlag für das Dorf und für die Gäste machen.",
+      "options": [
+        {
+          "l": "A",
+          "id": "both",
+          "label": "Both sides can act",
+          "text": "{{Keeping these benefits without the crowds needs action from both sides.}} Villages can limit the number of coaches, charge day visitors a fee or stop flats from becoming holiday rentals. {{Visitors, in turn, can}} stay a few nights instead of a few hours, which [[results in]] fewer crowds and more income for locals.",
+          "why": "Suggestions for both groups named in the task, and the last one comes with its effect."
+        },
+        {
+          "l": "B",
+          "id": "examples",
+          "label": "Learn from others",
+          "text": "{{Some places already show how to keep the benefits but not the crowds.}} Venice now charges day visitors an entry fee on peak days, and some Alpine villages give coaches fixed time slots. {{As travellers, we can help by}} taking the train and choosing spring or autumn, which [[results in]] quieter streets.",
+          "why": "Real examples show that solutions are possible, and readers learn what they can do themselves."
+        },
+        {
+          "l": "C",
+          "id": "trap",
+          "label": "Tips for visitors",
+          "trap": true,
+          "crit": "TA",
+          "text": "Visitors can make the most of their trip with a few simple tricks. The best photos of the lake are taken at sunrise, before the coaches arrive. It is also smart to book bus tours early and to share the best spots online so that friends can find them.",
+          "reject": "These are tips for getting better photos, not suggestions to reduce the problem. Sharing spots online would even attract more crowds.",
+          "rejectDe": "Das sind Fototipps, keine Lösungen. Orte online zu teilen lockt sogar noch mehr Menschen an."
+        }
+      ]
+    },
+    {
+      "id": "solutions2",
+      "slot": "solutions2",
+      "part": "Body paragraph 3",
+      "len": "long",
+      "q": "Which further suggestion do we make?",
+      "de": "Der Absatz geht weiter: ein weiterer Vorschlag. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then add one more suggestion and say why it helps.",
+      "ownDe": "Gerüst abschreiben, dann einen weiteren Vorschlag ergänzen und begründen.",
+      "options": [
+        {
+          "l": "A",
+          "id": "council",
+          "label": "Help from the council",
+          "text": "{{Local councils can do more than set limits.}} A booking system for parking, a shuttle bus from the next town and signposted walks that spread visitors more evenly all ease the pressure. {{When such measures are explained clearly,}} most guests accept them, and, [[as a result]], locals feel that their needs are taken seriously.",
+          "why": "Practical ideas that spread visitors out, and a reason why they work."
+        },
+        {
+          "l": "B",
+          "id": "guest",
+          "label": "Be a good guest",
+          "text": "{{Above all, every visitor can simply behave like a guest.}} Staying on marked paths, keeping noise down, taking rubbish home and asking before photographing people’s houses are small things. {{Together, though, they}} make the difference between visitors who are welcome and visitors who are merely tolerated.",
+          "why": "Simple rules that every reader can follow on the next trip."
+        }
+      ],
+      "join": true
+    },
+    {
+      "id": "concl",
+      "slot": "concl",
+      "part": "Conclusion",
+      "q": "How do we end the article?",
+      "de": "Der Schluss fasst die Botschaft zusammen und bringt kein neues Argument. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then sum up the article’s message in one or two sentences of your own.",
+      "ownDe": "Gerüst abschreiben, dann die Botschaft des Artikels in ein bis zwei eigenen Sätzen zusammenfassen.",
+      "options": [
+        {
+          "l": "A",
+          "id": "trap",
+          "label": "Sum up both sides",
+          "trap": true,
+          "crit": "LSR",
+          "text": "There is no easy answer to overtourism. There are problems for locals and there is damage to nature, but there are also jobs and money. There is a way forward if there are fair rules for visitors and for villages like {VILLAGE}.",
+          "reject": "Correct, but every clause is built with ‘there is’ or ‘there are’ (six times). A B2 conclusion needs a range of structures.",
+          "rejectDe": "Sprachlich richtig, aber sechsmal „there is / there are“. Ein B2-Schluss braucht abwechslungsreiche Satzmuster."
+        },
+        {
+          "l": "B",
+          "id": "sumup",
+          "label": "Sum up the message",
+          "text": "{{All in all, overtourism is [[caused]] by}} millions of small decisions, and small decisions can help to solve it. {{If visitors and villages share the responsibility,}} places like {VILLAGE} can stay beautiful and remain a real home for local families.",
+          "why": "It sums up the article in one idea and ends on a hopeful note."
+        },
+        {
+          "l": "C",
+          "id": "thought",
+          "label": "Speak to the readers",
+          "text": "{{Next time you plan a trip,}} think about the people behind the picture-postcard view. {{Travelling a little more thoughtfully is no sacrifice,}} and [[thanks to]] such choices, places like {VILLAGE} can welcome visitors without losing their soul.",
+          "why": "It speaks to the readers directly and leaves them with a clear message for their next holiday."
+        }
+      ]
+    },
+    {
+      "id": "title",
+      "slot": "title",
+      "part": "Title",
+      "q": "Now that the article is finished, which title do we choose?",
+      "de": "Zuletzt wählen wir den Titel für unseren Artikel.",
+      "own": "Short and catchy: a play on words, a question or a contrast that fits our article.",
+      "ownDe": "Kurz und packend: ein Wortspiel, eine Frage oder ein Gegensatz, passend zu unserem Artikel.",
+      "options": [
+        {
+          "l": "A",
+          "id": "wish",
+          "label": "A play on words",
+          "text": "Wish you weren’t here?",
+          "why": "It twists the classic postcard phrase ‘Wish you were here’ and makes readers curious."
+        },
+        {
+          "l": "B",
+          "id": "perfect",
+          "label": "A contrast",
+          "text": "Picture perfect, packed to the limit",
+          "why": "The contrast between the perfect photo and the crowds sums up the problem."
+        },
+        {
+          "l": "C",
+          "id": "backdrop",
+          "label": "A thoughtful headline",
+          "text": "When a village becomes a backdrop",
+          "why": "It makes readers think about what is lost when a home becomes a photo spot."
+        }
+      ]
+    }
+  ],
+  "order": [
+    "title",
+    "intro",
+    "causes",
+    "causes2",
+    "effects",
+    "nature",
+    "balance",
+    "solutions",
+    "solutions2",
+    "concl"
+  ],
+  "checks": [
+    {
+      "en": "A catchy title, ideally a play on words"
+    },
+    {
+      "en": "An introduction that presents our example village and makes readers curious"
+    },
+    {
+      "en": "All three content points: causes, effects on people and nature, suggestions"
+    },
+    {
+      "en": "Five paragraphs; each body paragraph opens with a topic sentence linked to what came before"
+    },
+    {
+      "en": "Causes and effects are linked clearly (lead to, result in, due to, as a result)"
+    },
+    {
+      "en": "A fair article: the positive side of tourism is mentioned too"
+    },
+    {
+      "en": "The conclusion adds no new arguments"
+    }
+  ],
+  "teacher": {
+    "aim": "Die Klasse baut gemeinsam einen Artikel nach SRDP-Standard über Overtourism in kleinen Orten: Ursachen, Folgen für Bewohner:innen und Umwelt, eine faire Gegenseite und Vorschläge für Gäste und Gemeinden. Fokus: Ursache und Wirkung sprachlich klar verknüpfen (lead to, result in, cause, due to, owing to, because of, thanks to, as a result).",
+    "prep": "A/B/C/D-Karten austeilen, eine Garnitur pro Person (ohne Karten: 1–4 Finger, die Tasten 1–4 wählen wie A–D). Beamer im Vollbild. Die Aufgabe am Beamer enthält alles Nötige. Im Gerüst-Modus den eingebauten Timer nutzen: 5–6 min pro Absatz.",
+    "heft": "Neue Seite: Datum (rechts), „Article“ als Überschrift, darunter 2 Zeilen für den Titel frei lassen (der Titel kommt zuletzt). Jeder Absatz beginnt nach einer Leerzeile, am Rand stehen die Randwörter Intro, Body 1, Body 2, Body 3 und Conclusion. Ausdrücke für Ursache und Wirkung grün unterstreichen.",
+    "flow": "Volltext kurz (50 min): 3 min Aufgabe lesen, Dorfnamen erfinden, 7 Entscheidungen à ca. 2 min, Abschreiben ca. 25 min, 5 min Checkliste. Volltext lang (100 min): zusätzlich drei Fortsetzungen, die Body 1, 2 und 3 verlängern (kein neuer Absatz), Abschreiben ca. 40 min, am Ende Wortzahl und markierte Ausdrücke zählen. Gerüst kurz (60 min): 3 min Aufgabe, pro Absatz (und für die Fortsetzung von Body 2 zur Gegenseite) 1 min Entscheidung, 5–6 min eigenes Schreiben, 1 min Vergleich mit dem Modell; am Ende 2 min Titel und 4 min Checkliste. In 50 Minuten: Schluss und Titel als Hausübung. Gerüst lang (100 min): dieselben Phasen für die fünf Absätze und die Fortsetzung zur Gegenseite, dazu drei weitere Fortsetzungen à ca. 6 min (1 min Entscheidung, 4 min Schreiben im selben Absatz, 1 min Vergleich). Bei Body 3 Option B die Beispiele (Eintrittsgeld für Tagesgäste, Zeitfenster für Reisebusse) kurz an die Tafel schreiben.",
+    "traps": "Introduction B (TA): Urlaubstagebuch, das das Dorf lobt; das Problem kommt nicht vor. Body 1 A (CC): Ursache und Wirkung vertauscht (lead to, result in in die falsche Richtung). Body 2 C (LSA): due to + Nebensatz, have raised statt have risen, deutsche Wortstellung nach „That is why“ (move many young families away). Body 3 C (TA): Fototipps statt Lösungen, die das Problem sogar verschärfen. Conclusion A (LSR): sechsmal there is / there are, kein Spektrum an Satzmustern. Kürzel: TA = Erfüllung der Aufgabenstellung, CC = Kohärenz und Kohäsion, LSR = Spektrum sprachlicher Mittel, LSA = Sprachrichtigkeit.",
+    "notes": "Der Artikel hat in beiden Längen fünf Absätze (Intro, drei Hauptteile, Schluss); die lange Fassung macht Body 1, 2 und 3 mit je einer Fortsetzung länger, ohne neue Absätze. Das Beispieldorf ist erfunden; die Klasse gibt ihm einen Namen (kein echter Ort). Der Text verwendet keine Zahlen aus Studien; die 800 Einwohner:innen gehören zum erfundenen Dorf. Fakten in den Optionen: Venedig verlangt seit 2024 an Spitzentagen ein Eintrittsgeld von Tagesgästen; einige Alpenorte vergeben Zeitfenster für Reisebusse. Der Artikel ist ausgewogen: Die Fortsetzung von Body 2 zeigt in beiden Längen, was Tourismus Orten bringt. Die Falle in Body 1 zeigt genau den Fokus der Einheit: Bei lead to und result in steht die Ursache vorne. Differenzierung: Schnelle formulieren im Gerüst-Modus einen Satz mit due to + Nomen und einen mit because + Satz. Hausübung: zweite Fassung mit anderen Entscheidungen oder ein kurzer Absatz über ein zweites, erfundenes Ausflugsziel mit demselben Problem."
+  }
+}

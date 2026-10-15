@@ -1,0 +1,405 @@
+{
+  "id": "g12-email-youth-delegate",
+  "title": "Youth delegate wanted",
+  "titleDe": "Bewerbung als Jugenddelegierte:r bei einer Klimakonferenz",
+  "grade": 12,
+  "level": "B2",
+  "theme": "Umwelt & Nachhaltigkeit",
+  "textType": "email",
+  "modes": [
+    "full",
+    "frame"
+  ],
+  "lengths": {
+    "short": {
+      "label": "around 250 words",
+      "min": 225,
+      "max": 275
+    }
+  },
+  "minutes": {
+    "full": {
+      "short": 50
+    },
+    "frame": {
+      "short": 60
+    }
+  },
+  "task": {
+    "situation": "You have seen this advert on the website of Climate Crossing, an international youth network: ‘YOUTH DELEGATES WANTED. Next March, Climate Crossing will send a team of young people aged 16 to 19 to the International Youth Climate Forum in Lisbon. Delegates will take part in workshops, discuss their ideas with scientists and politicians, and share what they have learnt when they return home. Travel and accommodation are paid for. Please send your application to our selection panel at delegates@climatecrossing-youth.example. Programme coordinator: Ms Inês Carvalho.’",
+    "instruction": "Write an email in which you apply to become a youth delegate. In your email you should:",
+    "points": [
+      "outline what you have done for the environment so far",
+      "explain which issue you would like to raise at the forum and why",
+      "suggest how you would share your experience with young people at home"
+    ],
+    "words": {
+      "short": "Write around 250 words."
+    },
+    "de": "Formelle Bewerbungs-E-Mail als Jugenddelegierte:r bei einer internationalen Klimakonferenz. Wir schreiben aus der Sicht einer erfundenen Person. Drei Inhaltspunkte: das bisherige Engagement für die Umwelt; welches Thema die Person einbringen will und warum; wie sie die Erfahrungen zu Hause weitergibt. Formelles Register, keine Kurzformen."
+  },
+  "meta": {
+    "from": "delegate.applicant@classmail.example",
+    "to": "delegates@climatecrossing-youth.example",
+    "subjectSlot": "subject"
+  },
+  "focus": {
+    "label": "formal phrases and gerunds",
+    "labelDe": "Formelle Wendungen und Gerundium nach Präpositionen",
+    "min": {
+      "short": 9
+    },
+    "note": "Marked: fixed phrases of a formal application email and prepositions followed by an -ing form (e.g. ‘responsible for organising’, ‘by joining’, ‘look forward to hearing’). Greeting, closing formula and ordinary linking words are not marked."
+  },
+  "topicWords": [
+    "forum",
+    "climate",
+    "delegate",
+    "delegates",
+    "delegation",
+    "lisbon",
+    "crossing",
+    "young",
+    "people",
+    "youth",
+    "environment",
+    "environmental",
+    "application"
+  ],
+  "gaps": [
+    {
+      "id": "FULLNAME",
+      "step": "signoff",
+      "q": "Who is applying? First name and family name.",
+      "qDe": "Ruft einen Vor- und Nachnamen für die Person, die sich bewirbt. Keine Namen von Mitschüler:innen oder Lehrer:innen.",
+      "type": "text",
+      "default": "Samira Haidari",
+      "max": 40,
+      "minWords": 2
+    }
+  ],
+  "steps": [
+    {
+      "id": "subject",
+      "slot": "subject",
+      "part": "Subject",
+      "q": "Which subject line do we put in the header?",
+      "de": "Die Betreffzeile sagt in wenigen Wörtern, worum es in der E-Mail geht.",
+      "own": "Short and specific: what is the email about?",
+      "ownDe": "Kurz und genau: Worum geht es in der E-Mail?",
+      "options": [
+        {
+          "l": "A",
+          "id": "role",
+          "label": "Name the role",
+          "text": "Application: youth delegate for the Lisbon forum",
+          "why": "Clear and formal: the panel sees at once what the email is about."
+        },
+        {
+          "l": "B",
+          "id": "country",
+          "label": "Add the country",
+          "text": "Youth delegate application from Austria",
+          "why": "The home country helps a panel that receives applications from many countries."
+        },
+        {
+          "l": "C",
+          "id": "event",
+          "label": "Name the event",
+          "text": "Application for the International Youth Climate Forum delegation",
+          "why": "It names the event exactly, so the email cannot be confused with other applications."
+        }
+      ]
+    },
+    {
+      "id": "addressee",
+      "part": "Addressee",
+      "q": "Who are we writing to?",
+      "de": "Diese Entscheidung bestimmt die Anrede und die Grußformel am Schluss.",
+      "options": [
+        {
+          "l": "A",
+          "id": "named",
+          "label": "Ms Carvalho, the coordinator",
+          "teaser": "The advert names the programme coordinator. We write to her directly."
+        },
+        {
+          "l": "B",
+          "id": "panel",
+          "label": "The selection panel",
+          "teaser": "Several people on the panel will read the email, and we do not know their names."
+        }
+      ]
+    },
+    {
+      "id": "greeting",
+      "slot": "greeting",
+      "part": "Greeting",
+      "q": "How do we greet the reader?",
+      "de": "Hier wählen wir die Anrede für die Bewerbung. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Write the greeting on its own line, with a comma at the end.",
+      "ownDe": "Anrede in eine eigene Zeile schreiben, mit Beistrich am Ende.",
+      "options": [
+        {
+          "l": "A",
+          "id": "hello",
+          "label": "Greeting A",
+          "trap": true,
+          "crit": "TA",
+          "text": {
+            "by": "addressee",
+            "map": {
+              "named": "Hello Ms Carvalho,",
+              "panel": "Hello everyone,"
+            }
+          },
+          "reject": "‘Hello’ is a greeting for informal emails. A formal application opens with ‘Dear Ms Carvalho,’ when we know the name and ‘Dear Sir or Madam,’ when we do not.",
+          "rejectDe": "„Hello“ gehört in informelle E-Mails. Eine formelle Bewerbung beginnt mit „Dear Ms Carvalho,“ (Name bekannt) oder „Dear Sir or Madam,“ (Name unbekannt)."
+        },
+        {
+          "l": "B",
+          "id": "dear",
+          "label": "Greeting B",
+          "text": {
+            "by": "addressee",
+            "map": {
+              "named": "{{Dear Ms Carvalho,}}",
+              "panel": "{{Dear Sir or Madam,}}"
+            }
+          },
+          "why": "Formal and polite, and it fits the reader we have chosen."
+        }
+      ]
+    },
+    {
+      "id": "opening",
+      "slot": "opening",
+      "part": "Introduction",
+      "q": "Introduction: how do we state the purpose of our email?",
+      "de": "Der erste Absatz sagt, warum wir schreiben und wer wir sind. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then complete the sentences: where the applicant saw the advert and who the applicant is.",
+      "ownDe": "Gerüst abschreiben, dann die Sätze fertigschreiben: wo die Person die Anzeige gesehen hat und wer sie ist.",
+      "options": [
+        {
+          "l": "A",
+          "id": "apply",
+          "label": "Purpose first",
+          "text": "{{[[I am writing to apply for]] a place in}} your youth delegation to the International Youth Climate Forum in Lisbon, [[as advertised on your website]]. I am eighteen and in my final year at an Upper Austrian grammar school, {{and [[I would be honoured to]]}} represent young Austrians. My reasons are set out below.",
+          "why": "The purpose comes in the first words, followed by a short introduction and a polite, confident sentence."
+        },
+        {
+          "l": "B",
+          "id": "advert",
+          "label": "Purpose and interest",
+          "text": "{{[[I am writing in response to]] your advert for youth delegates,}} as I would be delighted to join your team at the forum in Lisbon. {{I am an eighteen-year-old student}} at a grammar school in Upper Austria and have followed the work of Climate Crossing [[with great interest]] for several years.",
+          "why": "It refers to the advert, states the wish to join and shows real interest in the organisation."
+        },
+        {
+          "l": "C",
+          "id": "about",
+          "label": "Introduce ourselves first",
+          "text": "I am eighteen years old and in my final year at a grammar school in Upper Austria. For several years I have been active in climate protection, and I have followed the work of Climate Crossing with great interest. For this reason, I am writing to apply for a place in your youth delegation to Lisbon.",
+          "trap": true,
+          "crit": "CC",
+          "reject": "The reader only learns in the last sentence why you are writing. In a formal email, the purpose comes first: ‘I am writing to apply for …’.",
+          "rejectDe": "Der Zweck der E-Mail steht erst im letzten Satz. In einer formellen E-Mail kommt er an den Anfang."
+        }
+      ]
+    },
+    {
+      "id": "involvement",
+      "slot": "involvement",
+      "part": "Body paragraph 1",
+      "q": "Body paragraph 1: what have we done for the environment so far?",
+      "de": "Erster Inhaltspunkt: das bisherige Engagement für die Umwelt. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then describe the applicant’s project and what came out of it. The details can be invented.",
+      "ownDe": "Gerüst abschreiben, dann das Projekt der Person beschreiben und sagen, was daraus geworden ist. Die Details dürfen erfunden sein.",
+      "options": [
+        {
+          "l": "A",
+          "id": "swap",
+          "label": "A clothes swap",
+          "text": "Over the past two years I have helped to organise a clothes swap at my school, where students can exchange clothes instead to buy new ones. I am used to speak in front of large groups, and I am also responsible for to design our posters, which has taught me a lot about teamwork.",
+          "trap": true,
+          "crit": "LSA",
+          "reject": "Three typical mistakes with -ing forms: ‘instead to buy’ (→ instead of buying), ‘I am used to speak’ (→ I am used to speaking) and ‘responsible for to design’ (→ responsible for designing).",
+          "rejectDe": "Drei typische Fehler: instead to buy → instead of buying, used to speak → used to speaking, responsible for to design → responsible for designing. Nach Präpositionen steht die -ing-Form."
+        },
+        {
+          "l": "B",
+          "id": "repair",
+          "label": "A repair café",
+          "text": "{{As for my experience, I have been}} an active member of my school’s environment group for two years. We run a repair café where neighbours can have broken phones and bikes fixed [[instead of throwing]] them away. {{[[I am responsible for organising]]}} the volunteers, which has taught me to keep a team motivated.",
+          "why": "The topic sentence leads from the introduction to the applicant’s work, and the project shows a clear role."
+        },
+        {
+          "l": "C",
+          "id": "cycle",
+          "label": "A local campaign",
+          "text": "{{[[With regard to]] my experience, I became active in climate protection two years ago [[by joining]]}} a local campaign for safer cycle paths. Our group collected eight hundred signatures and presented them at a council meeting, where I gave a speech. {{[[I am pleased to report that]]}} the first new cycle lane opened last spring.",
+          "why": "The topic sentence leads from the introduction to the campaign, which shows public speaking and a real result."
+        }
+      ]
+    },
+    {
+      "id": "issue",
+      "slot": "issue",
+      "part": "Body paragraph 2",
+      "q": "Body paragraph 2: which issue would we like to raise, and why?",
+      "de": "Zweiter Inhaltspunkt: ein Thema für die Konferenz und eine Begründung. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then name the issue and explain in your own words why it matters.",
+      "ownDe": "Gerüst abschreiben, dann das Thema nennen und mit eigenen Worten begründen, warum es wichtig ist.",
+      "options": [
+        {
+          "l": "A",
+          "id": "voices",
+          "label": "Young voices in local decisions",
+          "text": "{{At the forum, [[the issue I would most like to raise is]]}} the role of young people in local decisions. Although climate policy shapes our future more than anyone else’s, we are rarely asked for our opinion. {{I would therefore like to find out how}} youth councils elsewhere [[succeed in influencing]] transport or building plans.",
+          "why": "It moves from past work to the forum, names an issue, says why it matters and asks a concrete question."
+        },
+        {
+          "l": "B",
+          "id": "food",
+          "label": "Food waste",
+          "text": "{{At the forum, [[what I would like to focus on is]]}} food waste. Every day, tonnes of edible food are thrown away, although producing it uses land, water and energy. {{[[I am convinced that]] young people could}} make a difference [[by changing]] habits in their schools, and I would like to learn how others tackle it.",
+          "why": "It moves on to the forum and names a practical issue that young people can influence themselves."
+        }
+      ]
+    },
+    {
+      "id": "share",
+      "slot": "share",
+      "part": "Body paragraph 3",
+      "q": "Body paragraph 3: how would we share our experience at home?",
+      "de": "Dritter Inhaltspunkt: wie die Erfahrungen nach der Konferenz weitergegeben werden. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then suggest in your own words how the applicant would pass on what they learnt.",
+      "ownDe": "Gerüst abschreiben, dann mit eigenen Worten vorschlagen, wie die Person das Gelernte weitergibt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "workshops",
+          "label": "Workshops at schools",
+          "text": "{{[[On returning]] from Lisbon, I would pass on what I have learnt [[by running]]}} short workshops at schools in my region. {{[[Apart from giving]] a talk,}} I would let younger students work on one real problem from the forum so that they could see how difficult and exciting international cooperation can be.",
+          "why": "It links the forum to home and offers a concrete, active format that reaches many young people."
+        },
+        {
+          "l": "B",
+          "id": "talks",
+          "label": "Talks and a poster",
+          "text": "When I come back, I will tell the people at my school about the forum. I will tell them about the good ideas and good projects from other countries, and I will make a nice poster about it. I will also tell the younger students about it, because it is good for them.",
+          "trap": true,
+          "crit": "LSR",
+          "reject": "Very basic and repetitive: ‘tell’ three times, ‘good’ three times and ‘about’ four times. Show more range: ‘present’, ‘run a workshop’, ‘inspiring projects’.",
+          "rejectDe": "Sehr einfach und wiederholend: dreimal „tell“, dreimal „good“, viermal „about“. Mehr Abwechslung zeigen."
+        },
+        {
+          "l": "C",
+          "id": "online",
+          "label": "Online reports",
+          "text": "{{While the forum is running, I would keep young people at home informed [[by posting]]}} daily video reports on our school’s social media channels. {{After my return, [[I would be happy to]]}} present the main results to our town’s youth council, which is drawing up its own climate plan.",
+          "why": "Two steps, during and after the forum, that reach young people where they are."
+        }
+      ]
+    },
+    {
+      "id": "closing",
+      "slot": "closing",
+      "part": "Conclusion",
+      "q": "Conclusion: how do we end the email?",
+      "de": "Der Schlussabsatz beendet die Bewerbung. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then explain briefly why the applicant suits the role.",
+      "ownDe": "Gerüst abschreiben, dann kurz erklären, warum die Person gut geeignet ist.",
+      "options": [
+        {
+          "l": "A",
+          "id": "attached",
+          "label": "CV and an interview",
+          "text": "{{Overall, [[I am confident that]]}} my experience and my ideas for Lisbon and beyond would make me a committed delegate. {{[[Please find attached]]}} my CV and a reference from my geography teacher. {{[[I would welcome the opportunity of]]}} an interview. {{[[I look forward to hearing from you.]]}}",
+          "why": "It sums up what the email has shown, mentions the attachments and asks for an interview."
+        },
+        {
+          "l": "B",
+          "id": "info",
+          "label": "Offer more information",
+          "text": "{{In short, I believe that}} my work so far and my plans for Lisbon and afterwards would make me a reliable voice for young people in Austria. {{[[Should you require any further information]], [[please do not hesitate to]]}} contact me. {{[[I look forward to hearing from you.]]}}",
+          "why": "It sums up the application in one sentence, offers more information and asks for a reply."
+        }
+      ]
+    },
+    {
+      "id": "signoff",
+      "slot": "signoff",
+      "part": "Sign-off",
+      "q": "Which closing formula matches our greeting?",
+      "de": "Hier wählen wir die Grußformel und die Unterschrift. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the closing formula and, on the next line, the full name we chose.",
+      "ownDe": "Grußformel abschreiben, darunter den gewählten vollen Namen.",
+      "options": [
+        {
+          "l": "A",
+          "id": "match",
+          "label": "Sign-off A",
+          "text": {
+            "by": "addressee",
+            "map": {
+              "named": "{{Yours sincerely,}}\n{FULLNAME}",
+              "panel": "{{Yours faithfully,}}\n{FULLNAME}"
+            }
+          },
+          "why": "The closing formula matches the greeting and is followed by the applicant’s full name."
+        },
+        {
+          "l": "B",
+          "id": "regards",
+          "label": "Sign-off B",
+          "text": "Kind regards,\n{FULLNAME}",
+          "trap": true,
+          "crit": "TA",
+          "reject": "‘Kind regards’ is a closing for less formal emails, not for a formal application. Here the closing formula pairs with the greeting: ‘Dear Ms Carvalho’ → ‘Yours sincerely’, ‘Dear Sir or Madam’ → ‘Yours faithfully’.",
+          "rejectDe": "„Kind regards“ gehört in weniger formelle E-Mails, nicht in eine formelle Bewerbung. Hier passt die Grußformel zur Anrede: Dear Ms Carvalho → Yours sincerely, Dear Sir or Madam → Yours faithfully."
+        }
+      ]
+    }
+  ],
+  "order": [
+    "subject",
+    "greeting",
+    "opening",
+    "involvement",
+    "issue",
+    "share",
+    "closing",
+    "signoff"
+  ],
+  "checks": [
+    {
+      "en": "The subject line says clearly what the email is about"
+    },
+    {
+      "en": "The purpose of the email is in the first sentence"
+    },
+    {
+      "en": "All three content points: our work for the environment, an issue for the forum with a reason, a plan for sharing our experience"
+    },
+    {
+      "en": "After a preposition we use the -ing form: interested in taking, by joining, look forward to hearing"
+    },
+    {
+      "en": "A range of formal phrases, not the same phrase again and again"
+    },
+    {
+      "en": "Formal register: no contractions, no slang"
+    },
+    {
+      "en": "Greeting and closing match: Dear Sir or Madam → Yours faithfully, Dear Ms Carvalho → Yours sincerely"
+    }
+  ],
+  "teacher": {
+    "aim": "Die Klasse schreibt gemeinsam eine formelle Bewerbungs-E-Mail auf Maturaniveau (B2) und übt formelle Wendungen sowie das Gerundium nach Präpositionen (responsible for organising, by joining, look forward to hearing).",
+    "prep": "A/B/C/D-Karten austeilen (ohne Karten: 1–4 Finger, die Tasten 1–4 wählen wie A–D), Hefte bereitlegen, Beamer im Vollbild. Im Gerüst-Modus den eingebauten Timer nutzen: 5–6 min pro Absatz.",
+    "heft": "Neue Seite: rechts oben das Datum, als Überschrift „Email“ (wie am Beamer). Darunter der Kopf: To, From, Date, Subject (der Betreff ist gleich die erste Entscheidung). Anrede in einer eigenen Zeile, danach und nach jedem Absatz eine Zeile frei, am Rand Intro, Body 1, Body 2, Body 3, Conclusion. Vor der Grußformel eine Zeile frei; Grußformel und voller Name stehen auf eigenen Zeilen. Formelle Wendungen und Präposition + -ing grün unterstreichen.",
+    "flow": "Volltext (50 min): 3 min Anzeige lesen, 2 min Kopf abschreiben, 9 Entscheidungen à ca. 1–2 min, Abschreiben ca. 25 min, 5 min Checkliste. Gerüst (realistisch ca. 60 min): 3 min Aufgabe; Betreff, Empfänger:in, Anrede und Grußformel je 1 min; pro Absatz 1 min Entscheidung, 5–6 min eigenes Schreiben, 1 min Vergleich mit dem Modell; am Ende 5 min Checkliste. In einer 50-Minuten-Stunde den Schlussabsatz nur abschreiben und die Checkliste am Beginn der nächsten Stunde machen.",
+    "traps": "Greeting A (TA): „Hello Ms Carvalho“ / „Hello everyone“ ist eine informelle Anrede; formell: Dear Ms Carvalho bzw. Dear Sir or Madam. Intro C (CC): Der Zweck der E-Mail steht erst im letzten Satz. Body 1 A (LSA): instead to buy (→ instead of buying), I am used to speak (→ used to speaking), responsible for to design (→ responsible for designing). Body 3 B (LSR): dreimal „tell“, dreimal „good“, sehr einfacher Wortschatz. Sign-off B (TA): „Kind regards“ passt nicht zur formellen Anrede; Dear Ms Carvalho → Yours sincerely, Dear Sir or Madam → Yours faithfully. Kürzel: TA = Erfüllung der Aufgabenstellung, CC = Kohärenz und Kohäsion, LSR = Spektrum sprachlicher Mittel, LSA = Sprachrichtigkeit.",
+    "notes": "Die E-Mail hat fünf Absätze (Einleitung, drei Body-Absätze zu den drei Inhaltspunkten, Schluss). Organisation, Konferenz, Koordinatorin und E-Mail-Adressen sind erfunden; die Konferenz wird von keiner realen Organisation veranstaltet. Für den vollen Namen nur erfundene Namen, keine Namen von Mitschüler:innen oder Lehrer:innen. Anrede und Grußformel gehören zusammen: Die Anzeige nennt eine Koordinatorin, darum wählt die Klasse zuerst, an wen die E-Mail geht; danach richten sich Anrede und Grußformel (Dear Ms Carvalho → Yours sincerely, Dear Sir or Madam → Yours faithfully). Vor Body 1 kurz wiederholen: Nach Präpositionen (for, of, in, at, by, on, to in look forward to / be used to) steht die -ing-Form. Differenzierung: Schnelle Schüler:innen schreiben im Gerüst-Modus einen zusätzlichen Satz mit einer weiteren Präposition + -ing. Hausübung: eine Bewerbung als Jugendvertreter:in für ein anderes Gremium (z. B. einen erfundenen Jugendbeirat einer Gemeinde) mit derselben Struktur."
+  }
+}

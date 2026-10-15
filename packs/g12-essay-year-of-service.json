@@ -1,0 +1,539 @@
+{
+  "id": "g12-essay-year-of-service",
+  "title": "A year of service for everyone?",
+  "titleDe": "Ein verpflichtendes soziales Jahr für alle?",
+  "grade": 12,
+  "level": "B2",
+  "theme": "Gesellschaft & Zusammenleben",
+  "textType": "essay",
+  "modes": [
+    "full",
+    "frame"
+  ],
+  "lengths": {
+    "long": {
+      "label": "around 400 words",
+      "min": 360,
+      "max": 440
+    }
+  },
+  "minutes": {
+    "full": {
+      "long": 100
+    },
+    "frame": {
+      "long": 100
+    }
+  },
+  "task": {
+    "situation": "‘Common Ground’, an online magazine for young Europeans, is holding an essay competition. This year’s question is: ‘Should every young person have to do a year of social service after leaving school?’ The winning essays will appear on the magazine’s website. You decide to take part.",
+    "instruction": "Write an essay in which you:",
+    "points": [
+      "discuss what society and young people might gain from a year of service",
+      "outline the costs and practical problems of such a scheme",
+      "evaluate whether a compulsory year would limit young people’s freedom"
+    ],
+    "words": {
+      "long": "Give your essay a title. Write around 400 words."
+    },
+    "de": "Essay für den Wettbewerb eines Online-Magazins: Soll nach der Schule ein verpflichtendes soziales Jahr für alle eingeführt werden? Drei Inhaltspunkte: Nutzen für Gesellschaft und junge Menschen, Kosten und praktische Probleme, Einschränkung der Freiheit. Zuerst wählt ihr eure Position, der Titel kommt ganz zum Schluss."
+  },
+  "meta": {
+    "publication": "Essay competition · ‘Common Ground’ online magazine"
+  },
+  "focus": {
+    "label": "second and mixed conditionals",
+    "labelDe": "Conditionals (Typ 2 und gemischt)",
+    "min": {
+      "long": 8
+    },
+    "note": "Marked: the if-clause of second conditionals (if + past simple → would) and of mixed conditionals (if + past perfect → would + infinitive). The would-clause is not marked; ‘would’ without an if-clause is not marked either."
+  },
+  "topicWords": [
+    "year",
+    "years",
+    "service",
+    "compulsory",
+    "young",
+    "people",
+    "school-leavers",
+    "society",
+    "scheme",
+    "voluntary",
+    "civilian",
+    "participants",
+    "freedom",
+    "essay",
+    "care",
+    "home"
+  ],
+  "gaps": [
+    {
+      "id": "SERVICE",
+      "step": "benefits",
+      "q": "Which other places need more helpers? Give a plural noun, e.g. ‘food banks’ or ‘youth clubs’.",
+      "qDe": "Ruft eine weitere Einrichtung, die Helfer:innen braucht, im Plural, z. B. „food banks“ oder „youth clubs“.",
+      "type": "text",
+      "default": "animal shelters",
+      "max": 30,
+      "cap": false
+    }
+  ],
+  "steps": [
+    {
+      "id": "position",
+      "part": "Position",
+      "q": "‘Should every young person have to do a year of social service?’ What is our position?",
+      "de": "Zuerst entscheidet ihr euch für eine Position, nach der sich das ganze Essay richtet.",
+      "options": [
+        {
+          "l": "A",
+          "id": "yes",
+          "label": "Yes, for everyone",
+          "teaser": "A compulsory year would benefit society and young people, and its costs are worth paying."
+        },
+        {
+          "l": "B",
+          "id": "no",
+          "label": "No, keep it voluntary",
+          "teaser": "The aims are good, but compulsion is the wrong tool: voluntary service with fair pay would work better."
+        }
+      ]
+    },
+    {
+      "id": "intro",
+      "slot": "intro",
+      "part": "Introduction",
+      "q": "Introduction: how do we lead into the topic and state our thesis?",
+      "de": "Die Einleitung führt in die Frage des Essays ein. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then finish the introduction in your own words and end with a clear thesis statement.",
+      "ownDe": "Gerüst abschreiben, dann die Einleitung mit eigenen Worten fertigschreiben und mit einer klaren These enden.",
+      "options": [
+        {
+          "l": "A",
+          "id": "background",
+          "label": "Start with the background",
+          "text": {
+            "by": "position",
+            "map": {
+              "yes": "{{Young men in Austria must already choose}} between military and civilian service, while women are exempt. {{Some now propose}} a year of social service for everyone. {{This essay will argue that}} society would gain far more than it would lose [[if every school-leaver spent a year serving the community]].",
+              "no": "{{Young men in Austria must already choose}} between military and civilian service, while women are exempt. {{Some now propose}} a year of social service for everyone. {{This essay will argue that}} voluntary service is the better path, as the state would lose young people’s goodwill [[if it forced them to serve]]."
+            }
+          },
+          "why": "Facts the reader may not know lead to the question, and the thesis comes at the end."
+        },
+        {
+          "l": "B",
+          "id": "question",
+          "label": "Start with a question",
+          "text": {
+            "by": "position",
+            "map": {
+              "yes": "{{What would happen [[if every young person spent a year]]}} in a care home, a hospital or a nature park? The idea of compulsory service for all school-leavers comes up regularly in public debate. {{This essay will argue that}} such a year should be introduced for the good of all.",
+              "no": "{{What would happen [[if every young person spent a year]]}} in a care home, a hospital or a nature park? The idea of compulsory service for all school-leavers comes up regularly in public debate. {{This essay will argue that}} voluntary service, well supported by the state, would achieve the same aims without compulsion."
+            }
+          },
+          "why": "A conditional question makes the reader imagine the idea before the thesis is stated."
+        },
+        {
+          "l": "C",
+          "id": "trap",
+          "label": "Speak to the reader",
+          "trap": true,
+          "crit": "LSR",
+          "text": {
+            "by": "position",
+            "map": {
+              "yes": "Imagine you’ve just finished school and the government says you have to spend a year in a care home. Sounds crazy? Well, it isn’t. I’m going to show you why a year like that would actually be a really great thing for you and for everybody else too.",
+              "no": "Imagine you’ve just finished school and the government says you have to spend a year in a care home. Sounds crazy? Well, it is. I’m going to show you why helping is great but why nobody should be forced to do it, at least not for a whole year."
+            }
+          },
+          "reject": "The register is wrong: ‘imagine you’, ‘I’m going to show you’, contractions (you’ve, isn’t, I’m) and chatty phrases (‘Well’, ‘really great’) sound like a blog. An essay is formal and impersonal.",
+          "rejectDe": "Falsches Register: „imagine you“, „I’m going to show you“, Kurzformen und Plauderton klingen nach Blog. Ein Essay ist formell und unpersönlich."
+        }
+      ]
+    },
+    {
+      "id": "benefits",
+      "slot": "benefits",
+      "part": "Body paragraph 1",
+      "q": "Body paragraph 1: what might society and young people gain?",
+      "de": "Erster Inhaltspunkt: der mögliche Nutzen für die Gesellschaft und für junge Menschen. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then explain one gain in your own words, using a second conditional.",
+      "ownDe": "Gerüst abschreiben, dann einen Nutzen mit eigenen Worten erklären, mit einem Conditional Typ 2.",
+      "options": [
+        {
+          "l": "A",
+          "id": "trap",
+          "label": "Advantages for everybody",
+          "trap": true,
+          "crit": "LSA",
+          "text": "A year of service would have advantages for everybody. If every young person would work in a hospital or a care home for a year, they would make many new experiences. They would can also learn how to deal with old or sick people, and society would get help in places that are short of staff.",
+          "reject": "Three typical mistakes: ‘If every young person would work’ (→ worked, no would in the if-clause), ‘make experiences’ (→ gain experience) and ‘would can’ (→ could or would be able to).",
+          "rejectDe": "Drei typische Fehler: kein would im if-Satz (→ worked), Erfahrungen machen heißt gain experience, „would can“ gibt es nicht (→ could)."
+        },
+        {
+          "l": "B",
+          "id": "society",
+          "label": "Help where it is needed",
+          "text": {
+            "by": "position",
+            "map": {
+              "yes": "{{The most obvious gain of such a year would be for society itself.}} Care homes, hospitals and {SERVICE} are short of staff in many regions. {{[[If thousands of young people joined them each year,]]}} professionals would have more support, and residents would receive more attention. Some participants might even discover a new career.",
+              "no": "{{The most obvious gain of such a year would be for society itself.}} Care homes, hospitals and {SERVICE} are short of staff in many regions, and [[if young people helped out for a year,]] the pressure on professionals would ease. Some participants might even discover a new career. {{Reluctant helpers, however,}} would bring little relief."
+            }
+          },
+          "why": "The topic sentence names the gain, and the conditional shows what would change."
+        },
+        {
+          "l": "C",
+          "id": "growth",
+          "label": "An education in itself",
+          "text": {
+            "by": "position",
+            "map": {
+              "yes": "{{For young people, such a year could be an education in its own right.}} Working in care homes, hospitals or inclusive youth projects teaches patience, responsibility and respect. {{[[If school-leavers from different backgrounds worked side by side,]]}} they would also meet people they would otherwise never get to know, which would help to hold society together.",
+              "no": "{{For young people, such a year could be an education in its own right.}} Working in a care home or an inclusive youth project teaches patience and responsibility, and care homes would have extra hands. {{Such experiences, however, depend on motivation,}} and [[if teenagers were sent to a care home against their will,]] many would simply count the days."
+            }
+          },
+          "why": "It looks at the gain for young people themselves and then evaluates it."
+        }
+      ]
+    },
+    {
+      "id": "example",
+      "slot": "example",
+      "part": "Body paragraph 1",
+      "q": "Which Austrian example do we add?",
+      "de": "Der Absatz geht weiter: Ein Beispiel aus Österreich vertieft den Nutzen. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then give the facts of our example in your own words (the teacher writes them on the board) and say what they show.",
+      "ownDe": "Gerüst abschreiben, dann die Fakten des Beispiels mit eigenen Worten wiedergeben (sie stehen an der Tafel) und sagen, was sie zeigen.",
+      "options": [
+        {
+          "l": "A",
+          "id": "civil",
+          "label": "Civilian service",
+          "text": {
+            "by": "position",
+            "map": {
+              "yes": "{{Austria’s civilian service shows how such a scheme can work.}} Every year, thousands of young men spend nine months in ambulances, care homes and social projects. {{[[If voters had ended compulsory service in the 2013 national vote,]]}} many of these organisations would have far fewer helpers today. A year for everyone would build on this success.",
+              "no": "{{Austria’s civilian service shows both sides of the argument.}} Every year, thousands of young men spend nine months in ambulances, care homes and social projects. {{[[If voters had ended compulsory service in the 2013 national vote,]]}} many of these organisations would have far fewer helpers today. Yet some choose it mainly to avoid the army, not out of a wish to help."
+            }
+          },
+          "why": "A real Austrian example; the mixed conditional links a past decision to the present."
+        },
+        {
+          "l": "B",
+          "id": "fsj",
+          "label": "The voluntary social year",
+          "text": {
+            "by": "position",
+            "map": {
+              "yes": "{{A model for this already exists: Austria offers a voluntary social year,}} in which young people work in social institutions for a small allowance. Participants often describe it as one of the most important years of their lives. {{[[If everyone had this experience,]]}} its benefits would reach even those who would never think of applying.",
+              "no": "{{An alternative without compulsion already exists: Austria offers a voluntary social year,}} in which young people work in social institutions for a small allowance. Participants often describe it as one of the most important years of their lives, precisely because they chose it. {{[[If the state paid a fair wage,]]}} far more would sign up of their own free will."
+            }
+          },
+          "why": "An existing programme shows what such a year can achieve."
+        }
+      ],
+      "join": true
+    },
+    {
+      "id": "costs",
+      "slot": "costs",
+      "part": "Body paragraph 2",
+      "q": "Body paragraph 2: what would it cost, and which practical problems would arise?",
+      "de": "Zweiter Inhaltspunkt: Kosten und praktische Probleme. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then name one cost or problem in your own words and evaluate it.",
+      "ownDe": "Gerüst abschreiben, dann eine Belastung oder ein Problem mit eigenen Worten nennen und bewerten.",
+      "options": [
+        {
+          "l": "A",
+          "id": "money",
+          "label": "The price tag",
+          "text": {
+            "by": "position",
+            "map": {
+              "yes": "{{Whatever its benefits, such a scheme would not come cheap.}} Each year, tens of thousands of school-leavers would need placements, supervision, insurance and a modest wage. {{These costs, however, must be weighed against}} the value of the work, which would cost far more [[if it were done by paid staff]].",
+              "no": "{{Whatever its benefits, such a scheme would not come cheap.}} Each year, tens of thousands of school-leavers would need placements, supervision, insurance and a modest wage. {{[[If this money were spent on trained carers instead,]]}} hospitals and care homes would gain far more than they would from helpers who leave after twelve months."
+            }
+          },
+          "why": "A clear topic sentence on money, then the costs are weighed up."
+        },
+        {
+          "l": "B",
+          "id": "trap",
+          "label": "Money and organisation",
+          "trap": true,
+          "crit": "CC",
+          "text": "This would certainly not be cheap. Every year, tens of thousands of school-leavers would need placements, supervision, insurance and a modest wage. In addition, they would have to employ extra staff to train the newcomers, and exceptions for health reasons would make it even more expensive.",
+          "reject": "Unclear references: ‘This’ at the start could point back to the last idea of the paragraph before, not to the scheme, and ‘they’ seems to mean the school-leavers, not the organisations. Name things clearly: ‘such a scheme’, ‘care homes’.",
+          "rejectDe": "Unklare Bezüge: „This“ am Anfang kann sich auf den letzten Gedanken des vorigen Absatzes beziehen statt auf das Projekt, und „they“ klingt nach den Schulabgänger:innen statt nach den Einrichtungen."
+        },
+        {
+          "l": "C",
+          "id": "practical",
+          "label": "Practical problems",
+          "text": {
+            "by": "position",
+            "map": {
+              "yes": "{{Against these gains stand costs and practical problems.}} {{Apart from wages and insurance,}} organisations would need paid staff to train and supervise the newcomers, and young people with health issues would need fair exceptions. {{None of this is impossible, and}} mistakes could be corrected along the way [[if the scheme were introduced step by step]].",
+              "no": "{{Against these gains stand costs and practical problems.}} {{Apart from wages and insurance,}} organisations would need paid staff to train and supervise the newcomers, and young people with health issues would need fair exceptions. {{[[If every placement began on the same day,]]}} many institutions would be overwhelmed rather than helped."
+            }
+          },
+          "why": "Concrete problems that the reader may not have thought of, followed by an evaluation."
+        }
+      ]
+    },
+    {
+      "id": "costs2",
+      "slot": "costs2",
+      "part": "Body paragraph 2",
+      "q": "Which further cost do we discuss?",
+      "de": "Der Absatz geht weiter: eine Belastung, an die man nicht sofort denkt. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then explain this cost in your own words and evaluate it.",
+      "ownDe": "Gerüst abschreiben, dann diese Belastung mit eigenen Worten erklären und bewerten.",
+      "options": [
+        {
+          "l": "A",
+          "id": "time",
+          "label": "A year later into work",
+          "text": {
+            "by": "position",
+            "map": {
+              "yes": "{{Another cost is less obvious: time.}} Every participant would start university, training or work a year later. {{Still, a year spent caring for others is not a lost year,}} and fewer young people might drop out of courses they had chosen too quickly [[if they had more experience of real life]].",
+              "no": "{{Another cost is less obvious: time.}} Every participant would start university, training or work a year later. {{In trades that are short of skilled workers,}} this delay would be felt at once, and the shortage would grow worse [[if a whole age group were held back]]."
+            }
+          },
+          "why": "It points out a hidden cost and evaluates it in a single conditional sentence."
+        },
+        {
+          "l": "B",
+          "id": "quality",
+          "label": "The quality of care",
+          "text": {
+            "by": "position",
+            "map": {
+              "yes": "{{Critics point to a further risk: the quality of care.}} Untrained helpers, they argue, might do more harm than good. {{This risk is real but manageable:}} participants would support professionals rather than replace them [[if they were given proper training and clear tasks]].",
+              "no": "{{Critics point to a further risk: the quality of care.}} People in care rely on trust and routine, which take time to build. {{[[If new helpers arrived every autumn,]]}} residents would have to get used to strangers again and again."
+            }
+          },
+          "why": "It takes a common worry seriously and shows what would follow from it."
+        }
+      ],
+      "join": true
+    },
+    {
+      "id": "freedom",
+      "slot": "freedom",
+      "part": "Body paragraph 3",
+      "q": "Body paragraph 3: would a compulsory year limit young people’s freedom?",
+      "de": "Dritter Inhaltspunkt: Würde ein Pflichtjahr die Freiheit junger Menschen einschränken? Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then evaluate the question of freedom in your own words.",
+      "ownDe": "Gerüst abschreiben, dann die Frage der Freiheit mit eigenen Worten bewerten.",
+      "options": [
+        {
+          "l": "A",
+          "id": "rights",
+          "label": "Rights and duties",
+          "text": {
+            "by": "position",
+            "map": {
+              "yes": "{{Beyond cost, perhaps the strongest objection concerns personal freedom.}} This concern is serious, since adults should decide about their own lives. {{Yet every society asks its members for some contribution,}} from taxes to jury service, and a year of service would be a fair duty, not a loss of freedom, [[if it were fairly paid and flexible]].",
+              "no": "{{Beyond cost, perhaps the strongest objection concerns personal freedom.}} At eighteen, young people are legally adults: they sign contracts and plan their own future. {{Forcing them into a year of service would take away}} this right to choose, and [[if the state could decide how adults spend a whole year,]] its power would know few limits."
+            }
+          },
+          "why": "It names the objection openly and then evaluates it, which the task asks for."
+        },
+        {
+          "l": "B",
+          "id": "choice",
+          "label": "Freedom of choice",
+          "text": {
+            "by": "position",
+            "map": {
+              "yes": "{{Cost is not the only concern: critics also fear for young people’s freedom.}} Yet freedom is not simply the absence of duties. {{[[If participants could choose where and how to serve,]]}} the year would feel less like an order and more like an opportunity, and many would end it knowing more about their own strengths.",
+              "no": "{{Cost is not the only concern: a compulsory year would also limit freedom,}} which must include the right to choose one’s own path. Some school-leavers want to start an apprenticeship, while others plan to study abroad. {{[[If they were all forced into the same scheme,]]}} these plans would be put on hold for a year they never wanted."
+            }
+          },
+          "why": "It defines freedom first and then evaluates the scheme against this definition."
+        },
+        {
+          "l": "C",
+          "id": "trap",
+          "label": "Costs and exceptions",
+          "trap": true,
+          "crit": "TA",
+          "text": "Another important point is the cost of the scheme. The state would have to pay a wage to every participant, and organisations would need extra staff for training. In addition, some young people might be ill or have other duties, so there would have to be exceptions, which would cost even more money.",
+          "reject": "Content point 3 is missing: this paragraph talks about costs again instead of evaluating whether a compulsory year would limit young people’s freedom.",
+          "rejectDe": "Inhaltspunkt 3 fehlt: Hier geht es wieder um Kosten statt um die Frage, ob ein Pflichtjahr die Freiheit einschränkt."
+        }
+      ]
+    },
+    {
+      "id": "counter",
+      "slot": "counter",
+      "part": "Body paragraph 3",
+      "q": "How do we deal with the other side?",
+      "de": "Der Absatz geht weiter: Wir greifen ein Argument der Gegenseite auf und antworten darauf. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then answer the argument of the other side in your own words.",
+      "ownDe": "Gerüst abschreiben, dann das Argument der Gegenseite mit eigenen Worten beantworten.",
+      "options": [
+        {
+          "l": "A",
+          "id": "objection",
+          "label": "Answer an objection",
+          "text": {
+            "by": "position",
+            "map": {
+              "yes": "{{It could be argued that}} a duty to help spoils the idea of helping, as kindness cannot be ordered. {{Experience suggests otherwise:}} some young men who reluctantly chose civilian service now work as nurses or social workers, {{and [[if they had not been obliged to serve,]]}} they might never know how rewarding this work is.",
+              "no": "{{It could be argued that}} young people today are too focused on themselves and need a duty to learn solidarity. {{This view is unfair. Many teenagers already volunteer}} in sports clubs, fire brigades and youth groups, and even more would take part [[if their work received more recognition]]."
+            }
+          },
+          "why": "‘It could be argued that …’ presents the other side politely before it is answered."
+        },
+        {
+          "l": "B",
+          "id": "opponents",
+          "label": "What the other side says",
+          "text": {
+            "by": "position",
+            "map": {
+              "yes": "{{Opponents point out that}} young people who already carry heavy responsibilities, such as caring for a sick parent, would lose what little freedom they have. {{This is a valid point, but it calls for special arrangements, not for}} giving up the idea, and the problem would largely disappear [[if such care counted as a form of service]].",
+              "no": "{{Supporters claim that}} a common year would bring together young people from very different backgrounds. {{This is an attractive idea, but it does not require compulsion:}} well-paid voluntary programmes would attract a wide mix of participants [[if they were advertised in every school]]."
+            }
+          },
+          "why": "It names a concrete argument of the other side and shows why it does not change our position."
+        }
+      ],
+      "join": true
+    },
+    {
+      "id": "concl",
+      "slot": "concl",
+      "part": "Conclusion",
+      "q": "Conclusion: how do we round off the essay?",
+      "de": "Der Schluss greift Einleitung und alle drei Body Paragraphs auf und rundet das Essay ab. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then sum up our position in one or two sentences of your own.",
+      "ownDe": "Gerüst abschreiben, dann unsere Position in ein bis zwei eigenen Sätzen zusammenfassen.",
+      "options": [
+        {
+          "l": "A",
+          "id": "trap",
+          "label": "End with real-life examples",
+          "trap": true,
+          "crit": "TA",
+          "text": "In conclusion, my family shows what such a year can do. My cousin spent nine months in an ambulance and still talks about it. My best friend, on the other hand, hated every minute in a care home. In the end, it all depends on the person.",
+          "reject": "Personal stories about family and friends do not belong in an essay, least of all in the conclusion. It should sum up the arguments and restate our thesis.",
+          "rejectDe": "Persönliche Geschichten über Familie und Freund:innen gehören nicht in ein Essay, schon gar nicht in den Schluss. Er fasst die Argumente zusammen und wiederholt die These."
+        },
+        {
+          "l": "B",
+          "id": "sumup",
+          "label": "Sum up the position",
+          "text": {
+            "by": "position",
+            "map": {
+              "yes": "{{To sum up, a compulsory year of service would cost money and ask a lot of young people,}} but it would give a great deal back to them and to society. {{[[If it were organised with care and left room for choice,]]}} it would be one of the best investments a country could make.",
+              "no": "{{To sum up, a compulsory year of service would cost a great deal, restrict freedom}} and offer less than its supporters promise. {{[[If the state wanted more young helpers,]]}} it would pay them fairly and make voluntary service attractive instead of ordering an entire age group to serve."
+            }
+          },
+          "why": "‘To sum up’ restates the thesis, and the final conditional leaves a clear message."
+        },
+        {
+          "l": "C",
+          "id": "shown",
+          "label": "Look back on the essay",
+          "text": {
+            "by": "position",
+            "map": {
+              "yes": "{{This essay has shown that}} the benefits of a year of service are greater than its costs and that a well-designed scheme need not limit freedom. {{[[If every adult had once spent a year helping others,]]}} society would be kinder and more united today.",
+              "no": "{{This essay has shown that}} the benefits of a year of service are real but can be achieved without compulsion, which would be costly and hard to reconcile with personal freedom. {{[[If voluntary service were attractive enough,]]}} there would be no need to force anyone."
+            }
+          },
+          "why": "It refers back to the arguments of the essay and ends with a clear final statement."
+        }
+      ]
+    },
+    {
+      "id": "title",
+      "slot": "title",
+      "part": "Title",
+      "q": "Now that the essay is finished, which title do we choose?",
+      "de": "Zuletzt wählen wir den Titel für unser Essay.",
+      "own": "Factual and to the point: the title names the topic and may hint at our position.",
+      "ownDe": "Sachlich und treffend: Der Titel nennt das Thema und darf unsere Position andeuten.",
+      "options": [
+        {
+          "l": "A",
+          "id": "statement",
+          "label": "State the position",
+          "text": {
+            "by": "position",
+            "map": {
+              "yes": "A year for others, a gain for all",
+              "no": "Service yes, compulsion no"
+            }
+          },
+          "why": "A short statement tells the reader the topic and the position at once."
+        },
+        {
+          "l": "B",
+          "id": "months",
+          "label": "A question",
+          "text": "Twelve months for the common good?",
+          "why": "A factual question that names the topic without giving away the answer."
+        },
+        {
+          "l": "C",
+          "id": "topic",
+          "label": "Name the issues",
+          "text": "Duty, freedom and the common good",
+          "why": "Names the key ideas of the essay in a neutral, formal way."
+        }
+      ]
+    }
+  ],
+  "order": [
+    "title",
+    "intro",
+    "benefits",
+    "example",
+    "costs",
+    "costs2",
+    "freedom",
+    "counter",
+    "concl"
+  ],
+  "checks": [
+    {
+      "en": "A factual title that names the topic"
+    },
+    {
+      "en": "The introduction ends with a thesis statement that shows our position"
+    },
+    {
+      "en": "All three content points: gains, costs and problems, freedom"
+    },
+    {
+      "en": "Five paragraphs: every body paragraph opens with a topic sentence that links back"
+    },
+    {
+      "en": "Second and mixed conditionals: no ‘would’ in the if-clause"
+    },
+    {
+      "en": "Formal register: no contractions, no ‘you’, no personal stories"
+    },
+    {
+      "en": "The conclusion restates our position without new arguments"
+    }
+  ],
+  "teacher": {
+    "aim": "Die Klasse baut gemeinsam ein Essay nach SRDP-Standard zur Frage, ob ein verpflichtendes soziales Jahr für alle eingeführt werden soll: Einleitung mit These, drei Body Paragraphs mit Topic Sentences (Nutzen, Kosten und Probleme, Freiheit), Schluss ohne neue Argumente. Fokus: Conditionals Typ 2 und gemischte Conditionals (If voters had ended …, these organisations would have … today).",
+    "prep": "A/B/C/D-Karten austeilen, eine Garnitur pro Person (ohne Karten: 1–4 Finger, die Tasten 1–4 wählen wie A–D). Beamer im Vollbild. Die Aufgabe am Beamer enthält alles Nötige. Im Gerüst-Modus den eingebauten Timer nutzen: 5–6 min pro Absatz.",
+    "heft": "Neue Seite: Datum (rechts), „Essay“ als Überschrift, darunter 2 Zeilen für den Titel frei lassen (der Titel kommt zuletzt). Fünf Absätze, jeder beginnt nach einer Leerzeile; am Rand stehen Intro, Body 1, Body 2, Body 3 und Conclusion. Fortsetzungen ohne neue Zeile im selben Absatz weiterschreiben. Die if-Sätze grün unterstreichen.",
+    "flow": "Volltext (100 min, Doppelstunde): 3 min Aufgabe lesen und Position wählen, 9 weitere Entscheidungen à ca. 2 min (Body 1, Body 2 und Body 3 haben je eine Fortsetzung), Abschreiben ca. 45 min, 5 min Checkliste, der Rest für die Besprechung der Fallen. Gerüst (100 min): 3 min Aufgabe und Position, pro Absatz 1 min Entscheidung, 5–6 min eigenes Schreiben, 1 min Vergleich mit dem Modell; pro Fortsetzung 1 min Entscheidung, 3–4 min eigenes Schreiben und 1 min Vergleich; am Ende 2 min Titel und 4 min Checkliste. Bei der Fortsetzung von Body 1 nach der Abstimmung die Fakten der gewählten Option an die Tafel schreiben (Zivildienst: 9 Monate, Volksbefragung 2013; bzw. Freiwilliges Sozialjahr mit Taschengeld), weil die Optionen danach verschwinden.",
+    "traps": "Introduction C (LSR): falsches Register, Blogstil mit „imagine you“, „I’m going to show you“, Kurzformen und Plauderton. Body 1 A (LSA): would im if-Satz, make experiences statt gain experience, would can. Body 2 B (CC): unklare Bezüge – „This“ zeigt auf den letzten Gedanken des vorigen Absatzes statt auf das Projekt, „they“ meint scheinbar die Schulabgänger:innen statt der Einrichtungen (Vergleich mit Option A lohnt sich). Body 3 C (TA): Inhaltspunkt 3 fehlt, wieder Kosten statt Freiheit. Conclusion A (TA): persönliche Anekdoten statt Zusammenfassung und These. Kürzel: TA = Erfüllung der Aufgabenstellung, CC = Kohärenz und Kohäsion, LSR = Spektrum sprachlicher Mittel, LSA = Sprachrichtigkeit.",
+    "notes": "Aufbau: Das Essay hat genau fünf Absätze (Einleitung, drei Body Paragraphs, Schluss); jeder Body Paragraph entsteht aus zwei Entscheidungen, die Fortsetzung bleibt im selben Absatz. Die Position im ersten Schritt (yes / no) bestimmt These, Body Paragraphs, Schluss und Titel A: gut eignet sich eine kurze Abstimmung mit Begründung. Fakten: In Österreich leisten junge Männer Grundwehrdienst (6 Monate) oder Zivildienst (9 Monate); Frauen sind davon ausgenommen. Bei der Volksbefragung 2013 stimmte eine Mehrheit für die Beibehaltung von Wehrpflicht und Zivildienst. Das Freiwillige Sozialjahr gibt es bereits. Die Lücke in Body 1 B füllt die Klasse mit einer Einrichtung im Plural (z. B. food banks, youth clubs). Beim Gegenargument (Option B, Position yes) geht es um junge Menschen mit Pflegeverantwortung: allgemein besprechen, niemanden nach der eigenen Familie fragen. Mit der Taste P werden die if-Sätze grün markiert; der would-Satz bleibt unmarkiert. Differenzierung: Schnelle formulieren im Gerüst-Modus zu jedem Absatz einen zusätzlichen gemischten Conditional (If … had …, … would … today). Länge wie bei der SRDP: ca. 400 Wörter (360–440). Hausübung: zweite Fassung mit der anderen Position. Das Thema ist politisch umstritten (Wehrpflicht, Zivildienst): beide Positionen gleich ernst nehmen und niemanden nach den eigenen Plänen zu Bundesheer oder Zivildienst fragen."
+  }
+}

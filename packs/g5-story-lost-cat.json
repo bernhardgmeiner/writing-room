@@ -1,0 +1,291 @@
+{
+  "id": "g5-story-lost-cat",
+  "title": "The lost cat",
+  "titleDe": "Die verschwundene Katze",
+  "grade": 5,
+  "level": "A1",
+  "theme": "Tiere & Natur",
+  "textType": "story",
+  "modes": [
+    "full"
+  ],
+  "lengths": {
+    "short": {
+      "label": "around 60 words",
+      "min": 50,
+      "max": 70
+    }
+  },
+  "minutes": {
+    "full": {
+      "short": 50
+    }
+  },
+  "task": {
+    "situation": "Your neighbour, Mrs Horvat, has got a cat. Today the cat is not at home! You and your friend Ayla look for it. Write the story in the present.",
+    "instruction": "Write a story. Say:",
+    "points": [
+      "what the problem is",
+      "where you and Ayla look",
+      "where the cat is",
+      "how the story ends"
+    ],
+    "words": {
+      "short": "Give your story a title. Write around 60 words."
+    },
+    "de": "Eine kurze Geschichte im Präsens: Die Katze der Nachbarin Frau Horvat ist weg, ihr und eure Freundin Ayla sucht sie. Schwerpunkt: and, but, then, so."
+  },
+  "meta": {},
+  "focus": {
+    "label": "and, but, then, so",
+    "labelDe": "and, but, then, so",
+    "min": {
+      "short": 4
+    },
+    "note": "Marked: every and, but, then and so."
+  },
+  "topicWords": [
+    "cat",
+    "mrs",
+    "horvat",
+    "ayla"
+  ],
+  "gaps": [
+    {
+      "id": "CAT",
+      "step": "start",
+      "q": "What is the cat’s name?",
+      "qDe": "Ruft einen Namen für die Katze, z. B. Mimi, Tiger oder Pumpkin. Keine Namen von Mitschüler:innen oder Lehrer:innen.",
+      "type": "text",
+      "default": "Mimi",
+      "max": 20
+    }
+  ],
+  "steps": [
+    {
+      "id": "start",
+      "slot": "start",
+      "part": "Beginning",
+      "q": "How does our story start?",
+      "de": "Der Anfang erzählt, was passiert ist. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "sad",
+          "label": "A sad neighbour",
+          "text": "Our neighbour, Mrs Horvat, is very sad today. Her cat {CAT} is gone!",
+          "why": "We know at once who has got a problem and what it is."
+        },
+        {
+          "l": "B",
+          "id": "bell",
+          "label": "Ring, ring!",
+          "text": "Ring, ring! It is Mrs Horvat from next door. Her cat {CAT} is gone!",
+          "why": "A sound at the start makes the story exciting."
+        },
+        {
+          "l": "C",
+          "id": "ohno",
+          "label": "Oh no!",
+          "text": "Oh no! Mrs Horvat from next door can’t find her cat {CAT} anywhere!",
+          "why": "‘Oh no!’ shows the problem with a big feeling."
+        }
+      ]
+    },
+    {
+      "id": "search",
+      "slot": "search",
+      "part": "The search",
+      "q": "Where do we look for the cat?",
+      "de": "Hier suchen wir die Katze. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "garden",
+          "label": "In the garden",
+          "text": "My friend Ayla [[and]] I look in the garden, [[but]] the cat isn’t there.",
+          "why": "‘And’ and ‘but’ make one clear sentence about our search."
+        },
+        {
+          "l": "B",
+          "id": "park",
+          "label": "In the park",
+          "trap": true,
+          "crit": "CC",
+          "reject": "Wrong linking word: we need ‘but’ here, not ‘so’. The park is not the reason why the cat isn’t there.",
+          "rejectDe": "Falsches Bindewort: Hier passt „but“ (aber), nicht „so“ (deshalb).",
+          "text": "My friend Ayla and I look in the park, so {CAT} isn’t there."
+        },
+        {
+          "l": "C",
+          "id": "cars",
+          "label": "Under the cars",
+          "text": "Ayla, my best friend, helps me. We look under the cars, [[but]] no {CAT}!",
+          "why": "Short sentences and ‘but’ make the search exciting."
+        }
+      ]
+    },
+    {
+      "id": "idea",
+      "slot": "idea",
+      "part": "An idea",
+      "q": "What do we do next?",
+      "de": "Hier haben wir eine Idee, wie wir die Katze finden. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "food",
+          "label": "Cat food",
+          "text": "Cats love cat food, [[so]] we shake a box of it. Shake, shake!",
+          "why": "‘So’ shows what we do next, and the sound is fun."
+        },
+        {
+          "l": "B",
+          "id": "call",
+          "label": "Call the cat",
+          "text": "We call “{CAT}!” loudly, [[so]] all the neighbours look out of their windows.",
+          "why": "A funny picture: the whole street looks at us."
+        },
+        {
+          "l": "C",
+          "id": "quiet",
+          "label": "Stand still",
+          "text": "We want to listen, [[so]] we stand very still. Can we hear something?",
+          "why": "The question makes the reader curious."
+        }
+      ]
+    },
+    {
+      "id": "find",
+      "slot": "find",
+      "part": "Found!",
+      "q": "Where is the cat?",
+      "de": "Hier finden wir die Katze. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "tree",
+          "label": "Up a tree",
+          "trap": true,
+          "crit": "LSA",
+          "reject": "Two mistakes: we say the cat sits, not is sit. And looks, not is look.",
+          "rejectDe": "Zwei Fehler: „sits“ statt „is sit“ und „looks“ statt „is look“.",
+          "text": "Then we look up. {CAT} is sit in a tree and is look at us."
+        },
+        {
+          "l": "B",
+          "id": "roof",
+          "label": "On the garage roof",
+          "text": "[[Then]] we hear a little miaow. {CAT} is up on the garage roof!",
+          "why": "First we hear the cat, then we see it: good order."
+        },
+        {
+          "l": "C",
+          "id": "basket",
+          "label": "In the washing basket",
+          "text": "[[Then]] Mrs Horvat calls us. {CAT} is asleep in her washing basket!",
+          "why": "A funny surprise: the cat is at home all the time."
+        }
+      ]
+    },
+    {
+      "id": "end",
+      "slot": "end",
+      "part": "Ending",
+      "q": "How does our story end?",
+      "de": "Der Schluss erzählt, wie die Geschichte gut ausgeht. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "cake",
+          "label": "Cake for us",
+          "text": "Mrs Horvat is really happy, [[and]] she gives us chocolate cake.",
+          "why": "A happy neighbour and a sweet thank-you."
+        },
+        {
+          "l": "B",
+          "id": "hug",
+          "label": "A big hug",
+          "text": "What a day! {CAT} is safe, [[and]] Mrs Horvat hugs us.",
+          "why": "‘What a day!’ is a short, happy ending."
+        },
+        {
+          "l": "C",
+          "id": "dinner",
+          "label": "Dinner for the cat",
+          "text": "Now everybody is happy, [[and]] {CAT} gets a big dinner!",
+          "why": "A funny last picture: the cat is happy, too."
+        }
+      ]
+    },
+    {
+      "id": "title",
+      "slot": "title",
+      "part": "Title",
+      "q": "Our story is finished. Which title do we choose?",
+      "de": "Zum Schluss wählen wir den Titel unserer Geschichte.",
+      "options": [
+        {
+          "l": "A",
+          "id": "lost",
+          "label": "The problem",
+          "text": "The Lost Cat",
+          "why": "Short and clear: readers know what the story is about."
+        },
+        {
+          "l": "B",
+          "id": "where",
+          "label": "A question",
+          "text": "Where Is {CAT}?",
+          "why": "A question makes readers curious."
+        },
+        {
+          "l": "C",
+          "id": "search",
+          "label": "The big search",
+          "text": "The Big Search",
+          "why": "It sounds exciting, but it doesn’t tell the end."
+        }
+      ]
+    }
+  ],
+  "order": [
+    "title",
+    "start",
+    "search",
+    "idea",
+    "find",
+    "end"
+  ],
+  "checks": [
+    {
+      "en": "Our story has got a title"
+    },
+    {
+      "en": "It says what the problem is"
+    },
+    {
+      "en": "It says where we look"
+    },
+    {
+      "en": "It says where the cat is"
+    },
+    {
+      "en": "It has got a happy ending"
+    },
+    {
+      "en": "The story is in the present: we look, the cat sits"
+    },
+    {
+      "en": "And, but, then and so link our ideas"
+    }
+  ],
+  "teacher": {
+    "aim": "Die Klasse schreibt gemeinsam eine kurze Geschichte im Präsens über eine verschwundene Katze und übt die Bindewörter and, but, then und so.",
+    "prep": "A/B/C/D-Karten austeilen, Beamer im Vollbild, grüne Stifte bereitlegen. Einsatz ab: Present simple (I look, she gives, the cat sits) und die Bindewörter and, but, then, so.",
+    "heft": "Datum rechts, „Story“ als Überschrift, darunter 2 Zeilen für den Titel frei lassen (der Titel kommt zum Schluss). Jeder Teil beginnt in einer neuen Zeile, am Rand steht der Name des Teils wie am Beamer (Beginning, The search, An idea, Found!, Ending). Am Ende and, but, then und so grün einkreisen.",
+    "flow": "Aufgabe lesen und Katzennamen rufen 4 min · 6 Entscheidungen mit Abstimmen und Abschreiben à ca. 5 min, zusammen ca. 30 min · Checkliste und Bindewörter einkreisen 6 min · Rest: Geschichte mit verteilten Rollen vorlesen. Passt in 50 Minuten.",
+    "traps": "The search B (CC, Kohärenz und Kohäsion): so statt but, das Bindewort passt nicht zum Sinn. Found! A (LSA, Sprachrichtigkeit): is sit / is look statt sits / looks (Mischform aus be und Verb).",
+    "notes": "Die Geschichte ist im Präsens erzählt, wie bei Bildergeschichten üblich; das Past simple braucht die Klasse dafür noch nicht. Kurz klären: but = aber (Gegensatz), so = deshalb (Folge), then = dann (Reihenfolge). Differenzierung: Schnelle zeichnen einen Comic mit vier Bildern zur Geschichte. Hausübung: eine zweite Fassung mit anderen Entscheidungen oder eine Geschichte über einen verschwundenen Hund."
+  }
+}

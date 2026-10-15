@@ -1,0 +1,356 @@
+{
+  "id": "g5-description-best-friend",
+  "title": "My best friend",
+  "titleDe": "Meine beste Freundin, mein bester Freund",
+  "grade": 5,
+  "level": "A1",
+  "theme": "Freund:innen & Familie",
+  "textType": "description",
+  "modes": [
+    "full"
+  ],
+  "lengths": {
+    "short": {
+      "label": "around 60 words",
+      "min": 50,
+      "max": 70
+    }
+  },
+  "minutes": {
+    "full": {
+      "short": 50
+    }
+  },
+  "task": {
+    "situation": "There is a poster called ‘Best friends’ on your classroom wall. Write a description of a best friend for the poster. The friend is not a real person: the class invents the friend together.",
+    "instruction": "Write a description. Say:",
+    "points": [
+      "who your friend is",
+      "what your friend looks like",
+      "what your friend is like",
+      "what your friend likes doing"
+    ],
+    "words": {
+      "short": "Give your description a title. Write around 60 words."
+    },
+    "de": "Eine Beschreibung einer erfundenen besten Freundin oder eines erfundenen besten Freundes für ein Klassenplakat: wer die Person ist, Aussehen, Charakter und Hobbys. Schwerpunkt: Verben mit -s nach he/she und Adjektive."
+  },
+  "meta": {
+    "publication": "Classroom poster · Best friends"
+  },
+  "focus": {
+    "label": "he/she + -s and adjectives",
+    "labelDe": "Verben mit -s nach he/she und Adjektive",
+    "min": {
+      "short": 8
+    },
+    "note": "Marked: every present simple verb with -s after he, she, a name or everybody (lives, likes, has got, wears …), and every adjective that describes our friend’s looks or character (tall, curly, kind …)."
+  },
+  "topicWords": [
+    "friend",
+    "friends",
+    "best"
+  ],
+  "gaps": [
+    {
+      "id": "NAME",
+      "step": "intro",
+      "q": "What is our friend’s first name?",
+      "qDe": "Ruft einen Vornamen, der zu unserer Wahl (Mädchen oder Bub) passt. Keine Namen von Mitschüler:innen oder Lehrer:innen.",
+      "type": "text",
+      "default": "Kim",
+      "max": 20
+    }
+  ],
+  "steps": [
+    {
+      "id": "friend",
+      "part": "Our friend",
+      "q": "Is our best friend a girl or a boy?",
+      "de": "Hier entscheidet ihr, ob unsere erfundene Person ein Mädchen oder ein Bub ist.",
+      "options": [
+        {
+          "l": "A",
+          "id": "girl",
+          "label": "A girl",
+          "teaser": "Our best friend is a girl. We write she and her."
+        },
+        {
+          "l": "B",
+          "id": "boy",
+          "label": "A boy",
+          "teaser": "Our best friend is a boy. We write he and his."
+        }
+      ]
+    },
+    {
+      "id": "intro",
+      "slot": "intro",
+      "part": "Introduction",
+      "q": "Who is our best friend?",
+      "de": "Der Anfang sagt, wer unsere Freundin oder unser Freund ist. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "street",
+          "label": "Name, age and home",
+          "text": {
+            "by": "friend",
+            "map": {
+              "girl": "My best friend is {NAME}. She is eleven, and she [[lives]] in my street.",
+              "boy": "My best friend is {NAME}. He is eleven, and he [[lives]] in my street."
+            }
+          },
+          "why": "Name, age and home: readers know the friend at once."
+        },
+        {
+          "l": "B",
+          "id": "meet",
+          "label": "Meet my friend",
+          "text": {
+            "by": "friend",
+            "map": {
+              "girl": "Meet {NAME}, my best friend! She [[sits]] next to me at school every day.",
+              "boy": "Meet {NAME}, my best friend! He [[sits]] next to me at school every day."
+            }
+          },
+          "why": "‘Meet’ speaks to the readers like a real poster."
+        },
+        {
+          "l": "C",
+          "id": "friday",
+          "label": "Friends after school",
+          "text": {
+            "by": "friend",
+            "map": {
+              "girl": "{NAME} and I are best friends. She [[comes]] to my house every Friday.",
+              "boy": "{NAME} and I are best friends. He [[comes]] to my house every Friday."
+            }
+          },
+          "why": "It shows at once that we spend a lot of time together."
+        }
+      ]
+    },
+    {
+      "id": "looks",
+      "slot": "looks",
+      "part": "Looks",
+      "q": "What does our friend look like?",
+      "de": "Hier beschreiben wir das Aussehen: Größe, Haare, Augen. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "tall",
+          "label": "Tall with short hair",
+          "text": {
+            "by": "friend",
+            "map": {
+              "girl": "She is quite [[tall]]. She [[has got]] [[short]] [[black]] hair and [[brown]] eyes.",
+              "boy": "He is quite [[tall]]. He [[has got]] [[short]] [[red]] hair and [[blue]] eyes."
+            }
+          },
+          "why": "Three clear details: size, hair and eyes."
+        },
+        {
+          "l": "B",
+          "id": "small",
+          "label": "Small with glasses",
+          "trap": true,
+          "crit": "LSA",
+          "reject": "Two mistakes: hair, not hairs. And glasses, not a glasses.",
+          "rejectDe": "Zwei Fehler: „Haare“ heißt „hair“ (ohne -s), und „eine Brille“ heißt „glasses“ (ohne „a“).",
+          "text": {
+            "by": "friend",
+            "map": {
+              "girl": "She is small. She has got long brown hairs, and she wears a glasses.",
+              "boy": "He is small. He has got long brown hairs, and he wears a glasses."
+            }
+          }
+        },
+        {
+          "l": "C",
+          "id": "curly",
+          "label": "Curly hair and glasses",
+          "text": {
+            "by": "friend",
+            "map": {
+              "girl": "Her hair is [[long]] and [[curly]], and she [[wears]] [[blue]] glasses. She is not very [[tall]].",
+              "boy": "His hair is [[long]] and [[curly]], and he [[wears]] [[blue]] glasses. He is not very [[tall]]."
+            }
+          },
+          "why": "The blue glasses are a detail that readers remember."
+        }
+      ]
+    },
+    {
+      "id": "character",
+      "slot": "character",
+      "part": "Character",
+      "q": "What is our friend like?",
+      "de": "Hier geht es um den Charakter unserer Freundin oder unseres Freundes. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "details",
+          "label": "More details",
+          "trap": true,
+          "crit": "CC",
+          "reject": "This part is about character, not looks. Tell us what our friend is like: funny, kind, shy …",
+          "rejectDe": "Hier geht es um den Charakter, nicht um das Aussehen: lustig, nett, schüchtern …",
+          "text": {
+            "by": "friend",
+            "map": {
+              "girl": "She has got brown eyes and a small nose. Her hair is long and straight.",
+              "boy": "He has got brown eyes and a small nose. His hair is long and straight."
+            }
+          }
+        },
+        {
+          "l": "B",
+          "id": "kind",
+          "label": "Kind and funny",
+          "text": {
+            "by": "friend",
+            "map": {
+              "girl": "Everybody [[likes]] {NAME}. She is [[kind]] and [[funny]], and she always [[helps]] me.",
+              "boy": "Everybody [[likes]] {NAME}. He is [[kind]] and [[funny]], and he always [[helps]] me."
+            }
+          },
+          "why": "Two adjectives and an example of what our friend does."
+        },
+        {
+          "l": "C",
+          "id": "shy",
+          "label": "Shy but funny",
+          "text": {
+            "by": "friend",
+            "map": {
+              "girl": "Sometimes she is a bit [[shy]], but she [[loves]] jokes and is really [[funny]].",
+              "boy": "Sometimes he is a bit [[shy]], but he [[loves]] jokes and is really [[funny]]."
+            }
+          },
+          "why": "‘But’ shows two sides of our friend."
+        }
+      ]
+    },
+    {
+      "id": "hobbies",
+      "slot": "hobbies",
+      "part": "Hobbies",
+      "q": "What does our friend like doing?",
+      "de": "Hier geht es um die Hobbys, und der Text bekommt einen Schluss. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "football",
+          "label": "Football and bikes",
+          "text": {
+            "by": "friend",
+            "map": {
+              "girl": "After school, she [[plays]] football. At weekends, we ride our bikes. I love that!",
+              "boy": "After school, he [[plays]] football. At weekends, we ride our bikes. I love that!"
+            }
+          },
+          "why": "A hobby, something we do together and a happy last line."
+        },
+        {
+          "l": "B",
+          "id": "swim",
+          "label": "Swimming and comics",
+          "text": {
+            "by": "friend",
+            "map": {
+              "girl": "On Saturdays, she [[goes]] swimming. She also [[draws]] comics for me. What a friend!",
+              "boy": "On Saturdays, he [[goes]] swimming. He also [[draws]] comics for me. What a friend!"
+            }
+          },
+          "why": "Two hobbies and a warm last line."
+        },
+        {
+          "l": "C",
+          "id": "basketball",
+          "label": "Basketball and a dog",
+          "trap": true,
+          "crit": "LSA",
+          "reject": "Two mistakes: with he or she, the verb needs -s: plays, not play. And goes, not go.",
+          "rejectDe": "Zwei Fehler: Nach he oder she braucht das Verb ein -s: „plays“ und „goes“.",
+          "text": {
+            "by": "friend",
+            "map": {
+              "girl": "After school, she play basketball, and she go to the park with her dog.",
+              "boy": "After school, he play basketball, and he go to the park with his dog."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "title",
+      "slot": "title",
+      "part": "Title",
+      "q": "Our description is finished. Which title do we choose?",
+      "de": "Zum Schluss wählen wir den Titel unserer Beschreibung.",
+      "options": [
+        {
+          "l": "A",
+          "id": "name",
+          "label": "Name in the title",
+          "text": "My Best Friend {NAME}",
+          "why": "Clear: readers know who the text is about."
+        },
+        {
+          "l": "B",
+          "id": "this",
+          "label": "Talk to the readers",
+          "text": "This Is {NAME}!",
+          "why": "Friendly, like a hello from the poster."
+        },
+        {
+          "l": "C",
+          "id": "like",
+          "label": "A friend like this",
+          "text": "A Friend Like {NAME}",
+          "why": "It shows that our friend is special."
+        }
+      ]
+    }
+  ],
+  "order": [
+    "title",
+    "intro",
+    "looks",
+    "character",
+    "hobbies"
+  ],
+  "checks": [
+    {
+      "en": "Our description has got a title"
+    },
+    {
+      "en": "It says who our friend is"
+    },
+    {
+      "en": "It says what our friend looks like"
+    },
+    {
+      "en": "It says what our friend is like"
+    },
+    {
+      "en": "It says what our friend likes doing"
+    },
+    {
+      "en": "After he or she, the verb has got an -s: plays, likes, has got"
+    },
+    {
+      "en": "We write hair (no -s) and glasses (no a)"
+    }
+  ],
+  "teacher": {
+    "aim": "Die Klasse beschreibt gemeinsam eine erfundene beste Freundin oder einen erfundenen besten Freund (Aussehen, Charakter, Hobbys) und übt das -s nach he/she im Present simple und Adjektive.",
+    "prep": "A/B/C/D-Karten austeilen, Beamer im Vollbild, grüne Stifte bereitlegen. Einsatz ab: Present simple mit he/she (-s), has got, Adjektive für Aussehen und Charakter.",
+    "heft": "Datum rechts, „Description“ als Überschrift, darunter 2 Zeilen für den Titel frei lassen (der Titel kommt zum Schluss). Jeder Teil beginnt in einer neuen Zeile, am Rand steht der Name des Teils wie am Beamer (Introduction, Looks, Character, Hobbies). Am Ende Verben mit -s und Adjektive grün unterstreichen.",
+    "flow": "Aufgabe lesen, Mädchen oder Bub wählen, Namen rufen 5 min · 5 weitere Entscheidungen mit Abstimmen und Abschreiben à ca. 5–6 min, zusammen ca. 28 min · Checkliste und Markierungen 7 min · Rest: die erfundene Person neben den Text zeichnen. Passt in 50 Minuten.",
+    "traps": "Looks B (LSA, Sprachrichtigkeit): hairs statt hair, a glasses statt glasses (deutsch „Haare“, „eine Brille“). Character A (CC, Kohärenz und Kohäsion): wiederholt das Aussehen, statt den Charakter zu beschreiben. Hobbies C (LSA, Sprachrichtigkeit): she play / she go statt she plays / she goes.",
+    "notes": "Die Person ist erfunden: Bitte keine echten Mitschüler:innen beschreiben lassen, und niemand muss über eigene Freundschaften sprechen. Der Name passt zur Wahl im ersten Schritt; der vorgeschlagene Name Kim passt für beide. Differenzierung: Schnelle sammeln weitere Adjektive in zwei Spalten (Looks / Character). Hausübung: eine zweite Fassung (anderes Geschlecht, andere Entscheidungen) oder eine Beschreibung einer erfundenen Figur aus einem Comic."
+  }
+}

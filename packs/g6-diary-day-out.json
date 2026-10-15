@@ -1,0 +1,339 @@
+{
+  "id": "g6-diary-day-out",
+  "title": "Dear Diary: our day out",
+  "titleDe": "Tagebucheintrag nach dem Wandertag",
+  "grade": 6,
+  "level": "A1+/A2",
+  "theme": "Schule & Lernen",
+  "textType": "diary",
+  "modes": [
+    "full"
+  ],
+  "lengths": {
+    "short": {
+      "label": "around 100 words",
+      "min": 85,
+      "max": 115
+    }
+  },
+  "minutes": {
+    "full": {
+      "short": 50
+    }
+  },
+  "task": {
+    "situation": "Today was your class’s hiking day. There were no lessons, and you spent the whole day outside with your class and two teachers. Now it is evening, and you are writing in your diary.",
+    "instruction": "Write a diary entry. Write about:",
+    "points": [
+      "where you went and how you got there",
+      "what happened during the day",
+      "the funniest moment",
+      "how the day ended for you"
+    ],
+    "words": {
+      "short": "Write around 100 words."
+    },
+    "de": "Ein Tagebucheintrag am Abend nach dem Wandertag: wohin und wie ihr gefahren seid, was passiert ist, der lustigste Moment und wie der Tag für euch zu Ende ging. Schwerpunkt: Verneinung im Past simple (didn’t + Grundform) und Zeitangaben."
+  },
+  "meta": {
+    "date": "{TODAY}",
+    "dear": "Dear Diary,"
+  },
+  "focus": {
+    "label": "didn’t + time phrases",
+    "labelDe": "didn’t + Zeitangaben",
+    "min": {
+      "short": 6
+    },
+    "note": "Marked: past simple negatives (didn’t + base form) and time phrases that answer the question ‘When?’ (today, this morning, at twelve o’clock, after lunch, a moment later …)."
+  },
+  "topicWords": [
+    "hiking",
+    "day"
+  ],
+  "gaps": [
+    {
+      "id": "FRIEND",
+      "step": "funny",
+      "q": "Who is our friend in this part? Shout a first name.",
+      "qDe": "Ruft einen Vornamen für eine Freundin oder einen Freund. Keine Namen von Mitschüler:innen oder Lehrer:innen.",
+      "type": "text",
+      "default": "Malik",
+      "max": 20
+    }
+  ],
+  "steps": [
+    {
+      "id": "place",
+      "part": "Where to?",
+      "q": "Where did our class go on our hiking day?",
+      "de": "Hier wählen wir das Ziel unseres Wandertags.",
+      "options": [
+        {
+          "l": "A",
+          "id": "hut",
+          "label": "Up to a mountain hut",
+          "teaser": "A steep path, a hut at the top and a great view."
+        },
+        {
+          "l": "B",
+          "id": "lake",
+          "label": "Around a lake",
+          "teaser": "A long walk around the water and a picnic on the shore."
+        },
+        {
+          "l": "C",
+          "id": "castle",
+          "label": "To an old castle",
+          "teaser": "A path through the forest to old walls on a hill."
+        }
+      ]
+    },
+    {
+      "id": "intro",
+      "slot": "intro",
+      "part": "Beginning",
+      "q": "How do we start the diary entry?",
+      "de": "Der Anfang sagt, wohin wir gefahren sind und wie der Tag begonnen hat. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "nolessons",
+          "label": "No lessons today",
+          "why": "Starts with a feeling, then says where we went and how.",
+          "text": {
+            "by": "place",
+            "map": {
+              "hut": "What a day! We [[didn’t have]] any lessons: it was our hiking day! We took the train to the mountains.",
+              "lake": "What a day! We [[didn’t have]] any lessons: it was our hiking day! We took the train to a mountain lake.",
+              "castle": "What a day! We [[didn’t have]] any lessons: it was our hiking day! We took the train to a village near an old castle."
+            }
+          }
+        },
+        {
+          "l": "B",
+          "id": "sun",
+          "label": "Start with the weather",
+          "why": "A short, happy first sentence. Then we learn where we went and how.",
+          "text": {
+            "by": "place",
+            "map": {
+              "hut": "Sun at last! [[This morning]], the sky was blue for our hiking day. We took the train to the mountains.",
+              "lake": "Sun at last! [[This morning]], the sky was blue for our hiking day. We took the train to a mountain lake.",
+              "castle": "Sun at last! [[This morning]], the sky was blue for our hiking day. We took the train to a village near an old castle."
+            }
+          }
+        },
+        {
+          "l": "C",
+          "id": "alarm",
+          "label": "A bad start",
+          "why": "A little problem at the start makes the reader curious.",
+          "text": {
+            "by": "place",
+            "map": {
+              "hut": "Our hike to the mountain hut started badly: I [[didn’t hear]] my alarm clock! Luckily, our train was late, too.",
+              "lake": "Our hike to the lake started badly: I [[didn’t hear]] my alarm clock! Luckily, our train was late, too.",
+              "castle": "Our hike to the old castle started badly: I [[didn’t hear]] my alarm clock! Luckily, our train was late, too."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "way",
+      "slot": "way",
+      "part": "On the way",
+      "q": "What happened on our hike?",
+      "de": "Dieser Absatz erzählt, was beim Wandern passiert ist. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "steep",
+          "label": "A hard path",
+          "why": "We can feel how hard the path was, and the time tells us when we got there.",
+          "text": {
+            "by": "place",
+            "map": {
+              "hut": "The path up to the hut was steep and rocky. My legs hurt, but I [[didn’t stop]] once. We arrived [[at twelve o’clock]].",
+              "lake": "The path around the lake was long and muddy. My shoes were wet, but I [[didn’t complain]] once. We stopped [[at twelve o’clock]].",
+              "castle": "The path up to the castle was steep and narrow. My legs hurt, but I [[didn’t stop]] once. We arrived [[at twelve o’clock]]."
+            }
+          }
+        },
+        {
+          "l": "B",
+          "id": "map",
+          "label": "The wrong path",
+          "why": "A small problem and a short, lively sentence: “Wrong path!”",
+          "text": "[[After an hour]], our teacher looked at the map. Wrong path! We [[didn’t panic]] and walked back to the last sign."
+        },
+        {
+          "l": "C",
+          "id": "bottle",
+          "label": "A long walk",
+          "trap": true,
+          "crit": "LSA",
+          "text": "Before lunch, we walked through a forest for two hours. We didn’t saw any animals, and I not found my water bottle.",
+          "reject": "Two mistakes: ‘didn’t saw’ → didn’t see, and ‘I not found’ → I didn’t find.",
+          "rejectDe": "Zwei Fehler: Nach didn’t steht die Grundform (didn’t see), und die Verneinung braucht didn’t (I didn’t find)."
+        },
+        {
+          "l": "D",
+          "id": "deer",
+          "label": "An animal in the forest",
+          "why": "A quiet, exciting moment, and ‘a moment later’ tells us when it ended.",
+          "text": "In the forest, we saw a deer. We stood very still and [[didn’t say]] a word. [[A moment later]], it ran away."
+        }
+      ]
+    },
+    {
+      "id": "lunch",
+      "slot": "lunch",
+      "part": "Lunch break",
+      "q": "What happened in our lunch break?",
+      "de": "Dieser Absatz erzählt von der Mittagspause. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "hungry",
+          "label": "Hungry hikers",
+          "trap": true,
+          "crit": "CC",
+          "text": "We were really hungry at lunchtime because we ate all our sandwiches in five minutes. Nobody said a word!",
+          "reject": "‘because’ gives the reason, but the sandwiches are not the reason for the hunger. Better: We were hungry, so we ate …",
+          "rejectDe": "„because“ nennt den Grund. Die Brote sind aber nicht der Grund für den Hunger. Besser: We were hungry, so we ate …"
+        },
+        {
+          "l": "B",
+          "id": "food",
+          "label": "Lunch",
+          "why": "Good food after a long walk, with a funny detail at the end.",
+          "text": {
+            "by": "place",
+            "map": {
+              "hut": "[[At lunchtime]], we ate warm pancakes at the hut. I was really hungry, and I [[didn’t leave]] a single crumb.",
+              "lake": "[[At lunchtime]], we had a picnic by the lake. I was really hungry, and I [[didn’t leave]] a single crumb.",
+              "castle": "[[At lunchtime]], we had a picnic by the castle walls. I was really hungry, and I [[didn’t leave]] a single crumb."
+            }
+          }
+        },
+        {
+          "l": "C",
+          "id": "football",
+          "label": "A football match",
+          "why": "A game in the break, and the teachers’ result is a nice little joke.",
+          "text": "We played football on the grass [[after lunch]]. The teachers played, too, and they [[didn’t score]] a single goal!"
+        }
+      ]
+    },
+    {
+      "id": "funny",
+      "slot": "funny",
+      "part": "Funniest moment",
+      "q": "What was the funniest moment of the day?",
+      "de": "Dieser Absatz erzählt den lustigsten Moment des Tages. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "photo",
+          "label": "The class photo",
+          "why": "We can see the funny photo in our heads.",
+          "text": "For the class photo, {FRIEND} set the timer, ran back and [[didn’t see]] a stone. Result: two feet in the air!"
+        },
+        {
+          "l": "B",
+          "id": "hat",
+          "label": "A flying hat",
+          "why": "A surprise at the end: nobody expects the cow.",
+          "text": "A strong wind took our teacher’s hat [[in the afternoon]]. {FRIEND} ran after it, but a cow was faster and tried to eat it!"
+        },
+        {
+          "l": "C",
+          "id": "asleep",
+          "label": "A sleepy teacher",
+          "why": "A funny scene on the way home, with everybody in it.",
+          "text": "[[On the way home]], our teacher fell asleep on the train and [[didn’t wake up]] at our station. The whole class shouted “Wake up!”"
+        }
+      ]
+    },
+    {
+      "id": "end",
+      "slot": "end",
+      "part": "Ending",
+      "q": "How do we end the diary entry?",
+      "de": "Am Ende schreiben wir, wie der Tag für uns ausgeht. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "tired",
+          "label": "Tired but happy",
+          "why": "How we feel now, and a typical diary goodbye.",
+          "text": "I’m so tired [[tonight]], and my feet hurt. It was a great day! Good night, Diary!"
+        },
+        {
+          "l": "B",
+          "id": "again",
+          "label": "A wish",
+          "why": "A wish for the future is a warm ending.",
+          "text": "I [[didn’t want]] this wonderful day to end. I hope our class can go back [[next year]]!"
+        },
+        {
+          "l": "C",
+          "id": "boots",
+          "label": "Muddy boots",
+          "why": "A small, real detail from home, then good night.",
+          "text": "My hiking boots are still by the door, full of mud. I’m going to clean them [[tomorrow]]. Good night, Diary!"
+        },
+        {
+          "l": "D",
+          "id": "comments",
+          "label": "A question at the end",
+          "trap": true,
+          "crit": "TA",
+          "text": "That was our hiking day. Did you have a hiking day this year, too? Write a comment below and tell me!",
+          "reject": "A diary is private. Nobody else reads it, so we don’t ask for comments.",
+          "rejectDe": "Ein Tagebuch ist privat. Niemand sonst liest es, also bitten wir nicht um Kommentare."
+        }
+      ]
+    }
+  ],
+  "order": [
+    "intro",
+    "way",
+    "lunch",
+    "funny",
+    "end"
+  ],
+  "checks": [
+    {
+      "en": "The date is at the top, and “Dear Diary,” is on its own line"
+    },
+    {
+      "en": "It says where we went and how we got there"
+    },
+    {
+      "en": "Past simple for everything that happened today"
+    },
+    {
+      "en": "After didn’t comes the base form: didn’t see, didn’t stop"
+    },
+    {
+      "en": "Time phrases show when things happened"
+    },
+    {
+      "en": "It tells the funniest moment of the day"
+    },
+    {
+      "en": "No questions for readers: a diary is private"
+    }
+  ],
+  "teacher": {
+    "aim": "Die Klasse schreibt gemeinsam einen Tagebucheintrag über den Wandertag und übt dabei die Verneinung im Past simple (didn’t + Grundform) und Zeitangaben (this morning, at twelve o’clock, after lunch …).",
+    "prep": "A/B/C/D-Karten austeilen, Hefte bereitlegen, Beamer im Vollbild. Einsatz ab: Past simple (regelmäßige und häufige unregelmäßige Verben), Verneinung mit didn’t, going to für Pläne. Bei Bedarf Wörter an die Tafel: steep (steil), rocky (felsig), muddy (schlammig), complain (sich beschweren), deer (Reh), panic (in Panik geraten), crumb (Krümel), score a goal (ein Tor schießen), set the timer (den Selbstauslöser einstellen).",
+    "heft": "Neue Seite: Datum rechts oben, „Diary“ als Überschrift (wie am Beamer). Darunter rechts das Datum des Eintrags und „Dear Diary,“ in einer eigenen Zeile. Jeder Absatz beginnt nach einer Leerzeile, am Rand steht der Name des Teils wie am Beamer. Verneinungen mit didn’t und Zeitangaben grün unterstreichen.",
+    "flow": "Volltext (50 min): 5 min Aufgabe lesen und Ziel wählen (Berghütte, See oder Burg) · 5 Entscheidungen à ca. 2–3 min, zusammen ca. 12 min · Abschreiben nach jeder Entscheidung, zusammen ca. 20 min · 5 min Checkliste · 5–8 min Puffer. Wenn die Zeit knapp wird: Checkliste als Hausübung.",
+    "traps": "On the way C (LSA, Sprachrichtigkeit): „didn’t saw“ statt „didn’t see“ und „I not found“ statt „I didn’t find“. Lunch break A (CC, Kohärenz und Kohäsion): because verdreht Grund und Folge; richtig wäre „We were so hungry that we ate …“ oder „We were hungry, so we ate …“. Ending D (TA, Erfüllung der Aufgabenstellung): Ein Tagebuch ist privat; die Bitte um Kommentare gehört in einen Blog, nicht ins Tagebuch.",
+    "notes": "Ziel und Erlebnisse sind erfunden; den Namen der Freundin oder des Freundes ruft die Klasse. Merksatz zum Mitschreiben: Nach didn’t steht immer die Grundform (didn’t see, didn’t find). Markiert sind nur Zeitangaben, die auf die Frage „Wann?“ antworten, nicht Wörter wie once (einmal). Differenzierung: Schnelle schreiben zwei weitere Sätze mit didn’t über etwas, das am Wandertag nicht passiert ist. Hausübung: zweite Fassung mit anderem Ziel und anderen Entscheidungen oder ein Eintrag über einen echten Ausflug (ca. 100 Wörter)."
+  }
+}

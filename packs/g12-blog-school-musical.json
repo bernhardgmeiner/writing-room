@@ -1,0 +1,470 @@
+{
+  "id": "g12-blog-school-musical",
+  "title": "Behind the curtain: six weeks of our school musical",
+  "titleDe": "Sechs Wochen Schulmusical",
+  "grade": 12,
+  "level": "B2",
+  "theme": "Kultur & Kreativität",
+  "textType": "blog",
+  "modes": [
+    "full",
+    "frame"
+  ],
+  "lengths": {
+    "short": {
+      "label": "around 250 words",
+      "min": 225,
+      "max": 275
+    },
+    "long": {
+      "label": "around 400 words",
+      "min": 360,
+      "max": 440
+    }
+  },
+  "minutes": {
+    "full": {
+      "short": 50,
+      "long": 100
+    },
+    "frame": {
+      "short": 60,
+      "long": 100
+    }
+  },
+  "task": {
+    "situation": "Last week, your school put on its first musical in years: “The Ferry Captain’s Song”, an original show written by two teachers and directed by one of them. More than forty students took part, on stage and behind the scenes. The school’s culture blog ‘Front Row’ has asked members of the cast and crew to write about the six weeks of rehearsals.",
+    "instruction": "Write a blog post in which you:",
+    "points": [
+      "describe what the six weeks of rehearsals were like",
+      "explain how working as a team helped you get the show ready for opening night",
+      "reflect on what you have learnt from the experience"
+    ],
+    "words": {
+      "short": "Give your blog post a title. Write around 250 words.",
+      "long": "Give your blog post a title. Write around 400 words."
+    },
+    "de": "Blogbeitrag für den Kulturblog der Schule über die Probenzeit des Schulmusicals: Titel, Username, Datum, Einstieg mit Hook, klare Absätze, Schluss mit Aufruf zum Kommentieren. Drei Inhaltspunkte: die Probenzeit beschreiben; erklären, wie Teamarbeit die Premiere möglich gemacht hat; über das Gelernte nachdenken. Zuerst entscheidet ihr, ob unsere Bloggerin oder unser Blogger auf der Bühne stand oder hinter den Kulissen arbeitete."
+  },
+  "meta": {
+    "user": "stage_door_notes"
+  },
+  "focus": {
+    "label": "participle clauses",
+    "labelDe": "Partizipialkonstruktionen",
+    "min": {
+      "short": 5,
+      "long": 8
+    },
+    "note": "Marked: participle clauses that replace a full clause: -ing clauses (Looking back, …), past participle clauses (Squeezed into the hall, …), perfect participle clauses (Having worked with …) and shortened relative clauses (a script covered in coffee stains). Gerunds (rebuilding it cost us …) and verb forms in tenses (I was standing) are not marked."
+  },
+  "topicWords": [
+    "musical",
+    "rehearsal",
+    "rehearsals",
+    "stage",
+    "show",
+    "cast",
+    "crew",
+    "opening",
+    "night",
+    "river",
+    "sang",
+    "lighting",
+    "scenes",
+    "scene"
+  ],
+  "gaps": [
+    {
+      "id": "CAST",
+      "step": "intro",
+      "q": "How many students were in the cast and crew? Shout a number.",
+      "qDe": "Wie viele Schüler:innen haben mitgemacht? Ruft eine realistische Zahl über 40, z. B. 45–60.",
+      "type": "number",
+      "default": 48,
+      "min": 41,
+      "max": 90
+    },
+    {
+      "id": "LEAD",
+      "step": "crisis",
+      "q": "Who played the ferry captain, the main part? First name only.",
+      "qDe": "Ruft einen Vornamen für die Person, die die Hauptrolle spielte. Keine Namen von Mitschüler:innen oder Lehrer:innen.",
+      "type": "text",
+      "default": "Lina",
+      "max": 20
+    }
+  ],
+  "steps": [
+    {
+      "id": "role",
+      "part": "Role",
+      "q": "Who is our blogger: part of the cast or part of the crew?",
+      "de": "Auf der Bühne oder dahinter: Diese Entscheidung bestimmt die Perspektive im ganzen Blogbeitrag.",
+      "options": [
+        {
+          "l": "A",
+          "id": "cast",
+          "label": "On stage",
+          "teaser": "Our blogger sang in the chorus and had a few lines as a fisherman."
+        },
+        {
+          "l": "B",
+          "id": "crew",
+          "label": "Behind the scenes",
+          "teaser": "Our blogger ran the lighting desk and had never touched a spotlight before."
+        }
+      ]
+    },
+    {
+      "id": "intro",
+      "slot": "intro",
+      "part": "Introduction",
+      "q": "How do we hook our readers?",
+      "de": "Der Einstieg führt mitten in die Welt des Musicals und macht Lust aufs Weiterlesen. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then finish the introduction in your own words: make readers curious about the six weeks.",
+      "ownDe": "Gerüst abschreiben, dann den Einstieg mit eigenen Worten fertigschreiben: neugierig auf die sechs Wochen machen.",
+      "options": [
+        {
+          "l": "A",
+          "id": "scene",
+          "label": "Start with a scene",
+          "text": {
+            "by": "role",
+            "map": {
+              "cast": "{{Three minutes before curtain-up,}} I was standing in the wings, [[clutching a script I no longer needed]]. Out front, every seat in the hall was taken. {{That was last Friday. Only six weeks earlier,}} we couldn’t even get through the opening song without somebody forgetting the words.",
+              "crew": "{{Three minutes before curtain-up,}} I was sitting at the lighting desk, [[staring at a screen full of numbered cues]]. Out front, every seat in the hall was taken. {{That was last Friday. Only six weeks earlier,}} I had no idea how to switch on a single spotlight, let alone forty of them."
+            }
+          },
+          "why": "A short scene drops readers into the moment and then jumps back to where the story starts."
+        },
+        {
+          "l": "B",
+          "id": "question",
+          "label": "Ask the readers a question",
+          "text": "{{Have you ever wondered what happens behind the curtain}} before a show? For six weeks, {CAST} of us did little else but prepare “The Ferry Captain’s Song”. {{[[Having survived it all,]] I can finally tell you}} the whole story, from the first chaotic read-through to the curtain call.",
+          "why": "A question speaks to readers directly, and the last sentence promises them the whole story."
+        },
+        {
+          "l": "C",
+          "id": "definition",
+          "label": "Start with a definition",
+          "trap": true,
+          "crit": "TA",
+          "text": "A musical is a form of theatre that combines songs, spoken dialogue, acting and dance. Musicals are popular all over the world, and many schools put one on every year. Last week, our school performed “The Ferry Captain’s Song”, and I was part of it.",
+          "reject": "A dictionary definition is not a hook: it tells blog readers nothing new about our six weeks. Start with a scene or a question that makes them curious.",
+          "rejectDe": "Eine Lexikon-Definition ist kein Einstieg und erzählt nichts Neues. Ein Blog beginnt mit einer Szene oder einer Frage, die neugierig macht."
+        }
+      ]
+    },
+    {
+      "id": "chaos",
+      "slot": "chaos",
+      "part": "Body paragraph 1",
+      "q": "Body paragraph 1: what were the six weeks of rehearsals like?",
+      "de": "Erster Inhaltspunkt: wie die Probenzeit wirklich war. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then describe the chaos in your own words with two concrete details.",
+      "ownDe": "Gerüst abschreiben, dann das Chaos mit eigenen Worten und zwei genauen Details beschreiben.",
+      "options": [
+        {
+          "l": "A",
+          "id": "trap",
+          "label": "The first weeks",
+          "trap": true,
+          "crit": "LSA",
+          "text": "Arriving at the first rehearsal, the hall was full of noise and nobody knew what to do. The most of the scenes were rehearsed in the wrong order, and in week three we got a new version of the script with two extra songs, what meant that everything started again from the beginning.",
+          "reject": "Three mistakes: ‘Arriving …, the hall was’ (the hall didn’t arrive: When we arrived, …), ‘The most of the scenes’ (→ Most of the scenes) and ‘what meant’ (→ which meant: ‘which’ refers back to the whole clause).",
+          "rejectDe": "Drei Fehler: Das Partizip passt nicht zum Subjekt (Die Halle kam nicht an.), the most of → most of, what meant → which meant (which bezieht sich auf den ganzen Satz davor)."
+        },
+        {
+          "l": "B",
+          "id": "weeks",
+          "label": "Week by week",
+          "text": "{{The first weeks were pure chaos. [[Squeezed into the school hall after lessons,]] we}} rehearsed scenes in the wrong order because half the cast always had a maths test or a football match. {{By week three, the set was still}} a pile of cardboard boxes, and our river was a blue bedsheet.",
+          "why": "A clear topic sentence, then concrete, funny details that show the chaos step by step."
+        },
+        {
+          "l": "C",
+          "id": "afternoon",
+          "label": "A typical afternoon",
+          "text": "{{A typical rehearsal afternoon looked like this:}} the dancers practised in one corner, the band tuned up in another, and our director ran between them, [[waving a script covered in coffee stains]]. {{[[Left to wait for our turn,]] we}} did our homework on the stage steps, and nobody ever knew where the props were.",
+          "why": "One typical afternoon brings the chaos to life, almost like a picture."
+        }
+      ]
+    },
+    {
+      "id": "crisis",
+      "slot": "crisis",
+      "part": "Body paragraph 1",
+      "len": "long",
+      "q": "Which crisis do we tell our readers about?",
+      "de": "Der Absatz geht weiter: eine Krise kurz vor der Premiere. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then tell the rest of the crisis in your own words and say how it ended.",
+      "ownDe": "Gerüst abschreiben, dann die Krise mit eigenen Worten zu Ende erzählen: Wie ging sie aus?",
+      "options": [
+        {
+          "l": "A",
+          "id": "voice",
+          "label": "A lost voice",
+          "text": "{{Then, nine days before opening night, disaster struck:}} {LEAD}, who played the ferry captain, woke up without a voice. {{[[Faced with the prospect of cancelling,]] the director}} rewrote two scenes overnight so that the chorus could sing the captain’s songs. Luckily, {LEAD}’s voice came back just in time for the dress rehearsal.",
+          "why": "A real crisis creates suspense, and the clever solution leads to the next paragraph about teamwork."
+        },
+        {
+          "l": "B",
+          "id": "bridge",
+          "label": "A collapsing set",
+          "text": "{{The worst moment came during our first full run-through.}} Halfway through the storm scene, the wooden bridge, [[painted to look like old stone]], collapsed with a crash that echoed through the whole school. {{Nobody was hurt, but}} rebuilding it cost us three precious days of rehearsals.",
+          "why": "A dramatic moment with a sound you can almost hear makes readers feel the pressure."
+        }
+      ],
+      "join": true
+    },
+    {
+      "id": "team",
+      "slot": "team",
+      "part": "Body paragraph 2",
+      "q": "Body paragraph 2: how did teamwork get the show ready for opening night?",
+      "de": "Zweiter Inhaltspunkt: wie Teamarbeit die Premiere möglich gemacht hat. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then explain in your own words how people helped each other. Give one example.",
+      "ownDe": "Gerüst abschreiben, dann mit eigenen Worten erklären, wie sich alle gegenseitig geholfen haben. Ein Beispiel nennen.",
+      "options": [
+        {
+          "l": "A",
+          "id": "everyone",
+          "label": "Everyone helped everyone",
+          "text": "{{What saved us in the end was teamwork. [[Realising that we would never finish in time,]] we}} started helping each other across groups: dancers painted scenery, the band carried set pieces, and older students coached younger ones through their songs. {{By the dress rehearsal, everything}} had fallen into place, [[leaving us exhausted but proud]].",
+          "why": "The topic sentence names the answer, and the colon introduces three clear examples."
+        },
+        {
+          "l": "B",
+          "id": "trap",
+          "label": "Help across groups",
+          "trap": true,
+          "crit": "CC",
+          "text": "Teamwork was the key to our success in the end. The dancers painted scenery after their own rehearsals. Conversely, the band helped to carry heavy set pieces across the stage. Accordingly, the older students coached the younger ones through their songs. By the dress rehearsal, the show was ready, and we were very proud.",
+          "reject": "The linking words don’t fit: ‘Conversely’ introduces an opposite, but the band’s help is just another example. ‘Accordingly’ suggests a result, but coaching has nothing to do with carrying set pieces.",
+          "rejectDe": "Die Linking words passen nicht: Conversely kündigt einen Gegensatz an, Accordingly eine Folge, aber hier stehen nur weitere Beispiele."
+        },
+        {
+          "l": "C",
+          "id": "buddy",
+          "label": "A buddy system",
+          "text": {
+            "by": "role",
+            "map": {
+              "cast": "{{What helped most was our director’s buddy system. [[Paired with someone from the stage crew,]] I}} learnt where every spotlight would hit me, and in return I helped my buddy learn the songs he secretly loved. {{Bit by bit, the separate groups}} turned into one team, ready for opening night.",
+              "crew": "{{What helped most was our director’s buddy system. [[Paired with someone from the cast,]] I}} learnt the songs by heart, so I always knew when a lighting change was coming. In return, I showed my buddy where to stand in the light. {{Bit by bit, the separate groups}} turned into one team, ready for opening night."
+            }
+          },
+          "why": "One clear idea, the buddy system, explained with a personal example of give and take."
+        }
+      ]
+    },
+    {
+      "id": "night",
+      "slot": "night",
+      "part": "Body paragraph 2",
+      "len": "long",
+      "q": "What do we tell readers about opening night?",
+      "de": "Der Absatz geht weiter: der Premierenabend. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then describe the atmosphere in your own words: what could the blogger see, hear and feel?",
+      "ownDe": "Gerüst abschreiben, dann die Stimmung mit eigenen Worten beschreiben: Was sah, hörte und fühlte die Person?",
+      "options": [
+        {
+          "l": "A",
+          "id": "audience",
+          "label": "The audience",
+          "text": {
+            "by": "role",
+            "map": {
+              "cast": "{{When the premiere came at last, I was shaking. [[Peeking through a gap in the curtain,]] I}} spotted my grandparents in the second row, [[waving at the empty stage]]. Two hours later, the whole audience was on its feet, and I had to fight back tears during the final bow.",
+              "crew": "{{When the premiere came at last, I was shaking. [[Hidden in the dark at the back of the hall,]] I}} watched the last seats fill up. Two hours later, the whole audience was on its feet, and as I brought up the lights for the final bow, I had to fight back tears."
+            }
+          },
+          "why": "Small personal details make the big moment feel real and moving."
+        },
+        {
+          "l": "B",
+          "id": "silence",
+          "label": "Three seconds of silence",
+          "text": "{{I’ll never forget the end of the storm scene at the premiere.}} For three long seconds after the last note, the hall was completely silent. A moment later, the applause started, [[rolling towards the stage like thunder]], {{and suddenly every afternoon}} we had spent pulling together seemed worth it.",
+          "why": "Focusing on one moment builds tension, and the comparison with thunder makes it vivid."
+        }
+      ],
+      "join": true
+    },
+    {
+      "id": "learnt",
+      "slot": "learnt",
+      "part": "Body paragraph 3",
+      "q": "Body paragraph 3: what has our blogger learnt from the experience?",
+      "de": "Dritter Inhaltspunkt: Nachdenken über das, was die Person gelernt hat. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then explain in your own words what the blogger has learnt and why it matters.",
+      "ownDe": "Gerüst abschreiben, dann mit eigenen Worten erklären, was die Person gelernt hat und warum das wichtig ist.",
+      "options": [
+        {
+          "l": "A",
+          "id": "mistakes",
+          "label": "Mistakes are allowed",
+          "text": {
+            "by": "role",
+            "map": {
+              "cast": "{{[[Looking back,]] I’d say my biggest lesson is that}} mistakes are part of the process. On the last night I came in a line too early, but the others covered for me so smoothly that nobody noticed. {{That night taught me to stop}} panicking about every little slip, on stage and in class.",
+              "crew": "{{[[Looking back,]] I’d say my biggest lesson is that}} mistakes are part of the process. On the last night I pressed the wrong button and the stage went dark, but the actors stayed so calm that it looked planned. {{That night taught me to stop}} panicking about every little slip, backstage and in class."
+            }
+          },
+          "why": "A real example shows the lesson, and the last sentence connects it to everyday life."
+        },
+        {
+          "l": "B",
+          "id": "help",
+          "label": "Asking for help",
+          "text": "{{Above all, those six weeks showed me how much invisible work}} goes into one evening on stage. {{[[Having worked with people from every year group,]] I’ve also learnt}} to ask for help instead of trying to do everything myself, something I’ll definitely need in my Matura year.",
+          "why": "Two lessons, one about theatre and one about the writer, linked to the writer’s life now."
+        },
+        {
+          "l": "C",
+          "id": "trap",
+          "label": "The story we told",
+          "trap": true,
+          "crit": "TA",
+          "text": "“The Ferry Captain’s Song” tells the story of a small town by a river. When a storm destroys the old bridge, a young ferry captain and her friends have to find a way to bring the town together again. In the end, they build a new bridge, and everybody sings the final song on the riverbank.",
+          "reject": "This retells the plot of the musical, but the task asks what YOU have learnt from the experience. Content point 3 is missing.",
+          "rejectDe": "Das ist eine Inhaltsangabe des Musicals. Gefragt ist, was die Person aus der Erfahrung gelernt hat: Inhaltspunkt 3 fehlt."
+        }
+      ]
+    },
+    {
+      "id": "tips",
+      "slot": "tips",
+      "part": "Body paragraph 3",
+      "len": "long",
+      "q": "What advice do we give next year’s cast and crew?",
+      "de": "Der Absatz geht weiter: Tipps für das nächste Musical. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then add one more tip of your own and explain why it helps.",
+      "ownDe": "Gerüst abschreiben, dann einen weiteren eigenen Tipp ergänzen und begründen.",
+      "options": [
+        {
+          "l": "A",
+          "id": "list",
+          "label": "Three quick tips",
+          "text": "{{If you’re thinking of joining next year’s production, here are my tips. First,}} learn your lines or cues early because the last two weeks are always busier than you expect. {{Second, make friends outside your own group.}} {{And finally, bring snacks:}} rehearsals [[running late into the evening]] are much easier on a full stomach.",
+          "why": "Numbered tips are easy to follow, and the last one ends the paragraph with a smile."
+        },
+        {
+          "l": "B",
+          "id": "yes",
+          "label": "Just sign up",
+          "text": "{{My advice to anyone [[sitting on the fence]] about next year’s production is simple: sign up.}} You don’t need to be a brilliant singer. There are jobs for everyone, from doing make-up to selling tickets. {{Most people I met during rehearsals}} had never been part of a show before.",
+          "why": "One clear piece of advice, a reason and a reassuring fact encourage hesitant readers."
+        }
+      ],
+      "join": true
+    },
+    {
+      "id": "concl",
+      "slot": "concl",
+      "part": "Conclusion",
+      "q": "How do we end our blog post?",
+      "de": "Der Schluss rundet den Blogbeitrag ab und spricht die Leser:innen an. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then finish with your own question to the readers.",
+      "ownDe": "Gerüst abschreiben, dann mit einer eigenen Frage an die Leser:innen schließen.",
+      "options": [
+        {
+          "l": "A",
+          "id": "again",
+          "label": "Would I do it again?",
+          "text": "{{So, would I do it all again? Absolutely,}} chaos and all. {{[[Having seen what we managed together,]] I’m}} taking home far more than a few songs, and I already miss the late evenings. {{Over to you: have you been in a show yourself,}} on stage or behind it? Tell me about it in the comments!",
+          "why": "A question and a quick answer sum up the post, from the chaos to what the blogger takes home, and the ending invites comments."
+        },
+        {
+          "l": "B",
+          "id": "empty",
+          "label": "A final image",
+          "text": "{{[[Walking past the empty hall this morning,]] I}} could still hear the last song in my head. At the first rehearsal, none of us believed we could pull it off, let alone learn so much. {{What about you? Which show}} would you love to see on our school stage? Let me know in the comments!",
+          "why": "A quiet image looks back on the whole journey and what it taught us, and the question invites readers to join in."
+        }
+      ]
+    },
+    {
+      "id": "title",
+      "slot": "title",
+      "part": "Title",
+      "q": "Now that the blog post is finished, which title do we choose?",
+      "de": "Den Titel wählen wir zuletzt: Er soll neugierig machen und zu unserer Perspektive passen.",
+      "own": "Short and catchy: the title should make readers curious about the six weeks.",
+      "ownDe": "Kurz und treffend: Der Titel soll neugierig auf die sechs Wochen machen.",
+      "options": [
+        {
+          "l": "A",
+          "id": "chaos",
+          "label": "From … to …",
+          "text": "From total chaos to curtain call",
+          "why": "It sums up the whole journey in a few words, and the c-sounds make it catchy."
+        },
+        {
+          "l": "B",
+          "id": "notes",
+          "label": "Our perspective",
+          "text": {
+            "by": "role",
+            "map": {
+              "cast": "Notes from the wings",
+              "crew": "Notes from the lighting desk"
+            }
+          },
+          "why": "It tells readers at once where the blogger was during the show."
+        },
+        {
+          "l": "C",
+          "id": "front",
+          "label": "A promise",
+          "text": "What the front row never sees",
+          "why": "It promises readers a look behind the scenes and makes them curious."
+        }
+      ]
+    }
+  ],
+  "order": [
+    "title",
+    "intro",
+    "chaos",
+    "crisis",
+    "team",
+    "night",
+    "learnt",
+    "tips",
+    "concl"
+  ],
+  "checks": [
+    {
+      "en": "A title that makes readers curious, with user name and date under it"
+    },
+    {
+      "en": "An introduction with a hook (a scene or a question)"
+    },
+    {
+      "en": "All three content points: rehearsals, teamwork before opening night, lessons learnt"
+    },
+    {
+      "en": "Every participle clause has the same subject as the main clause"
+    },
+    {
+      "en": "Five paragraphs; each body paragraph opens with a topic sentence linked to what came before"
+    },
+    {
+      "en": "Personal blog style: contractions, ‘I’ and ‘you’, questions to the readers"
+    },
+    {
+      "en": "The ending invites readers to comment"
+    }
+  ],
+  "teacher": {
+    "aim": "Die Klasse baut gemeinsam einen Blogbeitrag auf B2-Niveau (Reifeprüfungsformat) mit drei Inhaltspunkten über die Probenzeit eines Schulmusicals. Schwerpunkt: Partizipialkonstruktionen (Looking back, …, Having worked with …, Squeezed into the hall, …) und ihr häufigster Fehler, das falsche Bezugssubjekt.",
+    "prep": "A/B/C/D-Karten austeilen (ohne Karten: 1–4 Finger, die Tasten 1–4 wählen wie A–D), Hefte bereit, Beamer im Vollbild. Im Gerüst-Modus den eingebauten Timer nutzen: 5–6 min pro Absatz. Das Musical „The Ferry Captain’s Song“ ist erfunden; die Aufgabe am Beamer enthält alles Nötige.",
+    "heft": "Neue Seite: Datum rechts oben, als Überschrift „Blog post“ (wie am Beamer). Darunter 2 Zeilen für den Titel frei lassen (der Titel kommt zuletzt), darunter Username · Datum. Jeder Absatz beginnt nach einer Leerzeile, am Rand stehen die Randwörter Intro, Body 1, Body 2, Body 3 und Conclusion. Partizipialkonstruktionen grün unterstreichen.",
+    "flow": "Volltext kurz (50 min): 5 min Aufgabe und Blog-Merkmale, Perspektive wählen, 6 Text-Entscheidungen à ca. 2 min, Abschreiben ca. 25 min, 5 min Checkliste. Volltext lang (100 min): dazu drei Fortsetzungen ohne neuen Absatz: Krise (Body 1), Premierenabend (Body 2) und Tipps (Body 3). Gerüst kurz (ca. 60 min): 3 min Aufgabe und Perspektive, pro Absatz 1 min Entscheidung, 5–6 min eigenes Schreiben, 1 min Vergleich mit dem Modell; am Ende 3 min Titel und 5 min Checkliste. In einer 50-Minuten-Stunde Schluss und Checkliste als Hausübung. Gerüst lang (100 min): fünf Absätze und drei Fortsetzungen à ca. 6 min (4 min Schreiben im selben Absatz), plus Titel, dazwischen eine kurze Vergleichsrunde zu zweit.",
+    "traps": "Introduction C (TA): Lexikon-Definition statt Hook. Body 1 A (LSA): Partizip mit falschem Bezugssubjekt (Arriving …, the hall was), the most of, what statt which als Bezug auf einen ganzen Satz. Body 2 B (CC): Conversely und Accordingly ohne Gegensatz bzw. Folge. Body 3 C (TA): Inhaltsangabe des Musicals statt Reflexion, Inhaltspunkt 3 fehlt. Kürzel: TA = Erfüllung der Aufgabenstellung, CC = Kohärenz und Kohäsion, LSR = Spektrum sprachlicher Mittel, LSA = Sprachrichtigkeit.",
+    "notes": "Der Blogbeitrag hat in beiden Längen fünf Absätze (Intro, drei Hauptteile, Schluss); die lange Fassung macht Body 1, 2 und 3 mit je einer Fortsetzung länger, ohne neue Absätze. Markiert sind Partizipialsätze, die einen Neben- oder Relativsatz ersetzen, auch verkürzte Relativsätze (a script covered in coffee stains). Nicht markiert: Gerundien (rebuilding it cost us …) und Verlaufsformen (I was standing). Gut zum Besprechen: die Falle in Body 1 (Arriving at the first rehearsal, the hall was …) umbauen lassen: When we arrived … oder Arriving at the first rehearsal, we found … Für den Namen der Hauptrolle nur erfundene Vornamen verwenden, keine Namen von Mitschüler:innen oder Lehrer:innen. Differenzierung: Schnelle schreiben eine zweite Fassung aus der anderen Perspektive (Bühne oder Technik) und vergleichen. Hausübung: ein Blog-Kommentar (ca. 120 Wörter) einer Zuschauerin oder eines Zuschauers auf unseren Beitrag, mit mindestens zwei Partizipialkonstruktionen."
+  }
+}

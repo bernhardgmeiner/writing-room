@@ -1,0 +1,289 @@
+{
+  "id": "g5-description-dream-room",
+  "title": "My dream room",
+  "titleDe": "Mein Traumzimmer",
+  "grade": 5,
+  "level": "A1",
+  "theme": "Ich & meine Welt",
+  "textType": "description",
+  "modes": [
+    "full"
+  ],
+  "lengths": {
+    "short": {
+      "label": "around 60 words",
+      "min": 50,
+      "max": 70
+    }
+  },
+  "minutes": {
+    "full": {
+      "short": 50
+    }
+  },
+  "task": {
+    "situation": "There is a competition in your school magazine: ‘My dream room’. Describe the room of your dreams. The best descriptions go into the next magazine.",
+    "instruction": "Write a description. Say:",
+    "points": [
+      "what colour your room is",
+      "where your bed and your desk are",
+      "what is special in your room",
+      "what you can do there"
+    ],
+    "words": {
+      "short": "Give your description a title. Write around 60 words."
+    },
+    "de": "Eine Beschreibung des Traumzimmers für einen Wettbewerb der Schulzeitung: Farbe, wo Bett und Schreibtisch sind, was besonders ist und was man dort machen kann. Schwerpunkt: Präpositionen des Ortes."
+  },
+  "meta": {
+    "publication": "School magazine competition · My dream room"
+  },
+  "focus": {
+    "label": "prepositions of place",
+    "labelDe": "Präpositionen des Ortes",
+    "min": {
+      "short": 5
+    },
+    "note": "Marked: every preposition of place (in, on, under, next to, behind, between, in front of)."
+  },
+  "topicWords": [
+    "dream",
+    "room"
+  ],
+  "gaps": [
+    {
+      "id": "COLOUR",
+      "step": "intro",
+      "q": "What colour is our dream room? Shout a colour.",
+      "qDe": "Ruft eine Farbe auf Englisch, z. B. green, yellow oder light blue.",
+      "type": "text",
+      "default": "green",
+      "max": 20,
+      "cap": false
+    }
+  ],
+  "steps": [
+    {
+      "id": "title",
+      "slot": "title",
+      "part": "Title",
+      "q": "Which title do we write?",
+      "de": "Wählt einen Titel für unsere Beschreibung.",
+      "options": [
+        {
+          "l": "A",
+          "id": "my",
+          "label": "The topic",
+          "text": "My Dream Room",
+          "why": "Short and clear: readers know the topic at once."
+        },
+        {
+          "l": "B",
+          "id": "me",
+          "label": "Just for me",
+          "text": "A Room Just for Me",
+          "why": "It shows that the room is a very personal place."
+        },
+        {
+          "l": "C",
+          "id": "fun",
+          "label": "A room full of fun",
+          "text": "A Room Full of Fun",
+          "why": "A happy title: it makes readers curious."
+        }
+      ]
+    },
+    {
+      "id": "intro",
+      "slot": "intro",
+      "part": "Introduction",
+      "q": "How do we start? What colour is our room?",
+      "de": "Der Anfang stellt unser Zimmer und seine Farbe vor. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "this",
+          "label": "Say what it is",
+          "text": "This is my dream room. It is big, and the walls are {COLOUR}.",
+          "why": "A clear start: readers know at once what the text is about."
+        },
+        {
+          "l": "B",
+          "id": "welcome",
+          "label": "Welcome the readers",
+          "text": "Welcome to my dream room! It is cosy, and everything is {COLOUR}.",
+          "why": "‘Welcome’ speaks to the readers and invites them in."
+        },
+        {
+          "l": "C",
+          "id": "look",
+          "label": "Invite the readers",
+          "text": "Come and have a look! My dream room is big and {COLOUR}.",
+          "why": "An imperative makes the readers feel like guests."
+        }
+      ]
+    },
+    {
+      "id": "bed",
+      "slot": "bed",
+      "part": "The bed",
+      "q": "What is our bed like? Where is it?",
+      "de": "Hier geht es um das Bett und wo es steht. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "window",
+          "label": "Next to the window",
+          "text": "My bed is [[next to]] the window, so I can see the stars.",
+          "why": "We know where the bed is, and the stars make it special."
+        },
+        {
+          "l": "B",
+          "id": "bunk",
+          "label": "A bunk bed",
+          "text": "A bunk bed stands [[in]] the corner. A friend can sleep there, too!",
+          "why": "A bunk bed is great for sleepovers with a friend."
+        },
+        {
+          "l": "C",
+          "id": "hammock",
+          "label": "A hammock",
+          "text": "Guess what? My bed is a hammock! It hangs [[between]] two walls.",
+          "why": "A surprise for readers: a hammock is a really fun bed."
+        }
+      ]
+    },
+    {
+      "id": "desk",
+      "slot": "desk",
+      "part": "Desk and walls",
+      "q": "Where is the desk? What is on the walls?",
+      "de": "Hier geht es um den Schreibtisch und die Wände. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "posters",
+          "label": "Desk and posters",
+          "text": "Posters hang [[on]] the walls. My desk is [[in front of]] the window.",
+          "why": "Two clear places: the desk and the posters."
+        },
+        {
+          "l": "B",
+          "id": "map",
+          "label": "A world map",
+          "text": "[[On]] one wall, there is a world map. My desk is [[under]] it.",
+          "why": "The map is a nice detail, and we know where the desk is."
+        },
+        {
+          "l": "C",
+          "id": "photos",
+          "label": "Desk and photos",
+          "trap": true,
+          "crit": "LSA",
+          "reject": "Two mistakes: next to the door, not next the door. And on the wall, not at the wall.",
+          "rejectDe": "Zwei Fehler: „next to the door“ statt „next the door“ und „on the wall“ statt „at the wall“.",
+          "text": "My desk is next the door. At the wall, there are photos of my friends."
+        }
+      ]
+    },
+    {
+      "id": "special",
+      "slot": "special",
+      "part": "Something special",
+      "q": "What is special in our dream room?",
+      "de": "Hier zeigen wir, was unser Zimmer besonders macht. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "slide",
+          "label": "A slide",
+          "text": "There is a slide [[next to]] my bed. It goes to the kitchen!",
+          "why": "A slide is a funny dream, and we say where it is."
+        },
+        {
+          "l": "B",
+          "id": "door",
+          "label": "A secret door",
+          "text": "[[Behind]] my wardrobe, there is a secret door. Only my best friend knows!",
+          "why": "A secret makes the description exciting."
+        },
+        {
+          "l": "C",
+          "id": "fish",
+          "label": "A fish tank",
+          "text": "Wow! There is a really big fish tank [[between]] the door and the wardrobe.",
+          "why": "‘Wow!’ shows how special the fish tank is."
+        }
+      ]
+    },
+    {
+      "id": "end",
+      "slot": "end",
+      "part": "Ending",
+      "q": "What can we do in our room? How do we end?",
+      "de": "Der Schluss sagt, was wir im Zimmer machen und wie es uns gefällt. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "home",
+          "label": "My room at home",
+          "trap": true,
+          "crit": "TA",
+          "reject": "This is a real room at home. The task is a dream room!",
+          "rejectDe": "Das ist ein echtes Zimmer zu Hause. Die Aufgabe ist aber ein Traumzimmer!",
+          "text": "My room at home is blue, and there is a bed and a desk."
+        },
+        {
+          "l": "B",
+          "id": "read",
+          "label": "Read and dream",
+          "text": "I read and dream here. It is the best place [[in]] the world!",
+          "why": "It says what we do there and ends with a big feeling."
+        },
+        {
+          "l": "C",
+          "id": "games",
+          "label": "Games with friends",
+          "text": "Every weekend, my friends and I sit [[on]] the floor and play games.",
+          "why": "Friends and games make a happy ending."
+        }
+      ]
+    }
+  ],
+  "order": [
+    "title",
+    "intro",
+    "bed",
+    "desk",
+    "special",
+    "end"
+  ],
+  "checks": [
+    {
+      "en": "Our description has got a title"
+    },
+    {
+      "en": "It says what colour the room is"
+    },
+    {
+      "en": "It says where the bed and the desk are"
+    },
+    {
+      "en": "There is something special in the room"
+    },
+    {
+      "en": "It says what we can do there"
+    },
+    {
+      "en": "We use words like in, on, under, next to and behind"
+    }
+  ],
+  "teacher": {
+    "aim": "Die Klasse beschreibt gemeinsam ein Traumzimmer für einen Wettbewerb der Schulzeitung und übt die Präpositionen des Ortes (in, on, under, next to, behind, between, in front of).",
+    "prep": "A/B/C/D-Karten austeilen, Beamer im Vollbild, grüne Stifte bereitlegen. Einsatz ab: Präpositionen des Ortes, there is / there are und can. Bei Bedarf Wörter an die Tafel: hammock (Hängematte), wardrobe (Kleiderschrank), between (zwischen).",
+    "heft": "Datum rechts, „Description“ als Überschrift, darunter eine Zeile für den Titel. Jeder Teil beginnt in einer neuen Zeile, am Rand steht der Name des Teils wie am Beamer (Introduction, The bed, Desk and walls, Something special, Ending). Am Ende alle Präpositionen grün unterstreichen.",
+    "flow": "Aufgabe lesen und Farbe rufen 4 min · 6 Entscheidungen mit Abstimmen und Abschreiben à ca. 5 min, zusammen ca. 30 min · Checkliste und Präpositionen grün unterstreichen 6 min · Rest: das Traumzimmer neben den Text zeichnen. Passt in 50 Minuten.",
+    "traps": "Desk and walls C (LSA, Sprachrichtigkeit): next the door statt next to the door, at the wall statt on the wall (deutsch „an der Wand“). Ending A (TA, Erfüllung der Aufgabenstellung): beschreibt das Zimmer zu Hause statt des Traumzimmers.",
+    "notes": "Das Traumzimmer ist reine Fantasie: Nicht alle Kinder haben ein eigenes Zimmer, darum fragt die Einheit nie nach dem echten Zimmer. Die Farbe ruft die Klasse; auch zwei Farben passen (green and white). Differenzierung: Schnelle zeichnen einen Grundriss und beschriften ihn mit in, on, under … Hausübung: eine zweite Fassung mit anderen Entscheidungen oder ein Bild des Zimmers mit fünf Sätzen dazu."
+  }
+}

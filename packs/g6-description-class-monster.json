@@ -1,0 +1,440 @@
+{
+  "id": "g6-description-class-monster",
+  "title": "Our class monster",
+  "titleDe": "Unser Klassenmonster",
+  "grade": 6,
+  "level": "A1+/A2",
+  "theme": "Kultur & Kreativität",
+  "textType": "description",
+  "modes": [
+    "full"
+  ],
+  "lengths": {
+    "short": {
+      "label": "around 100 words",
+      "min": 85,
+      "max": 115
+    }
+  },
+  "minutes": {
+    "full": {
+      "short": 50
+    }
+  },
+  "task": {
+    "situation": "Lots of places have got a monster story: think of the Lindwurm, the dragon of Klagenfurt, or Bigfoot in North America. Now our class invents a new monster for Austria and describes it for the school magazine.",
+    "instruction": "Write a description of our monster:",
+    "points": [
+      "its name and where it lives",
+      "what it looks like and what it can do",
+      "what it eats and why it is special"
+    ],
+    "words": {
+      "short": "Give your description a title. Write around 100 words."
+    },
+    "de": "Gemeinsame Beschreibung eines selbst erfundenen Klassenmonsters: Name, Wohnort, Aussehen, Fähigkeiten, Essen, warum es besonders ist. Mindestens vier Steigerungsformen (bigger than, the biggest, more famous …). Der Titel kommt zum Schluss."
+  },
+  "meta": {
+    "publication": "School magazine · Monsters of Austria"
+  },
+  "focus": {
+    "label": "comparatives and superlatives",
+    "labelDe": "Steigerungsformen",
+    "min": {
+      "short": 4
+    },
+    "note": "Marked: every comparative (together with ‘than’ when it follows) and every superlative (together with ‘the’ when it comes before)."
+  },
+  "topicWords": [
+    "monster",
+    "lindwurm"
+  ],
+  "gaps": [
+    {
+      "id": "NAME",
+      "step": "intro",
+      "q": "What is our monster’s name? Shout ONE funny word!",
+      "qDe": "Ruft einen lustigen Monsternamen, z. B. Atti, Glocki oder Donausaurus. Keine Namen von Mitschüler:innen oder Lehrer:innen.",
+      "type": "text",
+      "default": "Grumbo",
+      "max": 20
+    }
+  ],
+  "steps": [
+    {
+      "id": "kind",
+      "part": "Our monster",
+      "q": "Where does our monster live?",
+      "de": "Hier wählt ihr, wo unser Monster wohnt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "lake",
+          "label": "A lake monster in the Attersee",
+          "teaser": "Something big and green lives in a deep lake in Upper Austria.",
+          "why": "Something huge lives in a deep lake in Upper Austria."
+        },
+        {
+          "l": "B",
+          "id": "mountain",
+          "label": "A snow monster on the Großglockner",
+          "teaser": "On Austria’s highest mountain, something big and hairy hides in the snow."
+        },
+        {
+          "l": "C",
+          "id": "river",
+          "label": "A river monster in the Danube",
+          "teaser": "Right here in Vienna, something swims under the bridges at night.",
+          "why": "In Vienna, something swims under the bridges at night."
+        }
+      ]
+    },
+    {
+      "id": "intro",
+      "slot": "intro",
+      "part": "Introduction",
+      "q": "How do we introduce our monster?",
+      "de": "Der Einstieg stellt unser Monster mit Namen und Wohnort vor. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "name",
+          "label": "Start with its name",
+          "why": "Short and clear: readers learn the name and the home in the first two sentences.",
+          "text": {
+            "by": "kind",
+            "map": {
+              "lake": "Meet {NAME}, our class monster! It lives in the Attersee, a big, deep lake in Upper Austria.",
+              "mountain": "Meet {NAME}, our class monster! It lives on the Großglockner, [[the highest]] mountain in Austria.",
+              "river": "Meet {NAME}, our class monster! It lives in the Danube in Vienna, under one of the bridges."
+            }
+          }
+        },
+        {
+          "l": "B",
+          "id": "dragon",
+          "label": "Start with a famous dragon",
+          "why": "Starts with a monster from an old Austrian story. Then our monster comes as a surprise.",
+          "text": {
+            "by": "kind",
+            "map": {
+              "lake": "Klagenfurt has got its dragon, the Lindwurm. Now the Attersee has got a monster too: {NAME}!",
+              "mountain": "Klagenfurt has got its dragon, the Lindwurm. Now the Großglockner has got a monster too: {NAME}!",
+              "river": "Klagenfurt has got its dragon, the Lindwurm. Now the Danube has got a monster too: {NAME}!"
+            }
+          }
+        },
+        {
+          "l": "C",
+          "id": "question",
+          "label": "Ask the readers a question",
+          "why": "A question speaks to the readers and makes them curious.",
+          "text": {
+            "by": "kind",
+            "map": {
+              "lake": "Do you believe in monsters? We do! We know {NAME}, the monster of the Attersee!",
+              "mountain": "Do you believe in monsters? We do! We know {NAME}, the snow monster of the Großglockner!",
+              "river": "Do you believe in monsters? We do! We know {NAME}, the monster of the Danube!"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "looks",
+      "slot": "looks",
+      "part": "Looks",
+      "q": "What does our monster look like?",
+      "de": "Hier beschreiben wir, wie unser Monster aussieht. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "size",
+          "label": "Compare it with big things",
+          "why": "Readers can imagine the size because we compare it with things they know.",
+          "text": {
+            "by": "kind",
+            "map": {
+              "lake": "Our monster is [[longer than]] a bus and [[heavier than]] a lorry. It has got green, slimy skin.",
+              "mountain": "Our monster is [[taller than]] a giraffe and [[heavier than]] a lorry. It has got thick white fur.",
+              "river": "Our monster is [[longer than]] a tram and [[heavier than]] a lorry. It has got shiny grey scales."
+            }
+          }
+        },
+        {
+          "l": "B",
+          "id": "parts",
+          "label": "Compare body parts",
+          "why": "Comparing body parts with things we know helps readers to imagine our monster.",
+          "text": {
+            "by": "kind",
+            "map": {
+              "lake": "Its neck is [[longer than]] a giraffe’s, and its eyes are [[bigger than]] plates. It has got purple skin.",
+              "mountain": "Its fur is [[thicker than]] a blanket, and its feet are [[bigger than]] skis. It has got four arms.",
+              "river": "Its tail is [[longer than]] a canoe, and its teeth are [[sharper than]] a shark’s. It has got blue scales."
+            }
+          }
+        },
+        {
+          "l": "C",
+          "id": "trap",
+          "label": "Make it really big",
+          "trap": true,
+          "crit": "LSA",
+          "reject": "Three mistakes: ‘more big’ → bigger, ‘then’ → than, ‘the most long’ → the longest.",
+          "rejectDe": "Drei Fehler: more big → bigger, then → than, the most long → the longest. Kurze Adjektive bekommen -er und -est.",
+          "text": "It has got two heads and is more big then a bus. It is the most long monster in Austria."
+        }
+      ]
+    },
+    {
+      "id": "habits",
+      "slot": "habits",
+      "part": "What it does",
+      "q": "What can it do? What does it usually do?",
+      "de": "Hier beschreiben wir, was unser Monster kann und tut. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "skills",
+          "label": "What it can do",
+          "why": "‘can’ plus comparatives: readers see at once what our monster is good at.",
+          "text": {
+            "by": "kind",
+            "map": {
+              "lake": "{NAME} can swim [[faster than]] a speedboat and dive [[deeper than]] any diver. It also sings like a whale.",
+              "mountain": "{NAME} can climb [[faster than]] a goat and jump [[higher than]] a house. It also yodels in snowstorms.",
+              "river": "{NAME} can swim [[faster than]] a police boat and jump [[higher than]] the bridges. It also sings to the ships."
+            }
+          }
+        },
+        {
+          "l": "B",
+          "id": "trap",
+          "label": "Our monster in action",
+          "trap": true,
+          "crit": "TA",
+          "reject": "This is a story about one day in the past. A description says what our monster is like and what it usually does.",
+          "rejectDe": "Das ist eine Geschichte über einen Tag in der Vergangenheit. Eine Beschreibung sagt, wie das Monster ist und was es normalerweise tut.",
+          "text": "Last Sunday, our monster came out and stole my uncle’s picnic. We all screamed and ran home. What a day!"
+        },
+        {
+          "l": "C",
+          "id": "day",
+          "label": "Its day and night",
+          "why": "Present simple for habits plus ‘can’: what our monster does every day and what it can do at night.",
+          "text": {
+            "by": "kind",
+            "map": {
+              "lake": "During the day, it hides deep under the water. At night, it can play with the ducks for hours.",
+              "mountain": "During the day, it hides from the climbers. At night, it can build [[the biggest]] snowmen in the Alps.",
+              "river": "During the day, it hides in the mud. At night, it can ride the Giant Ferris Wheel in the Prater."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "food",
+      "slot": "food",
+      "part": "Food",
+      "q": "What does it eat?",
+      "de": "Hier geht es darum, was unser Monster isst. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "food",
+          "label": "Its favourite food",
+          "why": "Funny food makes a monster description fun to read.",
+          "text": {
+            "by": "kind",
+            "map": {
+              "lake": "For breakfast, it eats fish and water plants. Its favourite food is Kaiserschmarrn, [[the most delicious]] dessert in Austria!",
+              "mountain": "For breakfast, it eats snow and berries. Its favourite food is Kaiserschmarrn, [[the most delicious]] dessert in Austria!",
+              "river": "For breakfast, it eats fish and old shoes. Its favourite food is Kaiserschmarrn, [[the most delicious]] dessert in Austria!"
+            }
+          }
+        },
+        {
+          "l": "B",
+          "id": "home",
+          "label": "Its home and its food",
+          "why": "Readers can see its home, and they find out what it eats.",
+          "text": {
+            "by": "kind",
+            "map": {
+              "lake": "At the bottom of the lake, it has got a cave [[darker than]] a cellar. It eats fish and lost sunglasses.",
+              "mountain": "High up on the mountain, it has got an ice cave [[colder than]] a freezer. It eats snow, berries and lost sandwiches.",
+              "river": "Under the water, its bedroom is an old boat, [[darker than]] a cellar. It eats fish and lost mobile phones."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "special",
+      "slot": "special",
+      "part": "Why it is special",
+      "q": "Why is our monster special?",
+      "de": "Dieser Absatz sagt, warum unser Monster besonders ist. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "famous",
+          "label": "More colourful, but …",
+          "why": "Two forms in one sentence: ‘more colourful’ and ‘the friendliest’.",
+          "text": "Other monsters are [[more colourful]], but {NAME} is [[the friendliest]] monster in the world!"
+        },
+        {
+          "l": "B",
+          "id": "rare",
+          "label": "The only one",
+          "why": "Short and strong: there is only one, so it is the rarest.",
+          "text": "There is only one {NAME}. That makes it [[the rarest]] creature in the world!"
+        },
+        {
+          "l": "C",
+          "id": "helper",
+          "label": "It helps people",
+          "why": "Shows that our monster is not dangerous. It helps people.",
+          "text": {
+            "by": "kind",
+            "map": {
+              "lake": "[[The best]] thing about it? When swimmers get tired, it carries them back to the beach!",
+              "mountain": "[[The best]] thing about it? When climbers get lost in the fog, it shows them the way!",
+              "river": "[[The best]] thing about it? When children’s balls land in the river, it throws them back!"
+            }
+          }
+        },
+        {
+          "l": "D",
+          "id": "trap",
+          "label": "Colour, food and feet",
+          "trap": true,
+          "crit": "CC",
+          "reject": "Everything is mixed up: colour, food, winter, feet … This paragraph should only say why our monster is special.",
+          "rejectDe": "Hier ist alles durcheinander. In diesen Absatz gehört nur, warum unser Monster besonders ist.",
+          "text": "It is green. It likes pizza. In winter, it sleeps a lot. It has got big feet."
+        }
+      ]
+    },
+    {
+      "id": "ending",
+      "slot": "ending",
+      "part": "Ending",
+      "q": "How do we end the description?",
+      "de": "Mit dem Schluss endet unsere Beschreibung. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "visit",
+          "label": "Invite the readers",
+          "why": "Speaks to the readers and ends with a funny warning.",
+          "text": {
+            "by": "kind",
+            "map": {
+              "lake": "So visit the Attersee and look for {NAME}. Be very quiet because it is [[shyer than]] a mouse!",
+              "mountain": "So bring warm boots and look for {NAME}. Be very quiet because it is [[shyer than]] a mouse!",
+              "river": "So walk along the Danube and look for {NAME}. Be very quiet because it is [[shyer than]] a mouse!"
+            }
+          }
+        },
+        {
+          "l": "B",
+          "id": "proud",
+          "label": "Say what we think",
+          "why": "Ends with our opinion and a strong comparative.",
+          "text": "We are proud of {NAME} because it is [[cooler than]] any other monster on Earth!"
+        },
+        {
+          "l": "C",
+          "id": "secret",
+          "label": "Keep it a secret",
+          "why": "A surprise ending: the readers now share our secret.",
+          "text": "Please don’t tell any tourists about {NAME}. It is our class secret, and {NAME} is [[happier]] without them!"
+        }
+      ]
+    },
+    {
+      "id": "title",
+      "slot": "title",
+      "part": "Title",
+      "q": "Our description is finished. Which title do we choose?",
+      "de": "Zum Schluss wählen wir den Titel unserer Beschreibung.",
+      "options": [
+        {
+          "l": "A",
+          "id": "name",
+          "label": "Name and home",
+          "why": "Tells readers at once who our monster is and where it lives.",
+          "text": {
+            "by": "kind",
+            "map": {
+              "lake": "{NAME}, the Monster of the Attersee",
+              "mountain": "{NAME}, the Snow Monster of the Großglockner",
+              "river": "{NAME}, the Monster of the Danube"
+            }
+          }
+        },
+        {
+          "l": "B",
+          "id": "strangest",
+          "label": "A superlative",
+          "why": "A superlative in the title shows at once that our monster is special.",
+          "text": "Austria’s [[Strangest]] Monster"
+        },
+        {
+          "l": "C",
+          "id": "secret",
+          "label": "A secret",
+          "why": "Sounds mysterious, like a real monster story.",
+          "text": {
+            "by": "kind",
+            "map": {
+              "lake": "The Secret of the Attersee",
+              "mountain": "The Secret of the Großglockner",
+              "river": "The Secret of the Danube"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "order": [
+    "title",
+    "intro",
+    "looks",
+    "habits",
+    "food",
+    "special",
+    "ending"
+  ],
+  "checks": [
+    {
+      "en": "A title that makes readers curious"
+    },
+    {
+      "en": "The introduction gives the monster’s name and home"
+    },
+    {
+      "en": "Present simple: what our monster is like and what it usually does"
+    },
+    {
+      "en": "We use has got for looks and can for what it can do"
+    },
+    {
+      "en": "At least four comparatives or superlatives (bigger than, the biggest, more famous …)"
+    },
+    {
+      "en": "One idea per paragraph, in a clear order"
+    }
+  ],
+  "teacher": {
+    "aim": "Die Klasse beschreibt gemeinsam ein selbst erfundenes österreichisches Monster für die Schulzeitung und verwendet dabei Steigerungsformen mit than und the (bigger than, the biggest, more famous).",
+    "prep": "A/B/C/D-Karten austeilen. Beamer im Vollbild. Optional: eine Österreich-Karte (Attersee, Großglockner, Donau in Wien, Klagenfurt). Einsatz ab: Steigerung von Adjektiven (-er/-est, more/most, good – better – the best), dazu has got und can. Bei Bedarf Wörter an die Tafel: speedboat (Rennboot), freezer (Tiefkühltruhe), snowstorm (Schneesturm), creature (Wesen), blanket (Decke).",
+    "heft": "Neue Seite: Datum (rechts) und „Description“ als Überschrift (wie am Beamer), darunter 2 Zeilen für den Titel frei lassen. Jeder Absatz beginnt nach einer Leerzeile, am Rand steht der Name des Teils wie am Beamer: Introduction, Looks, What it does, Food, Why it is special, Ending. Steigerungsformen am Ende grün unterstreichen.",
+    "flow": "Volltext (50 min): 3 min Aufgabe und Wohnort wählen · 7 weitere Entscheidungen à ca. 2 min, zusammen ca. 15 min · Abschreiben nach jeder Entscheidung, zusammen ca. 20 min · 5 min Checkliste und Steigerungsformen zählen · 7 min Puffer.",
+    "traps": "Looks C (LSA, Sprachrichtigkeit): more big, then statt than, the most long. What it does B (TA, Erfüllung der Aufgabenstellung): Geschichte in der Vergangenheit statt Beschreibung. Why it is special D (CC, Kohärenz und Kohäsion): alles durcheinander, kein roter Faden.",
+    "notes": "Der Lindwurm ist der Drache aus der Klagenfurter Sage (Lindwurmbrunnen am Neuen Platz). Über das Monster schreiben wir immer „it“, daher passt jeder Name. Der Name soll erfunden sein, keine Namen von Mitschüler:innen oder Lehrer:innen. Than/then bei der Falle kurz an der Tafel gegenüberstellen. Differenzierung: Schnelle schreiben einen Satz mit einer eigenen Steigerungsform dazu (z. B. „It is smellier than …“). Hausübung: eine zweite Fassung mit einem anderen Wohnort oder ein Monster-Rätsel mit drei Steigerungsformen."
+  }
+}

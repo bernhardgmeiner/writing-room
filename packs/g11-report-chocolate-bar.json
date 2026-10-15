@@ -1,0 +1,467 @@
+{
+  "id": "g11-report-chocolate-bar",
+  "title": "Where does the money go? The price of a chocolate bar",
+  "titleDe": "Wer verdient an der Schokolade?",
+  "grade": 11,
+  "level": "B1+/B2",
+  "theme": "Gesellschaft & Zusammenleben",
+  "textType": "report",
+  "modes": [
+    "full",
+    "frame"
+  ],
+  "lengths": {
+    "short": {
+      "label": "around 250 words",
+      "min": 225,
+      "max": 275
+    },
+    "long": {
+      "label": "around 400 words",
+      "min": 360,
+      "max": 440
+    }
+  },
+  "minutes": {
+    "full": {
+      "short": 50,
+      "long": 100
+    },
+    "frame": {
+      "short": 60,
+      "long": 100
+    }
+  },
+  "task": {
+    "situation": "Your school’s student council would like the school shop to sell fairer snacks and is planning a week of events on fair trade. It has asked your class to write a report based on the following chart, which the council has drawn up as a simplified example. All figures are invented, but realistic.\nChart: ‘Where does the money go? How the price of a €2.50 chocolate bar is shared out’\n• retailer (shop rent, staff and profit): 38% (€0.95)\n• brand (recipe, advertising and profit): 26% (€0.65)\n• processing (factory, sugar, milk and packaging): 16% (€0.40)\n• taxes: 10% (€0.25)\n• cocoa farmers: 6% (€0.15)\n• transport and shipping: 4% (€0.10)",
+    "instruction": "Write a report for the student council in which you:",
+    "points": [
+      "outline how the price of the chocolate bar is shared out",
+      "explain the effects on cocoa farmers and consumers",
+      "recommend what the school community could do, for example in the school shop or at school events"
+    ],
+    "words": {
+      "short": "Divide your report into sections and give them headings. Write around 250 words.",
+      "long": "Divide your report into sections and give them headings. Write around 400 words."
+    },
+    "de": "Report an die Schüler:innenvertretung auf Basis einer erfundenen Beispielgrafik: Wie teilt sich der Preis einer Tafel Schokolade um 2,50 Euro auf? Drei Inhaltspunkte: Anteile beschreiben, Folgen für Kakaobäuer:innen und Konsument:innen erklären, Empfehlungen für die Schulgemeinschaft (Schulbuffet, Veranstaltungen). Abschnitte mit Zwischenüberschriften, formell, keine Kurzformen."
+  },
+  "meta": {
+    "to": "The Student Council",
+    "from": "Our class",
+    "date": "{TODAY}",
+    "subjectSlot": "subject"
+  },
+  "focus": {
+    "label": "passive forms and data phrases",
+    "labelDe": "Passiv und Wendungen für Daten",
+    "min": {
+      "short": 8,
+      "long": 14
+    },
+    "note": "Marked: passive verb forms (is shared out, are paid, be displayed, could be set up …) and phrases that present, compare and interpret figures (according to the chart, accounts for, the largest share, followed by, more than six times as much as, a rise of 6 per cent …). Numbers on their own, participles used as adjectives (a simplified example, the planned week) and general linking words are not marked."
+  },
+  "topicWords": [
+    "chocolate",
+    "bar",
+    "bars",
+    "cocoa",
+    "farmers",
+    "farmers’",
+    "farming",
+    "price",
+    "per",
+    "cent",
+    "cents",
+    "chart",
+    "share",
+    "shares",
+    "retailer",
+    "retailer’s",
+    "brand",
+    "taxes",
+    "tax",
+    "processing",
+    "transport",
+    "2.50",
+    "15"
+  ],
+  "gaps": [
+    {
+      "id": "EVENT",
+      "step": "recs",
+      "q": "What is the school’s week of events called? Give it a name.",
+      "qDe": "Wie heißt die Aktionswoche an der Schule? Gebt ihr einen englischen Namen, z. B. „Fair Food Week“.",
+      "type": "text",
+      "default": "Fair Food Week",
+      "max": 30
+    }
+  ],
+  "steps": [
+    {
+      "id": "subject",
+      "slot": "subject",
+      "part": "Subject",
+      "q": "Which subject line do we put in the header?",
+      "de": "Die Betreffzeile sagt, worum es im Report geht.",
+      "own": "Factual and specific: what is the report about?",
+      "ownDe": "Sachlich und genau: Worum geht es im Report?",
+      "options": [
+        {
+          "l": "A",
+          "id": "breakdown",
+          "label": "Data plus purpose",
+          "text": "Price breakdown of a €2.50 chocolate bar: findings and recommendations",
+          "why": "Factual and complete: it names the data and tells the council that recommendations follow."
+        },
+        {
+          "l": "B",
+          "id": "money",
+          "label": "A question turned into a statement",
+          "text": "Where the money for a €2.50 chocolate bar goes",
+          "why": "Short and clear, a little livelier, but still factual."
+        },
+        {
+          "l": "C",
+          "id": "whogets",
+          "label": "Analysis and aim",
+          "text": "Who earns what from a chocolate bar: analysis and recommendations",
+          "why": "Names the main question of the report and both of its parts."
+        }
+      ]
+    },
+    {
+      "id": "intro",
+      "slot": "intro",
+      "part": "Introduction",
+      "q": "How do we open the report?",
+      "de": "Der erste Abschnitt nennt Zweck, Auftrag und Datenquelle des Reports. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then complete the introduction: state the purpose and the source of the data.",
+      "ownDe": "Gerüst abschreiben, dann die Einleitung fertigschreiben: Zweck und Datenquelle nennen.",
+      "options": [
+        {
+          "l": "A",
+          "id": "aim",
+          "label": "State the aim",
+          "text": "### Introduction\n{{The aim of this report is to}} examine how the price of a €2.50 chocolate bar [[is shared out]] and how this affects cocoa farmers and consumers. {{It [[is based]] on the council’s chart, which [[breaks down]]}} the price into six shares.",
+          "why": "Purpose and data source in two clear sentences: a classic report opening."
+        },
+        {
+          "l": "B",
+          "id": "request",
+          "label": "Refer to the request",
+          "text": "### Introduction\n{{At the request of the student council, this report}} looks at the council’s chart, {{which [[shows]] how}} the price of a €2.50 chocolate bar [[is divided]]. {{It also considers}} the effects on cocoa farmers and consumers and makes recommendations.",
+          "why": "Names who asked for the report and which data it uses, then previews the content."
+        },
+        {
+          "l": "C",
+          "id": "trap",
+          "label": "Start with the figures",
+          "trap": true,
+          "crit": "TA",
+          "text": "### Introduction\nThe retailer receives 38 per cent of the price of a €2.50 chocolate bar, and the brand gets 26 per cent. Processing accounts for 16 per cent, taxes for 10 per cent and transport for 4 per cent, while the cocoa farmers get only 6 per cent, or 15 cents.",
+          "reject": "This jumps straight into the figures. A report first states its purpose, who asked for it and where the data comes from; the figures belong in the next section.",
+          "rejectDe": "Hier geht es sofort mit den Zahlen los. Ein Report nennt zuerst Zweck, Auftrag und Datenquelle; die Zahlen gehören in den nächsten Abschnitt."
+        }
+      ]
+    },
+    {
+      "id": "limits",
+      "slot": "limits",
+      "part": "Introduction",
+      "len": "long",
+      "q": "What should readers keep in mind about the data?",
+      "de": "Der Abschnitt geht weiter: die Grenzen der Daten. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then explain in your own words why the figures should be read with care.",
+      "ownDe": "Gerüst abschreiben, dann mit eigenen Worten erklären, warum man die Zahlen vorsichtig lesen muss.",
+      "options": [
+        {
+          "l": "A",
+          "id": "example",
+          "label": "Only one example",
+          "text": "{{The chart’s figures should [[be read]] with some care.}} They [[describe]] a single simplified example, {{so the shares are likely to}} vary from brand to brand and between dark and milk chocolate. {{Nevertheless, [[the figures indicate]] a pattern}} that is typical of the chocolate trade as a whole.",
+          "why": "Shows critical thinking: one example is not the whole truth, but it still points to a pattern."
+        },
+        {
+          "l": "B",
+          "id": "reach",
+          "label": "Who really gets the money?",
+          "text": "{{One limitation is that the chart does not [[show]]}} whether the money for the cocoa actually reaches the farmers. {{In many villages, part of it [[is kept]] by}} local buyers who collect the beans, {{which means that}} farming families probably earn even less than the chart suggests.",
+          "why": "Points out what a simple chart cannot show and thinks about what this means for the farmers."
+        }
+      ],
+      "join": true
+    },
+    {
+      "id": "findings",
+      "slot": "findings",
+      "part": "Body paragraph 1",
+      "q": "Body paragraph 1 (content point 1): how do we outline the shares of the price?",
+      "de": "Der erste Hauptteil beschreibt die Anteile am Preis aus der Grafik. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then add the missing figures from the chart in your own words.",
+      "ownDe": "Gerüst abschreiben, dann die fehlenden Zahlen aus der Grafik mit eigenen Worten ergänzen.",
+      "options": [
+        {
+          "l": "A",
+          "id": "ranking",
+          "label": "From largest to smallest",
+          "text": "### Analysis of the findings\n{{[[According to the chart]], [[the largest share]],}} 38 per cent or 95 cents, goes to the retailer. {{The brand [[accounts for]]}} 26 per cent, [[followed by]] processing (16 per cent) and taxes (10 per cent). {{[[The smallest shares]] go to}} the cocoa farmers (6 per cent or 15 cents) and transport (4 per cent).",
+          "why": "Goes through the chart in order of size, so the reader can follow every figure."
+        },
+        {
+          "l": "B",
+          "id": "groups",
+          "label": "Selling versus growing",
+          "text": "### Analysis of the findings\n{{[[As the chart makes clear,]] [[most of the money]] [[is earned]]}} far from the cocoa farms. {{[[Almost two thirds]] goes to}} the retailer and the brand, while taxes and transport {{[[make up]]}} 14 per cent. {{Production, by contrast, [[accounts for]] [[just over a fifth]]}} (16 per cent for processing, 6 per cent for the farmers).",
+          "why": "Groups the six shares into three blocks, which already shows the main finding."
+        },
+        {
+          "l": "C",
+          "id": "trap",
+          "label": "List the figures",
+          "trap": true,
+          "crit": "LSA",
+          "text": "### Analysis of the findings\nThe retailer and the brand together make out 64 percents of the price and therefore receive well over the half of the money. Processing accounts for 16 per cent, taxes for 10 per cent and transport for 4 per cent. The cocoa farmers receive only 6 per cent, or 15 cents per bar.",
+          "reject": "Three typical mistakes: ‘make out’ (→ make up / account for), ‘64 percents’ (→ 64 per cent, no plural) and ‘the half of the money’ (→ half of the money).",
+          "rejectDe": "Drei typische Fehler: make out → make up/account for, 64 percents → 64 per cent, the half of → half of."
+        }
+      ]
+    },
+    {
+      "id": "findings2",
+      "slot": "findings2",
+      "part": "Body paragraph 1",
+      "len": "long",
+      "q": "Which comparison makes the figures clearer?",
+      "de": "Der Abschnitt geht weiter: ein Vergleich zwischen einzelnen Anteilen. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then add one more comparison of your own, using the figures from the chart.",
+      "ownDe": "Gerüst abschreiben, dann einen eigenen Vergleich mit den Zahlen aus der Grafik ergänzen.",
+      "options": [
+        {
+          "l": "A",
+          "id": "trap",
+          "label": "Who gets more?",
+          "trap": true,
+          "crit": "LSR",
+          "text": "The retailer gets a lot more than the farmers. The brand also gets a lot more than the farmers. Processing also gets a lot more than the farmers. So the farmers get very little money and the retailer gets the most money of all.",
+          "reject": "Correct, but very basic and repetitive: ‘gets a lot more than the farmers’ three times and no exact comparison. Use precise phrases such as ‘more than six times as much as’.",
+          "rejectDe": "Richtig, aber sehr einfach und eintönig: dreimal „gets a lot more“, kein genauer Vergleich."
+        },
+        {
+          "l": "B",
+          "id": "times",
+          "label": "How many times more?",
+          "text": "{{Comparing the shares [[reveals]] a striking gap.}} The retailer receives [[more than six times as much as]] the cocoa farmers, and {{even the brand earns [[over four times as much as]]}} they do. {{[[Equally surprising is the fact that]]}} more [[is paid]] in tax than for the cocoa itself.",
+          "why": "Exact ratios (38:6, 26:6) turn percentages into a picture everyone understands."
+        },
+        {
+          "l": "C",
+          "id": "state",
+          "label": "Growing versus taxes",
+          "text": "{{Taken together, the farmers and the transport companies [[receive a tenth]]}} of the price, 25 cents in total. {{This is [[exactly the same amount as]]}} the state receives in taxes. {{[[Surprisingly]], then, the state earns as much from}} a bar of chocolate as everyone who grows the cocoa and ships it to Europe.",
+          "why": "Combines two shares and compares them with a third: a surprising and memorable finding."
+        }
+      ],
+      "join": true
+    },
+    {
+      "id": "farmers",
+      "slot": "farmers",
+      "part": "Body paragraph 2",
+      "q": "Body paragraph 2 (content point 2): how are cocoa farmers affected?",
+      "de": "Der zweite Hauptteil beginnt mit den Folgen für die Kakaobäuer:innen. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then explain one more effect on the farmers in your own words.",
+      "ownDe": "Gerüst abschreiben, dann eine weitere Folge für die Bäuer:innen mit eigenen Worten erklären.",
+      "options": [
+        {
+          "l": "A",
+          "id": "income",
+          "label": "An income to live on",
+          "text": "### Effects on farmers and consumers\n{{Cocoa farmers, [[as the figures demonstrate,]]}} gain little from the chocolate their beans [[are turned into]]. {{With only 15 cents per bar, many families}} earn too little to live on. {{As a result, they cannot afford}} new trees or fertiliser, so their harvests shrink every year.",
+          "why": "Links the figure directly to its effect and shows a chain of cause and effect."
+        },
+        {
+          "l": "B",
+          "id": "trap",
+          "label": "15 cents a bar",
+          "trap": true,
+          "crit": "CC",
+          "text": "### Effects on farmers and consumers\nMost cocoa farms are in West Africa, and the farmers there only get 15 cents for each bar. For instance, consumers buy more and more sweets because they are cheap. The families on the farms work very hard, and the shops make a lot of profit.",
+          "reject": "No topic sentence, and the paragraph jumps between farmers, consumers and shops. ‘For instance’ should introduce an example, but cheap sweets for consumers are no example of the farmers’ low pay. A section needs a clear main idea, introduced in its first sentence.",
+          "rejectDe": "Kein Topic Sentence, „For instance“ leitet kein passendes Beispiel ein, und der Absatz springt zwischen Bäuer:innen, Konsument:innen und Geschäften hin und her."
+        },
+        {
+          "l": "C",
+          "id": "future",
+          "label": "No future on the farm?",
+          "text": "### Effects on farmers and consumers\n{{A 6 per cent share means hardship for cocoa farmers.}} Most cocoa [[is grown]] on small family farms in West Africa. {{Because the work pays so badly, many young people}} move to the cities, and some regions may soon run out of farmers.",
+          "why": "Looks ahead: low pay today can mean fewer farmers tomorrow, which affects everyone."
+        }
+      ]
+    },
+    {
+      "id": "consumers",
+      "slot": "consumers",
+      "part": "Body paragraph 2",
+      "q": "How are consumers affected?",
+      "de": "Der Abschnitt geht weiter: Folgen für die Konsument:innen. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then add an example from everyday shopping, written in a formal way.",
+      "ownDe": "Gerüst abschreiben, dann ein Beispiel aus dem Einkaufsalltag ergänzen, aber formell formuliert.",
+      "options": [
+        {
+          "l": "A",
+          "id": "cheap",
+          "label": "A cheap everyday snack",
+          "text": "{{Consumers, on the other hand, seem to benefit from}} low prices, which have made chocolate an everyday snack. {{However, cheap bars also make it easy to}} forget that the cocoa [[was grown]] by people who earn very little, often far away.",
+          "why": "‘On the other hand’ turns from the farmers to the consumers; the second sentence shows what they easily forget."
+        },
+        {
+          "l": "B",
+          "id": "guarantee",
+          "label": "Price is no guarantee",
+          "text": "{{For shoppers, the effect is less obvious: a higher price does not guarantee}} better pay for farmers. As the farmers’ share is tiny, {{extra money mostly goes to}} the brand or shop. {{Consumers therefore struggle to}} tell whether a purchase helps at all.",
+          "why": "Turns from the farmers to the shoppers and explains a less obvious effect that follows from the chart."
+        }
+      ],
+      "join": true,
+      "len": "both"
+    },
+    {
+      "id": "recs",
+      "slot": "recs",
+      "part": "Body paragraph 3",
+      "q": "Body paragraph 3 (content point 3): what do we recommend?",
+      "de": "Der dritte Hauptteil leitet aus den Ergebnissen Empfehlungen für die Schulgemeinschaft ab. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then complete the recommendations with your own ideas for the school community.",
+      "ownDe": "Gerüst abschreiben, dann die Empfehlungen mit eigenen Ideen für die Schulgemeinschaft ergänzen.",
+      "options": [
+        {
+          "l": "A",
+          "id": "trap",
+          "label": "Change at the top",
+          "trap": true,
+          "crit": "TA",
+          "text": "### Recommendations\nIt is clear that big chocolate companies are greedy and only care about profit, and {EVENT} alone will not change that. These companies must be forced to pay farmers a fair price, and governments should finally pass strict laws against cheap cocoa.",
+          "reject": "These are opinions and demands on others. The task asks what the school community can do, so this content point is missed.",
+          "rejectDe": "Meinungen und Forderungen an Konzerne und Politik, aber gefragt ist, was die Schulgemeinschaft tun kann. Inhaltspunkt verfehlt."
+        },
+        {
+          "l": "B",
+          "id": "awareness",
+          "label": "Raise awareness",
+          "text": "### Recommendations\n{{For everyone to see these figures, it [[is recommended]] that}} the chart [[be displayed]] next to the school shop during {EVENT}. {{In addition, it would be useful to}} invite a speaker from a fair-trade organisation to explain how to recognise trustworthy labels.",
+          "why": "Links back to the figures, then two concrete steps: making the data visible and learning from an expert."
+        },
+        {
+          "l": "C",
+          "id": "shop",
+          "label": "Change the school shop",
+          "text": "### Recommendations\n{{In view of these effects, it [[is recommended]] that}} the school shop [[be supplied]] with fair-trade chocolate, although it may cost a few cents more. {{Furthermore, a stand could [[be set up]] during}} {EVENT} to show students where the cocoa in their snacks comes from.",
+          "why": "Links back to the effects; the school sets an example with its own shop and teaches students to check where cocoa comes from."
+        },
+        {
+          "l": "D",
+          "id": "tasting",
+          "label": "A blind tasting",
+          "text": "### Recommendations\n{{So that consumers can judge for themselves, it [[is recommended]] that}} a blind tasting of fair-trade and ordinary chocolate [[be organised]] as part of {EVENT}. {{Students who find that the fair bars taste just as good}} may be more willing to pay a little extra.",
+          "why": "Picks up the consumers from the section before and turns the recommendation into a fun event."
+        }
+      ]
+    },
+    {
+      "id": "costfair",
+      "slot": "costfair",
+      "part": "Body paragraph 3",
+      "len": "long",
+      "q": "What would fairer pay for farmers cost?",
+      "de": "Der Abschnitt geht weiter: Was würde eine fairere Bezahlung kosten? Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then finish the calculation and say what it means for shoppers.",
+      "ownDe": "Gerüst abschreiben, dann die Rechnung fertigschreiben und sagen, was sie für Käufer:innen bedeutet.",
+      "options": [
+        {
+          "l": "A",
+          "id": "double",
+          "label": "Double the farmers’ share",
+          "text": "{{Choosing fair chocolate need not be expensive, as simple arithmetic [[shows]].}} {{If the farmers’ 15 cents [[were doubled]],}} the bar would cost €2.65, [[a rise of only 6 per cent]]. {{Even if it [[were tripled]],}} the price would [[increase by just 12 per cent]] to €2.80, a difference most shoppers would barely notice.",
+          "why": "A clear calculation with the second conditional supports the recommendations: fair chocolate is affordable."
+        },
+        {
+          "l": "B",
+          "id": "shift",
+          "label": "Share the money differently",
+          "text": "{{Fairer pay need not even make chocolate more expensive.}} If the retailer’s share [[fell from 38 to 32 per cent]], {{the farmers’ share could [[rise from 6 to 12 per cent]].}} This would double their income while the price stayed at €2.50, and the retailer would keep [[almost a third]] of it.",
+          "why": "Supports the recommendations: the money is already there and would only need to be shared out differently."
+        }
+      ],
+      "join": true
+    },
+    {
+      "id": "concl",
+      "slot": "concl",
+      "part": "Conclusion",
+      "q": "How do we end the report?",
+      "de": "Der Schluss greift Zweck und Ergebnisse auf und rundet den Report ab. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then complete both sentences in your own words.",
+      "ownDe": "Gerüst abschreiben, dann beide Sätze mit eigenen Worten fertigschreiben.",
+      "options": [
+        {
+          "l": "A",
+          "id": "sum",
+          "label": "Sum up the main finding",
+          "text": "### Conclusion\n{{All in all, [[the figures show]] that}} those who grow the cocoa [[are paid]] very little, which few consumers realise. {{If the recommendations above [[are followed]],}} the school community can help to change this on a small scale.",
+          "why": "Picks up the findings, both effects and the recommendations without adding anything new."
+        },
+        {
+          "l": "B",
+          "id": "event",
+          "label": "Look ahead to the week",
+          "text": "### Conclusion\n{{To sum up, the chart [[points to]] a clear imbalance}}: those who sell chocolate earn far more than those who grow the cocoa. {{The planned week is}} an ideal chance to make students aware of this.",
+          "why": "Sums up the findings and their effects and ends with the purpose of the report: the planned week of events."
+        }
+      ]
+    }
+  ],
+  "order": [
+    "subject",
+    "intro",
+    "limits",
+    "findings",
+    "findings2",
+    "farmers",
+    "consumers",
+    "recs",
+    "costfair",
+    "concl"
+  ],
+  "checks": [
+    {
+      "en": "Header complete: To, From, Date and a factual subject line"
+    },
+    {
+      "en": "Five sections, each with a clear subheading"
+    },
+    {
+      "en": "The introduction states the purpose and the source of the data"
+    },
+    {
+      "en": "All figures are taken correctly from the chart"
+    },
+    {
+      "en": "All three content points: shares of the price, effects, recommendations"
+    },
+    {
+      "en": "Recommendations for the school community (‘It is recommended that …’)"
+    },
+    {
+      "en": "Formal and impersonal: no contractions, no personal feelings"
+    }
+  ],
+  "teacher": {
+    "aim": "Die Klasse baut gemeinsam einen Report (B1+/B2) zu einer erfundenen Preisgrafik und übt dabei, Zahlen präzise zu beschreiben und zu vergleichen, Passivformen gezielt einzusetzen, Folgen zu erklären und Empfehlungen formell zu formulieren.",
+    "prep": "A/B/C/D-Karten austeilen (ohne Karten: 1–4 Finger, die Tasten 1–4 wählen wie A–D), Beamer im Vollbild. Die Grafik aus der Aufgabe zusätzlich als Balken- oder Tortendiagramm an die Tafel zeichnen oder ausgedruckt austeilen. Im Gerüst-Modus den eingebauten Timer nutzen: 5 min pro Abschnitt.",
+    "heft": "Neue Seite: Datum (rechts), „Report“ als Überschrift. Darunter der Kopf wie am Beamer: To, From, Date, Subject (die Betreffzeile wird im ersten Schritt gewählt). Fünf Abschnitte (Introduction, Analysis of the findings, Effects on farmers and consumers, Recommendations, Conclusion): jeder beginnt nach einer Leerzeile mit seiner Zwischenüberschrift auf einer eigenen Zeile (unterstrichen), darunter der Absatz; am Rand steht nichts. Fortsetzungen werden ohne neue Zeile im selben Absatz weitergeschrieben. Passivformen und Wendungen für Daten grün unterstreichen.",
+    "flow": "Volltext kurz (50 min): 5 min Aufgabe und Grafik lesen, 7 Entscheidungen à 2 min, ca. 25 min Abschreiben, 5 min Checkliste. Volltext lang (100 min): zusätzlich drei Fortsetzungen: Grenzen der Daten (Introduction), ein Vergleich (Analysis of the findings) und die Kosten fairer Bezahlung (Recommendations). Gerüst kurz (ca. 60 min): 4 min Aufgabe, pro Entscheidung 1 min, 5–6 min eigenes Schreiben, 1 min Vergleich mit dem Modell; in einer 50-Minuten-Stunde den Schluss als Hausübung und die Checkliste am Beginn der nächsten Stunde. Die Grafik bleibt die ganze Stunde an der Tafel, weil die Zahlen in den eigenen Sätzen gebraucht werden. Gerüst lang (100 min): gleicher Ablauf mit den drei Fortsetzungen.",
+    "traps": "Introduction C (TA): beginnt sofort mit den Zahlen statt mit Zweck, Auftrag und Datenquelle. Analysis of the findings C (LSA): make out, 64 percents, the half of. Analysis of the findings, Fortsetzung A (LSR, nur lang): dreimal „gets a lot more“, kein genauer Vergleich. Effects on farmers and consumers B (CC): kein Topic Sentence, „For instance“ ohne passendes Beispiel, Themensprünge zwischen Bäuer:innen, Konsument:innen und Geschäften. Recommendations A (TA): Forderungen an Konzerne und Politik statt Empfehlungen für die Schulgemeinschaft. Kürzel: TA = Erfüllung der Aufgabenstellung, CC = Kohärenz und Kohäsion, LSR = Spektrum sprachlicher Mittel, LSA = Sprachrichtigkeit.",
+    "notes": "Der Report hat immer fünf Abschnitte (Einleitung, drei Hauptteile, Schluss); die lange Fassung verlängert Abschnitte, statt neue anzufügen. Die Zahlen sind für die Aufgabe erfunden (vereinfachtes Beispiel, keine offizielle Statistik). Das Muster ist realistisch: Schätzungen sehen den Anteil der Kakaobäuer:innen am Ladenpreis meist im einstelligen Prozentbereich; der Steueranteil ist gerundet (10 % Umsatzsteuer auf den Nettopreis sind gut 9 % des Endpreises; Schokolade gehört nicht zu den Grundnahrungsmitteln, deren Umsatzsteuer seit 1. Juli 2026 auf 4,9 % gesenkt ist). Das darf die Klasse wissen, es passt gut zur Fortsetzung der Einleitung (Grenzen der Daten). Keine echten Marken nennen oder beschuldigen. Kinderarbeit im Kakaoanbau ist ein reales Thema; falls es aufkommt, sachlich und ohne Einzelschicksale besprechen. Markiert sind Passivformen (auch „It is recommended that …“ und „be displayed“) und Wendungen für Daten, nicht aber Partizipien als Adjektive (a simplified example, the planned week). Für den Namen der Aktionswoche einen englischen Namen rufen lassen, z. B. „Fair Food Week“. Differenzierung: Schnelle ergänzen im Gerüst-Modus einen zusätzlichen Vergleich (… times as much as …) oder formen zwei Aktivsätze ins Passiv um. Hausübung: den Report mit anderen Entscheidungen neu schreiben oder dieselbe Aufgabe mit einer selbst erfundenen Grafik zu einem Kilo Bananen bearbeiten."
+  }
+}

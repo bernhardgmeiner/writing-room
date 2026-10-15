@@ -1,0 +1,1991 @@
+<meta charset="utf-8">
+<title>Writing Room</title>
+<!-- Writing Room · Bernhard Gmeiner · https://bernhardgmeiner.com · CC BY-NC-SA 4.0. Fonts are embedded by tools/build.js (no network requests). -->
+<!--__FONTS__-->
+<style>
+/* Layout: projector board. Library -> setup -> one task per screen (decide: option cards, copy: the growing text page) -> finished text in its real layout.
+   Deliberately one light look: projectors wash out dark themes, so every colour is set explicitly here.
+   The reading text scales with --zoom (A+/A-); the chrome does not. Decide cards are sized by fitDecide (zoom only sets the ceiling). */
+/* Digits from a system face: Atkinson Hyperlegible only has a slashed zero, which Austrian students read as "Durchschnitt". */
+@font-face{font-family:"WR Digits"; src:local("Segoe UI"), local("Arial"), local("Helvetica"), local("Liberation Sans"); unicode-range:U+0030-0039;}
+:root{
+  color-scheme: light;
+  --bg:#F3F5F8; --surface:#FFFFFF; --ink:#12161D; --ink-soft:#434C5A; --line:#8E99A8; --line-soft:#B9C2CE;
+  --hl:#FFE45C; --hl-edge:#9C7600; --ok:#17784A; --ok-soft:#DFF3E8; --no:#C0262D; --no-soft:#FBE3E4;
+  --pv:#17784A; --sc:#1F4FB5; --sc-soft:#E3ECFF; --own:#7A4E00;
+  /* card colours: colour-blind safe, white letters >= 4.3:1 */
+  --A:#1F5FD1; --B:#C45A00; --C:#007A5E; --D:#B0287A;
+  --A-txt:#1F5FD1; --B-txt:#A84F00; --C-txt:#007A5E; --D-txt:#B0287A;
+  --f-display:"Bricolage Grotesque","Segoe UI",Arial,sans-serif;
+  --f-body:"WR Digits","Atkinson Hyperlegible","Segoe UI",Arial,sans-serif;
+  --f-text:"Literata",Georgia,"Times New Roman",serif;
+  --zoom:1;
+  /* side panel and REJECTED window follow A+ only up to 1.2 (1.0 in low windows: 720p full screen, 1024×768), so their buttons stay on the board at zoom 1.6 */
+  --pz:min(var(--zoom), 1.2);
+  /* boundary of the search field and the selects: >= 3:1 on white and on the page background (WCAG 1.4.11) */
+  --line-field:#808B9B;
+}
+@media (max-height: 779px){ :root{--pz:min(var(--zoom), 1);} }
+html{font-size:clamp(16px, 0.9vw + 6px, 30px); scrollbar-gutter:stable;}
+body{background:var(--bg); color:var(--ink); font-family:var(--f-body); line-height:1.45; margin:0; padding-inline:16px;}
+*{box-sizing:border-box;}
+button{font:inherit; color:inherit;}
+button:focus-visible, input:focus-visible, select:focus-visible, summary:focus-visible, a:focus-visible{outline:3px solid var(--A); outline-offset:3px;}
+.app{max-width:1800px; margin:0 auto; padding-block:8px 28px; display:flex; flex-direction:column; gap:10px;}
+.app.deciding{padding-bottom:6px; gap:8px;}
+[hidden]{display:none!important;}
+#main h1:focus{outline:none;}
+.sr{position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); clip-path:inset(50%); white-space:nowrap;}
+[tabindex="-1"]:focus{outline:none;}
+.num{font-family:var(--f-text); font-variant-numeric:tabular-nums lining-nums; font-weight:700;}
+
+/* ---------- top bar (fixed size, not zoomed): row 1 brand + tools, row 2 steps ---------- */
+.top{display:grid; grid-template-columns:minmax(0,1fr) auto; grid-template-areas:"brand tools" "steps steps"; align-items:center; gap:6px 14px; border-bottom:3px solid var(--ink); padding-bottom:6px; font-size:clamp(14px, 0.45vw + 9px, 20px);}
+.brand{grid-area:brand; font-family:var(--f-display); font-weight:800; font-size:1.5em; letter-spacing:-.01em; white-space:nowrap; display:flex; align-items:baseline; gap:10px; min-width:0; overflow:hidden;}
+.brand small{font-family:var(--f-body); font-weight:700; font-size:.55em; letter-spacing:.1em; text-transform:uppercase; color:var(--ink-soft); white-space:nowrap; overflow:hidden; text-overflow:ellipsis; min-width:0;}
+.brand small.by{font-size:.62em; letter-spacing:0; text-transform:none;}
+.brand small.by a{color:inherit; text-decoration:none;}
+.brand small.by a:hover, .brand small.by a:focus-visible{text-decoration:underline;}
+.tools{grid-area:tools; display:flex; gap:5px; flex-wrap:nowrap; justify-content:flex-end;}
+.tool{border:2px solid var(--line-soft); background:var(--surface); border-radius:8px; padding:3px 9px; font-size:.92em; font-weight:700; cursor:pointer; white-space:nowrap;}
+.tool:hover{border-color:var(--ink-soft);}
+.tool[aria-pressed="true"]{border-color:var(--pv); color:var(--pv);}
+#t-focus{max-width:15em; overflow:hidden; text-overflow:ellipsis;}
+.steps{grid-area:steps; display:flex; flex-wrap:nowrap; gap:5px; min-width:0; overflow-x:auto; scrollbar-width:none;}
+.steps::-webkit-scrollbar{display:none;}
+.chip{flex:0 0 auto; font-size:.9em; font-weight:700; padding:2px 9px; border-radius:99px; border:2px solid var(--line-soft); background:var(--surface); color:var(--ink-soft); white-space:nowrap;}
+.chip .nm{display:none;}
+.chip.now .nm{display:inline;}
+.chip.done{border-color:var(--ok); color:var(--ok);}
+.chip.done::after{content:" ✓";}
+.chip.now{border-color:var(--ink); background:var(--ink); color:#fff;}
+
+/* ---------- generic ---------- */
+.eyebrow{font-weight:700; font-size:.85rem; letter-spacing:.14em; text-transform:uppercase; color:var(--ink-soft);}
+h1.q{font-family:var(--f-display); font-weight:800; font-size:clamp(1.55rem, 2.4vw, 2.1rem); line-height:1.12; margin:0 0 2px; text-wrap:balance;}
+.de{color:var(--ink-soft); font-size:1.12rem; margin:0;}
+.primary{display:inline-flex; align-items:center; gap:10px; border:0; background:var(--ink); color:#fff; font-weight:700; font-size:1.2rem; padding:12px 22px; border-radius:10px; cursor:pointer;}
+.primary:hover{background:#2A3240;}
+.secondary{border:2px solid var(--ink); background:var(--surface); font-weight:700; font-size:1.05rem; padding:10px 18px; border-radius:10px; cursor:pointer;}
+.secondary:hover{background:var(--bg);}
+.secondary.small{font-size:.92rem; padding:5px 12px; border-width:2px;}
+.linkbtn{border:0; background:none; padding:0; color:var(--A-txt); font-weight:700; text-decoration:underline; cursor:pointer;}
+.row{display:flex; flex-wrap:wrap; gap:12px; align-items:center;}
+.kbd{font-size:.95rem; color:var(--ink-soft);}
+.card{background:var(--surface); border:2px solid var(--line-soft); border-radius:16px; padding:18px 22px; min-width:0;}
+.card h2{font-family:var(--f-display); font-weight:800; font-size:1.5rem; margin:0 0 8px; text-wrap:balance;}
+.badge{display:inline-block; font-weight:800; font-size:.78rem; letter-spacing:.1em; text-transform:uppercase; padding:2px 9px; border-radius:6px; background:var(--ink); color:#fff;}
+.badge.lvl{background:var(--surface); color:var(--ink); border:2px solid var(--ink);}
+.badge.crit{background:var(--no); color:#fff;}
+.muted{color:var(--ink-soft);}
+.err{color:var(--no); font-weight:700; min-height:1.2em;}
+/* top centre, just below the top bar (top is set in toast()), so it never covers the options */
+.toast{position:fixed; left:50%; top:80px; transform:translateX(-50%); max-width:calc(100vw - 32px); background:var(--ink); color:#fff; font-weight:700; font-size:1.1rem; padding:10px 18px; border-radius:10px; z-index:60; box-shadow:0 6px 24px rgba(0,0,0,.3);}
+
+/* ---------- library ---------- */
+.hero{display:flex; flex-wrap:wrap; justify-content:space-between; align-items:flex-end; gap:12px;}
+.hero h1{font-family:var(--f-display); font-weight:800; font-size:2.4rem; margin:0; line-height:1.05;}
+.hero p{margin:4px 0 0; font-size:1.08rem; color:var(--ink-soft); max-width:62ch;}
+details.how{background:var(--surface); border:2px solid var(--line-soft); border-radius:14px; padding:10px 16px;}
+details.how summary{cursor:pointer; font-weight:800;}
+details.how ol{margin:8px 0 4px; padding-left:1.4em; display:flex; flex-direction:column; gap:4px;}
+details.how p{margin:6px 0 2px;}
+.filters{display:flex; flex-wrap:wrap; gap:8px 18px; align-items:center;}
+.filters .grp{display:flex; flex-wrap:wrap; gap:6px; align-items:center;}
+.filters .grp > span{font-size:.85rem; font-weight:700; color:var(--ink-soft); margin-right:2px;}
+.fbtn{border:2px solid var(--line-soft); background:var(--surface); border-radius:99px; padding:3px 12px; font-weight:700; font-size:.92rem; cursor:pointer;}
+.fbtn[aria-pressed="true"]{background:var(--ink); color:#fff; border-color:var(--ink);}
+.shelf{display:flex; flex-direction:column; gap:8px;}
+.shelf h2{font-family:var(--f-display); font-weight:800; font-size:1.4rem; margin:8px 0 0; display:flex; align-items:baseline; gap:10px; flex-wrap:wrap;}
+.shelf h2 small{font-family:var(--f-body); font-size:.95rem; color:var(--ink-soft); font-weight:700;}
+.grid{display:grid; grid-template-columns:repeat(auto-fill, minmax(min(100%, 17rem), 1fr)); gap:10px;}
+.pk{display:flex; flex-direction:column; gap:4px; text-align:left; background:var(--surface); border:2px solid var(--line-soft); border-radius:14px; padding:12px 14px; cursor:pointer; min-width:0;}
+.pk:hover{border-color:var(--ink);}
+.pk .t{font-family:var(--f-display); font-weight:800; font-size:1.22rem; line-height:1.15;}
+.pk .d{color:var(--ink-soft); font-size:.92rem;}
+.pk .tags{display:flex; flex-wrap:wrap; gap:5px; margin-top:auto; padding-top:4px;}
+.tt{font-size:.76rem; font-weight:800; letter-spacing:.05em; text-transform:uppercase; padding:1px 7px; border-radius:6px; border:2px solid var(--line-soft); color:var(--ink-soft);}
+.tt.run{border-color:var(--hl-edge); color:var(--ink);}
+.tt.th{text-transform:none; letter-spacing:0; font-weight:700; font-size:.8rem; border-style:dashed;}   /* Themenbereich: names with ":" and "&" read badly in capitals */
+.pk .d.fo{color:var(--ink);}
+/* Schulstufe navigation, filters, search */
+/* "Alle" + 8 Schulstufen: one row of 9 on a wide board, else two rows (5 + 4) */
+.grades{display:grid; grid-template-columns:repeat(5, minmax(0,1fr)); gap:8px;}
+@media (min-width: 1200px){ .grades{grid-template-columns:auto repeat(8, minmax(0,1fr));} }
+.gchip{display:flex; flex-direction:column; align-items:flex-start; min-width:0; border:2px solid var(--line-soft); background:var(--surface); border-radius:12px; padding:5px 9px 6px; cursor:pointer; text-align:left;}
+.gchip b{font-family:var(--f-display); font-weight:800; font-size:clamp(.9rem, 1.1vw, 1.12rem); line-height:1.15; white-space:nowrap;}
+.gchip small{font-size:.74rem; font-weight:700; line-height:1.25; color:var(--ink-soft);}
+.gchip:not(:disabled):hover{border-color:var(--ink);}
+.gchip[aria-pressed="true"]{background:var(--ink); border-color:var(--ink); color:#fff;}
+.gchip[aria-pressed="true"] small{color:#E6EAF0;}
+.gchip:disabled{opacity:.5; cursor:default;}
+.fsel{display:flex; align-items:center; gap:6px; font-size:.85rem; font-weight:700; color:var(--ink-soft); min-width:0;}
+.fsel select, .fsearch input{font:inherit; font-size:.95rem; font-weight:700; color:var(--ink); background:var(--surface); border:2px solid var(--line-field); border-radius:10px; padding:4px 10px; min-width:0; max-width:100%;}
+.fsearch{flex:1 1 14rem; display:flex; min-width:0; max-width:26rem;}
+.fsearch input{width:100%; font-weight:400;}
+.fsel select:hover, .fsearch input:hover{border-color:var(--ink);}
+.fsel select:focus, .fsearch input:focus{border-color:var(--A);}
+.cardsrow{display:flex; flex-wrap:wrap; gap:8px 12px; align-items:center; margin:8px 0 2px;}
+a.secondary{display:inline-block; color:var(--ink); text-decoration:none;}
+.foot .linkbtn{color:var(--ink-soft); font-weight:700; padding:4px 0;}
+/* info window (library): German, narrow, readable */
+.panel.about{max-width:min(860px, calc(100vw - 32px)); gap:8px; font-size:1.05rem;}
+.brand .linkbtn.why{color:var(--ink-soft); white-space:nowrap;}
+.panel.note{background:#FBF7EC; border:2px solid #E1D7BE; max-width:54rem;}
+.panel.note p{font-family:var(--f-text); font-size:1.08rem; line-height:1.58; margin:9px 0 0;}
+.panel.note p.sig{font-style:italic; text-align:right; margin-top:14px;}
+.panel.about h3{font-family:var(--f-display); font-weight:800; font-size:1.2rem; margin:10px 0 0;}
+.panel.about p{margin:0; max-width:70ch;}
+.panel.about a{color:var(--A-txt); font-weight:700;}
+.panel.about .muted{font-size:.95rem;}
+.panel.about details.ofl summary{cursor:pointer; font-weight:700; font-size:.95rem;}
+.panel.about details.ofl pre{white-space:pre-wrap; font-family:var(--f-body); font-size:.8rem; line-height:1.4; max-height:40vh; overflow:auto; margin:6px 0 0; padding:8px 12px; background:var(--bg); border-radius:8px;}
+.resume{display:flex; flex-direction:column; gap:8px; background:var(--hl); border-radius:14px; padding:12px 16px;}
+.resume > b{font-family:var(--f-display); font-size:1.25rem;}
+.runs{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:8px;}
+.runs li{display:grid; grid-template-columns:minmax(0,1fr) auto; gap:6px 14px; align-items:center; border-top:2px solid rgba(18,22,29,.18); padding-top:8px;}
+.runs .row{gap:8px; flex-wrap:nowrap;}
+.runs .primary{font-size:1.02rem; padding:7px 14px;}
+.runs .secondary{font-size:.95rem; padding:5px 12px;}
+.runs li:first-child{border-top:0; padding-top:0;}
+.runs .rt{min-width:0; overflow-wrap:anywhere;}
+.runs .rt b{font-family:var(--f-display); font-size:1.15rem;}
+.filtered{display:flex; gap:10px; align-items:center; flex-wrap:wrap; font-weight:700; color:var(--ink-soft);}
+
+/* ---------- setup ---------- */
+.setup{display:grid; grid-template-columns:minmax(0,1.25fr) minmax(0,1fr); gap:18px; align-items:start;}
+.task{background:var(--surface); border:3px solid var(--ink); border-radius:16px; padding:18px 22px; overflow-wrap:anywhere;}
+.task .sit{font-family:var(--f-text); font-size:calc(1.3rem * var(--zoom)); line-height:1.5; margin:6px 0 10px; white-space:pre-line;}
+.task .ins{font-weight:700; font-size:calc(1.18rem * var(--zoom)); margin:0 0 4px;}
+.task ul{margin:0 0 10px; padding-left:1.3em; font-family:var(--f-text); font-size:calc(1.28rem * var(--zoom)); line-height:1.5;}
+.task .wds{font-weight:700; font-size:calc(1.12rem * var(--zoom)); margin:0;}
+.task .tde{font-size:1rem; color:var(--ink-soft); margin:10px 0 0; border-top:2px solid var(--line-soft); padding-top:8px;}
+.subde{display:block; font-size:.6em; margin-top:4px;}
+.choice{display:grid; grid-template-columns:repeat(auto-fit, minmax(min(100%, 12rem), 1fr)); gap:8px;}
+.opt-c{text-align:left; border:2px solid var(--line-soft); background:var(--surface); border-radius:12px; padding:10px 12px; cursor:pointer;}
+.opt-c[aria-pressed="true"]{background:var(--ink); color:#fff; border-color:var(--ink);}
+.opt-c[aria-pressed="true"] span{color:#E6EAF0;}
+.opt-c[aria-pressed="true"] b::before{content:"✓ ";}
+.opt-c b{display:block; font-size:1.05rem;}
+.opt-c span{font-size:.92rem; color:var(--ink-soft);}
+.info{font-size:1.05rem; margin:0;}
+details.tn{background:var(--surface); border:2px solid var(--line-soft); border-radius:14px; padding:10px 14px;}
+details.tn summary{cursor:pointer; font-weight:700;}
+details.tn summary small{font-weight:400; color:var(--no);}
+details.tn dl{margin:8px 0 0; display:grid; gap:6px;}
+details.tn dt{font-weight:800; font-size:.85rem; letter-spacing:.08em; text-transform:uppercase; color:var(--ink-soft);}
+details.tn dd{margin:0 0 4px; font-size:1rem;}
+
+/* ---------- decide ---------- */
+.decide-head{display:flex; flex-wrap:wrap; justify-content:space-between; gap:4px 12px; align-items:flex-end;}
+.part-tag{display:inline-block; font-weight:800; font-size:.85rem; letter-spacing:.12em; text-transform:uppercase; padding:2px 10px; border-radius:6px; background:var(--ink); color:#fff; margin-bottom:4px;}
+/* grades 9–12: the five paragraphs (Introduction, Body paragraph 1–3, Conclusion) are the frame of every text: the label is big on the board */
+.upper .part-tag{font-family:var(--f-display); font-size:1.18rem; letter-spacing:.04em; padding:3px 12px;}
+.part-tag .cont{font-weight:700; color:#E6EAF0;}
+.vote{display:flex; gap:6px; align-items:center; font-weight:800; font-size:1.3rem; color:var(--ink);}
+.vote.again{color:var(--no);}
+.vote .vt{display:inline-grid; place-items:center; width:1.9rem; height:1.9rem; border-radius:6px; color:#fff; font-family:var(--f-display); font-weight:800; box-shadow:inset 0 0 0 3px rgba(0,0,0,.18);}
+.opts{display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px; margin-top:8px;}
+.opts.three{grid-template-columns:repeat(3,minmax(0,1fr));}
+.opts.two{grid-template-columns:repeat(2,minmax(0,1fr));}
+.optw{position:relative; display:flex; min-width:0;}
+.opt{flex:1 1 auto; width:100%; display:flex; gap:10px; align-items:flex-start; text-align:left; background:var(--surface); border:3px solid var(--line-soft); border-radius:14px; padding:10px 12px 2.25rem; cursor:pointer; min-width:0;}
+.mouse .opt:hover{box-shadow:0 0 0 3px var(--line-soft);}
+.opt .L{flex:0 0 auto; width:2.5rem; height:2.5rem; border-radius:10px; display:grid; place-items:center; font-family:var(--f-display); font-weight:800; font-size:1.6rem; color:#fff;}
+.opt .L, .cards-demo span.c, .spothead .L{box-shadow:inset 0 0 0 3px rgba(0,0,0,.18);}
+.opt .body{display:block; min-width:0;}
+.opt .lbl{display:block; font-weight:700; font-size:.95rem; letter-spacing:.06em; text-transform:uppercase; margin-bottom:2px;}
+/* option text: not multiplied by --zoom; --fit (from fitDecide) already uses the zoom as its ceiling */
+.opt .txt{display:block; font-family:var(--f-text); font-size:calc(1.42rem * var(--fit,1)); line-height:1.36; overflow-wrap:normal;}
+/* normal wrapping (no "Applicatio / n"): fitDecide shrinks the text until the longest word fits; only a word that never fits may break */
+.opts.wrapany .opt .txt{overflow-wrap:anywhere;}
+.opt.branch .txt{font-family:var(--f-body); font-size:calc(1.4rem * var(--fit,1));}
+.opt.headline .txt{font-weight:700; font-size:calc(1.6rem * var(--fit,1)); line-height:1.22;}
+.spotbtn{position:absolute; right:8px; bottom:6px; width:1.75rem; height:1.75rem; display:grid; place-items:center; padding:0; border:2px solid var(--line-soft); border-radius:8px; background:var(--surface); color:var(--ink-soft); font-size:1.05rem; line-height:1; cursor:pointer;}
+.spotbtn:hover{border-color:var(--ink-soft); color:var(--ink);}
+.opt[data-l="A"]{border-color:var(--A);} .opt[data-l="A"] .L{background:var(--A);} .opt[data-l="A"] .lbl{color:var(--A-txt);}
+.opt[data-l="B"]{border-color:var(--B);} .opt[data-l="B"] .L{background:var(--B);} .opt[data-l="B"] .lbl{color:var(--B-txt);}
+.opt[data-l="C"]{border-color:var(--C);} .opt[data-l="C"] .L{background:var(--C);} .opt[data-l="C"] .lbl{color:var(--C-txt);}
+.opt[data-l="D"]{border-color:var(--D);} .opt[data-l="D"] .L{background:var(--D);} .opt[data-l="D"] .lbl{color:var(--D-txt);}
+.opt.out{cursor:help; border-style:dashed; border-color:var(--line)!important;}
+.opt.out .L{opacity:.45;}
+.opt.out .txt{opacity:.75; text-decoration:line-through; text-decoration-color:rgba(192,38,45,.6); text-decoration-thickness:2px; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden;}
+.opt.out .lbl{color:var(--no)!important;}
+.opt.out .lbl::after{content:"  · rejected";}
+.nowrap{white-space:nowrap;}
+.blank{display:inline-block; min-width:3.2em; border-bottom:3px solid currentColor; height:1em; vertical-align:baseline;}
+.blank.hot{background:var(--hl);}
+.blank.wide{min-width:10em;}
+.context{background:var(--surface); border:2px dashed var(--line); border-radius:12px; padding:6px 14px; font-family:var(--f-text); font-size:1.02rem; color:var(--ink-soft); margin-top:6px;}
+.context b{font-family:var(--f-body); font-size:.82rem; letter-spacing:.1em; text-transform:uppercase; margin-right:8px; color:var(--ink);}
+
+/* ---------- overlays ---------- */
+.overlay{position:fixed; inset:0; background:rgba(18,22,29,.78); display:grid; place-items:center; padding:16px; z-index:50; overflow:auto;}
+.panel{background:var(--surface); border-radius:18px; max-width:min(1500px, calc(100vw - 32px)); width:100%; padding:24px 28px; box-shadow:0 20px 60px rgba(0,0,0,.35); display:flex; flex-direction:column; gap:12px; max-height:calc(100vh - 32px); overflow:auto;}
+.panel.spotp{max-width:min(1700px, calc(100vw - 32px));}
+.panel .task{border:0; padding:0;}
+.panel .task .tde{display:none;}   /* T window = the task card the class saw on the task screen (without the German summary) */
+.stamp{align-self:flex-start; font-family:var(--f-display); font-weight:800; font-size:2.4rem; letter-spacing:.06em; color:var(--no); border:6px solid var(--no); border-radius:12px; padding:2px 18px; transform:rotate(-4deg);}
+.panel .why{font-size:calc(1.6rem * var(--pz)); line-height:1.4; margin:0;}
+.panel .why-de{font-size:1.1rem; color:var(--ink-soft); margin:0;}
+.panel h2{font-family:var(--f-display); font-weight:800; font-size:1.9rem; margin:0;}
+.trapq{font-family:var(--f-text); font-size:calc(1.15rem * var(--pz)); line-height:1.45; border-left:6px solid var(--no); background:var(--no-soft); padding:8px 12px; margin:0; border-radius:0 8px 8px 0;}
+.gapq{font-family:var(--f-text); font-size:calc(1.25rem * var(--pz)); line-height:1.45; margin:0; color:var(--ink-soft);}
+.spot{font-family:var(--f-text); font-size:calc(2rem * var(--zoom)); line-height:1.42; margin:0; overflow-wrap:anywhere;}
+.spot.hd{font-weight:700;}
+.spot.br{font-family:var(--f-body);}
+.spothead{display:flex; gap:12px; align-items:center;}
+.spothead .L{width:2.8rem; height:2.8rem; border-radius:10px; display:grid; place-items:center; font-family:var(--f-display); font-weight:800; font-size:1.8rem; color:#fff;}
+.field{display:flex; flex-direction:column; gap:4px; min-width:0; flex:1 1 220px;}
+.field label{font-weight:700; font-size:1rem;}
+.field input{font:inherit; font-size:1.7rem; padding:8px 12px; border:3px solid var(--line-field); border-radius:10px; min-width:0; width:100%;}
+.field input:focus{border-color:var(--A);}
+.keys{display:grid; grid-template-columns:auto 1fr; gap:4px 14px; font-size:1.05rem;}
+.keys b{font-family:var(--f-body); background:var(--bg); border:2px solid var(--line-soft); border-radius:6px; padding:0 8px; text-align:center;}
+
+/* ---------- copy / frame ---------- */
+.copy-grid{display:grid; grid-template-columns:minmax(0,1fr) minmax(0,20rem); gap:16px; align-items:start;}
+/* room below the page so the new block can scroll up from the bottom edge; as a margin of the page (not padding of the grid)
+   the grid row grows too, so the sticky side panel is never pushed off the top */
+.copy-grid > .page{margin-bottom:22vh;}
+.page{background:var(--surface); border:2px solid var(--line-soft); border-radius:14px; padding:16px 20px 20px; display:flex; flex-direction:column; gap:6px; min-width:0;}
+.blk{display:grid; grid-template-columns:10.5rem minmax(0,1fr); gap:14px; align-items:start; padding:8px 10px; border-radius:10px; border:3px solid transparent; scroll-margin-block:16px 28px;}
+.blk .tag{min-width:0; font-weight:800; font-size:.78rem; letter-spacing:.03em; text-transform:uppercase; color:var(--ink-soft); padding-top:.45rem; border-right:3px solid var(--line-soft); padding-right:8px; min-height:100%; hyphens:none; overflow-wrap:normal;}
+.blk.new .tag{font-size:1.15rem; text-transform:none; letter-spacing:0; line-height:1.2; padding-top:.35rem;}
+.blk .t{min-width:0; font-family:var(--f-text); font-size:calc(1.7rem * var(--zoom)); line-height:1.5; color:var(--ink); overflow-wrap:anywhere;}
+.blk.old .t{color:var(--ink-soft); font-size:calc(1.22rem * var(--zoom));}
+/* the block to copy must not sit at the bottom edge of the board (heads, teacher, whiteboard tray) */
+.blk.new{background:var(--hl); border-color:var(--hl-edge); box-shadow:inset 8px 0 0 var(--ink);}
+.blk.new .tag{color:var(--ink); border-right-color:var(--ink);}
+/* continuation block (join): the same paragraph as the row above, so no gap and no margin word; the margin line runs on */
+.blk.join{margin-top:-10px;}
+.blk.join .tag::before{content:"↳" / ""; display:block; text-align:right; font-size:1.2rem; line-height:1; color:var(--line);}
+.blk.join.new .tag::before{color:var(--ink);}
+.blk.s-title .t, .blk.s-subject .t{font-weight:700;}
+.blk.s-title.new .t{font-size:calc(2rem * var(--zoom)); line-height:1.2;}
+.blk.empty .t{font-family:var(--f-body); font-size:1.02rem; color:var(--ink-soft); border:3px dashed var(--line); border-radius:10px; padding:6px 12px; font-weight:400;}
+.blk.meta .t{font-family:var(--f-body); font-size:calc(1.1rem * var(--zoom)); line-height:1.5;}
+.blk.meta.new .t{font-size:calc(1.4rem * var(--zoom));}
+.h3{display:block; font-family:var(--f-body); font-weight:800; letter-spacing:.01em;}
+.focus-on .pv{text-decoration:underline; text-decoration-color:var(--pv); text-decoration-thickness:4px; text-underline-offset:5px; color:var(--pv);}
+.focus-on .opt .pv, .focus-on .context .pv, .focus-on .trapq .pv, .focus-on .spot .pv, .focus-on .gapq .pv{text-decoration:none; color:inherit;}
+.blk.frame .sc{background:var(--sc-soft); color:var(--sc); border-radius:6px; padding:0 4px; box-decoration-break:clone; -webkit-box-decoration-break:clone; font-weight:600;}
+.blk.frame .sc .pv{color:var(--sc)!important;}
+.blk.frame .h3.sc{display:block; width:fit-content; margin-bottom:4px;}
+.blk.frame.new{background:var(--surface); border-color:var(--sc); box-shadow:inset 8px 0 0 var(--sc);}
+.ownline{display:inline-block; width:var(--w,6em); max-width:calc(100% - .4em); border-bottom:4px dashed var(--own); height:1.05em; vertical-align:baseline; margin:0 .2em; position:relative;}
+/* the label never leaves its line (long class answers end in "…") */
+.ownline::after{content:attr(data-w); position:absolute; right:2px; bottom:4px; max-width:calc(100% - 4px); overflow:hidden; text-overflow:ellipsis; font-family:var(--f-body); font-size:.7em; font-weight:700; line-height:1.1; color:var(--own); white-space:nowrap;}
+.gv{background:var(--hl); padding:0 4px; border-radius:4px; font-weight:700;}
+.blk.frame.revealed .ow{color:var(--own); font-style:italic;}
+.blk.frame.revealed .ow .pv{color:var(--own);}
+.side{display:flex; flex-direction:column; gap:10px; min-width:0;}
+/* sticky only while the whole panel fits on the board (placeCopy sets .stick), otherwise its heading would be pushed off the top */
+.side.stick{position:sticky; top:10px;}
+.side > .kbd{margin-top:-6px;}
+/* white box: the only big yellow thing on a copy screen is the block to copy */
+.copynow{background:var(--surface); border:2px solid var(--line-soft); border-left:10px solid var(--hl-edge); border-radius:14px; padding:12px 16px; overflow-wrap:anywhere;}
+.copynow.fr{background:var(--sc-soft); border:3px solid var(--sc);}
+.copynow.fr strong{font-size:1.35rem;}
+.copynow strong{display:block; font-family:var(--f-display); font-weight:800; font-size:1.5rem; line-height:1.12;}
+/* --pz: see :root (the board text keeps growing with A+) */
+.copynow p{margin:6px 0 0; font-size:calc(1.15rem * var(--pz));}
+.copynow p.small{font-size:calc(1rem * var(--pz));}
+.legend{display:flex; flex-direction:column; gap:2px; font-size:.9rem; padding:8px 12px;}
+.legend span{display:flex; gap:8px; align-items:center;}
+.legend i.sw{display:inline-block; width:2.2em; height:1em; border-radius:4px; flex:0 0 auto;}
+.note{background:var(--surface); border:2px solid var(--line-soft); border-radius:14px; padding:10px 14px; font-size:calc(1.1rem * var(--pz)); overflow-wrap:anywhere;}
+.note > b{display:block; font-size:.88rem; letter-spacing:.12em; text-transform:uppercase; color:var(--ink-soft); margin-bottom:2px;}
+.note.legend{font-size:.9rem;}
+.note.sofar > b{display:inline; font-size:inherit; letter-spacing:0; text-transform:none; color:inherit; margin:0;}
+.trapnote{display:block; width:100%; text-align:left; font:inherit; color:inherit; cursor:pointer; background:var(--no-soft); border:2px solid var(--no); border-radius:14px; padding:10px 14px; font-size:calc(1.05rem * var(--pz)); overflow-wrap:anywhere;}
+.trapnote:hover{background:var(--surface);}
+.trapnote > b{display:flex; justify-content:space-between; align-items:center; gap:8px; font-size:.88rem; letter-spacing:.1em; text-transform:uppercase; color:var(--no); margin-bottom:2px;}
+.trapnote .key{flex:0 0 auto; border:2px solid var(--no); border-bottom-width:4px; border-radius:6px; padding:0 7px; letter-spacing:0; font-size:.95rem; line-height:1.3; background:var(--surface);}
+.trapnote .tx{display:block;}
+.trapnote .tde2{display:block; font-style:italic; color:var(--ink-soft);}
+/* low windows (720p full screen, 1024×768): a tighter side panel, so that a compare step keeps its trap check on the board */
+@media (max-height: 779px){ .side{gap:8px;} .copynow, .note, .trapnote{padding-block:8px;} }
+.timer{display:flex; flex-wrap:wrap; gap:6px; align-items:center;}
+.timer .tbtn{border:2px solid var(--sc); background:var(--surface); color:var(--sc); border-radius:8px; padding:2px 8px; font-size:.95rem; font-weight:800; cursor:pointer;}
+.timer .tbtn[aria-pressed="true"]{background:var(--sc); color:#fff;}
+.timer .clock{font-family:var(--f-display); font-weight:800; font-size:1.9rem; line-height:1.1; font-variant-numeric:tabular-nums; min-width:3.6ch; margin-right:4px;}
+.timer .clock.idle{color:var(--ink-soft);}
+.timer .clock.up{color:var(--no);}
+.tkeys{display:block; font-size:.85rem; color:var(--ink-soft); margin-top:4px;}
+@media (prefers-reduced-motion: no-preference){ .timer .clock.up{animation:blink 1s 4;} }
+@keyframes blink{50%{opacity:.25;}}
+
+/* ---------- task screen ---------- */
+.heft{font-family:var(--f-text); font-size:1.12rem; border:2px solid var(--line-soft); border-radius:10px; padding:10px 14px; background:repeating-linear-gradient(var(--surface) 0 2rem, #DCE3EE 2rem calc(2rem + 1px)); line-height:2.03rem; overflow-wrap:anywhere;}
+.heft .hdate{display:block; text-align:right;}
+.heft .free{color:var(--no); font-family:var(--f-body); font-weight:700; font-size:.95rem;}
+.cards-demo{display:flex; gap:8px; flex-wrap:wrap; align-items:center;}
+.cards-demo span.c{width:2.4rem; height:3rem; border-radius:8px; display:grid; place-items:center; color:#fff; font-family:var(--f-display); font-weight:800; font-size:1.5rem;}
+/* in the lesson the task card is fitted (--tfit) so that "Write around N words" stays on the board; the same in the T window */
+.runtask .task .sit, .panel .task .sit{font-size:calc(1.3rem * var(--zoom) * var(--tfit,1));}
+.runtask .task ul, .panel .task ul{font-size:calc(1.28rem * var(--zoom) * var(--tfit,1));}
+.runtask .task .ins, .runtask .task .wds, .panel .task .ins, .panel .task .wds{font-size:calc(1.15rem * var(--zoom) * var(--tfit,1));}
+.runtask .task .tde{font-size:calc(1.1rem * var(--zoom) * var(--tfit,1));}
+.runtask:not(.low) .task .tde{display:none;}   /* grades 5-8: the German summary stays on the task screen (as on every decide screen) */
+.g5 .runtask .task .tde{font-size:calc(1.3rem * var(--zoom) * var(--tfit,1)); font-weight:700; color:var(--ink);}
+.runtask .cards-demo span.c{width:2rem; height:2.4rem; font-size:1.25rem;}
+
+/* ---------- final layouts ---------- */
+.final-grid{display:grid; grid-template-columns:minmax(0,1fr) minmax(0,20rem); gap:16px; align-items:start;}
+.docwrap{display:flex; flex-direction:column; gap:6px; min-width:0;}
+.doc{background:var(--surface); border:2px solid var(--ink); border-radius:6px; padding:22px 30px 28px; min-width:0; max-width:calc(54rem * var(--zoom)); width:100%; overflow-wrap:anywhere;}
+.doc p{font-family:var(--f-text); font-size:calc(1.3rem * var(--zoom)); line-height:1.6; margin:0 0 .75em;}
+.doc .h3{font-size:1.18em; margin:.3em 0 .15em; color:var(--ink);}
+.doc .pub{font-size:.9rem; font-weight:800; letter-spacing:.12em; text-transform:uppercase; color:var(--ink-soft); border-bottom:3px double var(--ink); padding-bottom:6px; margin-bottom:12px;}
+.doc h2{font-family:var(--f-text); font-weight:700; font-size:calc(2.2rem * var(--zoom)); line-height:1.15; margin:6px 0 14px; text-wrap:balance;}
+.doc.essay h2{text-align:center; font-size:calc(1.9rem * var(--zoom));}
+.doc .by{font-size:.95rem; color:var(--ink-soft); font-weight:700; margin:-6px 0 14px;}
+.mailhead{display:grid; grid-template-columns:auto minmax(0,1fr); gap:4px 12px; font-size:1.05rem; border-bottom:2px solid var(--line-soft); padding-bottom:10px; margin:0 0 14px;}
+.mailhead dt{font-weight:800; color:var(--ink-soft);}
+.mailhead dd{margin:0; overflow-wrap:anywhere;}
+.doc.email{border-radius:12px;}
+.doc.blog .avatar{display:inline-grid; place-items:center; width:2rem; height:2rem; border-radius:50%; background:var(--A); color:#fff; font-weight:800; margin-right:8px;}
+.doc.blog .comments{border-top:2px solid var(--line-soft); padding-top:10px; color:var(--ink-soft); font-weight:700;}
+.doc.report .rhead{font-family:var(--f-body); font-size:1.05rem; border:2px solid var(--line-soft); border-radius:8px; padding:10px 14px; margin-bottom:14px; display:grid; grid-template-columns:auto minmax(0,1fr); gap:3px 12px;}
+.doc.report .rhead b{color:var(--ink-soft);}
+.doc.story h2{font-style:italic;}
+/* postcard: message on the left half, stamp box and address lines on the right half */
+.doc.postcard{display:grid; grid-template-columns:minmax(0,1.4fr) minmax(0,1fr); padding:0; border-radius:10px; max-width:calc(64rem * var(--zoom));}
+.pc-msg{padding:22px 26px 18px; border-right:3px solid var(--line); min-width:0;}
+.pc-msg p:last-child{margin-bottom:0;}
+.pc-side{padding:18px 22px 26px; display:flex; flex-direction:column; gap:18px; min-width:0;}
+.pc-stamp{align-self:flex-end; width:5.4rem; height:6.4rem; border:3px dashed var(--line); border-radius:6px; display:grid; place-items:center; font-size:.78rem; font-weight:800; letter-spacing:.12em; color:var(--ink-soft);}
+.pc-addr{display:flex; flex-direction:column; margin-block:auto;}
+.pc-addr span{font-family:var(--f-text); font-size:calc(1.3rem * var(--zoom)); line-height:1.3; border-bottom:2px solid var(--line-soft); padding:12px 2px 3px;}
+/* message: a short note */
+.doc.message{background:#FFFBEA; border-color:var(--hl-edge); border-radius:14px; max-width:calc(46rem * var(--zoom));}
+.doc.message .mailhead{border-bottom:2px dashed var(--hl-edge);}
+/* diary: date line top right, optional "Dear Diary," */
+.doc.diary{border-left:10px solid var(--line);}
+.doc.diary .ddate{text-align:right; font-family:var(--f-text); font-style:italic; font-size:calc(1.2rem * var(--zoom)); color:var(--ink-soft); margin:0 0 10px;}
+/* letter: greeting and sign-off lines, optional sender name / town under the sign-off */
+.doc.letter .sender{margin-top:-.75em;}
+/* review: publication in small caps, title, star rating, optional by-line */
+.stars{color:var(--B-txt); font-family:"Segoe UI Symbol","DejaVu Sans",Arial,sans-serif; letter-spacing:.06em; line-height:1; white-space:nowrap;}
+.doc.review .pub{font-variant-caps:all-small-caps; text-transform:none; font-size:1.15rem; letter-spacing:.08em;}
+.doc.review h2{margin-bottom:8px;}
+.doc.review .rating{font-size:calc(1.9rem * var(--zoom)); margin:0 0 6px;}
+.doc.review .by{margin:0 0 16px;}
+/* invitation: a centred card with a double frame and a thin yellow inner line */
+.doc.invitation{align-self:center; max-width:calc(44rem * var(--zoom)); text-align:center; border:6px double var(--ink); border-radius:16px; padding:30px 44px 32px; box-shadow:inset 0 0 0 9px var(--surface), inset 0 0 0 12px var(--hl);}
+.doc.invitation .inv-to{width:fit-content; max-width:100%; margin:0 auto 12px; padding:0 12px 6px; border-bottom:2px dashed var(--line-soft); font-size:calc(1.15rem * var(--zoom)); font-weight:700; color:var(--ink-soft);}
+.doc.invitation h2{font-family:var(--f-display); font-weight:800; font-size:calc(2.5rem * var(--zoom)); margin:6px 0 18px;}
+.doc.invitation h2::before, .doc.invitation h2::after{content:"✦" / ""; color:var(--B-txt); font-size:.45em; vertical-align:.35em; margin:0 .55em;}
+.doc.invitation p{text-wrap:balance;}
+.checks{list-style:none; margin:0; padding:0; display:flex; flex-direction:column;}
+.checks li{display:flex; gap:10px; align-items:flex-start; font-size:calc(1.1rem * var(--zoom)); border-bottom:2px solid var(--line-soft); padding:8px 2px; overflow-wrap:anywhere;}
+.checks .ic{flex:0 0 auto; width:1.6rem; height:1.6rem; border-radius:6px; display:grid; place-items:center; font-weight:800; color:#fff; background:var(--ok);}
+.checks li.bad .ic{background:var(--no); border-radius:50%;}
+.checks li.info .ic{background:var(--ink-soft); border-radius:50%; font-family:var(--f-text); font-style:italic;}
+.checks li.tick{cursor:pointer;}
+.checks li.tick .ic{background:var(--surface); color:var(--ink); border:2px solid var(--ink-soft);}
+.checks li.tick:focus-visible{outline:3px solid var(--A); outline-offset:2px;}
+.checks li.tick.ok .ic{background:var(--ok); color:#fff; border-color:var(--ok);}
+.foot{display:flex; flex-wrap:wrap; justify-content:space-between; gap:8px; font-size:.9rem; color:var(--ink-soft); border-top:1px solid var(--line-soft); padding-top:8px;}
+
+/* 5th grade (A1): bigger board text, the German help line stands out */
+.g5 .decide-head .de{font-size:1.38rem; font-weight:700; color:var(--ink); border-left:6px solid var(--sc); padding-left:10px; margin-top:4px;}
+.g5 .opt .txt{font-size:calc(1.62rem * var(--fit,1));}
+.g5 .opt.headline .txt{font-size:calc(1.8rem * var(--fit,1));}
+.g5 .blk .t{font-size:calc(1.95rem * var(--zoom));}
+.g5 .blk.old .t{font-size:calc(1.42rem * var(--zoom));}
+.g5 .doc p, .g5 .pc-addr span{font-size:calc(1.55rem * var(--zoom));}
+.g5 .copynow p{font-size:calc(1.3rem * var(--pz));}
+.panel.g5 .why-de{font-size:calc(1.3rem * var(--pz)); font-weight:700; color:var(--ink);}
+
+/* print view of the voting cards (standalone file only): one A4 page per letter, four cards per page */
+#printcards{display:none;}
+@media print{
+  @page{size:A4; margin:0;}
+  body.print-cards{background:#fff; padding:0; margin:0;}
+  body.print-cards > :not(#printcards){display:none!important;}
+  body.print-cards #printcards{display:block;}
+  .pcards{width:210mm; height:296mm; display:grid; grid-template-columns:1fr 1fr; grid-template-rows:1fr 1fr; break-after:page; page-break-after:always;}
+  .pcards:last-child{break-after:auto; page-break-after:auto;}
+  .pcard{position:relative; border-right:.3mm dashed #9AA5B4; border-bottom:.3mm dashed #9AA5B4; padding:7mm;}
+  .pcard:nth-child(2n){border-right:0;} .pcard:nth-child(n+3){border-bottom:0;}
+  .pcard div{height:100%; border:3mm solid currentColor; border-radius:6mm; display:grid; place-items:center; font-family:var(--f-display); font-weight:800; font-size:110mm; line-height:1;}
+  .pcard i, .pcard em{position:absolute; font-family:var(--f-display); font-weight:800; font-style:normal; font-size:11mm;}
+  .pcard i{left:14mm; top:12mm;} .pcard em{right:14mm; bottom:12mm; transform:rotate(180deg);}
+}
+
+@media print{
+  body:not(.print-cards){background:#fff; padding:18mm 20mm;}
+  body:not(.print-cards) .top, body:not(.print-cards) .foot, body:not(.print-cards) #foot, body:not(.print-cards) #overlay, body:not(.print-cards) .toast, body:not(.print-cards) .final-grid > .side{display:none!important;}
+  body:not(.print-cards) .final-grid{display:block;}
+  body:not(.print-cards) .doc{border:0; box-shadow:none; max-width:none; padding:0;}
+  body:not(.print-cards) .doc p{font-size:12pt!important; line-height:1.5; orphans:3; widows:3; break-inside:avoid;}
+  body:not(.print-cards) .doc h2{font-size:18pt!important; break-after:avoid;}
+  body:not(.print-cards) .focus-on .pv{text-decoration:none; color:inherit;}
+}
+@media (max-width: 1000px){
+  .copy-grid, .final-grid, .setup{grid-template-columns:minmax(0,1fr);}
+  .copy-grid .side, .copy-grid .side.stick{order:-1; position:static;}
+  .final-grid .side{position:static;}
+}
+@media (max-width: 760px){
+  .opts.three{grid-template-columns:minmax(0,1fr);}
+}
+@media (max-width: 900px){
+  .top{grid-template-columns:minmax(0,1fr); grid-template-areas:"brand" "tools" "steps";}
+  .tools{flex-wrap:wrap; justify-content:flex-start;}
+}
+@media (max-width: 700px){
+  .runs li{grid-template-columns:minmax(0,1fr);}
+  .grades{grid-template-columns:repeat(3, minmax(0,1fr));}
+  .opts, .opts.two{grid-template-columns:minmax(0,1fr);}
+  .blk{grid-template-columns:minmax(0,1fr); gap:4px;}
+  .blk .tag{border-right:0; padding-top:0;}
+  html{font-size:14px;}
+  .doc{padding:16px;}
+  .doc.postcard{grid-template-columns:minmax(0,1fr); padding:0;}
+  .pc-msg{border-right:0; border-bottom:3px solid var(--line);}
+  .doc.invitation{padding:24px 20px 24px; box-shadow:inset 0 0 0 6px var(--surface), inset 0 0 0 8px var(--hl);}
+  .doc.invitation h2{font-size:calc(1.9rem * var(--zoom));}
+  .doc.invitation h2::before, .doc.invitation h2::after{margin:0 .3em;}
+  .brand small{display:none;}
+}
+@media (prefers-reduced-motion: no-preference){
+  .blk.new{animation:pop .6s ease-out;}
+  @keyframes pop{from{transform:scale(1.012);} to{transform:none;}}
+}
+@media (forced-colors: active){ .gchip[aria-pressed="true"] b::before, .fbtn[aria-pressed="true"]::before{content:"✓ ";} }
+@media (pointer:coarse){ .tool{min-height:44px; padding:6px 14px;} .tools{gap:8px;} .fbtn, .gchip, .opt-c{min-height:44px;} .spotbtn{width:44px; height:44px; font-size:1.3rem;} .opt{padding-bottom:3.4rem;} }
+</style>
+
+<div class="app" id="app" lang="de">
+  <header class="top" id="top">
+    <div class="brand" id="brand">Writing Room</div>
+    <div class="tools" id="tools" lang="en-GB"></div>
+    <nav class="steps" id="steps" aria-label="Steps" lang="en-GB"></nav>
+  </header>
+  <main id="main"></main>
+  <div class="foot" id="foot"></div>
+</div>
+<div id="overlay" hidden lang="en-GB"></div>
+<div id="live" class="sr" role="status" aria-live="polite"></div>
+<span class="sr" id="arm-msg" role="alert"></span>
+
+<script>
+"use strict";
+window.__wrOK = true;   // the guard script after this one shows a message if this line never ran (very old browser)
+const PACKS = /*__PACKS__*/[];
+for(const p of PACKS) p.grade = Number(p.grade) || 0;   // "6" and 6 are the same Schulstufe
+const CARDS_PDF = /*__CARDS_PDF__*/"";   // base64 of dist/karten-abcd.pdf (filled in by the build)
+const OFL_TEXT = /*__OFL__*/"";   // copyright lines + full SIL Open Font License 1.1 of the embedded fonts (filled in by the build, tools/fonts/OFL-*.txt)
+const VERSION = "2.0", BUILD_DATE = "__BUILD_DATE__";
+const AUTHOR = "Bernhard Gmeiner", AUTHOR_URL = "https://bernhardgmeiner.com";
+const LICENCE = "CC BY-NC-SA 4.0", LICENCE_URL = "https://creativecommons.org/licenses/by-nc-sa/4.0/deed.de";
+// key order = order inside a Schulstufe in the library
+const TYPE_NAMES = {message:"Message", invitation:"Invitation", postcard:"Postcard", email:"Email", letter:"Letter", diary:"Diary", blog:"Blog post", description:"Description", story:"Story", review:"Review", newspaper:"News report", article:"Article", report:"Report", essay:"Essay"};
+const TYPE_DE = {message:"Kurznachricht", invitation:"Einladung", postcard:"Postkarte", email:"E-Mail", letter:"Brief", diary:"Tagebucheintrag", blog:"Blogbeitrag", description:"Beschreibung", story:"Geschichte", review:"Rezension", newspaper:"Zeitungsbericht", article:"Artikel", report:"Report", essay:"Essay"};
+const TYPE_DE_ALT = {email:["E-Mail","Email","Mail"], blog:["Blogbeitrag","Blog"], message:["Nachricht"], invitation:["Einladung"], diary:["Tagebuch"], letter:["Leserbrief"], review:["Rezension","Kritik","Review","Filmkritik","Lokalkritik"]};   // also count as "titleDe starts with the type word"
+const MODE_DE = {full:"Volltext gemeinsam", frame:"Gerüst + eigenes Schreiben"};
+// Schulstufe 5–12 = 1.–8. Klasse; the level is fixed per Schulstufe (as in the validator)
+const GRADES = [5, 6, 7, 8, 9, 10, 11, 12];
+const GRADE_LEVEL = {5:"A1", 6:"A1+/A2", 7:"A2", 8:"A2+", 9:"A2+/B1", 10:"B1", 11:"B1+/B2", 12:"B2"};
+const gradeName = g => `${g}. Schulstufe`;
+const gradeSub = g => `${g - 4}. Klasse · ${GRADE_LEVEL[g]}`;
+const THEMES = ["Ich & meine Welt", "Freund:innen & Familie", "Schule & Lernen", "Freizeit, Hobbys & Sport", "Feste & Feiern", "Tiere & Natur", "Essen & Gesundheit", "Reisen & andere Länder", "Medien & Technik", "Umwelt & Nachhaltigkeit", "Arbeit & Zukunft", "Gesellschaft & Zusammenleben", "Kultur & Kreativität"];
+// grades 5–8: German reject reasons on the board and simple German criterion names
+const isLow = p => (p.grade || 0) <= 8;
+const CRIT = {TA:"Task Achievement", CC:"Coherence and Cohesion", LSR:"Lexical and Structural Range", LSA:"Lexical and Structural Accuracy"};
+const CRIT_DE = {TA:"Erfüllung der Aufgabenstellung", CC:"Kohärenz und Kohäsion", LSR:"Spektrum sprachlicher Mittel", LSA:"Sprachrichtigkeit"};   // official SRDP names (grades 9–12)
+const CRIT_DE_LOW = {TA:"Aufgabe", CC:"Aufbau", LSR:"Abwechslung", LSA:"Richtigkeit"};   // simple words for the badge (grades 5–8)
+const NOCOUNT = new Set(["title","subject"]);
+// "low window": a 720p projector in full screen (innerHeight 720) and 1024×768 (768 minus browser bars); the fits may shrink further there (CSS: max-height 779px)
+const LOW_H = 780;
+const COPY_LABEL = "Copy text (for your learning platform)";
+const $ = id => document.getElementById(id);
+const esc = s => String(s == null ? "" : s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const cap = s => s ? s[0].toUpperCase() + s.slice(1) : s;
+const fmtDate = t => new Date(t).toLocaleDateString("en-GB",{day:"numeric",month:"long",year:"numeric"});
+// the lesson's date is stored in the run: a text written on Monday still says Monday when it is shown again on Thursday
+const today = () => R && R.date ? R.date : fmtDate(Date.now());
+
+/* ===================== STATE ===================== */
+// One save slot per pack: {packId: run}, at most MAX_RUNS. Runs carry `updated` (ms, last real change) and `date` (lesson day).
+// Every write is a read-modify-write of this pack's entry only, so two open tabs never wipe each other's lessons.
+// Version 2 uses its own keys ("wr2-"): lessons and settings of Version 1 are ignored.
+const RUNS_KEY = "wr2-runs", PREF_KEY = "wr2-prefs", MAX_RUNS = 8;
+// storage can be missing or throw (sandboxed frame, private mode): the app still works, it just cannot keep lessons
+const STORE_OK = (() => { try{ localStorage.setItem("wr2-probe", "1"); localStorage.removeItem("wr2-probe"); return true; }catch(e){ return false; } })();
+// library filters: grade "all" | "5".."12", type, theme, mode ("all" | "full" = nur Volltext | "frame" = mit Gerüst), q = search text
+let prefs = {zoom:1, grade:"all", type:"all", theme:"all", mode:"all", q:"", seenHow:false, keys:true};
+try{ const p = JSON.parse(localStorage.getItem(PREF_KEY) || "null"); if(p && typeof p === "object") prefs = Object.assign(prefs, p); }catch(e){}
+prefs.zoom = +prefs.zoom; if(!(prefs.zoom >= 0.7 && prefs.zoom <= 1.6)) prefs.zoom = 1;
+for(const k of ["grade","type","theme","mode"]) prefs[k] = String(prefs[k] == null ? "all" : prefs[k]);
+prefs.q = "";   // the search text is not remembered: the next lesson starts with the full list (grade and filters stay)
+function savePrefs(){ try{ localStorage.setItem(PREF_KEY, JSON.stringify(prefs)); }catch(e){} }
+const freshRun = (packId, mode, len) => ({ packId, mode, len, date:fmtDate(Date.now()), phase:"task", si:0, picks:{}, rejected:{}, gaps:{}, last:null, revealed:false, focus:true, ticks:[], updated:Date.now(), history:[] });
+let view = "library";          // library | setup | run
+let setupSel = null;           // {packId, mode, len}
+let R = null;                  // current run (also stored in runs[R.packId])
+let runs = {};                 // saved runs, one per pack
+let savedSig = {};             // packId -> runSig() of the version last read or written (unchanged = no write, no new `updated`)
+let runNotes = [];             // runs dropped on load because the pack changed (shown in the library)
+let redo = [];                 // undone states (not persisted); any new snapshot() clears it
+let lockUntil = 0;
+function packById(id){ return PACKS.find(p => p.id === id) || null; }
+function activeSteps(p, len){ return p.steps.filter(s => (s.len || "both") === "both" || len === "long"); }
+const isObj = x => !!x && typeof x === "object" && !Array.isArray(x);
+function validRun(r){
+  try{
+    if(!isObj(r)) return false;
+    const p = packById(r.packId); if(!p) return false;
+    if(!p.modes.includes(r.mode) || !p.lengths[r.len]) return false;
+    if(!["task","layout","decide","copy","final"].includes(r.phase)) return false;
+    const st = activeSteps(p, r.len); if(!Number.isInteger(r.si) || r.si < 0 || r.si >= st.length) return false;
+    if(!isObj(r.picks) || !isObj(r.gaps) || !isObj(r.rejected)) return false;
+    if(Object.values(r.rejected).some(v => !Array.isArray(v) || v.some(x => typeof x !== "string"))) return false;
+    if(Object.values(r.gaps).some(v => typeof v !== "string")) return false;
+    if(typeof r.revealed !== "boolean" || typeof r.focus !== "boolean") return false;
+    if(!Array.isArray(r.ticks) || r.ticks.some(x => typeof x !== "number")) return false;
+    if(r.last != null && typeof r.last !== "string") return false;
+    if(r.date != null && (typeof r.date !== "string" || r.date.length > 40 || /[<>&"]/.test(r.date))) return false;
+    for(const [k, v] of Object.entries(r.picks)){ const s = p.steps.find(x => x.id === k); if(!s || !s.options.some(o => o.id === v && !o.trap)) return false; }
+    for(let i = 0; i < r.si; i++) if(!r.picks[st[i].id]) return false;
+    if((r.phase === "copy" || r.phase === "final") && !r.picks[st[r.si].id]) return false;
+    return true;
+  }catch(e){ return false; }
+}
+// Returns a usable run or null. If the run itself no longer fits the pack, the newest valid undo state is used.
+// Runs saved before dates were stored get date null here; resumeRun() gives them today's date.
+function cleanRun(raw){
+  if(!isObj(raw)) return null;
+  const norm = x => Object.assign(freshRun(raw.packId, raw.mode, raw.len), {date:null}, x, {history:[]});
+  const hist = (Array.isArray(raw.history) ? raw.history : []).filter(h => isObj(h) && h.packId === raw.packId && h.mode === raw.mode && h.len === raw.len).map(norm).filter(validRun);
+  const c = norm(raw); c.history = hist; c.updated = Number.isFinite(+raw.updated) && +raw.updated > 0 ? +raw.updated : Date.now();
+  if(validRun(c)) return c;
+  if(!hist.length) return null;
+  const h = hist.pop(); h.history = hist; h.updated = c.updated; return h;
+}
+// what counts as a change of the run: everything but the time stamp and the P highlight
+function runSig(r){ const {updated, focus, ...rest} = r; return JSON.stringify(rest); }
+function readDisk(){ if(!STORE_OK) return null; try{ const s = JSON.parse(localStorage.getItem(RUNS_KEY) || "null"); return isObj(s) ? s : {}; }catch(e){ return null; } }
+// slots full: the oldest finished text goes first, then the oldest unfinished lesson; `keep` is never dropped
+// returns the dropped runs
+function evict(map, keep){
+  const extra = Object.keys(map).length - MAX_RUNS; if(extra <= 0) return [];
+  const rank = r => isObj(r) && r.phase === "final" ? 0 : 1;
+  return Object.entries(map).filter(([k]) => k !== keep)
+    .sort(([, a], [, b]) => rank(a) - rank(b) || ((isObj(a) && +a.updated) || 0) - ((isObj(b) && +b.updated) || 0))
+    .slice(0, extra).map(([k, r]) => { delete map[k]; return r; });
+}
+// read-modify-write of one entry (run = null deletes it: Verwerfen, Neu beginnen); returns the runs dropped from storage.
+// Never writes an older state over a newer one (another tab saved this lesson later).
+function writeEntry(id, run){
+  const d = readDisk(); if(!d) return [];
+  if(run && isObj(d[id]) && +d[id].updated > +run.updated) return [];
+  if(run) d[id] = run; else delete d[id];
+  const gone = evict(d, run ? id : null);
+  try{ localStorage.setItem(RUNS_KEY, JSON.stringify(d)); }catch(e){ writeEntry.failed = true; }
+  return gone;
+}
+// take over what other tabs saved. The lesson open in this tab is left alone, run AND saved signature: an older stored
+// state never replaces it, and as long as this tab changes nothing it never writes it back (so it cannot overwrite the
+// newer progress another tab saved, see saveRun). An older stored state never replaces a newer one in memory either.
+function syncRuns(){
+  const d = readDisk(); if(!d) return;
+  const next = {};
+  for(const [k, raw] of Object.entries(d)){
+    if(R && k === R.packId) continue;
+    const mine = runs[k], upd = isObj(raw) ? +raw.updated : NaN;
+    if(mine && (upd === mine.updated || upd < mine.updated)){ next[k] = mine; continue; }   // unchanged, or older than what this tab has
+    const c = cleanRun(raw); if(c){ next[c.packId] = c; savedSig[c.packId] = runSig(c); }
+  }
+  if(R) next[R.packId] = R;
+  for(const k of Object.keys(savedSig)) if(!next[k]) delete savedSig[k];   // dropped in another tab
+  runs = next;
+}
+(function loadRuns(){
+  const raw = [];
+  try{ const s = JSON.parse(localStorage.getItem(RUNS_KEY) || "null"); if(isObj(s)) raw.push(...Object.values(s)); }catch(e){}
+  for(const r of raw){
+    const c = cleanRun(r);
+    if(c){ if(!runs[c.packId] || runs[c.packId].updated < c.updated) runs[c.packId] = c; }
+    else if(isObj(r) && typeof r.packId === "string"){ const p = packById(r.packId); runNotes.push(p ? p.title : r.packId); }
+  }
+  evict(runs, null);
+  for(const r of Object.values(runs)) savedSig[r.packId] = runSig(r);
+  if(STORE_OK) try{ localStorage.setItem(RUNS_KEY, JSON.stringify(runs)); }catch(e){}   // the cleaned map, once at start
+})();
+// writes only when the run really changed; merely looking at a lesson keeps its time
+// (an idle tab therefore never writes its older state over the newer one another tab saved)
+function saveRun(){
+  if(!R) return;
+  const sig = runSig(R);
+  if(sig === savedSig[R.packId] && runs[R.packId] === R) return;
+  R.updated = Date.now(); savedSig[R.packId] = sig; runs[R.packId] = R;
+  const gone = evict(runs, R.packId).concat(writeEntry(R.packId, R));
+  // slots full and an unfinished lesson had to go: tell the teacher (a dropped finished text is expected, item 19)
+  const lost = [...new Set(gone.filter(r => isObj(r) && r.phase !== "final" && r.packId !== R.packId && packById(r.packId)).map(r => r.packId))];
+  if(lost.length){
+    const names = lost.map(id => `„${packById(id).title}“`).join(", ");
+    toast(`Nur ${MAX_RUNS} Stunden werden gespeichert: ${names} ${lost.length > 1 ? "wurden" : "wurde"} entfernt.`, "de", 10000);
+  }
+  if((!STORE_OK || writeEntry.failed) && !saveRun.warned){ saveRun.warned = true; toast("Speichern nicht möglich: Der Browser-Speicher ist voll oder gesperrt. Text am Ende mit „Copy text“ sichern.", "de", 8000); }
+}
+function dropRun(id){ delete runs[id]; delete savedSig[id]; writeEntry(id, null); }
+function recentRuns(){ return Object.values(runs).filter(r => packById(r.packId)).sort((a, b) => b.updated - a.updated); }
+// another tab saved or dropped a lesson: show it at once in the library and on the setup screen
+window.addEventListener("storage", e => { if(e.key !== RUNS_KEY && e.key !== null) return; syncRuns(); if(view !== "run") render(); });
+
+/* ===================== PACK HELPERS ===================== */
+function P(){ return packById(R.packId); }
+function curSteps(){ return activeSteps(P(), R.len); }
+function cur(){ return curSteps()[R.si]; }
+function optText(o){ const t = o.text; if(t == null) return null; if(typeof t === "string") return t; if(t.by && t.map) return t.map[R.picks[t.by]] ?? null; return null; }
+function slotStep(slot){ return P().steps.find(s => s.slot === slot) || null; }
+function slotText(slot){ const st = slotStep(slot); if(!st || !curSteps().includes(st)) return null; const id = R.picks[st.id]; if(!id) return null; const o = st.options.find(x => x.id === id); return o ? optText(o) : null; }
+function pickedText(st){ const o = st.options.find(x => x.id === R.picks[st.id]); return o ? optText(o) || "" : ""; }
+function gapDef(id){ return (P().gaps || []).find(x => x.id === id) || null; }
+function gapVal(id){ return R.gaps[id] != null ? R.gaps[id] : null; }
+function gapOrDefault(id){ const v = gapVal(id); if(v != null) return v; const g = gapDef(id); return g && g.default != null ? String(g.default) : null; }
+const GAP_RE = /\{([A-Z][A-Z0-9_]*)\}/g;
+function render_text(t, mode){ // mode: blank (decide: unknown gaps stay blank) | final (gap value or default)
+  let h = esc(t);
+  h = h.replace(/^###\s*(.+?)(\n|$)/gm, (m, a) => `<span class="h3">${a}</span>`);
+  h = h.replace(/\n/g, "<br>");
+  h = h.replace(/\[\[(.+?)\]\]/g, '<span class="pv">$1</span>');
+  h = h.replace(/\{\{(.+?)\}\}/g, '<span class="sc">$1</span>');
+  h = h.replace(GAP_RE, (m, k) => { const v = mode === "final" ? gapOrDefault(k) : gapVal(k); return v == null ? '<span class="blank" aria-label="gap"></span>' : esc(v); });
+  // an empty gap blank keeps its following punctuation on the same line (no lone "." at a line start)
+  h = h.replace(/(<span class="blank" aria-label="gap"><\/span>)([.,;:!?)\u201d\u2019]+)/g, '<span class="nowrap">$1$2</span>');
+  return h;
+}
+function render_inline(s){ return render_text(s, "final"); }
+function splitHead(t){ const m = /^###\s*(.+?)\n/.exec(t); return m ? {head:m[1], rest:t.slice(m[0].length)} : {head:null, rest:t}; }
+function segs(t){ const parts = []; const re = /\{\{(.+?)\}\}/g; let m, last = 0;
+  while((m = re.exec(t))){ if(m.index > last) parts.push({own:true, s:t.slice(last, m.index)}); parts.push({own:false, s:m[1]}); last = re.lastIndex; }
+  if(last < t.length) parts.push({own:true, s:t.slice(last)}); return parts; }
+function headHTML(h){ return h ? `<span class="h3 sc">${render_inline(h)}</span>` : ""; }
+// Quotation marks and brackets in own stretches. ’ between two letters is an apostrophe, never a closing quote.
+const OPENERS = {"“":"”", "‘":"’", "(":")", "[":"]"}, CLOSERS = {"”":"“", "’":"‘", ")":"(", "]":"["};
+const isApos = (t, i) => t[i] === "’" && /\p{L}/u.test(t[i - 1] || "") && /\p{L}/u.test(t[i + 1] || "");
+// Does `text` hold the still unmatched partner of `ch`? An opener looks forward for its closer, a closer looks backward for its opener.
+function partnerIn(text, ch, forward){
+  const other = OPENERS[ch] || CLOSERS[ch]; let depth = 0;
+  for(let k = 0; k < text.length; k++){
+    const i = forward ? k : text.length - 1 - k, x = text[i];
+    if(isApos(text, i)) continue;
+    if(x === ch) depth++;
+    else if(x === other){ if(depth === 0) return true; depth--; }
+  }
+  return false;
+}
+// Which quotation marks / brackets of one own line stay visible? A mark is shown only if its partner is shown too:
+//  - a pair inside the line: both shown only when they sit at its two edges (“I was ready.”), else both go under the line
+//  - a mark whose partner is outside the line: shown if that partner is in the blue words before / after
+// Returns the set of visible positions.
+function visibleMarks(part, before, after){
+  const stack = [], pairs = [], loose = [];
+  for(let i = 0; i < part.length; i++){
+    const c = part[i];
+    if(OPENERS[c]) stack.push(i);
+    else if(CLOSERS[c] && !isApos(part, i)){
+      if(stack.length && part[stack[stack.length - 1]] === CLOSERS[c]) pairs.push([stack.pop(), i]); else loose.push(i);
+    }
+  }
+  loose.push(...stack);
+  const openEnd = /^[\s“‘(\[]*/.exec(part)[0].length;
+  const closeStart = part.length - /(?:[”’)\]]+[.,;:!?]*)?\s*$/.exec(part)[0].length;
+  const vis = new Set();
+  for(const [o, c] of pairs) if(o < openEnd && c >= closeStart){ vis.add(o); vis.add(c); }
+  for(const i of loose) if(OPENERS[part[i]] ? partnerIn(after, part[i], true) : partnerIn(before, part[i], false)) vis.add(i);
+  return vis;
+}
+// At least as wide as its label (long class answers), at most as wide as the text column; the label itself never leaves the line (CSS).
+function ownLine(w, label){ const em = Math.min(30, Math.max(1.4 + w * 0.85, label.length * 0.42)); return `<span class="ownline" role="img" data-w="${esc(label)}" style="--w:${em.toFixed(1)}em" aria-label="about ${w} words of your own"></span>`; }
+// one piece of own words between visible marks: gap words at its start are shown inline (yellow), the rest becomes a dashed line
+function ownPiece(s){
+  let head = "";
+  const lead = /^\s*(?:\S*\{[A-Z][A-Z0-9_]*\}\S*(?:\s+|$))+/.exec(s);
+  if(lead){ const [, a, core, b] = /^(\s*)([\s\S]*?)(\s*)$/.exec(lead[0]); head = `${esc(a)}<span class="gv">${esc(plainText(core))}</span>${esc(b)}`; s = s.slice(lead[0].length); }
+  const w = plainWords(s); if(!w) return head + esc(plainText(s.replace(GAP_RE, "")));
+  const [, pre, , post] = /^(\s*)([\s\S]*?)(\s*)$/.exec(s);
+  const uses = [...new Set([...s.matchAll(GAP_RE)].map(m => gapUse(s, m)).filter(Boolean))];
+  return head + esc(pre) + ownLine(w, "~" + w + (uses.length ? " · use: " + uses.join(", ") : "")) + esc(post);
+}
+// the label of a gap inside an own stretch: a number gap is named with the words after it ("use: 25 kilometres", "use: 30 of us",
+// "use: 40%"), so the class knows what the number is; one word, or two after "of" or an adjective ("12 local clubs"); stops at punctuation
+const UNIT_STOP = new Set(["a", "an", "the", "and", "or", "but", "for", "from", "to", "in", "on", "at", "by", "with", "as", "each", "per", "which", "who", "that", "than", "outside", "every", "ago", "last", "is", "are", "was", "were"]);
+function gapUse(s, m){
+  const v = gapOrDefault(m[1]); if(!v) return "";
+  const g = gapDef(m[1]); if(!g || g.type !== "number") return v;
+  const rest = plainText(s.slice(m.index + m[0].length));
+  if(/^\s*(%|per cent\b)/.test(rest)) return v + (rest.trim()[0] === "%" ? "%" : " per cent");
+  const unit = [];
+  for(const w of ((/^ +([^\n.,;:!?()“”"‘’]+)/.exec(rest) || [])[1] || "").trim().split(/\s+/)){
+    const lw = w.toLowerCase();
+    if(!/^[a-z]+$/i.test(w) || UNIT_STOP.has(lw)) break;
+    unit.push(w);
+    if(unit.length === 2 || (lw !== "of" && /s$|^(people|children|sheep|fish|men|women)$/.test(lw))) break;
+  }
+  return unit.length ? v + " " + unit.join(" ") : v;
+}
+// Frame mode: one own-writing stretch. Line breaks stay; words become dashed lines labelled with the model length.
+//  (a) gap words at the very start (also glued ones like "RR-{ORDER})." or "{AGE}-year-old") continue the scaffold: shown inline in yellow
+//  (b) gaps further inside are only named in the label ("~13 · use: Sophie")
+//  (c) quotation marks and brackets are shown only together with their partner (see visibleMarks; `before` / `after` = the
+//      blue words around the stretch); a shown closing mark takes the punctuation right after it along
+//  (d) focus markers [[ ]] never show inside an own stretch
+function ownHTML(s, before, after){
+  before = before || ""; after = after || "";
+  s = s.replace(/\[\[|\]\]/g, "");
+  return s.split(/(\n)/).map(part => {
+    if(part === "\n") return "<br>";
+    if(!plainWords(part)) return esc(plainText(part.replace(GAP_RE, "")));
+    const vis = visibleMarks(part, before, after);
+    let html = "", from = 0;
+    for(let i = 0; i < part.length; i++){
+      if(!vis.has(i)) continue;
+      let j = i + 1; if(CLOSERS[part[i]]) while(/[.,;:!?]/.test(part[j] || "")) j++;
+      html += ownPiece(part.slice(from, i)) + esc(part.slice(i, j)); from = j; i = j - 1;
+    }
+    return html + ownPiece(part.slice(from));
+  }).join("");
+}
+// the blue words around each own stretch are its context for (c); own pieces without words are shown as they are
+function frame_text(t){
+  const {head, rest} = splitHead(t); const parts = segs(rest);
+  const shown = parts.map(p => !p.own || !plainWords(p.s) ? plainText(p.s) : "");
+  return headHTML(head) + parts.map((p, i) => p.own ? ownHTML(p.s, shown.slice(0, i).join(" "), shown.slice(i + 1).join(" ")) : `<span class="sc">${render_inline(p.s)}</span>`).join("");
+}
+function revealed_text(t){ const {head, rest} = splitHead(t); return headHTML(head) + segs(rest).map(p => p.own ? `<span class="ow">${render_inline(p.s)}</span>` : `<span class="sc">${render_inline(p.s)}</span>`).join(""); }
+function ownWordCount(t){ return segs(splitHead(t).rest).filter(p => p.own).reduce((a, p) => a + plainWords(p.s.replace(GAP_RE, "")), 0); }
+function plainText(t){ return t.replace(/\{\{|\}\}|\[\[|\]\]/g, "").replace(/^###\s*/gm, "").replace(GAP_RE, (m, k) => gapOrDefault(k) ?? ""); }
+function plainWords(t){ return plainText(t).replace(/[“”"–…]/g, " ").split(/\s+/).filter(x => /[A-Za-z0-9]/.test(x)).length; }
+// a join block (continuation, AUTHORING §15) is part of its paragraph: counted with it, so the totals are the same as per block
+function countWords(){ let n = 0; P().order.forEach(s => { if(NOCOUNT.has(s)) return; const t = slotText(s); if(t) n += plainWords(t.replace(/^###.*$/gm, "")); }); return n; }
+function countFocus(){ let n = 0; P().order.forEach(s => { const t = slotText(s); if(t) n += (t.match(/\[\[/g) || []).length; }); return n; }
+/* ----- paragraphs and continuation blocks ("join": true) -----
+   A join step's block continues the nearest earlier non-join block in `order` on the current path: same paragraph, separated
+   by one space, no new line, no own margin word, one <p> on the final screen, one paragraph in the copy text. */
+const isJoin = st => !!(st && st.join && st.slot);
+const NOPARA = new Set(["title", "subject", "greeting", "signoff"]);
+// the slots of `order` (only those of the current path that have a text when `filled`), grouped into paragraphs: [[slot, joined slot, …], …]
+function slotGroups(slots, filled){
+  const groups = [];
+  for(const s of slots){
+    const st = slotStep(s); if(!st || !curSteps().includes(st) || (filled && !slotText(s))) continue;
+    if(isJoin(st) && groups.length) groups[groups.length - 1].push(s); else groups.push([s]);
+  }
+  return groups;
+}
+// the text of a paragraph so far: its blocks with one space between them
+function groupText(g){ return g.map(slotText).filter(Boolean).join(" "); }
+// the paragraph a slot belongs to (all its blocks on the current path, chosen or not)
+function groupOf(slot){ return slotGroups(P().order, false).find(g => g.includes(slot)) || [slot]; }
+// paragraphs of the body text (no title, subject, greeting or sign-off) on the current path
+function bodyParas(filled){ return slotGroups(P().order, filled).filter(g => !NOPARA.has(g[0])); }
+// Grades 9–12: the margin word in the exercise book is a short form of the five paragraph labels (the board shows the full label)
+const MARGIN_SHORT = {"Introduction":"Intro", "Body paragraph 1":"Body 1", "Body paragraph 2":"Body 2", "Body paragraph 3":"Body 3", "Conclusion":"Conclusion"};
+function marginWord(st){ return P().grade >= 9 && MARGIN_SHORT[st.part] ? MARGIN_SHORT[st.part] : st.part; }
+// meta values as HTML for the board: a gap the class has not chosen yet is an empty line, never text
+function metaLine(v){ return v == null ? "" : esc(String(v).replace(/\{TODAY\}/g, today())).replace(GAP_RE, (m, k) => { const x = gapVal(k); return x == null ? '<span class="blank"></span>' : esc(x); }); }
+function metaFinal(v){ return v == null ? "" : String(v).replace(/\{TODAY\}/g, today()).replace(GAP_RE, (m, k) => gapOrDefault(k) ?? ""); }
+// types whose header is copied before the first decision (layout screen)
+function hasLayout(p){
+  const m = p.meta || {};
+  if(["email","report","blog","diary"].includes(p.textType)) return true;
+  if(p.textType === "letter") return hasMailHead(p);
+  if(p.textType === "postcard") return !!m.to;
+  if(p.textType === "message") return !!(m.to || m.from);
+  if(p.textType === "review") return !!(reviewRating(p) || m.byline);
+  if(p.textType === "invitation") return !!m.to;
+  return false;
+}
+// postcard address: meta.to as lines ("Name\nStreet\nTown" or an array)
+function addrLines(p){ const v = (p.meta || {}).to; return v == null ? [] : (Array.isArray(v) ? v : String(v).split("\n")).map(x => String(x).trim()).filter(Boolean); }
+// the date of a header (e-mail, letter to the editor, report, blog, diary): meta.date ("{TODAY}" or a fixed date), else the lesson day
+function headerDate(p){ const m = p.meta || {}; return m.date ? metaFinal(m.date) : today(); }
+const diaryDate = headerDate;   // diary: date line, and the optional "Dear Diary," (meta.dear)
+// E-mail header (Matura format): To, From, Date, Subject. E-mails always; a letter to the editor when meta.to (the newspaper's address) is set.
+function hasMailHead(p){ const m = p.meta || {}; return p.textType === "email" || (p.textType === "letter" && !!m.to); }
+// [[label, value]] of the header without the subject line; `val` turns a meta value into the shown text (metaLine / metaFinal)
+function mailHead(p, val){ const m = p.meta || {}; const rows = []; if(m.to) rows.push(["To", val(m.to)]); if(m.from) rows.push(["From", val(m.from)]); rows.push(["Date", val(m.date || "{TODAY}")]); return rows; }
+// letter: the sender's full name (meta.name; older packs without a header: meta.from was the name)
+function senderName(p){ const m = p.meta || {}; return m.name || (m.from && !hasMailHead(p) && !/@/.test(m.from) ? m.from : ""); }
+// letter: sender name / town under the sign-off, only the parts the sign-off does not already name
+function senderLine(p){
+  const m = p.meta || {}; const so = plainText(slotText("signoff") || "");
+  return [senderName(p), m.town].filter(x => x && !so.includes(metaFinal(x))).map(metaFinal).join(", ");
+}
+// review: star rating from meta.rating (whole stars 1–5; anything else shows no stars) and the optional by-line ("by …")
+function reviewRating(p){ const n = Number((p.meta || {}).rating); return Number.isInteger(n) && n >= 1 && n <= 5 ? n : 0; }
+function starsText(n){ return "★".repeat(n) + "☆".repeat(5 - n); }
+function starsHTML(n){ return `<span class="stars" role="img" aria-label="${n} of 5 stars">${starsText(n)}</span>`; }
+function reviewBy(p){ const v = (p.meta || {}).byline; return v == null || String(v).trim() === "" ? "" : "by " + String(v).trim().replace(/^by\s+/i, ""); }   // raw: metaLine / metaFinal fill the gaps
+// review and blog: the line(s) under the title
+function underTitle(p){ return p.textType === "blog" || p.textType === "review"; }
+function titleWord(p){ return (p || P()).textType === "newspaper" ? "headline" : "title"; }
+function bodyWords(t){ return plainText(t.replace(/^###.*\n/, "")).trim().split(/\s+/).filter(Boolean); }
+function tailText(t, n){ const w = bodyWords(t); return (w.length > n ? "… " : "") + esc(w.slice(-n).join(" ")); }
+function headText(t, n){ const w = bodyWords(t); return esc(w.slice(0, n).join(" ")) + (w.length > n ? " …" : ""); }
+function typeTitle(p){ const tn = TYPE_NAMES[p.textType]; return p.title.toLowerCase().includes(tn.toLowerCase()) ? p.title : `${tn} · ${p.title}`; }
+
+/* ===================== HISTORY (undo / redo) ===================== */
+function stateCopy(){ const h = R.history; R.history = []; const c = JSON.parse(JSON.stringify(R)); R.history = h; return c; }
+function snapshot(){ redo = []; R.history.push(stateCopy()); if(R.history.length > 80) R.history.shift(); }
+// Nothing to undo = nothing happens, in every phase (a lesson is never left by undo; the task screen has its own button to the setup).
+// The writing timer is not touched here: it belongs to the step (see timerKey) and render() stops it when the step changes.
+function back(opts){
+  if(view !== "run" || !R || !R.history.length) return;
+  if(!(opts && opts.noRedo)) redo.push(stateCopy());
+  const prev = R.history.pop(); const h = R.history; const focus = R.focus;
+  R = Object.assign(prev, {history:h, focus}); closeOverlay(); render(); if(R.phase !== "copy") window.scrollTo(0, 0);
+}
+// restores exactly the state that the last back() undid
+function forward(){
+  if(view !== "run" || !R || !redo.length) return false;
+  const next = redo.pop(); R.history.push(stateCopy()); const h = R.history; const focus = R.focus;
+  R = Object.assign(next, {history:h, focus}); closeOverlay(); render(); if(R.phase !== "copy") window.scrollTo(0, 0);
+  return true;
+}
+
+/* ===================== NAVIGATION ===================== */
+function go(v){
+  if(view === "run" && R && v !== "run"){ if(v === "setup") setupSel = {packId:R.packId, mode:R.mode, len:R.len}; saveRun(); R = null; redo = []; }
+  disarm(); view = v; stopTimer(); closeOverlay(); render(); window.scrollTo(0, 0);
+}
+function fs(){ try{ if(!document.fullscreenElement && document.documentElement.requestFullscreen) document.documentElement.requestFullscreen().catch(()=>{}); }catch(e){} }
+function toggleFull(){ try{ if(!document.fullscreenElement) document.documentElement.requestFullscreen().catch(()=>{}); else document.exitFullscreen().catch(()=>{}); }catch(e){} }
+// start a new run for setupSel; replaces this pack's saved run
+function startRun(){ const s = setupSel; R = freshRun(s.packId, s.mode, s.len); redo = []; disarm(); saveRun(); fs(); view = "run"; closeOverlay(); render(); window.scrollTo(0, 0); }
+function resumeRun(id){
+  syncRuns();   // another tab may have changed or dropped this lesson
+  if(!runs[id]){ render(); return; }
+  try{
+    R = runs[id]; redo = []; disarm();
+    if(!R.date){   // saved before lesson dates were stored: the lesson day becomes today (not a change of the run, so `updated` stays)
+      R.date = fmtDate(Date.now()); R.history.forEach(h => { if(!h.date) h.date = R.date; });
+      savedSig[id] = runSig(R); writeEntry(id, R);
+    }
+    fs(); view = "run"; closeOverlay(); render(); window.scrollTo(0, 0);
+  }catch(e){ console.error(e); dropRun(id); R = null; view = "library"; closeOverlay(); render(); }
+}
+
+/* ===================== RENDER ROOT ===================== */
+let lastScreen = "";
+const screenKey = () => view + "|" + (R ? R.packId + "|" + R.phase + "|" + R.si : "");   // A+ / A- and other re-renders of the same screen keep the focus
+function render(){
+  document.documentElement.style.setProperty("--zoom", prefs.zoom);
+  if(timer.key && timer.key !== timerKey()) stopTimer();   // the writing timer belongs to one step
+  $("app").classList.toggle("deciding", view === "run" && !!R && R.phase === "decide");
+  $("app").classList.toggle("g5", view === "run" && !!R && P().grade === 5);
+  renderTop();
+  const m = $("main"); m.classList.toggle("focus-on", !!(R && R.focus));
+  // German UI around the library and setup, English board in the lesson
+  m.lang = $("foot").lang = view === "run" ? "en-GB" : "de";
+  if(view === "library") renderLibrary();
+  else if(view === "setup") renderSetup();
+  else if(view === "run"){
+    if(R.phase === "task") renderTask();
+    else if(R.phase === "layout") renderLayout();
+    else if(R.phase === "decide") renderDecide();
+    else if(R.phase === "copy") renderCopy();
+    else if(R.phase === "final") renderFinal();
+    saveRun();
+  }
+  renderFoot();
+  reapplyArmed();
+  if(view === "run" && !overlayKind() && !pendingFocus && screenKey() !== lastScreen){ const h = document.querySelector("#main h1"); if(h){ h.tabIndex = -1; try{ h.focus({preventScroll:true}); }catch(e){} } }
+  lastScreen = screenKey();
+  if(view === "run" && R.phase === "decide") fitDecide();
+  if(view === "run" && R.phase === "task") fitTask();
+  if(view === "run" && R.phase === "copy") placeCopy();
+  lockUntil = performance.now() + 400;
+  if(pendingFocus && !overlayKind()) restoreFocus();
+}
+function renderTop(){
+  const tools = [];
+  if(view === "run"){
+    const p = P();
+    $("brand").innerHTML = `Writing Room <small lang="en-GB">${esc(typeTitle(p))}</small>`;
+    tools.push(`<button class="tool" id="t-home" title="Back to the library (the lesson is kept)"><span aria-hidden="true">⌂</span> Library</button>`);
+    tools.push(`<button class="tool" id="t-back" aria-label="Undo" title="Undo the last step (Backspace)"><span aria-hidden="true">↶</span> Undo</button>`);
+    tools.push(`<button class="tool" id="t-task" title="Show the task (T)">Task</button>`);
+    tools.push(`<button class="tool" id="t-focus" aria-pressed="${R.focus ? "true" : "false"}" title="Highlight ${esc(p.focus.label)} on / off (P)">Show: ${esc(p.focus.label)}</button>`);
+  } else {
+    $("brand").innerHTML = `Writing Room <small class="by">von <a href="${AUTHOR_URL}" target="_blank" rel="noopener noreferrer">${AUTHOR}</a> · <button class="linkbtn why" id="whybtn">Warum das Ganze?</button></small>`;
+    $("whybtn").onclick = showWhy;
+  }
+  tools.push(`<button class="tool" id="t-minus" aria-label="Smaller text" title="Smaller text (−)">A−</button>`);
+  tools.push(`<button class="tool" id="t-plus" aria-label="Bigger text" title="Bigger text (+)">A+</button>`);
+  tools.push(`<button class="tool" id="t-full" title="Full screen (F)">Full screen</button>`);
+  if(view === "run"){ tools.push(`<button class="tool" id="t-help" aria-label="Keys and help" title="Keys (?)">?</button>`); tools.push(`<button class="tool" id="t-reset" title="Start this pack again">Restart</button>`); }
+  $("tools").innerHTML = tools.join("");
+  bindTools();
+  const sc = $("steps");
+  if(view === "run"){
+    const steps = curSteps(); const ph = R.phase;
+    const c = ph === "final" ? steps.length : (ph === "task" || ph === "layout" ? -1 : R.si);
+    sc.innerHTML = steps.map((st, i) => {
+      const cls = (ph === "final" || i < c) ? "done" : (i === c ? "now" : "");
+      let name = st.part + (isJoin(st) ? " · continued" : ""); if(!st.slot && R.picks[st.id]){ const o = st.options.find(x => x.id === R.picks[st.id]); if(o) name = o.label; }
+      return `<span class="chip ${cls}" ${cls === "now" ? 'aria-current="step"' : ""} title="${esc(name)}"><span aria-hidden="true">${i + 1}<span class="nm"> ${esc(name)}</span></span><span class="sr">Step ${i + 1} of ${steps.length}: ${esc(name)}${cls === "done" ? " (done)" : cls === "now" ? " (current)" : ""}</span></span>`;
+    }).join("");
+    sc.hidden = false;
+    // keep the current chip visible (the row scrolls sideways without a scrollbar)
+    const now = sc.querySelector(".chip.now");
+    if(now){ const a = now.getBoundingClientRect(), b = sc.getBoundingClientRect(); if(a.left < b.left || a.right > b.right) sc.scrollLeft += a.left - b.left - 40; }
+    else sc.scrollLeft = ph === "final" ? sc.scrollWidth : 0;
+  } else { sc.innerHTML = ""; sc.hidden = true; }
+}
+// the task screen needs the height: the foot (keys) shows only on the final screen; the keys are in the ? window and on the how-to card
+function renderFoot(){
+  const f = $("foot");
+  if(view === "run"){ f.hidden = R.phase !== "final"; f.innerHTML = `<span>Keys: A–D or 1–4 = winning card · Shift + 1–4 = one card big · Enter / → = next · Backspace / ← = undo · T = task · P = ${esc(P().focus.label)} · F = full screen · + / − = text size · ? = all keys</span><span>Writing Room · ${AUTHOR} · ${LICENCE}</span>`; }
+  else {
+    f.hidden = false;
+    f.innerHTML = `<span>Writing Room ${VERSION} · ${PACKS.length} geprüfte Pakete · ${AUTHOR} · ${LICENCE}</span><button class="linkbtn" id="about">Über Writing Room · Lizenz · Datenschutz</button>`;
+    $("about").onclick = showAbout;
+  }
+}
+// the author's note in the header: why building a text together on the board is worth a lesson now and then
+function showWhy(){
+  openOverlay(`<h2 id="dlg-h">Warum das Ganze?</h2>
+    <p id="dlg-d">Die ehrliche Antwort zuerst: Eine Klasse, die Texte von der Leinwand abschreibt, gewinnt damit keinen Pädagogikpreis. Als Standardmethode, Woche für Woche, wäre Writing Room schlechter Unterricht, und so ist es nicht gedacht.</p>
+    <p>Punktuell eingesetzt leistet es aber etwas, das beim stillen Lesen von Modelltexten verloren geht: Die Klasse sieht einem Text beim Entstehen zu. Sie stimmt über jeden Baustein ab, hört, warum die Redaktion eine Karte ablehnt, und diskutiert plötzlich über Topic Sentences, Anrede und Aufbau statt über einzelne Vokabeln. Die Struktur der Textsorte wird gemeinsam verhandelt, nicht vorgesetzt.</p>
+    <p>In meinem Unterricht haben solche Stunden mehr ausgelöst als manche Schreibaufgabe davor. Die Rückmeldungen der Schüler:innen waren durchwegs gut, einzelne Klassen fordern die Stunden inzwischen von sich aus ein. Vom punktuellen Einsatz dieses Konzepts bin ich deshalb überzeugt; vom täglichen würde ich abraten.</p>
+    <p class="sig">– Bernhard Gmeiner</p>
+    <div class="row"><button class="primary" id="again">Schließen</button><span class="kbd">Enter / Esc</span></div>`, "why", "note");
+  const pn = document.querySelector("#overlay .panel"); if(pn) pn.lang = "de";
+  $("again").onclick = closeInfo; $("again").focus({preventScroll:true});
+}
+// the info window of the library: author, licence, privacy, fonts, version
+function showAbout(){
+  const link = (href, txt) => `<a href="${href}" target="_blank" rel="noopener noreferrer">${esc(txt)}</a>`;
+  openOverlay(`<h2 id="dlg-h">Über Writing Room</h2>
+    <p id="dlg-d">Writing Room ist ein Werkzeug für den Englischunterricht. Die Klasse baut am Beamer gemeinsam einen Modelltext, Entscheidung für Entscheidung. Für die 5. bis 12. Schulstufe, Niveau A1 bis B2.</p>
+    <p>Autor und Herausgeber: <b>${AUTHOR}</b> · ${link(AUTHOR_URL, AUTHOR_URL.replace(/^https:\/\//, ""))}</p>
+    <h3>Lizenz</h3>
+    <p>${link(LICENCE_URL, "Creative Commons BY-NC-SA 4.0")}. Writing Room darf für nicht-kommerzielle Zwecke frei verwendet, weitergegeben und bearbeitet werden, etwa im Unterricht, in Fortbildungen und im Austausch unter Lehrkräften. Namensnennung zum Beispiel so: „Writing Room von Bernhard Gmeiner, CC BY-NC-SA 4.0“. Nicht erlaubt sind der Verkauf und der Einbau in kostenpflichtige Produkte. Bearbeitete Fassungen dürfen nur unter derselben Lizenz weitergegeben werden. Für andere Nutzungen bitte über die Website nachfragen.</p>
+    <h3>Entstehung und KI</h3>
+    <p>Die Modelltexte, Optionen, Fallen und Hinweise für Lehrkräfte wurden mit Unterstützung von KI (Claude von Anthropic) geschrieben. Konzept, Auswahl und Regeln stammen vom Autor. Alle Pakete wurden automatisch (Regelprüfung) und in mehreren KI-gestützten Prüfdurchgängen kontrolliert. Fehler sind trotzdem möglich: Vor dem Einsatz im Unterricht lohnt ein Blick in den Text.</p>
+    <h3>Datenschutz</h3>
+    <p>Writing Room sammelt keine Daten, setzt keine Cookies und überträgt nichts; die Datei lädt nichts aus dem Internet nach. Gespeicherte Stunden (mit allem, was die Klasse in die Lücken eingibt) und die Einstellungen der Bibliothek bleiben im Browser dieses Geräts, bis sie gelöscht werden; gespeichert werden höchstens 8 Stunden. Der Autor erfährt davon nichts.</p>
+    <p>In die Lücken gehören nur erfundene Namen, keine Angaben zu echten Personen. Auf gemeinsam genutzten Computern die Stunde am Ende mit „Verwerfen“ löschen oder unten alle Daten löschen. Der Browser kann gespeicherte Stunden auch selbst entfernen; wichtige Texte mit „Copy text“ sichern. Ins Internet führen nur die Links zur Website des Autors und zum Lizenztext.</p>
+    <p><button class="secondary" id="wipe">Alle gespeicherten Daten löschen</button></p>
+    <h3>Schriften</h3>
+    <p>Atkinson Hyperlegible (© 2020 Braille Institute of America), Bricolage Grotesque (© 2022 The Bricolage Grotesque Project Authors) und Literata (© 2017 The Literata Project Authors) sind in die Datei eingebettet. Lizenz: SIL Open Font License 1.1.</p>
+    ${OFL_TEXT ? `<details class="ofl"><summary>Lizenztext der Schriften (SIL Open Font License 1.1, englisch)</summary><pre lang="en" tabindex="0">${esc(OFL_TEXT)}</pre></details>` : ""}
+    <p class="muted">Version ${VERSION} · Stand: ${esc(BUILD_DATE)}</p>
+    <div class="row"><button class="primary" id="again">Schließen</button><span class="kbd">Enter / Esc</span></div>`, "about", "about");
+  const pn = document.querySelector("#overlay .panel"); if(pn) pn.lang = "de";
+  $("again").onclick = closeInfo; $("again").focus({preventScroll:true});
+  $("wipe").onclick = () => armed("wipe", "Wirklich alles löschen? Nochmal klicken", () => {
+    try{ localStorage.removeItem(RUNS_KEY); localStorage.removeItem(PREF_KEY); }catch(e){}
+    runs = {}; savedSig = {}; runNotes.length = 0; redo = []; R = null; prefs = {zoom:1, grade:"all", type:"all", theme:"all", mode:"all", q:"", seenHow:false, keys:true};
+    closeInfo(); view = "library"; render();
+    toast("Alle gespeicherten Stunden und Einstellungen sind gelöscht.", "de", 5000);
+  });
+}
+function toast(msg, lang, ms){
+  let t = $("toast"); if(!t){ t = document.createElement("div"); t.id = "toast"; t.className = "toast"; t.setAttribute("role", "status"); document.body.appendChild(t); }
+  const place = () => { t.style.top = Math.max(8, Math.round($("top").getBoundingClientRect().bottom) + 8) + "px"; };   // just below the top bar
+  place(); requestAnimationFrame(place);   // again after a screen change that is still being rendered (e.g. a lesson starting)
+  t.lang = lang || "en-GB"; t.textContent = msg; t.setAttribute("aria-hidden", "true"); t.hidden = false;
+  const lv = $("live"); if(lv){ lv.lang = t.lang; lv.textContent = ""; setTimeout(() => { lv.textContent = msg; }, 60); }   // announced once through the live region
+  clearTimeout(toast.h); toast.h = setTimeout(() => { t.hidden = true; }, ms || 2800);
+}
+
+/* ===================== LIBRARY ===================== */
+const TYPE_ORDER = Object.keys(TYPE_NAMES);
+// inside a Schulstufe: by text type, then by title
+function byType(a, b){ return TYPE_ORDER.indexOf(a.textType) - TYPE_ORDER.indexOf(b.textType) || a.title.localeCompare(b.title, "en"); }
+function relTime(t){
+  const d = new Date(t), now = new Date(); const hm = d.toLocaleTimeString("de-AT", {hour:"2-digit", minute:"2-digit"});
+  const day = x => new Date(x.getFullYear(), x.getMonth(), x.getDate()).getTime();
+  const diff = Math.round((day(now) - day(d)) / 86400000);
+  return diff === 0 ? "heute " + hm : diff === 1 ? "gestern " + hm : d.toLocaleDateString("de-AT", {day:"numeric", month:"numeric"}) + " " + hm;
+}
+function phaseLabel(r){ const p = packById(r.packId); if(!p) return ""; if(r.phase === "final") return "fertig"; if(r.phase === "task" || r.phase === "layout") return "Aufgabe"; const st = activeSteps(p, r.len)[r.si]; return st ? `Schritt ${r.si + 1} von ${activeSteps(p, r.len).length}: ${st.part}${isJoin(st) ? " · continued" : ""}` : ""; }
+// the lesson that Enter / PageDown in the library resumes: the most recent unfinished one
+function resumeTarget(){ return recentRuns().find(r => r.phase !== "final") || null; }
+// search: lower case, without accents; every word of the query must occur in title, titleDe, situation, theme, type, focus, level, Schulstufe,
+// Gerüst / frame (packs with frame mode) or Matura / SRDP (grades 11–12).
+// "3. Klasse", "3 Klasse", "3.Kl.", "Klasse 3" = the Austrian form (Schulstufe − 4); "7. Schulstufe" / "Schulstufe 7" pick the Schulstufe;
+// filler words ("Grammatik", "Thema" …) are ignored; "present-perfect" also finds "present perfect"; a few German grammar words find the English labels
+const fold = s => String(s || "").toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "");
+const QUERY_FILL = new Set(["grammatik", "schwerpunkt", "thema", "paket", "pakete", "klasse", "klassen", "kl.", "schulstufe"]);
+const QUERY_ALIAS = {perfekt:"perfect", vergangenheit:"past", zukunft:"future", gegenwart:"present", prasens:"present", futur:"future"};
+function matchesQuery(p, q){
+  const want = [];   // Schulstufen named in the query
+  const s = fold(q)
+    .replace(/(\d{1,2})\s*\.?\s*(?:klasse|kl\.)|(?:\bklasse|\bkl\.)\s*(\d{1,2})\b/g, (m, a, b) => { want.push(+(a || b) + 4); return " "; })
+    .replace(/(\d{1,2})\s*\.?\s*schulstufe|\bschulstufe\s*(\d{1,2})\b/g, (m, a, b) => { want.push(+(a || b)); return " "; });
+  if(want.length && !want.includes(p.grade)) return false;
+  const words = s.split(/\s+/).filter(w => w && !QUERY_FILL.has(w)); if(!words.length) return true;
+  const f = p.focus || {};
+  const hay = fold([p.title, p.titleDe, p.task && p.task.situation, p.theme, TYPE_DE[p.textType], ...(TYPE_DE_ALT[p.textType] || []), TYPE_NAMES[p.textType],
+    f.label, f.labelDe, p.level, gradeName(p.grade), gradeSub(p.grade), p.modes.includes("frame") ? "Gerüst frame" : "", p.grade >= 11 ? "Matura SRDP" : ""].join(" "));
+  const hit = w => { if(hay.includes(w)) return true; const sp = w.replace(/(\p{L})-(?=\p{L})/gu, "$1 "); return sp !== w && hay.includes(sp); };   // only a hyphen between letters
+  return words.every(w => hit(w) || (QUERY_ALIAS[w] && hit(QUERY_ALIAS[w])));
+}
+const gradePacks = () => PACKS.filter(p => prefs.grade === "all" || String(p.grade) === prefs.grade);
+const filtersOn = () => prefs.type !== "all" || prefs.theme !== "all" || prefs.mode !== "all" || prefs.q.trim() !== "";
+// Textsorte, Themenbereich, Modus and search (everything but the Schulstufe)
+function matchesFilters(p){
+  return (prefs.type === "all" || p.textType === prefs.type) && (prefs.theme === "all" || p.theme === prefs.theme)
+    && (prefs.mode === "all" || (prefs.mode === "frame" ? p.modes.includes("frame") : !p.modes.includes("frame"))) && matchesQuery(p, prefs.q);
+}
+function libraryList(){ return gradePacks().filter(matchesFilters); }
+// empty list: name the Schulstufen where the same filters do find packs, else say what the search looks at
+function emptyHTML(){
+  const none = `<p class="muted">Keine Pakete für diese Auswahl${prefs.grade === "all" ? "" : ` in der ${gradeName(+prefs.grade)}`}.`;
+  const other = prefs.grade === "all" ? [] : [...new Set(PACKS.filter(p => String(p.grade) !== prefs.grade && matchesFilters(p)).map(p => p.grade))].sort((a, b) => a - b);
+  if(other.length) return `${none} Passende Pakete gibt es in der ${other.map(gradeName).join(", ")}. <button class="linkbtn" id="all-grades">Alle Schulstufen zeigen</button></p>`;
+  if(prefs.q.trim()) return `${none} Die Suche findet Titel, Thema, Situation, Textsorte, Grammatik-Schwerpunkt (etwa „past simple“), Niveau (etwa „B1“) und Klasse (etwa „3. Klasse“).</p>`;
+  return `${none}</p>`;
+}
+// remembered filters that no longer fit the packs of this file fall back to "all"
+function cleanPrefs(){
+  if(prefs.grade !== "all" && !PACKS.some(p => String(p.grade) === prefs.grade)) prefs.grade = "all";
+  if(prefs.type !== "all" && !PACKS.some(p => p.textType === prefs.type)) prefs.type = "all";
+  if(prefs.theme !== "all" && !PACKS.some(p => p.theme === prefs.theme)) prefs.theme = "all";
+  if(!["all","full","frame"].includes(prefs.mode)) prefs.mode = "all";
+}
+function renderLibrary(){
+  syncRuns(); cleanPrefs();
+  const rr = recentRuns(), target = resumeTarget();
+  const resume = rr.length ? `<section class="resume" aria-labelledby="runs-h"><b id="runs-h">Gespeicherte Stunden</b><ul class="runs">${rr.map(r => `<li><span class="rt"><b lang="en-GB">${esc(packById(r.packId).title)}</b> · ${esc(MODE_DE[r.mode])} · ${esc(phaseLabel(r))} · <span class="muted">${esc(relTime(r.updated))}</span></span><span class="row"><button class="primary" data-resume="${esc(r.packId)}">${r.phase === "final" ? "Anzeigen →" : "Weitermachen →"}</button><button class="secondary" id="drop-${esc(r.packId)}" data-drop="${esc(r.packId)}">Verwerfen</button></span></li>`).join("")}</ul>${target ? `<span class="kbd">Enter: „<span lang="en-GB">${esc(packById(target.packId).title)}</span>“ weitermachen</span>` : ""}</section>` : "";
+  const notes = runNotes.map(t => `<p class="err">Die gespeicherte Stunde „${esc(t)}“ passt nicht mehr zur aktuellen Paketversion.</p>`).join("");
+  const types = TYPE_ORDER.filter(t => PACKS.some(p => p.textType === t));
+  const themes = THEMES.filter(t => PACKS.some(p => p.theme === t));
+  const sel = (id, label, cur, opts) => `<label class="fsel" for="${id}">${label}<select id="${id}"><option value="all">Alle</option>${opts.map(([v, l]) => `<option value="${esc(v)}"${cur === v ? " selected" : ""}>${esc(l)}</option>`).join("")}</select></label>`;
+  const cards = CARDS_PDF ? `<a class="secondary small" href="data:application/pdf;base64,${CARDS_PDF}" download="writing-room-karten-abcd.pdf">Kartenvorlage (PDF)</a>` : "";
+  // print view only in the standalone file: inside a frame (artifact preview) printing is often blocked
+  const printBtn = inFrame() ? "" : `<button class="secondary small" id="printcards-btn">Karten drucken</button>`;
+  $("main").innerHTML = `
+    <section class="hero"><div><h1>Schreibpaket wählen</h1><p>Die Klasse baut einen Modelltext gemeinsam: Optionen am Beamer, Abstimmung mit A/B/C/D-Karten, dann Abschreiben ins Heft oder eigenes Schreiben mit Gerüst.</p></div></section>
+    ${notes}${resume}
+    <details class="how" ${prefs.seenHow ? "" : "open"} id="how"><summary>So funktioniert’s (2 Minuten)</summary><ol>
+      <li><b>Paket wählen</b> (nach Schulstufe, Textsorte, Themenbereich oder mit der Suche, auch nach Grammatik-Schwerpunkt), dann Modus und Länge festlegen. Beamer: ab 1024 × 768, am besten im Vollbild (F).</li>
+      <li><b>Abstimmen:</b> Alle haben vier Karten A, B, C, D (Kartenvorlage: vier A4-Seiten, eine pro Buchstabe mit je vier Karten; ein Ausdruck reicht für vier Schüler:innen; oder vier große Zettel). Ohne Karten: <span class="nowrap">1–4</span> Finger.</li>
+      <li><b>Klicken oder Taste A–D (oder 1–4)</b> für die Gewinnerkarte. Fallen lehnt die „Redaktion“ ab, dann stimmt die Klasse neu ab. Wurde die Falle nicht gewählt, steht beim Abschreiben „Trap check“ am Rand: ein Klick oder die Taste X zeigt sie groß, mit der Begründung.</li>
+      <li><b>Heft:</b> Im Volltext-Modus schreiben alle den gelben Baustein ab. Im Gerüst-Modus (ab der 9. Schulstufe) schreiben alle nur die blauen Wendungen ab und ergänzen eigene Sätze. Ab der 9. Schulstufe hat jeder Text fünf Absätze (Intro, Body 1–3, Conclusion); die lange Fassung macht die Absätze länger: Ein Baustein mit „· continued“ wird im selben Absatz ohne neue Zeile weitergeschrieben.</li>
+      <li>Am Ende steht der fertige Text im passenden Layout, mit Checkliste. ${STORE_OK ? `Jede Stunde bleibt in diesem Browser gespeichert (eine pro Paket, höchstens ${MAX_RUNS}), auch nach dem Schließen.` : "In diesem Browser kann die Stunde nicht gespeichert werden."}</li>
+    </ol>${cards || printBtn ? `<div class="cardsrow">${cards}${printBtn}</div>` : ""}</details>
+    <nav class="grades" aria-label="Schulstufe">
+      <button class="gchip" data-grade="all" aria-pressed="${prefs.grade === "all"}"><b>Alle</b><small>${PACKS.length} Pakete</small></button>
+      ${GRADES.map(g => { const n = PACKS.filter(p => p.grade === g).length; return `<button class="gchip" data-grade="${g}" aria-pressed="${prefs.grade === String(g)}"${n ? "" : ` disabled title="Noch keine Pakete"`}><b>${gradeName(g)}</b><small>${gradeSub(g)}</small></button>`; }).join("")}
+    </nav>
+    <div class="filters">
+      ${sel("f-type", "Textsorte", prefs.type, types.map(t => [t, TYPE_DE[t]]))}
+      ${sel("f-theme", "Themenbereich", prefs.theme, themes.map(t => [t, t]))}
+      <div class="grp" role="group" aria-label="Modus"><span>Modus</span>${[["all","Alle"],["full","nur Volltext"],["frame","mit Gerüst"]].map(([k, l]) => `<button class="fbtn" data-modef="${k}" aria-pressed="${prefs.mode === k}">${l}</button>`).join("")}</div>
+      <label class="fsearch"><span class="sr">Suche</span><input type="search" id="f-q" maxlength="80" placeholder="Suche: Titel, Thema, Grammatik, Niveau, Klasse" value="${esc(prefs.q)}" autocomplete="off"></label>
+    </div>
+    <div id="libres"></div>`;
+  const change = fn => { fn(); savePrefs(); updateLibrary(); };
+  document.querySelectorAll("[data-grade]").forEach(b => b.onclick = () => change(() => { prefs.grade = b.dataset.grade; }));
+  document.querySelectorAll("[data-modef]").forEach(b => b.onclick = () => change(() => { prefs.mode = b.dataset.modef; }));
+  $("f-type").onchange = e => change(() => { prefs.type = e.target.value; });
+  $("f-theme").onchange = e => change(() => { prefs.theme = e.target.value; });
+  $("f-q").oninput = e => change(() => { prefs.q = e.target.value.slice(0, 80); });
+  if($("printcards-btn")) $("printcards-btn").onclick = printCards;
+  const how = $("how"); how.addEventListener("toggle", () => { if(!how.isConnected) return; prefs.seenHow = !how.open; savePrefs(); });   // the event comes late: the library may be gone already
+  document.querySelectorAll("[data-resume]").forEach(b => b.onclick = () => resumeRun(b.dataset.resume));
+  document.querySelectorAll("[data-drop]").forEach(b => b.onclick = () => armed(b.id, "Wirklich verwerfen? Nochmal klicken", () => { dropRun(b.dataset.drop); render(); }));
+  updateLibrary();
+}
+// the pack list below the filters; redrawn alone, so the search field and the selects keep the focus
+function updateLibrary(){
+  const box = $("libres"); if(!box) return;
+  document.querySelectorAll("[data-grade]").forEach(b => b.setAttribute("aria-pressed", String(prefs.grade === b.dataset.grade)));
+  document.querySelectorAll("[data-modef]").forEach(b => b.setAttribute("aria-pressed", String(prefs.mode === b.dataset.modef)));
+  const list = libraryList(), all = gradePacks();
+  const groups = GRADES.map(g => ({g, items:list.filter(p => p.grade === g).sort(byType)})).filter(x => x.items.length);
+  box.innerHTML = `${filtersOn() ? `<div class="filtered">${list.length} von ${all.length} Paketen <button class="linkbtn" id="reset-f">Filter zurücksetzen</button></div>` : ""}
+    ${groups.length ? groups.map(x => `<section class="shelf"><h2>${gradeName(x.g)} <small>${esc(gradeSub(x.g))}</small></h2><div class="grid">${x.items.map(packCard).join("")}</div></section>`).join("") : emptyHTML()}`;
+  if($("reset-f")) $("reset-f").onclick = () => { prefs.type = prefs.theme = prefs.mode = "all"; prefs.q = ""; savePrefs(); render(); };
+  if($("all-grades")) $("all-grades").onclick = () => { prefs.grade = "all"; savePrefs(); updateLibrary(); const g = document.querySelector('[data-grade="all"]'); if(g) g.focus({preventScroll:true}); };
+  box.querySelectorAll(".pk").forEach(b => b.onclick = () => { const p = packById(b.dataset.id); const r = runs[p.id];
+    setupSel = r ? {packId:p.id, mode:r.mode, len:r.len} : {packId:p.id, mode:p.modes[0], len:Object.keys(p.lengths)[0]}; go("setup"); });
+}
+function inFrame(){ try{ return window.self !== window.top; }catch(e){ return true; } }
+// print view of the voting cards: built once, shown only while printing (see @media print)
+function printCards(){
+  let pc = $("printcards");
+  if(!pc){
+    pc = document.createElement("div"); pc.id = "printcards"; pc.setAttribute("aria-hidden", "true");
+    pc.innerHTML = "ABCD".split("").map(l => `<div class="pcards">${`<div class="pcard" style="color:var(--${l})"><i>${l}</i><div>${l}</div><em>${l}</em></div>`.repeat(4)}</div>`).join("");
+    document.body.appendChild(pc);
+  }
+  document.body.classList.add("print-cards");
+  const done = () => { document.body.classList.remove("print-cards"); window.removeEventListener("afterprint", done); };
+  window.addEventListener("afterprint", done);
+  try{ window.print(); }catch(e){ done(); }
+}
+function deLine(p){
+  const words = [TYPE_DE[p.textType], ...(TYPE_DE_ALT[p.textType] || [])].map(w => w.toLowerCase());
+  return words.some(w => p.titleDe.toLowerCase().startsWith(w)) ? p.titleDe : `${TYPE_DE[p.textType]} · ${p.titleDe}`;
+}
+// German UI (library, setup): "around 250 words" -> "ca. 250 Wörter"; the board keeps the English label
+const lenDe = label => String(label).replace(/^around (\d+) words?$/i, "ca. $1 Wörter");
+const lenDeHTML = label => { const de = lenDe(label); return de === label ? `<span lang="en-GB">${esc(label)}</span>` : esc(de); };
+function packCard(p){
+  const ls = Object.values(p.lengths).map(l => l.label), ns = ls.map(l => (/^around (\d+) words?$/i.exec(l) || [])[1]);
+  const lens = ns.every(Boolean) ? `ca. ${ns.join(" / ")} Wörter` : ls.map(lenDe).join(" / ");   // "ca. 250 / 400 Wörter"
+  const r = runs[p.id];
+  return `<button class="pk" data-id="${esc(p.id)}" title="${esc(p.theme)}"><span class="t" lang="en-GB">${esc(p.title)}</span><span class="d">${esc(deLine(p))}</span><span class="d fo">Schwerpunkt: <span lang="${p.focus.labelDe ? "de" : "en-GB"}">${esc(focusDe(p))}</span></span><span class="tags"><span class="tt">${esc(gradeName(p.grade))}</span><span class="tt">${esc(p.level)}</span><span class="tt">${esc(lens)}</span>${p.modes.includes("frame") ? `<span class="tt">+ Gerüst</span>` : ""}<span class="tt th">${esc(p.theme)}</span>${r ? `<span class="tt run">${r.phase === "final" ? "fertig" : "läuft"}</span>` : ""}</span></button>`;
+}
+// the grammar focus for the German UI (library card, setup line); the board keeps focus.label
+const focusDe = p => (p.focus && (p.focus.labelDe || p.focus.label)) || "";
+// "10. Schulstufe · B1 · Medien & Technik · Schwerpunkt: Passiv" (setup screen)
+function packLine(p){ return `${gradeName(p.grade)} · ${p.level} · ${p.theme} · Schwerpunkt: ${focusDe(p)}`; }
+
+/* ===================== SETUP ===================== */
+function taskHTML(p, len){
+  const t = p.task;
+  return `<div class="task" lang="en-GB"><div class="row" style="justify-content:space-between"><span class="eyebrow">Your task · ${esc(TYPE_NAMES[p.textType])}</span><span class="badge lvl">${esc(p.level)}</span></div>
+    <p class="sit">${esc(t.situation)}</p>
+    <p class="ins">${esc(t.instruction)}</p>
+    ${(t.points && t.points.length) ? `<ul>${t.points.map(x => `<li>${esc(x)}</li>`).join("")}</ul>` : ""}
+    <p class="wds">${esc(t.words[len] || "")}</p>
+    <p class="tde" lang="de">${esc(t.de)}</p></div>`;
+}
+let setupAction = null;   // what Enter / PageDown does on the setup screen (set by renderSetup)
+function renderSetup(){
+  syncRuns();
+  const p = packById(setupSel.packId);
+  const lens = Object.keys(p.lengths); const tn = p.teacher || {};
+  const run = runs[p.id];
+  const modeDesc = m => m === "full" ? "Alle schreiben jeden gewählten Baustein ab. Am Ende steht derselbe Modelltext in jedem Heft." : "Alle schreiben nur die blauen Wendungen ab und ergänzen eigene Sätze. Danach Vergleich mit dem Modell.";
+  const lenLine = l => `ca. ${esc(p.minutes[setupSel.mode] ? p.minutes[setupSel.mode][l] : "?")} Minuten · ${activeSteps(p, l).length} Entscheidungen` + (p.grade >= 9 ? (l === "long" && lens.length > 1 ? " · 5 Absätze, länger ausgebaut" : " · 5 Absätze") : "");
+  const choiceLine = (m, l) => `${esc(MODE_DE[m])} · ${lenDeHTML(p.lengths[l].label)}`;
+  // a saved run and a different mode or length chosen: starting anew is the main action (with a second click)
+  const changed = !!run && (setupSel.mode !== run.mode || setupSel.len !== run.len);
+  const restart = () => armed("start", run.phase === "final" ? "Sicher? Der fertige Text wird ersetzt. Nochmal klicken" : "Sicher? Die laufende Stunde wird ersetzt. Nochmal klicken", startRun);
+  let runBox = "";
+  if(run){
+    const what = run.phase === "final" ? `Für dieses Paket gibt es einen fertigen Text (${choiceLine(run.mode, run.len)} · ${esc(relTime(run.updated))}).`
+      : `Für dieses Paket läuft eine Stunde (${esc(phaseLabel(run))} · ${choiceLine(run.mode, run.len)} · ${esc(relTime(run.updated))}).`;
+    const resumeLabel = run.phase === "final" ? "Anzeigen →" : "Weitermachen →";
+    runBox = `<div class="resume"><div>${what}</div>
+      ${changed ? `<div><b>Neue Wahl:</b> ${choiceLine(setupSel.mode, setupSel.len)}. Dafür beginnt die Stunde neu.</div>` : ""}
+      <div class="row">${changed
+        ? `<button class="primary" id="start">Neu beginnen (Modus/Länge geändert)</button><button class="secondary small" id="resume-go">${resumeLabel}</button>`
+        : `<button class="primary" id="resume-go">${resumeLabel}</button><button class="secondary small" id="start">Neu beginnen</button>`}<span class="kbd">Enter</span></div></div>`;
+  }
+  $("main").innerHTML = `
+  <div class="row" style="justify-content:space-between"><button class="secondary" id="to-lib">← Alle Pakete</button><span class="muted">${esc(packLine(p))}</span></div>
+  <div class="setup">
+    <div style="display:flex;flex-direction:column;gap:12px;min-width:0">
+      <h1 class="q" style="margin:0"><span lang="en-GB">${esc(p.title)}</span> <span class="muted subde">${esc(p.titleDe)}</span></h1>
+      ${taskHTML(p, setupSel.len)}
+    </div>
+    <div style="display:flex;flex-direction:column;gap:12px;min-width:0">
+      ${runBox}
+      <div class="card"><h2>Modus</h2>${p.modes.length > 1 ? `<div class="choice">${p.modes.map(m => `<button class="opt-c" data-mode="${m}" aria-pressed="${setupSel.mode === m}"><b>${MODE_DE[m]}</b><span>${modeDesc(m)}</span></button>`).join("")}</div>` : `<p class="info"><b>${MODE_DE[p.modes[0]]}</b>: ${modeDesc(p.modes[0])}</p>`}</div>
+      <div class="card"><h2>Länge</h2>${lens.length > 1 ? `<div class="choice">${lens.map(l => `<button class="opt-c" data-len="${l}" aria-pressed="${setupSel.len === l}"><b>${l === "short" ? "Kurz" : "Lang"} · ${lenDeHTML(p.lengths[l].label)}</b><span>${lenLine(l)}</span></button>`).join("")}</div>` : `<p class="info"><b>${lenDeHTML(p.lengths[lens[0]].label)}</b> · ${lenLine(lens[0])}</p>`}</div>
+      <details class="tn"><summary>Hinweise für die Lehrkraft <small>(enthalten die Lösungen, nicht am Beamer öffnen)</small></summary><dl>
+        ${[["aim","Ziel"],["prep","Vorbereitung"],["heft","Heft"],["flow","Ablauf"],["traps","Fallen"],["notes","Hinweise"]].map(([k,l]) => tn[k] ? `<dt>${l}</dt><dd>${esc(tn[k])}</dd>` : "").join("")}
+      </dl></details>
+      ${run ? "" : `<div class="row"><button class="primary" id="start">Start →</button><span class="kbd">Enter · startet im Vollbild (wenn der Browser es erlaubt)</span></div>`}
+    </div>
+  </div>`;
+  $("to-lib").onclick = () => go("library");
+  // the clicked choice keeps the focus, and Enter on a choice button = the primary action (see keydown)
+  document.querySelectorAll("[data-mode]").forEach(b => b.onclick = () => { setupSel.mode = b.dataset.mode; render(); const f = document.querySelector(`[data-mode="${setupSel.mode}"]`); if(f) f.focus({preventScroll:true}); });
+  document.querySelectorAll("[data-len]").forEach(b => b.onclick = () => { setupSel.len = b.dataset.len; render(); const f = document.querySelector(`[data-len="${setupSel.len}"]`); if(f) f.focus({preventScroll:true}); });
+  $("start").onclick = () => run ? restart() : startRun();
+  if($("resume-go")) $("resume-go").onclick = () => resumeRun(p.id);
+  setupAction = !run ? startRun : changed ? restart : () => resumeRun(p.id);
+}
+function setupPrimary(){ if(view === "setup" && setupAction) setupAction(); }
+
+/* ===================== RUN: TASK + LAYOUT ===================== */
+function stepIndexOfSlot(slot){ return curSteps().findIndex(s => s.slot === slot); }
+function titleLater(){ return stepIndexOfSlot("title") > 0; }
+function subjectLater(){ return stepIndexOfSlot("subject") > 0; }
+function heftLines(p){
+  const L = []; const tw = titleWord(p); const m = p.meta || {};
+  if(hasMailHead(p)) L.push("→ first the header: " + mailHead(p, x => x).map(r => r[0]).join(", ") + (stepIndexOfSlot("subject") < 0 ? "" : subjectLater() ? ". Leave the Subject line open for now." : ". Then we choose the Subject line."));
+  else if(p.textType === "report") L.push("→ first the header: To, From, Date" + (stepIndexOfSlot("subject") < 0 ? "" : subjectLater() ? ". Leave the Subject line open for now." : ". Then we choose the Subject line."));
+  else if(p.textType === "postcard") L.push("→ draw a line down the middle of the page", "→ left half: the message · right half: the address" + (addrLines(p).length ? " and a stamp box" : ""));
+  else if(p.textType === "message" && hasLayout(p)) L.push("→ first the header: " + [m.to ? "To" : "", m.from ? "From" : ""].filter(Boolean).join(" and "));
+  else if(p.textType === "diary") L.push("→ under the heading: the date of the entry, on the right" + (m.dear ? `. Then “${plainText(m.dear)}” on its own line.` : ""));
+  else if(p.textType === "invitation") L.push("→ draw a frame on a new page; write the invitation inside it" + (hasLayout(p) ? ", starting with the To line" : ""));
+  if(p.order.includes("title") && stepIndexOfSlot("title") >= 0) L.push(titleLater() ? `→ leave 2 lines free for the ${tw.toUpperCase()} (we choose it at the end)` : `→ the ${tw} comes first`);
+  if(p.textType === "blog") L.push("→ under the title: user name · date");
+  if(p.textType === "review" && hasLayout(p)){ const n = reviewRating(p), by = reviewBy(p);
+    L.push("→ under the title: " + [n ? `draw the stars ${starsText(n)}` : "", by ? `write “${metaFinal(by)}”` : ""].filter(Boolean).join(", then ")); }
+  if(p.textType === "letter"){
+    if(stepIndexOfSlot("greeting") >= 0) L.push("→ start with the greeting on its own line");
+    if(stepIndexOfSlot("signoff") >= 0) L.push("→ at the end: the closing formula, then the name" + (m.town ? " and the town" : ""));
+  }
+  return L;
+}
+function renderTask(){
+  const p = P();
+  // a text with continuation blocks (· continued): one short sentence inside the existing list item (no extra row on a 1024×768 board)
+  const contNote = curSteps().some(isJoin) ? " <b>continued</b> = the same paragraph goes on: no new line." : "";
+  $("main").innerHTML = `
+  <h1 class="sr">Your task</h1>
+  <div class="setup runtask${isLow(p) ? " low" : ""}">
+    <div style="min-width:0">${taskHTML(p, R.len)}</div>
+    <div style="display:flex;flex-direction:column;gap:12px;min-width:0">
+      <div class="card"><span class="eyebrow">Your exercise book</span>
+        <div class="heft" style="margin-top:6px"><span class="hdate">${esc(today())}</span>${esc(TYPE_NAMES[p.textType])}<br>${heftLines(p).map(x => `<span class="free">${esc(x)}</span><br>`).join("")}&nbsp;</div>
+      </div>
+      <div class="row"><button class="primary" id="next">Let’s start →</button><span class="kbd">Enter</span><button class="secondary small" id="to-setup" lang="de" style="margin-left:auto">← Modus / Länge</button></div>
+      <div class="card how"><span class="eyebrow">How we work today</span>
+        <h2>${R.mode === "full" ? "We write ONE text together." : "We decide together, you write your own text."}</h2>
+        <ol style="margin:0;padding-left:1.4em;font-size:1.05rem;display:flex;flex-direction:column;gap:4px">
+          <li>Read the options on the board.</li>
+          <li>Vote: hold up your card <b>A, B, C or D</b>.</li>
+          ${R.mode === "full" ? `<li>Copy the <b style="background:var(--hl);padding:0 4px">yellow part</b> into your exercise book.${contNote}</li>` : `<li>Copy the <b style="color:var(--sc)">blue words</b>, then finish the paragraph in your own words.${contNote}</li><li>Compare with the model and improve your text.</li>`}
+        </ol>
+        <div class="cards-demo" style="margin-top:8px"><span class="c" style="background:var(--A)" aria-hidden="true">A</span><span class="c" style="background:var(--B)" aria-hidden="true">B</span><span class="c" style="background:var(--C)" aria-hidden="true">C</span><span class="c" style="background:var(--D)" aria-hidden="true">D</span><span class="kbd">No cards? Show 1–4 fingers.</span></div>
+        <p class="de" lang="de" style="margin-top:6px">Achtung: Manche Optionen sind Fallen. Die Redaktion lehnt sie ab, dann stimmt ihr neu ab.</p>
+      </div>
+    </div>
+  </div>`;
+  $("next").onclick = nextFromTask;
+  $("to-setup").onclick = () => go("setup");   // the run is kept; the setup screen offers "Weitermachen" or "Neu beginnen"
+}
+// shrink the task text until the whole task card, incl. "Write around N words", is on the board.
+// Floor 0.72 of the normal size, 0.66 in low windows (as fitDecide); relative to A+: at zoom 1.6 the text may still shrink to that size.
+const tfitFloor = () => { const f = window.innerHeight < LOW_H ? 0.66 : 0.72; return Math.min(f, f / prefs.zoom); };
+function fitTask(){
+  const de = document.documentElement;
+  de.style.overflowY = "hidden";   // measure at full width, like fitDecide
+  try{ fitTask0(); } finally{ de.style.overflowY = ""; }
+}
+function fitTask0(){
+  const m = $("main"), t = m.querySelector(".runtask .task"); if(!t) return;
+  fitHow();
+  const pad = parseFloat(getComputedStyle($("app")).paddingBottom) || 0;   // the page padding below the card counts too (else a few pixels of page scroll)
+  const fits = f => { m.style.setProperty("--tfit", f.toFixed(3)); return t.getBoundingClientRect().bottom + window.scrollY + pad <= window.innerHeight; };
+  if(window.innerWidth <= 700 || fits(1)) { fits(1); return; }
+  let lo = tfitFloor(), hi = 1; for(let i = 0; i < 8; i++){ const mid = (lo + hi) / 2; if(fits(mid)) lo = mid; else hi = mid; } fits(lo);
+}
+// "How we work today": while the card ends below the board, drop the heading, then the cards row, then the German trap line
+// (the list itself always stays; PageDown is "next step", so nothing may depend on scrolling)
+function fitHow(){
+  const how = document.querySelector(".runtask .how"); if(!how) return;
+  const opt = [...how.querySelectorAll("h2, .cards-demo, p.de")];
+  opt.forEach(e => e.style.display = "");
+  if(window.innerWidth <= 700) return;
+  for(const e of opt){ if(how.getBoundingClientRect().bottom + window.scrollY <= window.innerHeight - 8 && document.documentElement.scrollHeight <= window.innerHeight) break; e.style.display = "none"; }
+}
+// the T window: the same fit, so that "Back to the board" stays in the window without scrolling
+function fitTaskPanel(){
+  const pn = document.querySelector("#overlay .panel"); if(!pn || !pn.querySelector(".task")) return;
+  const fits = f => { pn.style.setProperty("--tfit", f.toFixed(3)); return pn.scrollHeight <= pn.clientHeight + 1; };
+  if(!fits(1)){ let lo = tfitFloor(), hi = 1; for(let i = 0; i < 8; i++){ const mid = (lo + hi) / 2; if(fits(mid)) lo = mid; else hi = mid; } fits(lo); }
+  pn.scrollTop = 0;
+}
+function nextFromTask(){ snapshot(); R.phase = hasLayout(P()) ? "layout" : "decide"; R.si = 0; render(); window.scrollTo(0, 0); }
+// header rows [label, valueHTML]; value null = empty line on the board. Blog: one by-line without labels.
+function metaRows(p, withSubject){
+  const m = p.meta || {}; const rows = [];
+  const subj = () => { const s = slotText("subject"); return s ? esc(plainText(s)) : null; };
+  const hasSubj = withSubject && stepIndexOfSlot("subject") >= 0;
+  const date = m.date ? metaLine(m.date) : esc(today());
+  if(hasMailHead(p)){ rows.push(...mailHead(p, metaLine)); if(hasSubj) rows.push(["Subject", subj()]); }
+  else if(p.textType === "report"){ if(m.to) rows.push(["To", metaLine(m.to)]); if(m.from) rows.push(["From", metaLine(m.from)]); rows.push(["Date", date]); if(hasSubj) rows.push(["Subject", subj()]); }
+  else if(p.textType === "blog") rows.push(["", `${metaLine(m.user || "our class")} · ${date}`]);
+  else if(p.textType === "postcard") addrLines(p).forEach(l => rows.push(["", metaLine(l)]));
+  else if(p.textType === "message"){ if(m.to) rows.push(["To", metaLine(m.to)]); if(m.from) rows.push(["From", metaLine(m.from)]); }
+  else if(p.textType === "diary"){ rows.push(["", date]); if(m.dear) rows.push(["", metaLine(m.dear)]); }
+  else if(p.textType === "review"){ const n = reviewRating(p), by = reviewBy(p); if(n) rows.push(["", starsHTML(n)]); if(by) rows.push(["", metaLine(by)]); }
+  else if(p.textType === "invitation"){ if(m.to) rows.push(["To", metaLine(m.to)]); }
+  return rows;
+}
+function metaHTML(rows){ return rows.map(([k, v]) => `${k ? `<b>${esc(k)}:</b> ` : ""}${v == null ? '<span class="blank wide" aria-label="empty"></span>' : v}`).join("<br>"); }
+function metaTag(p){ return {blog:"Under the title", review:"Under the title", postcard:"Right half", diary:"Date", invitation:"To"}[p.textType] || "Header"; }
+function renderLayout(){
+  const p = P(); const tt = p.textType; const blog = underTitle(p); const m = p.meta || {};
+  let msg, head = "Copy the header now.";
+  if(tt === "blog"){ head = "Your page layout"; msg = titleLater() ? "Leave 2 lines free for the title. Under them, write the user name and the date." : "The title comes first. Under it, write the user name and the date."; }
+  else if(tt === "review"){ const n = reviewRating(p), by = reviewBy(p); head = "Your page layout";
+    const under = [n ? `draw the stars (${n} of 5)` : "", by ? `write “${metaFinal(by)}”` : ""].filter(Boolean).join(". Then ");
+    msg = (titleLater() ? "Leave 2 lines free for the title. Under them, " : "The title comes first. Under it, ") + under + "."; }
+  else if(tt === "invitation"){ head = "Draw the frame now."; msg = "Draw a frame on a new page. Write the To line at the top, inside the frame. The whole invitation goes inside the frame."; }
+  else if(tt === "postcard"){ head = "Copy the address now."; msg = "Draw a line down the middle of the page. Write the address on the right half and draw a stamp box above it. The message goes on the left half."; }
+  else if(tt === "diary"){ head = "Start your diary page."; msg = "Under the heading, write the date of the entry on the right." + (m.dear ? ` Then write “${plainText(m.dear)}” on its own line.` : ""); }
+  else if(stepIndexOfSlot("subject") < 0) msg = "Then leave one line free. The text starts below.";
+  else msg = "Write ‘Subject:’ and leave the rest of the line free. " + (subjectLater() ? "We decide it later." : "It is our first decision.");
+  const titleRow = blog ? `<div class="blk empty s-title"><div class="tag">${esc((slotStep("title") || {}).part || "Title")}</div><div class="t">${titleLater() ? "2 free lines for the title" : "The title comes first"}</div></div>` : "";
+  $("main").innerHTML = `
+  <h1 class="sr">Page layout</h1>
+  <div class="copy-grid">
+    <section class="page">${titleRow}<div class="blk meta new"><div class="tag">${metaTag(p)}</div><div class="t">${metaHTML(metaRows(p, true))}</div></div>
+      <div class="blk empty"><div class="tag">Text</div><div class="t">Here our ${esc(TYPE_NAMES[tt].toLowerCase())} will grow, decision by decision.</div></div></section>
+    <aside class="side"><div class="copynow"><strong>${head}</strong><p>${esc(msg)}</p></div>
+      <button class="primary" id="next">First decision →</button><span class="kbd">Enter</span></aside>
+  </div>`;
+  $("next").onclick = nextFromLayout;
+}
+function nextFromLayout(){ snapshot(); R.phase = "decide"; R.si = 0; render(); window.scrollTo(0, 0); }
+
+/* ===================== RUN: DECIDE ===================== */
+function contextHTML(st){
+  const p = P();
+  if(!st.slot) return "";
+  if(st.slot === "title" || st.slot === "subject"){
+    const first = bodyParas(true)[0];
+    return first ? `<div class="context"><b>Our text begins</b>${headText(groupText(first), 28)}</div>` : "";
+  }
+  // a continuation block: the paragraph so far (all its blocks chosen until now), which the new block continues on the same line
+  if(isJoin(st)){
+    const g = groupOf(st.slot), before = g.slice(0, g.indexOf(st.slot)).filter(slotText);
+    // reports: the exercise book has the section heading, so the context names it too ("Body paragraph 1 · Findings")
+    const h = splitHead(slotText(g[0]) || "").head;
+    if(before.length) return `<div class="context keep"><b>This paragraph so far (${esc(slotStep(g[0]).part)}${h ? " · " + esc(plainText(h).trim()) : ""})</b>${tailText(groupText(before), 40)}</div>`;
+  }
+  // else the paragraph before this one, with its continuation blocks
+  const groups = slotGroups(p.order.slice(0, p.order.indexOf(st.slot)), true).filter(g => !NOCOUNT.has(g[0]));
+  const g = groups[groups.length - 1];
+  return g ? `<div class="context"><b>Before (${esc(slotStep(g[0]).part)})</b>${tailText(groupText(g), 28)}</div>` : "";
+}
+function renderDecide(){
+  const st = cur();
+  const rej = R.rejected[st.id] || [];
+  const isBranch = !st.slot;
+  const heads = isBranch ? [] : st.options.map(o => splitHead(optText(o) || "").head);
+  const sameHead = heads.length > 0 && heads[0] != null && heads.every(h => h === heads[0]);
+  const cards = st.options.map((o, i) => {
+    const out = rej.includes(o.id);
+    const t = optText(o) || "";
+    const body = isBranch ? esc(o.teaser || "") : render_text(sameHead ? splitHead(t).rest : t, "blank");
+    // the ⤢ button is a sibling of the card (no button inside a button)
+    // a rejected card stays clickable: it shows the editor's reason again
+    return `<div class="optw"><button class="opt ${isBranch ? "branch" : ""} ${(st.slot === "title" || st.slot === "subject") ? "headline" : ""} ${out ? "out" : ""}" data-l="${o.l}" data-id="${esc(o.id)}"><span class="L">${o.l}</span><span class="body"><span class="lbl">${esc(o.label)}</span><span class="txt">${body}</span></span></button>${out ? "" : `<button class="spotbtn" data-spot="${i}" aria-label="Show card ${o.l} big" title="Show card ${o.l} big (Shift + ${i + 1})">⤢</button>`}</div>`;
+  }).join("");
+  const n = st.options.length;
+  const tiles = st.options.filter(o => !rej.includes(o.id)).map(o => `<span class="vt" style="background:var(--${o.l})">${o.l}</span>`).join("");
+  $("main").innerHTML = `
+    <div class="decide-head${P().grade >= 9 ? " upper" : ""}"><div><span class="part-tag">${esc(st.part)}${isJoin(st) ? `<span class="cont"> · continued</span>` : ""}</span><h1 class="q">${esc(st.q)}</h1><p class="de" lang="de">${esc(st.de)}</p></div>
+      <div class="vote ${rej.length ? "again" : ""}">${rej.length ? "Vote again:" : "Cards up!"} ${tiles}</div></div>
+    ${contextHTML(st)}
+    <div class="opts ${n === 3 ? "three" : n === 2 ? "two" : ""}">${cards}</div>`;
+  document.querySelectorAll(".opt").forEach(b => b.onclick = () => choose(b.dataset.id));
+  document.querySelectorAll(".spotbtn").forEach(b => b.onclick = e => { e.stopPropagation(); showSpot(+b.dataset.spot); });
+}
+// Option text is as big as the board allows: binary search for --fit between the floor and 1.8 × zoom (A+ raises the ceiling, A− lowers it).
+// Floor 0.8; in low windows (below 780 px: 720p full screen, 1024×768, artifact view without full screen) 0.66, so the cards never run off the board.
+// Words wrap normally: a size fits only if every card is on the board AND its longest word fits the card width
+// (else "Großglockner" would break as "Großglockn / er"). A word too long for its card even at the floor may break anywhere.
+function fitDecide(){
+  const de = document.documentElement;
+  de.style.overflowY = "hidden";   // measure at full width: a size that fits then needs no scrollbar
+  try{ fitDecide0(); } finally{ de.style.overflowY = ""; }
+}
+function fitDecide0(){
+  const m = $("main"); const opts = [...document.querySelectorAll(".opt")]; if(!opts.length) return;
+  const box = m.querySelector(".opts"); if(box) box.classList.remove("wrapany");
+  const ctx = m.querySelector(".context"); if(ctx) ctx.hidden = false;
+  const txts = opts.map(o => o.querySelector(".txt")).filter(Boolean);
+  const bottom = () => Math.max(...opts.map(o => o.getBoundingClientRect().bottom)) + window.scrollY;
+  const wordsFit = () => txts.every(t => t.scrollWidth <= t.clientWidth + 1);
+  const limit = window.innerHeight - 8;
+  const top = +(1.8 * prefs.zoom).toFixed(2), floor = window.innerHeight < LOW_H ? 0.66 : 0.8;
+  const fits = f => { m.style.setProperty("--fit", f.toFixed(3)); return bottom() <= limit && wordsFit(); };
+  const run = () => { if(fits(top)) return top; let lo = floor, hi = top; for(let i = 0; i < 9; i++){ const mid = (lo + hi) / 2; if(fits(mid)) lo = mid; else hi = mid; } fits(lo); return lo; };
+  // below 0.92 the "Before (…)" line goes (never the "This paragraph so far" box of a continuation), but only if that really gives the cards more room (not when a long word is the limit)
+  const place = () => {
+    if(ctx) ctx.hidden = false; const f = run(); if(!(f < 0.92 && ctx) || ctx.classList.contains("keep")) return;   // a continuation never loses its paragraph
+    const okWith = bottom() <= limit; ctx.hidden = true;
+    if(run() <= f + 0.005 && okWith){ ctx.hidden = false; run(); }   // hiding it gains nothing and the cards fit with it
+  };
+  place();
+  if(!wordsFit() && box){ box.classList.add("wrapany"); place(); }   // safety net: a word longer than its card at the floor size
+}
+function optPx(){ const t = document.querySelector(".opt:not(.out) .txt"); return t ? parseFloat(getComputedStyle(t).fontSize) : 0; }
+function zoomBy(d){
+  const before = view === "run" && R && R.phase === "decide" ? optPx() : 0;
+  prefs.zoom = Math.min(1.6, Math.max(0.7, +(prefs.zoom + d).toFixed(2))); savePrefs(); render();
+  if(d > 0 && before && optPx() <= before + 0.5) toast("The options already fill the screen. Press Shift + 1–4 or ⤢ to show one card big.");
+}
+function choose(id){
+  if(view !== "run" || R.phase !== "decide") return;
+  const st = cur(); const o = st.options.find(x => x.id === id); if(!o) return;
+  if((R.rejected[st.id] || []).includes(id)){ showReject(o); return; }   // show the reason again, no change
+  if(o.trap){ snapshot(); R.rejected[st.id] = (R.rejected[st.id] || []).concat(id); saveRun(); showReject(o); return; }
+  snapshot();
+  R.picks[st.id] = id;
+  if(!st.slot){ advance(); return; }
+  const gaps = gapsFor(st, o);
+  if(gaps.length){ showGap(st, o, gaps, 0); return; }   // not saved before the gap is answered: a reload goes back to the clean card screen
+  goCopy(st.slot);
+}
+// card for a key press: letters A–D or digits 1–4 (fingers); null otherwise
+function cardForKey(e){
+  const k = e.key; let l = null;
+  if(/^[abcdABCD]$/.test(k)) l = k.toUpperCase();
+  else if(/^[1-4]$/.test(k) && !e.shiftKey) l = "ABCD"[+k - 1];
+  return l ? cur().options.find(x => x.l === l) || null : null;
+}
+function gapsFor(st, o){ const t = optText(o) || ""; return (P().gaps || []).filter(g => g.step === st.id && t.includes("{" + g.id + "}")); }
+function goCopy(slot){ R.last = slot; R.revealed = false; R.phase = "copy"; closeOverlay(); render(); }
+function advance(){ R.revealed = false; if(R.si >= curSteps().length - 1){ R.phase = "final"; R.last = null; } else { R.si++; R.phase = "decide"; } closeOverlay(); render(); window.scrollTo(0, 0); }
+
+/* ===================== OVERLAYS ===================== */
+// kind: task | help | spot | reject | gap (keys toggle or close by kind)
+// Every dialog is named by its heading (id "dlg-h"; `heading` adds a visually hidden one) and described by "dlg-d" if present.
+// On close, focus goes back to the control that opened it if that was reached by keyboard, otherwise to the screen's main heading
+// (never to a mouse-clicked button: Enter from a presenter would press it again).
+let dlgOpener = null, pendingFocus = null;
+function focusSel(el){
+  try{ if(!el || el === document.body || !el.matches || !el.matches(":focus-visible")) return null; }catch(e){ return null; }
+  if(el.id) return "#" + CSS.escape(el.id);
+  for(const a of ["data-id", "data-spot", "data-i"]) if(el.hasAttribute(a)) return `[${a}="${CSS.escape(el.getAttribute(a))}"]`;
+  return null;
+}
+function restoreFocus(){
+  const sel = pendingFocus; pendingFocus = null;
+  let el = sel && sel !== "heading" ? document.querySelector(sel) : null;
+  if(!el) el = document.querySelector("#main h1") || $("main");
+  if(!el.matches("button, a, input, summary, [tabindex]")) el.tabIndex = -1;
+  try{ el.focus({preventScroll:true}); }catch(e){}
+}
+function openOverlay(html, kind, cls, heading){
+  if(!overlayKind()) dlgOpener = focusSel(document.activeElement);   // a dialog that replaces a dialog keeps the first opener
+  const ov = $("overlay"); ov.dataset.kind = kind || "";
+  const h = heading ? `<h2 class="sr" id="dlg-h">${esc(heading)}</h2>` : "";
+  const desc = html.includes('id="dlg-d"') ? ' aria-describedby="dlg-d"' : "";
+  ov.innerHTML = `<div class="overlay"><div class="panel ${cls || ""} ${R && R.focus ? "focus-on" : ""}" role="dialog" aria-modal="true" aria-labelledby="dlg-h"${desc}>${h}${html}</div></div>`;
+  ov.hidden = false; lockUntil = performance.now() + 450; try{ $("app").inert = true; }catch(e){}
+  const pn = ov.querySelector(".panel"); if(pn) pn.scrollTop = 0;
+}
+function closeOverlay(){
+  const ov = $("overlay");
+  if(!ov.hidden){ pendingFocus = dlgOpener || "heading"; dlgOpener = null; }   // applied by the next render()
+  ov.hidden = true; ov.innerHTML = ""; ov.dataset.kind = ""; try{ $("app").inert = false; }catch(e){}
+}
+function overlayKind(){ const ov = $("overlay"); return ov.hidden ? "" : ov.dataset.kind || "other"; }
+function closeInfo(){ closeOverlay(); render(); }
+function infoOverlay(html, kind, cls, hint, heading){
+  openOverlay(html + `<div class="row"><button class="primary" id="again">Back to the board →</button><span class="kbd">${hint || "Enter / Esc"}</span></div>`, kind, cls, heading);
+  $("again").onclick = closeInfo; $("again").focus({preventScroll:true});
+}
+function showTask(){ infoOverlay(taskHTML(P(), R.len), "task", "", "Enter / Esc / T", "Your task"); fitTaskPanel(); }
+function showReject(o){
+  const low = isLow(P());
+  const c = o.crit && CRIT[o.crit] ? `<span class="badge crit">${low ? `<span lang="de">${esc(CRIT_DE_LOW[o.crit])}</span>` : esc(o.crit) + " · " + esc(CRIT[o.crit])}</span>` : "";
+  const body = cur().slot ? render_text(splitHead(optText(o) || "").rest, "blank") : esc(o.teaser || o.label);
+  openOverlay(`<div class="row" style="justify-content:space-between"><div class="stamp" aria-hidden="true">REJECTED</div>${c}</div>
+    <blockquote class="trapq"><b>${o.l}</b> · ${body}</blockquote>
+    <p class="eyebrow" style="margin:0">The editor says:</p><p class="why" id="dlg-d">${esc(o.reject)}</p><p class="why-de" lang="de">${esc(o.rejectDe)}${!low && o.crit && CRIT_DE[o.crit] ? ` <i>(${esc(CRIT_DE[o.crit])})</i>` : ""}</p>
+    <div class="row"><button class="primary" id="again">Vote again →</button><span class="kbd">Enter</span></div>`, "reject", P().grade === 5 ? "g5" : "", `Rejected: card ${o.l}`);
+  $("again").onclick = closeInfo;
+  $("again").focus({preventScroll:true});
+}
+// copy screen: the trap the class did not try, big for everybody (Enter / Esc / X / PageDown / PageUp closes)
+function showTrapCheck(o){
+  if(!o) return;
+  const low = isLow(P());
+  const c = o.crit && CRIT[o.crit] ? `<span class="badge crit">${low ? `<span lang="de">${esc(CRIT_DE_LOW[o.crit])}</span>` : esc(o.crit) + " · " + esc(CRIT[o.crit])}</span>` : "";
+  infoOverlay(`<div class="row" style="justify-content:space-between"><p class="eyebrow" style="margin:0">Trap check: card ${o.l}</p>${c}</div>
+    <blockquote class="trapq"><b>${o.l}</b> · ${esc(trapQuote(o))}</blockquote>
+    <p class="eyebrow" style="margin:0">The editor says:</p><p class="why" id="dlg-d">${esc(o.reject)}</p><p class="why-de" lang="de">${esc(o.rejectDe)}${!low && o.crit && CRIT_DE[o.crit] ? ` <i>(${esc(CRIT_DE[o.crit])})</i>` : ""}</p>`,
+    "trap", P().grade === 5 ? "g5" : "", "Enter / Esc / X", `Trap check: card ${o.l}`);
+}
+function cancelGap(){ back({noRedo:true}); }   // back to the cards; nothing to redo
+const gapErr = msg => { $("gerr").textContent = msg; $("gin").setAttribute("aria-invalid", "true"); };
+let gapKeys = null;   // submit / cancel of the open gap window, also for remote keys while the input has no focus yet
+// No <form>: a sandboxed frame without allow-forms blocks form submission (and its submit event) completely.
+function showGap(st, o, gaps, i){
+  const g = gaps[i]; const isNum = g.type === "number";
+  const val = R.gaps[g.id] != null ? R.gaps[g.id] : (g.default != null ? g.default : "");
+  const sentence = render_text(splitHead(optText(o) || "").rest, "blank");
+  const hot = sentence.replace(new RegExp(`(<span class="blank" aria-label="gap"><\\/span>)`), '<span class="blank hot" aria-label="gap"></span>');
+  openOverlay(`<p class="eyebrow" style="margin:0">The class decides</p><h2 id="dlg-h">${esc(g.q)}</h2><p class="why-de" lang="de">${esc(g.qDe)}</p>${isNum ? "" : '<p class="why-de" lang="de">Nur erfundene Namen und Wörter, keine echten Personen. Die Lehrkraft tippt ein und darf Vorschläge ablehnen.</p>'}
+    <p class="gapq">${hot}</p>
+    <div class="row" style="align-items:flex-end"><div class="field" style="${isNum ? "max-width:14rem" : ""}"><label for="gin">${isNum ? "Number" : "Your answer"}</label><input id="gin" ${isNum ? 'inputmode="numeric"' : ""} autocomplete="off" aria-describedby="gerr" maxlength="${isNum ? 9 : Math.max(12, g.max || 40)}" value="${esc(val)}"></div>
+    <button class="primary" type="button" id="gok">${i < gaps.length - 1 ? "Next →" : "Into the text →"}</button><button class="secondary" type="button" id="cancel">← Other card (Esc)</button></div><div class="err" id="gerr" role="alert"></div>`, "gap");
+  const inp = $("gin");
+  const submit = () => {
+    if(performance.now() < lockUntil) return;
+    const v = cleanGap(g, inp.value);
+    if(v.err){ gapErr(v.err); return; }
+    R.gaps[g.id] = v.value;
+    if(i < gaps.length - 1) showGap(st, o, gaps, i + 1); else goCopy(st.slot);
+  };
+  gapKeys = {submit, cancel:cancelGap};
+  // Keys pressed in the same moment as the card key (input lock) never type into the field, and a held key never answers twice.
+  // Remote: PageDown = into the text, PageUp = back to the cards.
+  inp.addEventListener("keydown", e => {
+    if(performance.now() < lockUntil){ e.preventDefault(); return; }
+    if(e.key === "Enter" || e.key === "PageDown"){ e.preventDefault(); if(!e.repeat && !e.isComposing) submit(); }
+    else if(e.key === "PageUp"){ e.preventDefault(); if(!e.repeat) cancelGap(); }
+  });
+  $("gok").onclick = submit;
+  $("cancel").onclick = cancelGap;
+  // focus and select the prefilled answer only once the lock has passed
+  setTimeout(() => { if($("gin") === inp){ inp.focus({preventScroll:true}); inp.select(); } }, Math.max(0, lockUntil - performance.now()) + 10);
+}
+// validates and normalises a class answer; returns {value} or {err}
+function cleanGap(g, input){
+  const raw = String(input).trim().replace(/\s+/g, " ");
+  if(g.type === "number"){
+    const lo = g.min != null ? g.min : 0, hi = g.max != null ? g.max : 100000;
+    const msg = `Please type a whole number between ${lo} and ${hi}.`;
+    // whole numbers, optionally with thousands separators: 1.000 / 1 000 / 1,000 (but not 1,5 or 19.80)
+    if(!/^\d+$/.test(raw) && !/^\d{1,3}(?:[.,   ]\d{3})+$/.test(raw)) return {err:msg};
+    const n = +raw.replace(/\D/g, "");
+    if(!(n >= lo && n <= hi)) return {err:msg};
+    return {value:String(n)};
+  }
+  let v = raw.replace(/<[^>]*>/g, "").replace(/[<>{}\[\]]/g, "").replace(/\s+/g, " ").trim();
+  v = v.replace(/[\u0000-\u001F\u007F-\u009F\u00AD\u061C\u180E\u200B-\u200F\u202A-\u202E\u2060-\u206F\uFEFF\uFFF9-\uFFFB]/g, "").replace(/\s+/g, " ").trim();   // no control, bidi or zero-width characters
+  v = v.replace(/'/g, "’");   // keyboard apostrophe -> typographic ’ like the rest of the model text (O’Neill, one’s)
+  const def = g.default != null ? String(g.default) : "";
+  if(/^[A-ZÄÖÜ]/.test(def) && !/\d/.test(def) && /^[\d\s.,\-]+$/.test(v)) return {err:"Please type a name, not a number."};   // name-like gap
+  if(!/[A-Za-zÀ-ÖØ-öø-ž]/.test(v)) return {err:"Please type a word in English letters (A–Z)."};
+  if(g.minWords && v.split(" ").filter(w => /\p{L}/u.test(w)).length < g.minWords) return {err: g.minWordsMsg || (/\b(Mr|Ms|Mrs)\b/.test(g.q || "") ? "Please type Mr or Ms and a family name." : /First name and family name/.test(g.q || "") ? "Please type a first name and a family name." : `Please type at least ${g.minWords} words.`)};
+  if(g.verbPhrase) v = v.replace(/^to\s+/i, "").replace(/\bmy\b/gi, "their");
+  // maxWords: counted like the word count (plainWords), so a long class answer cannot push the text over the length limit
+  const nameGap = /First name and family name|\b(Mr|Ms|Mrs)\b/.test(g.q || "");
+  const mw = g.maxWords || Math.max(nameGap ? 4 : 2, def.trim().split(/\s+/).filter(Boolean).length);   // default: as many words as the default answer; name gaps allow up to four (Maria Del Carmen, Jan van der Berg)
+  if(v.replace(/[“”"–…]/g, " ").split(/\s+/).filter(x => /[A-Za-z0-9]/.test(x)).length > mw) return {err:`Please use ${mw === 1 ? "one word" : "at most " + mw + " words"}.`};
+  const capIt = g.cap === true || (g.cap !== false && /^[A-ZÄÖÜ]/.test(def));
+  if(capIt && v === v.toLowerCase()){
+    v = v.replace(/(^|[\s\-])(\p{Ll})/gu, (m, a, b) => a + b.toUpperCase())   // every word start: Mary Jane, Anna-Lena
+      // after an apostrophe only with exactly one letter before it (O'Neill, D'Arcy), never in contractions (Don't, We're, I'm)
+      .replace(/(^|[\s\-])(\p{L})(['’])(?!(?:m|s|t|d|ll|ve|re)(?!\p{L}))(\p{Ll})/gu, (m, a, b, q, c) => a + b + q + c.toUpperCase())
+      .replace(/(\s)(And|Or|Of|The|A|An|In|On|At|To|For)(?=\s)/g, (m, a, w) => a + w.toLowerCase());   // Pepper and Salt, not Pepper And Salt
+  }
+  return {value:v};
+}
+function showSpot(i){
+  const st = cur(); const o = st.options[i]; if(!o) return;
+  if((R.rejected[st.id] || []).includes(o.id)){ showReject(o); return; }
+  const head = st.slot === "title" || st.slot === "subject";
+  const body = st.slot ? render_text(optText(o) || "", "blank").replace('<span class="h3">', '<span class="h3" style="font-size:.7em">') : esc(o.teaser || "");
+  infoOverlay(`<div class="spothead"><span class="L" style="background:var(--${o.l})">${o.l}</span><b class="eyebrow">${esc(o.label)}</b></div><p class="spot${head ? " hd" : ""}${st.slot ? "" : " br"}">${body}</p>`, "spot", "spotp", `Enter / Esc · A–D or 1–4 = choose a card`, `Card ${o.l}: ${o.label}`);
+  fitSpot();
+}
+// biggest text size at which the whole card fits in the panel without scrolling
+function fitSpot(){
+  const pn = document.querySelector("#overlay .panel.spotp"), sp = pn && pn.querySelector(".spot"); if(!sp) return;
+  const ok = f => { sp.style.fontSize = f.toFixed(2) + "rem"; return pn.scrollHeight <= pn.clientHeight + 1; };
+  let lo = 1.2, hi = 4.4;
+  if(!ok(hi)){ for(let k = 0; k < 9; k++){ const mid = (lo + hi) / 2; if(ok(mid)) lo = mid; else hi = mid; } ok(lo); }
+  pn.scrollTop = 0;
+}
+function showHelp(){
+  infoOverlay(`<h2 id="dlg-h">Keys</h2><div class="keys">
+    <b>A–D or 1–4</b><span>winning card (1–4 = fingers); on a rejected card: the editor’s reason again</span>
+    <b>Shift + 1–4 or ⤢</b><span>show one card big</span>
+    <b>Enter / → / PageDown</b><span>next step (also brings back an undone step)</span>
+    <b>Backspace / ← / PageUp</b><span>undo the last step</span>
+    <b>Esc / PageUp</b><span>close a window</span>
+    <b>T</b><span>show / hide the task</span>
+    <b>?</b><span>show / hide this help</span>
+    <b>P</b><span>${esc(P().focus.label)} on / off</span>
+    <b>X</b><span>trap check on the copy screen: the trap the class did not choose, with the editor’s reason</span>
+    ${curSteps().some(isJoin) ? `<b>· continued / ↳</b><span>the block continues the same paragraph: no new line, no margin word</span>` : ""}
+    <b>2 · 3 · 5 · 8 / 0</b><span>writing timer in minutes (frame mode) / stop it</span>
+    <b>PageDown / PageUp / Space</b><span>scroll the finished text</span>
+    <b>F</b><span>full screen</span><b>+ / −</b><span>text size</span></div>
+    <p class="why-de" lang="de"><label><input type="checkbox" id="keyssw"${prefs.keys === false ? "" : " checked"}> Buchstaben- und Zifferntasten verwenden (aus: nur Enter, Pfeile, Bild auf/ab, Rücktaste und Esc)</label></p>
+    <p class="why-de" lang="de">Presenter: „weiter“ = nächster Schritt (holt auch Rückgängiges zurück), „zurück“ = rückgängig (schließt auch ein offenes Fenster).</p>
+    <p class="why-de" lang="de"><b>Achtung:</b> Die Presenter-Taste „Bildschirm schwarz“ sendet oft B (= Karte B). Nur „weiter“ und „zurück“ verwenden.</p>`, "help", "", "Enter / Esc / ?");
+  const sw = $("keyssw"); if(sw) sw.onchange = () => { prefs.keys = sw.checked; savePrefs(); };
+}
+
+/* ===================== RUN: COPY / FRAME ===================== */
+// timer.up = time is over (red 0:00). The timer belongs to the step (pack + step index): it survives re-renders, undo/redo
+// and the reveal, and render() stops it when the step index changes.
+let timer = {end:0, int:null, min:0, key:null, up:false};
+function stopTimer(){ if(timer.int) clearInterval(timer.int); timer = {end:0, int:null, min:0, key:null, up:false}; }
+function timerKey(){ return R ? R.packId + "|" + R.si : ""; }
+function pressTimer(min){ document.querySelectorAll("[data-min]").forEach(b => b.setAttribute("aria-pressed", String(+b.dataset.min === min))); }
+function stopTimerUI(){ stopTimer(); const c = $("clock"); if(c){ c.textContent = "0:00"; c.className = "clock idle"; } pressTimer(-1); }
+function pageHTML(){
+  const p = P(); const rows = []; const blog = underTitle(p);
+  const metaRow = hasLayout(p) ? `<div class="blk meta old"><div class="tag">${metaTag(p)}</div><div class="t">${metaHTML(metaRows(p, false))}</div></div>` : "";
+  if(metaRow && !blog) rows.push(metaRow);
+  let metaDone = !metaRow || !blog;
+  if(!metaDone && !p.order.includes("title")){ rows.push(metaRow); metaDone = true; }
+  p.order.forEach(slot => {
+    const st = slotStep(slot);
+    if(st && curSteps().includes(st)){
+      const t = slotText(slot); const isNew = slot === R.last;
+      if(!t){
+        if(slot === "title" && stepIndexOfSlot(slot) > R.si) rows.push(`<div class="blk empty s-title"><div class="tag">${esc(st.part)}</div><div class="t">We choose the ${titleWord(p)} at the end. Leave 2 lines free!</div></div>`);
+        if(slot === "subject" && stepIndexOfSlot(slot) > R.si) rows.push(`<div class="blk empty s-subject"><div class="tag">${esc(st.part)}</div><div class="t">We choose the subject line later. Leave it open in the header!</div></div>`);
+      } else {
+        const isFrame = isNew && isFrameText(t);
+        let html;
+        if(isFrame && !R.revealed) html = frame_text(t);
+        else if(isFrame && R.revealed) html = revealed_text(t);
+        else html = render_text(t, "final");
+        // a block with its own heading needs no margin word; a continuation block (join) keeps the margin word of its paragraph
+        const join = isJoin(st);
+        const tag = splitHead(t).head || join ? "" : esc(marginWord(st));
+        // a continuation block copied earlier is shown inside its paragraph (no new line); only the new one has a row of its own
+        const last = rows[rows.length - 1];
+        if(join && !isNew && last && typeof last === "object" && !last.isNew) last.html += " " + html;
+        else rows.push({cls:`blk s-${esc(slot)} ${join ? "join" : ""} ${isNew ? "new" : "old"} ${isFrame ? "frame" : ""} ${isFrame && R.revealed ? "revealed" : ""}`, tag, html, isNew});
+      }
+    }
+    if(!metaDone && slot === "title"){ rows.push(metaRow); metaDone = true; }   // blog by-line, review stars go under the title
+  });
+  return rows.map(r => typeof r === "string" ? r : `<div class="${r.cls}"><div class="tag">${r.tag}</div><div class="t">${r.html}</div></div>`).join("");
+}
+// frame mode: a block with blue words AND own words (dashed lines); else it is copied like in full mode
+function isFrameText(t){ return R.mode === "frame" && /\{\{/.test(t) && ownWordCount(t) > 0; }
+function checkText(own){ const t = own.replace(/^Copy[^.]*\.\s*(Then\s+)?/i, ""); return t ? cap(t) : own; }
+// the whole trap text: the editor's explanation may name a mistake anywhere in it
+function trapQuote(o){ return plainText(splitHead(optText(o) || "").rest).replace(/\s+/g, " ").trim(); }
+function renderCopy(){
+  const st = cur(); const p = P();
+  const o = st.options.find(x => x.id === R.picks[st.id]);
+  const t = optText(o) || "";
+  const frame = isFrameText(t);
+  const isLast = R.si === curSteps().length - 1;
+  const trap = st.options.find(x => x.trap);
+  const trapSeen = trap && (R.rejected[st.id] || []).includes(trap.id);
+  const low = isLow(p);
+  // compact on the side, so it never runs off the board; a click or X shows the whole trap and the editor's reason big
+  const trapNote = (trap && !trapSeen) ? `<button class="trapnote" id="trapcheck" aria-haspopup="dialog" title="Show the trap and the editor’s reason (X)"><b>Trap check: card ${trap.l}${trap.crit && !low ? " · " + esc(trap.crit) : ""}<span class="key" aria-label="key X">X</span></b><span class="tx">What is wrong with card ${trap.l}?</span>${low ? `<span class="tde2" lang="de">Was ist an Karte ${trap.l} falsch?</span>` : ""}</button>` : "";
+  const ownChoice = !frame && R.mode === "frame" && (st.slot === "title" || st.slot === "subject");
+  let side;
+  if(frame && !R.revealed){
+    side = `<div class="copynow fr"><strong>Copy the blue words. Then write your own.</strong>${isJoin(st) ? `<p class="where-join"><b>${esc(whereText(st))}</b></p>` : ""}<p>${esc(checkText(st.own || ""))}</p><p class="muted small" lang="de">${esc(st.ownDe || "")}</p>${isJoin(st) ? "" : `<p class="small">${esc(whereText(st))}</p>`}</div>
+      <button class="primary" id="reveal">Show the model →</button><span class="kbd">Enter when everybody has written</span>
+      <div class="note"><b>Writing time</b><div class="timer"><span class="clock idle" id="clock">0:00</span>${[2,3,5,8,10].map(m => `<button class="tbtn" data-min="${m}" aria-pressed="false">${m} min</button>`).join("")}<button class="tbtn" id="tplus">+1</button><button class="tbtn" id="tstop">Stop</button></div><span class="tkeys" lang="de">(Tasten 2 · 3 · 5 · 8)</span></div>
+      <div class="note legend"><span><i class="sw" style="background:var(--sc-soft);border:2px solid var(--sc)"></i>copy these words</span><span><i class="sw" style="border-bottom:4px dashed var(--own)"></i>your own words (~ = how many in the model)</span>${/\{[A-Z][A-Z0-9_]*\}/.test(t) ? `<span><i class="sw" style="background:var(--hl)"></i>our class’s choice</span>` : ""}</div>`;
+  } else {
+    let head, text;
+    if(frame){ head = "Compare with the model."; text = `<p>Blue = the words you copied. <i style="color:var(--own)">Brown</i> = the model’s own words.</p>${st.own ? `<p><b>Check:</b> ${esc(checkText(st.own))}</p>` : ""}${st.slot === "signoff" || st.slot === "greeting" ? "" : "<p>Then improve one sentence of your text with an idea from the model.</p>"}`; }
+    else if(ownChoice){ const what = st.slot === "subject" ? "subject line" : titleWord(p); head = "Copy it, or write your own."; text = `<p>${esc(whereText(st))}</p><p>Or write a better ${what} of your own.</p>`; }
+    else { head = "Copy the yellow part now."; text = `<p>${esc(whereText(st))}</p>`; }
+    side = `<div class="copynow"><strong>${head}</strong>${text}</div>
+      <button class="primary" id="next">${isLast ? "Show the finished text →" : "Next decision →"}</button><span class="kbd">Enter when everybody is finished</span>
+      ${o && o.why ? `<div class="note"><b>Why this works</b>${esc(o.why)}</div>` : ""}
+      ${trapNote}
+      ${R.mode === "frame" ? "" : `<div class="note sofar"><b>So far:</b> <span class="num">${countWords()}</span> words · ${esc(cap(p.focus.label))}: <span class="num">${countFocus()}</span></div>`}`;
+  }
+  $("main").innerHTML = `<h1 class="sr">${frame && !R.revealed ? "Write" : "Copy"}: ${esc(st.part)}</h1><div class="copy-grid"><section class="page" aria-label="Our text so far">${pageHTML()}</section><aside class="side">${side}</aside></div>`;
+  if($("next")) $("next").onclick = nextFromCopy;
+  if($("reveal")) $("reveal").onclick = reveal;
+  if($("trapcheck")) $("trapcheck").onclick = () => showTrapCheck(trap);
+  document.querySelectorAll("[data-min]").forEach(b => b.onclick = () => { startTimer(+b.dataset.min); b.blur(); });
+  if($("tplus")) $("tplus").onclick = () => { $("tplus").blur(); if(timer.end && timer.key === timerKey()) timer.end += 60000; else startTimer(1); tick(); };
+  if($("tstop")) $("tstop").onclick = () => { $("tstop").blur(); stopTimerUI(); };
+  if(timer.key === timerKey()){
+    if(timer.end){ tick(); pressTimer(timer.min); }
+    else if(timer.up){ const c = $("clock"); if(c){ c.textContent = "0:00"; c.className = "clock up"; } }
+  } else stopTimer();
+}
+// The block to copy ends at 80 % of the board at most (heads and the whiteboard tray hide the bottom), its top stays below 70 px.
+// The side panel sticks only while it fits on the board; a taller one is moved down with the page, so its heading stays in view.
+// Called by render() and on resize.
+function placeCopy(){
+  const nw = document.querySelector(".blk.new"), side = document.querySelector(".copy-grid .side"); if(!nw || !side) return;
+  const H = window.innerHeight, wide = window.innerWidth > 1000, y0 = window.scrollY;
+  side.style.marginTop = "";
+  side.classList.toggle("stick", wide && side.offsetHeight <= H - 20);
+  // (a continuation block: scrolling only as far as needed keeps as much of its paragraph above it in view as possible)
+  const r = nw.getBoundingClientRect(), top = r.top + y0, bottom = r.bottom + y0;
+  let y = bottom > 0.8 * H ? Math.max(0, Math.min(bottom - 0.8 * H, top - 70)) : 0;
+  // compare screen of a continuation block: show its whole paragraph from the start if it fits on the board
+  if(R.revealed && isJoin(cur())){
+    const f = document.querySelector(".blk.s-" + CSS.escape(groupOf(cur().slot)[0]));
+    if(f){ const fTop = f.getBoundingClientRect().top + y0; y = bottom - fTop <= H - 16 ? Math.max(0, bottom - H + 8, Math.min(y, fTop - 8)) : Math.max(0, Math.min(y, bottom - H + 8)); }   // too tall: as much of the paragraph as possible, the new block ends at the bottom of the board
+  }
+  // a sticking side panel starts below the top bar until the page scrolls: scroll a little further, so that its end
+  // (the trap check) is on the board too, as long as the top of the block to copy stays below 70 px
+  if(wide && side.classList.contains("stick")){
+    const gTop = side.parentElement.getBoundingClientRect().top + y0;
+    if(gTop - y + side.offsetHeight > H - 6) y = Math.max(y, Math.min(gTop + side.offsetHeight - H + 6, top - 70));
+  }
+  if(wide && !side.classList.contains("stick")){
+    const sTop = side.getBoundingClientRect().top + y0;
+    if(sTop < y + 10) side.style.marginTop = Math.ceil(y + 10 - sTop) + "px";
+  }
+  window.scrollTo(0, y);
+}
+function whereText(st){
+  const p = P(); const tw = titleWord(p);
+  if(st.slot === "title"){
+    if(p.textType === "invitation"){ const under = hasLayout(p) ? ", under the To line" : ""; return titleLater() ? `Write the ${tw} into the 2 free lines at the top of the frame${under}.` : `Write the ${tw} in big letters at the top of the frame${under}.`; }
+    return titleLater() ? `Write the ${tw} into the 2 free lines at the top of your page.` : `Write the ${tw} at the top of your page.`;
+  }
+  if(st.slot === "subject") return "Write the subject line after ‘Subject:’ in the header.";
+  const tt = p.textType;
+  if(st.slot === "greeting") return tt === "postcard" ? "Write the greeting on the left half, on its own line." : tt === "invitation" ? "Write the greeting inside the frame, on its own line." : "Write the greeting on its own line. Then leave one line free.";
+  const t = pickedText(st);
+  if(st.slot === "signoff"){
+    const first = plainText(t).split("\n")[0].trim(); const fromGap = /\{[A-Z]/.test((p.meta && p.meta.from) || "");
+    // Frame mode with the name as own words (a dashed line, no name gap): everybody signs with their own name and town,
+    // unless the step's prompt (own) names the model writer ("the writer’s full name: …"): then the model's town too.
+    const m = p.meta || {};
+    const own = isFrameText(t) && !(senderName(p) && String(st.own || "").includes(metaFinal(senderName(p))));
+    const sender = tt === "letter" ? (own ? (m.town ? "your own town or village" : "") : senderLine(p)) : "";
+    return `${tt === "postcard" || tt === "message" || tt === "invitation" ? "" : "Skip one line. "}Write “${first}” on its own line and ${own ? "your own" : "the"} name on the next line.` + (fromGap ? " Then add the name in the From line, too." : "") + (sender ? (own ? ` Under it, write ${sender}.` : ` Under it, write “${sender}”.`) : "");
+  }
+  // continuation block: the same paragraph goes on, on the same line (frame mode: after the student's own last sentence)
+  if(isJoin(st)) return isFrameText(t) ? "Continue the same paragraph after your own last sentence: no new line." : "Continue the same paragraph: no new line.";
+  const bodySteps = curSteps().filter(s => s.slot && !NOCOUNT.has(s.slot) && s.slot !== "greeting" && s.slot !== "signoff" && !isJoin(s));
+  const firstBody = bodySteps.indexOf(st) === 0;
+  // short texts without margin words: the postcard message (left half), the message and the invitation (inside the frame)
+  if(tt === "postcard") return firstBody ? "Start the message on the left half" + (stepIndexOfSlot("greeting") >= 0 ? ", under the greeting." : ".") : "Keep writing on the left half. Start a new line.";
+  if(tt === "message") return firstBody ? (hasLayout(p) ? "Write the message under the header." : "Start the message.") : "Start a new line.";
+  if(tt === "invitation") return firstBody ? "Start the invitation inside the frame" + (stepIndexOfSlot("greeting") >= 0 ? ", under the greeting." : ".") : "Keep writing inside the frame. Start a new line.";
+  const head = splitHead(t).head;
+  if(head) return (firstBody ? "" : "Skip one line. ") + `Write the heading “${plainText(head).trim()}” on its own line and underline it. The paragraph goes under it.`;
+  if(firstBody) return `Start the first paragraph. Write “${marginWord(st)}” in the margin.`;
+  return `Skip one line, then start a new paragraph. Write “${marginWord(st)}” in the margin.`;
+}
+function tick(){ const c = $("clock"); if(!c || !timer.end) return; const left = Math.round((timer.end - Date.now()) / 1000);
+  if(left <= 0){ c.textContent = "0:00"; c.className = "clock up"; if(timer.int) clearInterval(timer.int); timer.int = null; timer.end = 0; timer.up = true; return; }
+  c.className = "clock"; c.textContent = Math.floor(left / 60) + ":" + String(left % 60).padStart(2, "0"); }
+function startTimer(min){ stopTimer(); timer = {end:Date.now() + min * 60000, int:setInterval(tick, 500), min, key:timerKey(), up:false}; tick(); pressTimer(min); }
+function reveal(){ if(view !== "run" || R.phase !== "copy") return; snapshot(); R.revealed = true; render(); }
+function nextFromCopy(){ if(view !== "run" || R.phase !== "copy") return; snapshot(); stopTimer(); advance(); }
+
+/* ===================== FINAL ===================== */
+function docHTML(){
+  const p = P(); const tt = p.textType; const m = p.meta || {};
+  // one <p> per paragraph: a continuation block (join) follows its paragraph after one space
+  const body = slotGroups(p.order, true).filter(g => !NOCOUNT.has(g[0]));
+  const para = g => `<p>${g.map(s => render_text(slotText(s), "final")).join(" ")}</p>`;
+  const title = slotText("title"), subject = slotText("subject");
+  const date = m.date ? metaFinal(m.date) : today();
+  const mailhead = hasMailHead(p) ? `<dl class="mailhead">${mailHead(p, metaFinal).map(([k, v]) => `<dt>${k}</dt><dd>${esc(v)}</dd>`).join("")}${subject ? `<dt>Subject</dt><dd><b>${render_text(subject, "final")}</b></dd>` : ""}</dl>` : "";
+  if(tt === "email") return `<article class="doc email" lang="en-GB">${mailhead}${body.map(para).join("")}</article>`;
+  if(tt === "report") return `<article class="doc report" lang="en-GB"><div class="rhead">${m.to ? `<b>To:</b><span>${esc(metaFinal(m.to))}</span>` : ""}${m.from ? `<b>From:</b><span>${esc(metaFinal(m.from))}</span>` : ""}<b>Date:</b><span>${esc(date)}</span>${subject ? `<b>Subject:</b><span><b>${render_text(subject, "final")}</b></span>` : ""}</div>${title ? `<h2>${render_text(title, "final")}</h2>` : ""}${body.map(para).join("")}</article>`;
+  if(tt === "blog"){ const user = metaFinal(m.user || "our class");
+    return `<article class="doc blog" lang="en-GB">${title ? `<h2>${render_text(title, "final")}</h2>` : ""}<div class="by"><span class="avatar" aria-hidden="true">${esc((user[0] || "?").toUpperCase())}</span>${esc(user)} · ${esc(date)}</div>${body.map(para).join("")}<div class="comments">Comments (0) · Leave a comment</div></article>`; }
+  const h2 = title ? `<h2>${render_text(title, "final")}</h2>` : "";
+  if(tt === "postcard"){
+    const addr = addrLines(p);
+    return `<article class="doc postcard" lang="en-GB"><div class="pc-msg">${h2}${body.map(para).join("")}</div><div class="pc-side"><div class="pc-stamp" aria-hidden="true">STAMP</div>${addr.length ? `<div class="pc-addr">${addr.map(l => `<span>${esc(metaFinal(l))}</span>`).join("")}</div>` : ""}</div></article>`;
+  }
+  if(tt === "message") return `<article class="doc message" lang="en-GB">${m.to || m.from ? `<dl class="mailhead">${m.to ? `<dt>To</dt><dd>${esc(metaFinal(m.to))}</dd>` : ""}${m.from ? `<dt>From</dt><dd>${esc(metaFinal(m.from))}</dd>` : ""}</dl>` : ""}${h2}${body.map(para).join("")}</article>`;
+  if(tt === "diary") return `<article class="doc diary" lang="en-GB"><div class="ddate">${esc(diaryDate(p))}</div>${m.dear ? `<p>${esc(metaFinal(m.dear))}</p>` : ""}${h2}${body.map(para).join("")}</article>`;
+  if(tt === "letter"){ const sender = senderLine(p); return `<article class="doc letter${mailhead ? " email" : ""}" lang="en-GB">${mailhead}${h2}${body.map(para).join("")}${sender ? `<p class="sender">${esc(sender)}</p>` : ""}</article>`; }
+  if(tt === "review"){ const n = reviewRating(p), by = reviewBy(p);
+    return `<article class="doc review" lang="en-GB">${m.publication ? `<div class="pub">${esc(metaFinal(m.publication))}</div>` : ""}${h2}${n ? `<div class="rating">${starsHTML(n)}</div>` : ""}${by ? `<div class="by">${esc(metaFinal(by))}</div>` : ""}${body.map(para).join("")}</article>`; }
+  if(tt === "invitation") return `<article class="doc invitation" lang="en-GB">${m.to ? `<div class="inv-to">To: ${esc(metaFinal(m.to))}</div>` : ""}${h2}${body.map(para).join("")}</article>`;
+  if(tt === "newspaper") return `<article class="doc" lang="en-GB"><div class="pub">${esc(m.publication || "The Class Times")} · ${esc(today())}</div>${title ? `<h2>${render_text(title, "final")}</h2>` : ""}<div class="by">By ${esc(metaFinal(m.byline) || "our class")}</div>${body.map(para).join("")}</article>`;
+  const cls = tt === "essay" ? "essay" : (tt === "story" || tt === "description") ? "story" : "";
+  return `<article class="doc ${cls}" lang="en-GB">${m.publication ? `<div class="pub">${esc(m.publication)}</div>` : ""}${title ? `<h2>${render_text(title, "final")}</h2>` : ""}${m.byline ? `<div class="by">By ${esc(metaFinal(m.byline))}</div>` : ""}${body.map(para).join("")}</article>`;
+}
+function renderFinal(){
+  stopTimer();
+  const p = P(); const L = p.lengths[R.len]; const words = countWords(), foc = countFocus(); const fmin = p.focus.min ? (p.focus.min[R.len] || 0) : 0;
+  const frame = R.mode === "frame";
+  // frame mode: every student wrote their own text, so the model's counts are information, not ticks
+  const auto = frame
+    ? [["info", `Model text: <span class="num">${words}</span> words. Yours: ${esc(L.label.replace(/\s*words?\s*$/i, ""))}.`],
+       ["info", `${esc(cap(p.focus.label))} in the model: <span class="num">${foc}</span>.${fmin ? ` Use at least ${esc(fmin)}.` : ""}`]]
+    : [[words >= L.min - 3 && words <= L.max + 3 ? "ok" : "bad", `Words: <span class="num">${words}</span> (${esc(L.label)})`],
+       [foc >= fmin ? "ok" : "bad", `${esc(cap(p.focus.label))}: <span class="num">${foc}</span>`]];
+  // grades 9–12: every text has five paragraphs (continuation blocks belong to their paragraph)
+  if(p.grade >= 9){ const n = bodyParas(true).length, what = "Introduction, three body paragraphs, Conclusion";
+    auto.push(frame ? ["info", `Paragraphs in the model: <span class="num">${n}</span> (${what}). Yours: the same.`] : [n === 5 ? "ok" : "bad", `Paragraphs: <span class="num">${n}</span> (${what})`]); }
+  const ticks = R.ticks || [];
+  const items = auto.map(([k, t]) => `<li class="${k}"><span class="ic" aria-hidden="true">${k === "ok" ? "✓" : k === "bad" ? "!" : "i"}</span><span><span class="sr">${k === "ok" ? "OK: " : k === "bad" ? "Check: " : ""}</span>${t}</span></li>`)
+    .concat(p.checks.map((c, i) => { const on = ticks.includes(i); return `<li class="tick${on ? " ok" : ""}" data-i="${i}" role="checkbox" tabindex="0" aria-checked="${on}"><span class="ic" aria-hidden="true">${on ? "✓" : ""}</span><span>${esc(c.en)}</span></li>`; }));
+  $("main").innerHTML = `
+  <h1 class="sr">Finished text</h1>
+  <div class="final-grid">
+    <div class="docwrap">${frame ? `<span class="eyebrow">Model text</span>` : ""}${docHTML()}</div>
+    <aside class="side">
+      <div class="note"><b>Editor’s checklist</b>${frame ? "Check YOUR text with a partner. Tick together what is true for your texts." : "Tick together (click a box): is everything in our text?"}</div>
+      <ul class="checks">${items.join("")}</ul>
+      <button class="secondary" id="copytxt">${COPY_LABEL}</button><span class="kbd" id="copymsg"></span>
+      <button class="secondary" id="printtxt">Print</button>
+      <button class="secondary" id="again2">Same pack again, other choices</button>
+      <button class="secondary" id="tolib">← Library</button>
+    </aside>
+  </div>`;
+  const toggleTick = li => {
+    const i = +li.dataset.i; const on = !li.classList.contains("ok");
+    R.ticks = (R.ticks || []).filter(x => x !== i).concat(on ? [i] : []);
+    li.classList.toggle("ok", on); li.setAttribute("aria-checked", String(on)); li.querySelector(".ic").textContent = on ? "✓" : ""; saveRun();
+  };
+  document.querySelectorAll(".checks li.tick").forEach(li => {
+    li.onclick = e => { toggleTick(li); if(e.detail) li.blur(); };   // a mouse click leaves no focus behind (Enter stays "next")
+    li.onkeydown = e => { if(e.key === " " || e.key === "Enter"){ e.preventDefault(); e.stopPropagation(); if(!e.repeat && performance.now() >= lockUntil) toggleTick(li); } };
+  });
+  $("copytxt").onclick = () => { const txt = finalPlain(); try{ navigator.clipboard.writeText(txt).then(copied, () => fallbackCopy(txt)); }catch(e){ fallbackCopy(txt); } };
+  $("printtxt").onclick = () => { try{ window.print(); }catch(e){} };
+  // like Restart: a second click within 8 s, and one undo brings the finished text back
+  $("again2").onclick = () => armed("again2", "Sure? Click again", restartRun);
+  $("tolib").onclick = () => go("library");
+}
+function copied(){ const b = $("copytxt"); if(!b) return; b.textContent = "✓ Copied"; clearTimeout(copied.h); copied.h = setTimeout(() => { const b2 = $("copytxt"); if(b2) b2.textContent = COPY_LABEL; }, 2000); }
+function finalPlain(){
+  const p = P(); const out = []; const m = p.meta || {};
+  const title = slotText("title"), subject = slotText("subject");
+  const date = m.date ? metaFinal(m.date) : today();
+  const head = [];
+  if(hasMailHead(p)){ mailHead(p, metaFinal).forEach(([k, v]) => head.push(k + ": " + v)); if(subject) head.push("Subject: " + plainText(subject)); }
+  else if(p.textType === "report"){ if(m.to) head.push("To: " + metaFinal(m.to)); if(m.from) head.push("From: " + metaFinal(m.from)); head.push("Date: " + date); if(subject) head.push("Subject: " + plainText(subject)); }
+  else if(p.textType === "message"){ if(m.to) head.push("To: " + metaFinal(m.to)); if(m.from) head.push("From: " + metaFinal(m.from)); }
+  else if(p.textType === "diary"){ head.push(diaryDate(p)); if(m.dear) head.push(metaFinal(m.dear)); }
+  else if(p.textType === "review"){ if(m.publication) head.push(metaFinal(m.publication)); }
+  else if(p.textType === "invitation"){ if(m.to) head.push("To: " + metaFinal(m.to)); }
+  else if(p.textType === "newspaper") head.push(`${metaFinal(m.publication) || "The Class Times"} · ${today()}`);   // masthead and by-line as in docHTML
+  if(head.length) out.push(head.join("\n"));
+  if(title) out.push(plainText(title));
+  if(p.textType === "newspaper") out.push("By " + (metaFinal(m.byline) || "our class"));
+  if(p.textType === "blog") out.push(`${metaFinal(m.user || "our class")} · ${date}`);
+  if(p.textType === "review"){ const n = reviewRating(p), by = reviewBy(p); const r = [n ? `Rating: ${n}/5` : "", by ? metaFinal(by) : ""].filter(Boolean); if(r.length) out.push(r.join("\n")); }
+  slotGroups(p.order, true).filter(g => !NOCOUNT.has(g[0])).forEach(g => out.push(g.map(s => plainText(slotText(s))).join(" ")));
+  if(p.textType === "letter" && senderLine(p)) out[out.length - 1] += "\n" + senderLine(p);
+  if(p.textType === "postcard" && addrLines(p).length) out.push(addrLines(p).map(metaFinal).join("\n"));
+  out.push("Model text: Writing Room by Bernhard Gmeiner, CC BY-NC-SA 4.0");
+  return out.join("\n\n");
+}
+function fallbackCopy(txt){
+  let ta = $("copyta");
+  if(!ta){ ta = document.createElement("textarea"); ta.id = "copyta"; ta.rows = 8; ta.style.width = "100%"; $("copymsg").after(ta); }
+  ta.value = txt; ta.select(); let ok = false; try{ ok = document.execCommand("copy"); }catch(e){}
+  if(ok){ copied(); ta.remove(); } else $("copymsg").textContent = "Select the text below and copy it:";
+}
+
+/* ===================== TOOLS & KEYS ===================== */
+// Two-click confirmation: the first click changes the label, a second click within 8 s runs fn.
+const armState = {};
+function armed(id, label, fn){
+  const now = Date.now(); const el = $(id); const st = armState[id];
+  if(!st || now - st.t > 8000){
+    armState[id] = {t:now, label:el ? el.textContent : "", armedLabel:label}; if(el) el.textContent = label;
+    const am = $("arm-msg"); if(am) am.textContent = label;
+    setTimeout(() => { const e2 = $(id); if(armState[id] && armState[id].t === now){ if(e2) e2.textContent = armState[id].label; delete armState[id]; const a2 = $("arm-msg"); if(a2) a2.textContent = ""; } }, 8000);
+    return;
+  }
+  if(now - st.t < 450) return;
+  delete armState[id]; const am = $("arm-msg"); if(am) am.textContent = ""; fn();
+}
+// after a re-render an armed button keeps showing its "click again" label
+function disarm(){ for(const id of Object.keys(armState)) delete armState[id]; const am = $("arm-msg"); if(am) am.textContent = ""; }
+function reapplyArmed(){ for(const [id, st] of Object.entries(armState)){ const el = $(id); if(el && Date.now() - st.t <= 8000) el.textContent = st.armedLabel; } }
+// a fresh run of the same pack, mode and length; the old state stays in the history, so one undo brings it back
+function restartRun(){ snapshot(); const h = R.history, f = R.focus; R = Object.assign(freshRun(R.packId, R.mode, R.len), {history:h, focus:f}); redo = []; stopTimer(); render(); window.scrollTo(0, 0); }
+function bindTools(){
+  const b = (id, fn) => { const el = $(id); if(el) el.onclick = e => { fn(e); try{ el.blur(); }catch(_){} }; };
+  b("t-home", () => go("library"));
+  b("t-back", () => back());
+  b("t-task", showTask);
+  b("t-help", showHelp);
+  b("t-focus", () => { R.focus = !R.focus; render(); });
+  b("t-plus", () => zoomBy(0.1));
+  b("t-minus", () => zoomBy(-0.1));
+  b("t-full", toggleFull);
+  b("t-reset", () => armed("t-reset", "Sure? Click again", restartRun));
+}
+// clicks obey the same short lock as keys: no accidental double-click votes, cancels or length changes (A+ / A− are harmless).
+// Not in the library: there a quick second click (after "Filter zurücksetzen", closing the info window) is meant.
+document.addEventListener("click", e => {
+  if(view !== "library" && performance.now() < lockUntil && e.target.closest && e.target.closest("button:not(#t-plus):not(#t-minus), li.tick")){ e.preventDefault(); e.stopPropagation(); }
+}, true);
+let mouseTimer = null;
+document.addEventListener("mousemove", () => { document.body.classList.add("mouse"); clearTimeout(mouseTimer); mouseTimer = setTimeout(() => document.body.classList.remove("mouse"), 1500); });
+document.addEventListener("keydown", e => {
+  const kind = overlayKind();
+  if(e.key === "Tab" && kind){
+    const f = [...$("overlay").querySelectorAll('button, a[href], input, select, summary, [tabindex="0"]')].filter(x => !x.disabled && x.offsetParent !== null);
+    if(f.length){ const i = f.indexOf(document.activeElement); const n = e.shiftKey ? (i <= 0 ? f.length - 1 : i - 1) : (i === f.length - 1 ? 0 : i + 1); e.preventDefault(); f[n].focus(); }
+    return;
+  }
+  const tag = e.target && e.target.tagName;
+  const locked = e.repeat || performance.now() < lockUntil;
+  // Esc only closes windows; it never undoes (teachers press it to leave full screen, remotes send it)
+  if(e.key === "Escape"){
+    if(tag === "TEXTAREA" || (tag === "INPUT" && !kind)) return;   // the library search field clears itself
+    e.preventDefault();
+    if(locked || !kind) return;
+    if(kind === "gap") cancelGap(); else closeInfo();
+    return;
+  }
+  if(tag === "INPUT" || tag === "TEXTAREA" || tag === "SELECT") return;
+  if(e.ctrlKey || e.metaKey || e.altKey) return;
+  const k = e.key;
+  if(prefs.keys === false && /^[A-Za-z0-9?+\-=]$/.test(k)) return;   // single-key shortcuts off (WCAG 2.1.4); Enter, arrows, Page keys, Backspace and Esc stay
+  const nextKey = k === "Enter" || k === "ArrowRight" || k === "PageDown";
+  const backKey = k === "Backspace" || k === "ArrowLeft" || k === "PageUp";
+  // Enter on a focused control (button, summary, link, checklist item) activates that control natively;
+  // PageDown and → are never taken by a focused control (the presenter's "weiter")
+  const onControl = !!(e.target && e.target.closest && e.target.closest("button, summary, a, [role=checkbox]"));
+  const enterOnControl = k === "Enter" && onControl;
+  if(locked){ if(nextKey || backKey || k === " ") e.preventDefault(); return; }
+  if(kind){
+    if((kind === "task" && (k === "t" || k === "T")) || (kind === "help" && k === "?") || (kind === "trap" && (k === "x" || k === "X"))){ e.preventDefault(); closeInfo(); return; }
+    if(kind === "spot"){ const o = cardForKey(e); if(o){ e.preventDefault(); closeOverlay(); choose(o.id); if(view === "run" && R.phase === "decide" && overlayKind() === "") render(); return; } }
+    if(enterOnControl) return;
+    if(kind === "gap"){   // the input has no focus yet (lock) or the teacher clicked elsewhere in the window
+      if(k === "Enter" || k === "PageDown"){ e.preventDefault(); if(gapKeys) gapKeys.submit(); }
+      else if(k === "PageUp"){ e.preventDefault(); cancelGap(); }
+      return;
+    }
+    if(k === "PageUp"){ e.preventDefault(); closeInfo(); return; }   // presenter "zurück" closes the window like Esc (gap: see above)
+    if(nextKey){ const b = $("again"); if(b){ e.preventDefault(); b.click(); } }
+    return;
+  }
+  if(k === "f" || k === "F"){ toggleFull(); return; }
+  if(k === "+" || k === "="){ zoomBy(0.1); return; }
+  if(k === "-"){ zoomBy(-0.1); return; }
+  if(view === "library"){
+    if(k === "PageDown" || (k === "Enter" && !onControl)){ const r = resumeTarget(); if(r){ e.preventDefault(); resumeRun(r.packId); } }
+    return;
+  }
+  if(view === "setup"){
+    // Enter on a Modus / Länge button that is not selected yet (reached with Tab) selects it, like any button.
+    // Enter on the selected one (it keeps the focus after a mouse click) = the primary action.
+    const choice = e.target.closest && e.target.closest(".opt-c");
+    if(k === "Enter" && choice && choice.getAttribute("aria-pressed") !== "true"){ e.preventDefault(); choice.click(); return; }
+    if(k === "PageDown" || (k === "Enter" && (!onControl || choice))){ e.preventDefault(); setupPrimary(); }
+    return;
+  }
+  if(view !== "run") return;
+  if(k === "?"){ showHelp(); return; }
+  if(k === "t" || k === "T"){ showTask(); return; }
+  if(k === "p" || k === "P"){ R.focus = !R.focus; render(); return; }
+  if(R.phase === "decide"){
+    if(e.shiftKey && /^(Digit|Numpad)[1-4]$/.test(e.code || "")){ e.preventDefault(); showSpot(+e.code.slice(-1) - 1); return; }
+    const o = cardForKey(e); if(o){ e.preventDefault(); choose(o.id); return; }
+  }
+  if(R.phase === "copy" && (k === "x" || k === "X")){ e.preventDefault(); const tc = $("trapcheck"); if(tc) tc.click(); return; }
+  if(R.phase === "copy" && $("reveal")){
+    if(/^[2358]$/.test(k)){ e.preventDefault(); startTimer(+k); return; }
+    if(k === "0"){ e.preventDefault(); stopTimerUI(); return; }
+  }
+  // the finished text is read with a presenter remote: PageDown/PageUp/Space scroll, they never undo
+  if(R.phase === "final" && (k === "PageDown" || k === "PageUp" || (k === " " && !onControl))){
+    e.preventDefault(); window.scrollBy({top:(k === "PageUp" ? -1 : 1) * window.innerHeight * 0.8, behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth"}); return;
+  }
+  if(nextKey){
+    if(enterOnControl) return;
+    e.preventDefault();
+    if(forward()) return;
+    if(R.phase === "task") nextFromTask();
+    else if(R.phase === "layout") nextFromLayout();
+    else if(R.phase === "copy"){ if($("reveal")) reveal(); else nextFromCopy(); }
+    return;
+  }
+  if(backKey){ e.preventDefault(); back(); }
+});
+const refit = () => {
+  if(view !== "run" || !R) return;
+  if(overlayKind() === "spot"){ fitSpot(); return; }
+  if(overlayKind() === "task"){ fitTaskPanel(); return; }
+  if(overlayKind()) return;
+  if(R.phase === "decide") fitDecide(); else if(R.phase === "task") fitTask(); else if(R.phase === "copy") placeCopy();
+};
+let refitRaf = 0;
+const refitSoon = () => { cancelAnimationFrame(refitRaf); refitRaf = requestAnimationFrame(refit); };   // one refit per frame while resizing
+window.addEventListener("resize", refitSoon);
+document.addEventListener("fullscreenchange", refitSoon);
+if(document.fonts){ if(document.fonts.ready) document.fonts.ready.then(refit); try{ document.fonts.addEventListener("loadingdone", refit); }catch(e){} }
+
+try{ render(); }catch(e){ console.error(e); view = "library"; R = null; render(); }
+</script>

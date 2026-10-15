@@ -1,0 +1,141 @@
+{
+  "id": "g7-blog-first-week-on-skis",
+  "title": "My first week on skis",
+  "titleDe": "Meine erste Woche auf der Piste",
+  "grade": 7,
+  "level": "A2",
+  "theme": "Freizeit, Hobbys & Sport",
+  "textType": "blog",
+  "modes": ["full"],
+  "lengths": { "short": { "label": "around 120 words", "min": 105, "max": 135 } },
+  "minutes": { "full": { "short": 50 } },
+  "task": {
+    "situation": "Last week, your class went on a winter sports week in the Salzburg mountains. It was your first time on snow: you learnt to ski or to snowboard. Now you are writing a post for your blog.",
+    "instruction": "Write a blog post. Write about:",
+    "points": ["your first day on the slopes", "something that went wrong", "something that went well", "a question for your readers"],
+    "words": { "short": "Write around 120 words." },
+    "de": "Gemeinsamer Blogbeitrag über die Wintersportwoche: der erste Tag auf der Piste, ein Missgeschick, ein Erfolg und eine Frage an die Leser:innen. Zuerst entscheidet ihr: Ski oder Snowboard? Adverbien der Art und Weise (slowly, carefully, well) beschreiben, wie etwas passiert. Der Titel kommt zuletzt."
+  },
+  "meta": { "user": "first_time_on_snow" },
+  "focus": {
+    "label": "adverbs of manner",
+    "labelDe": "Adverbien der Art und Weise",
+    "min": { "short": 5 },
+    "note": "Marked: every adverb of manner (how we did something: slowly, carefully, well, fast). Not marked: really, very, still, already, once."
+  },
+  "topicWords": ["ski", "skis", "skiing", "snowboard", "snowboarding", "board", "slope", "slopes", "winter", "sports", "week", "salzburg", "mountains", "instructor", "kaya", "snow"],
+  "gaps": [
+    { "id": "FALLS", "step": "mishap", "q": "How many times did I end up in the snow? Shout a number.", "qDe": "Wie oft bin ich hingefallen? Ruft eine Zahl zwischen 10 und 30.", "type": "number", "default": 12, "min": 10, "max": 30 }
+  ],
+  "steps": [
+    {
+      "id": "sport", "part": "Skis or board?",
+      "q": "Did we learn to ski or to snowboard? We decide now!",
+      "de": "Hier entscheidet ihr, ob unser Blogbeitrag vom Skifahren oder vom Snowboarden erzählt.",
+      "options": [
+        { "l": "A", "id": "ski", "label": "Skiing", "teaser": "Two skis, two poles and an instructor who shouts “Pizza!” when you have to stop." },
+        { "l": "B", "id": "board", "label": "Snowboarding", "teaser": "One board, no poles and lots of sitting in the snow at the start." }
+      ]
+    },
+    {
+      "id": "intro", "slot": "intro", "part": "Introduction",
+      "q": "How do we start our blog post?",
+      "de": "Die Einleitung spricht die Leser:innen an und sagt, wo wir waren. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        { "l": "A", "id": "hi", "label": "Greet your readers", "text": "Hi, everyone! I’m back from our winter sports week in the Salzburg mountains. My legs still hurt, so today I’m walking very [[slowly]]. Here’s my story!", "why": "A friendly greeting and a funny detail are a typical blog start." },
+        { "l": "B", "id": "question", "label": "Start with a question", "text": "Can you ski or snowboard [[well]]? I couldn’t, but then our class went on a winter sports week in the Salzburg mountains. Here’s how it went.", "why": "A question makes readers think about themselves and read on." },
+        { "l": "C", "id": "feeling", "label": "Start with a feeling", "text": "What a week! Our class has just come back from a winter sports week in Salzburg. It was my first time on snow, and I learnt [[fast]].", "why": "‘What a week!’ shows our feelings, and we say where we were." }
+      ]
+    },
+    {
+      "id": "day1", "slot": "day1", "part": "Day one",
+      "q": "What happened on the first day?",
+      "de": "Hier erzählt ihr vom ersten Tag auf der Piste. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        { "l": "A", "id": "instructor", "label": "Our instructor", "why": "We meet the instructor and learn something about the sport.",
+          "text": { "by": "sport", "map": {
+            "ski": "We met our instructor, Mr Kaya, on Monday morning. He showed us how to stop: you make a ‘pizza’ with your skis. I copied him [[carefully]].",
+            "board": "We met our instructor, Mr Kaya, on Monday morning. He showed us how to stand on the board, with our knees bent. I tried it [[carefully]]."
+          } } },
+        { "l": "B", "id": "rental", "label": "The equipment", "why": "A funny picture (like a robot) makes readers smile.",
+          "text": { "by": "sport", "map": {
+            "ski": "Monday started at the rental shop. The ski boots were so heavy, and I walked [[stiffly]] like a robot. After lunch, I finally tried the beginners’ slope.",
+            "board": "Monday started at the rental shop. The snowboard boots felt so strange, and I walked [[stiffly]] like a robot. After lunch, I finally tried the beginners’ slope."
+          } } },
+        { "l": "C", "id": "nervous", "label": "My feelings", "why": "Readers feel how nervous we were, and the question builds suspense.",
+          "text": { "by": "sport", "map": {
+            "ski": "The sun was shining [[brightly]] on Monday morning. When I put on my skis for the first time, my legs were shaking. What if I fell?",
+            "board": "The sun was shining [[brightly]] on Monday morning. When I stood on my board for the first time, my legs were shaking. What if I fell?"
+          } } }
+      ]
+    },
+    {
+      "id": "mishap", "slot": "mishap", "part": "What went wrong",
+      "q": "What went wrong?",
+      "de": "Hier erzählt ihr, was in der Woche schiefgegangen ist. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        { "l": "A", "id": "lift", "label": "The drag lift", "text": "The drag lift was my biggest problem. On Tuesday, I fell off it {FALLS} times! Everybody in the queue was watching, and I laughed [[nervously]].", "why": "Many beginners know this problem, and the number makes it funny." },
+        { "l": "B", "id": "tuesday", "label": "A bad Tuesday", "trap": true, "crit": "CC", "text": "Luckily, Tuesday was a terrible day. I fell over {FALLS} times, and there was snow in my helmet and in my gloves.",
+          "reject": "‘Luckily’ is for good news, but this is bad news. Better: ‘Unfortunately’.",
+          "rejectDe": "„Luckily“ passt nur zu guten Nachrichten, hier geht es aber um Pech. Besser: „Unfortunately“." },
+        { "l": "C", "id": "crash", "label": "A crash", "text": "On Tuesday, I fell over {FALLS} times. Once I slid [[gently]] into a group of five-year-olds, and we all ended up in the snow. Oops!", "why": "A funny scene and ‘Oops!’ sound like a real blog." }
+      ]
+    },
+    {
+      "id": "success", "slot": "success", "part": "What went well",
+      "q": "What went well?",
+      "de": "Hier erzählt ihr von einem Erfolg am Ende der Woche. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        { "l": "A", "id": "lastday", "label": "The last day", "trap": true, "crit": "LSA", "text": "On the last day, I could turn quite good, and I went down a blue slope really careful. Mr Kaya was proud of me!",
+          "reject": "Two mistakes: here we need adverbs. I could turn quite well (not good), and I went down really carefully (not careful).",
+          "rejectDe": "Zwei Fehler, hier braucht es Adverbien: „well“ statt „good“ und „carefully“ statt „careful“." },
+        { "l": "B", "id": "friday", "label": "A blue slope", "why": "A clear success at the end of the week, and the high five is a nice detail.",
+          "text": { "by": "sport", "map": {
+            "ski": "By Friday, I could ski [[well]] enough for a blue slope. I went down it [[safely]], and our instructor gave me a high five!",
+            "board": "By Friday, I could snowboard [[well]] enough for a blue slope. I went down it [[safely]], and our instructor gave me a high five!"
+          } } },
+        { "l": "C", "id": "race", "label": "Race day", "text": "Thursday was race day! I didn’t go very [[fast]], but I turned [[calmly]] and stayed on my feet. In the end, I came third!", "why": "A race is exciting, and we are proud without being the winner." }
+      ]
+    },
+    {
+      "id": "end", "slot": "end", "part": "Conclusion",
+      "q": "How do we end our blog post?",
+      "de": "Der Schluss blickt zurück und spricht die Leser:innen direkt an. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        { "l": "A", "id": "lookback", "label": "Look back", "text": "All in all, the week went [[wonderfully]], and I can’t wait for next winter. Have you ever tried skiing or snowboarding? Tell me in the comments!", "why": "We sum up the week and ask readers about their own experience." },
+        { "l": "B", "id": "tip", "label": "Give a tip", "text": "My tip for beginners: listen [[closely]] to your instructor and don’t give up! Are you going on a winter sports week soon? Leave me a comment!", "why": "A tip helps other beginners, and the question invites comments." },
+        { "l": "C", "id": "photos", "label": "Offer photos", "trap": true, "crit": "TA", "text": "What a fantastic week it was! Do you want my photos from the slopes? Then send me your home address and your phone number!",
+          "reject": "A blog is public. Never ask readers for addresses or phone numbers. Ask a question for the comments instead.",
+          "rejectDe": "Ein Blog ist öffentlich: Fragt nie nach Adressen oder Telefonnummern. Stellt lieber eine Frage für die Kommentare." }
+      ]
+    },
+    {
+      "id": "title", "slot": "title", "part": "Title",
+      "q": "Our blog post is finished. Which title do we choose?",
+      "de": "Wählt einen Titel, der zum ganzen Blogbeitrag passt.",
+      "options": [
+        { "l": "A", "id": "first", "label": "Say what it is about", "why": "Readers know at once what the post is about.",
+          "text": { "by": "sport", "map": { "ski": "My first week on skis", "board": "My first week on a snowboard" } } },
+        { "l": "B", "id": "fall", "label": "Make them smile", "text": "Wobbly legs, big smile", "why": "A funny title that fits a week with problems and success." },
+        { "l": "C", "id": "help", "label": "A funny cry", "text": "Help! My first time on snow", "why": "Short and funny, and it says what the post is about." }
+      ]
+    }
+  ],
+  "order": ["title", "intro", "day1", "mishap", "success", "end"],
+  "checks": [
+    { "en": "The title fits the whole post" },
+    { "en": "The introduction says where we were" },
+    { "en": "The first day, one thing that went wrong and one success are in the post" },
+    { "en": "Adverbs show how we did things: slowly, carefully, well" },
+    { "en": "The week is told in the past: I fell, I went …" },
+    { "en": "The post ends with a question for the readers" }
+  ],
+  "teacher": {
+    "aim": "Die Klasse schreibt gemeinsam einen Blogbeitrag über die Wintersportwoche (Ski oder Snowboard) und übt Adverbien der Art und Weise (slowly, carefully, well, fast).",
+    "prep": "A/B/C/D-Karten austeilen, Hefte bereitlegen, Beamer im Vollbild. Einsatz ab: Past simple, Present perfect mit just und ever sowie Adverbien der Art und Weise (Adjektiv + -ly; unregelmäßig: well, fast). Bei Bedarf Wörter an die Tafel: slope (Piste), rental shop (Verleih), drag lift (Schlepplift), queue (Warteschlange), pizza (Pflug), knees bent (Knie gebeugt), stiffly (steif), gently (sanft), safely (sicher), calmly (ruhig), high five (Abklatschen).",
+    "heft": "Neue Seite: Datum rechts, „Blog post“ als Überschrift (wie am Beamer). Darunter 2 Zeilen für den Titel frei lassen (er kommt zuletzt), dann Username und Datum in einer Zeile (wie am Beamer). Jeder Absatz beginnt nach einer Leerzeile, am Rand steht der Name des Teils wie am Beamer: Introduction, Day one, What went wrong, What went well, Conclusion. Adverbien grün unterstreichen.",
+    "flow": "Volltext (50 min): 3 min Aufgabe lesen · 7 Entscheidungen (die erste ist eine reine Wahl: Ski oder Snowboard) à ca. 2 min, zusammen ca. 15 min · Die Zahl der Stürze ruft die Klasse bei What went wrong · Abschreiben nach jeder Entscheidung, zusammen ca. 17 min · 5 min Checkliste · 5–8 min Puffer. Den Titel wählt die Klasse am Ende. Wenn die Zeit knapp wird: Checkliste als Hausübung.",
+    "traps": "What went wrong B (CC, Kohärenz und Kohäsion): „Luckily“ leitet eine schlechte Nachricht ein; richtig wäre „Unfortunately“. What went well A (LSA, Sprachrichtigkeit): „turn quite good“ statt „well“ und „really careful“ statt „carefully“. Conclusion C (TA, Erfüllung der Aufgabenstellung): Ein öffentlicher Blog fragt nie nach Adresse oder Telefonnummer, und eine echte Frage für die Kommentare fehlt. Gute Gelegenheit, kurz über Datenschutz im Netz zu sprechen.",
+    "notes": "Nicht alle Kinder fahren Ski oder waren schon auf einer Wintersportwoche; die Geschichte ist erfunden, alle können mitschreiben, ohne eigene Erfahrungen zu erzählen. Kurz wiederholen: Adjektive beschreiben Nomen (a careful skier), Adverbien beschreiben Verben (she skis carefully); good wird zu well, fast bleibt fast. „Pizza“ ist der kindgerechte englische Ausdruck für den Pflug. Differenzierung: Schnelle schreiben zwei Sätze über eine andere Sportart (z. B. Eislaufen), mit zwei Adverbien. Hausübung: ein Kommentar (ca. 50 Wörter) als Antwort auf die Frage am Ende des Blogs, mit mindestens drei Adverbien."
+  }
+}

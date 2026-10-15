@@ -1,0 +1,414 @@
+{
+  "id": "g6-description-class-pet",
+  "title": "A pet for our class",
+  "titleDe": "Ein Tier für unsere Klasse",
+  "grade": 6,
+  "level": "A1+/A2",
+  "theme": "Tiere & Natur",
+  "textType": "description",
+  "modes": [
+    "full"
+  ],
+  "lengths": {
+    "short": {
+      "label": "around 100 words",
+      "min": 85,
+      "max": 115
+    }
+  },
+  "minutes": {
+    "full": {
+      "short": 50
+    }
+  },
+  "task": {
+    "situation": "Your class would like a class pet. Before the class votes, groups suggest real animals that can live happily in a classroom. Your group describes its idea for the class website.",
+    "instruction": "Write a description of the animal your group suggests:",
+    "points": [
+      "what it looks like",
+      "what it can do",
+      "how to look after it",
+      "why it is a good pet for our class"
+    ],
+    "words": {
+      "short": "Give your description a title. Write around 100 words."
+    },
+    "de": "Gemeinsame Beschreibung eines echten Tiers als Klassentier: Aussehen, was es kann, wie man es pflegt (Futter, Sauberkeit, Wochenenden) und warum es zur Klasse passt. Schwerpunkt: has got / hasn’t got und can / can’t. Der Titel kommt zum Schluss."
+  },
+  "meta": {
+    "publication": "Our class website · A pet for our class"
+  },
+  "focus": {
+    "label": "has got / can forms",
+    "labelDe": "Formen von has got / can",
+    "min": {
+      "short": 5
+    },
+    "note": "Marked: every form of has got / have got (also hasn’t got) and every can / can’t."
+  },
+  "topicWords": [
+    "pet",
+    "pets",
+    "animal",
+    "guinea",
+    "pig",
+    "pigs",
+    "stick",
+    "insect",
+    "insects",
+    "zebra",
+    "fish"
+  ],
+  "gaps": [
+    {
+      "id": "NAMES",
+      "step": "intro",
+      "q": "What could we call our new pets? Shout two names with ‘and’.",
+      "qDe": "Ruft zwei Namen für unsere Tiere, verbunden mit and (z. B. Pepper and Salt). Keine Namen von Mitschüler:innen oder Lehrer:innen.",
+      "type": "text",
+      "default": "Pepper and Salt",
+      "max": 30,
+      "minWords": 3
+    }
+  ],
+  "steps": [
+    {
+      "id": "animal",
+      "part": "Our animal",
+      "q": "Which animal do we suggest for our class?",
+      "de": "Hier wählt ihr, welches echte Tier wir als Klassentier vorschlagen.",
+      "options": [
+        {
+          "l": "A",
+          "id": "guinea",
+          "label": "Two guinea pigs",
+          "teaser": "Soft, friendly and always ready for a snack. They never live alone."
+        },
+        {
+          "l": "B",
+          "id": "sticks",
+          "label": "Stick insects",
+          "teaser": "Quiet and easy to miss: they look just like little sticks!"
+        },
+        {
+          "l": "C",
+          "id": "fish",
+          "label": "Zebra fish",
+          "teaser": "Small, fast fish with blue and silver stripes."
+        }
+      ]
+    },
+    {
+      "id": "intro",
+      "slot": "intro",
+      "part": "Introduction",
+      "q": "How do we introduce our idea?",
+      "de": "Der Einstieg stellt unser Tier und unsere Idee vor. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "idea",
+          "label": "Start with our idea",
+          "why": "Clear and friendly: readers learn our idea and the names at once.",
+          "text": {
+            "by": "animal",
+            "map": {
+              "guinea": "We [[have got]] a great idea for a class pet: two guinea pigs! We could call them {NAMES}.",
+              "sticks": "We [[have got]] a great idea for a class pet: stick insects! We could call two of them {NAMES}.",
+              "fish": "We [[have got]] a great idea for a class pet: zebra fish! We could call two of them {NAMES}."
+            }
+          }
+        },
+        {
+          "l": "B",
+          "id": "question",
+          "label": "Ask the readers a question",
+          "why": "A question speaks to the readers and makes them curious.",
+          "text": {
+            "by": "animal",
+            "map": {
+              "guinea": "Would you like a friendly class pet? Then vote for two guinea pigs! We [[can]] call them {NAMES}.",
+              "sticks": "Would you like a quiet class pet? Then vote for stick insects! We [[can]] call two of them {NAMES}.",
+              "fish": "Would you like a colourful class pet? Then vote for zebra fish! We [[can]] call two of them {NAMES}."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "looks",
+      "slot": "looks",
+      "part": "Looks",
+      "q": "How big is it and what does it look like?",
+      "de": "Hier beschreiben wir Größe und Aussehen unseres Tiers. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "numbers",
+          "label": "Exact numbers",
+          "why": "Exact numbers tell readers the real size of the animal.",
+          "text": {
+            "by": "animal",
+            "map": {
+              "guinea": "A guinea pig is about 25 centimetres long. It [[has got]] soft fur and short legs, but it [[hasn’t got]] a tail.",
+              "sticks": "A stick insect is about ten centimetres long. It [[has got]] six thin legs, but it [[hasn’t got]] wings.",
+              "fish": "A zebra fish is only about four centimetres long. It [[has got]] blue and silver stripes from its head to its tail."
+            }
+          }
+        },
+        {
+          "l": "B",
+          "id": "trap",
+          "label": "Why we love them",
+          "trap": true,
+          "crit": "CC",
+          "reject": "The order is wrong: first we describe the animal. Our opinion and our reasons come at the end.",
+          "rejectDe": "Falsche Reihenfolge: Zuerst beschreiben wir das Tier, unsere Meinung kommt ganz am Schluss.",
+          "text": {
+            "by": "animal",
+            "map": {
+              "guinea": "Guinea pigs are the best pets in the world. That is why we love them so much. They have got soft fur.",
+              "sticks": "Stick insects are the best pets in the world. That is why we love them so much. They have got thin legs.",
+              "fish": "Zebra fish are the best pets in the world. That is why we love them so much. They have got stripes."
+            }
+          }
+        },
+        {
+          "l": "C",
+          "id": "compare",
+          "label": "Compare it with things we know",
+          "why": "Things we know help readers to imagine the animal.",
+          "text": {
+            "by": "animal",
+            "map": {
+              "guinea": "A guinea pig is about as heavy as a carton of milk. It [[has got]] small round ears and soft fur.",
+              "sticks": "A stick insect is as long as your finger and looks just like a little twig. It [[has got]] six thin legs.",
+              "fish": "A zebra fish is as long as your little finger. It [[has got]] blue and silver stripes, like a tiny zebra."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "skills",
+      "slot": "skills",
+      "part": "What they can do",
+      "q": "What can our animals do?",
+      "de": "Hier geht es darum, was unsere Tiere können. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "trap",
+          "label": "Can and can’t",
+          "trap": true,
+          "crit": "LSA",
+          "reject": "Two mistakes: no ‘to’ after ‘can’ (can hear, can stand, can swim), and ‘doesn’t can’ → can’t.",
+          "rejectDe": "Zwei Fehler: Nach can steht kein to, und die Verneinung von can heißt can’t, nicht doesn’t can.",
+          "text": {
+            "by": "animal",
+            "map": {
+              "guinea": "A guinea pig can to hear very well. But it doesn’t can climb, so it stays on the floor of its cage.",
+              "sticks": "A stick insect can to stand still for hours. But it doesn’t can fly because it has got no wings.",
+              "fish": "A zebra fish can to swim very fast. But it doesn’t can close its eyes because it has got no eyelids."
+            }
+          }
+        },
+        {
+          "l": "B",
+          "id": "can",
+          "label": "Amazing skills",
+          "why": "Two skills, and each one comes with a little detail.",
+          "text": {
+            "by": "animal",
+            "map": {
+              "guinea": "Guinea pigs [[can]] hear well, and they squeak loudly for food. When they are happy, they [[can]] even jump in the air!",
+              "sticks": "Stick insects [[can]] stand still for hours, so birds [[can’t]] find them. When they are scared, they [[can]] play dead.",
+              "fish": "Zebra fish [[can]] swim very fast and even jump out of the water, so their tank needs a lid!"
+            }
+          }
+        },
+        {
+          "l": "C",
+          "id": "day",
+          "label": "A normal day",
+          "why": "Shows what the animals usually do and one surprising thing they can do.",
+          "text": {
+            "by": "animal",
+            "map": {
+              "guinea": "Guinea pigs are awake during the day. They often take short naps, and they [[can]] even sleep with their eyes open!",
+              "sticks": "During the day, stick insects sit still on a branch. At night, they eat. They [[can]] rock like a twig in the wind.",
+              "fish": "Zebra fish swim around together in a group all day. They [[can’t]] close their eyes because they [[haven’t got]] eyelids!"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "care",
+      "slot": "care",
+      "part": "Looking after them",
+      "q": "How do we look after our animals?",
+      "de": "Hier geht es darum, wie wir uns um unsere Tiere kümmern. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "needs",
+          "label": "What they need",
+          "why": "Lists what the animals need, so readers see that we know our animals well.",
+          "text": {
+            "by": "animal",
+            "map": {
+              "guinea": "They need a big cage and fresh hay, water and vegetables every day. At weekends, a family [[can]] take them home.",
+              "sticks": "They need a tall tank and fresh blackberry leaves with a little water on them. At weekends, they [[can]] stay alone.",
+              "fish": "They need a big tank with a filter and a heater. We [[can]] feed them twice a day, but only a little!"
+            }
+          }
+        },
+        {
+          "l": "B",
+          "id": "plan",
+          "label": "A care plan",
+          "why": "Says who does what and when. That shows we are ready for a pet.",
+          "text": {
+            "by": "animal",
+            "map": {
+              "guinea": "Every morning, two of us give them hay, water and vegetables. On Fridays, we clean the cage, and at weekends a family [[can]] take them home.",
+              "sticks": "On Mondays, two of us put fresh blackberry leaves into the tank. Every day, we spray them with water. The insects [[can]] drink the drops.",
+              "fish": "Every morning, two of us feed them. On Fridays, we change some of the water, and in the holidays an automatic feeder [[can]] help."
+            }
+          }
+        },
+        {
+          "l": "C",
+          "id": "trap",
+          "label": "A pet we know",
+          "trap": true,
+          "crit": "TA",
+          "reject": "Off topic! This is about a cousin’s dog, not about how to look after our class pet.",
+          "rejectDe": "Thema verfehlt: Hier geht es um einen Hund in der Verwandtschaft, nicht um die Pflege unseres Klassentiers.",
+          "text": "My cousin has got a dog called Rex. Every day, they go for a long walk in the park, and Rex always brings his ball."
+        }
+      ]
+    },
+    {
+      "id": "fit",
+      "slot": "fit",
+      "part": "Why they fit",
+      "q": "Why is our animal a good pet for our class? How do we end?",
+      "de": "Der Schluss sagt, warum unser Tier gut zur Klasse passt. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "reasons",
+          "label": "Our reasons",
+          "why": "Starts with a question, then gives our best reasons.",
+          "text": {
+            "by": "animal",
+            "map": {
+              "guinea": "Why are guinea pigs right for us? They are friendly, and everybody [[can]] help to look after them.",
+              "sticks": "Why are stick insects right for us? They are quiet, they need very little space, and they [[can’t]] hurt anybody.",
+              "fish": "Why are zebra fish right for us? They are fun to watch, and children with allergies [[can]] enjoy them too."
+            }
+          }
+        },
+        {
+          "l": "B",
+          "id": "promise",
+          "label": "Make a promise",
+          "why": "A promise shows that we take the job seriously and ends with a clear request.",
+          "text": {
+            "by": "animal",
+            "map": {
+              "guinea": "What do you think? Guinea pigs are friendly, and we [[can]] look after them, we promise! Please vote for our idea.",
+              "sticks": "What do you think? Stick insects are quiet, and we [[can]] look after them, we promise! Please vote for our idea.",
+              "fish": "What do you think? Zebra fish are fun to watch, and we [[can]] look after them, we promise! Please vote for our idea."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "title",
+      "slot": "title",
+      "part": "Title",
+      "q": "Our description is finished. Which title do we choose?",
+      "de": "Zum Schluss wählen wir den Titel unserer Beschreibung.",
+      "options": [
+        {
+          "l": "A",
+          "id": "clear",
+          "label": "Say what we suggest",
+          "why": "Clear: readers know at once what our group suggests.",
+          "text": {
+            "by": "animal",
+            "map": {
+              "guinea": "Two Guinea Pigs for Our Class",
+              "sticks": "Stick Insects for Our Class",
+              "fish": "Zebra Fish for Our Class"
+            }
+          }
+        },
+        {
+          "l": "B",
+          "id": "fun",
+          "label": "A funny title",
+          "why": "Short and funny: it shows the best thing about our animals.",
+          "text": {
+            "by": "animal",
+            "map": {
+              "guinea": "Small, Soft and Always Hungry",
+              "sticks": "Now You See Them, Now You Don’t",
+              "fish": "Stripes in Our Classroom"
+            }
+          }
+        },
+        {
+          "l": "C",
+          "id": "vote",
+          "label": "Talk to the readers",
+          "why": "Speaks to the readers and asks them to do something.",
+          "text": "Vote for Our New Class Pets!"
+        }
+      ]
+    }
+  ],
+  "order": [
+    "title",
+    "intro",
+    "looks",
+    "skills",
+    "care",
+    "fit"
+  ],
+  "checks": [
+    {
+      "en": "A title that makes readers curious"
+    },
+    {
+      "en": "Looks: numbers or comparisons (as long as …)"
+    },
+    {
+      "en": "We use has got / hasn’t got for looks and can / can’t for what the animals can do"
+    },
+    {
+      "en": "How to look after them: their home and their food"
+    },
+    {
+      "en": "Our reasons and our opinion come at the end"
+    },
+    {
+      "en": "Present simple: what the animals are like and what they usually do"
+    },
+    {
+      "en": "Only our animal: no other topics"
+    }
+  ],
+  "teacher": {
+    "aim": "Die Klasse beschreibt gemeinsam ein echtes Tier, das sie als Klassentier vorschlägt (Aussehen, Fähigkeiten, Pflege, warum es passt), und verwendet dabei has got / hasn’t got und can / can’t.",
+    "prep": "A/B/C/D-Karten austeilen. Beamer im Vollbild. Optional: Fotos von Meerschweinchen, Stabschrecken und Zebrabärblingen. Einsatz ab: has got / have got mit Verneinung, can / can’t, Present simple. Bei Bedarf Wörter an die Tafel: allergies (Allergien), eyelids (Augenlider), stripes (Streifen).",
+    "heft": "Neue Seite: Datum (rechts) und „Description“ als Überschrift (wie am Beamer), darunter 2 Zeilen für den Titel frei lassen. Jeder Absatz beginnt nach einer Leerzeile, am Rand steht der Name des Teils wie am Beamer: Introduction, Looks, What they can do, Looking after them, Why they fit. has got und can am Ende grün unterstreichen. Wer will, zeichnet das Tier daneben.",
+    "flow": "Volltext (50 min): 3 min Aufgabe und Tier wählen · 6 weitere Entscheidungen à ca. 2 min, zusammen ca. 13 min · Abschreiben nach jeder Entscheidung, zusammen ca. 20 min · 5 min Checkliste und Markierungen zählen · 9 min Puffer oder Gespräch: Welche Tiere passen nicht ins Klassenzimmer (z. B. Hamster, die tagsüber schlafen)?",
+    "traps": "Looks B (CC, Kohärenz und Kohäsion): Meinung am Anfang, falsche Reihenfolge. What they can do A (LSA, Sprachrichtigkeit): can to hear statt can hear, doesn’t can statt can’t. Looking after them C (TA, Erfüllung der Aufgabenstellung): Thema verfehlt, Hund aus der Verwandtschaft statt Pflege unseres Klassentiers.",
+    "notes": "Die Sachangaben sind vereinfacht, aber richtig: Meerschweinchen sind Gruppentiere und dürfen laut österreichischem Tierschutzrecht nicht allein gehalten werden; sie brauchen viel Platz, täglich Heu, Wasser und Frischfutter. Indische Stabschrecken sind nachtaktiv, fressen Brombeerblätter und brauchen ein hohes Terrarium; ihre Eier dürfen nicht in die Natur gelangen. Zebrabärblinge leben in Gruppen, springen gern (Deckel!) und brauchen Filter und regelmäßigen Teilwasserwechsel. Ein echtes Klassentier braucht die Zustimmung der Schulleitung, eine Lösung für Wochenenden und Ferien und Rücksicht auf Allergien. Die zwei Namen ruft die Klasse; bei Fischen und Stabschrecken heißen eben zwei der Tiere so. Differenzierung: Schnelle legen einen Steckbrief an (Size, Food, Can, Can’t). Hausübung: eine zweite Fassung mit einem anderen Tier. Die Einheit wiederholt has got und can aus der 1. Klasse; gut geeignet für den Schulbeginn in der 2. Klasse."
+  }
+}

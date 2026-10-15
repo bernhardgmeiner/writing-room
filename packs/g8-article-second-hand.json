@@ -1,0 +1,313 @@
+{
+  "id": "g8-article-second-hand",
+  "title": "Old clothes, new trend",
+  "titleDe": "Secondhand als Trend",
+  "grade": 8,
+  "level": "A2+",
+  "theme": "Gesellschaft & Zusammenleben",
+  "textType": "article",
+  "modes": [
+    "full"
+  ],
+  "lengths": {
+    "short": {
+      "label": "around 150 words",
+      "min": 135,
+      "max": 165
+    }
+  },
+  "minutes": {
+    "full": {
+      "short": 50
+    }
+  },
+  "task": {
+    "situation": "Your school magazine has a series called ‘Style talk’. This month it is about second-hand and retro clothes. Your class asked 120 students at your school about this trend. The results (an invented example):\n• 78 have bought second-hand clothes in the last year.\n• 54 think that styles from the 1990s are cool.\n• 30 have worn clothes from their parents’ or grandparents’ wardrobes.\n• 12 say that second-hand clothes are not for them.",
+    "instruction": "Write an article for the school magazine. In your article:",
+    "points": [
+      "describe the trend and say why students like it",
+      "report the results of the class survey",
+      "quote a student and end with a message to your readers"
+    ],
+    "words": {
+      "short": "Write around 150 words."
+    },
+    "de": "Artikel für die Schulzeitung über einen Modetrend: Secondhand- und Retro-Kleidung. Beschreibt den Trend und warum er beliebt ist, berichtet über die Umfrage, zitiert eine:n Schüler:in und sprecht am Schluss die Leser:innen an. Der Titel kommt zuletzt."
+  },
+  "meta": {
+    "publication": "School magazine · Style talk"
+  },
+  "focus": {
+    "label": "linking words (addition and contrast)",
+    "labelDe": "Linking words: Hinzufügen und Gegensatz",
+    "min": {
+      "short": 5
+    },
+    "note": "Marked: linking words that add an idea or show a contrast (and and but between two clauses, in addition, what is more, however, on the other hand, in contrast, still). Not marked: ‘and’ in lists or short phrases (‘comes and goes’), linkers for reasons, results, order or summing up (so, because, that is why, all in all, in the end), and ‘so’ meaning ‘very’."
+  },
+  "topicWords": [
+    "second-hand",
+    "clothes",
+    "trend",
+    "students",
+    "styles",
+    "second",
+    "hand",
+    "1990s"
+  ],
+  "gaps": [
+    {
+      "id": "NAME",
+      "step": "voices",
+      "q": "Which student do we quote? First name only.",
+      "qDe": "Ruft einen erfundenen Vornamen für die Person, die wir zitieren. Keine Namen von Mitschüler:innen oder Lehrer:innen.",
+      "type": "text",
+      "default": "Lena",
+      "max": 20
+    },
+    {
+      "id": "AGE",
+      "step": "voices",
+      "q": "How old is the student?",
+      "qDe": "Wie alt ist die Person? Ruft ein Alter zwischen 10 und 18.",
+      "type": "number",
+      "default": 14,
+      "min": 10,
+      "max": 18
+    }
+  ],
+  "steps": [
+    {
+      "id": "intro",
+      "slot": "intro",
+      "part": "Introduction",
+      "q": "How do we open the article?",
+      "de": "Mit der Einleitung beginnt unser Artikel. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "question",
+          "label": "Ask the readers a question",
+          "text": "Where did you get your favourite jacket? At a flea market? Then you are part of a big trend. For years, second-hand clothes were not cool, [[but]] now they are everywhere.",
+          "why": "A question speaks to readers directly, and ‘but’ shows how the trend has changed."
+        },
+        {
+          "l": "B",
+          "id": "scene",
+          "label": "Start with a picture",
+          "text": "Baggy jeans and old band T-shirts: if you walk through our school, you might think it is 1995. Second-hand fashion is back, [[but]] why do so many students love it?",
+          "why": "Readers can see the trend in front of them, and the last question makes them read on."
+        },
+        {
+          "l": "C",
+          "id": "number",
+          "label": "Start with a number",
+          "text": "One pair of jeans, three owners, thirty years: some clothes have a very long life. Second-hand shopping is more popular than ever, [[and]] many students at our school love it too.",
+          "why": "A surprising detail makes readers curious, and ‘and’ adds that the trend has reached our school."
+        }
+      ]
+    },
+    {
+      "id": "trend",
+      "slot": "trend",
+      "part": "Body 1",
+      "q": "What is the trend, and why do students like it?",
+      "de": "Der erste Hauptteil beschreibt den Trend und warum er beliebt ist. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "trap",
+          "label": "Bargains and style",
+          "trap": true,
+          "crit": "CC",
+          "text": "Second-hand clothes are very cheap, and you can find real bargains at flea markets or online. However, nobody else has exactly the same piece, so your style will be unique.",
+          "reject": "‘However’ shows a contrast. But cheap clothes and a unique style are both good points. Use a linker for adding, e.g. ‘What is more’.",
+          "rejectDe": "However zeigt einen Gegensatz, aber hier kommen zwei Vorteile hintereinander. Dafür braucht ihr ein Linking word, das etwas hinzufügt, z. B. What is more."
+        },
+        {
+          "l": "B",
+          "id": "price",
+          "label": "Price and style",
+          "text": "Teenagers like second-hand clothes for two reasons. They are cheap: a shirt from a charity shop often costs less than a pizza. [[What is more,]] nobody else has exactly the same piece.",
+          "why": "Two clear reasons, and ‘What is more’ adds the second one."
+        },
+        {
+          "l": "C",
+          "id": "planet",
+          "label": "Good for the planet",
+          "text": "There is a good reason for this trend. Making new clothes uses a lot of water and energy. Used clothes, [[on the other hand,]] already exist. That is why many young people choose them.",
+          "why": "Explains the reason, and ‘on the other hand’ compares new and used clothes."
+        }
+      ]
+    },
+    {
+      "id": "survey",
+      "slot": "survey",
+      "part": "Body 2",
+      "q": "How do we report the survey results?",
+      "de": "Der zweite Hauptteil berichtet über die Ergebnisse unserer Umfrage. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "big",
+          "label": "Biggest number first",
+          "text": "Almost two thirds of the 120 students we asked have bought used clothes in the past year, [[and]] nearly half like 1990s styles. [[However,]] one in ten says second-hand clothes are not for them.",
+          "why": "Starts with the biggest result, then ‘However’ shows the other side."
+        },
+        {
+          "l": "B",
+          "id": "surprise",
+          "label": "Start with a surprise",
+          "text": "Here is a surprise: a quarter of the 120 students we asked have worn their parents’ or grandparents’ clothes. [[In addition,]] almost two thirds have bought something second-hand in the past year.",
+          "why": "A surprising result first catches the reader, and then ‘In addition’ adds more."
+        },
+        {
+          "l": "C",
+          "id": "compare",
+          "label": "Compare two results",
+          "text": "Only 12 of the 120 students we asked say used clothes are not for them. [[In contrast,]] 78 have bought some in the past year: the trend is a hit.",
+          "why": "Compares a small and a big number, and ‘In contrast’ shows the difference."
+        },
+        {
+          "l": "D",
+          "id": "trap",
+          "label": "The results one by one",
+          "trap": true,
+          "crit": "LSR",
+          "text": "We asked 120 students. 78 have bought second-hand clothes in the last year. 54 think that styles from the 1990s are cool. 12 say that second-hand clothes are not for them.",
+          "reject": "These sentences are copied from the task word for word. Report the results in your own words, e.g. ‘almost two thirds’ or ‘one in ten’.",
+          "rejectDe": "Diese Sätze sind wörtlich aus der Aufgabe abgeschrieben. Gebt die Ergebnisse mit eigenen Worten wieder, z. B. almost two thirds oder one in ten."
+        }
+      ]
+    },
+    {
+      "id": "voices",
+      "slot": "voices",
+      "part": "Body 3",
+      "q": "Which student do we quote?",
+      "de": "Im dritten Hauptteil zitieren wir jemanden aus unserer Schule. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "fan",
+          "label": "A big fan",
+          "text": "“I love hunting for special pieces at flea markets,” says {NAME}, {AGE}. “Sometimes my grandma comes with me, [[but]] my dad prefers new things!”",
+          "why": "A lively quote: “…,” says + name + age, and ‘but’ shows a contrast inside the family."
+        },
+        {
+          "l": "B",
+          "id": "doubts",
+          "label": "A student with doubts",
+          "text": "Not everybody is a fan. “I once bought an old leather jacket online, [[but]] it smelt terrible,” says {NAME}, {AGE}. “Now I only buy clothes I can wash.”",
+          "why": "Shows the other side of the trend, and ‘but’ shows what went wrong."
+        },
+        {
+          "l": "C",
+          "id": "trap",
+          "label": "A student with a problem",
+          "trap": true,
+          "crit": "LSA",
+          "text": "“Most of my friends only buy new clothes,” says {NAME}, {AGE}. “My mum say old jeans look boring, but I like very much my jeans. They are so comfortable!”",
+          "reject": "Two mistakes: ‘My mum say’ (→ My mum says) and ‘I like very much my jeans’ (→ I like my jeans very much).",
+          "rejectDe": "Zwei typische Fehler: bei he/she/it ein -s (my mum says), und very much steht am Ende: I like my jeans very much."
+        }
+      ]
+    },
+    {
+      "id": "end",
+      "slot": "end",
+      "part": "Conclusion",
+      "q": "How do we end the article?",
+      "de": "Im Schluss sprechen wir die Leser:innen direkt an. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "tip",
+          "label": "Give the readers a tip",
+          "text": "All in all, shopping second-hand is more than a trend: it saves money, [[and]] it makes every outfit special. Why not ask your friends to swap clothes with you or visit a second-hand shop?",
+          "why": "‘All in all’ sums up, ‘and’ adds a second point, and ‘Why not …?’ talks to the readers."
+        },
+        {
+          "l": "B",
+          "id": "opinion",
+          "label": "Ask for the readers’ opinion",
+          "text": "In the end, every trend comes and goes, [[and]] nobody knows how long this one will last. What do you think, dear readers? Is second-hand cool or old-fashioned? Send us your opinion!",
+          "why": "Invites the readers to answer: a good ending for a magazine article."
+        },
+        {
+          "l": "C",
+          "id": "future",
+          "label": "Look into the future",
+          "text": "Will we wear retro fashion in ten years? Nobody knows. [[Still,]] one thing is clear: old clothes are far from boring. Dear readers, ask your parents to show you their wardrobe before you go shopping!",
+          "why": "A look into the future, then ‘Still’ leads to a clear message for the readers."
+        }
+      ]
+    },
+    {
+      "id": "title",
+      "slot": "title",
+      "part": "Title",
+      "q": "Our article is finished. Which title do we choose?",
+      "de": "Zum Schluss wählen wir den Titel unseres Artikels.",
+      "options": [
+        {
+          "l": "A",
+          "id": "short",
+          "label": "Short and clear",
+          "text": "Old clothes, new trend",
+          "why": "Short, and the contrast ‘old’ and ‘new’ makes readers curious."
+        },
+        {
+          "l": "B",
+          "id": "cool",
+          "label": "A strong statement",
+          "text": "Second-hand is the new cool",
+          "why": "A strong statement that gives the main idea of our article."
+        },
+        {
+          "l": "C",
+          "id": "question",
+          "label": "A question",
+          "text": "Would you wear your dad’s old jacket?",
+          "why": "A question speaks to the readers and makes them smile."
+        }
+      ]
+    }
+  ],
+  "order": [
+    "title",
+    "intro",
+    "trend",
+    "survey",
+    "voices",
+    "end"
+  ],
+  "checks": [
+    {
+      "en": "A title that catches the readers’ attention"
+    },
+    {
+      "en": "An introduction with a hook"
+    },
+    {
+      "en": "The survey results in our own words, not copied from the task"
+    },
+    {
+      "en": "A quote from a student: “…,” says + name + age"
+    },
+    {
+      "en": "Linking words that fit the logic: however and on the other hand for a contrast, in addition and what is more for adding"
+    },
+    {
+      "en": "A conclusion that talks to the readers"
+    }
+  ],
+  "teacher": {
+    "aim": "Die Klasse baut gemeinsam einen Artikel für die Schulzeitung über Secondhand- und Retro-Mode mit einer erfundenen Klassenumfrage und übt dabei Linking words zum Hinzufügen (and, in addition, what is more) und für Gegensätze (but, however, on the other hand, in contrast, still).",
+    "prep": "A/B/C/D-Karten austeilen, Beamer im Vollbild, Timer bereithalten. Vor dem Start die Umfragezahlen kurz besprechen und an die Tafel schreiben: 78 von 120 = almost two thirds, 54 = nearly half, 30 = a quarter, 12 = one in ten. Bei Bedarf Wörter an die Tafel: charity shop (Secondhandladen für einen guten Zweck), flea market (Flohmarkt), bargain (Schnäppchen), swap (tauschen), wardrobe (Kleiderschrank), leather (Leder), hunt for (suchen nach), unique (einzigartig), baggy (weit, locker), still (trotzdem). Einsatz ab: Present perfect (have bought), die Linking words and, but und however.",
+    "heft": "Neue Seite: Datum rechts oben, darunter „Article“ als Überschrift (wie am Beamer). Dann 2 Zeilen für den Titel frei lassen, der Titel kommt zuletzt. Jeder Absatz beginnt nach einer Leerzeile, am Rand steht der Name des Teils wie am Beamer: Introduction, Body 1, Body 2, Body 3, Conclusion. Linking words zum Hinzufügen und für Gegensätze grün unterstreichen.",
+    "flow": "Volltext (50 min): 5 min Aufgabe lesen und Umfragezahlen besprechen · 6 Entscheidungen à ca. 2–3 min, zusammen ca. 15 min · Abschreiben nach jeder Entscheidung, zusammen ca. 20 min · 5 min Checkliste · 5 min Puffer. Wenn die Zeit knapp wird: Checkliste als Hausübung.",
+    "traps": "Body 1 A (CC, Kohärenz und Kohäsion): However ohne Gegensatz, zwei Vorteile werden verbunden. Body 2 D (LSR, Spektrum sprachlicher Mittel): Umfragezahlen wörtlich aus der Aufgabe abgeschrieben. Body 3 C (LSA, Sprachrichtigkeit): „My mum say“ statt „My mum says“ (3. Person -s) und „I like very much my jeans“ statt „I like my jeans very much“ (Wortstellung).",
+    "notes": "Die Umfrage ist erfunden und in der Aufgabe als Beispiel gekennzeichnet; dass bei der Herstellung neuer Kleidung viel Wasser und Energie verbraucht wird, stimmt allgemein. Markiert werden nur Linking words zum Hinzufügen und für Gegensätze: and und but nur zwischen zwei Sätzen, nicht in Aufzählungen („jeans, jackets and T-shirts“) und nicht in festen Wendungen („comes and goes“). So, because, that is why, all in all und in the end (Grund, Folge, Zusammenfassung) bleiben unmarkiert. Das kann man am Ende mit der Taste P (markierte Wörter ein/aus) gut besprechen. Für die Namenslücke nur erfundene Vornamen, keine Namen von Mitschüler:innen oder Lehrer:innen. Differenzierung: Schnelle schreiben einen Satz über ein Umfrageergebnis, das im gewählten Absatz fehlt (z. B. a quarter … oder nearly half …), und verbinden ihn mit in addition oder however. Hausübung: eigene Mini-Umfrage in der Klasse zu einem anderen Trend (z. B. Sneaker, Frisuren) und ein Absatz (ca. 50 Wörter) mit drei Linking words zum Hinzufügen und für Gegensätze."
+  }
+}

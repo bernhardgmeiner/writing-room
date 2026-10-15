@@ -1,0 +1,371 @@
+{
+  "id": "g7-blog-cooking-day",
+  "title": "Our class cooking day",
+  "titleDe": "Der Kochtag der Klasse",
+  "grade": 7,
+  "level": "A2",
+  "theme": "Essen & Gesundheit",
+  "textType": "blog",
+  "modes": [
+    "full"
+  ],
+  "lengths": {
+    "short": {
+      "label": "around 120 words",
+      "min": 105,
+      "max": 135
+    }
+  },
+  "minutes": {
+    "full": {
+      "short": 50
+    }
+  },
+  "task": {
+    "situation": "Yesterday, your class had a cooking day in the school kitchen. Everybody helped, and a few things went wrong, too. Now you are writing a post for your class blog.",
+    "instruction": "Write a blog post. In your post:",
+    "points": [
+      "say what you cooked and how you made it",
+      "tell readers about something that went wrong",
+      "give tips to readers who want to cook",
+      "end with a question for your readers"
+    ],
+    "words": {
+      "short": "Write around 120 words."
+    },
+    "de": "Ein Blogbeitrag über den Kochtag der Klasse: was ihr gekocht habt und wie, was schiefgegangen ist, Tipps für andere und eine Frage an die Leser:innen. Zuerst wählt ihr das Gericht, der Titel kommt zuletzt."
+  },
+  "meta": {
+    "user": "messy_aprons"
+  },
+  "focus": {
+    "label": "if-clauses (type 1) and should",
+    "labelDe": "if-Sätze (Typ 1) und should",
+    "min": {
+      "short": 3
+    },
+    "note": "Marked: every if-clause of type 1 (the part with ‘if’, up to the comma) and every should / shouldn’t with its verb. Not marked: will / won’t in the main clause."
+  },
+  "topicWords": [
+    "cooking",
+    "cook",
+    "kitchen",
+    "recipe",
+    "dish",
+    "flour",
+    "class"
+  ],
+  "gaps": [
+    {
+      "id": "N",
+      "step": "intro",
+      "q": "How many students are in our class? Shout a number.",
+      "qDe": "Wie viele Schüler:innen seid ihr in der Klasse? Ruft die Zahl.",
+      "type": "number",
+      "default": 22,
+      "min": 10,
+      "max": 30
+    }
+  ],
+  "steps": [
+    {
+      "id": "dish",
+      "part": "Our dish",
+      "q": "Which dish did we cook on our cooking day?",
+      "de": "Hier wählt ihr das Gericht, um das es in unserem Blogbeitrag geht.",
+      "options": [
+        {
+          "l": "A",
+          "id": "pizza",
+          "label": "Veggie pizza",
+          "teaser": "Homemade dough, tomato sauce, lots of vegetables and cheese."
+        },
+        {
+          "l": "B",
+          "id": "kaiser",
+          "label": "Kaiserschmarrn",
+          "teaser": "A sweet Austrian pancake, cut into pieces, with apple sauce."
+        },
+        {
+          "l": "C",
+          "id": "dal",
+          "label": "Dal with flatbreads",
+          "teaser": "An Indian lentil dish with warm homemade flatbreads."
+        }
+      ]
+    },
+    {
+      "id": "intro",
+      "slot": "intro",
+      "part": "Introduction",
+      "q": "How do we start our blog post?",
+      "de": "In der Einleitung erfahren die Leser:innen, worum es im Beitrag geht. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "question",
+          "label": "Start with a question",
+          "text": "Have you ever cooked lunch with your whole class? Yesterday, all {N} of us spent the morning in the school kitchen.",
+          "why": "A question makes readers think, and we say when and where it happened."
+        },
+        {
+          "l": "B",
+          "id": "smell",
+          "label": "Start with a smell",
+          "text": "Wow, the school kitchen has never smelt so good! Yesterday, all {N} of us cooked lunch there. It was our first class cooking day.",
+          "why": "The smell makes the scene come alive, and readers want to know more."
+        },
+        {
+          "l": "C",
+          "id": "warning",
+          "label": "Start with a warning",
+          "text": "Warning: this post will make you hungry! Yesterday was our class cooking day, and all {N} of us cooked lunch together.",
+          "why": "A funny warning catches the reader’s eye."
+        }
+      ]
+    },
+    {
+      "id": "recipe",
+      "slot": "recipe",
+      "part": "The recipe",
+      "q": "How do we describe our recipe?",
+      "de": "Hier erfahren die Leser:innen, was wir gekocht haben und wie. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "story",
+          "label": "Tell it as a story",
+          "text": {
+            "by": "dish",
+            "map": {
+              "pizza": "We made veggie pizzas. First, we mixed flour, water and yeast for the dough. Then we put tomato sauce, peppers and cheese on top and baked the pizzas.",
+              "kaiser": "We made Kaiserschmarrn, a sweet Austrian pancake. First, we mixed eggs, flour and milk. Then we fried the batter, cut it into pieces and served it with apple sauce.",
+              "dal": "We made dal, an Indian dish with lentils. First, we cooked the lentils with onions, tomatoes and spices. Then we made flatbreads and fried them in a pan."
+            }
+          },
+          "why": "We tell readers what we did in the right order, with first and then."
+        },
+        {
+          "l": "B",
+          "id": "recipe",
+          "label": "Write it as a recipe",
+          "text": {
+            "by": "dish",
+            "map": {
+              "pizza": "Our recipe: veggie pizza. Mix flour, water and yeast. [[If the dough rests for an hour]], it will rise. Then add tomato sauce, vegetables and cheese, and bake it.",
+              "kaiser": "Our recipe: Kaiserschmarrn, a sweet Austrian pancake. Mix eggs, flour and milk, fry the batter and cut it up. [[If you add some raisins]], it will taste even better.",
+              "dal": "Our recipe: dal, an Indian lentil dish. Fry an onion, then add lentils, tomatoes, spices and water. [[If you cook it slowly]], it will be creamy. Serve it with flatbreads."
+            }
+          },
+          "why": "Readers can cook it at home, and the if-clause gives them a useful tip."
+        },
+        {
+          "l": "C",
+          "id": "steps",
+          "label": "What we did",
+          "trap": true,
+          "crit": "CC",
+          "text": {
+            "by": "dish",
+            "map": {
+              "pizza": "Our dish was veggie pizza. We baked the pizzas in a hot oven. We made the dough from flour, water and yeast, and we put tomato sauce, peppers and cheese on top.",
+              "kaiser": "Our dish was Kaiserschmarrn, a sweet Austrian pancake. We served it with apple sauce. We mixed eggs, flour and milk, and we fried the batter and cut it into pieces.",
+              "dal": "Our dish was dal, an Indian lentil dish. We ate it with warm flatbreads. We cooked lentils, onions and spices in a big pot, and we fried the flatbreads in a pan."
+            }
+          },
+          "reject": "The steps are in the wrong order: the end comes first. Tell them in the right order with First, Then and Finally.",
+          "rejectDe": "Die Schritte stehen in der falschen Reihenfolge, und es fehlen Reihenfolge-Wörter wie First, Then und Finally."
+        }
+      ]
+    },
+    {
+      "id": "chaos",
+      "slot": "chaos",
+      "part": "The chaos",
+      "q": "What went wrong on our cooking day?",
+      "de": "Hier erzählen wir, was beim Kochen schiefgegangen ist. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "flour",
+          "label": "A cloud of flour",
+          "text": "Not everything went to plan. When one of us opened a new bag of flour, a white cloud flew across the kitchen. We all looked like ghosts!",
+          "why": "A funny picture makes readers laugh, and ‘when’ shows exactly what happened."
+        },
+        {
+          "l": "B",
+          "id": "busy",
+          "label": "Too many cooks",
+          "text": "The kitchen is small, so it got really busy. Everybody wanted to help at once, and three people were using the same spoon!",
+          "why": "A funny detail shows how busy the kitchen was."
+        },
+        {
+          "l": "C",
+          "id": "alarm",
+          "label": "The smoke alarm",
+          "text": "Suddenly, the smoke alarm went off! One group was telling jokes, and nobody was watching the food. Luckily, our second try was perfect.",
+          "why": "The past progressive explains why the food got burnt, and the ending is happy."
+        },
+        {
+          "l": "D",
+          "id": "floor",
+          "label": "On the floor",
+          "trap": true,
+          "crit": "LSA",
+          "text": "There was some chaos, too. Too much people were in the kitchen at the same time, and somebody dropped a bread on the floor.",
+          "reject": "Two mistakes: it is ‘too many people’, and we say ‘some bread’ or ‘a loaf of bread’, not ‘a bread’.",
+          "rejectDe": "Zwei Fehler: „too many people“ statt „too much people“, und „bread“ ist nicht zählbar: „some bread“ oder „a loaf of bread“."
+        }
+      ]
+    },
+    {
+      "id": "tips",
+      "slot": "tips",
+      "part": "Our tips",
+      "q": "Which tips do we give our readers?",
+      "de": "Hier geben wir den Leser:innen Tipps für ihren eigenen Kochtag. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "apron",
+          "label": "Clean clothes, clean hands",
+          "trap": true,
+          "crit": "LSA",
+          "text": "Our top tip: wear an apron! If you will wear one, your clothes won’t get dirty. And you should to wash your hands before you start.",
+          "reject": "Two mistakes: no ‘will’ after ‘if’ (If you wear one …) and no ‘to’ after ‘should’ (you should wash …).",
+          "rejectDe": "Zwei Fehler: Nach „if“ steht kein „will“ (If you wear one …), und nach „should“ steht kein „to“ (you should wash …)."
+        },
+        {
+          "l": "B",
+          "id": "plan",
+          "label": "Plan before you cook",
+          "text": "Read the whole recipe before you start. [[If everything is ready on the table]], you won’t forget anything. And you [[should always set]] a timer!",
+          "why": "Clear tips: the if-clause says what will happen, and should gives advice."
+        },
+        {
+          "l": "C",
+          "id": "clean",
+          "label": "Clean as you go",
+          "text": "Cooking with your class? You [[should wash up]] while you wait for the food. [[If you do that]], you will have more time to eat!",
+          "why": "A short question speaks to readers, and then the tip and the reason follow."
+        },
+        {
+          "l": "D",
+          "id": "jobs",
+          "label": "Give everyone a job",
+          "text": "You [[should give]] everybody one job. [[If everyone knows what to do]], nobody will stand around, and the food will be ready on time.",
+          "why": "Good advice for teamwork, and the if-clause shows the result."
+        }
+      ]
+    },
+    {
+      "id": "ending",
+      "slot": "ending",
+      "part": "Conclusion",
+      "q": "How do we end our blog post?",
+      "de": "Im Schluss sprechen wir die Leser:innen direkt an. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "photo",
+          "label": "Ask for photos",
+          "text": "[[If you try our recipe at home]], send us a photo! What [[should we cook]] next? Tell us in the comments!",
+          "why": "Readers get two reasons to write a comment."
+        },
+        {
+          "l": "B",
+          "id": "zoo",
+          "label": "Look ahead",
+          "trap": true,
+          "crit": "TA",
+          "text": "Tomorrow, our class is going to the zoo, and I can’t wait! I am going to take lots of photos there. See you soon!",
+          "reject": "This is about a different day, and there is no question for the readers. Stay with our cooking day and ask a question.",
+          "rejectDe": "Das passt nicht zum Thema, und es gibt keine Frage an die Leser:innen. Der Schluss bleibt beim Kochtag und stellt eine Frage."
+        },
+        {
+          "l": "C",
+          "id": "favourite",
+          "label": "Ask about favourite dishes",
+          "text": "Now it’s your turn: what is your favourite dish? [[If you write it in the comments]], we might cook it next time!",
+          "why": "A direct question invites readers to join in."
+        },
+        {
+          "l": "D",
+          "id": "ideas",
+          "label": "Ask for ideas",
+          "text": "Next month, we are going to cook again. What [[should we make]]? Leave your ideas in the comments!",
+          "why": "Readers can help us plan the next cooking day."
+        }
+      ]
+    },
+    {
+      "id": "title",
+      "slot": "title",
+      "part": "Title",
+      "q": "Our blog post is finished. Which title do we choose?",
+      "de": "Zum Schluss wählen wir den Titel unseres Blogbeitrags.",
+      "options": [
+        {
+          "l": "A",
+          "id": "chefs",
+          "label": "Short and fun",
+          "text": "Chefs for a day",
+          "why": "Short and fun, and it fits the whole post."
+        },
+        {
+          "l": "B",
+          "id": "messy",
+          "label": "Our day in three words",
+          "text": "Messy but delicious",
+          "why": "It sums up our day: some chaos, but great food."
+        },
+        {
+          "l": "C",
+          "id": "number",
+          "label": "A number",
+          "text": "{N} cooks, one kitchen",
+          "why": "The number makes readers curious."
+        }
+      ]
+    }
+  ],
+  "order": [
+    "title",
+    "intro",
+    "recipe",
+    "chaos",
+    "tips",
+    "ending"
+  ],
+  "checks": [
+    {
+      "en": "The title fits the whole post"
+    },
+    {
+      "en": "The introduction says when and where we cooked"
+    },
+    {
+      "en": "The recipe is easy to follow, and the steps are in the right order"
+    },
+    {
+      "en": "We tell readers about one thing that went wrong"
+    },
+    {
+      "en": "The tips use if-clauses and should: If you …, you will / won’t …"
+    },
+    {
+      "en": "No ‘will’ after ‘if’ and no ‘to’ after ‘should’"
+    },
+    {
+      "en": "The post ends with a question for the readers"
+    }
+  ],
+  "teacher": {
+    "aim": "Die Klasse schreibt gemeinsam einen Blogbeitrag über einen Kochtag der Klasse (Rezept, Chaos, Tipps) und übt dabei if-Sätze vom Typ 1 und should / shouldn’t für Ratschläge.",
+    "prep": "A/B/C/D-Karten austeilen, Hefte bereitlegen, Beamer im Vollbild. Einsatz ab: if-Sätze Typ 1 (if + Present simple, will / won’t im Hauptsatz), should / shouldn’t + Grundform, Past simple mit unregelmäßigen Verben, Present perfect mit ever. Gut ist, wenn much / many und nicht zählbare Nomen (bread, flour) bekannt sind. Bei Bedarf Wörter an die Tafel: dough (Teig), yeast (Germ), rise (aufgehen), batter (flüssiger Teig), lentils (Linsen), flatbread (Fladenbrot), raisins (Rosinen), spices (Gewürze), smoke alarm (Rauchmelder), wash up (abwaschen), apron (Schürze), set a timer (einen Küchenwecker stellen).",
+    "heft": "Neue Seite: Datum rechts oben, darunter „Blog post“ als Überschrift (wie am Beamer). Dann 2 Zeilen für den Titel frei lassen (der Titel kommt zuletzt), darunter Username und Datum in einer Zeile (wie am Beamer). Jeder Absatz beginnt nach einer Leerzeile, am Rand steht der Name des Teils wie am Beamer: Introduction, The recipe, The chaos, Our tips, Conclusion. Am Ende die if-Sätze und should grün unterstreichen.",
+    "flow": "Volltext (50 min): 3 min Aufgabe lesen · 2 min Gericht wählen · 5 Entscheidungen zum Text à ca. 2–3 min, zusammen ca. 13 min · Abschreiben nach jeder Entscheidung, zusammen ca. 20 min · Titel 2 min · 5 min Checkliste und Unterstreichen · 5 min Puffer. Wenn die Zeit knapp wird: Checkliste als Hausübung.",
+    "traps": "The recipe C (CC, Kohärenz und Kohäsion): Die Schritte stehen in der falschen Reihenfolge (zuerst gebacken oder serviert, dann erst gekocht), und Reihenfolge-Wörter fehlen. The chaos D (LSA, Sprachrichtigkeit): „too much people“ statt too many people und „a bread“ (wie „ein Brot“) statt some bread / a loaf of bread, also zählbare und nicht zählbare Nomen. Our tips A (LSA, Sprachrichtigkeit): „If you will wear“ (nach if kein will) und „should to wash“ (nach should kein to). Conclusion B (TA, Erfüllung der Aufgabenstellung): Der Schluss springt zu einem anderen Thema (Zoo-Ausflug) und stellt keine Frage an die Leser:innen.",
+    "notes": "Alle Personen sind erfunden. Essen kommt nur als Genuss und Gemeinschaft vor, ohne Diät-, Kalorien- oder Gewichtsthemen; im Gespräch bitte keine Bewertung von Essgewohnheiten einzelner Schüler:innen und bei eigenen Rezepten an Allergien und Speisevorschriften denken. Markiert sind alle if-Sätze vom Typ 1 (der Teil mit if bis zum Beistrich) und should / shouldn’t mit dem Verb; will / won’t im Hauptsatz ist nicht markiert. Die Rezeptversion (The recipe B) steht im Imperativ (Mix …, Fry …), wie in echten Rezepten. Die Zahl, die die Klasse ruft, ist die echte Klassengröße. Differenzierung: Schnelle schreiben zwei weitere Tipps mit if und should für einen Kochtag. Hausübung: ein Kommentar (ca. 50 Wörter) als Antwort auf die Frage im Schluss, mit einem if-Satz und einem Satz mit should."
+  }
+}

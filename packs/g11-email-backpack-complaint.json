@@ -1,0 +1,418 @@
+{
+  "id": "g11-email-backpack-complaint",
+  "title": "Rain? No problem! A complaint",
+  "titleDe": "Beschwerde: Werbung und Wirklichkeit",
+  "grade": 11,
+  "level": "B1+/B2",
+  "theme": "Freizeit, Hobbys & Sport",
+  "textType": "email",
+  "modes": [
+    "full",
+    "frame"
+  ],
+  "lengths": {
+    "short": {
+      "label": "around 250 words",
+      "min": 225,
+      "max": 275
+    }
+  },
+  "minutes": {
+    "full": {
+      "short": 50
+    },
+    "frame": {
+      "short": 60
+    }
+  },
+  "task": {
+    "situation": "Three weeks ago, you ordered a backpack called the Drizzlemaster Pro (€89.99) from Rainridge, an online outdoor shop based in Cork, Ireland. Its online advert showed a cyclist riding through a storm with the slogan ‘Rain? No problem! 100% waterproof’ and promised that the backpack keeps everything inside dry ‘in any weather’. On the first rainy day, however, water got into the backpack and your school things got wet. When you contacted Rainridge’s customer service, you were not happy with the way your problem was handled. The shop’s website gives the address customercare@rainridge-shop.example and names Ms Harriet Doyle as Customer Relations Manager.",
+    "instruction": "Write a formal email of complaint. In your email you should:",
+    "points": [
+      "describe what the advert promised and what you actually received",
+      "explain how the customer service team dealt with your problem",
+      "request a specific solution"
+    ],
+    "words": {
+      "short": "Write around 250 words."
+    },
+    "de": "Formelle Beschwerde-E-Mail. Drei Inhaltspunkte: Versprechen der Werbung und Wirklichkeit; wie der Kundenservice reagiert hat; eine konkrete Forderung. Höflich, sachlich, ohne Kurzformen. Die Betreffzeile wählen wir zum Schluss."
+  },
+  "meta": {
+    "from": "customer.vienna@classmail.example",
+    "to": "customercare@rainridge-shop.example",
+    "subjectSlot": "subject"
+  },
+  "focus": {
+    "label": "formal phrases for complaints",
+    "labelDe": "Formelle Wendungen für Beschwerden",
+    "min": {
+      "short": 6
+    },
+    "note": "Marked: fixed phrases of formal emails for stating the purpose, referring to a topic, expressing regret, making a point politely, requesting, offering and closing. Greeting, closing formula and ordinary linking words are not marked."
+  },
+  "topicWords": [
+    "backpack",
+    "drizzlemaster",
+    "pro",
+    "advert",
+    "waterproof",
+    "order",
+    "rainridge"
+  ],
+  "gaps": [
+    {
+      "id": "ORDER",
+      "step": "opening",
+      "q": "What is our order number? Shout a five-digit number.",
+      "qDe": "Ruft eine fünfstellige Bestellnummer.",
+      "type": "number",
+      "default": 48213,
+      "min": 10000,
+      "max": 99999
+    },
+    {
+      "id": "FULLNAME",
+      "step": "signoff",
+      "q": "Who is writing the complaint? First name and family name.",
+      "qDe": "Ruft einen Vor- und Nachnamen für die Person, die sich beschwert. Keine Namen von Mitschüler:innen oder Lehrer:innen.",
+      "type": "text",
+      "default": "Tobias Wallner",
+      "max": 40,
+      "minWords": 2
+    }
+  ],
+  "steps": [
+    {
+      "id": "addressee",
+      "part": "Addressee",
+      "q": "Who are we writing to?",
+      "de": "Diese Entscheidung bestimmt die Anrede UND die Grußformel am Schluss.",
+      "options": [
+        {
+          "l": "A",
+          "id": "name",
+          "label": "Ms Doyle, the manager",
+          "teaser": "The website names the Customer Relations Manager. We write to her directly."
+        },
+        {
+          "l": "B",
+          "id": "team",
+          "label": "The customer care team",
+          "teaser": "The email goes to the customer care inbox, and we do not know who will read it."
+        }
+      ]
+    },
+    {
+      "id": "greeting",
+      "slot": "greeting",
+      "part": "Greeting",
+      "q": "How do we greet the reader?",
+      "de": "Hier wählen wir die Anrede für unsere Beschwerde. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Write the greeting on its own line, with a comma at the end.",
+      "ownDe": "Anrede in eine eigene Zeile schreiben, mit Beistrich am Ende.",
+      "options": [
+        {
+          "l": "A",
+          "id": "dear",
+          "label": "Greeting A",
+          "text": {
+            "by": "addressee",
+            "map": {
+              "name": "{{Dear Ms Doyle,}}",
+              "team": "{{Dear Sir or Madam,}}"
+            }
+          },
+          "why": "The standard formal greeting, with a comma, matching the reader we have chosen."
+        },
+        {
+          "l": "B",
+          "id": "trap",
+          "label": "Greeting B",
+          "trap": true,
+          "crit": "TA",
+          "text": {
+            "by": "addressee",
+            "map": {
+              "name": "Dear Madam Doyle!",
+              "team": "Dear Ladies and Gentlemen!"
+            }
+          },
+          "reject": "Wrong form of greeting for a formal email: ‘Dear Madam Doyle!’ and ‘Dear Ladies and Gentlemen!’ are word-for-word translations of ‘Sehr geehrte …’, and English uses a comma, not an exclamation mark. Write ‘Dear Ms Doyle,’ or ‘Dear Sir or Madam,’.",
+          "rejectDe": "Falsche Anredeform für eine formelle E-Mail: wörtlich übersetzt (Madam Doyle, Ladies and Gentlemen) und mit Rufzeichen statt Beistrich. Richtig: „Dear Ms Doyle,“ oder „Dear Sir or Madam,“."
+        }
+      ]
+    },
+    {
+      "id": "opening",
+      "slot": "opening",
+      "part": "Introduction",
+      "q": "Introduction: how do we state the purpose of our email?",
+      "de": "Die Einleitung sagt, warum wir schreiben, und kündigt die beiden Probleme an. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then add the product and when you bought it, and finish the last sentence: what went wrong?",
+      "ownDe": "Gerüst abschreiben, dann Produkt und Kaufdatum ergänzen und den letzten Satz fertigschreiben: Was ist schiefgegangen?",
+      "options": [
+        {
+          "l": "A",
+          "id": "complain",
+          "label": "Purpose and order details",
+          "text": "{{[[I am writing to complain about]]}} a Drizzlemaster Pro backpack which I ordered from your online shop three weeks ago {{(order number RR-{ORDER}).}} {{Unfortunately, the backpack does not}} live up to the promises made in your advertising, and I am disappointed with the way my problem has been handled so far.",
+          "why": "Purpose in the first words, all the facts the shop needs, and a short preview of the two problems."
+        },
+        {
+          "l": "B",
+          "id": "dissatisfied",
+          "label": "Purpose and the advert",
+          "text": "{{[[I am writing to express my dissatisfaction with]]}} the Drizzlemaster Pro backpack which I bought on your website three weeks ago {{(order number RR-{ORDER}).}} {{I chose this model because of}} your online advert, but the product is very different from what was promised, and the help I have received so far has been disappointing.",
+          "why": "A very formal opening phrase, and it links the complaint to the advert straight away."
+        },
+        {
+          "l": "C",
+          "id": "trap",
+          "label": "Make our feelings clear",
+          "trap": true,
+          "crit": "LSR",
+          "text": "I am really angry!!! Three weeks ago I ordered your Drizzlemaster Pro (order number RR-{ORDER}), and it is a total rip-off. Your so-called waterproof backpack let the rain in on day one, and your customer service is a joke. I want my money back immediately, or I will tell everyone on social media how bad your shop is.",
+          "reject": "Far too emotional and rude for a formal complaint: slang (‘rip-off’, ‘a joke’), three exclamation marks and a threat. A polite, calm tone is much more likely to get results.",
+          "rejectDe": "Falsches Register: viel zu emotional und unhöflich, mit Slang, Rufzeichen und einer Drohung. Ein sachlicher Ton wirkt stärker."
+        }
+      ]
+    },
+    {
+      "id": "promise",
+      "slot": "promise",
+      "part": "Body paragraph 1",
+      "q": "Body paragraph 1: what did the advert promise, and what did we get?",
+      "de": "Erster Inhaltspunkt: das Versprechen der Werbung und die Wirklichkeit. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then describe in your own words what went wrong.",
+      "ownDe": "Gerüst abschreiben, dann mit eigenen Worten beschreiben, was schiefgegangen ist.",
+      "options": [
+        {
+          "l": "A",
+          "id": "claims",
+          "label": "Quote the advert",
+          "text": "{{The first problem is the product itself. [[According to]] your advert,}} the Drizzlemaster Pro is ‘100% waterproof’ and keeps everything inside dry ‘in any weather’. {{[[I regret to say that]]}} this is not true. On my way to school last Monday, water came in through the zips and seams after only ten minutes of light rain, soaking my textbooks and notes.",
+          "why": "It names the first problem, then quotes the advert’s exact words to show the contrast with reality."
+        },
+        {
+          "l": "B",
+          "id": "video",
+          "label": "Describe the advert",
+          "text": "{{As for the product itself, the advert on your website shows}} a cyclist in a storm taking a dry laptop out of the backpack: ‘Rain? No problem!’ {{[[I am sorry to say that]]}} my backpack could not even cope with a light shower. {{After a ten-minute walk to school last Monday,}} the inside was wet, and two of my workbooks were ruined.",
+          "why": "‘As for the product itself’ picks up the introduction; describing the advert shows how far apart promise and product are."
+        }
+      ]
+    },
+    {
+      "id": "service",
+      "slot": "service",
+      "part": "Body paragraph 2",
+      "q": "Body paragraph 2: how did the customer service team deal with our problem?",
+      "de": "Zweiter Inhaltspunkt: Wie hat der Kundenservice auf unser Problem reagiert? Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then invent what happened when you contacted the shop (one or two contacts, in the right order).",
+      "ownDe": "Gerüst abschreiben, dann einen erfundenen Ablauf in der richtigen Reihenfolge erzählen (ein oder zwei Kontakte mit dem Shop).",
+      "options": [
+        {
+          "l": "A",
+          "id": "trap",
+          "label": "Chatbot, hotline, email",
+          "trap": true,
+          "crit": "CC",
+          "text": "Your chatbot did not understand my problem. I got a voucher for 10% off. Before that I phoned your hotline and waited forty minutes. At first I wrote an email, but nobody answered. The employee said that ‘waterproof’ means something else. I do not want a voucher. Nobody apologised, and my problem is still not solved.",
+          "reject": "The events are in the wrong order and the few time words do not help, so the reader cannot follow what happened. Use time linkers such as ‘first’, ‘when’, ‘after that’ and ‘finally’ in the right order.",
+          "rejectDe": "Falsche Reihenfolge und kaum Linking words: Man kann nicht nachvollziehen, was wann passiert ist."
+        },
+        {
+          "l": "B",
+          "id": "hold",
+          "label": "A useless voucher",
+          "text": "{{Matters got worse when I contacted your customer service}} last Tuesday: after forty minutes on hold, I was told that ‘waterproof’ only means ‘water-resistant’ and was offered a voucher for 10% off my next order. {{[[I am afraid that]] such an offer is not}} acceptable, as a voucher does not repair a faulty backpack.",
+          "why": "The topic sentence links the two problems; then a clear order of events and a polite but firm comment."
+        },
+        {
+          "l": "C",
+          "id": "ignored",
+          "label": "No real help",
+          "text": "{{Contacting your customer service did not solve the problem.}} First I sent an email, but all I received was an automatic reply. {{Three days later, I phoned your hotline and [[was informed that]]}} the backpack must have been damaged through misuse. This was simply untrue, and nobody offered me any further help or even an apology.",
+          "why": "The topic sentence leads from the product to the service; two attempts follow in the right order."
+        }
+      ]
+    },
+    {
+      "id": "remedy",
+      "slot": "remedy",
+      "part": "Body paragraph 3",
+      "q": "Body paragraph 3: what exactly do we want Rainridge to do?",
+      "de": "Dritter Inhaltspunkt: Was soll Rainridge tun? Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then state exactly what you expect the shop to do.",
+      "ownDe": "Gerüst abschreiben, dann genau sagen, was der Shop tun soll.",
+      "options": [
+        {
+          "l": "A",
+          "id": "refund",
+          "label": "A full refund",
+          "text": "{{[[In view of this, I would ask you to]]}} refund the full price of €89.99. {{[[I would also expect you to]]}} send me a prepaid return label, as I do not think that customers should have to pay for returning a faulty product.",
+          "why": "‘In view of this’ links the request to the problems; the request names the exact amount and a fair condition."
+        },
+        {
+          "l": "B",
+          "id": "trap",
+          "label": "Money back, return paid",
+          "trap": true,
+          "crit": "LSR",
+          "text": "I want my money back, and I want it soon. I also want you to pay for the return because I do not want to pay for your mistake. And I want an answer quickly because I want to buy a new backpack before winter.",
+          "reject": "‘Want’ six times: very basic, repetitive and rather rude. Use polite request forms instead: ‘I would ask you to …’, ‘I would also expect you to …’.",
+          "rejectDe": "Sechsmal „want“: zu einfach, wiederholend und unhöflich. Besser: „I would ask you to …“."
+        },
+        {
+          "l": "C",
+          "id": "replace",
+          "label": "A real replacement",
+          "text": "{{[[Under these circumstances, I must ask you to]]}} replace the backpack with a genuinely waterproof model at no extra cost. {{In addition, [[I would expect you to]]}} collect the faulty Drizzlemaster Pro free of charge. If no replacement is possible, a full refund of €89.99 would be acceptable.",
+          "why": "Asks for a specific replacement and says who pays for collecting the faulty backpack."
+        }
+      ]
+    },
+    {
+      "id": "closing",
+      "slot": "closing",
+      "part": "Conclusion",
+      "q": "Conclusion: how do we round off the email?",
+      "de": "Der Schluss fasst die Beschwerde kurz zusammen und bittet um Antwort. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then sum up in one sentence what went wrong, and add a time limit for the reply.",
+      "ownDe": "Gerüst abschreiben, dann in einem Satz zusammenfassen, was schiefgegangen ist, und eine Frist für die Antwort ergänzen.",
+      "options": [
+        {
+          "l": "A",
+          "id": "thanks",
+          "label": "Thanks and a deadline",
+          "text": "{{[[Thank you for your attention to this matter.]]}} Your advert made a clear promise, and I hope that you will now put right both the faulty product and the poor service. {{[[I look forward to receiving your reply]]}} within fourteen days.",
+          "why": "Polite thanks, a short look back at both problems and a clear deadline for the reply."
+        },
+        {
+          "l": "B",
+          "id": "photos",
+          "label": "Sum up and offer photos",
+          "text": "{{To sum up, neither the backpack nor the service}} has met my expectations. {{If necessary, [[I would be happy to]]}} send you photos of the damaged backpack and the wet books as evidence. {{[[I look forward to hearing from you]]}} within fourteen days.",
+          "why": "Sums up both problems, offers evidence for the request and asks for a reply within a fixed time."
+        }
+      ]
+    },
+    {
+      "id": "signoff",
+      "slot": "signoff",
+      "part": "Sign-off",
+      "q": "How do we sign off?",
+      "de": "Hier wählen wir die Grußformel und die Unterschrift. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the closing formula and, on the next line, the full name we chose.",
+      "ownDe": "Grußformel abschreiben, darunter den gewählten vollen Namen.",
+      "options": [
+        {
+          "l": "A",
+          "id": "trap",
+          "label": "Sign-off A",
+          "trap": true,
+          "crit": "TA",
+          "text": {
+            "by": "addressee",
+            "map": {
+              "name": "Yours sincerely,\nA disappointed customer",
+              "team": "Yours faithfully,\nA disappointed customer"
+            }
+          },
+          "reject": "A formal email ends with the closing formula and the writer’s full name, so that the shop can find the order and reply. ‘A disappointed customer’ is not a name.",
+          "rejectDe": "Nach der Grußformel steht in einer formellen E-Mail der volle Name, sonst kann der Shop die Bestellung nicht finden und nicht antworten."
+        },
+        {
+          "l": "B",
+          "id": "match",
+          "label": "Sign-off B",
+          "text": {
+            "by": "addressee",
+            "map": {
+              "name": "{{Yours sincerely,}}\n{FULLNAME}",
+              "team": "{{Yours faithfully,}}\n{FULLNAME}"
+            }
+          },
+          "why": "The closing formula matches the greeting and is followed by the writer’s full name."
+        }
+      ]
+    },
+    {
+      "id": "subject",
+      "slot": "subject",
+      "part": "Subject",
+      "q": "Now that the email is finished, which subject line do we put in the header?",
+      "de": "Die Betreffzeile wählen wir zuletzt: Sie sagt kurz, worum es in der Beschwerde geht.",
+      "own": "Short and specific: what is the complaint about?",
+      "ownDe": "Kurz und genau: Worum geht es in der Beschwerde?",
+      "options": [
+        {
+          "l": "A",
+          "id": "order",
+          "label": "With the order number",
+          "text": "Complaint about order RR-{ORDER} (Drizzlemaster Pro)",
+          "why": "The order number helps the shop to find the case at once."
+        },
+        {
+          "l": "B",
+          "id": "fault",
+          "label": "Name the problem",
+          "text": "Drizzlemaster Pro backpack not waterproof as advertised",
+          "why": "Says exactly what is wrong and hints at the misleading advert."
+        },
+        {
+          "l": "C",
+          "id": "both",
+          "label": "Product and service",
+          "text": "Faulty backpack and poor customer service (order RR-{ORDER})",
+          "why": "Names both problems of the email and gives the order number."
+        }
+      ]
+    }
+  ],
+  "order": [
+    "subject",
+    "greeting",
+    "opening",
+    "promise",
+    "service",
+    "remedy",
+    "closing",
+    "signoff"
+  ],
+  "checks": [
+    {
+      "en": "The subject line says clearly what the email is about"
+    },
+    {
+      "en": "Greeting and closing match: Dear Ms Doyle → Yours sincerely, Dear Sir or Madam → Yours faithfully"
+    },
+    {
+      "en": "The purpose of the email and the order number are in the first paragraph"
+    },
+    {
+      "en": "All three content points: promise vs reality, customer service, a specific request"
+    },
+    {
+      "en": "Polite and calm: no slang, no exclamation marks, no threats"
+    },
+    {
+      "en": "Formal register: no contractions"
+    },
+    {
+      "en": "The conclusion sums up the complaint and asks for a reply within a fixed time"
+    },
+    {
+      "en": "The email ends with the writer’s full name"
+    }
+  ],
+  "teacher": {
+    "aim": "Die Klasse schreibt gemeinsam eine formelle Beschwerde-E-Mail auf B1+/B2-Niveau nach SRDP-Muster und übt dabei höflich-bestimmtes Register, passende Anrede und Grußformel sowie formelle Wendungen für Bedauern und Forderungen.",
+    "prep": "A/B/C/D-Karten austeilen, Beamer im Vollbild. Die Aufgabe am Beamer enthält alles Nötige; den Ablauf des Kontakts mit dem Shop erfinden die Schüler:innen im Gerüst-Modus selbst. Im Gerüst-Modus den eingebauten Timer nutzen: 5 min pro Absatz.",
+    "heft": "Neue Seite: rechts oben das Datum, als Überschrift „Email“ (wie am Beamer). Darunter der Kopf: To, From, Date, Subject (eine Zeile für den Betreff frei lassen, er wird zuletzt gewählt). Anrede in einer eigenen Zeile, danach und nach jedem Absatz eine Zeile frei, am Rand Intro, Body 1, Body 2, Body 3, Conclusion. Vor der Grußformel eine Zeile frei; Grußformel und voller Name stehen auf eigenen Zeilen. Formelle Wendungen grün unterstreichen.",
+    "flow": "Volltext (50 min): 3 min Aufgabe lesen, 2 min Kopf abschreiben, 9 Entscheidungen à ca. 1–2 min, Abschreiben ca. 25 min, 5 min Checkliste. Gerüst (realistisch ca. 60 min): 3 min Aufgabe; Adressat:in, Anrede, Grußformel und Betreff je 1 min; pro Absatz 1 min Entscheidung, 5–6 min eigenes Schreiben, 1 min Vergleich mit dem Modell; am Ende 5 min Checkliste. In einer 50-Minuten-Stunde bei der Conclusion das Modell nur abschreiben, statt selbst zu schreiben, und die Checkliste am Beginn der nächsten Stunde machen.",
+    "traps": "Greeting B (TA): falsche Anredeform, „Dear Madam Doyle!“ bzw. „Dear Ladies and Gentlemen!“ (wörtliche Übersetzung von „Sehr geehrte …“) und Rufzeichen statt Beistrich. Introduction C (LSR): falsches Register, wütend und unhöflich, mit Slang, Rufzeichen und Drohung statt sachlichem Ton. Body 2 A (CC): Ereignisse durcheinander, kaum Linking words. Body 3 B (LSR): sechsmal „want“. Sign-off A (TA): nach der Grußformel fehlt der volle Name. Kürzel: TA = Erfüllung der Aufgabenstellung, CC = Kohärenz und Kohäsion, LSR = Spektrum sprachlicher Mittel, LSA = Sprachrichtigkeit.",
+    "notes": "Die E-Mail hat fünf Absätze (Einleitung, drei Body Paragraphs mit je einem Inhaltspunkt, Schluss) und wie bei der SRDP eine Länge: ca. 250 Wörter. Greeting und Sign-off haben nur EINE richtige Option: Sobald die Klasse die Empfängerin oder den Empfänger gewählt hat, gibt es nur eine korrekte Anrede und eine passende Grußformel. Die Karten der Adressat:innen-Entscheidung nennen Anrede und Grußformel nicht: Die Klasse soll das passende Paar selbst finden (siehe Checkliste). Der Shop Rainridge und die Drizzlemaster Pro sind erfunden. Für den vollen Namen nur erfundene Namen, keine Namen von Mitschüler:innen oder Lehrer:innen. Gut zum Nachbesprechen: Warum wirkt die höfliche Version stärker als die wütende? Differenzierung: Schnelle formulieren eine zweite Forderung (z. B. Ersatz statt Geld zurück). Hausübung: Beschwerde über ein anderes Produkt aus einer Werbung (z. B. Kopfhörer, Sneakers) mit derselben Struktur."
+  }
+}

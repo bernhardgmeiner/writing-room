@@ -1,0 +1,518 @@
+{
+  "id": "g8-newspaper-green-idea",
+  "title": "A green idea that grew",
+  "titleDe": "Grünes Projekt von Schüler:innen",
+  "grade": 8,
+  "level": "A2+",
+  "theme": "Umwelt & Nachhaltigkeit",
+  "textType": "newspaper",
+  "modes": [
+    "full"
+  ],
+  "lengths": {
+    "short": {
+      "label": "around 150 words",
+      "min": 135,
+      "max": 165
+    }
+  },
+  "minutes": {
+    "full": {
+      "short": 50
+    }
+  },
+  "task": {
+    "situation": "Our local newspaper has a page called ‘Young and green’. This week, it reports on students who started a green project. The project is invented, but the report must sound like real news.",
+    "instruction": "Write a news report with:",
+    "points": [
+      "a headline and a lead that answers the 5 Ws",
+      "what the students did and why",
+      "a quote and a look into the future"
+    ],
+    "words": {
+      "short": "Write around 150 words."
+    },
+    "de": "Gemeinsamer Zeitungsbericht über ein grünes Projekt von Schüler:innen: Lead mit den W-Fragen, was sie gemacht haben und warum, ein Zitat und ein Blick in die Zukunft. Im Bericht kommen if-Sätze vor (Typ 1 und Typ 2). Die Headline kommt zuletzt."
+  },
+  "meta": {
+    "publication": "The Local Echo",
+    "byline": "the Young and Green team"
+  },
+  "focus": {
+    "label": "if-sentences",
+    "labelDe": "if-Sätze",
+    "min": {
+      "short": 3
+    },
+    "note": "Marked: every whole if-sentence (if-clause plus main clause, without the final punctuation), conditional I (if + present, will/can + verb) and conditional II (if + past, would + verb). One mark = one if-sentence. Passive forms occur but are not marked."
+  },
+  "topicWords": [
+    "repair",
+    "car",
+    "free",
+    "bike"
+  ],
+  "gaps": [
+    {
+      "id": "N",
+      "step": "facts",
+      "q": "How many people took part? Shout a realistic number.",
+      "qDe": "Wie viele Personen haben mitgemacht? Ruft eine realistische Zahl, z. B. 50 bis 300.",
+      "type": "number",
+      "default": 120,
+      "min": 30,
+      "max": 500
+    },
+    {
+      "id": "NAME",
+      "step": "quote",
+      "q": "Who do we quote? First name and family name.",
+      "qDe": "Erfindet einen Vor- und Nachnamen (ohne Herr oder Frau) für die Person im Zitat. Keine Namen von Mitschüler:innen oder Lehrer:innen.",
+      "type": "text",
+      "default": "Tobias Huber",
+      "max": 40,
+      "minWords": 2
+    },
+    {
+      "id": "AGE",
+      "step": "quote",
+      "q": "How old is this adult?",
+      "qDe": "Wie alt ist die erwachsene Person? Ruft ein Alter, das passt (25 bis 90, bei Lehrer:innen höchstens 65).",
+      "type": "number",
+      "default": 43,
+      "min": 25,
+      "max": 90
+    },
+    {
+      "id": "SAGE",
+      "step": "quote",
+      "q": "How old is the student?",
+      "qDe": "Wie alt ist die junge Person? Sie geht noch zur Schule. Ruft ein Alter zwischen 10 und 19.",
+      "type": "number",
+      "default": 14,
+      "min": 10,
+      "max": 19
+    }
+  ],
+  "steps": [
+    {
+      "id": "story",
+      "part": "Project",
+      "q": "Which project goes into our newspaper?",
+      "de": "Hier wählt ihr, über welches Projekt unsere Zeitung berichtet.",
+      "options": [
+        {
+          "l": "A",
+          "id": "repair",
+          "label": "Repair café in Linz",
+          "teaser": "Broken toasters, old lamps, torn jeans: students fix them for free instead of throwing them away."
+        },
+        {
+          "l": "B",
+          "id": "car",
+          "label": "Car-free day in Graz",
+          "teaser": "For one day, no cars in front of the school. Chalk, bikes and footballs instead!"
+        },
+        {
+          "l": "C",
+          "id": "clean",
+          "label": "River clean-up in Wels",
+          "teaser": "Bottles, cans and a rusty shopping trolley: students clean up the banks of the River Traun."
+        },
+        {
+          "l": "D",
+          "id": "bike",
+          "label": "Bike-to-school week in Bregenz",
+          "teaser": "Five days without parents’ taxis: students cycle to school, rain or shine."
+        }
+      ]
+    },
+    {
+      "id": "lead",
+      "slot": "lead",
+      "part": "Lead",
+      "q": "How do we start? The lead answers the 5 Ws.",
+      "de": "Mit dem Lead beginnt unser Zeitungsbericht. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "who",
+          "label": "Start with WHO",
+          "why": "Starts with WHO: the students who made a difference are the heroes of the story.",
+          "text": {
+            "by": "story",
+            "map": {
+              "repair": "Students from Hillside School in Linz opened a repair café in their school hall on Saturday. They wanted to show that old things do not have to end up in the bin.",
+              "car": "Students from Parkside School in Graz organised a car-free day outside their school on Friday. Their goal was to make the streets around the school safer and cleaner.",
+              "clean": "Students from Riverside School in Wels cleaned up the banks of the River Traun on Thursday afternoon. They wanted to stop plastic and other rubbish from getting into the water.",
+              "bike": "Students from Lakeview School in Bregenz cycled to school every day last week instead of going by car. Their aim was to reduce car traffic around the school."
+            }
+          }
+        },
+        {
+          "l": "B",
+          "id": "when",
+          "label": "Start with WHEN",
+          "why": "Starts with WHEN: the classic opening of a news report.",
+          "text": {
+            "by": "story",
+            "map": {
+              "repair": "On Saturday, students from Hillside School in Linz opened a repair café in their school hall. Their aim was to save old things from the bin and to reduce waste.",
+              "car": "On Friday, the street in front of Parkside School in Graz was closed to cars for a whole day. The students organised this car-free day to make the street outside their school safer.",
+              "clean": "On Thursday afternoon, students from Riverside School in Wels cleaned up the banks of the River Traun. They collected rubbish for three hours to keep the water clean.",
+              "bike": "Last week, students from Lakeview School in Bregenz cycled to school every day from Monday to Friday. With their bike-to-school week, they wanted to reduce car traffic around the school."
+            }
+          }
+        },
+        {
+          "l": "C",
+          "id": "result",
+          "label": "Start with the RESULT",
+          "why": "Starts with the result: readers see at once that the project made a difference.",
+          "text": {
+            "by": "story",
+            "map": {
+              "repair": "Over fifty broken things got a second life on Saturday at a repair café in Linz. Students from Hillside School organised it to fight waste in their neighbourhood.",
+              "car": "Not a single car drove past Parkside School in Graz on Friday. The students had organised a car-free day to make the streets around the school safer and cleaner.",
+              "clean": "Almost 200 kilograms of rubbish were collected from the banks of the River Traun in Wels on Thursday afternoon. Students from Riverside School wanted to keep plastic out of the water.",
+              "bike": "There were almost no parents’ cars in front of Lakeview School in Bregenz last week. From Monday to Friday, students cycled to school for cleaner air and safer streets."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "intro",
+      "slot": "intro",
+      "part": "Introduction",
+      "q": "What happened? Which version do we print?",
+      "de": "Hier erzählen wir, was beim Projekt passiert ist. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "hours",
+          "label": "From start to finish",
+          "why": "Time phrases take readers through the event step by step, in the right order.",
+          "text": {
+            "by": "story",
+            "map": {
+              "repair": "At 10 am, the first visitors arrived with broken toasters, old lamps and torn jeans. Students and a few grandparents sat at long tables with screwdrivers and sewing kits. By noon, the hall was full.",
+              "car": "At 7 am, the police closed the street with barriers. Soon, the first students arrived on foot, by bike and by scooter. By lunchtime, the street was full of chalk paintings and games.",
+              "clean": "At 2 pm, the students met at the old bridge. In small groups, they walked along the river with gloves and big bags. After just one hour, the first bags were full.",
+              "bike": "Every morning, a team of students counted the bikes at the gate. On Monday, the bike stands were half empty. By Friday, they were so full that some bikes had to lean against the fence."
+            }
+          }
+        },
+        {
+          "l": "B",
+          "id": "scene",
+          "label": "One special moment",
+          "why": "One small scene shows what the day was like, and readers can see it in their heads.",
+          "text": {
+            "by": "story",
+            "map": {
+              "repair": "A ten-year-old boy looked sad when he put his broken bike lamp on the table. Twenty minutes later, it was working again, and he was smiling. Many visitors went home just as happy.",
+              "car": "Instead of cars and noise, there were children with chalk, bikes and footballs in the street. A group of students sold fruit for breakfast, and some parents joined a game of street football.",
+              "clean": "Under the old bridge, two students pulled something heavy out of the mud: a rusty shopping trolley. Further along the river, others found bottles, cans, a flip-flop and even an old bike tyre.",
+              "bike": "It was raining hard on Wednesday, but the bike stands were still full. Wet but happy, students locked their bikes and ran inside. One whole class even arrived together on their bikes."
+            }
+          }
+        },
+        {
+          "l": "C",
+          "id": "trap",
+          "label": "The whole day",
+          "trap": true,
+          "crit": "CC",
+          "reject": "The order is mixed up. ‘After that’ cannot start a report, and ‘First’ and ‘Then’ tell the events in the wrong order.",
+          "rejectDe": "Die Reihenfolge stimmt nicht: After that kann nicht am Anfang stehen, und mit First und Then kommen die Ereignisse durcheinander.",
+          "text": {
+            "by": "story",
+            "map": {
+              "repair": "After that, the doors opened at 10 am. First, students and a few grandparents repaired toasters, old lamps and torn jeans at long tables. Then the first visitors arrived with their broken things.",
+              "car": "After that, the police closed the street at 7 am. First, the whole street was full of chalk paintings and games. Then the first students arrived on foot, by bike and by scooter.",
+              "clean": "After that, the students met at the old bridge at 2 pm. First, the bags were full of bottles and cans. Then the groups walked along the river with gloves and big bags.",
+              "bike": "After that, the bike week started on Monday. First, the bike stands were so full on Friday that some bikes had to lean against the fence. Then a team of students counted the bikes."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "facts",
+      "slot": "facts",
+      "part": "Main body",
+      "q": "Which facts do we add next?",
+      "de": "Der Hauptteil bringt weitere Fakten zum Projekt. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "idea",
+          "label": "How it started",
+          "why": "Tells readers WHY the students did it. A news report answers the why-question, too.",
+          "text": {
+            "by": "story",
+            "map": {
+              "repair": "The idea came up in a geography lesson about waste. One student asked: “[[What would happen if every family repaired one thing a month]]?” On the day, more than {N} visitors came to the café.",
+              "car": "The idea came from the school’s eco team. Every morning, parents’ cars block the gate, and the team believes that [[if more children walked or cycled, there would be fewer traffic jams]]. More than {N} students took part.",
+              "clean": "The idea came from a biology lesson by the river. The class saw plastic everywhere and wondered: “[[What would happen to the fish if nobody did anything]]?” More than {N} students, parents and neighbours helped.",
+              "bike": "The idea came from the student council. Many students who live close to school come by car. The council is sure that [[if they cycled, the streets would be quieter]]. More than {N} students joined in."
+            }
+          }
+        },
+        {
+          "l": "B",
+          "id": "trap",
+          "label": "The team’s message",
+          "trap": true,
+          "crit": "LSA",
+          "reject": "Two if-mistakes: in these sentences, ‘will’ and ‘would’ do not go in the if-part. Use the present after ‘if’ when the main clause has ‘will’, and the past when it has ‘would’.",
+          "rejectDe": "Zwei typische Fehler: Im if-Teil stehen nie will oder would. Richtig: if + Present, dann will; if + Past, dann would.",
+          "text": {
+            "by": "story",
+            "map": {
+              "repair": "More than {N} visitors came. The team’s message is simple: if people will repair old things, they will buy fewer new ones. And if every district would have a repair café, there would be less rubbish.",
+              "car": "More than {N} students came without a car. Their message is clear: if parents will leave their cars at home, the street will be safer. If every school would do this, there would be less traffic.",
+              "clean": "More than {N} students and parents helped. Their message is clear: if people will take their rubbish home, the river will stay clean. And if everyone would do this, there would be no need for clean-ups.",
+              "bike": "More than {N} students took part. The council’s message is clear: if more students will cycle, there will be less traffic. And if every school would join in, the air in the city would be cleaner."
+            }
+          }
+        },
+        {
+          "l": "C",
+          "id": "results",
+          "label": "The results",
+          "why": "Numbers show how big the difference was. The if-sentence explains why it matters.",
+          "text": {
+            "by": "story",
+            "map": {
+              "repair": "More than {N} visitors brought 70 broken items, and the students repaired 52 of them. Often, it was only a loose cable. [[If the owners had to buy all these things new, they would pay over 3,000 euros]].",
+              "car": "More than {N} students walked, cycled or came by bus. On a normal morning, about 150 cars stop at the gate. [[If only half of them stayed at home, the air would be much cleaner]].",
+              "clean": "More than {N} students, parents and neighbours helped, and together they filled 45 bags, most of them with plastic. In water, plastic breaks into tiny pieces, and [[if fish eat them, they can get ill]].",
+              "bike": "More than {N} students took part. A student team checked bike lights and brakes for free and fixed some flat tyres. [[If a bike is safe, more parents will say yes to cycling]]."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "quote",
+      "slot": "quote",
+      "part": "Quote",
+      "q": "Who do we quote?",
+      "de": "Ein Zitat macht unseren Bericht lebendig. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "student",
+          "label": "A student from the team",
+          "why": "Someone from the team knows the project best: “…,” said + name + age.",
+          "text": {
+            "by": "story",
+            "map": {
+              "repair": "“[[If you bring something broken, we will try to fix it]],” said {NAME}, {SAGE}, one of the organisers. “It feels great to see happy faces.”",
+              "car": "“[[If we come by bike, we will be wide awake in the first lesson]],” said {NAME}, {SAGE}, one of the organisers. “Today, nobody was tired!”",
+              "clean": "“[[If everyone took their rubbish home, we would not need a clean-up]],” said {NAME}, {SAGE}, one of the organisers. “It was hard work, but fun.”",
+              "bike": "“[[If the weather stays good, I will cycle every day until winter]],” said {NAME}, {SAGE}, one of the organisers. “It’s faster than the bus.”"
+            }
+          }
+        },
+        {
+          "l": "B",
+          "id": "local",
+          "label": "Someone from the area",
+          "why": "Someone from outside the school shows that the project matters to the whole area.",
+          "text": {
+            "by": "story",
+            "map": {
+              "repair": "“[[If the café didn’t exist, my grandmother’s old radio would be in the bin]],” said visitor {NAME}, {AGE}. “It works perfectly again.”",
+              "car": "“[[If it were this quiet every day, I would sleep much better]],” said neighbour {NAME}, {AGE}. “Usually, the cars wake me up at seven.”",
+              "clean": "“[[If the river stays this clean, I will have picnics here again]],” said dog owner {NAME}, {AGE}. “We walk here every day.”",
+              "bike": "“[[If my daughter cycled all year, I would have more time in the morning]],” said {NAME}, {AGE}, a parent. “She loved every minute.”"
+            }
+          }
+        },
+        {
+          "l": "C",
+          "id": "teacher",
+          "label": "A teacher",
+          "why": "A teacher can explain what students learn from the project.",
+          "text": {
+            "by": "story",
+            "map": {
+              "repair": "“[[If young people can fix things, they will not throw them away so quickly]],” said teacher {NAME}, {AGE}. “That is an important lesson for life.”",
+              "car": "“[[If we did this more often, the children would be far more relaxed]],” said teacher {NAME}, {AGE}. “The first lesson was very calm today.”",
+              "clean": "“[[If students see the problem with their own eyes, they will remember it for a long time]],” said teacher {NAME}, {AGE}. “No book can teach that.”",
+              "bike": "“[[If students cycle regularly, they will be more awake in class]],” said teacher {NAME}, {AGE}. “I could see the difference this week.”"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "end",
+      "slot": "end",
+      "part": "Conclusion",
+      "q": "How do we end the report?",
+      "de": "Mit dem Schluss endet unser Bericht. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "trap",
+          "label": "A message for readers",
+          "trap": true,
+          "crit": "TA",
+          "reject": "This sounds like a chat message or an advert: ‘guys’, ‘gonna’, ‘super cool’, ‘!!!’. A news report stays neutral and serious.",
+          "rejectDe": "Das klingt wie eine Chatnachricht oder Werbung (guys, gonna, super cool, !!!). Ein Zeitungsbericht bleibt sachlich.",
+          "text": {
+            "by": "story",
+            "map": {
+              "repair": "So what are you waiting for, guys? Bring your broken things from home to the next repair café! It’s gonna be super cool, and the cakes are amazing!!!",
+              "car": "So what are you waiting for, guys? Leave the car at home and come to the next car-free day! It’s gonna be super cool, and the music is amazing!!!",
+              "clean": "So what are you waiting for, guys? Grab a bag and some gloves and come to the next clean-up! It’s gonna be super cool, and the sandwiches are amazing!!!",
+              "bike": "So what are you waiting for, guys? Pump up your tyres and join the next bike week! It’s gonna be super cool, and the free bike check is amazing!!!"
+            }
+          }
+        },
+        {
+          "l": "B",
+          "id": "plans",
+          "label": "Plans for the future",
+          "why": "Ends with the next step: conditional I (if + present, will) for a real plan.",
+          "text": {
+            "by": "story",
+            "map": {
+              "repair": "Another repair café is already planned for the first Saturday in December. [[If enough helpers join the team, the students will run it every month next year]].",
+              "car": "Next, the students are planning a car-free Friday once a month. [[If the city agrees, the next one will take place on the first Friday in November]].",
+              "clean": "In spring, the students want to clean the banks again. [[If more volunteers join them, they will also tidy up the park next to the water]].",
+              "bike": "A second bike week is already planned for May. [[If the city builds more bike stands by then, even more students will be able to take part]]."
+            }
+          }
+        },
+        {
+          "l": "C",
+          "id": "dream",
+          "label": "A bigger dream",
+          "why": "Ends with a dream: conditional II (if + past, would) for something that is not real yet.",
+          "text": {
+            "by": "story",
+            "map": {
+              "repair": "Now the students are thinking bigger. [[If every district in Linz had a repair café, the city would produce much less waste]]. They have asked the mayor for a meeting.",
+              "car": "Now the students are thinking bigger. [[If all schools in Graz had a car-free Friday, thousands of children would be safer]]. They have asked the mayor for a meeting.",
+              "clean": "Now the students are thinking bigger. [[If every school along the Traun cleaned a part of it, the river would soon be free of rubbish]]. They have written to other schools.",
+              "bike": "Now the students are thinking bigger. [[If all schools in Bregenz joined in, thousands of car trips would disappear every week]]. They have asked the mayor for a meeting."
+            }
+          }
+        },
+        {
+          "l": "D",
+          "id": "readers",
+          "label": "Information for readers",
+          "why": "Ends with useful information, but stays neutral: no ‘you’, no advertising.",
+          "text": {
+            "by": "story",
+            "map": {
+              "repair": "Readers with broken things can visit the next repair café in December. [[If they bring them along, the students will be happy to help]].",
+              "car": "Two other schools in Graz want to copy the idea in spring. [[If teachers or parents want to know more, the students will be happy to help]].",
+              "clean": "Readers who find rubbish by the river can report it to the city online. [[If enough people help, the Traun will be free of litter all year round]].",
+              "bike": "Families can get a free map of safe bike routes at the school. [[If they practise the route together, their children will soon cycle on their own]]."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "title",
+      "slot": "title",
+      "part": "Headline",
+      "q": "Our report is finished. Which headline do we choose?",
+      "de": "Zum Schluss wählen wir die Headline unseres Berichts.",
+      "options": [
+        {
+          "l": "A",
+          "id": "short",
+          "label": "Short and direct",
+          "why": "Short, active, present tense: typical for headlines.",
+          "text": {
+            "by": "story",
+            "map": {
+              "repair": "Students open repair café in Linz",
+              "car": "Graz school goes car-free for a day",
+              "clean": "Students clean up the River Traun",
+              "bike": "Bregenz students cycle to school all week"
+            }
+          }
+        },
+        {
+          "l": "B",
+          "id": "number",
+          "label": "With a number",
+          "why": "A number in the headline shows at once how big the difference was.",
+          "text": {
+            "by": "story",
+            "map": {
+              "repair": "Over {N} visitors at school repair café",
+              "car": "Zero cars, one happy school street",
+              "clean": "Over {N} helpers for a cleaner Traun",
+              "bike": "Five days on two wheels in Bregenz"
+            }
+          }
+        },
+        {
+          "l": "C",
+          "id": "curious",
+          "label": "Make them curious",
+          "why": "A creative headline makes readers want to read on.",
+          "text": {
+            "by": "story",
+            "map": {
+              "repair": "Don’t bin it, fix it!",
+              "car": "Chalk instead of cars",
+              "clean": "What the river was hiding",
+              "bike": "Rain or shine, the bikes are back"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "order": [
+    "title",
+    "lead",
+    "intro",
+    "facts",
+    "quote",
+    "end"
+  ],
+  "checks": [
+    {
+      "en": "Headline: short and catchy"
+    },
+    {
+      "en": "Lead: who, what, where, when, why"
+    },
+    {
+      "en": "Events in the right order, told in the past"
+    },
+    {
+      "en": "If-sentences: no ‘will’ or ‘would’ in the if-part"
+    },
+    {
+      "en": "A quote with name and age: “…,” said …"
+    },
+    {
+      "en": "A look into the future at the end"
+    },
+    {
+      "en": "Neutral language: no ‘guys’, no ‘gonna’, no ‘!!!’"
+    }
+  ],
+  "teacher": {
+    "aim": "Die Klasse baut gemeinsam einen Zeitungsbericht über ein grünes Projekt von Schüler:innen (vier erfundene Projekte zur Wahl) und wiederholt dabei if-Sätze (Typ 1 und Typ 2).",
+    "prep": "A/B/C/D-Karten austeilen. Beamer im Vollbild, Timer für die stillen Lesephasen bereithalten. Bei Bedarf Wörter an die Tafel: repair café (Reparaturcafé), sewing kit (Nähzeug), barriers (Absperrungen), banks (Ufer), shopping trolley (Einkaufswagen), tyre (Reifen), bike stands (Fahrradständer), student council (Schüler:innenvertretung), mayor (Bürgermeister:in), screwdriver (Schraubenzieher), rusty (rostig), chalk (Kreide), loose cable (lockeres Kabel), reduce (verringern), waste (Abfall), litter (Müll, der herumliegt). Einsatz ab: if-Sätze Typ 1 und 2 (if + Present / will, if + Past / would) und Past simple.",
+    "heft": "Neue Seite: Datum (rechts) und „News report“ als Überschrift (wie am Beamer), darunter 2 Zeilen für die Headline frei lassen (sie kommt zuletzt), dann der Lead. Jeder Absatz beginnt nach einer Leerzeile, am Rand steht der Name des Teils wie am Beamer: Lead, Introduction, Main body, Quote, Conclusion. If-Sätze grün unterstreichen, und zwar den ganzen Satz (if-Teil und Hauptsatz).",
+    "flow": "Volltext (50 min): 3 min Aufgabe · 7 Entscheidungen (die erste ist eine reine Wahl: welches Projekt) à ca. 2–3 min, bei Introduction, Main body und Conclusion zuerst 1 min still lesen, zusammen ca. 18 min · Abschreiben nach jeder Entscheidung, zusammen ca. 20 min · 5 min Checkliste · 4 min Puffer. Wenn die Zeit knapp wird: Checkliste als Hausübung. Pro abgelehnter Falle etwa eine Minute extra einplanen.",
+    "traps": "Introduction C (CC, Kohärenz und Kohäsion): Reihenfolge durcheinander, After that steht am Anfang, First und Then passen nicht zum Ablauf. Main body B (LSA, Sprachrichtigkeit): zwei typische if-Satz-Fehler in jeder Fassung, will im if-Teil (if people will repair / leave / take, if more students will cycle) und would im if-Teil (if every district / every school / everyone would …). Conclusion A (TA, Erfüllung der Aufgabenstellung): Chat- und Werbesprache (guys, gonna, super cool, !!!) statt sachlichem Berichtston.",
+    "notes": "Eignet sich gut als zweiter Zeitungsbericht nach einem ersten Bericht (z. B. über eine Naturkatastrophe): gleicher Aufbau (Lead, Introduction, Main body, Quote, Conclusion, Headline zuletzt), neuer Grammatikschwerpunkt. Markiert ist immer der ganze if-Satz; in jeder Fassung kommen mindestens drei vor (Main body, Quote, Conclusion). Passivformen kommen vor, sind diesmal aber nicht markiert. Bei Conclusion B und C den Unterschied besprechen: echter Plan (if-Satz Typ 1) und Traum (if-Satz Typ 2). Nur erfundene Namen, keine Namen von Mitschüler:innen oder Lehrer:innen. Hausübung: „Second edition“ über ein anderes Projekt oder ein Bericht über ein eigenes Klassenprojekt (ca. 150 Wörter, mindestens drei if-Sätze)."
+  }
+}

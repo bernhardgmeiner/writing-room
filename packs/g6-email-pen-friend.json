@@ -1,0 +1,334 @@
+{
+  "id": "g6-email-pen-friend",
+  "title": "A new pen friend",
+  "titleDe": "An einen neuen Brieffreund in Kanada",
+  "grade": 6,
+  "level": "A1+/A2",
+  "theme": "Schule & Lernen",
+  "textType": "email",
+  "modes": [
+    "full"
+  ],
+  "lengths": {
+    "short": {
+      "label": "around 100 words",
+      "min": 85,
+      "max": 115
+    }
+  },
+  "minutes": {
+    "full": {
+      "short": 50
+    }
+  },
+  "task": {
+    "situation": "Your English class has got a pen-friend project with a school in Canada. Your new pen friend is Ravi. He is twelve and lives in Halifax, a city by the sea. In his first email, Ravi asked you: “What are your first weeks back at school like?”",
+    "instruction": "Write your first email to Ravi. In your email:",
+    "points": [
+      "tell him about your school and your subjects",
+      "describe your teachers",
+      "tell him about your friends and what you do in the breaks",
+      "ask him some questions about his school"
+    ],
+    "words": {
+      "short": "Write around 100 words."
+    },
+    "de": "E-Mail an Ravi, einen neuen Brieffreund in Kanada, über die ersten Wochen im neuen Schuljahr: Schule und Fächer, Lehrer:innen, Freund:innen und Pausen, dazu Fragen an Ravi. Schwerpunkt: Present simple mit always, usually, often, sometimes, never."
+  },
+  "meta": {
+    "from": "new.pen.friend@classmail.example",
+    "to": "ravi.halifax@classmail.example",
+    "subjectSlot": "subject"
+  },
+  "focus": {
+    "label": "adverbs of frequency",
+    "labelDe": "Häufigkeitsadverbien",
+    "min": {
+      "short": 5
+    },
+    "note": "Marked: always, usually, often, sometimes, never (and seldom, if used)."
+  },
+  "topicWords": [],
+  "gaps": [
+    {
+      "id": "NAME",
+      "step": "intro",
+      "q": "Who is writing this email? Shout a first name.",
+      "qDe": "Ruft einen Vornamen für den Text am Beamer. Keine Namen von Mitschüler:innen oder Lehrer:innen. Im Heft dürft ihr mit eurem eigenen Namen unterschreiben.",
+      "type": "text",
+      "default": "Lena",
+      "max": 20
+    },
+    {
+      "id": "TEACHER",
+      "step": "teachers",
+      "q": "Invent a name for a teacher in our email: Mr or Ms + family name.",
+      "qDe": "Erfindet einen Namen: Mr oder Ms und ein Nachname (nicht Herr oder Frau). Keine Namen von Mitschüler:innen oder Lehrer:innen und keine echte Lehrperson.",
+      "type": "text",
+      "default": "Ms Wagner",
+      "minWords": 2,
+      "max": 25
+    }
+  ],
+  "steps": [
+    {
+      "id": "subject",
+      "slot": "subject",
+      "part": "Subject line",
+      "q": "What is our subject line?",
+      "de": "Die Betreffzeile sagt kurz, worum es in unserer E-Mail geht.",
+      "options": [
+        {
+          "l": "A",
+          "id": "hello",
+          "label": "Say where you are",
+          "text": "Greetings from Austria!",
+          "why": "Short and friendly. Ravi knows at once where the email comes from."
+        },
+        {
+          "l": "B",
+          "id": "weeks",
+          "label": "Say what it is about",
+          "text": "My first weeks back at school",
+          "why": "It tells Ravi exactly what the email is about."
+        },
+        {
+          "l": "C",
+          "id": "news",
+          "label": "Promise news",
+          "text": "School news from Austria",
+          "why": "Ravi asked about our first weeks, so he will want to open this email at once."
+        }
+      ]
+    },
+    {
+      "id": "greeting",
+      "slot": "greeting",
+      "part": "Greeting",
+      "q": "How do we greet Ravi?",
+      "de": "Hier wählen wir die Anrede für Ravi. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "hi",
+          "label": "Hi …,",
+          "text": "Hi Ravi,",
+          "why": "Friendly and informal: perfect for a pen friend. Don’t forget the comma."
+        },
+        {
+          "l": "B",
+          "id": "dear",
+          "label": "Dear …,",
+          "text": "Dear Ravi,",
+          "why": "Also friendly. ‘Dear’ is fine for friends and family, too."
+        },
+        {
+          "l": "C",
+          "id": "trap",
+          "label": "Dear Sir or Madam,",
+          "trap": true,
+          "crit": "TA",
+          "text": "Dear Sir or Madam,",
+          "reject": "Ravi is a friend, not a company! We know his name. ‘Dear Sir or Madam’ is much too formal.",
+          "rejectDe": "Ravi ist ein Freund, keine Firma. Wir kennen seinen Namen, also ist „Dear Sir or Madam“ viel zu förmlich."
+        }
+      ]
+    },
+    {
+      "id": "intro",
+      "slot": "intro",
+      "part": "My school",
+      "q": "Paragraph 1: who is writing? What about our school and subjects?",
+      "de": "Erster Absatz: wer schreibt, dazu unsere Schule und unsere Fächer. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "newsubject",
+          "label": "A new subject",
+          "text": "How are you? I’m {NAME}, your new pen friend from Austria. I’m twelve and in the second form. This year we’ve got a new subject, History, and we [[often]] watch films about it.",
+          "why": "Starts with ‘How are you?’, then name, age, class and one interesting detail."
+        },
+        {
+          "l": "B",
+          "id": "thanks",
+          "label": "Thank him for his email",
+          "text": "Thanks for your email! I’m {NAME}, I’m twelve, and my school is only ten minutes from my home. Mondays are [[always]] great: we’ve got English and PE, my favourite subjects!",
+          "why": "A friendly thank-you first. Look: ‘always’ comes AFTER ‘are’."
+        },
+        {
+          "l": "C",
+          "id": "year",
+          "label": "Start with the new school year",
+          "text": "School started again three weeks ago, and I’m happy to be back! I’m {NAME}, I’m twelve, and I [[usually]] have six lessons a day. Maths is my favourite subject.",
+          "why": "It answers Ravi’s question at once. Look: ‘usually’ comes BEFORE ‘have’."
+        }
+      ]
+    },
+    {
+      "id": "teachers",
+      "slot": "teachers",
+      "part": "Teachers",
+      "q": "Paragraph 2: what are our teachers like?",
+      "de": "Zweiter Absatz: unsere Lehrer:innen. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "english",
+          "label": "English and maths",
+          "text": "Our English teacher is {TEACHER}. The lessons are [[never]] boring because we [[often]] sing songs. In Maths, we [[sometimes]] solve puzzles in teams.",
+          "why": "Two subjects, two short descriptions. Look: ‘never’ comes after ‘are’."
+        },
+        {
+          "l": "B",
+          "id": "trap",
+          "label": "Word games and puzzles",
+          "trap": true,
+          "crit": "LSA",
+          "text": "Our English teacher is {TEACHER}. We play often word games, and the lessons never are boring. Our Maths teacher gives us sometimes puzzles for fun.",
+          "reject": "Three word order mistakes: ‘play often’ → often play, ‘never are’ → are never, ‘gives us sometimes’ → sometimes gives us.",
+          "rejectDe": "Drei Fehler bei der Wortstellung: Häufigkeitsadverbien stehen vor dem Verb (often play, sometimes gives us), aber nach are (are never)."
+        },
+        {
+          "l": "C",
+          "id": "sporty",
+          "label": "Friendly and sporty",
+          "text": "Most of my teachers are friendly. Our PE teacher, {TEACHER}, [[often]] plays football with us. In Biology, we [[never]] talk because the lessons are really exciting!",
+          "why": "A general sentence first, then two examples. The little joke makes it fun to read."
+        }
+      ]
+    },
+    {
+      "id": "breaks",
+      "slot": "breaks",
+      "part": "Friends and breaks",
+      "q": "Paragraph 3: our friends and the breaks. Which version?",
+      "de": "Dritter Absatz: Freund:innen und Pausen. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "trap",
+          "label": "Football and sandwiches",
+          "trap": true,
+          "crit": "CC",
+          "text": "I love our breaks, but my friends and I always play football in the playground. We are often hungry, so we usually eat our sandwiches first.",
+          "reject": "‘but’ shows a contrast, and there is no contrast here. Use ‘and’ instead.",
+          "rejectDe": "„but“ zeigt einen Gegensatz, aber hier gibt es keinen. Besser passt and."
+        },
+        {
+          "l": "B",
+          "id": "breaktime",
+          "label": "Break time",
+          "text": "At break time, my friends and I [[usually]] eat our sandwiches in the playground. When it rains, we [[sometimes]] play cards in the classroom.",
+          "why": "Friends and breaks in two clear sentences. Ravi learns what a normal break in Austria looks like."
+        },
+        {
+          "l": "C",
+          "id": "best",
+          "label": "My best friends",
+          "text": "My best friends are in my class, so we [[always]] spend the breaks together. On sunny days, we [[usually]] play table tennis outside.",
+          "why": "Starts with the friends, then says what they do. ‘So’ links the two ideas."
+        }
+      ]
+    },
+    {
+      "id": "closing",
+      "slot": "closing",
+      "part": "Ending",
+      "q": "Paragraph 4: how do we end the email?",
+      "de": "Vierter Absatz: Fragen an Ravi und ein netter Schlusssatz. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "whatabout",
+          "label": "Ask about his breaks",
+          "text": "What about you? What do you [[usually]] do in the breaks? Do you [[often]] play ice hockey in PE? Write back soon!",
+          "why": "Two questions about his school day give Ravi a reason to write back."
+        },
+        {
+          "l": "B",
+          "id": "halifax",
+          "label": "Ask about his school",
+          "text": "What is your school in Halifax like? How do you [[usually]] get there? I’m looking forward to your next email!",
+          "why": "Two questions about his school, then a friendly sentence that asks for an answer."
+        },
+        {
+          "l": "C",
+          "id": "turn",
+          "label": "Now it’s your turn",
+          "text": "Now it’s your turn! Do you [[always]] wear a school uniform? And what is your favourite subject? Write soon!",
+          "why": "A lively start for the questions. The short last sentence asks Ravi to answer."
+        }
+      ]
+    },
+    {
+      "id": "signoff",
+      "slot": "signoff",
+      "part": "Sign-off",
+      "q": "How do we close the email?",
+      "de": "Mit der Grußformel endet unsere E-Mail. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "wishes",
+          "label": "Best wishes,",
+          "text": "Best wishes,\n{NAME}",
+          "why": "Friendly and polite: good for a new pen friend."
+        },
+        {
+          "l": "B",
+          "id": "care",
+          "label": "Take care,",
+          "text": "Take care,\n{NAME}",
+          "why": "Warm and informal, like a message to a friend."
+        },
+        {
+          "l": "C",
+          "id": "bye",
+          "label": "Bye for now,",
+          "text": "Bye for now,\n{NAME}",
+          "why": "Short and friendly. ‘For now’ shows that more emails will come."
+        }
+      ]
+    }
+  ],
+  "order": [
+    "subject",
+    "greeting",
+    "intro",
+    "teachers",
+    "breaks",
+    "closing",
+    "signoff"
+  ],
+  "checks": [
+    {
+      "en": "A short subject line that says what the email is about"
+    },
+    {
+      "en": "A friendly greeting with a comma: Hi Ravi, / Dear Ravi,"
+    },
+    {
+      "en": "School, subjects, teachers, friends and breaks are all in the email"
+    },
+    {
+      "en": "One idea = one paragraph"
+    },
+    {
+      "en": "Adverbs of frequency come before the verb, but after am / is / are"
+    },
+    {
+      "en": "Questions for Ravi and a friendly last sentence"
+    },
+    {
+      "en": "Sign-off (Best wishes, …) and name on their own lines"
+    }
+  ],
+  "teacher": {
+    "aim": "Die Klasse schreibt gemeinsam eine informelle E-Mail an einen neuen Brieffreund in Kanada über die ersten Schulwochen und übt dabei das Present simple und die Stellung der Häufigkeitsadverbien (vor dem Vollverb, nach am/is/are).",
+    "prep": "A/B/C/D-Karten austeilen, Beamer im Vollbild. Die Aufgabe am Beamer stellt Ravi und die Situation vor. Einsatz ab: Present simple (auch he/she/it mit -s) und Häufigkeitsadverbien always, usually, often, sometimes, never.",
+    "heft": "Neue Seite: Datum (rechts) und „Email“ als Überschrift (wie am Beamer). Darunter der Kopf in vier Zeilen wie am Beamer: To, From, Date, Subject (Date ist der Tag der Stunde). Dann die Anrede auf eigener Zeile; jeder Absatz beginnt nach einer Leerzeile, am Rand steht der Name des Teils wie am Beamer. Nach einer Leerzeile Grußformel und Name auf eigenen Zeilen. Häufigkeitsadverbien grün unterstreichen.",
+    "flow": "Volltext (50 min): 5 min Aufgabe und Kopf der E-Mail · 7 Entscheidungen à ca. 2 min, zusammen ca. 15 min · Abschreiben nach jeder Entscheidung, zusammen ca. 20 min · 5 min Checkliste · 5 min Puffer.",
+    "traps": "Greeting C (TA, Erfüllung der Aufgabenstellung): „Dear Sir or Madam“ ist zu förmlich für einen Freund. Teachers B (LSA, Sprachrichtigkeit): drei Häufigkeitsadverbien an der falschen Stelle (play often, never are, gives us sometimes). Friends and breaks A (CC, Kohärenz und Kohäsion): but ohne Gegensatz, statt and.",
+    "notes": "Im Heft darf jede:r mit dem eigenen Namen unterschreiben. Den Namen der Lehrerin oder des Lehrers erfindet die Klasse; echte Namen kommen nicht in den Text am Beamer. Halifax ist eine Hafenstadt an der Ostküste Kanadas; dort beginnt das Schuljahr wie bei uns im September. Differenzierung: Schnelle schreiben eine dritte Frage an Ravi mit einem Häufigkeitsadverb. Hausübung: zweite Fassung mit anderen Entscheidungen oder Ravis Antwort (60–80 Wörter)."
+  }
+}

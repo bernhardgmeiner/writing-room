@@ -1,0 +1,462 @@
+{
+  "id": "g11-blog-what-makes-me",
+  "title": "What makes me … me?",
+  "titleDe": "Was macht mich aus?",
+  "grade": 11,
+  "level": "B1+/B2",
+  "theme": "Ich & meine Welt",
+  "textType": "blog",
+  "modes": [
+    "full",
+    "frame"
+  ],
+  "lengths": {
+    "short": {
+      "label": "around 250 words",
+      "min": 225,
+      "max": 275
+    },
+    "long": {
+      "label": "around 400 words",
+      "min": 360,
+      "max": 440
+    }
+  },
+  "minutes": {
+    "full": {
+      "short": 50,
+      "long": 100
+    },
+    "frame": {
+      "short": 60,
+      "long": 100
+    }
+  },
+  "task": {
+    "situation": "The youth website ‘Mirror Talk’ is running a blog series called ‘What makes me … me?’, in which young people write about what shapes who they are. You have decided to write a blog post for the series.",
+    "instruction": "In your blog post you should:",
+    "points": [
+      "describe what shapes young people’s identity (e.g. music, style, languages, friends, family)",
+      "compare how young people express who they are online and offline",
+      "give advice to readers who feel under pressure to fit in"
+    ],
+    "words": {
+      "short": "Give your blog post a title. Write around 250 words.",
+      "long": "Give your blog post a title. Write around 400 words."
+    },
+    "de": "Blogbeitrag für eine Jugend-Website: Titel, Username, Datum, Einstieg mit Hook, klare Absätze, Schluss mit Aufruf zum Kommentieren. Drei Inhaltspunkte: was Identität prägt, online und offline vergleichen, Tipps gegen Anpassungsdruck. Den Titel wählen wir ganz zum Schluss."
+  },
+  "meta": {
+    "user": "teen_in_progress"
+  },
+  "focus": {
+    "label": "linking words in a chatty voice",
+    "labelDe": "Linking words im Plauderton",
+    "min": {
+      "short": 6,
+      "long": 9
+    },
+    "note": "Marked: linking words that carry the blogger’s personal line of thought: reasons, examples, contrasts and afterthoughts in a chatty voice (because, since, for example, though, what’s more, that’s why, all in all …). ‘So’ at the start of a question or a call to the reader is not marked."
+  },
+  "topicWords": [
+    "identity",
+    "online",
+    "offline",
+    "fit"
+  ],
+  "gaps": [
+    {
+      "id": "FRIEND",
+      "step": "shapes",
+      "q": "Who is the blogger’s best friend? First name only.",
+      "qDe": "Ruft einen Vornamen für die beste Freundin oder den besten Freund. Keine Namen von Mitschüler:innen oder Lehrer:innen.",
+      "type": "text",
+      "default": "Luca",
+      "max": 20
+    }
+  ],
+  "steps": [
+    {
+      "id": "angle",
+      "part": "Angle",
+      "q": "Which personal angle does our blogger take?",
+      "de": "Wählt den persönlichen Aufhänger, der sich durch Einleitung, Body paragraph 1 und Schluss zieht.",
+      "options": [
+        {
+          "l": "A",
+          "id": "music",
+          "label": "The playlist test",
+          "teaser": "Our blogger believes a playlist says more about a person than a passport."
+        },
+        {
+          "l": "B",
+          "id": "languages",
+          "label": "Dialect, German, English",
+          "teaser": "Our blogger speaks Viennese dialect, standard German and English, sometimes all on the same day."
+        }
+      ]
+    },
+    {
+      "id": "intro",
+      "slot": "intro",
+      "part": "Introduction",
+      "q": "How do we hook our readers?",
+      "de": "Der Einstieg führt zur großen Frage des Blogbeitrags. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then finish the introduction with a detail about our blogger that leads to the big question.",
+      "ownDe": "Gerüst abschreiben, dann den Einstieg mit einem Detail über unsere Bloggerin oder unseren Blogger fertigschreiben, das zur großen Frage führt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "question",
+          "label": "Ask the readers a question",
+          "why": "A direct question pulls readers in, and the funny detail makes them want to read on.",
+          "text": {
+            "by": "angle",
+            "map": {
+              "music": "{{Want to know who I really am? Forget my passport}} and just press shuffle on my playlist. Within three songs, you’ll hear old-school hip-hop, a film soundtrack and something my dad simply calls ‘noise’. {{That got me thinking: what actually makes us}} who we are?",
+              "languages": "{{How many different people can you be in one day?}} I’m at least three: I chat in Viennese dialect with my grandpa, speak standard German in class and switch to English for online gaming. {{That got me thinking: which version is the real me,}} and what makes us who we are?"
+            }
+          }
+        },
+        {
+          "l": "B",
+          "id": "trap",
+          "label": "What this post covers",
+          "trap": true,
+          "crit": "TA",
+          "text": "In this essay, I am going to discuss the various factors which determine the identity of young people. Firstly, I will describe these factors. Secondly, I will compare online and offline identity. Finally, I will give some useful advice on dealing with peer pressure.",
+          "reject": "This is the plan of an essay (‘In this essay, I am going to discuss …’), not the start of a blog post. A blog post opens with a hook that makes readers want to read on.",
+          "rejectDe": "Das ist eine Essay-Gliederung („In this essay …“), kein Blog-Anfang. Ein Blog beginnt mit einem Hook, der neugierig macht."
+        },
+        {
+          "l": "C",
+          "id": "scene",
+          "label": "Start with a scene",
+          "why": "A short scene from everyday life shows the topic instead of explaining it.",
+          "text": {
+            "by": "angle",
+            "map": {
+              "music": "{{It’s Sunday night, and I’m doing my favourite thing:}} building the perfect playlist for the week ahead. Every song has to fit my mood, from the Monday blues to Friday energy. {{Somewhere between track five and track six, I start to wonder:}} what makes me … me?",
+              "languages": "{{It’s Saturday morning, and I’m}} helping my grandpa in his garden, chatting away in broad Viennese dialect. An hour later, I’m online, joking in English with a gamer from Toronto. {{Same person, two completely different voices.}} So what makes me … me?"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "shapes",
+      "slot": "shapes",
+      "part": "Body paragraph 1",
+      "q": "Content point 1: what shapes young people’s identity?",
+      "de": "Erster Inhaltspunkt: Was prägt die Identität junger Menschen? Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then add examples of what shapes our blogger and other young people. Invent them, and don’t use the examples from the board.",
+      "ownDe": "Gerüst abschreiben, dann erfundene Beispiele ergänzen, was unsere Bloggerin oder unseren Blogger und andere Jugendliche prägt, nicht die Beispiele vom Beamer.",
+      "options": [
+        {
+          "l": "A",
+          "id": "trap",
+          "label": "Music, friends, family",
+          "trap": true,
+          "crit": "CC",
+          "text": "Identity has many different parts. Music is important for young people. Despite this, many teenagers listen to hip-hop or pop and make their own playlists. Friends are important too, especially my best friend {FRIEND}. On the contrary, clothes are also important for a lot of people our age. Therefore, family plays a role as well, and so do hobbies.",
+          "reject": "No real topic sentence, and the linking words are wrong: ‘Despite this’ suggests a contrast, ‘On the contrary’ contradicts nothing and ‘Therefore’ suggests a result that isn’t there. The ideas are just listed.",
+          "rejectDe": "Kein echter Topic Sentence, und die Linking words passen nicht: Despite this ohne Gegensatz, On the contrary ohne Widerspruch und Therefore ohne Folge."
+        },
+        {
+          "l": "B",
+          "id": "friends",
+          "label": "Friends and style",
+          "why": "The topic sentence links back to the introduction, and a personal example makes the point real.",
+          "text": {
+            "by": "angle",
+            "map": {
+              "music": "{{Music is only one piece of the puzzle, [[though]].}} Friends shape us just as much [[because]] we pick up their jokes, their slang and even their hobbies. {{[[For example,]] my best friend}} {FRIEND} got me into climbing, and now I spend most weekends at the climbing wall. {{Style matters too, [[since]]}} our clothes speak before we do.",
+              "languages": "{{Language is only one piece of the puzzle, [[though]].}} Friends shape us just as much [[because]] we pick up their jokes, their slang and even their hobbies. {{[[For example,]] my best friend}} {FRIEND} got me into climbing, and now I spend most weekends at the climbing wall. {{Style matters too, [[since]]}} our clothes speak before we do."
+            }
+          }
+        },
+        {
+          "l": "C",
+          "id": "chance",
+          "label": "Choice and chance",
+          "why": "‘However’ shows a real contrast: what we choose and what we are born into.",
+          "text": {
+            "by": "angle",
+            "map": {
+              "music": "{{Music is something we choose, and so are}} our clothes and hobbies. {{[[However,]] a lot of who we are}} isn’t our choice: the family we grow up in and the place we call home. {{[[For instance,]]}} Sunday lunch at my grandparents’ is a ritual I’d never give up, [[even though]] it means getting up before noon.",
+              "languages": "{{We choose our clothes and hobbies, and to some extent}} even the way we speak. {{[[However,]] a lot of who we are}} isn’t our choice: the family we grow up in and the place we call home. {{[[For instance,]]}} Sunday lunch at my grandparents’ is a ritual I’d never give up, [[even though]] it means getting up before noon."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "change",
+      "slot": "change",
+      "part": "Body paragraph 1",
+      "join": true,
+      "len": "long",
+      "q": "Does our identity stay the same?",
+      "de": "Der Absatz geht weiter: Bleibt unsere Identität immer gleich? Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then describe how our blogger or teenagers in general change and try things out (invent the details), and finish the last sentence.",
+      "ownDe": "Gerüst abschreiben, dann erfundene Beispiele ergänzen, wie sich unsere Bloggerin oder unser Blogger oder Jugendliche allgemein verändern und Neues ausprobieren, und den letzten Satz fertigschreiben.",
+      "options": [
+        {
+          "l": "A",
+          "id": "then",
+          "label": "Then and now",
+          "why": "A before-and-after picture with a touch of humour makes the idea easy to imagine.",
+          "text": "{{[[What’s more,]] identity isn’t set in stone.}} {{At twelve, I was}} a shy kid in a superhero T-shirt who spent every free minute building spaceships out of plastic bricks. The T-shirt is long gone, [[although]] I still love building things. {{Growing up means}} keeping some parts of yourself and leaving others behind."
+        },
+        {
+          "l": "B",
+          "id": "trying",
+          "label": "Trying things out",
+          "why": "Speaks for a whole generation and turns ‘changing your mind’ into something positive.",
+          "text": "{{[[At the same time,]] our teenage years are a time for trying things out.}} We dye our hair blue, join a band for three weeks or take up a sport, only to drop it again by Christmas. {{That’s not a weakness:}} it’s how we find out what really suits us."
+        }
+      ]
+    },
+    {
+      "id": "online",
+      "slot": "online",
+      "part": "Body paragraph 2",
+      "q": "Content point 2: how do we show who we are online and offline?",
+      "de": "Zweiter Inhaltspunkt: online und offline im Vergleich. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then compare online and offline in your own words: give one example for each (invent them).",
+      "ownDe": "Gerüst abschreiben, dann online und offline mit je einem erfundenen Beispiel vergleichen.",
+      "options": [
+        {
+          "l": "A",
+          "id": "stages",
+          "label": "Two different stages",
+          "why": "A clear comparison: ‘by contrast’ and ‘while’ show the difference between the two worlds.",
+          "text": "{{This all plays out on two stages: online and offline.}} Online, we can plan every detail: we pick the best photo, add a filter and delete anything embarrassing. Offline, [[by contrast,]] there’s no edit button. {{[[While]] my profile is full of}} concerts and sunsets, my classmates know someone who’s grumpy before ten and laughs far too loudly."
+        },
+        {
+          "l": "B",
+          "id": "trap",
+          "label": "My two lives",
+          "trap": true,
+          "crit": "LSA",
+          "text": "Online and offline, we show us in very different ways. For two years now, I’ve posted a photo every day, usually of concerts, sunsets or my breakfast, and everyone means my life is perfect. In the school, though, I’m much quieter than on my profile, and hardly anyone in my class knows about my secret account.",
+          "reject": "Three typical mistakes: ‘we show us’ (→ we show ourselves), ‘everyone means’ (→ everyone thinks) and ‘in the school’ (→ at school).",
+          "rejectDe": "Drei typische Fehler: we show us → ourselves, everyone means → everyone thinks („meinen“ heißt hier think), in the school → at school."
+        },
+        {
+          "l": "C",
+          "id": "alike",
+          "label": "Not as fake as you think",
+          "why": "Starts with a common opinion and then argues against it: a lively way to compare.",
+          "text": "{{What about our online selves? Many adults think they are fake.}} I disagree. Online, we can show sides we hide in class, [[such as]] a love of poetry or our latest dance routine. {{[[On the other hand,]] it’s true that}} every post is carefully chosen, {{[[so]] a profile is more like}} a highlight reel than a diary."
+        }
+      ]
+    },
+    {
+      "id": "pressure",
+      "slot": "pressure",
+      "part": "Body paragraph 2",
+      "join": true,
+      "len": "long",
+      "q": "Where does the pressure come from?",
+      "de": "Der Absatz geht weiter: Woher kommt der Druck, dazuzugehören? Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then explain in your own words how online life can create pressure.",
+      "ownDe": "Gerüst abschreiben, dann mit eigenen Worten erklären, wie im Netz Druck entsteht.",
+      "options": [
+        {
+          "l": "A",
+          "id": "likes",
+          "label": "When likes decide",
+          "why": "A concrete example shows step by step how likes can change what we post.",
+          "text": "{{Trouble starts when likes decide what we post.}} Some people delete a photo when it doesn’t get enough likes within an hour. {{Little by little, a profile turns into}} what we think others want to see [[rather than]] who we really are."
+        },
+        {
+          "l": "B",
+          "id": "same",
+          "label": "Everyone looks the same",
+          "why": "A question to the readers, then a short list that everybody recognises.",
+          "text": "{{Have you noticed how similar many profiles look?}} Same poses, same filters, same trendy café. {{[[That’s why]] it can feel risky to post}} something different, [[when in fact]] the unusual posts are often the ones that stay in our heads for days."
+        }
+      ]
+    },
+    {
+      "id": "advice",
+      "slot": "advice",
+      "part": "Body paragraph 3",
+      "q": "Content point 3: what advice do we give readers who feel they have to fit in?",
+      "de": "Dritter Inhaltspunkt: Tipps für Leser:innen, die sich unter Druck fühlen. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then add your own tips and a reason for each one.",
+      "ownDe": "Gerüst abschreiben, dann eigene Tipps mit Begründung ergänzen.",
+      "options": [
+        {
+          "l": "A",
+          "id": "tips",
+          "label": "Three clear tips",
+          "why": "‘First of all’, ‘secondly’ and ‘thirdly’ give the tips a clear order.",
+          "text": "{{But what if you feel you must fit in, online or offline?}} {{[[First of all,]] remember that}} almost everyone feels this way, even the most confident-looking people. {{[[Secondly,]] spend time with people who}} like you for who you are, not for what you wear. {{[[Thirdly,]]}} don’t compare your everyday life with other people’s best moments online."
+        },
+        {
+          "l": "B",
+          "id": "belong",
+          "label": "Fitting in or belonging?",
+          "why": "One strong idea, explained with a contrast and backed up with examples.",
+          "text": "{{Tired of trying to fit in, online or offline? Here’s my advice:}} look for a place where you can belong [[instead]]. Fitting in means changing yourself to be accepted, [[whereas]] belonging means being accepted as you are. {{You might find your people in}} a drama club, a choir or an online group for your unusual hobby."
+        },
+        {
+          "l": "C",
+          "id": "trap",
+          "label": "Just be yourself",
+          "trap": true,
+          "crit": "LSR",
+          "text": "My advice to readers who feel under pressure to fit in is that they should not feel under pressure to fit in. They should just be themselves. They should do what they like and they should not care about other people. Being yourself is very good and very important. Nobody should ever feel under pressure.",
+          "reject": "This copies the words of the task and repeats ‘they should’ and ‘very’ again and again. There are no real tips or examples. Use your own words.",
+          "rejectDe": "Aus der Aufgabe abgeschrieben, ständig „they should“ und „very“, keine echten Tipps. Eigene Worte verwenden!"
+        }
+      ]
+    },
+    {
+      "id": "talk",
+      "slot": "talk",
+      "part": "Body paragraph 3",
+      "join": true,
+      "len": "long",
+      "q": "Which extra tip do we add?",
+      "de": "Der Absatz geht weiter: ein weiterer Tipp für die Leser:innen. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then add one more tip of your own and explain why it helps.",
+      "ownDe": "Gerüst abschreiben, dann einen eigenen Tipp ergänzen und begründen.",
+      "options": [
+        {
+          "l": "A",
+          "id": "talk",
+          "label": "Talk about it",
+          "why": "Gives readers a practical first step and reassures them that they are not alone.",
+          "text": "{{[[Apart from that,]] don’t keep your worries to yourself.}} Talking to a friend, an older cousin or a teacher you trust can make the pressure feel much smaller. You’ll probably discover that they’ve felt exactly the same at some point."
+        },
+        {
+          "l": "B",
+          "id": "logoff",
+          "label": "Log off now and then",
+          "why": "A simple experiment readers can try this weekend, with a clear benefit.",
+          "text": "{{It can also help to log off now and then.}} After a weekend without social media, you’ll notice that the world keeps turning without your latest post. {{[[In addition,]] you’ll have more time for}} the people right in front of you."
+        }
+      ]
+    },
+    {
+      "id": "concl",
+      "slot": "concl",
+      "part": "Conclusion",
+      "q": "How do we end our blog post?",
+      "de": "Der Schluss rundet den Blogbeitrag ab. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then finish with your own call to comment: what should readers share?",
+      "ownDe": "Gerüst abschreiben, dann mit einem eigenen Aufruf zum Kommentieren enden.",
+      "options": [
+        {
+          "l": "A",
+          "id": "ask",
+          "label": "Ask the readers",
+          "why": "Sums up the blogger’s answer and hands the question over to the readers.",
+          "text": {
+            "by": "angle",
+            "map": {
+              "music": "{{[[All in all,]] there’s no single answer.}} Online and offline, I’m a mix of my friends, my family and about three hundred songs, and I’m happy with that mix. {{Now it’s your turn: what makes you … you?}} Tell me in the comments, along with your favourite song!",
+              "languages": "{{[[All in all,]] there’s no single answer.}} Online and offline, I’m a mix of my friends, my family and three ways of speaking, and I’m happy with that mix. {{Now it’s your turn: what makes you … you?}} Tell me in the comments, in any language you like!"
+            }
+          }
+        },
+        {
+          "l": "B",
+          "id": "challenge",
+          "label": "A challenge",
+          "why": "A memorable comparison, then a fun challenge that gets readers commenting.",
+          "text": {
+            "by": "angle",
+            "map": {
+              "music": "{{[[To sum up,]] identity is less like a photo and more like a playlist:}} online or offline, we choose the tracks ourselves. {{So here’s my challenge for you:}} describe yourself in three songs and post them in the comments. I can’t wait to hear them!",
+              "languages": "{{[[To sum up,]] identity is less like a photo and more like a conversation:}} online or offline, we choose our own words. {{So here’s my challenge for you:}} describe yourself in three words, in any language, and post them in the comments. I can’t wait to read them!"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "title",
+      "slot": "title",
+      "part": "Title",
+      "q": "Now that the blog post is finished, which title do we choose?",
+      "de": "Den Titel wählen wir zuletzt: Er soll neugierig machen und zum ganzen Text passen.",
+      "own": "Short and catchy: the title should make readers curious about our post.",
+      "ownDe": "Kurz und griffig: Der Titel soll neugierig auf unseren Beitrag machen.",
+      "options": [
+        {
+          "l": "A",
+          "id": "personal",
+          "label": "A personal title",
+          "why": "Picks up our blogger’s angle, so readers know at once what makes this post special.",
+          "text": {
+            "by": "angle",
+            "map": {
+              "music": "Who am I? Ask my playlist",
+              "languages": "Dialect, German, English: which one is me?"
+            }
+          }
+        },
+        {
+          "l": "B",
+          "id": "profile",
+          "label": "A hint at the online part",
+          "why": "Short and catchy, and it suggests that there is more to us than what we post.",
+          "text": "More than a profile picture"
+        },
+        {
+          "l": "C",
+          "id": "question",
+          "label": "A question",
+          "why": "A question with two sides makes readers think about their own answer.",
+          "text": "Fitting in or standing out?"
+        }
+      ]
+    }
+  ],
+  "order": [
+    "title",
+    "intro",
+    "shapes",
+    "change",
+    "online",
+    "pressure",
+    "advice",
+    "talk",
+    "concl"
+  ],
+  "checks": [
+    {
+      "en": "A title that makes readers curious, with user name and date under it"
+    },
+    {
+      "en": "The introduction hooks the readers with a question or a scene"
+    },
+    {
+      "en": "All three content points: what shapes identity, online vs offline, advice"
+    },
+    {
+      "en": "Five paragraphs; each body paragraph opens with a topic sentence linked to what came before"
+    },
+    {
+      "en": "Linking words that really fit: contrast, reason, result, examples"
+    },
+    {
+      "en": "Friendly blog style: contractions, questions and ‘you’, but no slang overload"
+    },
+    {
+      "en": "The ending invites readers to comment"
+    }
+  ],
+  "teacher": {
+    "aim": "Die Klasse baut gemeinsam einen Blogbeitrag auf B1+/B2-Niveau mit drei Inhaltspunkten nach SRDP-Muster und trainiert dabei Linking words für persönliche Gedankengänge, Topic Sentences und den lockeren, aber klar gegliederten Blog-Ton.",
+    "prep": "A/B/C/D-Karten austeilen, Beamer im Vollbild. Die Aufgabe am Beamer enthält alles Nötige. Im Gerüst-Modus den eingebauten Timer nutzen: 5 min pro Absatz.",
+    "heft": "Neue Seite: rechts oben das Datum, als Überschrift „Blog post“ (wie am Beamer). Darunter 2 Zeilen für den Titel frei lassen (der Titel kommt zuletzt), darunter Username · Datum. Fünf Absätze, jeder beginnt nach einer Leerzeile; am Rand stehen Intro, Body 1, Body 2, Body 3 und Conclusion. Linking words grün unterstreichen.",
+    "flow": "Volltext kurz (50 min): 5 min Aufgabe und Blog-Merkmale, 7 Entscheidungen à ca. 2 min, Abschreiben ca. 25 min, 5 min Checkliste. Volltext lang (100 min): dazu je eine Fortsetzung für Body 1, Body 2 und Body 3 (gleicher Absatz, keine neue Zeile), mehr Zeit für Abschreiben und Vergleich. Gerüst kurz (realistisch ca. 60 min): 3 min Aufgabe und Aufhänger, pro Absatz 1 min Entscheidung, 5–6 min eigenes Schreiben, 1 min Vergleich mit dem Modell; am Ende 3 min Titel und 5 min Checkliste. In einer 50-Minuten-Stunde Titel und Checkliste am Beginn der nächsten Stunde. Gerüst lang (100 min): dieselben fünf Absätze plus Titel; bei Body 1–3 nach der Fortsetzungs-Entscheidung noch 3–4 min Schreiben im selben Absatz.",
+    "traps": "Introduction B (TA): falsche Textsorte, Essay-Gliederung („In this essay, I am going to …“) statt Hook. Body 1 A (CC): kein Topic Sentence, Despite this, On the contrary und Therefore ohne Sinn. Body 2 B (LSA): we show us, everyone means, in the school. Body 3 C (LSR): aus der Aufgabe abgeschrieben, „they should“ und „very“ ständig wiederholt. Kürzel: TA = Erfüllung der Aufgabenstellung, CC = Kohärenz und Kohäsion, LSR = Spektrum sprachlicher Mittel, LSA = Sprachrichtigkeit.",
+    "notes": "Sensibles Thema: Geschrieben wird über junge Menschen allgemein und über eine erfundene Person mit dem Usernamen teen_in_progress; niemand muss Persönliches preisgeben. Hinweis auf Schulpsychologie bzw. Rat auf Draht (Tel. 147) bereithalten. Geschlechtsidentität ist nicht Thema dieses Blogs. Im Gerüst-Modus schreiben alle über die erfundene Bloggerin oder den erfundenen Blogger, nicht über sich selbst. Der Blogbeitrag hat in beiden Längen genau fünf Absätze (Einleitung, drei Hauptteile, Schluss); die lange Fassung macht Body 1, Body 2 und Body 3 mit Fortsetzungsblöcken länger, statt neue Absätze anzuhängen. Markiert sind Linking words für den persönlichen Gedankengang (Gründe, Beispiele, Gegensätze, Nachgedanken im Plauderton), also über and und but hinaus (because, since, so, although, however, for example …) und auch nachgestelltes though; when, if und „So“ am Anfang einer Frage oder eines Aufrufs bleiben unmarkiert. Für den Namen der besten Freundin oder des besten Freundes nur erfundene Namen, keine Namen von Mitschüler:innen oder Lehrer:innen. Differenzierung: Schnelle ergänzen im Gerüst-Modus pro Absatz ein zusätzliches eigenes Beispiel. Hausübung: ein Kommentar (ca. 150 Wörter) unter dem fertigen Blogbeitrag oder eine zweite Fassung mit dem anderen Aufhänger."
+  }
+}

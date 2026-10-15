@@ -1,0 +1,306 @@
+{
+  "id": "g5-email-my-new-school",
+  "title": "My new school",
+  "titleDe": "Erste E-Mail an eine E-Pal in Schottland",
+  "grade": 5,
+  "level": "A1",
+  "theme": "Schule & Lernen",
+  "textType": "email",
+  "modes": [
+    "full"
+  ],
+  "lengths": {
+    "short": {
+      "label": "around 60 words",
+      "min": 50,
+      "max": 70
+    }
+  },
+  "minutes": {
+    "full": {
+      "short": 50
+    }
+  },
+  "task": {
+    "situation": "You have got a new e-pal in Scotland. Her name is Isla, and she is eleven. She lives in Inverness. Write your first email to Isla.",
+    "instruction": "Write an email. In your email:",
+    "points": [
+      "tell Isla about your new school",
+      "tell her about your subjects",
+      "tell her about your favourite subject",
+      "ask Isla a question"
+    ],
+    "words": {
+      "short": "Write around 60 words."
+    },
+    "de": "Erste E-Mail an Isla, eine neue E-Pal in Schottland: eure neue Schule, eure Fächer, euer Lieblingsfach und eine Frage an Isla."
+  },
+  "meta": {
+    "from": "new.e-pal@classmail.example",
+    "to": "isla.inverness@classmail.example",
+    "subjectSlot": "subject"
+  },
+  "focus": {
+    "label": "have got / has got",
+    "labelDe": "have got / has got",
+    "min": {
+      "short": 3
+    },
+    "note": "Marked: every have got / has got, also in questions (Have you got …?)."
+  },
+  "topicWords": [
+    "school",
+    "subject",
+    "subjects",
+    "favourite"
+  ],
+  "gaps": [
+    {
+      "id": "NAME",
+      "step": "signoff",
+      "q": "Who writes the email? Give a first name.",
+      "qDe": "Ruft einen Vornamen für den Text am Beamer. Keine Namen von Mitschüler:innen oder Lehrer:innen. Im Heft dürft ihr mit eurem eigenen Namen unterschreiben.",
+      "type": "text",
+      "default": "Maja",
+      "max": 20
+    }
+  ],
+  "steps": [
+    {
+      "id": "subject",
+      "slot": "subject",
+      "part": "Subject line",
+      "q": "What is our subject line?",
+      "de": "Die Betreffzeile sagt kurz, worum es in der E-Mail geht.",
+      "options": [
+        {
+          "l": "A",
+          "id": "hello",
+          "label": "Where it comes from",
+          "text": "News from Austria",
+          "why": "Isla knows at once where the email comes from."
+        },
+        {
+          "l": "B",
+          "id": "school",
+          "label": "What it is about",
+          "text": "My new school",
+          "why": "It says what the email is about."
+        },
+        {
+          "l": "C",
+          "id": "first",
+          "label": "A first email",
+          "text": "My first email to you",
+          "why": "Friendly, and Isla knows at once that this is our first email."
+        }
+      ]
+    },
+    {
+      "id": "greeting",
+      "slot": "greeting",
+      "part": "Greeting",
+      "q": "How do we greet Isla?",
+      "de": "Mit der Anrede beginnt unsere E-Mail an Isla. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "hi",
+          "label": "Hi …,",
+          "text": "Hi Isla,",
+          "why": "Short and friendly: great for an e-pal."
+        },
+        {
+          "l": "B",
+          "id": "dear",
+          "label": "Dear …,",
+          "text": "Dear Isla,",
+          "why": "‘Dear’ is friendly and polite for a first email."
+        },
+        {
+          "l": "C",
+          "id": "hello",
+          "label": "Hello …,",
+          "text": "Hello Isla,",
+          "why": "‘Hello’ is friendly, too. Don’t forget the comma."
+        }
+      ]
+    },
+    {
+      "id": "school",
+      "slot": "school",
+      "part": "My school",
+      "q": "What do we tell Isla about our new school?",
+      "de": "Hier stellen wir uns kurz vor und erzählen von unserer neuen Schule. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "city",
+          "label": "A great library",
+          "text": "I am your new e-pal, and I am ten. My new school is in Graz, and it [[has got]] a great library.",
+          "why": "Isla learns who we are and one nice thing about the school."
+        },
+        {
+          "l": "B",
+          "id": "gym",
+          "label": "A school with a gym",
+          "text": "I am ten, and I live in Klagenfurt. My new school has got a big gym. In the pause play we football there.",
+          "trap": true,
+          "crit": "LSA",
+          "reject": "Two mistakes: in English it is the break, not the pause. And the word order is we play, not play we.",
+          "rejectDe": "Zwei Fehler: Die Schulpause heißt „break“, nicht „pause“. Und im Englischen steht „we“ vor dem Verb: „we play“, nicht „play we“."
+        },
+        {
+          "l": "C",
+          "id": "town",
+          "label": "A small school",
+          "text": "I am ten, and I live in Tyrol. My new school is small, but it [[has got]] a garden with a pond.",
+          "why": "‘But’ shows a difference: the school is small, but it has got something special."
+        },
+        {
+          "l": "D",
+          "id": "old",
+          "label": "An old school",
+          "text": "I am eleven, and I live near Salzburg. My new school is very old, but it [[has got]] new computers.",
+          "why": "Old and new in one sentence: Isla can picture the school."
+        }
+      ]
+    },
+    {
+      "id": "subjects",
+      "slot": "subjects",
+      "part": "Subjects",
+      "q": "Which subjects have we got?",
+      "de": "Hier geht es um unsere Fächer. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "list",
+          "label": "A list",
+          "text": "We [[have got]] eleven subjects, for example English, German, Maths, Biology, Music and PE.",
+          "why": "A clear list: Isla can see that we have got lots of subjects."
+        },
+        {
+          "l": "B",
+          "id": "new",
+          "label": "New subjects",
+          "text": "Some subjects are new to me, for example Geography. We [[have got]] PE three times a week!",
+          "why": "It tells Isla what is new for us."
+        },
+        {
+          "l": "C",
+          "id": "monday",
+          "label": "One school day",
+          "text": "On Mondays we [[have got]] six lessons: Maths, English, German, Biology, Art and Music.",
+          "why": "One day shows Isla what our week is like."
+        }
+      ]
+    },
+    {
+      "id": "favourite",
+      "slot": "favourite",
+      "part": "Favourite subject",
+      "q": "What is our favourite subject?",
+      "de": "Hier erzählen wir von unserem Lieblingsfach und stellen Isla eine Frage. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "art",
+          "label": "Art",
+          "text": "My favourite subject is Art because I love painting. [[Have you got]] Art at your school, too?",
+          "why": "‘Because’ gives a reason, and the question is about Isla’s school."
+        },
+        {
+          "l": "B",
+          "id": "pe",
+          "label": "PE",
+          "text": "PE is my favourite subject because I love sport. [[Have you got]] a favourite subject, too?",
+          "why": "‘Because’ gives a reason, and the question asks about Isla."
+        },
+        {
+          "l": "C",
+          "id": "english",
+          "label": "English",
+          "text": "English is my favourite subject, and now I [[have got]] a friend in Scotland! What do you like at school?",
+          "why": "Isla is happy to read this, and the question asks about her."
+        },
+        {
+          "l": "D",
+          "id": "biology",
+          "label": "Biology",
+          "text": "I love animals because Biology is my favourite subject. What is your favourite subject, Isla?",
+          "trap": true,
+          "crit": "CC",
+          "reject": "This is the wrong way round. Say: Biology is my favourite subject because I love animals.",
+          "rejectDe": "Grund und Folge sind vertauscht: Biology ist das Lieblingsfach, weil wir Tiere lieben, nicht umgekehrt."
+        }
+      ]
+    },
+    {
+      "id": "signoff",
+      "slot": "signoff",
+      "part": "Sign-off",
+      "q": "How do we end the email?",
+      "de": "Mit Grußformel und Namen endet die E-Mail. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "write",
+          "label": "Write back soon,",
+          "text": "Write back soon,\n{NAME}",
+          "why": "Isla knows that we want an answer."
+        },
+        {
+          "l": "B",
+          "id": "wishes",
+          "label": "Best wishes,",
+          "text": "Best wishes,\n{NAME}",
+          "why": "Friendly and polite: good for a first email."
+        },
+        {
+          "l": "C",
+          "id": "bye",
+          "label": "Bye for now,",
+          "text": "Bye for now,\n{NAME}",
+          "why": "Short and friendly. ‘For now’ shows that more emails will come."
+        }
+      ]
+    }
+  ],
+  "order": [
+    "subject",
+    "greeting",
+    "school",
+    "subjects",
+    "favourite",
+    "signoff"
+  ],
+  "checks": [
+    {
+      "en": "A short subject line"
+    },
+    {
+      "en": "A greeting with a comma: Hi Isla, / Dear Isla,"
+    },
+    {
+      "en": "School, subjects and favourite subject are all in the email"
+    },
+    {
+      "en": "There is a question for Isla"
+    },
+    {
+      "en": "We use have got with I, we and you and has got with he, she and it"
+    },
+    {
+      "en": "The sign-off and the name are on their own lines"
+    }
+  ],
+  "teacher": {
+    "aim": "Die Klasse schreibt gemeinsam eine erste E-Mail an eine E-Pal in Schottland über die neue Schule und übt have got / has got.",
+    "prep": "A/B/C/D-Karten austeilen, Beamer im Vollbild. Die Aufgabe am Beamer stellt Isla vor. Einsatz ab: have got / has got (auch in Fragen: Have you got …?), Schulfächer auf Englisch, because.",
+    "heft": "Neue Seite: Datum rechts, „Email“ als Überschrift. Darunter der Kopf in vier Zeilen wie am Beamer: To, From, Date, Subject (Date ist der Tag der Stunde). Dann die Anrede auf eigener Zeile, jeder Absatz nach einer Leerzeile, am Rand der Name des Teils wie am Beamer. Grußformel und Name auf eigenen Zeilen. have got / has got grün unterstreichen.",
+    "flow": "Volltext (50 min): 5 min Aufgabe und Kopf der E-Mail · 6 Entscheidungen à ca. 2 min, zusammen ca. 12 min · Abschreiben nach jeder Entscheidung (1. Klasse: ca. 6–8 Wörter pro Minute), zusammen ca. 18 min · 5 min Checkliste · 10 min Puffer.",
+    "traps": "My school B (LSA, Sprachrichtigkeit): „pause“ statt „break“ (false friend) und die deutsche Wortstellung „play we“ statt „we play“. Favourite subject D (CC, Kohärenz und Kohäsion): because verbindet Grund und Folge falsch herum.",
+    "notes": "Inverness ist eine Stadt im Norden Schottlands. Isla ist ein häufiger schottischer Vorname. Im Heft darf jede:r mit dem eigenen Namen unterschreiben. Differenzierung: Schnelle schreiben eine zweite Frage an Isla mit Have you got …? Hausübung: zweite Fassung mit anderen Entscheidungen oder Islas kurze Antwort (40–60 Wörter)."
+  }
+}

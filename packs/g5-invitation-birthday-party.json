@@ -1,0 +1,323 @@
+{
+  "id": "g5-invitation-birthday-party",
+  "title": "Come to my party!",
+  "titleDe": "Einladung zur Geburtstagsparty",
+  "grade": 5,
+  "level": "A1",
+  "theme": "Feste & Feiern",
+  "textType": "invitation",
+  "modes": [
+    "full"
+  ],
+  "lengths": {
+    "short": {
+      "label": "around 60 words",
+      "min": 50,
+      "max": 70
+    }
+  },
+  "minutes": {
+    "full": {
+      "short": 50
+    }
+  },
+  "task": {
+    "situation": "Your birthday is soon, and you want to have a party. Invite your friends Amira, Felix, Hanna and Noah.",
+    "instruction": "Write an invitation card. Tell your friends:",
+    "points": [
+      "the day, the time and the place",
+      "what you can all do at the party",
+      "what they need to bring"
+    ],
+    "words": {
+      "short": "Write around 60 words."
+    },
+    "de": "Eine Einladungskarte zur Geburtstagsparty: Tag, Uhrzeit und Ort, was ihr gemeinsam macht und was die Gäste mitbringen sollen."
+  },
+  "meta": {
+    "to": "Amira, Felix, Hanna and Noah"
+  },
+  "focus": {
+    "label": "imperatives and let’s",
+    "labelDe": "Imperativ und let’s",
+    "min": {
+      "short": 3
+    },
+    "note": "Marked: every imperative (Come, Meet, Bring, Wear, Don’t forget …) and let’s."
+  },
+  "topicWords": [
+    "party"
+  ],
+  "gaps": [
+    {
+      "id": "NAME",
+      "step": "signoff",
+      "q": "Whose party is it? Give a first name.",
+      "qDe": "Ruft einen Vornamen für den Text am Beamer. Keine Namen von Mitschüler:innen oder Lehrer:innen. Im Heft dürft ihr mit eurem eigenen Namen unterschreiben.",
+      "type": "text",
+      "default": "Leon",
+      "max": 20
+    }
+  ],
+  "steps": [
+    {
+      "id": "party",
+      "part": "Party",
+      "q": "What kind of party is it?",
+      "de": "Hier wählt ihr, was für eine Party es wird.",
+      "options": [
+        {
+          "l": "A",
+          "id": "pool",
+          "label": "A pool party",
+          "teaser": "Swimming, a big water slide and ice cream at the outdoor pool."
+        },
+        {
+          "l": "B",
+          "id": "pirate",
+          "label": "A pirate party",
+          "teaser": "Pirate hats, a treasure map and a treasure hunt in the park."
+        },
+        {
+          "l": "C",
+          "id": "pyjama",
+          "label": "A pyjama party",
+          "teaser": "Pyjamas, pizza and a film at home. Everyone sleeps over!"
+        }
+      ]
+    },
+    {
+      "id": "title",
+      "slot": "title",
+      "part": "Title",
+      "q": "Which title do we write on the card?",
+      "de": "Wählt einen Titel für die Einladungskarte.",
+      "options": [
+        {
+          "l": "A",
+          "id": "invited",
+          "label": "You’re invited!",
+          "text": "You’re invited!",
+          "why": "The classic title for an invitation."
+        },
+        {
+          "l": "B",
+          "id": "fun",
+          "label": "Birthday fun!",
+          "text": "Birthday fun!",
+          "why": "Short and happy: our friends know at once what the card is about."
+        },
+        {
+          "l": "C",
+          "id": "kind",
+          "label": "The kind of party",
+          "why": "It tells our friends what kind of party it is.",
+          "text": {
+            "by": "party",
+            "map": {
+              "pool": "Pool party!",
+              "pirate": "Ahoy, pirates!",
+              "pyjama": "Pyjama party!"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "greeting",
+      "slot": "greeting",
+      "part": "Greeting",
+      "q": "How do we start the invitation?",
+      "de": "Mit der Anrede sprechen wir alle vier Gäste an. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "dear",
+          "label": "Dear …,",
+          "text": "Dear friends,",
+          "why": "‘Dear’ is always right on a card."
+        },
+        {
+          "l": "B",
+          "id": "hi",
+          "label": "Hi …!",
+          "text": "Hi, party people!",
+          "why": "Fun and friendly: it sounds like a party."
+        },
+        {
+          "l": "C",
+          "id": "hello",
+          "label": "Hello …!",
+          "text": "Hello, everyone!",
+          "why": "Short and friendly, and it is for all four friends."
+        }
+      ]
+    },
+    {
+      "id": "details",
+      "slot": "details",
+      "part": "When and where",
+      "q": "When and where is the party?",
+      "de": "Hier geht es um Tag, Uhrzeit und Ort der Party. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "soon",
+          "label": "A happy start",
+          "text": "My birthday is very soon, and I am so happy! Come to my party, please. It is the best day of the year!",
+          "trap": true,
+          "crit": "TA",
+          "reject": "Your friends need the day, the time and the place. They are not on this card.",
+          "rejectDe": "Hier fehlen Tag, Uhrzeit und Ort. Die Gäste wissen nicht, wann und wo die Party ist."
+        },
+        {
+          "l": "B",
+          "id": "saturday",
+          "label": "My birthday",
+          "why": "It says the day, the time and the place.",
+          "text": {
+            "by": "party",
+            "map": {
+              "pool": "My birthday is on Saturday, 20 June, and I am eleven! [[Meet]] me at the outdoor pool at two o’clock. The party ends at six.",
+              "pirate": "My birthday is on Saturday, 20 June, and I am eleven! [[Meet]] me at the big playground in the park at two o’clock. The party ends at six.",
+              "pyjama": "My birthday is on Friday, 19 June, and I am eleven! [[Come]] to my flat, Ahorngasse 5, at six o’clock. The party ends on Saturday at ten in the morning."
+            }
+          }
+        },
+        {
+          "l": "C",
+          "id": "letsparty",
+          "label": "Let’s party",
+          "why": "‘Let’s’ sounds happy, and the times are very clear.",
+          "text": {
+            "by": "party",
+            "map": {
+              "pool": "[[Let’s]] party! I am eleven on Sunday, 21 June. The party is at the outdoor pool, from ten in the morning to four in the afternoon.",
+              "pirate": "[[Let’s]] party! I am eleven on Sunday, 21 June. The party is in the park near my house, from two to six in the afternoon.",
+              "pyjama": "[[Let’s]] party! I am eleven on Friday, 19 June. The party is at my flat, Ahorngasse 5, from six in the evening to ten the next morning."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "plan",
+      "slot": "plan",
+      "part": "Fun and things to bring",
+      "q": "What do we do, and what do our friends bring?",
+      "de": "Hier geht es um das Programm der Party und darum, was die Gäste mitbringen. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "wecan",
+          "label": "We can …",
+          "why": "It says what we can do and gives a clear list of things to bring.",
+          "text": {
+            "by": "party",
+            "map": {
+              "pool": "We can swim, play in the water and go down the big slide. [[Bring]] your swimsuit and a towel, and [[don’t forget]] your sun cream!",
+              "pirate": "We can look for pirate treasure and eat chocolate cake. [[Bring]] a pirate hat, and [[don’t forget]] your trainers for the treasure hunt!",
+              "pyjama": "We can eat pizza, play games and watch a funny film together. [[Bring]] your pyjamas and a sleeping bag, and [[don’t forget]] your toothbrush!"
+            }
+          }
+        },
+        {
+          "l": "B",
+          "id": "thereare",
+          "label": "Games and what to wear",
+          "why": "It tells our friends what to wear, so they come ready for the fun.",
+          "text": {
+            "by": "party",
+            "map": {
+              "pool": "There are water games and lots of ice cream for everyone. [[Wear]] your swimsuit under your clothes, and [[bring]] a towel and a cap!",
+              "pirate": "There are pirate games, and the cake is a big pirate ship! [[Dress up]] as a pirate, and [[bring]] a bag for the gold coins.",
+              "pyjama": "There are games, lots of popcorn and a film about dragons. [[Wear]] your pyjamas, and [[bring]] a sleeping bag and a torch for ghost stories!"
+            }
+          }
+        },
+        {
+          "l": "C",
+          "id": "letsto",
+          "label": "Let’s …",
+          "trap": true,
+          "crit": "LSA",
+          "reject": "Two mistakes: after let’s there is no to (let’s swim). And bring is enough: bring your …, not bring with.",
+          "rejectDe": "Zwei Fehler: Nach „let’s“ steht kein „to“. Und „bring“ heißt schon „mitbringen“, also ohne „with“.",
+          "text": {
+            "by": "party",
+            "map": {
+              "pool": "Let’s to swim and play in the water all day! There is ice cream, too. Please bring with your swimsuit and a towel.",
+              "pirate": "Let’s to look for pirate treasure in the park! There is cake, too. Please bring with a pirate hat and your trainers.",
+              "pyjama": "Let’s to eat pizza and watch a film together! There is popcorn, too. Please bring with your pyjamas and a sleeping bag."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "signoff",
+      "slot": "signoff",
+      "part": "Sign-off",
+      "q": "How do we end the invitation?",
+      "de": "Mit dem letzten Satz und dem Namen endet die Einladung. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "see",
+          "label": "See you …",
+          "text": "See you there!\n{NAME}",
+          "why": "A happy last line before the name."
+        },
+        {
+          "l": "B",
+          "id": "please",
+          "label": "Please …",
+          "text": "Please [[come]]!\n{NAME}",
+          "why": "Short, and it shows that we really want our friends there."
+        },
+        {
+          "l": "C",
+          "id": "call",
+          "label": "Call me …",
+          "text": "[[Call]] me and [[say]] yes!\n{NAME}",
+          "why": "Our friends know that they need to answer."
+        }
+      ]
+    }
+  ],
+  "order": [
+    "title",
+    "greeting",
+    "details",
+    "plan",
+    "signoff"
+  ],
+  "checks": [
+    {
+      "en": "The invitation has got a title"
+    },
+    {
+      "en": "It says the day, the time and the place"
+    },
+    {
+      "en": "It says what we do at the party"
+    },
+    {
+      "en": "It says what our friends need to bring"
+    },
+    {
+      "en": "Let’s + verb, without to: let’s swim, let’s party"
+    },
+    {
+      "en": "It ends with a friendly line and a name"
+    }
+  ],
+  "teacher": {
+    "aim": "Die Klasse schreibt gemeinsam eine kurze Einladungskarte zur Geburtstagsparty und übt Imperative (Come, Bring, Don’t forget) und let’s.",
+    "prep": "A/B/C/D-Karten austeilen, Beamer im Vollbild, Buntstifte für den Rahmen bereitlegen. Einsatz ab: Imperativ (auch verneint mit don’t), let’s + Verb, Uhrzeiten (at two o’clock) und Wochentage. Bei Bedarf Wörter an die Tafel: swimsuit (Badeanzug, Badehose), towel (Handtuch), sun cream (Sonnencreme), treasure (Schatz), trainers (Turnschuhe), pyjamas (Schlafanzug), sleeping bag (Schlafsack), toothbrush (Zahnbürste), torch (Taschenlampe).",
+    "heft": "Neue Seite: Datum rechts, „Invitation“ als Überschrift. Darunter einen doppelten Rahmen zeichnen, oben im Rahmen „To:“ und die vier Namen, darunter Titel und Einladung. Imperative und let’s grün unterstreichen.",
+    "flow": "Volltext (50 min): 5 min Aufgabe, Rahmen und To-Zeile · Party wählen 2 min · 5 Textentscheidungen à ca. 2 min, zusammen ca. 10 min · Abschreiben nach jeder Entscheidung (1. Klasse: ca. 6–8 Wörter pro Minute), zusammen ca. 15 min · 5 min Checkliste · 10 min Puffer, Rahmen verzieren.",
+    "traps": "When and where A (TA, Erfüllung der Aufgabenstellung): Tag, Uhrzeit und Ort fehlen. Fun and things to bring C (LSA, Sprachrichtigkeit): „let’s to swim“ statt „let’s swim“ und „bring with“ (wörtlich aus „mitbringen“) statt „bring“.",
+    "notes": "Das Datum steht ohne Jahreszahl, damit die Klasse es im Heft an den eigenen Geburtstag anpassen kann. Im Heft darf jede:r mit dem eigenen Namen unterschreiben. Differenzierung: Schnelle schreiben eine weitere Zeile mit don’t (z. B. Don’t be late!). Hausübung: eine Einladung zu einer anderen Party mit anderen Entscheidungen. Nicht alle Familien feiern Geburtstage; die Party ist erfunden, und niemand muss von der eigenen Feier erzählen."
+  }
+}

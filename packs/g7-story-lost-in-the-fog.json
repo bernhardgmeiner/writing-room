@@ -1,0 +1,117 @@
+{
+  "id": "g7-story-lost-in-the-fog",
+  "title": "Lost in the fog",
+  "titleDe": "Verirrt im Nebel",
+  "grade": 7,
+  "level": "A2",
+  "theme": "Tiere & Natur",
+  "textType": "story",
+  "modes": ["full"],
+  "lengths": { "short": { "label": "around 120 words", "min": 105, "max": 135 } },
+  "minutes": { "full": { "short": 50 } },
+  "task": {
+    "situation": "Last September, you went hiking in the mountains of Styria with your dad, your little sister Ida and your dog. Suddenly, thick fog came down, and you couldn’t see the path any more. Your family did all the right things, and everybody got to safety. Write the story in the first person (I).",
+    "instruction": "Write a story with:",
+    "points": ["a beginning: who, where and when", "the fog and what the family did", "how you found the way and an ending", "a good title"],
+    "words": { "short": "Write around 120 words." },
+    "de": "Gemeinsame Geschichte in der Ich-Form: Bei einer Familienwanderung in der Steiermark kommt plötzlich dichter Nebel, und der Weg ist weg. Die Familie verhält sich richtig und kommt sicher an. Das Past progressive zeigt, was gerade passierte, das Past simple, was dann geschah. Den Titel wählen wir zuletzt."
+  },
+  "meta": {},
+  "focus": {
+    "label": "past progressive",
+    "labelDe": "Past progressive (was / were + -ing)",
+    "min": { "short": 5 },
+    "note": "Marked: every past progressive form (was / were + -ing). Not marked: past simple verbs and present forms in direct speech."
+  },
+  "topicWords": ["fog", "dad", "ida", "dog", "bruno", "hut", "hochwiesen", "path", "styria"],
+  "gaps": [
+    { "id": "DOG", "step": "start", "q": "What is our dog’s name?", "qDe": "Wie heißt unser Hund? Ruft einen Namen. Keine Namen von Mitschüler:innen oder Lehrer:innen.", "type": "text", "default": "Bruno", "max": 15 }
+  ],
+  "steps": [
+    {
+      "id": "start", "slot": "start", "part": "Beginning",
+      "q": "How does our story begin? Who, where and when?",
+      "de": "Der Anfang stellt die Familie vor und sagt, wo und wann die Wanderung war. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        { "l": "A", "id": "weather", "label": "Start with the weather", "text": "It was a sunny Sunday in September. Dad, my little sister Ida, our dog {DOG} and I [[were hiking]] up a mountain in Styria.", "why": "We learn who, where and when at once, and the sunny day is a contrast to the fog later." },
+        { "l": "B", "id": "speech", "label": "Start with direct speech", "text": "“One more hour to the top!” Dad called. It was September in Styria, and my little sister Ida and I [[were racing]] ahead with our dog {DOG}.", "why": "Direct speech puts us right into the story, and the past progressive shows what was going on." },
+        { "l": "C", "id": "marmots", "label": "Start with an animal", "text": "Two marmots [[were playing]] in the grass. Dad, my little sister Ida, our dog {DOG} and I watched them. It was a sunny September morning in Styria.", "why": "An animal scene is a calm, friendly start, so the fog later is a bigger surprise." }
+      ]
+    },
+    {
+      "id": "fog", "slot": "fog", "part": "The fog",
+      "q": "What were we doing when the fog came down?",
+      "de": "Hier kommt der Nebel, und die Wanderung ändert sich plötzlich. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        { "l": "A", "id": "picnic", "label": "During a picnic", "text": "At two o’clock, we [[were having]] a picnic near the top when thick fog came down. In a few minutes, everything around us was grey.", "why": "A long action (we were having a picnic) is interrupted by a short one (thick fog came down)." },
+        { "l": "B", "id": "meadow", "label": "On a meadow", "text": "Suddenly, the air got cold. While we [[were crossing]] a meadow, thick fog came up from the valley. Soon the trees were gone.", "why": "‘While’ plus the past progressive shows the background, and the fog arrives in the past simple." },
+        { "l": "C", "id": "forest", "label": "On a narrow path", "trap": true, "crit": "LSA", "text": "After lunch, we was walking along a narrow path when thick fog come up from the valley. Soon everything was white and wet.",
+          "reject": "Two mistakes: we were walking (not ‘we was’), and thick fog came up (past simple of ‘come’).",
+          "rejectDe": "Zwei Fehler: Es heißt „we were walking“ (nicht „we was“), und die Vergangenheit von „come“ ist „came“." },
+        { "l": "D", "id": "photos", "label": "While taking photos", "text": "Near the top, Dad [[was taking]] photos when grey clouds came up. Within minutes, they were all around us, and the sun was gone.", "why": "Dad’s photos are the background, and the clouds that come up make it exciting." }
+      ]
+    },
+    {
+      "id": "lost", "slot": "lost", "part": "The problem",
+      "q": "The path is gone. What does the family do?",
+      "de": "Der Weg ist weg: Hier zeigt die Geschichte, was die Familie jetzt macht. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        { "l": "A", "id": "search", "label": "Search for the path", "trap": true, "crit": "TA", "text": "Where was the path? Dad looked for it on the left, and Ida and I ran to the right with {DOG}. “Over here!” I shouted.",
+          "reject": "This does not fit our task: the family did the right things. In fog, a family always stays together.",
+          "rejectDe": "Das passt nicht zur Aufgabe: Die Familie macht alles richtig. Im Nebel bleibt man immer zusammen." },
+        { "l": "B", "id": "stop", "label": "Stop and wait", "text": "Where was the path? We couldn’t see any red and white marks. Ida [[was shaking]], so Dad held her hand. “We’re staying together,” he said.", "why": "We see the problem and the right reaction: stop, stay calm and stay together." },
+        { "l": "C", "id": "lead", "label": "Keep the dog close", "text": "After a while, the path wasn’t there any more. {DOG} [[was barking]], so Dad put the lead on. “Nobody walks away,” he told us.", "why": "Short sentences make it exciting, and Dad’s words show the most important rule." }
+      ]
+    },
+    {
+      "id": "help", "slot": "help", "part": "Finding the way",
+      "q": "How does the family find the way?",
+      "de": "Hier findet die Familie mit Handy, Karte oder Hilfe den Weg. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        { "l": "A", "id": "phone", "label": "The map on the phone", "text": "Luckily, Dad’s phone still had a signal. The map showed a blue dot. We [[were standing]] only 300 metres from the Hochwiesen Hut!", "why": "A phone map is a modern, sensible idea, and the number makes it real." },
+        { "l": "B", "id": "compass", "label": "Map and compass", "text": "Fortunately, Dad had a map and a compass. While he [[was studying]] them, Ida and I held {DOG}. Then he smiled: a hut was just below us!", "why": "A map and a compass work without a signal, and everybody has a job." },
+        { "l": "C", "id": "call", "label": "A call to the hut", "text": "Dad called the Hochwiesen Hut, and soon we heard a bell: the owner [[was ringing]] it for us! We walked slowly towards the sound.", "why": "Calling for help is sensible, and the bell is a surprising detail." }
+      ]
+    },
+    {
+      "id": "end", "slot": "end", "part": "Ending",
+      "q": "How does our story end?",
+      "de": "Der Schluss erzählt, wie die Familie ankommt und wie es allen geht. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        { "l": "A", "id": "chocolate", "label": "A warm welcome", "text": "Ten minutes later, we reached the hut. Other hikers [[were waiting]] there for the fog to lift, and the owner made us hot chocolate.", "why": "The family is safe, and hot chocolate in a full hut is a happy end." },
+        { "l": "B", "id": "happy", "label": "Safe at last", "trap": true, "crit": "CC", "text": "Although we reached the hut ten minutes later, we were very happy. The owner gave us hot tea, and {DOG} fell asleep under a table.",
+          "reject": "‘Although’ shows a contrast, but there is no contrast here. We were happy because we were safe.",
+          "rejectDe": "„Although“ zeigt einen Gegensatz, aber hier gibt es keinen. Wir waren froh, weil wir sicher waren." },
+        { "l": "C", "id": "lesson", "label": "What we learnt", "text": "We [[were drinking]] hot tea at the hut when the fog lifted. That day, we learnt the most important rule in the mountains: stay together!", "why": "The story ends with a lesson for the future." },
+        { "l": "D", "id": "feelings", "label": "How we felt", "text": "Inside the warm hut, Ida [[was laughing]] again, and {DOG} [[was sleeping]] under the table. I was tired, but I felt proud of our family.", "why": "Feelings at the end show that everybody is fine again." }
+      ]
+    },
+    {
+      "id": "title", "slot": "title", "part": "Title",
+      "q": "Our story is finished. Which title do we choose?",
+      "de": "Wählt einen Titel, der neugierig macht und zur ganzen Geschichte passt.",
+      "options": [
+        { "l": "A", "id": "lost", "label": "Short and clear", "text": "Lost in the fog", "why": "Short, and it says what the story is about." },
+        { "l": "B", "id": "mountain", "label": "Make them curious", "text": "The day the mountain disappeared", "why": "Readers want to know how a mountain can disappear." },
+        { "l": "C", "id": "grey", "label": "A picture in words", "text": "Grey all around us", "why": "Readers can see the fog in their heads." }
+      ]
+    }
+  ],
+  "order": ["title", "start", "fog", "lost", "help", "end"],
+  "checks": [
+    { "en": "The beginning says who, where and when" },
+    { "en": "The past progressive shows what was going on: we were having a picnic …" },
+    { "en": "The past simple shows what happened next: … when thick fog came down" },
+    { "en": "The family stops and stays together" },
+    { "en": "The story tells how the family found the way" },
+    { "en": "The title fits the whole story" }
+  ],
+  "teacher": {
+    "aim": "Die Klasse schreibt gemeinsam eine spannende Geschichte über eine Familienwanderung im Nebel und übt den Unterschied zwischen Past progressive (was gerade passierte) und Past simple (was dann geschah), auch mit when und while.",
+    "prep": "A/B/C/D-Karten austeilen, Hefte bereitlegen, Beamer im Vollbild. Einsatz ab: Past simple (auch unregelmäßige Verben wie came, held, heard) und Past progressive mit when und while. Bei Bedarf Wörter an die Tafel: marmot (Murmeltier), meadow (Wiese), valley (Tal), signal (Handyempfang), compass (Kompass), mountain hut (Berghütte), lead (Hundeleine), lift (sich auflösen, beim Nebel).",
+    "heft": "Neue Seite: Datum rechts, „Story“ als Überschrift (wie am Beamer). Darunter 2 Zeilen für den Titel frei lassen (er kommt zuletzt). Jeder Absatz beginnt nach einer Leerzeile, am Rand steht der Name des Teils wie am Beamer: Beginning, The fog, The problem, Finding the way, Ending. Past-progressive-Formen grün unterstreichen.",
+    "flow": "Volltext (50 min): 3 min Aufgabe lesen · 6 Entscheidungen à ca. 2–3 min, zusammen ca. 15 min · Den Hundenamen ruft die Klasse nach dem Beginning · Abschreiben nach jeder Entscheidung (ca. 25 Wörter pro Absatz), zusammen ca. 15 min · 5 min Checkliste · 7–10 min Puffer, z. B. für die Falle bei The fog (when und while an der Tafel). Den Titel wählt die Klasse am Ende. Wenn die Zeit knapp wird: Checkliste als Hausübung.",
+    "traps": "The fog C (LSA, Sprachrichtigkeit): „we was walking“ statt „we were walking“ und „come“ statt „came“. The problem A (TA, Erfüllung der Aufgabenstellung): Die Familie trennt sich; das widerspricht der Aufgabe (die Familie macht alles richtig) und ist im Nebel gefährlich. Ending B (CC, Kohärenz und Kohäsion): „Although“ zeigt einen Gegensatz, den es nicht gibt; froh sind alle, weil sie sicher angekommen sind.",
+    "notes": "Sicherheit kurz besprechen: Bei Nebel stehen bleiben, zusammenbleiben, nicht querfeldein gehen, Karte oder Handy nutzen, die Hütte oder im Notfall die Bergrettung anrufen (Alpinnotruf 140, Euro-Notruf 112). Rot-weiß-rote Markierungen sind die üblichen Wegmarkierungen in Österreich. Wer selbst eine beängstigende Situation in den Bergen erlebt hat, muss nichts davon erzählen. Die Hütte ist frei erfunden. Differenzierung: Schnelle schreiben zwei eigene Sätze mit when oder while (z. B. Was machte Ida, als der Nebel kam?). Hausübung: die Geschichte aus der Sicht von Ida oder vom Hund neu erzählen, mit mindestens vier Past-progressive-Formen."
+  }
+}

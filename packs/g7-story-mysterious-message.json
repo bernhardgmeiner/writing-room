@@ -1,0 +1,143 @@
+{
+  "id": "g7-story-mysterious-message",
+  "title": "The mysterious message",
+  "titleDe": "Die rätselhafte Nachricht",
+  "grade": 7,
+  "level": "A2",
+  "theme": "Medien & Technik",
+  "textType": "story",
+  "modes": ["full"],
+  "lengths": { "short": { "label": "around 120 words", "min": 105, "max": 135 } },
+  "minutes": { "full": { "short": 50 } },
+  "task": {
+    "situation": "One Saturday evening, a strange message from an unknown user appeared in the class chat on the school app. It was a riddle, and it ended with “Find me on Monday at 7.30!” Only people from the school can use this chat. Two best friends, Moritz and Nour, decided to solve the mystery. You decide who sent the message: Ms Lindner, the class teacher, Ines, a new classmate, or Hana, the class rep.",
+    "instruction": "Write a story with:",
+    "points": ["a beginning: who, when and what the message said", "how the friends solved the riddle", "who sent the message and an ending", "a good title"],
+    "words": { "short": "Write around 120 words." },
+    "de": "Gemeinsame Detektivgeschichte: Im Klassenchat der Schul-App taucht eine rätselhafte Nachricht auf, und Moritz und Nour lösen das Rätsel. Zuerst entscheidet ihr, wer die Nachricht geschickt hat; verraten wird es erst am Ende. Relativsätze mit who, which und that verbinden die Informationen. Den Titel wählen wir zuletzt."
+  },
+  "meta": {},
+  "focus": {
+    "label": "relative clauses (who / which / that)",
+    "labelDe": "Relativsätze (who / which / that)",
+    "min": { "short": 5 },
+    "note": "Marked: every relative pronoun (who, which, that) that starts a relative clause."
+  },
+  "topicWords": ["moritz", "nour", "message", "riddle", "clock", "chat", "class", "hall", "school", "friends", "lindner", "hana", "ines", "monday", "mystery", "owl", "detectives"],
+  "gaps": [
+    { "id": "USER", "step": "start", "q": "What is the unknown user’s name in the chat? Invent a funny username.", "qDe": "Erfindet einen lustigen Benutzernamen, zum Beispiel Mystery Owl. Keine Namen von Mitschüler:innen oder Lehrer:innen.", "type": "text", "default": "Mystery Owl", "max": 20 }
+  ],
+  "steps": [
+    {
+      "id": "sender", "part": "The sender",
+      "q": "Who sent the mysterious message? Only we know it for now!",
+      "de": "Hier entscheidet ihr, wer die Nachricht geschickt hat; verraten wird es erst am Ende.",
+      "options": [
+        { "l": "A", "id": "teacher", "label": "Ms Lindner, the class teacher", "teaser": "She loves riddles and wants to find the best detectives in the class." },
+        { "l": "B", "id": "newkid", "label": "Ines, a new classmate", "teaser": "She is joining the class on Monday and wants to say hello in a special way." },
+        { "l": "C", "id": "birthday", "label": "Hana, the class rep", "teaser": "She is planning a secret birthday surprise for Ms Lindner, the class teacher." }
+      ]
+    },
+    {
+      "id": "start", "slot": "start", "part": "Beginning",
+      "q": "How does our story begin?",
+      "de": "Der Anfang sagt, wer dabei ist, wann es passiert und wie die Nachricht kommt. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        { "l": "A", "id": "time", "label": "Start with the time", "text": "On Saturday evening, Moritz and Nour, [[who]] were best friends, were chatting online when a message from {USER} appeared in the class chat.", "why": "We learn when and who at once, and the relative clause tells us more about the two friends." },
+        { "l": "B", "id": "both", "label": "Start with both friends", "trap": true, "crit": "CC", "text": "On Saturday evening, Moritz and Nour got the same message from {USER}. Because they were both in the class chat. Nour called Moritz at once.",
+          "reject": "‘Because …’ can’t stand alone as a sentence. Join the reason to the sentence before, without a full stop: … the same message because they were both in the class chat.",
+          "rejectDe": "Ein Satz mit „because“ kann nicht allein stehen: Hängt den Grund ohne Punkt an den Satz davor." },
+        { "l": "C", "id": "ping", "label": "Start with a sound", "text": "Ping! On Saturday evening, Moritz got a message in the class chat from {USER}, a user [[who]] nobody knew. He called his best friend Nour.", "why": "A sound word puts us right into the story and makes us curious." },
+        { "l": "D", "id": "nour", "label": "Start with Nour", "text": "Nour, [[who]] loved mysteries, was reading on Saturday evening when {USER} sent a message to the class chat. She texted her best friend Moritz.", "why": "We meet a person first, and the relative clause shows why she likes the message." }
+      ]
+    },
+    {
+      "id": "riddle", "slot": "riddle", "part": "The riddle",
+      "q": "What did the message say?",
+      "de": "Hier steht das Rätsel aus der Nachricht, ratet ruhig mit. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        { "l": "A", "id": "hands", "label": "Hands, but no clapping", "text": "The message said: “I’m something [[that]] has got two hands, but I can’t clap. Find me on Monday at 7.30!” Was it a joke?", "why": "A short riddle with a funny picture, and a question that builds suspense." },
+        { "l": "B", "id": "legs", "label": "No arms, no legs", "text": "“I’m a thing [[which]] has a face and hands but no arms or legs. Find me on Monday at 7.30!” That was all.", "why": "The riddle comes first, so readers can guess, too." },
+        { "l": "C", "id": "smile", "label": "A face that never smiles", "text": "There were only two lines: “I have a face [[that]] never smiles and hands [[that]] never wave. Find me on Monday at 7.30!”", "why": "Two relative clauses make a clever riddle with a nice rhythm." }
+      ]
+    },
+    {
+      "id": "clues", "slot": "clues", "part": "The clues",
+      "q": "How did the friends solve the riddle?",
+      "de": "Hier lösen die beiden das Rätsel und finden den richtigen Ort. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        { "l": "A", "id": "list", "label": "Make a list", "text": "All Sunday, the friends wrote down things [[that]] could be the answer. In the end, only one made sense: the old clock in the school hall!", "why": "Real detectives work step by step, and the answer comes at the end." },
+        { "l": "B", "id": "grandma", "label": "Ask Grandma", "text": "Moritz’s grandma, [[who]] knew lots of riddles, laughed: “It’s a clock, of course!” Then Nour remembered the old clock in the school hall.", "why": "A grandma who loves riddles is a nice helper, and Nour finds the place." },
+        { "l": "C", "id": "call", "label": "A video call", "text": "The friends talked for hours on a video call. Suddenly, Nour shouted: “It’s the clock [[that]] hangs above the door of the school hall!”", "why": "Direct speech makes the big idea exciting." },
+        { "l": "D", "id": "cousin", "label": "Ask a cousin", "trap": true, "crit": "LSA", "text": "Moritz had a cousin which was good at riddles. He sent her the message. “It’s the old clock who is in your school hall!” she wrote.",
+          "reject": "Two mistakes: for people we use ‘who’ (a cousin who), for things ‘which’ or ‘that’ (the clock that).",
+          "rejectDe": "Zwei Fehler: Für Personen steht „who“ (a cousin who), für Dinge „which“ oder „that“ (the clock that)." }
+      ]
+    },
+    {
+      "id": "find", "slot": "find", "part": "At the clock",
+      "q": "What did the friends find at the clock on Monday?",
+      "de": "Am Montag erfahren die beiden, wer die Nachricht geschickt hat. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        { "l": "A", "id": "early", "label": "Arrive early", "why": "We follow the friends into the hall, and then the answer comes.",
+          "text": { "by": "sender", "map": {
+            "teacher": "Early on Monday, the friends ran into the hall. Ms Lindner, their class teacher, was waiting under the clock. “You’re the first detectives [[who]] have solved my riddle!”",
+            "newkid": "Early on Monday, the friends ran into the hall. Under the clock stood a girl with a sign [[that]] said “Hi! I’m Ines, your new classmate!”",
+            "birthday": "Early on Monday, the friends ran into the hall. The person [[who]] sent the riddle was Hana, the class rep. She had a cake for Ms Lindner’s birthday!"
+          } } },
+        { "l": "B", "id": "speech", "label": "Use direct speech", "why": "Nour’s whisper makes the moment feel real.",
+          "text": { "by": "sender", "map": {
+            "teacher": "“Look!” Nour whispered on Monday morning. Under the clock stood the person [[who]] loved riddles more than anybody: Ms Lindner, their class teacher!",
+            "newkid": "“Look!” Nour whispered on Monday morning. Under the clock, a girl [[who]] they didn’t know was waving at them. “Hi! I’m Ines, your new classmate!”",
+            "birthday": "“Look!” Nour whispered on Monday morning. Under the clock stood Hana, the class rep, with a cake [[that]] said “Happy Birthday, Ms Lindner!”"
+          } } },
+        { "l": "C", "id": "slow", "label": "Build suspense", "why": "‘Slowly’ makes readers wait a little for the answer.",
+          "text": { "by": "sender", "map": {
+            "teacher": "Slowly, the friends walked into the hall on Monday. Somebody [[who]] they knew well was waiting under the clock: Ms Lindner, their class teacher!",
+            "newkid": "Slowly, the friends walked into the hall on Monday. Under the clock, a girl [[who]] was smiling shyly said: “I’m Ines, your new classmate.”",
+            "birthday": "Slowly, the friends walked into the hall on Monday. Hana, [[who]] sent the riddle, was waiting with a cake for Ms Lindner’s birthday."
+          } } }
+      ]
+    },
+    {
+      "id": "end", "slot": "end", "part": "Ending",
+      "q": "How does our story end?",
+      "de": "Der Schluss rundet die Geschichte ab. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        { "l": "A", "id": "next", "label": "One more message", "text": "That evening, {USER} sent a new message [[that]] made everybody smile: “Well done, detectives! Who wants the next riddle?”", "why": "The story ends where it started: in the class chat." },
+        { "l": "B", "id": "proud", "label": "Proud detectives", "text": "Moritz and Nour felt really proud. It was a Monday [[that]] they never forgot, and from then on, everybody called them ‘the class detectives’.", "why": "Feelings and a nickname make a warm ending." },
+        { "l": "C", "id": "dream", "label": "A surprise ending", "trap": true, "crit": "TA", "text": "Then Moritz’s alarm clock rang, and he woke up. There was no message and no riddle. It was all just a dream!",
+          "reject": "‘It was all a dream’ takes away our whole story. A good ending fits what really happened.",
+          "rejectDe": "„Alles nur ein Traum“ macht die ganze Geschichte kaputt. Ein guter Schluss passt zu dem, was wirklich passiert ist." },
+        { "l": "D", "id": "lesson", "label": "A lesson", "text": "“Not every message [[that]] looks strange is a bad one,” Nour said later. Moritz smiled. He was already looking forward to the next mystery.", "why": "Nour’s words give the story a little lesson at the end." }
+      ]
+    },
+    {
+      "id": "title", "slot": "title", "part": "Title",
+      "q": "Our story is finished. Which title do we choose?",
+      "de": "Wählt einen Titel, der neugierig macht und zur ganzen Geschichte passt.",
+      "options": [
+        { "l": "A", "id": "mysterious", "label": "Short and clear", "text": "The mysterious message", "why": "Short, and it says what the story is about." },
+        { "l": "B", "id": "time", "label": "A quote", "text": "“Find me on Monday at 7.30!”", "why": "Words from the message make readers curious." },
+        { "l": "C", "id": "detectives", "label": "The heroes", "text": "Detectives in the class chat", "why": "It tells readers who the story is about." }
+      ]
+    }
+  ],
+  "order": ["title", "start", "riddle", "clues", "find", "end"],
+  "checks": [
+    { "en": "The beginning says who, when and how the message came" },
+    { "en": "The riddle from the message is in the story" },
+    { "en": "The story tells how the friends solved the riddle" },
+    { "en": "At the end, we find out who sent the message" },
+    { "en": "Relative clauses: ‘who’ for people, ‘which’ or ‘that’ for things" },
+    { "en": "The title fits the whole story" }
+  ],
+  "teacher": {
+    "aim": "Die Klasse schreibt gemeinsam eine Detektivgeschichte rund um eine rätselhafte, aber freundliche Nachricht im Klassenchat und übt Relativsätze mit who (Personen) sowie which und that (Dinge).",
+    "prep": "A/B/C/D-Karten austeilen, Hefte bereitlegen, Beamer im Vollbild. Einsatz ab: Past simple und Past progressive; Relativsätze mit who, which und that sollten kurz eingeführt sein, die Geschichte festigt sie. Bei Bedarf Wörter an die Tafel: riddle (Rätsel), user (Benutzer:in), clap (klatschen), wave (winken), whisper (flüstern), shyly (schüchtern), class rep (Klassensprecher:in).",
+    "heft": "Neue Seite: Datum rechts, „Story“ als Überschrift (wie am Beamer). Darunter 2 Zeilen für den Titel frei lassen (er kommt zuletzt). Jeder Absatz beginnt nach einer Leerzeile, am Rand steht der Name des Teils wie am Beamer: Beginning, The riddle, The clues, At the clock, Ending. Relativpronomen (who, which, that) grün unterstreichen.",
+    "flow": "Volltext (50 min): 3 min Aufgabe lesen · 7 Entscheidungen (die erste ist eine reine Wahl: wer die Nachricht geschickt hat) à ca. 2 min, zusammen ca. 15 min · Den Benutzernamen ruft die Klasse nach dem Beginning · Abschreiben nach jeder Entscheidung, zusammen ca. 17 min · 5 min Checkliste · 5–8 min Puffer. Beim Rätsel darf die Klasse zuerst kurz raten. Den Titel wählt die Klasse am Ende. Wenn die Zeit knapp wird: Checkliste als Hausübung.",
+    "traps": "Beginning B (CC, Kohärenz und Kohäsion): „Because they were both in the class chat.“ steht als eigener Satz (wie die deutsche Antwort „Weil …“); der Grund gehört ohne Punkt zum Satz davor. The clues D (LSA, Sprachrichtigkeit): „a cousin which“ statt „who“ und „the clock who“ statt „that“ oder „which“. Ending C (TA, Erfüllung der Aufgabenstellung): „Alles nur ein Traum“ nimmt der Geschichte alles, was passiert ist; die Aufgabe verlangt, wer die Nachricht geschickt hat, und einen passenden Schluss.",
+    "notes": "Die Nachricht ist freundlich, es geht weder um Mobbing noch um Drohungen. Trotzdem kurz besprechen: Seltsame Nachrichten von Unbekannten immer einer erwachsenen Person zeigen und sich nie allein mit Unbekannten treffen; in der Geschichte können nur Schulangehörige den Chat der Schul-App nutzen, und der Treffpunkt ist die eigene Schule vor dem Unterricht. Bei Relativsätzen mit Zusatzinformation (Nour, who loved mysteries, …) stehen Beistriche, bei notwendigen Relativsätzen (a user who nobody knew) nicht. Differenzierung: Schnelle erfinden ein eigenes Rätsel mit einem Relativsatz (I’m something that …). Hausübung: die Geschichte mit einer anderen Person als Absender:in neu schreiben, mit mindestens fünf Relativsätzen."
+  }
+}

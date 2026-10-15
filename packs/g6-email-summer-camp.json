@@ -1,0 +1,412 @@
+{
+  "id": "g6-email-summer-camp",
+  "title": "We’re having a great time!",
+  "titleDe": "Post aus dem Sommercamp",
+  "grade": 6,
+  "level": "A1+/A2",
+  "theme": "Freizeit, Hobbys & Sport",
+  "textType": "email",
+  "modes": [
+    "full"
+  ],
+  "lengths": {
+    "short": {
+      "label": "around 100 words",
+      "min": 85,
+      "max": 115
+    }
+  },
+  "minutes": {
+    "full": {
+      "short": 50
+    }
+  },
+  "task": {
+    "situation": "You are at a summer camp for a week. It is Wednesday evening, and you are writing an email to your parents. First, choose your camp: a circus camp, a football camp or a riding camp.",
+    "instruction": "Write an email to your parents. In your email:",
+    "points": [
+      "say where the camp is and what it is like",
+      "tell them what you do every day",
+      "tell them what is happening right now",
+      "ask them a question"
+    ],
+    "words": {
+      "short": "Write around 100 words."
+    },
+    "de": "E-Mail aus dem Sommercamp an die Eltern: wo das Camp ist und wie es dort ist, was ihr jeden Tag macht, was gerade jetzt passiert, und eine Frage an die Eltern. Zuerst wählt ihr das Camp."
+  },
+  "meta": {
+    "from": "happy.camper@classmail.example",
+    "to": "mum.and.dad@familypost.example",
+    "subjectSlot": "subject"
+  },
+  "focus": {
+    "label": "present simple and present progressive",
+    "labelDe": "Present simple und Present progressive",
+    "min": {
+      "short": 10
+    },
+    "note": "Marked: every verb form in the present simple (also am/is/are and has/have) and in the present progressive. With short forms (I’m sitting, it’s raining) the pronoun is marked too. Not marked: can/can’t (also ‘Can you …?’)."
+  },
+  "topicWords": [
+    "camp",
+    "pony",
+    "ponies"
+  ],
+  "gaps": [
+    {
+      "id": "FRIEND",
+      "step": "now",
+      "q": "What is the name of our new friend at camp? First name only.",
+      "qDe": "Ruft einen Vornamen für die neue Freundin oder den neuen Freund im Camp. Keine Namen von Mitschüler:innen oder Lehrer:innen.",
+      "type": "text",
+      "default": "Amira",
+      "max": 20
+    },
+    {
+      "id": "NAME",
+      "step": "signoff",
+      "q": "Who is writing this email? Shout a first name.",
+      "qDe": "Ruft einen Vornamen für den Text am Beamer. Keine Namen von Mitschüler:innen oder Lehrer:innen. Im Heft dürft ihr mit eurem eigenen Namen unterschreiben.",
+      "type": "text",
+      "default": "Leo",
+      "max": 20
+    }
+  ],
+  "steps": [
+    {
+      "id": "camp",
+      "part": "Choose a camp",
+      "q": "Which camp are we at this week?",
+      "de": "Hier wählt ihr, in welchem Camp wir die Woche verbringen.",
+      "options": [
+        {
+          "l": "A",
+          "id": "circus",
+          "label": "Big Top Circus Camp",
+          "teaser": "A farm near Graz with a real circus tent: juggling, acrobatics and a big show at the end of the week."
+        },
+        {
+          "l": "B",
+          "id": "football",
+          "label": "Top Kick Football Camp",
+          "teaser": "A sports hotel in the mountains of Salzburg: training every morning, matches every afternoon."
+        },
+        {
+          "l": "C",
+          "id": "riding",
+          "label": "Sunny Hill Riding Camp",
+          "teaser": "A farm in the green hills of Wales: kids from many countries, and everybody looks after a pony."
+        }
+      ]
+    },
+    {
+      "id": "subject",
+      "slot": "subject",
+      "part": "Subject line",
+      "q": "What is our subject line?",
+      "de": "Die Betreffzeile sagt kurz, worum es in unserer E-Mail geht.",
+      "options": [
+        {
+          "l": "A",
+          "id": "great",
+          "label": "Say how it’s going",
+          "text": "[[We’re having]] a great time!",
+          "why": "Mum and Dad know at once that everything is fine."
+        },
+        {
+          "l": "B",
+          "id": "greetings",
+          "label": "Say where you are",
+          "text": {
+            "by": "camp",
+            "map": {
+              "circus": "Greetings from Big Top Camp!",
+              "football": "Greetings from Top Kick Camp!",
+              "riding": "Greetings from Sunny Hill Camp!"
+            }
+          },
+          "why": "Mum and Dad see at once where the email comes from."
+        },
+        {
+          "l": "C",
+          "id": "news",
+          "label": "Short and clear",
+          "text": "News from camp",
+          "why": "Three words, and it says exactly what the email is about."
+        }
+      ]
+    },
+    {
+      "id": "greeting",
+      "slot": "greeting",
+      "part": "Greeting",
+      "q": "How do we greet Mum and Dad?",
+      "de": "Hier wählen wir die Anrede für Mum und Dad. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "dear",
+          "label": "Dear …,",
+          "text": "Dear Mum and Dad,",
+          "why": "Warm and friendly. The comma comes after the names."
+        },
+        {
+          "l": "B",
+          "id": "hi",
+          "label": "Hi …,",
+          "text": "Hi Mum and Dad,",
+          "why": "Short and informal: fine for your family."
+        }
+      ]
+    },
+    {
+      "id": "place",
+      "slot": "place",
+      "part": "The camp",
+      "q": "Paragraph 1: where is the camp, and what is it like?",
+      "de": "Erster Absatz: wo das Camp ist und wie es dort ist. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "where",
+          "label": "Start with the place",
+          "text": {
+            "by": "camp",
+            "map": {
+              "circus": "Big Top Camp [[is]] on a farm near Graz. We [[sleep]] in wooden huts, and next to them there [[is]] a huge circus tent.",
+              "football": "Top Kick Camp [[is]] in the mountains of Salzburg. There [[are]] forty kids here, and our hotel [[is]] next to three football pitches.",
+              "riding": "Sunny Hill Camp [[is]] on a farm in the green hills of Wales. There [[are]] fifteen kids here, and each of us [[looks]] after a pony."
+            }
+          },
+          "why": "It starts with the most important facts: where the camp is and who is there."
+        },
+        {
+          "l": "B",
+          "id": "trap",
+          "label": "Start with the journey",
+          "trap": true,
+          "crit": "TA",
+          "text": {
+            "by": "camp",
+            "map": {
+              "circus": "The journey here was long. We sat on the train for three hours, and I ate all my sandwiches before ten o’clock.",
+              "football": "The journey here was long. We sat on the bus for four hours, and I ate all my sandwiches before ten o’clock.",
+              "riding": "The journey here was long. First we flew to London, and then we sat on a bus for five hours. I ate all my sandwiches on the plane!"
+            }
+          },
+          "reject": "This is only about the journey. Where is the camp, and what is it like? That is what the task asks.",
+          "rejectDe": "Hier geht es nur um die Anreise. Die Aufgabe fragt, wo das Camp ist und wie es dort ist."
+        },
+        {
+          "l": "C",
+          "id": "love",
+          "label": "Start with a feeling",
+          "text": {
+            "by": "camp",
+            "map": {
+              "circus": "I [[love]] it here! The camp [[is]] on a farm near Graz, and our trainers [[are]] real circus artists from Italy and Brazil.",
+              "football": "I [[love]] it here! The camp [[is]] in the mountains of Salzburg, and our coaches [[are]] young players from a big football club.",
+              "riding": "I [[love]] it here! The camp [[is]] on a farm in Wales, and the other kids [[come]] from six countries. We [[speak]] English all day!"
+            }
+          },
+          "why": "A happy first sentence, then facts about the place and the people."
+        }
+      ]
+    },
+    {
+      "id": "every",
+      "slot": "every",
+      "part": "Every day",
+      "q": "Paragraph 2: what do we do every day?",
+      "de": "Zweiter Absatz: was wir jeden Tag im Camp machen. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "times",
+          "label": "Morning and afternoon",
+          "text": {
+            "by": "camp",
+            "map": {
+              "circus": "Every morning we [[get]] up at seven. After breakfast, we [[practise]] juggling. In the afternoon, we [[learn]] to walk on a tightrope. [[It’s]] so hard!",
+              "football": "Every morning we [[get]] up at seven and [[go]] for a run. After breakfast, we [[have]] training, and in the afternoon we [[play]] matches.",
+              "riding": "Every morning we [[get]] up at seven and [[feed]] the ponies. After breakfast, we [[have]] a riding lesson. In the afternoon, we [[ride]] through the hills."
+            }
+          },
+          "why": "Time phrases like ‘After breakfast’ and ‘In the afternoon’ put the day in order."
+        },
+        {
+          "l": "B",
+          "id": "busy",
+          "label": "Our busy days",
+          "text": {
+            "by": "camp",
+            "map": {
+              "circus": "Our days [[are]] full of tricks. The mornings [[start]] with juggling, and after lunch we [[practise]] for our show on Saturday. I [[am]] one of the clowns!",
+              "football": "Our days [[are]] full of football. The mornings [[start]] with training, and after lunch we [[play]] matches. On Saturday there [[is]] a big tournament!",
+              "riding": "Our days [[are]] really busy. The mornings [[start]] with a riding lesson, and after lunch we [[clean]] the stables. Before dinner, we [[brush]] our ponies."
+            }
+          },
+          "why": "A short topic sentence first, then the details of a normal day."
+        },
+        {
+          "l": "C",
+          "id": "trap",
+          "label": "Our day step by step",
+          "trap": true,
+          "crit": "CC",
+          "text": {
+            "by": "camp",
+            "map": {
+              "circus": "Every day we get up at seven. We have breakfast. We practise juggling. We have lunch. We learn acrobatics. We walk on a tightrope.",
+              "football": "Every day we get up at seven. We go for a run. We have breakfast. We have training. We have lunch. We play matches.",
+              "riding": "Every day we get up at seven. We feed the ponies. We have breakfast. We have a riding lesson. We have lunch. We ride through the hills."
+            }
+          },
+          "reject": "This sounds like a list: almost every sentence starts with ‘We’. Use starters like ‘After breakfast’ or ‘In the afternoon’.",
+          "rejectDe": "Das klingt wie eine Liste, fast jeder Satz beginnt mit We. Verwendet Satzanfänge wie After breakfast oder In the afternoon."
+        }
+      ]
+    },
+    {
+      "id": "now",
+      "slot": "now",
+      "part": "Right now",
+      "q": "Paragraph 3: what is happening right now?",
+      "de": "Dritter Absatz: was gerade jetzt, beim Schreiben, passiert. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "trap",
+          "label": "Me and my new friend",
+          "trap": true,
+          "crit": "LSA",
+          "text": "Right now I sit on my bed, and my new friend {FRIEND} reads a comic next to me. Outside it rains, and the wind is really loud.",
+          "reject": "Three mistakes: these things are happening right now, so we need I’m sitting, my new friend is reading and it’s raining.",
+          "rejectDe": "Drei Fehler: Was gerade jetzt passiert, steht im Present progressive: I’m sitting, is reading, it’s raining."
+        },
+        {
+          "l": "B",
+          "id": "me",
+          "label": "Where I am",
+          "text": {
+            "by": "camp",
+            "map": {
+              "circus": "Right now [[I’m sitting]] on my bed. My new friend {FRIEND} [[is juggling]] with three socks, and they [[are flying]] all over the room!",
+              "football": "Right now [[I’m lying]] on my bed with tired legs. My new friend {FRIEND} [[is watching]] a football video, and the others [[are having]] a shower.",
+              "riding": "Right now [[I’m drinking]] hot chocolate in the farm kitchen. [[It’s raining]] outside, and my new friend {FRIEND} [[is feeding]] the farm cats."
+            }
+          },
+          "why": "Present progressive (am / is / are + -ing) for things that are happening right now."
+        },
+        {
+          "l": "C",
+          "id": "everybody",
+          "label": "What everybody is doing",
+          "text": {
+            "by": "camp",
+            "map": {
+              "circus": "At the moment, everybody [[is relaxing]]. Some kids [[are playing]] cards, and my new friend {FRIEND} [[is teaching]] me a clown walk. [[We’re laughing]] a lot!",
+              "football": "At the moment, everybody [[is relaxing]]. Some kids [[are playing]] table tennis, and my new friend {FRIEND} [[is showing]] me a cool trick with the ball.",
+              "riding": "At the moment, everybody [[is relaxing]]. Some kids [[are reading]], and my new friend {FRIEND} [[is drawing]] a picture of my pony, Toffee. It [[looks]] great!"
+            }
+          },
+          "why": "‘At the moment’ is a signal for the present progressive. We see the whole room."
+        }
+      ]
+    },
+    {
+      "id": "question",
+      "slot": "question",
+      "part": "Question",
+      "q": "Paragraph 4: what do we ask Mum and Dad?",
+      "de": "Vierter Absatz: eine Frage an die Eltern und ein freundlicher Schluss. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "home",
+          "label": "Ask about home",
+          "text": "How [[are]] you, and how [[is]] our dog, Bello? I [[miss]] you a little, but this [[is]] the best week ever!",
+          "why": "Questions about home show that you think of your family. The last sentence is happy."
+        },
+        {
+          "l": "B",
+          "id": "favour",
+          "label": "Ask for a favour",
+          "text": {
+            "by": "camp",
+            "map": {
+              "circus": "Can you pick me up from the station on Sunday, please? My train [[arrives]] at five. I can’t wait to show you my tricks!",
+              "football": "Can you pick me up from the station on Sunday, please? My train [[arrives]] at five. I can’t wait to see you!",
+              "riding": "Can you pick me up from the airport on Sunday, please? My plane [[lands]] at six. I can’t wait to see you!"
+            }
+          },
+          "why": "A polite question with ‘please’. Present simple for timetables: the train arrives, the plane lands."
+        }
+      ]
+    },
+    {
+      "id": "signoff",
+      "slot": "signoff",
+      "part": "Sign-off",
+      "q": "How do we close the email?",
+      "de": "Mit der Grußformel endet unsere E-Mail. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "love",
+          "label": "Love,",
+          "text": "Love,\n{NAME}",
+          "why": "The typical closing for family and close friends."
+        },
+        {
+          "l": "B",
+          "id": "bye",
+          "label": "Bye for now,",
+          "text": "Bye for now,\n{NAME}",
+          "why": "Friendly and informal: you are going to write again soon."
+        }
+      ]
+    }
+  ],
+  "order": [
+    "subject",
+    "greeting",
+    "place",
+    "every",
+    "now",
+    "question",
+    "signoff"
+  ],
+  "checks": [
+    {
+      "en": "A short subject line that says what the email is about"
+    },
+    {
+      "en": "Greeting with a comma: Dear Mum and Dad, / Hi Mum and Dad,"
+    },
+    {
+      "en": "The camp, a normal day, right now and a question are all in the email"
+    },
+    {
+      "en": "Present simple for every day: Every morning we get up …"
+    },
+    {
+      "en": "Present progressive for right now: Right now I’m sitting …"
+    },
+    {
+      "en": "Not every sentence starts with ‘We’"
+    },
+    {
+      "en": "Love, / Bye for now, and the writer’s name on the next line"
+    }
+  ],
+  "teacher": {
+    "aim": "Die Klasse schreibt gemeinsam eine informelle E-Mail aus einem Sommercamp an die Eltern und übt dabei den Unterschied zwischen Present simple (jeden Tag, Gewohnheiten, Fahrpläne) und Present progressive (gerade jetzt).",
+    "prep": "A/B/C/D-Karten austeilen, Beamer im Vollbild. Einsatz ab: Present simple und Present progressive (Bildung und Signalwörter wie every day, after breakfast, right now, at the moment). Bei Bedarf Wörter an die Tafel: juggle (jonglieren), tightrope (Seil zum Balancieren), pitch (Fußballplatz), stables (Stall), tournament (Turnier). Die Aufgabe am Beamer enthält alles Nötige.",
+    "heft": "Neue Seite: Datum (rechts) und „Email“ als Überschrift (wie am Beamer). Darunter der Kopf in vier Zeilen wie am Beamer: To, From, Date, Subject (Date ist der Tag der Stunde). Dann die Anrede auf eigener Zeile; jeder Absatz beginnt nach einer Leerzeile, am Rand steht der Name des Teils wie am Beamer. Nach einer Leerzeile Grußformel und Name auf eigenen Zeilen. Am Ende die Verben im Present simple blau und im Present progressive grün unterstreichen.",
+    "flow": "Volltext (50 min): 5 min Aufgabe und Camp-Wahl · 7 weitere Entscheidungen à ca. 2 min, zusammen ca. 15 min · Abschreiben nach jeder Entscheidung, zusammen ca. 20 min · 5 min Checkliste und Unterstreichen · 5 min Puffer. Pro abgelehnter Falle etwa eine Minute extra einplanen.",
+    "traps": "The camp B (TA, Erfüllung der Aufgabenstellung): Der Absatz erzählt nur von der Anreise, sagt aber nicht, wo das Camp ist und wie es dort ist. Every day C (CC, Kohärenz und Kohäsion): Liste ohne abwechslungsreiche Satzanfänge, fast jeder Satz beginnt mit We. Right now A (LSA, Sprachrichtigkeit): I sit, reads, it rains statt Present progressive für das, was gerade passiert.",
+    "notes": "Die drei Camps sind frei erfunden. Den Namen der neuen Freundin oder des neuen Freundes ruft die Klasse selbst; der Text kommt ohne he/she aus. Im Heft darf jede:r mit dem eigenen Namen unterschreiben und die Anrede an die eigene Familie anpassen (z. B. Dear Mum, Hi Grandma and Grandpa). Differenzierung: Schnelle ergänzen im Absatz Right now einen weiteren Satz über eine andere Person im Raum. Hausübung: zweite Fassung mit einem anderen Camp oder Antwort-E-Mail der Eltern (ca. 50 Wörter) mit zwei Sätzen über das, was zu Hause gerade passiert."
+  }
+}

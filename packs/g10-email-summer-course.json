@@ -1,0 +1,453 @@
+{
+  "id": "g10-email-summer-course",
+  "title": "Summer by the sea: a course enquiry",
+  "titleDe": "Anfrage an eine Sprachschule",
+  "grade": 10,
+  "level": "B1",
+  "theme": "Reisen & andere Länder",
+  "textType": "email",
+  "modes": [
+    "full",
+    "frame"
+  ],
+  "lengths": {
+    "short": {
+      "label": "around 250 words",
+      "min": 225,
+      "max": 275
+    },
+    "long": {
+      "label": "around 350 words",
+      "min": 315,
+      "max": 385
+    }
+  },
+  "minutes": {
+    "full": {
+      "short": 50,
+      "long": 90
+    },
+    "frame": {
+      "short": 60,
+      "long": 100
+    }
+  },
+  "task": {
+    "situation": "You would like to improve your English during the summer holidays and are thinking of doing a two-week course next July. On the internet you have found Saltwind English School in Malta, which offers summer courses for teenagers. You decide to write an email to the school.",
+    "instruction": "In your email you should:",
+    "points": [
+      "introduce yourself and explain why you want to improve your English",
+      "ask about the course and the accommodation with a host family",
+      "enquire about leisure activities and costs"
+    ],
+    "words": {
+      "short": "Write around 250 words.",
+      "long": "Write around 350 words."
+    },
+    "de": "Formelle Anfrage-E-Mail an eine erfundene Sprachschule auf Malta. Drei Inhaltspunkte: sich vorstellen und die eigenen Gründe erklären; nach Kurs und Gastfamilie fragen; nach Freizeitprogramm und Kosten fragen. Formelles Register, keine Kurzformen, höfliche indirekte Fragen."
+  },
+  "meta": {
+    "from": "english.student@classmail.example",
+    "to": "courses@saltwind-english.example",
+    "subjectSlot": "subject"
+  },
+  "focus": {
+    "label": "formal phrases and indirect questions",
+    "labelDe": "Formelle Wendungen und indirekte Fragen",
+    "min": {
+      "short": 5,
+      "long": 7
+    },
+    "note": "Marked: fixed formal email phrases, i.e. greeting and closing formula, purpose statements (I am writing to …), phrases that introduce polite indirect questions (Could you please tell me …, I would also like to know …, I was wondering whether …) and closing sentences (Thank you …, I look forward to …). Linking words and topic introducers are not marked; the subject line is not marked."
+  },
+  "topicWords": [
+    "english",
+    "course",
+    "courses",
+    "summer",
+    "host",
+    "family",
+    "families",
+    "malta"
+  ],
+  "gaps": [
+    {
+      "id": "YEARS",
+      "step": "opening",
+      "q": "How many years has our writer been learning English? Say the number as a word, e.g. eight.",
+      "qDe": "Seit wie vielen Jahren lernt die Person schon Englisch? Realistisch sind sechs bis zehn. Die Zahl als englisches Wort, z. B. eight.",
+      "type": "text",
+      "default": "eight",
+      "max": 12,
+      "cap": false
+    },
+    {
+      "id": "NAME",
+      "step": "signoff",
+      "q": "Who is writing the email? First name and family name.",
+      "qDe": "Ruft einen Vor- und Nachnamen für die Person, die die E-Mail schreibt. Keine Namen von Mitschüler:innen oder Lehrer:innen.",
+      "type": "text",
+      "default": "Hanna Pichler",
+      "max": 40,
+      "minWords": 2
+    }
+  ],
+  "steps": [
+    {
+      "id": "recipient",
+      "part": "Recipient",
+      "q": "Who do we write to?",
+      "de": "Wir entscheiden, an wen die E-Mail geht, und davon hängen Anrede und Grußformel ab.",
+      "options": [
+        {
+          "l": "A",
+          "id": "office",
+          "label": "The school office (no name)",
+          "teaser": "The website only gives an email address for course questions. We do not know who will read our email."
+        },
+        {
+          "l": "B",
+          "id": "named",
+          "label": "The course director, Ms Camilleri",
+          "teaser": "The ‘Contact us’ page says: “Questions about summer courses: Ms Claire Camilleri, Course Director.”"
+        }
+      ]
+    },
+    {
+      "id": "subject",
+      "slot": "subject",
+      "part": "Subject",
+      "q": "What do we write in the subject line?",
+      "de": "Die Betreffzeile sagt in wenigen Wörtern, worum es in der E-Mail geht.",
+      "own": "Short and specific: what is the email about?",
+      "ownDe": "Kurz und konkret: Worum geht es in der E-Mail?",
+      "options": [
+        {
+          "l": "A",
+          "id": "enquiry",
+          "label": "Short and clear",
+          "text": "Enquiry about your two-week summer course",
+          "why": "The word ‘enquiry’ tells the school at once what kind of email this is."
+        },
+        {
+          "l": "B",
+          "id": "topics",
+          "label": "Name the topics",
+          "text": "Summer course for teenagers: lessons, host families and costs",
+          "why": "Lists our main questions, so the reader knows what to expect."
+        },
+        {
+          "l": "C",
+          "id": "request",
+          "label": "A formal formula",
+          "text": "Request for information: summer course in July",
+          "why": "‘Request for information’ is a typical formal start for a subject line."
+        }
+      ]
+    },
+    {
+      "id": "greeting",
+      "slot": "greeting",
+      "part": "Greeting",
+      "q": "How do we greet the reader?",
+      "de": "Hier wählen wir die Anrede für unsere E-Mail. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the greeting. Then leave one line free.",
+      "ownDe": "Anrede abschreiben, danach eine Zeile frei lassen.",
+      "options": [
+        {
+          "l": "A",
+          "id": "trap",
+          "label": "Greeting A",
+          "trap": true,
+          "crit": "TA",
+          "text": {
+            "by": "recipient",
+            "map": {
+              "office": "Hi guys,",
+              "named": "Hi Claire,"
+            }
+          },
+          "reject": "Wrong greeting for a formal email: ‘Hi …’ is only for friends. To a school we have never contacted, we write ‘Dear Sir or Madam,’ or ‘Dear Ms Camilleri,’.",
+          "rejectDe": "Falsche Anrede für eine formelle E-Mail: „Hi …“ nur bei Freund:innen. Formell heißt es „Dear Sir or Madam,“ oder „Dear Ms Camilleri,“."
+        },
+        {
+          "l": "B",
+          "id": "formal",
+          "label": "Greeting B",
+          "text": {
+            "by": "recipient",
+            "map": {
+              "office": "{{[[Dear Sir or Madam,]]}}",
+              "named": "{{[[Dear Ms Camilleri,]]}}"
+            }
+          },
+          "why": "No name: ‘Dear Sir or Madam’. Name known: ‘Dear Ms’ + surname, never the first name."
+        }
+      ]
+    },
+    {
+      "id": "opening",
+      "slot": "opening",
+      "part": "Introduction",
+      "q": "Introduction: how do we start the email?",
+      "de": "Der erste Absatz eröffnet die E-Mail. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then finish the purpose sentence and introduce the writer in one or two sentences of your own.",
+      "ownDe": "Gerüst abschreiben, dann den Satz zum Zweck fertigschreiben und die schreibende Person in ein bis zwei eigenen Sätzen vorstellen.",
+      "options": [
+        {
+          "l": "A",
+          "id": "enquire",
+          "label": "From the website",
+          "text": "{{[[I am writing to enquire about]]}} your two-week summer course for teenagers, which I found on your website. {{I am a sixteen-year-old student from}} Austria, and {{I have been learning English at school for}} {YEARS} years. Next July I am planning to spend two weeks in Malta, and your school seems ideal for me.",
+          "why": "The classic formal opening: the purpose in the very first words, then a short introduction."
+        },
+        {
+          "l": "B",
+          "id": "trip",
+          "label": "A polite request",
+          "text": "{{[[I would be grateful if you could send me]] some information about}} your two-week summer course for teenagers. I spent a holiday in Malta with my family last year, and I would love to return in July for a longer stay. I am sixteen, I live in Austria and {{I have been learning English for}} {YEARS} years.",
+          "why": "A polite request as the purpose, plus a personal reason why we chose Malta."
+        },
+        {
+          "l": "C",
+          "id": "trap",
+          "label": "Hello from Austria",
+          "trap": true,
+          "crit": "TA",
+          "text": "Hello from Austria! I am sixteen years old and have been learning English for {YEARS} years. I live with my parents, my little sister and a cat called Mozart. In my free time I play volleyball, go swimming and meet my friends in the park. My favourite food is pizza, and I love the sea.",
+          "reject": "Where is the purpose? The first sentence of a formal email must say why we are writing. A cat, hobbies and a favourite food are unnecessary details.",
+          "rejectDe": "Der Zweck fehlt: Im ersten Satz muss stehen, warum wir schreiben. Katze, Hobbys und Lieblingsessen sind unnötige Details."
+        }
+      ]
+    },
+    {
+      "id": "reasons",
+      "slot": "reasons",
+      "part": "Body paragraph 1",
+      "q": "Body paragraph 1: why do we want to improve our English?",
+      "de": "Erster Inhaltspunkt: unsere Gründe, das eigene Englisch zu verbessern. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then give two reasons the writer might have and explain one of them.",
+      "ownDe": "Gerüst abschreiben, dann zwei mögliche Gründe der schreibenden Person nennen und einen davon erklären.",
+      "options": [
+        {
+          "l": "A",
+          "id": "confidence",
+          "label": "Speaking with confidence",
+          "text": "{{My main reason for choosing a course abroad is that}} I want to become more confident when I speak. At school we learn a lot of grammar, but we rarely have the chance to use English outside the classroom. {{What is more,}} good English will be essential for my future, as I hope to study international business.",
+          "why": "A clear topic sentence names the main reason, then ‘what is more’ adds a second one."
+        },
+        {
+          "l": "B",
+          "id": "exams",
+          "label": "Exams and travelling",
+          "text": "{{There are two reasons why I want to improve my English.}} {{Firstly,}} I will take my school-leaving exams in two years, and I am aiming for a good result. {{Secondly,}} I love travelling, and I have noticed that English helps me to talk to people all over the world.",
+          "why": "The topic sentence announces two reasons, and ‘firstly’ and ‘secondly’ make the order clear."
+        }
+      ]
+    },
+    {
+      "id": "level",
+      "slot": "level",
+      "part": "Body paragraph 1",
+      "len": "long",
+      "q": "How good is our English at the moment?",
+      "de": "Body paragraph 1 geht weiter: unser aktuelles Englischniveau, damit die Schule uns richtig einteilen kann. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then describe the writer’s level, strong points and one difficulty. You can invent them.",
+      "ownDe": "Gerüst abschreiben, dann Niveau, Stärken und eine Schwierigkeit der schreibenden Person beschreiben. Die Angaben dürfen erfunden sein.",
+      "options": [
+        {
+          "l": "A",
+          "id": "skills",
+          "label": "Strengths and a weakness",
+          "text": "{{As for my present level,}} I can follow most films and series in English and read short novels without a dictionary. {{In my last school report, I received}} a ‘Gut’ in English, which is the second-best mark in the Austrian system. {{However, I still find it difficult to}} use the right tenses in a fast conversation. {{For this reason,}} a course with plenty of speaking practice would suit me best.",
+          "why": "Explains the Austrian mark for a reader abroad and says what kind of course we need."
+        },
+        {
+          "l": "B",
+          "id": "b1",
+          "label": "Our level, honestly",
+          "text": "{{At the moment, according to my teachers,}} my English is at about B1 level. {{My strong points are}} reading and listening because I often watch videos and series in English without subtitles. {{On the other hand,}} writing longer texts without mistakes is still a challenge for me, and I am sometimes too shy to speak in a group. {{I hope that two weeks of daily practice will help me}} to overcome my shyness and speak more fluently.",
+          "why": "Gives a level the school understands and is honest about what we still need to practise."
+        }
+      ],
+      "join": true
+    },
+    {
+      "id": "course",
+      "slot": "course",
+      "part": "Body paragraph 2",
+      "q": "Body paragraph 2: what do we ask about the course and the host family?",
+      "de": "Zweiter Inhaltspunkt: unsere Fragen zum Kurs und zur Gastfamilie. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then write your own polite questions about the lessons and the host family.",
+      "ownDe": "Gerüst abschreiben, dann eigene höfliche Fragen zum Unterricht und zur Gastfamilie formulieren.",
+      "options": [
+        {
+          "l": "A",
+          "id": "trap",
+          "label": "Questions to the school",
+          "trap": true,
+          "crit": "LSA",
+          "text": "I have some questions to the course. Could you tell me how many lessons there are every day and how big are the groups? It would be helpful to know whether the teachers have experience with teenagers. I would like to live by a host family with children of my age because then I can speak English at home.",
+          "reject": "Three typical mistakes: ‘questions to the course’ (→ questions about), ‘how big are the groups’ (→ how big the groups are) and ‘live by a host family’ (→ live with).",
+          "rejectDe": "Drei typische Fehler: questions to → questions about, how big are the groups → how big the groups are (indirekte Frage), live by → live with."
+        },
+        {
+          "l": "B",
+          "id": "lessons",
+          "label": "Lessons first, then the family",
+          "text": "{{With these goals in mind, I have a few questions}} about the course and the accommodation. {{[[Could you please tell me]]}} how many lessons there are each day and how large the groups are? {{[[I would also like to know]] whether}} I could stay with a host family, ideally one with teenagers, so that I can practise my English at home.",
+          "why": "The topic sentence links back to our reasons and announces both topics. The questions are polite and indirect."
+        },
+        {
+          "l": "C",
+          "id": "teachers",
+          "label": "Teachers and travel to school",
+          "text": "{{To make the most of these two weeks,}} I need a few details about the course and the accommodation. {{[[Please let me know]] whether}} the teachers are experienced with teenagers and how many hours of lessons there are per week. {{[[I would also be interested to know]]}} how far the host families live from the school and whether they provide all meals.",
+          "why": "The topic sentence picks up the two weeks from the start. Each question uses a different formal phrase."
+        }
+      ]
+    },
+    {
+      "id": "activities",
+      "slot": "activities",
+      "part": "Body paragraph 3",
+      "q": "Body paragraph 3: what do we ask about activities and costs?",
+      "de": "Dritter Inhaltspunkt: unsere Fragen zu Freizeitprogramm und Kosten. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then ask your own questions about free time and the price.",
+      "ownDe": "Gerüst abschreiben, dann eigene Fragen zu Freizeit und Preis formulieren.",
+      "options": [
+        {
+          "l": "A",
+          "id": "free",
+          "label": "Free time, then the price",
+          "text": "{{Finally, [[I would like to ask about]]}} the leisure programme, as I am keen to see more of Malta. {{[[I was wondering whether]]}} there are afternoon activities or trips, for example to Valletta or Gozo, and whether they cost extra. {{[[It would be very useful to know]]}} the total cost, including accommodation and meals.",
+          "why": "‘Finally’ signals the last point. First the activities, then the total price."
+        },
+        {
+          "l": "B",
+          "id": "trap",
+          "label": "Price, family and trips",
+          "trap": true,
+          "crit": "CC",
+          "text": "How much does everything cost, and do I have to pay before the course starts? And is the host family near the school? Then there are the trips. My cousin did a language course last year, and she said the trips were the best part of her stay, so they are important to me too.",
+          "reject": "No topic sentence, and the ideas jump around: the price, the host family again (already asked) and then a cousin’s story. One topic per paragraph, in a clear order.",
+          "rejectDe": "Kein Topic Sentence, die Gedanken springen (Preis, wieder Gastfamilie, Cousine). Ein Absatz, ein Thema, klare Reihenfolge."
+        },
+        {
+          "l": "C",
+          "id": "costs",
+          "label": "The price, then free time",
+          "text": "{{Another question concerns the price.}} {{[[Would it be possible to receive]]}} a list of all costs, including the host family stay and the airport transfer? {{When it comes to free time,}} I enjoy sport and music, so [[I would be glad to hear about]] any clubs or trips in the afternoons and at weekends.",
+          "why": "The topic sentence names the price first. The free-time question is linked to our own hobbies."
+        }
+      ]
+    },
+    {
+      "id": "closing",
+      "slot": "closing",
+      "part": "Conclusion",
+      "q": "Conclusion: how do we end the email?",
+      "de": "Der Schluss bedankt sich und bittet um eine Antwort. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then link the end back to the writer’s questions or reasons in your own words.",
+      "ownDe": "Gerüst abschreiben, dann mit eigenen Worten auf die Fragen oder die Gründe der schreibenden Person zurückverweisen.",
+      "options": [
+        {
+          "l": "A",
+          "id": "deadline",
+          "label": "Thanks and a reason to reply soon",
+          "text": "{{[[Thank you in advance for]]}} answering my questions about the course, the host family and the activities. As my parents and I must decide this month, {{[[I would appreciate a reply]]}} soon.",
+          "why": "It sums up our questions, thanks the reader and gives a good reason for a quick reply."
+        },
+        {
+          "l": "B",
+          "id": "forward",
+          "label": "Thanks and a classic last line",
+          "text": "{{[[Thank you for taking the time to]] answer}} my questions. A course at your school would be the perfect way to improve my English, {{and [[I look forward to hearing from you]]}} soon.",
+          "why": "It goes back to our reason for writing and ends with the classic last sentence of a formal email."
+        }
+      ]
+    },
+    {
+      "id": "signoff",
+      "slot": "signoff",
+      "part": "Sign-off",
+      "q": "How do we sign off?",
+      "de": "Am Ende stehen die Grußformel und darunter der volle Name, den ihr gleich selbst bestimmt. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the closing formula and, on the next line, the full name we chose.",
+      "ownDe": "Grußformel abschreiben, darunter den gewählten vollen Namen.",
+      "options": [
+        {
+          "l": "A",
+          "id": "name",
+          "label": "Sign-off A",
+          "text": {
+            "by": "recipient",
+            "map": {
+              "office": "{{[[Yours faithfully,]]}}\n{NAME}",
+              "named": "{{[[Yours sincerely,]]}}\n{NAME}"
+            }
+          },
+          "why": "‘Dear Sir or Madam’ goes with ‘Yours faithfully’, ‘Dear Ms Camilleri’ with ‘Yours sincerely’. Then our full name."
+        },
+        {
+          "l": "B",
+          "id": "trap",
+          "label": "Sign-off B",
+          "trap": true,
+          "crit": "TA",
+          "text": {
+            "by": "recipient",
+            "map": {
+              "office": "Yours sincerely,\n{NAME}",
+              "named": "Yours faithfully,\n{NAME}"
+            }
+          },
+          "reject": "The closing does not match the greeting. ‘Dear Sir or Madam’ → ‘Yours faithfully’, ‘Dear Ms Camilleri’ → ‘Yours sincerely’.",
+          "rejectDe": "Die Grußformel passt nicht zur Anrede: Dear Sir or Madam → Yours faithfully, Dear Ms … → Yours sincerely."
+        }
+      ]
+    }
+  ],
+  "order": [
+    "subject",
+    "greeting",
+    "opening",
+    "reasons",
+    "level",
+    "course",
+    "activities",
+    "closing",
+    "signoff"
+  ],
+  "checks": [
+    {
+      "en": "A subject line that says clearly what the email is about"
+    },
+    {
+      "en": "Greeting and closing match: Dear Sir or Madam → Yours faithfully, Dear Ms … → Yours sincerely"
+    },
+    {
+      "en": "The first sentence says why we are writing"
+    },
+    {
+      "en": "All three content points: about me and my reasons, course and host family, activities and costs"
+    },
+    {
+      "en": "Five paragraphs: introduction, one paragraph per content point, conclusion; each starts with a clear first sentence"
+    },
+    {
+      "en": "Formal register: no contractions, no slang, polite indirect questions"
+    },
+    {
+      "en": "The conclusion picks up our questions and asks for a reply; our full name comes at the end"
+    }
+  ],
+  "teacher": {
+    "aim": "Die Klasse baut gemeinsam eine formelle Anfrage-E-Mail (B1) an eine Sprachschule auf Malta und übt dabei die Konventionen der formellen E-Mail: Betreff, passende Anrede und Grußformel, Zweck im ersten Satz, ein Punkt pro Absatz, höfliche indirekte Fragen.",
+    "prep": "A/B/C/D-Karten austeilen, Beamer im Vollbild. An der Tafel eine kleine Tabelle vorbereiten: „Dear Sir or Madam → Yours faithfully“ und „Dear Ms … → Yours sincerely“. Nach Schritt 1 markieren, welche Zeile für unsere E-Mail gilt. Im Gerüst-Modus den eingebauten Timer nutzen: 5 min pro Absatz, bei Bedarf +1. Hefte bereitlegen. Die Aufgabe am Beamer enthält alles Nötige.",
+    "heft": "Neue Seite: Datum (rechts) und „Email“ als Überschrift (wie am Beamer). Darunter der E-Mail-Kopf mit vier Zeilen (To, From, Date, Subject) wie am Beamer; der Betreff kommt nach der zweiten Entscheidung in die Subject-Zeile, der Name erst unter die Grußformel. Anrede in einer eigenen Zeile, dann eine Zeile frei. Jeder Absatz beginnt nach einer Leerzeile, am Rand steht das Randwort (Intro, Body 1, Body 2, Body 3, Conclusion). Vor der Grußformel eine Zeile frei, dann Grußformel und Name in zwei eigenen Zeilen. Formelle Wendungen und Einleitungen indirekter Fragen grün unterstreichen.",
+    "flow": "Volltext kurz (50 min): 5 min Aufgabe lesen, 9 Entscheidungen (Empfänger:in, Betreff, Anrede und Grußformel gehen schnell, ca. 1 min; Absätze ca. 2 min), Abschreiben ca. 20 min, 5 min Checkliste. Volltext lang (Doppelstunde): wie kurz, zusätzlich eine Fortsetzung von Body 1 (eigenes Englischniveau, ca. 70 Wörter mehr). Das gemeinsame Schreiben dauert ca. 60 min; die restliche Zeit für die Besprechung der Fallen und den Beginn der Hausübung nutzen. Gerüst kurz (geplant 60 min): 5 min Aufgabe; Empfänger:in, Betreff, Anrede und Grußformel je ca. 1 min; pro Absatz 1 min Entscheidung, realistisch 5–6 min eigenes Schreiben, 1 min Vergleich mit dem Modell. In 50 min: beim Schluss nur abstimmen und das Gerüst abschreiben, den eigenen Satz und die Checkliste als Hausübung. Gerüst lang: Doppelstunde mit 100 min, für die Fortsetzung von Body 1 zusätzlich ca. 8 min.",
+    "traps": "Greeting A (TA): „Hi guys,“ bzw. „Hi Claire,“ ist die falsche Anrede für eine formelle E-Mail. Intro C (TA): kein Zweck im ersten Satz, nur private Details (Familie, Hobbys, Essen). Body 2 A (LSA): questions to the course, how big are the groups (Wortstellung in indirekten Fragen), live by a host family. Body 3 B (CC): kein Topic Sentence, springt zwischen Preis, Gastfamilie und Cousine. Sign-off B (TA): Grußformel passt nicht zur Anrede (Dear Sir or Madam … Yours sincerely bzw. Dear Ms Camilleri … Yours faithfully). Kürzel: TA = Erfüllung der Aufgabenstellung, CC = Kohärenz und Kohäsion, LSR = Spektrum sprachlicher Mittel, LSA = Sprachrichtigkeit.",
+    "notes": "Jede Fassung hat fünf Absätze (Einleitung, drei Hauptabsätze, Schluss); die lange Fassung macht Body 1 länger, sie fügt keinen Absatz hinzu. Bei „Greeting“ und „Sign-off“ gibt es nur eine richtige Option: Die eigentliche Entscheidung (Name bekannt oder nicht) fällt in Schritt 1, hier geht es nur um die Falle. Die Sprachschule, die Kontaktperson und die Adressen sind erfunden; Malta ist als Ziel gewählt, weil Englisch dort Amtssprache ist. Valletta und Gozo sind reale Orte. Für den Namen in der Grußformel nur erfundene Namen, keine Namen von Mitschüler:innen oder Lehrer:innen. Differenzierung: Schnelle formulieren eine zusätzliche höfliche Frage, z. B. zum Transfer vom Flughafen. Hausübung: zweite Fassung an die andere Empfängerin bzw. das Büro, mit angepasster Anrede und Grußformel und zwei anderen Entscheidungen."
+  }
+}

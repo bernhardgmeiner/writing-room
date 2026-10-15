@@ -1,0 +1,392 @@
+{
+  "id": "g12-letter-rural-buses",
+  "title": "Better buses for young people in the countryside",
+  "titleDe": "Leserbrief: Busse für Jugendliche am Land",
+  "grade": 12,
+  "level": "B2",
+  "theme": "Gesellschaft & Zusammenleben",
+  "textType": "letter",
+  "modes": [
+    "full",
+    "frame"
+  ],
+  "lengths": {
+    "short": {
+      "label": "around 250 words",
+      "min": 225,
+      "max": 275
+    }
+  },
+  "minutes": {
+    "full": {
+      "short": 50
+    },
+    "frame": {
+      "short": 60
+    }
+  },
+  "task": {
+    "situation": "Your regional newspaper, the Hollerau Herald, published a report called ‘Stranded after 7.40’ on 5 March. It describes public transport in the district: on weekdays, the last bus from the town of Hollerau to most villages leaves at 7.40 p.m., and on Saturday evenings there is no bus at all. The district council is now discussing three ideas: a weekend night bus, a shared on-demand taxi that passengers book by phone or app, and a cheaper youth fare. The editor has invited readers to send in their views.",
+    "instruction": "Write a letter to the editor in which you:",
+    "points": [
+      "describe how the evening bus service affects young people in the villages",
+      "evaluate the ideas the council is discussing",
+      "explain why better connections would benefit the whole region"
+    ],
+    "words": {
+      "short": "Write around 250 words."
+    },
+    "de": "Ein Leserbrief an eine Regionalzeitung zum Bericht „Stranded after 7.40“ vom 5. März: Jugendliche am Land kommen abends kaum nach Hause. Drei Inhaltspunkte: die Folgen beschreiben, die drei Ideen (Nachtbus, Sammeltaxi, Jugendtarif) bewerten, den Nutzen für die ganze Region erklären. Alle müssen vorkommen. Wir schreiben aus der Sicht der erfundenen Valentina Moser (17) aus Birkenreith."
+  },
+  "meta": {
+    "to": "letters@hollerau-herald.example",
+    "from": "valentina.moser@classmail.example",
+    "date": "8 March 2027",
+    "name": "Valentina Moser",
+    "town": "Birkenreith"
+  },
+  "focus": {
+    "label": "persuasive formal phrases",
+    "labelDe": "Überzeugende formelle Wendungen",
+    "min": {
+      "short": 5
+    },
+    "note": "Marked: formal phrases for referring to the report, stating a firm opinion, stressing a point and appealing to readers or the council. Greeting, closing formula and ordinary linking words are not marked."
+  },
+  "topicWords": [
+    "bus",
+    "buses",
+    "night",
+    "taxi",
+    "shared",
+    "fare",
+    "youth",
+    "young",
+    "people",
+    "hollerau",
+    "herald",
+    "district",
+    "council",
+    "villages",
+    "village",
+    "evening",
+    "evenings",
+    "services",
+    "service"
+  ],
+  "gaps": [
+    {
+      "id": "KM",
+      "step": "problem",
+      "q": "How far is the writer’s village from the town of Hollerau? Shout a number of kilometres.",
+      "qDe": "Wie viele Kilometer ist das Dorf von Hollerau entfernt? Ruft eine Zahl.",
+      "type": "number",
+      "default": 18,
+      "min": 5,
+      "max": 60
+    },
+    {
+      "id": "FARE",
+      "step": "problem",
+      "q": "How much does a taxi from Hollerau to the village cost? Shout a number of euros.",
+      "qDe": "Wie viel kostet ein Taxi von Hollerau ins Dorf? Ruft einen Betrag in Euro.",
+      "type": "number",
+      "default": 35,
+      "min": 15,
+      "max": 120
+    }
+  ],
+  "steps": [
+    {
+      "id": "subject",
+      "slot": "subject",
+      "part": "Subject",
+      "q": "Which subject line do we put in the header?",
+      "de": "Die Betreffzeile sagt in wenigen Wörtern, worum es im Leserbrief geht.",
+      "own": "Short and specific: what is the letter about?",
+      "ownDe": "Kurz und genau: Worum geht es im Leserbrief?",
+      "options": [
+        {
+          "l": "A",
+          "id": "report",
+          "label": "Name the report",
+          "text": "Your report “Stranded after 7.40”",
+          "why": "The editor sees at once which report the letter answers."
+        },
+        {
+          "l": "B",
+          "id": "topic",
+          "label": "Name the topic",
+          "text": "Evening buses for young people in the villages",
+          "why": "It names the topic and the people affected, which helps the editor sort the letters."
+        },
+        {
+          "l": "C",
+          "id": "view",
+          "label": "State our view",
+          "text": "Why our villages need later buses",
+          "why": "A short opinion makes the editor curious to read the whole letter."
+        }
+      ]
+    },
+    {
+      "id": "greeting",
+      "slot": "greeting",
+      "part": "Greeting",
+      "q": "How do we address the editor?",
+      "de": "Die Anrede eröffnet den formellen Leserbrief. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Write the greeting on its own line, with a comma at the end.",
+      "ownDe": "Anrede in eine eigene Zeile schreiben, mit Beistrich am Ende.",
+      "options": [
+        {
+          "l": "A",
+          "id": "editor",
+          "label": "Dear Editor",
+          "text": "{{Dear Editor,}}",
+          "why": "The standard greeting for a letter that is meant to be printed in a newspaper."
+        },
+        {
+          "l": "B",
+          "id": "sir",
+          "label": "Dear Sir or Madam",
+          "text": "{{Dear Sir or Madam,}}",
+          "why": "A formal greeting that works whenever we do not know who will read the letter."
+        }
+      ]
+    },
+    {
+      "id": "intro",
+      "slot": "intro",
+      "part": "Introduction",
+      "q": "Introduction: how do we open the letter?",
+      "de": "Der erste Absatz nennt den Anlass des Briefes und unsere Haltung. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then add in your own words who the writer is or what the report shows, and what the writer thinks of the council’s plans.",
+      "ownDe": "Gerüst abschreiben, dann mit eigenen Worten ergänzen, wer die Schreiberin ist oder was der Bericht zeigt, und was sie von den Plänen hält.",
+      "options": [
+        {
+          "l": "A",
+          "id": "report",
+          "label": "Refer to the report",
+          "text": "{{[[I am writing in response to]] your report “Stranded after 7.40”, which appeared in the Hollerau Herald on 5 March.}} As a seventeen-year-old who lives in a village and goes to school in Hollerau, I know the problem well, {{and [[I firmly believe that]]}} the council’s plans deserve wide support.",
+          "why": "It names the report, the paper and the date, introduces the writer and states a clear position."
+        },
+        {
+          "l": "B",
+          "id": "demand",
+          "label": "State our demand",
+          "text": "Having read your report “Stranded after 7.40” of 5 March, I am writing to ask you to introduce a night bus and a cheaper youth fare. The last bus leaves far too early, and young people like me cannot get home. Please let me know by the end of the month what you are going to do.",
+          "trap": true,
+          "crit": "TA",
+          "reject": "This treats the editor as if the newspaper ran the buses. A letter to the editor reacts to the report and gives your view to the readers; demands go to the council.",
+          "rejectDe": "Hier wird die Redaktion behandelt, als würde sie die Busse betreiben. Ein Leserbrief reagiert auf den Bericht und richtet sich an die Leser:innen."
+        },
+        {
+          "l": "C",
+          "id": "scene",
+          "label": "Describe a familiar scene",
+          "text": "{{[[I am writing with reference to]] your report “Stranded after 7.40” in the Hollerau Herald of 5 March.}} It reminded me of a scene I know well: teenagers outside the cinema on a Saturday night with no way home. {{[[I am convinced that]]}} the council’s plans could end such scenes.",
+          "why": "After naming the report, a short scene draws readers in before the writer states the opinion."
+        }
+      ]
+    },
+    {
+      "id": "problem",
+      "slot": "problem",
+      "part": "Body paragraph 1",
+      "q": "Body paragraph 1: how does the poor evening service affect young people?",
+      "de": "Erster Inhaltspunkt: die Folgen für junge Menschen in den Dörfern. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then describe in your own words how the last bus at 7.40 p.m. affects young people.",
+      "ownDe": "Gerüst abschreiben, dann mit eigenen Worten beschreiben, was der letzte Bus um 19.40 Uhr für Jugendliche bedeutet.",
+      "options": [
+        {
+          "l": "A",
+          "id": "missing",
+          "label": "Missing out on evenings",
+          "text": "{{[[As your report makes clear]], for young people in the villages}} the evening ends at 7.40 p.m. My village lies {KM} kilometres from Hollerau, so football training, music lessons or parties are only possible if a parent can drive me home. {{A taxi, however, costs}} around {FARE} euros, which few teenagers can afford.",
+          "why": "It links to the report and turns the timetable into concrete situations from a teenager’s week."
+        },
+        {
+          "l": "B",
+          "id": "parents",
+          "label": "Parents as drivers",
+          "text": "{{[[What is often overlooked is that]] the poor evening service}} affects whole families. My family lives {KM} kilometres outside Hollerau, so my parents drive me to and from town several evenings a week after work. {{Teenagers whose parents cannot do this}} stay at home, as a taxi costs about {FARE} euros each way.",
+          "why": "It shows that the problem reaches parents too, which makes the point stronger."
+        },
+        {
+          "l": "C",
+          "id": "evening",
+          "label": "Life after 7.40",
+          "text": "Since three years I have taken the bus to school, but in the evening there is hardly any service. My village is {KM} kilometres from Hollerau. Eventually my parents can pick me up after training or a party, but otherwise going home with the taxi costs about {FARE} euros, which is too much.",
+          "trap": true,
+          "crit": "LSA",
+          "reject": "Three typical mistakes: ‘Since three years’ (→ For three years), ‘Eventually’ (→ Sometimes; ‘eventually’ means ‘in the end’) and ‘with the taxi’ (→ by taxi).",
+          "rejectDe": "Drei typische Fehler: Since three years → For three years, Eventually → Sometimes („eventually“ heißt „schließlich“), with the taxi → by taxi."
+        }
+      ]
+    },
+    {
+      "id": "ideas",
+      "slot": "ideas",
+      "part": "Body paragraph 2",
+      "q": "Body paragraph 2: how do we evaluate the council’s ideas?",
+      "de": "Zweiter Inhaltspunkt: Nachtbus, Sammeltaxi und Jugendtarif abwägen. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then weigh up the three ideas in your own words and say which one the writer prefers or how they could work together.",
+      "ownDe": "Gerüst abschreiben, dann die drei Ideen mit eigenen Worten abwägen und sagen, welche die Schreiberin bevorzugt oder wie sie zusammenwirken könnten.",
+      "options": [
+        {
+          "l": "A",
+          "id": "list",
+          "label": "One idea after another",
+          "text": "The night bus would be the best solution for the weekend. Similarly, it would only run on Friday and Saturday nights. The shared taxi would be more useful on weekdays. Nevertheless, it could also take older people to the doctor. The youth fare, however, would only help if there were buses to use.",
+          "trap": true,
+          "crit": "CC",
+          "reject": "‘Similarly’ and ‘Nevertheless’ are used wrongly: running only at weekends is a limit, not a similar point, and taking older people to the doctor adds a point instead of contrasting. Use ‘However’ and ‘What is more’.",
+          "rejectDe": "„Similarly“ und „Nevertheless“ passen nicht: Nach „Similarly“ folgt eine Einschränkung, nach „Nevertheless“ ein zusätzlicher Punkt statt eines Gegensatzes. Besser: „However“ und „What is more“."
+        },
+        {
+          "l": "B",
+          "id": "taxi",
+          "label": "The taxi comes first",
+          "text": "{{Of the three solutions to this problem, [[by far the most convincing]] is}} the shared on-demand taxi. A minibus that picks passengers up near their homes suits scattered villages better than a fixed route. {{A night bus, by contrast, would}} only help at weekends, {{while a cheaper fare}} would work best alongside the other two.",
+          "why": "It picks a clear favourite and shows what the other two ideas can and cannot do."
+        },
+        {
+          "l": "C",
+          "id": "package",
+          "label": "All three as a package",
+          "text": "{{All three ideas would ease this problem, but}} they would work best as a package. A night bus could link Hollerau with the larger villages, the shared taxi could serve the smaller ones on weekdays, and a youth fare would make both affordable. {{[[It would be a mistake to]] choose}} only the cheapest one.",
+          "why": "It moves from the problem to the solutions, evaluates all three ideas and shows how they fit together."
+        }
+      ]
+    },
+    {
+      "id": "benefit",
+      "slot": "benefit",
+      "part": "Body paragraph 3",
+      "q": "Body paragraph 3: why would the whole region benefit?",
+      "de": "Dritter Inhaltspunkt: der Nutzen für die ganze Region, nicht nur für Jugendliche. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then explain in your own words how the region as a whole would gain.",
+      "ownDe": "Gerüst abschreiben, dann mit eigenen Worten erklären, was die ganze Region gewinnen würde.",
+      "options": [
+        {
+          "l": "A",
+          "id": "stay",
+          "label": "Young people stay",
+          "text": "{{[[Let us not forget that]] better connections}} would benefit the whole region. Young people who can easily reach clubs, jobs and friends are far more likely to stay in the district after school or to return after their studies. {{Without them, the villages will}} slowly lose their shops, schools and football clubs.",
+          "why": "It looks at the future of the villages, which concerns every reader of a regional paper."
+        },
+        {
+          "l": "B",
+          "id": "everyone",
+          "label": "Everybody gains",
+          "text": "{{[[There is no doubt that]] teenagers would not be the only ones to}} profit from a better service. Older residents without a car could reach the doctor more easily, parents would gain free evenings, and fewer cars would mean cleaner air. {{In other words, a bus for young people}} is a bus for the whole district.",
+          "why": "It widens the view from teenagers to three other groups and ends with a short, memorable sentence."
+        }
+      ]
+    },
+    {
+      "id": "concl",
+      "slot": "concl",
+      "part": "Conclusion",
+      "q": "Conclusion: how do we end the letter?",
+      "de": "Der Schluss rundet den Leserbrief ab. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then finish with a clear appeal in your own words.",
+      "ownDe": "Gerüst abschreiben, dann mit einem klaren Appell in eigenen Worten abschließen.",
+      "options": [
+        {
+          "l": "A",
+          "id": "urge",
+          "label": "Appeal to the council",
+          "text": "{{[[For all these reasons, I would urge]] the district council to}} put these ideas into practice before next winter, for the good of the entire district. {{[[It is high time that]] young people in the countryside}} were no longer cut off from evening life once the last bus has gone.",
+          "why": "It sums up the letter with a clear demand and a deadline, then a strong final sentence."
+        },
+        {
+          "l": "B",
+          "id": "fence",
+          "label": "Look at both sides",
+          "text": "To sum up, there are good arguments on both sides. Perhaps young people should simply accept that life in the countryside is different, and the council may well have more urgent problems to solve. In the end, everybody has to decide this for themselves.",
+          "trap": true,
+          "crit": "TA",
+          "reject": "After a whole letter in favour of better buses, this conclusion suddenly gives up the writer’s position. A letter to the editor should end with a firm, clear appeal.",
+          "rejectDe": "Nach einem ganzen Brief für bessere Busse gibt dieser Schluss die eigene Position plötzlich auf. Ein Leserbrief endet mit einem klaren Appell."
+        },
+        {
+          "l": "C",
+          "id": "readers",
+          "label": "Appeal to the readers",
+          "text": "{{[[It is my sincere hope that]] your readers will}} support these plans, {{and [[I would call on]] the council to}} decide before the next timetable is drawn up. A late bus home is not a luxury: it gives young people a social life and the villages a future.",
+          "why": "It asks readers and the council for support and picks up both the young people and the villages."
+        }
+      ]
+    },
+    {
+      "id": "signoff",
+      "slot": "signoff",
+      "part": "Sign-off",
+      "q": "Which closing formula do we use?",
+      "de": "Die Grußformel schließt den formellen Brief ab. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the closing formula and, on the next line, the writer’s full name: Valentina Moser.",
+      "ownDe": "Grußformel abschreiben, darunter den vollen Namen der Schreiberin: Valentina Moser.",
+      "options": [
+        {
+          "l": "A",
+          "id": "sincerely",
+          "label": "Yours sincerely",
+          "text": "Yours sincerely,\nValentina Moser",
+          "trap": true,
+          "crit": "TA",
+          "reject": "‘Yours sincerely’ belongs to a letter that opens with a name (‘Dear Ms Huber’). After ‘Dear Editor’ or ‘Dear Sir or Madam’ the closing formula is ‘Yours faithfully’.",
+          "rejectDe": "„Yours sincerely“ passt nur zu einer Anrede mit Namen. Nach „Dear Editor“ oder „Dear Sir or Madam“ steht „Yours faithfully“."
+        },
+        {
+          "l": "B",
+          "id": "faithfully",
+          "label": "Yours faithfully",
+          "text": "{{Yours faithfully,}}\n{{Valentina Moser}}",
+          "why": "The formal close that goes with “Dear Editor” and “Dear Sir or Madam”."
+        }
+      ]
+    }
+  ],
+  "order": [
+    "subject",
+    "greeting",
+    "intro",
+    "problem",
+    "ideas",
+    "benefit",
+    "concl",
+    "signoff"
+  ],
+  "checks": [
+    {
+      "en": "Header with To, From, Date and a clear subject line"
+    },
+    {
+      "en": "The first sentence names the report, the newspaper and the date"
+    },
+    {
+      "en": "All three content points: effects on young people, an evaluation of the three ideas, benefits for the whole region"
+    },
+    {
+      "en": "Every paragraph starts with a clear topic sentence"
+    },
+    {
+      "en": "Firm opinions in a polite, formal tone: no contractions, no slang"
+    },
+    {
+      "en": "The conclusion ends with a clear appeal and brings no new argument"
+    },
+    {
+      "en": "“Dear Editor” or “Dear Sir or Madam” and “Yours faithfully”, then the full name and the town"
+    }
+  ],
+  "teacher": {
+    "aim": "Die Klasse baut gemeinsam einen Leserbrief auf Maturaniveau (B2) und übt überzeugende formelle Wendungen: eine klare Haltung, das Abwägen von Vorschlägen und einen höflichen, aber deutlichen Appell.",
+    "prep": "A/B/C/D-Karten austeilen (ohne Karten: 1–4 Finger, die Tasten 1–4 wählen wie A–D), Hefte bereitlegen, Beamer im Vollbild. Die Aufgabe am Beamer enthält alles Nötige. Im Gerüst-Modus den eingebauten Timer nutzen: 5–6 min pro Absatz.",
+    "heft": "Neue Seite: rechts oben das Datum, als Überschrift „Letter“ (wie am Beamer). Darunter der Kopf wie bei einer E-Mail: To, From, Date, Subject (der Betreff ist gleich die erste Entscheidung). Anrede in einer eigenen Zeile, danach und nach jedem Absatz eine Zeile frei, am Rand Intro, Body 1, Body 2, Body 3, Conclusion. Vor der Grußformel eine Zeile frei; Grußformel, voller Name und darunter der Ort stehen auf eigenen Zeilen. Überzeugende formelle Wendungen grün unterstreichen.",
+    "flow": "Volltext (50 min): 3 min Aufgabe lesen, 2 min Kopf abschreiben, 8 Entscheidungen à ca. 1–2 min, Abschreiben ca. 25 min, 5 min Checkliste. Gerüst (realistisch ca. 60 min): 3 min Aufgabe; Betreff, Anrede und Grußformel je 1 min; pro Absatz 1 min Entscheidung, 5–6 min eigenes Schreiben, 1 min Vergleich mit dem Modell; am Ende 5 min Checkliste. In einer 50-Minuten-Stunde den Schluss als Hausübung schreiben lassen. Die Fakten aus der Aufgabe an die Tafel schreiben: Bericht „Stranded after 7.40“ im Hollerau Herald vom 5. März, letzter Bus 19.40 Uhr, am Samstagabend kein Bus, drei Ideen (Nachtbus, Sammeltaxi, Jugendtarif).",
+    "traps": "Intro B (TA): Die Redaktion wird behandelt, als würde sie die Busse betreiben; ein Leserbrief reagiert auf den Bericht und richtet sich an die Leser:innen. Body 1 C (LSA): Since three years (→ For three years), Eventually (→ Sometimes; false friend zu „eventuell“), with the taxi (→ by taxi). Body 2 A (CC): „Similarly“ und „Nevertheless“ falsch verwendet. Conclusion B (TA): Der Schluss gibt die eigene Position auf, statt mit einem klaren Appell zu enden. Sign-off A (TA): „Yours sincerely“ passt nur zu einer Anrede mit Namen; nach „Dear Editor“ oder „Dear Sir or Madam“ steht „Yours faithfully“. Kürzel: TA = Erfüllung der Aufgabenstellung, CC = Kohärenz und Kohäsion, LSR = Spektrum sprachlicher Mittel, LSA = Sprachrichtigkeit.",
+    "notes": "Der Leserbrief hat fünf Absätze (Einleitung, drei Body-Absätze zu den drei Inhaltspunkten, Schluss). Wie in der Matura nennt der erste Satz der Einleitung den Bericht (Titel unter Anführungszeichen), die Zeitung und das Datum; Kopf und Betreff zählen nicht als Absatz. Zeitung, Region, Orte und die Schreiberin sind erfunden: Der Modellbrief ist mit Valentina Moser aus Birkenreith unterschrieben, und auch im Gerüst-Modus schreiben alle aus ihrer Sicht. Die Lücken (Kilometer, Taxipreis) machen den Text zum Text der Klasse; auf realistische Zahlen achten. Anrede und Grußformel: „Dear Editor“ oder „Dear Sir or Madam“ verlangen „Yours faithfully“; „Yours sincerely“ nur nach „Dear Mr/Ms …“. Die Dialogfrage „Which idea would you choose?“ eignet sich als Einstieg vor Body 2. Differenzierung: Schnelle Schüler:innen ergänzen im Gerüst-Modus einen Satz zu der Idee, die ihr Modell weniger ausführlich behandelt. Hausübung: denselben Leserbrief aus der Sicht eines Elternteils oder einer älteren Person ohne Auto schreiben."
+  }
+}

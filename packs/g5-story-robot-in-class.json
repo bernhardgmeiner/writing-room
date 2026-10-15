@@ -1,0 +1,286 @@
+{
+  "id": "g5-story-robot-in-class",
+  "title": "A robot in our class",
+  "titleDe": "Ein Roboter in unserer Klasse",
+  "grade": 5,
+  "level": "A1",
+  "theme": "Kultur & Kreativität",
+  "textType": "story",
+  "modes": [
+    "full"
+  ],
+  "lengths": {
+    "short": {
+      "label": "around 60 words",
+      "min": 50,
+      "max": 70
+    }
+  },
+  "minutes": {
+    "full": {
+      "short": 50
+    }
+  },
+  "task": {
+    "situation": "Imagine: a robot comes to your class for one day! Write a fantasy story about this day. Write the story in the present.",
+    "instruction": "Write a story. Say:",
+    "points": [
+      "how the robot comes to your class",
+      "what the robot can do",
+      "what the robot can’t do",
+      "how the day ends"
+    ],
+    "words": {
+      "short": "Give your story a title. Write around 60 words."
+    },
+    "de": "Eine Fantasiegeschichte im Präsens: Ein Roboter ist einen Tag lang in eurer Klasse. Was kann er, was kann er nicht, und wie endet der Tag? Schwerpunkt: can / can’t."
+  },
+  "meta": {},
+  "focus": {
+    "label": "can / can’t",
+    "labelDe": "can / can’t",
+    "min": {
+      "short": 5
+    },
+    "note": "Marked: every can and can’t."
+  },
+  "topicWords": [
+    "robot",
+    "robots"
+  ],
+  "gaps": [
+    {
+      "id": "ROBOT",
+      "step": "start",
+      "q": "What is the robot’s name?",
+      "qDe": "Ruft einen Namen für den Roboter, z. B. Zip, Bolt oder Robbie. Keine Namen von Mitschüler:innen oder Lehrer:innen.",
+      "type": "text",
+      "default": "Zip",
+      "max": 20
+    }
+  ],
+  "steps": [
+    {
+      "id": "start",
+      "slot": "start",
+      "part": "Beginning",
+      "q": "How does our story start?",
+      "de": "Der Anfang erzählt, wie der Roboter in unsere Klasse kommt. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "monday",
+          "label": "On Monday",
+          "text": "On Monday, a robot comes into our classroom. Its name is {ROBOT}.",
+          "why": "We know when the story happens and who is new."
+        },
+        {
+          "l": "B",
+          "id": "student",
+          "label": "A new student",
+          "text": "Today there is a new student in our class: a robot called {ROBOT}!",
+          "why": "A new student is a funny way to say robot."
+        },
+        {
+          "l": "C",
+          "id": "surprise",
+          "label": "A big surprise",
+          "text": "Our teacher has got a big surprise: a robot called {ROBOT}!",
+          "why": "The surprise makes readers curious."
+        }
+      ]
+    },
+    {
+      "id": "lesson",
+      "slot": "lesson",
+      "part": "In the lesson",
+      "q": "What can the robot do in our lessons?",
+      "de": "Hier zeigt der Roboter, was er im Unterricht kann. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "maths",
+          "label": "Fast maths",
+          "text": "Maths is easy for {ROBOT}. It [[can]] count to a million in one second!",
+          "why": "A big number makes the robot amazing."
+        },
+        {
+          "l": "B",
+          "id": "english",
+          "label": "Reading and singing",
+          "text": "In English, {ROBOT} [[can]] read a book in one minute. It [[can]] sing, too!",
+          "why": "Two things the robot can do, and both are surprising."
+        },
+        {
+          "l": "C",
+          "id": "languages",
+          "label": "Numbers and languages",
+          "trap": true,
+          "crit": "LSA",
+          "reject": "Two mistakes: it can count, not it cans count. And it can speak, not it can speaks.",
+          "rejectDe": "Zwei Fehler: „can“ bekommt nie ein -s, und nach „can“ steht das Verb ohne -s: „it can count“, „it can speak“.",
+          "text": "In Maths, {ROBOT} cans count to a million. It can speaks ten languages, too!"
+        }
+      ]
+    },
+    {
+      "id": "break",
+      "slot": "break",
+      "part": "Break time",
+      "q": "What happens at break?",
+      "de": "Hier geht es um die Pause und was der Roboter nicht kann. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "food",
+          "label": "Break snacks",
+          "text": "{ROBOT} [[can’t]] eat our sandwiches at break. It [[can]] only drink oil!",
+          "why": "‘Can’t’ and ‘can’ show what a robot needs."
+        },
+        {
+          "l": "B",
+          "id": "goodbye",
+          "label": "Time to go",
+          "trap": true,
+          "crit": "CC",
+          "reject": "Too early! The robot says goodbye at the end of the story, not at break.",
+          "rejectDe": "Zu früh! Der Abschied kommt erst am Ende der Geschichte, nicht in der Pause.",
+          "text": "At the end of the day, {ROBOT} says goodbye, and we are all very sad."
+        },
+        {
+          "l": "C",
+          "id": "football",
+          "label": "Football",
+          "text": "At break, we play football. {ROBOT} [[can’t]] run, but it [[can]] stop every ball!",
+          "why": "‘But’ shows what the robot can’t do and what it can do."
+        }
+      ]
+    },
+    {
+      "id": "problem",
+      "slot": "problem",
+      "part": "A funny problem",
+      "q": "What funny problem happens?",
+      "de": "Hier passiert etwas Lustiges mit dem Roboter. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "dance",
+          "label": "Music",
+          "text": "Oh no! After lunch we have got Music, and {ROBOT} [[can’t]] stop dancing!",
+          "why": "A dancing robot is a funny picture."
+        },
+        {
+          "l": "B",
+          "id": "rain",
+          "label": "Rain",
+          "text": "Then it rains, and {ROBOT} [[can’t]] go out. Robots hate water!",
+          "why": "The last sentence makes the problem funny."
+        },
+        {
+          "l": "C",
+          "id": "laugh",
+          "label": "Jokes",
+          "text": "Suddenly, {ROBOT} [[can’t]] stop laughing. Our jokes are too funny for a robot!",
+          "why": "‘Suddenly’ makes the moment exciting."
+        }
+      ]
+    },
+    {
+      "id": "end",
+      "slot": "end",
+      "part": "Ending",
+      "q": "How does our story end?",
+      "de": "Der Schluss erzählt, wie der Robotertag zu Ende geht. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "goodbye",
+          "label": "Goodbye",
+          "text": "Sadly, {ROBOT} [[can]] stay for just one day. We all wave goodbye.",
+          "why": "A sad but warm goodbye."
+        },
+        {
+          "l": "B",
+          "id": "day",
+          "label": "A happy end",
+          "text": "Best day ever! Now we [[can]] tell everybody about our robot friend.",
+          "why": "A happy last line: now everybody can hear about our robot."
+        },
+        {
+          "l": "C",
+          "id": "forget",
+          "label": "See you again",
+          "text": "Bye-bye, {ROBOT}! We [[can’t]] wait for the next robot day.",
+          "why": "The goodbye speaks to the robot and looks forward."
+        }
+      ]
+    },
+    {
+      "id": "title",
+      "slot": "title",
+      "part": "Title",
+      "q": "Our story is finished. Which title do we choose?",
+      "de": "Zum Schluss wählen wir den Titel unserer Geschichte.",
+      "options": [
+        {
+          "l": "A",
+          "id": "robot",
+          "label": "Say what happens",
+          "text": "A Robot in Our Class",
+          "why": "Clear: readers know at once what the story is about."
+        },
+        {
+          "l": "B",
+          "id": "name",
+          "label": "The robot’s name",
+          "text": "{ROBOT} Comes to School",
+          "why": "The name in the title makes the robot a real character."
+        },
+        {
+          "l": "C",
+          "id": "day",
+          "label": "A special day",
+          "text": "Our Robot Day",
+          "why": "Short and fun."
+        }
+      ]
+    }
+  ],
+  "order": [
+    "title",
+    "start",
+    "lesson",
+    "break",
+    "problem",
+    "end"
+  ],
+  "checks": [
+    {
+      "en": "Our story has got a title"
+    },
+    {
+      "en": "It says how the robot comes to our class"
+    },
+    {
+      "en": "It says what the robot can do"
+    },
+    {
+      "en": "It says what the robot can’t do"
+    },
+    {
+      "en": "The end of the robot day comes at the end of the story"
+    },
+    {
+      "en": "After can and can’t, the verb has got no -s"
+    }
+  ],
+  "teacher": {
+    "aim": "Die Klasse schreibt gemeinsam eine Fantasiegeschichte im Präsens über einen Roboter, der einen Tag in die Klasse kommt, und übt can / can’t.",
+    "prep": "A/B/C/D-Karten austeilen, Beamer im Vollbild, grüne Stifte bereitlegen. Einsatz ab: can / can’t, Present simple und there is.",
+    "heft": "Datum rechts, „Story“ als Überschrift, darunter 2 Zeilen für den Titel frei lassen (der Titel kommt zum Schluss). Jeder Teil beginnt in einer neuen Zeile, am Rand steht der Name des Teils wie am Beamer (Beginning, In the lesson, Break time, A funny problem, Ending). Am Ende can und can’t grün unterstreichen.",
+    "flow": "Aufgabe lesen und Roboternamen rufen 4 min · 6 Entscheidungen mit Abstimmen und Abschreiben à ca. 5 min, zusammen ca. 30 min · Checkliste und can / can’t markieren 6 min · Rest: den Roboter neben die Geschichte zeichnen. Passt in 50 Minuten.",
+    "traps": "In the lesson C (LSA, Sprachrichtigkeit): it cans count statt it can count, it can speaks statt it can speak. Break time B (CC, Kohärenz und Kohäsion): der Abschied kommt mitten in der Geschichte, falsche Reihenfolge.",
+    "notes": "Für den Roboter verwendet der Text it und its; das kurz an der Tafel zeigen. Differenzierung: Schnelle schreiben eine Liste „Our robot can … / can’t …“ mit drei eigenen Ideen. Hausübung: eine zweite Fassung mit anderen Entscheidungen oder eine Geschichte über einen Roboter zu Hause."
+  }
+}

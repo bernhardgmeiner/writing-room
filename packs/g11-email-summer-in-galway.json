@@ -1,0 +1,410 @@
+{
+  "id": "g11-email-summer-in-galway",
+  "title": "Hire me! A summer in Galway",
+  "titleDe": "Bewerbung für ein Sommerpraktikum",
+  "grade": 11,
+  "level": "B1+/B2",
+  "theme": "Arbeit & Zukunft",
+  "textType": "email",
+  "modes": [
+    "full",
+    "frame"
+  ],
+  "lengths": {
+    "short": {
+      "label": "around 250 words",
+      "min": 225,
+      "max": 275
+    }
+  },
+  "minutes": {
+    "full": {
+      "short": 50
+    },
+    "frame": {
+      "short": 60
+    }
+  },
+  "task": {
+    "situation": "You are looking for a summer job abroad and have found this advert on an international job portal for students: ‘SUMMER INTERN WANTED. Bluefern Adventures, a small outdoor-tourism company in Galway, Ireland, is looking for a paid intern for July and August. You will welcome guests from all over Europe, help our guides on hiking and kayaking tours and look after our boats and equipment. More and more of our guests come from German-speaking countries, so German is a big plus. Please send your application to our HR team at careers@bluefern-adventures.example. Internship Coordinator: Mr Ciarán Walsh.’",
+    "instruction": "Write an email in which you apply for the internship. In your email you should:",
+    "points": [
+      "describe an experience that has prepared you for this internship",
+      "explain what you hope to learn during the summer",
+      "suggest how you could support the team in your first week"
+    ],
+    "words": {
+      "short": "Write around 250 words."
+    },
+    "de": "Formelle Bewerbungs-E-Mail für ein Sommerpraktikum in Irland. Drei Inhaltspunkte: eine passende Erfahrung beschreiben; erklären, was ihr lernen wollt; vorschlagen, wie ihr in der ersten Woche mithelfen könntet. Anrede und Grußformel müssen zusammenpassen."
+  },
+  "meta": {
+    "from": "applicant.krems@classmail.example",
+    "to": "careers@bluefern-adventures.example",
+    "subjectSlot": "subject"
+  },
+  "focus": {
+    "label": "formal phrases for applications",
+    "labelDe": "Formelle Wendungen für Bewerbungen",
+    "min": {
+      "short": 6
+    },
+    "note": "Marked: fixed phrases of formal emails for stating the purpose, referring to a topic, describing experience and skills, offering, requesting and closing. Greeting, closing formula and ordinary linking words are not marked."
+  },
+  "topicWords": [
+    "internship",
+    "bluefern",
+    "adventures",
+    "galway",
+    "guests",
+    "tours",
+    "tour",
+    "summer",
+    "guides"
+  ],
+  "gaps": [
+    {
+      "id": "FULLNAME",
+      "step": "signoff",
+      "q": "Who is applying? First name and family name.",
+      "qDe": "Ruft einen Vor- und Nachnamen für die Person, die sich bewirbt. Keine Namen von Mitschüler:innen oder Lehrer:innen.",
+      "type": "text",
+      "default": "Nina Aigner",
+      "max": 40,
+      "minWords": 2
+    }
+  ],
+  "steps": [
+    {
+      "id": "subject",
+      "slot": "subject",
+      "part": "Subject",
+      "q": "Which subject line do we put in the header?",
+      "de": "Die Betreffzeile sagt in wenigen Wörtern, worum es in der E-Mail geht.",
+      "own": "Short and specific: what is the email about?",
+      "ownDe": "Kurz und genau: Worum geht es in der E-Mail?",
+      "options": [
+        {
+          "l": "A",
+          "id": "position",
+          "label": "Name the position",
+          "text": "Application for the position of Summer Intern",
+          "why": "Clear and formal: the HR team knows at once what the email is about."
+        },
+        {
+          "l": "B",
+          "id": "dates",
+          "label": "Add the dates",
+          "text": "Summer internship (July–August): application from Austria",
+          "why": "The dates and the applicant’s home country help the HR team to sort the applications."
+        },
+        {
+          "l": "C",
+          "id": "german",
+          "label": "Point to a skill",
+          "text": "Application: German-speaking summer intern",
+          "why": "It points to the skill the advert asks for, so the email stands out in a full inbox."
+        }
+      ]
+    },
+    {
+      "id": "addressee",
+      "part": "Addressee",
+      "q": "Who are we writing to?",
+      "de": "Diese Entscheidung bestimmt die Anrede UND die Grußformel am Schluss.",
+      "options": [
+        {
+          "l": "A",
+          "id": "name",
+          "label": "Mr Walsh, the coordinator",
+          "teaser": "The advert names the Internship Coordinator. We write to him directly."
+        },
+        {
+          "l": "B",
+          "id": "team",
+          "label": "The HR team",
+          "teaser": "The email goes to the HR team’s inbox, and we do not know who will read it."
+        }
+      ]
+    },
+    {
+      "id": "greeting",
+      "slot": "greeting",
+      "part": "Greeting",
+      "q": "How do we greet the reader?",
+      "de": "Hier wählen wir die Anrede für unsere Bewerbung. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Write the greeting on its own line, with a comma at the end.",
+      "ownDe": "Anrede in eine eigene Zeile schreiben, mit Beistrich am Ende.",
+      "options": [
+        {
+          "l": "A",
+          "id": "dear",
+          "label": "Greeting A",
+          "text": {
+            "by": "addressee",
+            "map": {
+              "name": "{{Dear Mr Walsh,}}",
+              "team": "{{Dear Sir or Madam,}}"
+            }
+          },
+          "why": "Polite and formal, and it matches the reader we have chosen."
+        },
+        {
+          "l": "B",
+          "id": "trap",
+          "label": "Greeting B",
+          "trap": true,
+          "crit": "TA",
+          "text": {
+            "by": "addressee",
+            "map": {
+              "name": "Dear Mr Ciarán Walsh,",
+              "team": "Dear Sirs,"
+            }
+          },
+          "reject": "This greeting is not right for a job application. With a name, use the title and the family name only: ‘Dear Mr Walsh,’ (not ‘Dear Mr Ciarán Walsh’); without a name, write ‘Dear Sir or Madam,’ (‘Dear Sirs’ is old-fashioned and leaves out women).",
+          "rejectDe": "Passt nicht zur Bewerbung: mit Namen nur Titel und Nachname („Dear Mr Walsh,“), ohne Namen „Dear Sir or Madam,“ („Dear Sirs“ ist veraltet und schließt Frauen aus)."
+        }
+      ]
+    },
+    {
+      "id": "opening",
+      "slot": "opening",
+      "part": "Introduction",
+      "q": "Introduction: how do we state the purpose of our email?",
+      "de": "Die Einleitung sagt, warum wir schreiben und wer sich bewirbt. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then add where the applicant saw the advert, one sentence about the applicant and when the applicant can work.",
+      "ownDe": "Gerüst abschreiben, dann ergänzen, wo die Person das Inserat gesehen hat, einen Satz über sie und wann sie arbeiten kann.",
+      "options": [
+        {
+          "l": "A",
+          "id": "apply",
+          "label": "Purpose, then who we are",
+          "text": "{{[[I am writing to apply for]] the summer internship at Bluefern Adventures,}} which I saw advertised on an international job portal for students. I am a seventeen-year-old grammar school student from Krems and {{[[would be available]] from}} 5 July until the end of August.",
+          "why": "Purpose first, then where the advert was seen, a short introduction and the exact dates."
+        },
+        {
+          "l": "B",
+          "id": "position",
+          "label": "Purpose, then real interest",
+          "text": "{{[[I would like to apply for]] the position of Summer Intern [[as advertised on]]}} an international job portal for students. {{As a seventeen-year-old}} grammar school student from Krems, [[I would be delighted to]] join your team from 5 July until the end of August.",
+          "why": "Purpose first, then a polite sentence that shows real enthusiasm and gives the dates."
+        }
+      ]
+    },
+    {
+      "id": "experience",
+      "slot": "experience",
+      "part": "Body paragraph 1",
+      "q": "Body paragraph 1: which experience has prepared us for the internship?",
+      "de": "Erster Inhaltspunkt: eine Erfahrung, die zum Praktikum passt. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then describe one job or activity of our applicant (invent it) and what the applicant learnt from it.",
+      "ownDe": "Gerüst abschreiben, dann eine erfundene Tätigkeit der Person beschreiben, die sich bewirbt, und sagen, was sie dabei gelernt hat.",
+      "options": [
+        {
+          "l": "A",
+          "id": "cafe",
+          "label": "A Saturday job",
+          "text": "{{[[With regard to]] relevant experience, I have been working}} at a small café on Saturday mornings since last autumn, taking orders, serving breakfast and dealing with complaints. {{This job has taught me}} to stay calm when it gets busy and to treat every customer with respect, {{which is}} just as important with guests on a tour.",
+          "why": "A real job shows reliability, and the last sentence links it directly to the internship."
+        },
+        {
+          "l": "B",
+          "id": "club",
+          "label": "Helping at a canoe club",
+          "text": "{{Your advert describes tasks that I already know well.}} Every week, I help the coaches at my local canoe club to run beginners’ courses for children. {{[[My duties include]]}} checking the equipment before every session, {{and I have learnt how to}} explain safety rules clearly, even to nervous children who have never sat in a boat.",
+          "why": "The topic sentence links the experience to the advert; paddling, equipment and safety rules are very close to the job."
+        },
+        {
+          "l": "C",
+          "id": "trap",
+          "label": "Our link to Ireland",
+          "trap": true,
+          "crit": "TA",
+          "text": "My family and I spent a holiday in Ireland two years ago. It rained almost every day, but the people were very friendly and the food was good. My uncle, who works in a bank, lives in Dublin with his family. I love animals, and I have a dog called Rusty who always comes hiking with us.",
+          "reject": "This experience has not prepared you for the internship: a holiday, an uncle in a bank and a dog tell the company nothing about what you can do. Unnecessary details do not count towards the task.",
+          "rejectDe": "Keine passende Erfahrung: Urlaub, Onkel und Hund sagen nichts darüber, was ihr könnt. Unnötige Details zählen nicht."
+        }
+      ]
+    },
+    {
+      "id": "learn",
+      "slot": "learn",
+      "part": "Body paragraph 2",
+      "q": "Body paragraph 2: what do we hope to learn during the summer?",
+      "de": "Zweiter Inhaltspunkt: was ihr im Praktikum lernen wollt. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then write in your own words what our applicant would like to learn and why.",
+      "ownDe": "Gerüst abschreiben, dann mit eigenen Worten erklären, was die Person lernen will und warum.",
+      "options": [
+        {
+          "l": "A",
+          "id": "trap",
+          "label": "Learning on the job",
+          "trap": true,
+          "crit": "LSA",
+          "text": "If I would get the internship, I could find out how a small tourism company really works, and I hope your guides can explain me how they plan a tour. I am also looking forward to improve my English, especially my speaking skills, as I would like to study languages after school.",
+          "reject": "Three typical mistakes: ‘If I would get’ (→ If I got: no ‘would’ in the if-clause), ‘explain me’ (→ explain to me) and ‘looking forward to improve’ (→ looking forward to improving).",
+          "rejectDe": "Drei typische Fehler: If I would get → If I got (kein would im if-Satz), explain me → explain to me, looking forward to improve → looking forward to improving."
+        },
+        {
+          "l": "B",
+          "id": "english",
+          "label": "Speaking with confidence",
+          "text": "{{For me personally, the internship would be a chance to grow: [[my main aim would be to]]}} improve my spoken English, especially in front of groups. Giving short introductions before tours would build my confidence, {{and [[I would welcome the opportunity to]]}} get used to different accents, including the Irish one, which I still find hard to follow.",
+          "why": "The topic sentence turns from what we offer to what we hope to gain; the goal matches the tasks."
+        },
+        {
+          "l": "C",
+          "id": "career",
+          "label": "A look at a career",
+          "text": "{{Apart from what I can offer, [[the reason why this internship appeals to me is that]]}} I am considering a career in tourism. {{I would like to}} find out how a small company plans its tours, handles bookings and keeps its guests safe. {{This [[would give me a valuable insight into]]}} the industry before I decide what to study.",
+          "why": "‘Apart from what I can offer’ links back; it ties the internship to future plans with three concrete things to learn."
+        }
+      ]
+    },
+    {
+      "id": "contribute",
+      "slot": "contribute",
+      "part": "Body paragraph 3",
+      "q": "Body paragraph 3: how could we support the team in our first week?",
+      "de": "Dritter Inhaltspunkt: ein konkreter Vorschlag für die erste Woche. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then add two concrete ways in which the applicant could help in the first week.",
+      "ownDe": "Gerüst abschreiben, dann zwei konkrete Möglichkeiten ergänzen, wie die Person in der ersten Woche helfen könnte.",
+      "options": [
+        {
+          "l": "A",
+          "id": "german",
+          "label": "Use our German",
+          "text": "{{In return, I could help from day one:}} since German speakers make up a growing share of your guests, I could welcome them in their own language and assist with check-in at the harbour. {{[[I would also be pleased to]]}} translate your safety briefing into German {{so that}} beginners understand every rule before they get into a kayak.",
+          "why": "‘In return’ links learning and giving; it shows what the company gains from a German speaker."
+        },
+        {
+          "l": "B",
+          "id": "equipment",
+          "label": "Help where it is needed",
+          "text": "{{In return, [[I would be more than willing to]]}} help wherever I am needed in my first week, for example by cleaning and checking the kayaks after each tour. {{This would allow your guides to}} spend more time with the guests, {{and I am sure I would soon be able to}} assist on the hiking tours.",
+          "why": "‘In return’ links back; modest and practical, it shows that the applicant wants to grow."
+        },
+        {
+          "l": "C",
+          "id": "trap",
+          "label": "Practical offers",
+          "trap": true,
+          "crit": "LSR",
+          "text": "In my first week, I would be happy to help with check-in at the harbour. I would be happy to clean and check the kayaks after each tour. I would also be happy to translate your safety briefing into German, and I would be happy to assist on the tours as soon as possible.",
+          "reject": "Good ideas, but ‘I would be happy to’ four times sounds mechanical and shows no range. Vary the phrases: ‘I would be glad to’, ‘I could also’, ‘I would be more than willing to’.",
+          "rejectDe": "Gute Ideen, aber viermal „I would be happy to“ klingt mechanisch. Formelle Wendungen abwechseln."
+        }
+      ]
+    },
+    {
+      "id": "closing",
+      "slot": "closing",
+      "part": "Conclusion",
+      "q": "Conclusion: how do we round off the email?",
+      "de": "Der Schluss fasst die Bewerbung kurz zusammen und nennt den nächsten Schritt. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then sum up in one sentence why the internship suits the applicant, and finish with your own request.",
+      "ownDe": "Gerüst abschreiben, dann in einem Satz zusammenfassen, warum das Praktikum zur Person passt, und mit einer eigenen Bitte abschließen.",
+      "options": [
+        {
+          "l": "A",
+          "id": "attached",
+          "label": "Sum up, CV and a reply",
+          "text": "{{To sum up, this internship would be}} the ideal chance to use my experience, learn a great deal and support your team. {{[[Please find attached]]}} my CV and a reference from my English teacher. {{[[I look forward to hearing from you.]]}}",
+          "why": "Sums up the three content points in one sentence, mentions the attachments and asks for a reply."
+        },
+        {
+          "l": "B",
+          "id": "info",
+          "label": "Sum up and offer an interview",
+          "text": "{{All in all,}} my experience and my wish to learn would allow me to make a real contribution to your team this summer. {{[[Should you need any further information,]] [[please do not hesitate to contact me]].}} {{[[I would be glad to]]}} attend an online interview.",
+          "why": "Picks up experience, learning and support, then offers information and an interview."
+        }
+      ]
+    },
+    {
+      "id": "signoff",
+      "slot": "signoff",
+      "part": "Sign-off",
+      "q": "Which closing formula matches our greeting?",
+      "de": "Hier wählen wir die Grußformel und die Unterschrift. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the closing formula and, on the next line, the full name we chose.",
+      "ownDe": "Grußformel abschreiben, darunter den gewählten vollen Namen.",
+      "options": [
+        {
+          "l": "A",
+          "id": "trap",
+          "label": "Sign-off A",
+          "trap": true,
+          "crit": "TA",
+          "text": {
+            "by": "addressee",
+            "map": {
+              "name": "Yours faithfully,\n{FULLNAME}",
+              "team": "Yours sincerely,\n{FULLNAME}"
+            }
+          },
+          "reject": "Greeting and closing do not match. ‘Dear Mr Walsh’ (name known) goes with ‘Yours sincerely’; ‘Dear Sir or Madam’ (name unknown) goes with ‘Yours faithfully’.",
+          "rejectDe": "Anrede und Grußformel passen nicht zusammen: Name bekannt → Yours sincerely, Name unbekannt → Yours faithfully."
+        },
+        {
+          "l": "B",
+          "id": "match",
+          "label": "Sign-off B",
+          "text": {
+            "by": "addressee",
+            "map": {
+              "name": "{{Yours sincerely,}}\n{FULLNAME}",
+              "team": "{{Yours faithfully,}}\n{FULLNAME}"
+            }
+          },
+          "why": "The closing matches the greeting and is followed by the applicant’s full name."
+        }
+      ]
+    }
+  ],
+  "order": [
+    "subject",
+    "greeting",
+    "opening",
+    "experience",
+    "learn",
+    "contribute",
+    "closing",
+    "signoff"
+  ],
+  "checks": [
+    {
+      "en": "The subject line says clearly what the email is about"
+    },
+    {
+      "en": "Greeting and closing match: Dear Mr Walsh → Yours sincerely, Dear Sir or Madam → Yours faithfully"
+    },
+    {
+      "en": "The purpose of the email and the dates are clear in the first paragraph"
+    },
+    {
+      "en": "All three content points: a relevant experience, what we hope to learn, how we could help in the first week"
+    },
+    {
+      "en": "A range of formal phrases, not the same phrase again and again"
+    },
+    {
+      "en": "The conclusion sums up the application and asks for a reply or an interview"
+    },
+    {
+      "en": "Formal register: no contractions, no slang"
+    },
+    {
+      "en": "The email ends with the applicant’s full name"
+    }
+  ],
+  "teacher": {
+    "aim": "Die Klasse schreibt gemeinsam eine formelle Bewerbungs-E-Mail (B1+/B2) und übt dabei Anrede und passende Grußformel, einen klaren Zweck im ersten Satz und abwechslungsreiche formelle Wendungen.",
+    "prep": "A/B/C/D-Karten austeilen (ohne Karten: 1–4 Finger, die Tasten 1–4 wählen wie A–D), Beamer im Vollbild. Im Gerüst-Modus den eingebauten Timer nutzen: 5 min pro Absatz.",
+    "heft": "Neue Seite: rechts oben das Datum, als Überschrift „Email“ (wie am Beamer). Darunter der Kopf: To, From, Date, Subject (der Betreff ist gleich die erste Entscheidung). Anrede in einer eigenen Zeile, danach und nach jedem Absatz eine Zeile frei, am Rand Intro, Body 1, Body 2, Body 3, Conclusion. Vor der Grußformel eine Zeile frei; Grußformel und voller Name stehen auf eigenen Zeilen. Formelle Wendungen grün unterstreichen.",
+    "flow": "Volltext (50 min): 3 min Inserat lesen, 2 min Kopf abschreiben, 9 Entscheidungen à ca. 1–2 min, Abschreiben ca. 25 min, 5 min Checkliste. Gerüst (realistisch ca. 60 min): 3 min Aufgabe; Betreff, Adressat:in, Anrede und Grußformel je 1 min; pro Absatz 1 min Entscheidung, 5–6 min eigenes Schreiben, 1 min Vergleich mit dem Modell; am Ende 5 min Checkliste. In einer 50-Minuten-Stunde bei der Conclusion das Modell nur abschreiben, statt selbst zu schreiben, und die Checkliste am Beginn der nächsten Stunde machen.",
+    "traps": "Greeting B (TA): „Dear Mr Ciarán Walsh,“ (mit Titel nur der Nachname) bzw. „Dear Sirs,“ (veraltet, schließt Frauen aus). Body 1 C (TA): keine passende Erfahrung, stattdessen unnötige Details (Urlaub, Onkel, Hund). Body 2 A (LSA): If I would get, explain me, looking forward to improve. Body 3 C (LSR): viermal „I would be happy to“, keine Abwechslung bei den formellen Wendungen. Sign-off A (TA): Grußformel passt nicht zur Anrede. Kürzel: TA = Erfüllung der Aufgabenstellung, CC = Kohärenz und Kohäsion, LSR = Spektrum sprachlicher Mittel, LSA = Sprachrichtigkeit.",
+    "notes": "Die E-Mail hat fünf Absätze (Einleitung, drei Body Paragraphs mit je einem Inhaltspunkt, Schluss) und wie bei der SRDP eine Länge: ca. 250 Wörter. Greeting und Sign-off haben nur EINE richtige Option: Sobald die Klasse die Empfängerin oder den Empfänger gewählt hat, gibt es nur eine korrekte Anrede und eine passende Grußformel. Die Karten der Adressat:innen-Entscheidung nennen Anrede und Grußformel nicht: Die Klasse soll das passende Paar selbst finden (siehe Checkliste). Die Sign-off-Falle ist die verkehrte Grußformel für dieselbe Anrede. Firma, Adresse und Ansprechperson sind erfunden. Für den vollen Namen nur erfundene Namen, keine Namen von Mitschüler:innen oder Lehrer:innen. Differenzierung: Schnelle ergänzen im Gerüst-Modus einen zusätzlichen Beispielsatz. Hausübung: Bewerbung für eine andere Stelle (z. B. Assistent:in in einem Jugendgästehaus in Schottland) mit derselben Struktur."
+  }
+}

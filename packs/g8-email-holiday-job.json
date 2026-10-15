@@ -1,0 +1,413 @@
+{
+  "id": "g8-email-holiday-job",
+  "title": "Applying for a holiday job",
+  "titleDe": "Bewerbung für einen Ferialjob",
+  "grade": 8,
+  "level": "A2+",
+  "theme": "Arbeit & Zukunft",
+  "textType": "email",
+  "modes": [
+    "full"
+  ],
+  "lengths": {
+    "short": {
+      "label": "around 150 words",
+      "min": 135,
+      "max": 165
+    }
+  },
+  "minutes": {
+    "full": {
+      "short": 50
+    }
+  },
+  "task": {
+    "situation": "The Lakeside Holiday Club, a youth centre in your town, is looking for young volunteers (14 or older) for the summer holidays. You want to apply for one of these two jobs from its website:\n• Junior helper at the Summer Sports Camp: children aged 6 to 10, 13 to 24 July, Monday to Friday, 9 am to 1 pm. Help the coaches with games and look after the children. Free lunch and a certificate. Contact: Ms Sandra Holzer, camp leader.\n• Helper at the Holiday Reading Club in the town library: children aged 7 to 9, every Tuesday and Thursday morning in August. Read stories with the children and help with crafts. Contact: the library team.",
+    "instruction": "Write an email of application. In your email:",
+    "points": [
+      "say which job you are applying for and where you saw the advert",
+      "write about yourself, your skills and your experience",
+      "explain why you want the job and say when you are available"
+    ],
+    "words": {
+      "short": "Write around 150 words."
+    },
+    "de": "Formelle Bewerbung per E-Mail für einen Ferialjob: Stelle und Anzeige nennen, über euch, eure Stärken und Erfahrung schreiben, sagen, warum ihr den Job wollt und wann ihr Zeit habt. Zuerst wählt ihr eine der beiden Anzeigen."
+  },
+  "meta": {
+    "from": "holiday.helper@classmail.example",
+    "to": "helpers@lakeside-holidayclub.example",
+    "subjectSlot": "subject"
+  },
+  "focus": {
+    "label": "formal phrases",
+    "labelDe": "Formelle Wendungen",
+    "min": {
+      "short": 7
+    },
+    "note": "Marked: fixed formal phrases for applications in the paragraphs (not the greeting and the closing formula)."
+  },
+  "topicWords": [
+    "camp",
+    "club",
+    "library",
+    "children"
+  ],
+  "gaps": [
+    {
+      "id": "FULLNAME",
+      "step": "signoff",
+      "q": "Who is signing the email? First name and family name.",
+      "qDe": "Ruft einen Vor- und Nachnamen für die Person, die sich bewirbt. Keine Namen von Mitschüler:innen oder Lehrer:innen. Im Heft dürft ihr euren eigenen Namen verwenden.",
+      "type": "text",
+      "default": "Jonas Steiner",
+      "max": 40,
+      "minWords": 2
+    }
+  ],
+  "steps": [
+    {
+      "id": "job",
+      "part": "Job",
+      "q": "Which job do we apply for?",
+      "de": "Hier wählt ihr, für welche der beiden Anzeigen wir uns bewerben.",
+      "options": [
+        {
+          "l": "A",
+          "id": "camp",
+          "label": "Summer Sports Camp",
+          "teaser": "Junior helper: games with children aged 6 to 10, 13 to 24 July, 9 am to 1 pm. Contact: Ms Sandra Holzer."
+        },
+        {
+          "l": "B",
+          "id": "library",
+          "label": "Holiday Reading Club",
+          "teaser": "Helper in the town library: stories and crafts with children aged 7 to 9, Tuesday and Thursday mornings in August. Contact: the library team."
+        }
+      ]
+    },
+    {
+      "id": "subject",
+      "slot": "subject",
+      "part": "Subject",
+      "q": "Which subject line do we choose?",
+      "de": "Die Betreffzeile sagt kurz, worum es in unserer Bewerbung geht.",
+      "options": [
+        {
+          "l": "A",
+          "id": "position",
+          "label": "Name the position",
+          "text": {
+            "by": "job",
+            "map": {
+              "camp": "Application for the position of junior helper",
+              "library": "Application for the position of reading club helper"
+            }
+          },
+          "why": "Clear and formal: the reader knows at once that this is an application."
+        },
+        {
+          "l": "B",
+          "id": "short",
+          "label": "Name the job and the place",
+          "text": {
+            "by": "job",
+            "map": {
+              "camp": "Application: junior helper at the Summer Sports Camp",
+              "library": "Application: helper at the Holiday Reading Club"
+            }
+          },
+          "why": "Short and exact: the Lakeside Holiday Club has more than one job, so the place helps."
+        }
+      ]
+    },
+    {
+      "id": "greeting",
+      "slot": "greeting",
+      "part": "Greeting",
+      "q": "How do we greet the reader?",
+      "de": "Hier wählen wir die Anrede für unsere Bewerbung. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "dear",
+          "label": "Greeting A",
+          "text": {
+            "by": "job",
+            "map": {
+              "camp": "Dear Ms Holzer,",
+              "library": "Dear Sir or Madam,"
+            }
+          },
+          "why": "Formal and correct: ‘Dear Ms Holzer’ (name known) goes with ‘Yours sincerely’, ‘Dear Sir or Madam’ (no name) with ‘Yours faithfully’."
+        },
+        {
+          "l": "B",
+          "id": "trap",
+          "label": "Greeting B",
+          "trap": true,
+          "crit": "TA",
+          "text": {
+            "by": "job",
+            "map": {
+              "camp": "Dear Ms Sandra,",
+              "library": "Dear Ladies and Gentlemen,"
+            }
+          },
+          "reject": "Not correct in an application. With a name, write Ms or Mr and the FAMILY name: ‘Dear Ms Holzer,’. Without a name, write ‘Dear Sir or Madam,’ (not ‘Ladies and Gentlemen’).",
+          "rejectDe": "So nicht: Mit Namen schreibt man Ms oder Mr und den Nachnamen („Dear Ms Holzer,“), ohne Namen „Dear Sir or Madam,“ (nicht „Ladies and Gentlemen“)."
+        }
+      ]
+    },
+    {
+      "id": "opening",
+      "slot": "opening",
+      "part": "Opening",
+      "q": "Paragraph 1: which job, and where did we see the advert?",
+      "de": "Erster Absatz: für welche Stelle wir uns bewerben und wo wir die Anzeige gesehen haben. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "reason",
+          "label": "Start with the reason",
+          "text": {
+            "by": "job",
+            "map": {
+              "camp": "[[I am writing to apply for]] the role of junior helper at your Summer Sports Camp. I saw the advert on your website, and [[I believe that]] this is the right summer job for me.",
+              "library": "[[I am writing to apply for]] the role of helper at your Holiday Reading Club. I saw the advert on your website, and [[I believe that]] this is the right summer job for me."
+            }
+          },
+          "why": "A classic first sentence: the reader knows the reason for the email at once."
+        },
+        {
+          "l": "B",
+          "id": "advert",
+          "label": "Start with the advert",
+          "text": {
+            "by": "job",
+            "map": {
+              "camp": "[[I was very pleased to see]] your advert for a junior helper at the Summer Sports Camp on the Lakeside Holiday Club website, and [[I would like to apply for]] this role.",
+              "library": "[[I was very pleased to see]] your advert for a helper at the Holiday Reading Club on the Lakeside Holiday Club website, and [[I would like to apply for]] this role."
+            }
+          },
+          "why": "A polite, positive start: where we saw the advert and which job we want, all in one sentence."
+        }
+      ]
+    },
+    {
+      "id": "about",
+      "slot": "about",
+      "part": "About me",
+      "q": "Paragraph 2: why do we want the job, and who are we?",
+      "de": "Zweiter Absatz: warum wir diesen Job wollen und ein paar Fakten über uns. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "trap",
+          "label": "Age, dates and reason",
+          "trap": true,
+          "crit": "CC",
+          "text": {
+            "by": "job",
+            "map": {
+              "camp": "I am 14 years old and in my fourth year at grammar school. I am available from 13 to 24 July. I would like to help at your camp because I really enjoy games with younger children.",
+              "library": "I am 14 years old and in my fourth year at grammar school. I am available on Tuesday and Thursday mornings in August. I would like to help in your reading club because I enjoy reading to children."
+            }
+          },
+          "reject": "The dates belong in the last paragraph (Availability). One paragraph, one topic: here, who you are and why you want the job.",
+          "rejectDe": "Die Termine gehören in den letzten Absatz. Ein Absatz, ein Thema: Hier geht es darum, wer ihr seid und warum ihr den Job wollt."
+        },
+        {
+          "l": "B",
+          "id": "tryout",
+          "label": "Try out a career",
+          "text": {
+            "by": "job",
+            "map": {
+              "camp": "This summer, I would like to find out if working with children is right for me. That is why [[I am very interested in]] this job. I am 14 years old and in my fourth year at grammar school.",
+              "library": "This summer, I would like to find out if working with children is right for me. That is why [[I am very interested in]] this job. I am 14 years old and in my fourth year at grammar school."
+            }
+          },
+          "why": "The reason first, then age and school: the reader sees that we have thought about our future."
+        },
+        {
+          "l": "C",
+          "id": "passion",
+          "label": "Hobby and passion",
+          "text": {
+            "by": "job",
+            "map": {
+              "camp": "Sport has been my biggest hobby for years, and [[I would love to]] share my passion with young children this summer. I am 14 years old and in my fourth year at grammar school.",
+              "library": "Reading has been my biggest hobby for years, and [[I would love to]] share my passion for books with young children this summer. I am 14 years old and in my fourth year at grammar school."
+            }
+          },
+          "why": "Our passion as the reason, then a few facts about us: the reader sees that we really want the job."
+        }
+      ]
+    },
+    {
+      "id": "experience",
+      "slot": "experience",
+      "part": "Experience",
+      "q": "Paragraph 3: what are our skills and experience?",
+      "de": "Dritter Absatz: unsere Stärken und Erfahrungen. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "weekly",
+          "label": "What I do every week",
+          "text": {
+            "by": "job",
+            "map": {
+              "camp": "Every week, I help the coach of the under-8 handball team in my club, so [[I already have some experience of]] working with children. I am patient and reliable, and last spring, I did a first aid course.",
+              "library": "Every Friday afternoon, I help younger students at my school’s homework club, so [[I already have some experience of]] working with children. I am patient and reliable, and I love reading aloud."
+            }
+          },
+          "why": "A real example first, then the skills that matter for this job."
+        },
+        {
+          "l": "B",
+          "id": "cv",
+          "label": "Point to the CV",
+          "text": {
+            "by": "job",
+            "map": {
+              "camp": "[[As you can see from my CV,]] I have played handball for three years, and I often look after my two younger cousins. I am friendly and patient, and I know a lot of fun games.",
+              "library": "[[As you can see from my CV,]] I have been a member of my school’s reading club for two years, and I often look after my two younger cousins. I am creative, and I am good at arts and crafts."
+            }
+          },
+          "why": "‘As you can see from my CV’ links the email to the CV. Present perfect with ‘for’ for experience up to now."
+        },
+        {
+          "l": "C",
+          "id": "trap",
+          "label": "Hobby and course",
+          "trap": true,
+          "crit": "LSA",
+          "text": {
+            "by": "job",
+            "map": {
+              "camp": "I play handball in a club since three years, and at our tournaments, I often look after the younger children. I am sporty and friendly, and last year, I made a babysitting course.",
+              "library": "I help in our school library since two years, and younger students often ask me for book tips. I am friendly and calm, and last year, I made a storytelling course for teenagers."
+            }
+          },
+          "reject": "Two typical mistakes: ‘since + number of years’ with the present (→ present perfect + for: I have played / I have helped … for … years) and ‘I made a course’ (→ I did a course).",
+          "rejectDe": "Zwei typische Fehler: „seit … Jahren“ heißt for … years mit Present perfect (I have played / I have helped … for … years), und „einen Kurs machen“ heißt do a course, nicht make."
+        }
+      ]
+    },
+    {
+      "id": "closing",
+      "slot": "closing",
+      "part": "Availability",
+      "q": "Paragraph 4: when are we available? How do we end?",
+      "de": "Vierter Absatz: wann wir Zeit haben und ein höflicher Schluss. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "interview",
+          "label": "Offer an interview",
+          "text": {
+            "by": "job",
+            "map": {
+              "camp": "From 13 to 24 July, [[I am available]] every morning, and [[I would be happy to]] come for an interview. [[I have attached my CV]]. [[Thank you for your time]], and [[I hope to hear from you soon]].",
+              "library": "In August, [[I am available]] on Tuesday and Thursday mornings, and [[I would be happy to]] come for an interview. [[I have attached my CV]]. [[Thank you for your time]], and [[I hope to hear from you soon]]."
+            }
+          },
+          "why": "Dates, an offer, the CV and a polite thank-you: a clear and friendly formal ending."
+        },
+        {
+          "l": "B",
+          "id": "questions",
+          "label": "Offer to answer questions",
+          "text": {
+            "by": "job",
+            "map": {
+              "camp": "[[Please find attached]] my CV. [[I am available]] for the whole camp, from 13 to 24 July. If you have any questions, [[please feel free to contact me]]. [[I look forward to hearing from you]].",
+              "library": "[[Please find attached]] my CV. [[I am available]] every Tuesday and Thursday morning in August. If you have any questions, [[please feel free to contact me]]. [[I look forward to hearing from you]]."
+            }
+          },
+          "why": "The CV, the dates and an offer to answer questions, then the classic last sentence."
+        }
+      ]
+    },
+    {
+      "id": "signoff",
+      "slot": "signoff",
+      "part": "Sign-off",
+      "q": "Which closing formula do we use?",
+      "de": "Mit Grußformel und vollem Namen endet unsere Bewerbung. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "trap",
+          "label": "Sign-off A",
+          "trap": true,
+          "crit": "TA",
+          "text": {
+            "by": "job",
+            "map": {
+              "camp": "Yours faithfully,\n{FULLNAME}",
+              "library": "Yours sincerely,\n{FULLNAME}"
+            }
+          },
+          "reject": "The greeting and the closing do not match. ‘Dear Ms Holzer’ (name known) goes with ‘Yours sincerely’. ‘Dear Sir or Madam’ (no name) goes with ‘Yours faithfully’.",
+          "rejectDe": "Anrede und Grußformel passen nicht zusammen: Name bekannt → Yours sincerely, kein Name → Yours faithfully."
+        },
+        {
+          "l": "B",
+          "id": "match",
+          "label": "Sign-off B",
+          "text": {
+            "by": "job",
+            "map": {
+              "camp": "Yours sincerely,\n{FULLNAME}",
+              "library": "Yours faithfully,\n{FULLNAME}"
+            }
+          },
+          "why": "The closing matches the greeting, and the full name comes on the next line."
+        }
+      ]
+    }
+  ],
+  "order": [
+    "subject",
+    "greeting",
+    "opening",
+    "about",
+    "experience",
+    "closing",
+    "signoff"
+  ],
+  "checks": [
+    {
+      "en": "The subject line names the job"
+    },
+    {
+      "en": "Greeting and closing formula match: Dear Ms Holzer, → Yours sincerely, / Dear Sir or Madam, → Yours faithfully,"
+    },
+    {
+      "en": "First paragraph: which job and where we saw the advert"
+    },
+    {
+      "en": "About me, skills and experience, and why we want the job"
+    },
+    {
+      "en": "When we are available, the CV and a polite last sentence"
+    },
+    {
+      "en": "Formal style: no contractions, no ‘Hi’ or ‘Hello’"
+    },
+    {
+      "en": "Full name on its own line under the closing formula"
+    }
+  ],
+  "teacher": {
+    "aim": "Die Klasse schreibt gemeinsam eine formelle Bewerbungs-E-Mail für einen ehrenamtlichen Ferialjob mit Kindern und übt feste formelle Wendungen sowie passende Anrede- und Grußformeln. Grammatik nebenbei: Present perfect mit for für Erfahrung bis jetzt.",
+    "prep": "A/B/C/D-Karten austeilen, Hefte bereitlegen, Beamer im Vollbild. Einsatz ab: Present perfect mit for und since, would like / would love, Unterschied formell und informell (keine Kurzformen). Bei Bedarf an die Tafel: role (Stelle, Aufgabe), advert (Anzeige), volunteer (Freiwillige:r), available (verfügbar, Zeit haben), CV (Lebenslauf), reliable (zuverlässig), first aid course (Erste-Hilfe-Kurs), babysitting course (Babysitterkurs), certificate (Bestätigung, Zeugnis), coach (Trainer:in), crafts (Basteln), attached (angehängt), pleased (erfreut). Die Regel für Anrede und Grußformel steht nach der Greeting-Entscheidung unter „Why this works“; vor der Sign-off-Entscheidung kurz nachfragen, wer sie noch weiß.",
+    "heft": "Neue Seite: Datum (rechts) und „Email“ als Überschrift (wie am Beamer). Darunter der Kopf in vier Zeilen wie am Beamer: To, From, Date, Subject (Date ist der Tag der Stunde). Dann die Anrede auf eigener Zeile; jeder Absatz beginnt nach einer Leerzeile, am Rand steht der Name des Teils wie am Beamer (Opening, About me, Experience, Availability). Nach einer Leerzeile Grußformel und voller Name auf eigenen Zeilen. Formelle Wendungen grün unterstreichen.",
+    "flow": "Volltext (50 min): 5 min Aufgabe und Wahl der Anzeige (beide Anzeigen kurz gemeinsam lesen) · 7 weitere Entscheidungen à ca. 2 min, zusammen ca. 14 min · Abschreiben nach jeder Entscheidung, zusammen ca. 22 min · 5 min Checkliste · 4 min Puffer. Den Namen der Person, die sich bewirbt, ruft die Klasse erst beim Sign-off. Wenn die Zeit knapp wird: Checkliste als Hausübung. Pro abgelehnter Falle etwa eine Minute extra einplanen.",
+    "traps": "Greeting B (TA, Erfüllung der Aufgabenstellung): Vorname nach Ms („Dear Ms Sandra“) bzw. „Dear Ladies and Gentlemen“ (Übersetzung von „Sehr geehrte Damen und Herren“) statt Dear Sir or Madam. About me A (CC, Kohärenz und Kohäsion): Die Termine stehen im falschen Absatz; sie gehören zu Availability (ein Absatz, ein Thema). Experience C (LSA, Sprachrichtigkeit): „I play … since three years“ bzw. „I help … since two years“ statt Present perfect mit for (I have played / I have helped … for …), „I made a course“ statt „I did a course“. Sign-off A (TA, Erfüllung der Aufgabenstellung): Grußformel passt nicht zur Anrede (Yours faithfully nach Dear Ms Holzer bzw. Yours sincerely nach Dear Sir or Madam).",
+    "notes": "Die Anzeigen sind erfunden und als ehrenamtliche Mithilfe ab 14 formuliert; bezahlte Ferialjobs sind in Österreich erst ab 15 und nach Ende der Schulpflicht erlaubt. Die Anzeigen sind so gebaut, dass beide Anredeformen vorkommen: Ms Holzer (Name bekannt) und das Bibliotheksteam (kein Name). Ms passt immer, egal ob verheiratet oder nicht. Formell heißt: keine Kurzformen (I am, nicht I’m). Dass der CV in Experience und im letzten Absatz vorkommt, ist in echten Bewerbungen üblich. Im zweiten Absatz steht zuerst der Grund für die Bewerbung, danach Alter und Schule; der Name steht nur unter der Grußformel (und in der Absenderzeile). Bei Greeting und Sign-off gibt es neben der Falle nur eine richtige Option, weil es jeweils nur eine korrekte Formel gibt. Im Heft darf jede:r mit dem eigenen Namen unterschreiben. Differenzierung: Schnelle ergänzen einen Satz mit einer weiteren Stärke aus der Anzeige. Hausübung: Bewerbung für die andere Anzeige oder ein kurzer CV für die Person, die sich bewirbt."
+  }
+}

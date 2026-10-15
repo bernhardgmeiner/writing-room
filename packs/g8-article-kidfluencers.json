@@ -1,0 +1,362 @@
+{
+  "id": "g8-article-kidfluencers",
+  "title": "Kidfluencers: fun, fame or pressure?",
+  "titleDe": "Kidfluencer:innen: Spaß, Ruhm oder Druck?",
+  "grade": 8,
+  "level": "A2+",
+  "theme": "Medien & Technik",
+  "textType": "article",
+  "modes": [
+    "full"
+  ],
+  "lengths": {
+    "short": {
+      "label": "around 150 words",
+      "min": 135,
+      "max": 165
+    }
+  },
+  "minutes": {
+    "full": {
+      "short": 50
+    }
+  },
+  "task": {
+    "situation": "Kidfluencers are children who are social media stars. They post videos about toys, games or clothes, and some of them make a lot of money. Your school magazine wants articles about them for its website.",
+    "instruction": "Write an article for the school magazine website. In your article:",
+    "points": [
+      "explain what kidfluencers do",
+      "describe the good and the bad sides of being a kidfluencer",
+      "give your opinion and end with a message to your readers"
+    ],
+    "words": {
+      "short": "Write around 150 words."
+    },
+    "de": "Artikel für die Website der Schulzeitung: was Kidfluencer:innen tun, gute und schlechte Seiten, eure Meinung und ein Schluss, der die Leser:innen anspricht. Zuerst entscheidet ihr, welche Meinung unser Artikel vertritt. Der Titel kommt zuletzt."
+  },
+  "meta": {
+    "publication": "School magazine · Online edition"
+  },
+  "focus": {
+    "label": "opinion phrases",
+    "labelDe": "Wendungen für die eigene Meinung",
+    "min": {
+      "short": 4
+    },
+    "note": "Marked: phrases that introduce the writer’s opinion (In my opinion, I think, I believe, To me, If you ask me …)."
+  },
+  "topicWords": [
+    "kidfluencers",
+    "kidfluencer",
+    "kidfluencing",
+    "children",
+    "videos"
+  ],
+  "gaps": [
+    {
+      "id": "NAME",
+      "step": "intro",
+      "q": "Our example kidfluencer needs a first name. What is it?",
+      "qDe": "Ruft einen erfundenen Vornamen für unser Beispielkind. Keine Namen von Mitschüler:innen oder Lehrer:innen.",
+      "type": "text",
+      "default": "Finn",
+      "max": 20
+    }
+  ],
+  "steps": [
+    {
+      "id": "view",
+      "part": "Our view",
+      "q": "What is our opinion about kidfluencers?",
+      "de": "Hier wählt ihr, welche Meinung unser Artikel vertritt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "worried",
+          "label": "Let kids be kids",
+          "teaser": "Children need time to be children. A camera should not follow them everywhere."
+        },
+        {
+          "l": "B",
+          "id": "rules",
+          "label": "Fun, but with rules",
+          "teaser": "It can be a great hobby, but only with clear rules that protect the children."
+        }
+      ]
+    },
+    {
+      "id": "intro",
+      "slot": "intro",
+      "part": "Introduction",
+      "q": "How do we open the article?",
+      "de": "Die Einleitung führt die Leser:innen zum Thema Kidfluencer:innen. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "question",
+          "label": "Ask the readers a question",
+          "text": "Have you ever watched a child unbox a new toy online? [[I’m sure]] most of you have. Children like this are called kidfluencers, and some of them have millions of followers.",
+          "why": "A question speaks to the readers directly and makes them think of videos they know."
+        },
+        {
+          "l": "B",
+          "id": "scene",
+          "label": "Start with a scene",
+          "text": "{NAME}, aged eight, opens a big box and holds a new robot up to the camera. Half a million people are watching this kidfluencer. [[I feel]] it is time to look behind the scenes.",
+          "why": "A short scene puts the readers right into the world of kidfluencers."
+        },
+        {
+          "l": "C",
+          "id": "fact",
+          "label": "Start with a surprising fact",
+          "text": "Did you know that some of the most successful stars on video platforms are children? They are called kidfluencers. [[In my view,]] we should take a closer look at their lives.",
+          "why": "A true but surprising fact makes readers curious and leads to the topic."
+        }
+      ]
+    },
+    {
+      "id": "info",
+      "slot": "info",
+      "part": "Body 1",
+      "q": "What do kidfluencers do?",
+      "de": "Der erste Hauptteil erklärt, was Kidfluencer:innen tun. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "trap",
+          "label": "Numbers and money",
+          "trap": true,
+          "crit": "TA",
+          "text": "Kidfluencers are children who post videos about toys, clothes and games. Studies show that 87 per cent of Austrian children want to become kidfluencers, and every kidfluencer earns over 10,000 euros a month.",
+          "reject": "Which studies? Does every kidfluencer really earn 10,000 euros a month? Big numbers without a source sound invented. Name a real source or keep it general.",
+          "rejectDe": "Große Zahlen ohne Quelle wirken erfunden: Nennt eine echte Quelle oder bleibt allgemein."
+        },
+        {
+          "l": "B",
+          "id": "toys",
+          "label": "Toys and products",
+          "text": "Kidfluencers have their own social media channels. In their videos, they unbox toys, test new games or do funny challenges. Companies often send them free products or even pay them for a post.",
+          "why": "Clear examples of what kidfluencers do, and why companies are interested in them."
+        },
+        {
+          "l": "C",
+          "id": "family",
+          "label": "Parents behind the camera",
+          "text": "Some kidfluencers are too young to read. Their parents film them and write the posts. The children try on clothes, test toys or show their family life to strangers.",
+          "why": "Explains what the children do and who is really behind the channel."
+        }
+      ]
+    },
+    {
+      "id": "sides",
+      "slot": "sides",
+      "part": "Body 2",
+      "q": "What are the good and the bad sides?",
+      "de": "Der zweite Hauptteil zeigt gute und schlechte Seiten. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "both",
+          "label": "Good sides, then bad sides",
+          "text": "Of course, kidfluencers can share their hobbies and get free toys. On the other hand, filming can take hours after school, so homework often has to wait until late in the evening.",
+          "why": "Gives both sides fairly; ‘On the other hand’ leads from the good to the bad side."
+        },
+        {
+          "l": "B",
+          "id": "law",
+          "label": "Privacy and the law",
+          "text": "Being famous sounds like fun. Sadly, the videos can stay online forever. In 2020, France passed a law to protect child influencers: now they can ask websites to delete their videos.",
+          "why": "Adds a true fact from Europe: France already protects child influencers by law."
+        },
+        {
+          "l": "C",
+          "id": "pressure",
+          "label": "Likes and pressure",
+          "text": "Likes and nice comments feel great. Not every comment is nice, though, and many kidfluencers feel they always have to look happy. Filming can be stressful if parents want the perfect video.",
+          "why": "Shows the good side in one short sentence, then explains the pressure."
+        }
+      ]
+    },
+    {
+      "id": "opinion",
+      "slot": "opinion",
+      "part": "Body 3",
+      "q": "What do we think?",
+      "de": "Im dritten Hauptteil sagen wir unsere eigene Meinung. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "clear",
+          "label": "Opinion first",
+          "text": {
+            "by": "view",
+            "map": {
+              "worried": "[[In my opinion,]] small children cannot decide if they really want to be famous. [[I believe]] they need time to play without a camera.",
+              "rules": "[[In my opinion,]] kidfluencing can be a great hobby, but only with rules. [[I believe]] children under twelve should only film at weekends, and never for more than an hour."
+            }
+          },
+          "why": "Starts with the opinion, then gives a reason. ‘I believe’ adds a second idea."
+        },
+        {
+          "l": "B",
+          "id": "personal",
+          "label": "A personal view",
+          "text": {
+            "by": "view",
+            "map": {
+              "worried": "[[Personally,]] I would not want my whole childhood online. [[I don’t think]] a seven-year-old understands what it means when strangers watch every birthday party and every bad day.",
+              "rules": "[[To me,]] the videos are not the problem, but the pressure behind them is. [[I think]] kidfluencers should decide when they want to film, and parents should never post anything embarrassing."
+            }
+          },
+          "why": "Looks at the topic from a child’s point of view, with two different opinion phrases."
+        },
+        {
+          "l": "C",
+          "id": "trap",
+          "label": "Agree with other people",
+          "trap": true,
+          "crit": "LSA",
+          "text": {
+            "by": "view",
+            "map": {
+              "worried": "I mean that being a kidfluencer is hard for a small child. I am agree with people who say that children need more free time to play with friends.",
+              "rules": "I mean that filming can be fun for children, but parents need rules. I am agree with people who say that children under ten should never film on school days."
+            }
+          },
+          "reject": "Two mistakes: ‘I mean that’ (→ I think that) and ‘I am agree’ (→ I agree).",
+          "rejectDe": "Zwei typische Fehler: „Ich meine, dass …“ heißt „I think that …“, und es heißt „I agree“ (ohne „am“)."
+        }
+      ]
+    },
+    {
+      "id": "end",
+      "slot": "end",
+      "part": "Conclusion",
+      "q": "How do we end the article?",
+      "de": "Der Schluss spricht die Leser:innen direkt an. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "swap",
+          "label": "End with a question",
+          "text": {
+            "by": "view",
+            "map": {
+              "worried": "So next time you watch a toy video, think about the child in it. [[As I see it,]] every child has the right to play. Would you like to swap places?",
+              "rules": "So next time you watch a toy video, think about the child in it. [[As I see it,]] a hobby should never feel like pressure. Is the child still having fun?"
+            }
+          },
+          "why": "A question at the end makes readers think about the topic once more."
+        },
+        {
+          "l": "B",
+          "id": "trap",
+          "label": "Encourage the readers",
+          "trap": true,
+          "crit": "CC",
+          "text": "All in all, there are good and bad sides, but the good sides win: free toys, fame and money are worth filming every day. So why not start a channel today?",
+          "reject": "This does not fit our article. We showed the problems and gave our opinion, so the conclusion cannot suddenly say the opposite.",
+          "rejectDe": "Der Schluss passt nicht zum Artikel: Vorher haben wir Probleme und unsere Meinung gezeigt, jetzt sagt der Schluss plötzlich das Gegenteil."
+        },
+        {
+          "l": "C",
+          "id": "tip",
+          "label": "Give the readers a tip",
+          "text": {
+            "by": "view",
+            "map": {
+              "worried": "What can you do? Stop watching videos of very young children. [[I’m convinced that]] parents would film less if fewer people clicked on such videos. Every view counts!",
+              "rules": "What can you do? Look at the children in your favourite videos. Do they enjoy filming? [[I’m convinced that]] good rules can protect kidfluencers, and viewers like us can help."
+            }
+          },
+          "why": "Tells readers what they can do themselves: a strong, positive ending."
+        },
+        {
+          "l": "D",
+          "id": "ask",
+          "label": "Talk to the readers",
+          "text": {
+            "by": "view",
+            "map": {
+              "worried": "[[If you ask me,]] childhood is too short to spend in front of a camera. So, dear readers, enjoy the videos if you like, but never forget the child behind them.",
+              "rules": "[[If you ask me,]] kidfluencing is okay as long as the children enjoy it. What do you think, dear readers? Write to us and tell us your opinion!"
+            }
+          },
+          "why": "Speaks to the readers as ‘dear readers’ and ends with a clear message for them."
+        }
+      ]
+    },
+    {
+      "id": "title",
+      "slot": "title",
+      "part": "Title",
+      "q": "Our article is finished. Which title do we choose?",
+      "de": "Zum Schluss wählen wir den Titel unseres Artikels.",
+      "options": [
+        {
+          "l": "A",
+          "id": "question",
+          "label": "A question",
+          "text": "Famous at the age of eight?",
+          "why": "A question with a surprising detail makes readers curious."
+        },
+        {
+          "l": "B",
+          "id": "slogan",
+          "label": "A short slogan",
+          "text": {
+            "by": "view",
+            "map": {
+              "worried": "Let kids be kids!",
+              "rules": "Fame? Yes, but with rules!"
+            }
+          },
+          "why": "Short and strong: the title already gives our opinion."
+        },
+        {
+          "l": "C",
+          "id": "words",
+          "label": "A play on words",
+          "text": "Click, like, grow up?",
+          "why": "Plays with ‘click’ and ‘like’ from the internet and makes readers stop."
+        }
+      ]
+    }
+  ],
+  "order": [
+    "title",
+    "intro",
+    "info",
+    "sides",
+    "opinion",
+    "end"
+  ],
+  "checks": [
+    {
+      "en": "A title that catches the readers’ attention"
+    },
+    {
+      "en": "An introduction that leads readers to the topic"
+    },
+    {
+      "en": "What kidfluencers do, and good and bad sides"
+    },
+    {
+      "en": "Only facts we can trust: no big numbers without a source"
+    },
+    {
+      "en": "Our opinion with phrases like In my opinion, I believe, To me"
+    },
+    {
+      "en": "A conclusion that fits our opinion and talks to the readers"
+    }
+  ],
+  "teacher": {
+    "aim": "Die Klasse baut gemeinsam einen Artikel für die Website der Schulzeitung über Kinder als Social-Media-Stars (Kidfluencer:innen) und übt dabei Wendungen, mit denen man die eigene Meinung ausdrückt (In my opinion, I believe, To me …). Aufbau eines Artikels: Titel, Einleitung, Hauptteile, Schluss mit Ansprache der Leser:innen.",
+    "prep": "A/B/C/D-Karten austeilen, Beamer im Vollbild, Timer bereithalten. Bei Bedarf Wörter an die Tafel: unbox (auspacken), challenge (Mutprobe, Aufgabe im Video), embarrassing (peinlich), swap places (tauschen), convinced (überzeugt), pressure (Druck), strangers (Fremde), pass a law (ein Gesetz beschließen), delete (löschen), childhood (Kindheit). Einsatz ab: Present simple, should und must sowie erste Meinungswendungen (I think, In my opinion).",
+    "heft": "Neue Seite: Datum rechts oben, darunter „Article“ als Überschrift (wie am Beamer). Dann 2 Zeilen für den Titel frei lassen, der Titel kommt zuletzt. Jeder Absatz beginnt nach einer Leerzeile, am Rand steht der Name des Teils wie am Beamer: Introduction, Body 1, Body 2, Body 3, Conclusion. Meinungswendungen grün unterstreichen.",
+    "flow": "Volltext (50 min): 4 min Aufgabe lesen und Meinung wählen · 6 weitere Entscheidungen à ca. 2–3 min, zusammen ca. 15 min · Abschreiben nach jeder Entscheidung, zusammen ca. 20 min · 5 min Checkliste · 6 min Puffer. Wenn die Zeit knapp wird: Checkliste als Hausübung.",
+    "traps": "Body 1 A (TA, Erfüllung der Aufgabenstellung): große Zahlen ohne Quelle und eine Behauptung über alle Kidfluencer:innen (87 per cent, 10,000 euros a month). Body 3 C (LSA, Sprachrichtigkeit): „I mean that“ (wörtlich aus „Ich meine, dass“) statt „I think that“ und „I am agree“ statt „I agree“ (die Karte passt inhaltlich zur gewählten Meinung). Conclusion B (CC, Kohärenz und Kohäsion): Der Schluss sagt das Gegenteil des Artikels (die guten Seiten überwiegen, jeden Tag filmen).",
+    "notes": "Der Fakt in Body 2 B stimmt: Frankreich hat im Oktober 2020 ein Gesetz zum Schutz von Kinder-Influencer:innen unter 16 beschlossen (u. a. Regeln für Drehzeiten und ein Recht auf Löschung von Videos). Dass einige der erfolgreichsten Stars auf Videoplattformen Kinder sind, ist ebenfalls belegt. Die Regeln in Body 3 (Altersgrenze, nur am Wochenende filmen) sind Vorschläge der Klasse, keine geltenden Gesetze. Manche Schüler:innen posten selbst Videos: Niemand muss über eigene Kanäle oder Kommentare sprechen. Für die Namenslücke nur erfundene Vornamen, keine Namen von Mitschüler:innen oder Lehrer:innen. Differenzierung: Schnelle ergänzen einen eigenen Satz mit einer weiteren Meinungswendung (I’m sure that …, In my view …). Hausübung: zweite Fassung mit der anderen Meinung oder ein kurzer Brief an die Redaktion (ca. 60 Wörter) als Antwort auf den Artikel."
+  }
+}

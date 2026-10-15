@@ -1,0 +1,452 @@
+{
+  "id": "g10-report-school-energy",
+  "title": "How green is our school?",
+  "titleDe": "Umweltcheck an unserer Schule",
+  "grade": 10,
+  "level": "B1",
+  "theme": "Umwelt & Nachhaltigkeit",
+  "textType": "report",
+  "modes": [
+    "full",
+    "frame"
+  ],
+  "lengths": {
+    "short": {
+      "label": "around 250 words",
+      "min": 225,
+      "max": 275
+    },
+    "long": {
+      "label": "around 350 words",
+      "min": 315,
+      "max": 385
+    }
+  },
+  "minutes": {
+    "full": {
+      "short": 50,
+      "long": 90
+    },
+    "frame": {
+      "short": 60,
+      "long": 100
+    }
+  },
+  "task": {
+    "situation": "Your class has carried out an environmental check of your school, and the head teacher would like a report on the results (the figures are invented for this task as a simplified example):\n• Energy: the school used 198,000 kWh of electricity in 2026, compared with 180,000 kWh in 2025 (an increase of 10%). After the last lesson of the day, the lights were still on in 14 of the 30 classrooms.\n• Waste: in one school week, 350 kg of rubbish ended up in the general waste bins; 140 kg of it (40%) was paper or plastic that could have been recycled.\n• Transport: in a survey of 200 students, 124 (62%) come to school by public transport, 40 (20%) walk, 18 (9%) cycle and 18 (9%) come by car. Last year, 26 students came by car.",
+    "instruction": "In your report you should:",
+    "points": [
+      "describe the main findings of the check",
+      "explain which problems are the most serious",
+      "recommend measures the school could take"
+    ],
+    "words": {
+      "short": "Divide your report into sections and give them headings. Write around 250 words.",
+      "long": "Divide your report into sections and give them headings. Write around 350 words."
+    },
+    "de": "Report an die Schulleitung. Die Zahlen aus dem Umweltcheck müssen in jedem Abschnitt exakt stimmen. Drei Inhaltspunkte: die Ergebnisse zu Energie, Müll und Schulweg; die größten Probleme; Empfehlungen. Kopf mit To / From / Date / Subject, jeder Abschnitt mit Zwischenüberschrift. Die Zahlen sind für die Aufgabe erfunden."
+  },
+  "meta": {
+    "to": "The Head Teacher",
+    "from": "Our class",
+    "date": "22 April 2027",
+    "subjectSlot": "subject"
+  },
+  "focus": {
+    "label": "recommendation language",
+    "labelDe": "Empfehlungen formulieren",
+    "min": {
+      "short": 3,
+      "long": 4
+    },
+    "note": "Marked: phrases that make a recommendation: should (+ verb), should be + past participle (should be launched) and it would be a good idea to. ‘Could’ for a possibility is not marked."
+  },
+  "topicWords": [
+    "school",
+    "students",
+    "electricity",
+    "energy",
+    "waste",
+    "bins",
+    "rubbish",
+    "classrooms",
+    "transport",
+    "kwh",
+    "check"
+  ],
+  "gaps": [
+    {
+      "id": "CAMPAIGN",
+      "step": "recs",
+      "q": "Our recycling campaign needs a short, catchy name. Two to four words!",
+      "qDe": "Gebt der Recycling-Kampagne einen kurzen, einprägsamen englischen Namen (zwei bis vier Wörter), z. B. „Bin it right“.",
+      "type": "text",
+      "default": "Bin it right",
+      "max": 25
+    },
+    {
+      "id": "N",
+      "step": "recs",
+      "q": "By what percentage should the school cut its electricity use next year? Shout a realistic number.",
+      "qDe": "Um wie viel Prozent soll der Stromverbrauch im nächsten Jahr sinken? Ruft eine realistische Zahl.",
+      "type": "number",
+      "default": 10,
+      "min": 5,
+      "max": 30
+    }
+  ],
+  "steps": [
+    {
+      "id": "subject",
+      "slot": "subject",
+      "part": "Subject",
+      "q": "What is the subject line of our report?",
+      "de": "Die Betreffzeile sagt in wenigen Wörtern, worum es im Report geht.",
+      "own": "Short and factual: what is the report about?",
+      "ownDe": "Kurz und sachlich: Worum geht es im Report?",
+      "options": [
+        {
+          "l": "A",
+          "id": "results",
+          "label": "Name the three areas",
+          "text": "Results of the environmental check: energy, waste and transport",
+          "why": "Factual and precise: the head teacher sees at once which areas the report covers."
+        },
+        {
+          "l": "B",
+          "id": "greener",
+          "label": "Name the goal",
+          "text": "Making our school greener: findings and recommendations",
+          "why": "States the goal and tells the reader that the report contains findings and recommendations."
+        }
+      ]
+    },
+    {
+      "id": "intro",
+      "slot": "intro",
+      "part": "Introduction",
+      "q": "Introduction: how do we start the report?",
+      "de": "Die Einleitung nennt den Zweck des Reports und die Herkunft der Zahlen. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then add the purpose and the data sources in your own words.",
+      "ownDe": "Gerüst abschreiben, dann Zweck und Datenquellen mit eigenen Worten ergänzen.",
+      "options": [
+        {
+          "l": "A",
+          "id": "trap",
+          "label": "Purpose in one sentence",
+          "trap": true,
+          "crit": "LSR",
+          "text": "### Introduction\nIn this report we will describe the main findings of the check, explain which problems are the most serious and recommend measures the school could take. The check was about energy, waste and transport, and we asked 200 students.",
+          "reject": "This copies the task word for word (‘describe the main findings’, ‘recommend measures the school could take’). State the purpose in your own words.",
+          "rejectDe": "Hier wird die Aufgabe wörtlich abgeschrieben. Den Zweck mit eigenen Worten formulieren."
+        },
+        {
+          "l": "B",
+          "id": "purpose",
+          "label": "Purpose and sources",
+          "text": "### Introduction\n{{This report presents the results of}} our school’s environmental check. {{The figures come from}} the electricity bills, a one-week bin check and a survey of 200 students. {{The report also identifies}} the most serious problems and suggests solutions.",
+          "why": "Purpose, data sources and an overview of the report in three clear sentences."
+        },
+        {
+          "l": "C",
+          "id": "aim",
+          "label": "Start with the aim of the check",
+          "text": "### Introduction\n{{To find out how green our school is,}} our class checked the electricity bills and lights, weighed a week’s general waste and asked 200 students how they travel to school. {{This report presents}} the findings {{and suggests}} improvements.",
+          "why": "Explains why and how the data was collected, so the reader can trust the figures."
+        }
+      ]
+    },
+    {
+      "id": "energy",
+      "slot": "energy",
+      "part": "Body paragraph 1",
+      "q": "Body paragraph 1: what did the check find? We start with energy.",
+      "de": "Der Abschnitt „Findings“ beginnt mit den Ergebnissen zum Stromverbrauch. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then fill in the figures for electricity and lights.",
+      "ownDe": "Gerüst abschreiben, dann die Zahlen zu Strom und Licht einsetzen.",
+      "options": [
+        {
+          "l": "A",
+          "id": "bills",
+          "label": "This year compared with last year",
+          "text": "### Findings\n{{First, the electricity bills show that}} the school used 198,000 kWh in 2026, {{which is 10% more than in 2025}} (180,000 kWh). {{In addition,}} the lights were still on in 14 of the 30 classrooms after the last lesson.",
+          "why": "The first sentence leads into the findings, names the source and compares the two years."
+        },
+        {
+          "l": "B",
+          "id": "change",
+          "label": "Describe the change",
+          "text": "### Findings\n{{First of all, electricity use rose from}} 180,000 kWh in 2025 to 198,000 kWh in 2026, {{an increase of 10%.}} {{Furthermore,}} the lights were still on after the last lesson in 14 of the 30 classrooms.",
+          "why": "‘Rose from … to …’ and ‘an increase of’ are the classic phrases for describing a change."
+        },
+        {
+          "l": "C",
+          "id": "trap",
+          "label": "Change and classrooms",
+          "trap": true,
+          "crit": "LSA",
+          "text": "### Findings\nThe electricity use of the school rose from 180.000 kWh in 2025 to 198.000 kWh in 2026, which is a plus of 10%. After the last lesson, the lights were still on in 14 from 30 classrooms.",
+          "reject": "Three typical mistakes: ‘180.000’ and ‘198.000’ (English uses a comma: 180,000), ‘a plus of 10%’ (→ an increase of 10%) and ‘14 from 30’ (→ 14 of 30).",
+          "rejectDe": "Drei typische Fehler: 180.000 → 180,000 (Beistrich als Tausendertrennzeichen), a plus of → an increase of, 14 from 30 → 14 of 30."
+        }
+      ]
+    },
+    {
+      "id": "waste",
+      "slot": "waste",
+      "part": "Body paragraph 1",
+      "q": "What did the bin check show?",
+      "de": "Der Abschnitt „Findings“ geht weiter: die Ergebnisse des Mülltests. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then add the figures from the bin check.",
+      "ownDe": "Gerüst abschreiben, dann die Zahlen aus dem Mülltest ergänzen.",
+      "options": [
+        {
+          "l": "A",
+          "id": "amount",
+          "label": "Total first",
+          "text": "{{As for waste,}} 350 kg of rubbish ended up in the general waste bins during the one-week check. {{Two fifths of it}} (140 kg) was paper or plastic {{that could have been recycled.}}",
+          "why": "‘As for waste’ moves on to the next finding. ‘Two fifths’ is an easy way to say 40%."
+        },
+        {
+          "l": "B",
+          "id": "share",
+          "label": "The problem first",
+          "text": "{{The bin check showed a similar picture:}} 140 kg of the 350 kg of rubbish in the general waste bins was paper or plastic. {{This means that}} 40% of it was in the wrong bins.",
+          "why": "The first sentence links the waste result to the energy result, then gives the exact figures and the share."
+        }
+      ],
+      "join": true
+    },
+    {
+      "id": "transport",
+      "slot": "transport",
+      "part": "Body paragraph 1",
+      "q": "How do students get to school?",
+      "de": "Der Abschnitt „Findings“ endet mit den Ergebnissen zum Schulweg. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then add the figures from the transport survey.",
+      "ownDe": "Gerüst abschreiben, dann die Zahlen aus der Umfrage zum Schulweg ergänzen.",
+      "options": [
+        {
+          "l": "A",
+          "id": "share",
+          "label": "The big picture",
+          "text": "{{Transport, by contrast, is a strength:}} more than four in five students walk or use public transport. {{Public transport is the most popular choice}} (124 of 200), {{whereas only}} 18 students cycle and 18 come by car.",
+          "why": "‘By contrast’ shows that this result is good news (124 + 40 = 164 of 200, that is 82%)."
+        },
+        {
+          "l": "B",
+          "id": "trend",
+          "label": "Figures and a trend",
+          "text": "{{The transport survey, however, brings good news:}} 124 of the 200 students (62%) come by public transport and 40 (20%) walk. Only 18 students cycle, and {{the same number}} come by car, {{down from}} 26 last year.",
+          "why": "‘However’ marks the contrast with the first two findings, and the figures show a positive trend."
+        }
+      ],
+      "join": true
+    },
+    {
+      "id": "problems",
+      "slot": "problems",
+      "part": "Body paragraph 2",
+      "q": "Body paragraph 2: which problems are the most serious?",
+      "de": "Zweiter Inhaltspunkt: die ernstesten Probleme. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then explain in your own words why these problems are serious.",
+      "ownDe": "Gerüst abschreiben, dann mit eigenen Worten erklären, warum diese Probleme ernst sind.",
+      "options": [
+        {
+          "l": "A",
+          "id": "trap",
+          "label": "Speak from experience",
+          "trap": true,
+          "crit": "TA",
+          "text": "### Main problems\nIn my opinion, the biggest problem is that some people at our school simply do not care about the environment. I find it really annoying when I see lights on in empty rooms, and I think everybody should just try harder.",
+          "reject": "Personal feelings instead of facts: there are no figures, and ‘some people … simply do not care’ is not something the check found. A report bases its judgements on the findings.",
+          "rejectDe": "Persönliche Gefühle statt Fakten: keine Zahlen, und „manche sind gleichgültig“ ist kein Ergebnis des Checks. Ein Report stützt sich auf die Ergebnisse."
+        },
+        {
+          "l": "B",
+          "id": "ranking",
+          "label": "Rank the problems",
+          "text": "### Main problems\n{{Of these findings, wasted electricity is the most serious:}} lights were left on in almost half of the empty classrooms. {{This costs money and adds to}} the school’s carbon dioxide emissions. {{Second comes}} poor waste sorting, which means that valuable materials end up as rubbish.",
+          "why": "Links back to the findings, ranks the problems and explains why the first one matters."
+        },
+        {
+          "l": "C",
+          "id": "habits",
+          "label": "Find the common cause",
+          "text": "### Main problems\n{{The two weak results have the same cause:}} everyday habits. Lights stay on in almost half of the empty classrooms, {{while}} paper and plastic too often go into the general waste. {{Both problems are serious because}} they waste money as well as valuable raw materials.",
+          "why": "Picks up the weak results and shows their common cause. This prepares simple, cheap solutions."
+        }
+      ]
+    },
+    {
+      "id": "scale",
+      "slot": "scale",
+      "part": "Body paragraph 2",
+      "len": "long",
+      "q": "How big are these problems?",
+      "de": "Der Abschnitt „Main problems“ geht weiter: wie groß die Probleme sind. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then explain in your own words how big the problems are.",
+      "ownDe": "Gerüst abschreiben, dann mit eigenen Worten erklären, wie groß die Probleme sind.",
+      "options": [
+        {
+          "l": "A",
+          "id": "savings",
+          "label": "Do the maths",
+          "text": "{{To put these problems into perspective,}} the extra 18,000 kWh used in 2026 {{is roughly as much as}} four or five average Austrian households use in a year. {{On top of that,}} every kilo of recyclable rubbish in the general waste makes waste collection more expensive.",
+          "why": "A comparison from everyday life shows how big the energy problem really is."
+        },
+        {
+          "l": "B",
+          "id": "cheap",
+          "label": "Easy to fix",
+          "text": "{{The good news is that these problems are easy to solve.}} Unlike new windows or solar panels, switching off lights and sorting rubbish {{cost very little:}} they mainly need attention from everyone.",
+          "why": "Ends the section on a positive note and leads straight to the recommendations."
+        }
+      ],
+      "join": true
+    },
+    {
+      "id": "recs",
+      "slot": "recs",
+      "part": "Body paragraph 3",
+      "q": "Body paragraph 3: what do we recommend?",
+      "de": "Dritter Inhaltspunkt: unsere Empfehlungen an die Schulleitung. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then add your own recommendations.",
+      "ownDe": "Gerüst abschreiben, dann eigene Empfehlungen ergänzen.",
+      "options": [
+        {
+          "l": "A",
+          "id": "monitors",
+          "label": "Energy monitors and a campaign",
+          "text": "### Recommendations\n{{Each class [[should]] therefore choose}} two ‘energy monitors’ who check that the lights are off at the end of the day. {{In addition, a campaign called ‘{CAMPAIGN}’ [[should be launched,]]}} and clearly labelled recycling bins [[should be placed]] in every classroom and corridor.",
+          "why": "‘Therefore’ links the measures to the problems: one measure for each problem. ‘Should be launched’ and ‘should be placed’ put the action first."
+        },
+        {
+          "l": "B",
+          "id": "target",
+          "label": "A target and training",
+          "text": "### Recommendations\n{{The school [[should]] therefore aim to reduce electricity use by {N}%}} next year, for example with automatic light switches in all classrooms. {{[[It would also be a good idea to]] hold}} a short training session in every class to show students which bin to use.",
+          "why": "‘Therefore’ links back to the problems, and a clear target makes progress measurable."
+        },
+        {
+          "l": "C",
+          "id": "trap",
+          "label": "Stress the urgency",
+          "trap": true,
+          "crit": "TA",
+          "text": "### Recommendations\nAs the check shows, electricity use rose by 10%, and 140 kg of paper and plastic ended up in the general waste in one week. A slogan like ‘{CAMPAIGN}’ will not change that: our school simply has to become greener.",
+          "reject": "No recommendations: the paragraph only repeats the findings and says the school ‘has to become greener’. The task asks for concrete measures.",
+          "rejectDe": "Keine Empfehlungen, nur eine Wiederholung der Ergebnisse. Gefragt sind konkrete Maßnahmen."
+        }
+      ]
+    },
+    {
+      "id": "students",
+      "slot": "students",
+      "part": "Body paragraph 3",
+      "len": "long",
+      "q": "What can students do themselves?",
+      "de": "Der Abschnitt „Recommendations“ geht weiter: was Schüler:innen selbst beitragen können. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then add your own ideas.",
+      "ownDe": "Gerüst abschreiben, dann eigene Ideen ergänzen.",
+      "options": [
+        {
+          "l": "A",
+          "id": "habits",
+          "label": "Bottles, boxes and bikes",
+          "text": "{{Students can help, too.}} {{For instance, they can}} bring reusable bottles and lunch boxes {{to cut down on}} plastic waste. {{Those who live nearby [[should]]}} cycle or walk on dry days instead of being driven to school.",
+          "why": "Two concrete ideas that every student can try from tomorrow."
+        },
+        {
+          "l": "B",
+          "id": "heating",
+          "label": "Heating and projectors",
+          "text": "{{Every student can make a small contribution.}} {{Simple habits such as}} closing the windows when the heating is on and switching off projectors after use {{can save more energy than}} people think. {{Class representatives [[should]] remind}} their classmates of these habits once a month.",
+          "why": "Adds heating, which the check did not cover, and gives class representatives a clear role."
+        }
+      ],
+      "join": true
+    },
+    {
+      "id": "concl",
+      "slot": "concl",
+      "part": "Conclusion",
+      "q": "Conclusion: how do we end the report?",
+      "de": "Der Schluss rundet den Report ab. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then finish the conclusion in your own words.",
+      "ownDe": "Gerüst abschreiben, dann den Schluss mit eigenen Worten beenden.",
+      "options": [
+        {
+          "l": "A",
+          "id": "model",
+          "label": "A positive outlook",
+          "text": "### Conclusion\n{{In conclusion,}} our school is already on the right track when it comes to transport. {{The measures for energy and waste [[should be introduced]] soon}} to make our school a model for others.",
+          "why": "Starts with the strength, then calls for action. It ends the report on a motivating note."
+        },
+        {
+          "l": "B",
+          "id": "trap",
+          "label": "Put it into practice",
+          "trap": true,
+          "crit": "CC",
+          "text": "### Conclusion\nIn conclusion, the recommendations should be put into practice. Our check found that 40 students walk to school and 18 cycle every day. This clearly shows that the school is on the right track.",
+          "reject": "A conclusion sums up. This one jumps back to two figures and draws a conclusion that does not follow: how many students walk or cycle says nothing about energy and waste.",
+          "rejectDe": "Der Schluss fasst zusammen. Dieser springt zu zwei Zahlen zurück und zieht daraus einen Schluss, der nicht folgt: Wie viele zu Fuß gehen oder Rad fahren, sagt nichts über Energie und Müll."
+        },
+        {
+          "l": "C",
+          "id": "mixed",
+          "label": "A balanced summary",
+          "text": "### Conclusion\n{{All in all, the picture is mixed.}} {{Although}} transport is a real strength, energy and waste need urgent attention. {{The steps recommended above [[should be taken]]}} before the next school year begins.",
+          "why": "Sums up strengths and weaknesses and links back to the recommendations."
+        }
+      ]
+    }
+  ],
+  "order": [
+    "subject",
+    "intro",
+    "energy",
+    "waste",
+    "transport",
+    "problems",
+    "scale",
+    "recs",
+    "students",
+    "concl"
+  ],
+  "checks": [
+    {
+      "en": "The header has To, From, Date and a clear, factual subject line"
+    },
+    {
+      "en": "Five sections with headings: Introduction, Findings, Main problems, Recommendations, Conclusion"
+    },
+    {
+      "en": "The introduction states the purpose and the sources of the data"
+    },
+    {
+      "en": "All three content points: findings, most serious problems, recommendations"
+    },
+    {
+      "en": "Every figure matches the environmental check"
+    },
+    {
+      "en": "Facts first, then judgements and recommendations"
+    },
+    {
+      "en": "Recommendations use should, should be + past participle or it would be a good idea to"
+    },
+    {
+      "en": "Formal language: no contractions, no personal feelings"
+    }
+  ],
+  "teacher": {
+    "aim": "Die Klasse baut gemeinsam einen B1-Report an die Schulleitung mit Kopfzeilen, Zwischenüberschriften und konkreten Empfehlungen. Schwerpunkt sind Wendungen für Empfehlungen (should, should be + past participle, it would be a good idea to); dazu werden Zahlen und Veränderungen korrekt beschrieben (rose, an increase of, two fifths).",
+    "prep": "A/B/C/D-Karten austeilen. Die Zahlen aus dem Umweltcheck an die Tafel schreiben oder als Kopie austeilen, damit alle beim Abstimmen nachrechnen können. Die Aufgabe am Beamer enthält alles Nötige. Im Gerüst-Modus den eingebauten Timer nutzen: 5 min pro Abschnitt; „Findings“ entsteht in drei kurzen Schritten (Strom, Müll, Schulweg), dafür je 3 min plus 1.",
+    "heft": "Neue Seite: Datum (rechts) und „Report“ als Überschrift (wie am Beamer). Darunter To / From / Date / Subject untereinander wie am Beamer (Date im Report-Kopf: 22 April 2027). Fünf Abschnitte (Introduction, Findings, Main problems, Recommendations, Conclusion); jeder beginnt nach einer Leerzeile mit seiner Zwischenüberschrift auf einer eigenen Zeile (unterstrichen); am Rand steht nichts. Fortsetzungen werden im selben Absatz ohne neue Zeile weitergeschrieben. Im Gerüst-Modus werden die Zwischenüberschriften immer mit abgeschrieben. Wendungen für Empfehlungen (should, should be + past participle, it would be a good idea to) grün unterstreichen.",
+    "flow": "Volltext kurz (50 min): 5 min Aufgabe und Zahlen lesen, 2 min Kopf und Betreff, 7 weitere Entscheidungen à ca. 2 min (Findings in drei Schritten), Abschreiben ca. 25 min, 4 min Checkliste. Volltext lang (Doppelstunde): wie kurz, zusätzlich je eine Fortsetzung von Main problems (wie groß die Probleme sind) und Recommendations (was Schüler:innen selbst tun können). Das gemeinsame Schreiben dauert ca. 65 min; die restliche Zeit für die Besprechung der Fallen und den Beginn der Hausübung nutzen. Gerüst kurz (geplant 60 min): 5 min Aufgabe, 2 min Kopf und Betreff; pro Abschnitt 1 min Entscheidung, realistisch 4–5 min eigenes Schreiben (die drei Schritte von Findings sind kurz), 1 min Vergleich mit dem Modell. In 50 min: Müll und Schulweg in Findings mit je 3 min Schreibzeit, beim Schluss nur abstimmen und das Gerüst abschreiben, den Schluss selbst und die Checkliste als Hausübung. Gerüst lang: Doppelstunde (100 min), für die beiden Fortsetzungen je ca. 5 min zusätzlich.",
+    "traps": "Introduction A (LSR): Aufgabe wörtlich abgeschrieben. Findings C (LSA): Punkt statt Beistrich als Tausendertrennzeichen (180.000), a plus of, 14 from 30. Main problems A (TA): Gefühle statt Fakten. Recommendations C (TA): keine Empfehlungen, nur Wiederholung der Ergebnisse und ein Slogan. Conclusion B (CC): springt zu zwei Zahlen zurück und zieht einen Schluss, der nicht aus ihnen folgt. Kürzel: TA = Erfüllung der Aufgabenstellung, CC = Kohärenz und Kohäsion, LSR = Spektrum sprachlicher Mittel, LSA = Sprachrichtigkeit.",
+    "notes": "Jede Fassung hat fünf Abschnitte (Einleitung, drei Hauptabschnitte, Schluss); die lange Fassung macht Main problems und Recommendations länger, sie fügt keinen Abschnitt hinzu. Das Datum im Kopf ist fix (22 April 2027), weil der Report die Stromrechnung des ganzen Jahres 2026 auswertet; alle Zahlen sind ein vereinfachtes, erfundenes Beispiel. Bei jeder Zahl im Modelltext kurz nachrechnen lassen (z. B. 198.000 : 180.000 = plus 10 %, 140 von 350 = two fifths, 124 + 40 von 200 = more than four in five). Ein durchschnittlicher österreichischer Haushalt verbraucht rund 3.500 bis 4.500 kWh Strom pro Jahr (Main problems, lange Fassung: four or five households). Achtung: Im Englischen steht ein Beistrich als Tausendertrennzeichen (198,000); genau darauf zielt auch die Falle Findings C. Markiert sind nur Empfehlungen; could für eine Möglichkeit bleibt unmarkiert. Die Falle Conclusion B ist als CC eingestuft: Der Schluss folgt nicht aus den genannten Zahlen. Differenzierung: Schnelle formulieren im Gerüst-Modus eine zusätzliche Empfehlung mit should be + past participle. Hausübung: Mini-Report zu einem eigenen kleinen Umweltcheck zu Hause oder in der Klasse (z. B. eine Woche Plastikmüll zählen), mit mindestens drei markierten Empfehlungen."
+  }
+}

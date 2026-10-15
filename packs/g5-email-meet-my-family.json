@@ -1,0 +1,306 @@
+{
+  "id": "g5-email-meet-my-family",
+  "title": "Meet my family",
+  "titleDe": "Antwort-E-Mail über die Familie",
+  "grade": 5,
+  "level": "A1",
+  "theme": "Freund:innen & Familie",
+  "textType": "email",
+  "modes": [
+    "full"
+  ],
+  "lengths": {
+    "short": {
+      "label": "around 60 words",
+      "min": 50,
+      "max": 70
+    }
+  },
+  "minutes": {
+    "full": {
+      "short": 50
+    }
+  },
+  "task": {
+    "situation": "Omar is your e-pal. He is eleven and lives in Leeds, in England. In his last email he asks you: “Who is in your family? Have you got a pet? What do you like doing together?” Write back to Omar.",
+    "instruction": "Write an email to Omar. In your email:",
+    "points": [
+      "tell him who is in your family",
+      "answer his question about a pet",
+      "tell him what you like doing together",
+      "ask Omar a question"
+    ],
+    "words": {
+      "short": "Write around 60 words."
+    },
+    "de": "Antwort-E-Mail an Omar, euren E-Pal in England: wer zu eurer (erfundenen) Familie gehört, ob ihr ein Haustier habt, was ihr gern gemeinsam macht und eine Frage an Omar."
+  },
+  "meta": {
+    "from": "austrian.e-pal@classmail.example",
+    "to": "omar.leeds@classmail.example",
+    "subjectSlot": "subject"
+  },
+  "focus": {
+    "label": "my / your / his / her / our + ’s",
+    "labelDe": "Possessivbegleiter und ’s",
+    "min": {
+      "short": 4
+    },
+    "note": "Marked: every my, your, his, her, our and every ’s for owners (my dad’s flat, my neighbour’s rabbit)."
+  },
+  "topicWords": [
+    "family"
+  ],
+  "gaps": [
+    {
+      "id": "NAME",
+      "step": "signoff",
+      "q": "Who writes the email? Give a first name.",
+      "qDe": "Ruft einen Vornamen für den Text am Beamer. Keine Namen von Mitschüler:innen oder Lehrer:innen. Im Heft dürft ihr mit eurem eigenen Namen unterschreiben.",
+      "type": "text",
+      "default": "Emir",
+      "max": 20
+    }
+  ],
+  "steps": [
+    {
+      "id": "subject",
+      "slot": "subject",
+      "part": "Subject line",
+      "q": "What is our subject line?",
+      "de": "Die Betreffzeile sagt kurz, worum es in der E-Mail geht.",
+      "options": [
+        {
+          "l": "A",
+          "id": "meet",
+          "label": "An invitation to read",
+          "text": "Meet [[my]] family!",
+          "why": "Friendly, and Omar knows what the email is about."
+        },
+        {
+          "l": "B",
+          "id": "answers",
+          "label": "An answer",
+          "text": "Answers to [[your]] questions",
+          "why": "Omar sees at once that this is our answer."
+        },
+        {
+          "l": "C",
+          "id": "news",
+          "label": "News",
+          "text": "Family news from Austria",
+          "why": "Short, and it says where the email comes from."
+        }
+      ]
+    },
+    {
+      "id": "greeting",
+      "slot": "greeting",
+      "part": "Greeting",
+      "q": "How do we greet Omar?",
+      "de": "Mit der Anrede beginnt unsere E-Mail an Omar. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "hi",
+          "label": "Hi …,",
+          "text": "Hi Omar,",
+          "why": "Short and friendly: great for an e-pal."
+        },
+        {
+          "l": "B",
+          "id": "dear",
+          "label": "Dear …,",
+          "text": "Dear Omar,",
+          "why": "‘Dear’ is always friendly and polite."
+        },
+        {
+          "l": "C",
+          "id": "hello",
+          "label": "Hello …,",
+          "text": "Hello Omar,",
+          "why": "‘Hello’ is friendly, too. Don’t forget the comma."
+        }
+      ]
+    },
+    {
+      "id": "family",
+      "slot": "family",
+      "part": "My family",
+      "q": "Who is in our family?",
+      "de": "Hier beantworten wir Omars erste Frage: Wer gehört zu unserer Familie? Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "stepdad",
+          "label": "Mum, stepdad and brother",
+          "text": "Thanks for [[your]] email! I live with [[my]] mum, [[my]] stepdad and [[my]] little brother. [[My]] [[stepdad’s]] name is Tarek.",
+          "why": "A clear list of the people at home, and one name."
+        },
+        {
+          "l": "B",
+          "id": "homes",
+          "label": "Two homes",
+          "text": "Thanks for [[your]] email! I have got two homes: [[my]] [[dad’s]] flat in Linz and [[my]] [[mum’s]] house in Wels.",
+          "why": "Lots of children have got two homes. Omar knows where we live."
+        },
+        {
+          "l": "C",
+          "id": "grandma",
+          "label": "Grandma lives with us",
+          "text": "Thanks for [[your]] email! I live with [[my]] parents and [[my]] big sister. [[My]] grandma lives with us, too. [[Her]] name is Nuran.",
+          "why": "Omar learns about everyone at home, and Grandma too."
+        },
+        {
+          "l": "D",
+          "id": "sister",
+          "label": "Mum, dad and sister",
+          "text": "Thanks for your email! I live with my mum, my dad and my big sister. His name is Lea, and my sisters hobby is dancing.",
+          "trap": true,
+          "crit": "LSA",
+          "reject": "Two mistakes: Lea is a girl, so her name, not his name. And my sister’s hobby needs ’s.",
+          "rejectDe": "Zwei Fehler: Lea ist ein Mädchen, also „her name“, nicht „his name“. Und „my sister’s hobby“ braucht ’s."
+        }
+      ]
+    },
+    {
+      "id": "pet",
+      "slot": "pet",
+      "part": "Pet",
+      "q": "Have we got a pet?",
+      "de": "Hier beantworten wir Omars Frage nach einem Haustier. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "cat",
+          "label": "A cat",
+          "text": "Yes, we have got a cat, Pixie. She is black and white, and [[her]] favourite place is [[my]] bed!",
+          "why": "Omar can see the cat, and ‘her’ and ‘my’ show who owns what."
+        },
+        {
+          "l": "B",
+          "id": "dog",
+          "label": "A dog",
+          "text": "Yes, [[our]] dog is called Rocky. He is big and brown, and [[his]] ears are very long!",
+          "why": "Omar can see the dog in his head."
+        },
+        {
+          "l": "C",
+          "id": "none",
+          "label": "No pet",
+          "text": "No, we haven’t got a pet. I often play with [[my]] [[neighbour’s]] rabbit, Coco.",
+          "why": "An honest answer, and there is still an animal in the email."
+        }
+      ]
+    },
+    {
+      "id": "together",
+      "slot": "together",
+      "part": "Together",
+      "q": "What do we like doing together?",
+      "de": "Hier beantworten wir Omars letzte Frage und fragen ihn selbst etwas. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "cook",
+          "label": "Cooking",
+          "text": "On Sundays we cook together, and everybody helps. What do you like doing with [[your]] family?",
+          "why": "It answers the question, and then we ask Omar."
+        },
+        {
+          "l": "B",
+          "id": "bikes",
+          "label": "Bike rides",
+          "text": "At the weekend we often ride [[our]] bikes to a lake. Does [[your]] family like bike rides, too?",
+          "why": "A fun answer, and the question is about Omar’s family."
+        },
+        {
+          "l": "C",
+          "id": "games",
+          "label": "Computer games",
+          "text": "I love computer games. I play them in my room every evening, and I always win. And you?",
+          "trap": true,
+          "crit": "TA",
+          "reject": "Omar asks what you do together. This is only about you.",
+          "rejectDe": "Omar fragt, was eure Familie gemeinsam macht, hier geht es aber nur um eine Person allein."
+        },
+        {
+          "l": "D",
+          "id": "boardgames",
+          "label": "Board games",
+          "text": "In the evening we play board games, but I always lose! What is [[your]] favourite game?",
+          "why": "It is funny, and the question is easy to answer."
+        }
+      ]
+    },
+    {
+      "id": "signoff",
+      "slot": "signoff",
+      "part": "Sign-off",
+      "q": "How do we end the email?",
+      "de": "Mit Grußformel und Namen endet die E-Mail. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "care",
+          "label": "Take care,",
+          "text": "Take care,\n{NAME}",
+          "why": "Warm and friendly, like a message to a friend."
+        },
+        {
+          "l": "B",
+          "id": "friend",
+          "label": "Your friend,",
+          "text": "[[Your]] friend,\n{NAME}",
+          "why": "It shows that Omar is a friend now."
+        },
+        {
+          "l": "C",
+          "id": "soon",
+          "label": "Write soon,",
+          "text": "Write soon,\n{NAME}",
+          "why": "Omar knows that we want an answer."
+        }
+      ]
+    }
+  ],
+  "order": [
+    "subject",
+    "greeting",
+    "family",
+    "pet",
+    "together",
+    "signoff"
+  ],
+  "checks": [
+    {
+      "en": "A short subject line"
+    },
+    {
+      "en": "A greeting with a comma: Hi Omar, / Dear Omar,"
+    },
+    {
+      "en": "Family, pet and things we do together are all in the email"
+    },
+    {
+      "en": "There is a question for Omar"
+    },
+    {
+      "en": "We use his for a boy or a man and her for a girl or a woman"
+    },
+    {
+      "en": "’s for owners: my dad’s flat, my neighbour’s rabbit"
+    },
+    {
+      "en": "The sign-off and the name are on their own lines"
+    }
+  ],
+  "teacher": {
+    "aim": "Die Klasse schreibt gemeinsam eine Antwort-E-Mail an einen E-Pal in England über eine erfundene Familie und übt Possessivbegleiter (my, your, his, her, our) und das ’s für Besitz.",
+    "prep": "A/B/C/D-Karten austeilen, Beamer im Vollbild. Die Aufgabe am Beamer stellt Omar und seine drei Fragen vor. Einsatz ab: my / your / his / her / our, ’s für Besitz (my dad’s flat), have got, Familienwörter (stepdad, grandma, parents).",
+    "heft": "Neue Seite: Datum rechts, „Email“ als Überschrift. Darunter der Kopf in vier Zeilen wie am Beamer: To, From, Date, Subject (Date ist der Tag der Stunde). Dann die Anrede auf eigener Zeile, jeder Absatz nach einer Leerzeile, am Rand der Name des Teils wie am Beamer. Grußformel und Name auf eigenen Zeilen. my, your, his, her … und ’s grün unterstreichen.",
+    "flow": "Volltext (50 min): 5 min Aufgabe und Kopf der E-Mail · 6 Entscheidungen à ca. 2 min, zusammen ca. 12 min · Abschreiben nach jeder Entscheidung (1. Klasse: ca. 6–8 Wörter pro Minute), zusammen ca. 18 min · 5 min Checkliste · 10 min Puffer.",
+    "traps": "My family D (LSA, Sprachrichtigkeit): „his name“ für ein Mädchen (his/her richtet sich nach der Person, der etwas gehört: Lea ist ein Mädchen, also her) und „my sisters hobby“ ohne ’s. Together C (TA, Erfüllung der Aufgabenstellung): Omar fragt nach gemeinsamen Aktivitäten, der Absatz erzählt nur vom eigenen Hobby.",
+    "notes": "Wichtig: Die Familie im Text ist erfunden. Die Optionen zeigen verschiedene Familienformen (Mama und Stiefpapa, zwei Zuhause, Oma wohnt mit im Haushalt); keine ist „normaler“ als die andere. Kein Kind muss über die eigene Familie schreiben oder erzählen – auch in der Hausübung darf die Familie erfunden sein. Im Heft darf jede:r mit dem eigenen Namen unterschreiben. Differenzierung: Schnelle schreiben einen Satz über ein weiteres Familienmitglied mit his oder her. Hausübung: zweite Fassung mit anderen Entscheidungen oder Omars Antwort (40–60 Wörter)."
+  }
+}

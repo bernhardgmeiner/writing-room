@@ -1,0 +1,474 @@
+{
+  "id": "g10-essay-four-day-week",
+  "title": "A four-day school week – yes or no?",
+  "titleDe": "Vier-Tage-Schulwoche – ja oder nein?",
+  "grade": 10,
+  "level": "B1",
+  "theme": "Schule & Lernen",
+  "textType": "essay",
+  "modes": [
+    "full",
+    "frame"
+  ],
+  "lengths": {
+    "short": {
+      "label": "around 250 words",
+      "min": 225,
+      "max": 275
+    },
+    "long": {
+      "label": "around 350 words",
+      "min": 315,
+      "max": 385
+    }
+  },
+  "minutes": {
+    "full": {
+      "short": 50,
+      "long": 90
+    },
+    "frame": {
+      "short": 60,
+      "long": 100
+    }
+  },
+  "task": {
+    "situation": "‘Penpoint’, an online magazine for young writers, is holding an essay competition. This year’s question is: ‘A four-day school week – yes or no?’ The idea is that students would have the same number of lessons, but spread over four longer days, with Fridays off. The best essays will appear on the magazine’s website, and you have decided to take part.",
+    "instruction": "In your essay you should:",
+    "points": [
+      "describe the possible advantages of a four-day school week",
+      "discuss its disadvantages for students and their families",
+      "give your own opinion and support it with reasons"
+    ],
+    "words": {
+      "short": "Give your essay a title. Write around 250 words.",
+      "long": "Give your essay a title. Write around 350 words."
+    },
+    "de": "Ein Essay für den Schreibwettbewerb eines Online-Magazins: Soll es eine Vier-Tage-Schulwoche geben (gleich viele Stunden, dafür längere Tage und freitags frei)? Drei Inhaltspunkte: Vorteile, Nachteile, eure begründete Meinung. Zuerst wählt ihr eure Meinung, der Titel kommt ganz zum Schluss."
+  },
+  "meta": {
+    "publication": "Essay competition · ‘Penpoint’ online magazine"
+  },
+  "focus": {
+    "label": "linking words for arguments",
+    "labelDe": "Linking words für Argumente",
+    "min": {
+      "short": 6,
+      "long": 8
+    },
+    "note": "Marked: linking words and phrases that order, add, contrast and sum up arguments or show results and examples (In addition, However, Although, As a result, For example, On balance, To sum up …). ‘And’, ‘but’, ‘or’, ‘so’, ‘because’ and ‘also’ are not marked."
+  },
+  "topicWords": [
+    "school",
+    "schools",
+    "week",
+    "four",
+    "five",
+    "day",
+    "days",
+    "students",
+    "student",
+    "friday",
+    "fridays",
+    "monday",
+    "weekend",
+    "lessons",
+    "teachers",
+    "parents",
+    "families",
+    "family",
+    "free",
+    "long",
+    "longer",
+    "shorter",
+    "idea"
+  ],
+  "gaps": [
+    {
+      "id": "ACTIVITY",
+      "step": "pros",
+      "q": "What else could students do on a free Friday? Give a phrase that starts with a verb, e.g. ‘practise a musical instrument’. Use ‘their’, not ‘my’.",
+      "qDe": "Was könnten Schüler:innen an einem freien Freitag noch tun? Ruft eine englische Wendung, die mit einem Verb beginnt, z. B. „practise a musical instrument“ oder „help on their grandparents’ farm“.",
+      "type": "text",
+      "default": "practise a musical instrument",
+      "max": 50,
+      "cap": false,
+      "verbPhrase": true
+    }
+  ],
+  "steps": [
+    {
+      "id": "position",
+      "part": "Opinion",
+      "q": "‘A four-day school week – yes or no?’ What is our opinion?",
+      "de": "Zuerst entscheidet ihr euch für eine Meinung, nach der sich Einleitung, Meinungsabsatz, Schluss und Titel richten.",
+      "options": [
+        {
+          "l": "A",
+          "id": "yes",
+          "label": "Yes, try it",
+          "teaser": "The advantages are stronger: a free Friday would give students rest and new motivation."
+        },
+        {
+          "l": "B",
+          "id": "no",
+          "label": "No, keep five days",
+          "teaser": "The disadvantages are stronger: long school days would be too tiring and cause problems for families."
+        }
+      ]
+    },
+    {
+      "id": "intro",
+      "slot": "intro",
+      "part": "Introduction",
+      "q": "Introduction: how do we introduce the topic and say what the essay will argue?",
+      "de": "Die Einleitung führt zum Thema und sagt, welche Meinung das Essay vertritt. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then finish the introduction in your own words and say what the essay will argue.",
+      "ownDe": "Gerüst abschreiben, dann die Einleitung mit eigenen Worten fertigschreiben und sagen, welche Meinung das Essay vertritt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "question",
+          "label": "Start with a question",
+          "text": {
+            "by": "position",
+            "map": {
+              "yes": "{{Would students learn better if Friday were a day without school?}} In some rural areas of the United States, a four-day school week is already common, [[whereas]] Austrian students still have lessons from Monday to Friday. {{This essay will look at both sides}} and argue that the change would be worth it.",
+              "no": "{{Would students learn better if Friday were a day without school?}} In some rural areas of the United States, a four-day school week is already common, [[whereas]] Austrian students still have lessons from Monday to Friday. {{This essay will look at both sides}} and argue that five shorter days are still the wiser solution."
+            }
+          },
+          "why": "A question makes readers think, and a real example shows that the idea is not just a dream."
+        },
+        {
+          "l": "B",
+          "id": "story",
+          "label": "Start with an example from abroad",
+          "trap": true,
+          "crit": "LSR",
+          "text": "Imagine you could sleep in every Friday! My cousin lives in America and he’s got a four-day week, so he’s always telling me how great his long weekends are. Let’s be honest: who wouldn’t love that? In this essay I’m going to tell you what I think about it.",
+          "reject": "This sounds like a chat with a friend: ‘Imagine you …’, contractions (he’s, Let’s, wouldn’t, I’m) and chatty phrases such as ‘Let’s be honest’. An essay needs a formal, objective tone.",
+          "rejectDe": "Das klingt wie ein Gespräch unter Freund:innen: „Imagine you …“, Kurzformen und Plaudersätze wie „Let’s be honest“. Ein Essay braucht einen sachlichen, formellen Ton."
+        },
+        {
+          "l": "C",
+          "id": "explain",
+          "label": "Explain the idea first",
+          "text": {
+            "by": "position",
+            "map": {
+              "yes": "{{The idea behind a four-day school week is simple:}} all weekly lessons would fit into four longer days from Monday to Thursday, and Friday would be free. {{[[Although]] many students like this idea,}} parents and teachers often worry about long, tiring days and their effect on learning. {{This essay argues that}} the benefits outweigh the problems.",
+              "no": "{{The idea behind a four-day school week is simple:}} all weekly lessons would fit into four longer days from Monday to Thursday, and Friday would be free. {{[[Although]] many students like this idea,}} parents and teachers often worry about long, tiring days and their effect on learning. {{This essay argues that}} these worries are justified."
+            }
+          },
+          "why": "Readers learn exactly what a four-day week means before the essay states its opinion."
+        }
+      ]
+    },
+    {
+      "id": "pros",
+      "slot": "pros",
+      "part": "Body paragraph 1",
+      "q": "Body paragraph 1: what are the advantages of a four-day week?",
+      "de": "Erster Inhaltspunkt: die Vorteile einer Vier-Tage-Woche. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then explain the advantage in your own words and give one example.",
+      "ownDe": "Gerüst abschreiben, dann den Vorteil mit eigenen Worten erklären und ein Beispiel nennen.",
+      "options": [
+        {
+          "l": "A",
+          "id": "freetime",
+          "label": "Free time and energy",
+          "trap": true,
+          "crit": "LSA",
+          "text": "The biggest advantage is that students would have much more free time. In the weekend they could relax, meet friends or {ACTIVITY}. Many parents mean that their children are too tired after five long days. With a free Friday, everybody could stay in the bed longer and start the new week with more energy.",
+          "reject": "Three typical mistakes: ‘In the weekend’ (→ At the weekend), ‘parents mean that’ (→ parents think that) and ‘stay in the bed’ (→ stay in bed, without ‘the’).",
+          "rejectDe": "Drei typische Fehler: at the weekend (nicht in), „meinen“ heißt hier think (nicht mean), und stay in bed ohne the."
+        },
+        {
+          "l": "B",
+          "id": "rest",
+          "label": "Time to rest",
+          "text": "{{The main advantage of a four-day week is}} more time to rest. After four busy days, students could sleep longer, do sport or {ACTIVITY}. {{[[As a result,]] they would probably}} return to school on Monday with more energy and better concentration. {{[[In addition,]] families would have}} more time together at the weekend.",
+          "why": "The topic sentence names the advantage, and the paragraph then shows its results."
+        },
+        {
+          "l": "C",
+          "id": "travel",
+          "label": "Fewer journeys",
+          "text": "{{A practical argument for the idea is that}} students and teachers would only travel to school on four days a week. This would save time and money, especially for those who spend an hour on the bus every day. {{[[Furthermore,]] a building that is closed on Fridays}} would need less energy for heating and lighting.",
+          "why": "A practical argument with concrete examples: time, money and energy."
+        }
+      ]
+    },
+    {
+      "id": "pros2",
+      "slot": "pros2",
+      "part": "Body paragraph 1",
+      "len": "long",
+      "q": "Which other advantage do we add?",
+      "de": "Body paragraph 1 geht weiter: ein weiterer Vorteil. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then explain this advantage in your own words.",
+      "ownDe": "Gerüst abschreiben, dann diesen Vorteil mit eigenen Worten erklären.",
+      "options": [
+        {
+          "l": "A",
+          "id": "outside",
+          "label": "Learning outside the classroom",
+          "text": "{{Students could also use the free day for learning outside the classroom.}} Older students could do work experience, help in a sports club or take part in a community project, and others could get extra help in difficult subjects. {{[[In this way,]] they would gain}} skills and confidence that are hard to develop at a desk.",
+          "why": "Shows that a free Friday does not have to be a lazy day."
+        },
+        {
+          "l": "B",
+          "id": "lessons",
+          "label": "Longer lessons",
+          "text": "{{Longer school days would make longer lessons possible, too.}} Science classes would have time for proper experiments, and a trip to a museum would not mean missing three other subjects. {{[[For this reason,]] teaching could become}} more practical and more interesting, and students would see how their subjects connect with real life.",
+          "why": "Turns the longer day, which sounds like a problem, into an advantage."
+        }
+      ],
+      "join": true
+    },
+    {
+      "id": "cons",
+      "slot": "cons",
+      "part": "Body paragraph 2",
+      "q": "Body paragraph 2: what are the disadvantages?",
+      "de": "Zweiter Inhaltspunkt: die Nachteile für Schüler:innen und Familien. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then explain the disadvantage in your own words and give one example.",
+      "ownDe": "Gerüst abschreiben, dann den Nachteil mit eigenen Worten erklären und ein Beispiel nennen.",
+      "options": [
+        {
+          "l": "A",
+          "id": "tiring",
+          "label": "Long and tiring days",
+          "text": "{{[[On the other hand,]] a four-day week has clear disadvantages.}} Students would often have lessons until four or five o’clock, and most people find it hard to concentrate for so long. Younger students in particular would struggle with such a timetable. {{[[What is more,]] homework would have to be done}} in the evening, which would make family life more stressful.",
+          "why": "The topic sentence turns to the other side, and two examples follow."
+        },
+        {
+          "l": "B",
+          "id": "families",
+          "label": "Problems for families",
+          "text": "{{There are, [[however,]] serious arguments against the idea.}} Many parents work on Fridays, so younger brothers and sisters would need someone to look after them for the whole day. {{[[Moreover,]] a free day is only useful}} if it is used well, and some students might simply spend it alone in front of a screen.",
+          "why": "Looks beyond students to the whole family, as the task asks."
+        },
+        {
+          "l": "C",
+          "id": "evenings",
+          "label": "Long days and busy evenings",
+          "trap": true,
+          "crit": "CC",
+          "text": "Long school days would be very tiring, especially in winter when it gets dark early. On the other hand, students would have less time for homework in the evenings. As a result, younger brothers and sisters would need someone to look after them on Fridays, and some parents would have to change their working hours.",
+          "reject": "The paragraph does not introduce the disadvantages, and two linkers do not fit: ‘On the other hand’ adds another disadvantage instead of a contrast (→ In addition), and childcare on Fridays is not a result of less time for homework (‘As a result’).",
+          "rejectDe": "Der Absatz kündigt die Nachteile nicht an, und zwei Linking words passen nicht: „On the other hand“ leitet hier keinen Gegensatz ein, und „As a result“ verbindet zwei Dinge, die nichts miteinander zu tun haben."
+        }
+      ]
+    },
+    {
+      "id": "cons2",
+      "slot": "cons2",
+      "part": "Body paragraph 2",
+      "len": "long",
+      "q": "Which other disadvantage do we add?",
+      "de": "Body paragraph 2 geht weiter: ein weiterer Nachteil. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then explain this disadvantage in your own words.",
+      "ownDe": "Gerüst abschreiben, dann diesen Nachteil mit eigenen Worten erklären.",
+      "options": [
+        {
+          "l": "A",
+          "id": "clubs",
+          "label": "Clubs and hobbies",
+          "text": "{{Afternoon activities would suffer as well.}} Music lessons and sports training usually take place on weekday afternoons, and many students would no longer be able to get there in time if lessons ended at five. {{[[Consequently,]] some young people might give up}} hobbies that keep them active and happy.",
+          "why": "A concrete problem that many students know from their own week."
+        },
+        {
+          "l": "B",
+          "id": "forget",
+          "label": "Three days without lessons",
+          "text": "{{Three free days in a row could make learning harder.}} After such a long break, students may forget new vocabulary or maths rules more easily, and subjects with only two lessons a week would suffer most. {{[[This means that]] teachers would need}} extra time on Mondays to revise what was done before the weekend.",
+          "why": "An argument about learning itself, explained step by step."
+        }
+      ],
+      "join": true
+    },
+    {
+      "id": "opinion",
+      "slot": "opinion",
+      "part": "Body paragraph 3",
+      "q": "Body paragraph 3: what is our opinion, and why?",
+      "de": "Dritter Inhaltspunkt: unsere Meinung mit Begründung. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then give the reasons for our opinion in your own words.",
+      "ownDe": "Gerüst abschreiben, dann die Gründe für unsere Meinung mit eigenen Worten nennen.",
+      "options": [
+        {
+          "l": "A",
+          "id": "balance",
+          "label": "Weigh up both sides",
+          "text": {
+            "by": "position",
+            "map": {
+              "yes": "{{[[Having weighed up both sides,]] I find the arguments for a four-day week stronger.}} {{[[Even though]] the problems are real,}} schools and families would soon find ways to deal with them, [[while]] the extra day off would bring rest and new motivation every single week. {{[[In other words,]]}} a free Friday would be worth the effort of longer days.",
+              "no": "{{[[Having weighed up both sides,]] I find the arguments against a four-day week stronger.}} {{[[Even though]] a long weekend sounds attractive,}} the change would cause too many problems for students and families. Young people learn best in shorter days with regular breaks, [[which is why]] five days remain the healthier option. {{[[In other words,]]}} a free Friday is not worth four exhausting days."
+            }
+          },
+          "why": "Compares the two sides directly and shows which one is stronger."
+        },
+        {
+          "l": "B",
+          "id": "reasons",
+          "label": "Give two reasons",
+          "text": {
+            "by": "position",
+            "map": {
+              "yes": "{{With all this in mind, I believe that a four-day week is worth trying}} for two reasons. {{[[Firstly,]]}} it would give students time to recover from a busy week. {{[[Secondly,]]}} the problems it causes could be reduced with good planning, [[for example]] with more breaks during long days and optional supervised activities on Fridays. {{Planned like this, a four-day week could}} work well.",
+              "no": "{{With all this in mind, I believe that a five-day week is the better choice}} for two reasons. {{[[Firstly,]]}} shorter days leave students enough energy for homework, hobbies and friends. {{[[Secondly,]]}} a longer weekend cannot make up for four long and tiring days, particularly for younger students, who need regular routines. Their well-being should come first."
+            }
+          },
+          "why": "The topic sentence links back to both sides, and ‘Firstly’ and ‘Secondly’ make the two reasons easy to follow."
+        },
+        {
+          "l": "C",
+          "id": "simple",
+          "label": "Say it clearly",
+          "trap": true,
+          "crit": "LSR",
+          "text": {
+            "by": "position",
+            "map": {
+              "yes": "It is true that a four-day school week has advantages and disadvantages. It is clear that students would be less tired. It is also clear that they would have more free time. It is a fact that long days are hard, but it is my opinion that a four-day week is the better choice.",
+              "no": "It is true that a four-day school week has advantages and disadvantages. It is clear that long days would be very tiring. It is also clear that parents would have problems on Fridays. It is a fact that a free day is nice, but it is my opinion that five days are the better choice."
+            }
+          },
+          "reject": "Correct, but very repetitive: every sentence starts with ‘It is … that’, and the reasons stay vague. Vary your structures (In my view, The main reason is, What matters most is) and explain your reasons.",
+          "rejectDe": "Richtig, aber sehr eintönig: Jeder Satz beginnt mit „It is … that“, und die Gründe bleiben vage. Satzbau abwechseln und die Gründe erklären."
+        }
+      ]
+    },
+    {
+      "id": "concl",
+      "slot": "concl",
+      "part": "Conclusion",
+      "q": "Conclusion: how do we end the essay?",
+      "de": "Der Schluss rundet das Essay ab. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then sum up our opinion in one or two sentences of your own.",
+      "ownDe": "Gerüst abschreiben, dann unsere Meinung in ein bis zwei eigenen Sätzen zusammenfassen.",
+      "options": [
+        {
+          "l": "A",
+          "id": "sumup",
+          "label": "Sum up the opinion",
+          "text": {
+            "by": "position",
+            "map": {
+              "yes": "{{[[To sum up,]] a four-day school week}} would not be perfect, but its problems could be solved. A longer weekend would give students the rest they need, and the idea [[therefore]] deserves a fair trial.",
+              "no": "{{[[To sum up,]] a four-day school week}} has some attractive sides, but the price would be too high. Five shorter days protect students’ energy and concentration and leave room for everything else in their lives."
+            }
+          },
+          "why": "‘To sum up’ introduces a short summary of our opinion without new arguments."
+        },
+        {
+          "l": "B",
+          "id": "both",
+          "label": "Look at both sides again",
+          "trap": true,
+          "crit": "TA",
+          "text": "In conclusion, a four-day school week has advantages and disadvantages. Some students would like it and others would not. Everybody has to decide for themselves, so it is difficult to say whether it is a good idea or not.",
+          "reject": "The task asks for a reasoned opinion, but this conclusion sits on the fence: ‘Everybody has to decide for themselves’ is not an opinion. A conclusion sums up our position.",
+          "rejectDe": "Die Aufgabe verlangt eine begründete Meinung, aber dieser Schluss legt sich nicht fest."
+        },
+        {
+          "l": "C",
+          "id": "weigh",
+          "label": "Compare benefits and drawbacks",
+          "text": {
+            "by": "position",
+            "map": {
+              "yes": "{{[[All in all,]] the benefits of a free Friday}} are greater than the drawbacks. Rested and motivated students get more out of their lessons, so schools should be given the chance to test the idea for a year.",
+              "no": "{{[[All in all,]] the drawbacks of a free Friday}} are greater than the benefits. An extra day off may be tempting, [[yet]] students’ energy and concentration from Monday to Friday matter far more."
+            }
+          },
+          "why": "A clear final judgement that weighs the two sides against each other."
+        }
+      ]
+    },
+    {
+      "id": "title",
+      "slot": "title",
+      "part": "Title",
+      "q": "Now that the essay is finished, which title do we choose?",
+      "de": "Zuletzt wählen wir den Titel für unser Essay.",
+      "own": "A clear title: it names the topic and fits our opinion.",
+      "ownDe": "Ein klarer Titel: Er nennt das Thema und passt zu unserer Meinung.",
+      "options": [
+        {
+          "l": "A",
+          "id": "statement",
+          "label": "State the opinion",
+          "text": {
+            "by": "position",
+            "map": {
+              "yes": "A four-day school week: time for a change",
+              "no": "Why five school days are still the best choice"
+            }
+          },
+          "why": "The title tells readers the topic and our opinion at once."
+        },
+        {
+          "l": "B",
+          "id": "question",
+          "label": "Ask a question",
+          "text": "Four days of school, three days off?",
+          "why": "A question names the topic and makes readers curious about the answer."
+        },
+        {
+          "l": "C",
+          "id": "case",
+          "label": "Name the case",
+          "text": {
+            "by": "position",
+            "map": {
+              "yes": "The case for a free Friday",
+              "no": "The case against a free Friday"
+            }
+          },
+          "why": "Short, factual and clear about which side the essay takes."
+        }
+      ]
+    }
+  ],
+  "order": [
+    "title",
+    "intro",
+    "pros",
+    "pros2",
+    "cons",
+    "cons2",
+    "opinion",
+    "concl"
+  ],
+  "checks": [
+    {
+      "en": "A clear title that fits our opinion"
+    },
+    {
+      "en": "The introduction leads to the topic and says what the essay will argue"
+    },
+    {
+      "en": "All three content points: advantages, disadvantages, our opinion with reasons"
+    },
+    {
+      "en": "Five paragraphs; each body paragraph opens with a clear link to what came before"
+    },
+    {
+      "en": "Formal register: no ‘you’, no contractions, no personal stories"
+    },
+    {
+      "en": "The conclusion sums up our opinion and adds no new arguments"
+    }
+  ],
+  "teacher": {
+    "aim": "Die Klasse baut gemeinsam ein B1-Essay zu einer Vier-Tage-Schulwoche: Einleitung mit klarer Richtung, Vorteile, Nachteile, begründete Meinung und Schluss. Fokus: Linking words, die Argumente ordnen, ergänzen, gegenüberstellen und zusammenfassen.",
+    "prep": "A/B/C/D-Karten austeilen, eine Garnitur pro Person (ohne Karten: 1–4 Finger, die Tasten 1–4 wählen wie A–D). Beamer im Vollbild. Die Aufgabe am Beamer enthält alles Nötige. Im Gerüst-Modus den eingebauten Timer nutzen: 5–6 min pro Absatz.",
+    "heft": "Neue Seite: Datum (rechts), „Essay“ als Überschrift, darunter 2 Zeilen für den Titel frei lassen (der Titel kommt zuletzt). Jeder Absatz beginnt nach einer Leerzeile, am Rand steht das Randwort (Intro, Body 1, Body 2, Body 3, Conclusion). Linking words grün unterstreichen.",
+    "flow": "Volltext kurz (50 min): 4 min Aufgabe lesen und Meinung wählen, 6 weitere Entscheidungen à ca. 2 min, Abschreiben ca. 25 min, 5 min Checkliste. Volltext lang (Doppelstunde): zusätzlich je eine Fortsetzung von Body 1 (zweiter Vorteil) und Body 2 (zweiter Nachteil), Abschreiben ca. 40 min, zusammen ca. 65 min; die restliche Zeit für die Besprechung der Fallen und den Beginn der Hausübung nutzen. Gerüst kurz (60 min): 3 min Aufgabe und Meinung, pro Absatz 1 min Entscheidung, 5–6 min eigenes Schreiben, 1 min Vergleich mit dem Modell; am Ende 2 min Titel und 4 min Checkliste. In 50 Minuten: Schluss und Titel als Hausübung. Gerüst lang (100 min): wie kurz, plus die beiden Fortsetzungen (je ca. 1 min Entscheidung und 5 min eigenes Schreiben).",
+    "traps": "Introduction B (LSR): Plauderton mit „you“, Kurzformen und „Let’s be honest“, viel zu locker für einen Essay. Body 1 A (LSA): in the weekend statt at the weekend, mean statt think (false friend: „meinen“), stay in the bed statt stay in bed. Body 2 C (CC): kündigt die Nachteile nicht an, „On the other hand“ ohne Gegensatz und „As a result“ ohne Folge. Body 3 C (LSR): jeder Satz beginnt mit „It is … that“, die Gründe bleiben vage. Conclusion B (TA): Der Schluss legt sich nicht fest, obwohl die Aufgabe eine begründete Meinung verlangt. Kürzel: TA = Erfüllung der Aufgabenstellung, CC = Kohärenz und Kohäsion, LSR = Spektrum sprachlicher Mittel, LSA = Sprachrichtigkeit.",
+    "notes": "Jede Fassung hat fünf Absätze (Einleitung, drei Hauptabsätze, Schluss); die lange Fassung macht Body 1 und Body 2 länger, sie fügt keinen Absatz hinzu. Die erste Entscheidung (yes / no) bestimmt Einleitung, Meinungsabsatz, Schluss und Titel; Vor- und Nachteile werden in beiden Fassungen sachlich dargestellt. Eine kurze Abstimmung mit Begründung eignet sich gut als Einstieg. Fakt im Text: In ländlichen Gegenden einiger US-Bundesstaaten ist die Vier-Tage-Schulwoche verbreitet. Wählt die Klasse in Body 1 Option B, ruft sie eine englische Wendung mit Verb am Anfang und mit „their“ (z. B. „help on their grandparents’ farm“). In Body 3 B steht „I believe that“: Auf B1-Niveau ist eine klar markierte eigene Meinung im Essay in Ordnung, sonst bleibt der Text unpersönlich. Mit der Taste P werden Linking words grün markiert; „while“ ist markiert, weil es hier einen Gegensatz ausdrückt („während“ im Sinn von „hingegen“); and, but, or, so, because und also sind nicht markiert. Differenzierung: Schnelle schreiben im Gerüst-Modus zu jedem Argument ein eigenes Beispiel. Hausübung: zweite Fassung mit der anderen Meinung."
+  }
+}

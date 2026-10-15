@@ -1,0 +1,354 @@
+{
+  "id": "g7-email-plans-for-your-visit",
+  "title": "Plans for your visit",
+  "titleDe": "Das Programm für den Austauschbesuch",
+  "grade": 7,
+  "level": "A2",
+  "theme": "Reisen & andere Länder",
+  "textType": "email",
+  "modes": [
+    "full"
+  ],
+  "lengths": {
+    "short": {
+      "label": "around 120 words",
+      "min": 105,
+      "max": 135
+    }
+  },
+  "minutes": {
+    "full": {
+      "short": 50
+    }
+  },
+  "task": {
+    "situation": "Your school has an exchange with a school in Brisbane, Australia. In February, Liam Nguyen (13) is coming to Almbruck, your small town in the Austrian mountains. He is staying with your family for one week. Liam has never seen snow, and he has written to ask about the plans for his visit.",
+    "instruction": "Write an email to Liam. In your email:",
+    "points": [
+      "say when and how you are going to meet him",
+      "tell him about the plans for Sunday and for the school days",
+      "describe a special trip",
+      "tell him what to bring and ask him a question"
+    ],
+    "words": {
+      "short": "Write around 120 words."
+    },
+    "de": "Eine E-Mail an Liam, einen Austauschschüler aus Australien: wie wir ihn abholen, das Programm für den Sonntag, die Schultage und einen Ausflug, was er mitbringen soll und eine Frage an ihn."
+  },
+  "meta": {
+    "from": "host.almbruck@classmail.example",
+    "to": "liam.brisbane@classmail.example",
+    "subjectSlot": "subject"
+  },
+  "focus": {
+    "label": "going to + present progressive for plans",
+    "labelDe": "going to und Present progressive für Pläne",
+    "min": {
+      "short": 6
+    },
+    "note": "Marked: every going-to form and every present progressive form with future meaning (be + verb; with short forms like we’re, the pronoun is part of the marking)."
+  },
+  "topicWords": [
+    "liam",
+    "almbruck",
+    "school",
+    "snow",
+    "going"
+  ],
+  "gaps": [
+    {
+      "id": "NAME",
+      "step": "signoff",
+      "q": "Who is writing this email? Shout a first name.",
+      "qDe": "Ruft einen Vornamen für den Text am Beamer. Keine Namen von Mitschüler:innen oder Lehrer:innen. Im Heft dürft ihr mit eurem eigenen Namen unterschreiben.",
+      "type": "text",
+      "default": "Matej",
+      "max": 20
+    }
+  ],
+  "steps": [
+    {
+      "id": "subject",
+      "slot": "subject",
+      "part": "Subject",
+      "q": "Which subject line do we choose?",
+      "de": "Die Betreffzeile sagt kurz, worum es in unserer E-Mail geht.",
+      "options": [
+        {
+          "l": "A",
+          "id": "week",
+          "label": "The week",
+          "text": "Your week in Almbruck",
+          "why": "Liam knows at once what the email is about."
+        },
+        {
+          "l": "B",
+          "id": "snow",
+          "label": "A question",
+          "text": "Ready for the snow?",
+          "why": "A question makes Liam curious about the email."
+        },
+        {
+          "l": "C",
+          "id": "plans",
+          "label": "The plans",
+          "text": "Plans for your visit",
+          "why": "Short and clear: it answers Liam’s question."
+        }
+      ]
+    },
+    {
+      "id": "greeting",
+      "slot": "greeting",
+      "part": "Greeting",
+      "q": "How do we greet Liam?",
+      "de": "Hier wählen wir die Anrede für Liam. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "hi",
+          "label": "Hi",
+          "text": "Hi Liam,",
+          "why": "Friendly and informal, just right for a friend."
+        },
+        {
+          "l": "B",
+          "id": "hello",
+          "label": "Hello",
+          "text": "Hello Liam,",
+          "why": "Friendly, and a little more formal than ‘Hi’."
+        },
+        {
+          "l": "C",
+          "id": "dear",
+          "label": "Dear",
+          "text": "Dear Liam,",
+          "why": "‘Dear’ with a first name is warm and works in a friendly email too."
+        }
+      ]
+    },
+    {
+      "id": "opening",
+      "slot": "opening",
+      "part": "Opening",
+      "q": "Paragraph 1: how are we going to meet Liam?",
+      "de": "Erster Absatz: Freude über den Besuch und wie wir Liam abholen. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "thanks",
+          "label": "Start with a thank-you",
+          "text": "Thanks for your email! We’re all really happy that [[you’re coming]] in February. My mum and I [[are meeting]] you at the airport on Saturday afternoon.",
+          "why": "A thank-you for his email, then the arrangement with day, time and place."
+        },
+        {
+          "l": "B",
+          "id": "reason",
+          "label": "Start with the reason",
+          "text": "Thank you for your email. I am writing to inform you about the programme for your visit. My father is collecting you from the airport on Saturday.",
+          "trap": true,
+          "crit": "TA",
+          "reject": "This sounds like a letter to a company. Liam is a friend, so write in a friendly, informal way.",
+          "rejectDe": "Das klingt wie ein Brief an eine Firma. Liam ist ein Freund: Schreibt freundlich und locker."
+        },
+        {
+          "l": "C",
+          "id": "countdown",
+          "label": "Start with excitement",
+          "text": "We can’t wait for your visit! My dad [[is collecting]] you from the airport on Saturday, and then [[we’re driving]] up to the mountains.",
+          "why": "It shows how much we are looking forward to his visit."
+        }
+      ]
+    },
+    {
+      "id": "sunday",
+      "slot": "sunday",
+      "part": "Sunday",
+      "q": "Paragraph 2: what are we doing on Sunday?",
+      "de": "Zweiter Absatz: unser Plan für den ersten Sonntag. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "cablecar",
+          "label": "Up the mountain",
+          "text": "On Sunday, [[we’re going to take]] the cable car up the mountain. You’ve never seen snow, so I’m sure [[you’re going to love]] it!",
+          "why": "Going to for a plan and for a prediction, and the snow is a great surprise for Liam."
+        },
+        {
+          "l": "B",
+          "id": "sledging",
+          "label": "Sledging and dinner",
+          "text": "[[We’re going]] sledging with my cousins on Sunday, and in the evening, my grandma [[is cooking]] Wiener Schnitzel for everybody. It’s her speciality!",
+          "why": "Two arrangements for one day, and Liam gets to know the family."
+        },
+        {
+          "l": "C",
+          "id": "skating",
+          "label": "The frozen lake",
+          "text": "On Sunday, we’re going ice skating on the lake, so it’s always frozen in February. After that, we’re having hot chocolate at my aunt’s.",
+          "trap": true,
+          "crit": "CC",
+          "reject": "‘So’ shows a result, but here we give a reason. Use ‘because’: … on the lake because it’s always frozen …",
+          "rejectDe": "„so“ heißt „deshalb“. Hier steht aber ein Grund, also braucht ihr „because“ (weil)."
+        }
+      ]
+    },
+    {
+      "id": "school",
+      "slot": "school",
+      "part": "School days",
+      "q": "Paragraph 3: what are we doing on the school days?",
+      "de": "Dritter Absatz: Liam kommt mit in die Schule. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "party",
+          "label": "A welcome party",
+          "text": "From Monday to Wednesday, [[you’re coming]] to school with me. My class [[is having]] a welcome party for you on Monday. Everybody is excited!",
+          "why": "Clear days and a fixed arrangement: Liam knows what is going to happen."
+        },
+        {
+          "l": "B",
+          "id": "project",
+          "label": "A project",
+          "text": "School starts at ten to eight, and [[you’re joining]] my class for three days. On Tuesday, [[we’re doing]] a project about Australia. You’re our expert!",
+          "why": "Timetables use the present simple (starts), and our arrangements use the present progressive."
+        },
+        {
+          "l": "C",
+          "id": "lunch",
+          "label": "Lunch for Liam",
+          "text": "Ready for an Austrian school? [[You’re coming]] to my lessons from Monday to Wednesday, and on Tuesday, my class [[is cooking]] lunch for you!",
+          "why": "A short question to start, then two clear arrangements."
+        }
+      ]
+    },
+    {
+      "id": "trip",
+      "slot": "trip",
+      "part": "Trip",
+      "q": "Paragraph 4: which special trip are we planning?",
+      "de": "Vierter Absatz: ein besonderer Ausflug. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "castle",
+          "label": "A castle",
+          "text": "My uncle is taking us to a castle on Thursday. A guide is going show us the secret rooms, and then we going to eat cake.",
+          "trap": true,
+          "crit": "LSA",
+          "reject": "Two mistakes in the going-to forms: ‘is going to show’ (not ‘is going show’) and ‘we’re going to eat’ (not ‘we going to eat’).",
+          "rejectDe": "Zwei Fehler bei going to: „is going to show“ statt „is going show“ und „we’re going to eat“ statt „we going to eat“."
+        },
+        {
+          "l": "B",
+          "id": "saltmine",
+          "label": "A salt mine",
+          "text": "Thursday [[is going to be]] special: my dad [[is taking]] us to an old salt mine. Inside the mountain, [[we’re going to ride]] down wooden slides!",
+          "why": "An exciting trip, with a plan for the day and a fixed arrangement."
+        },
+        {
+          "l": "C",
+          "id": "ski",
+          "label": "A ski lesson",
+          "text": "My aunt Leni is a ski instructor, and on Friday, she [[is taking]] us to the slopes for a lesson. [[You’re going to learn]] fast!",
+          "why": "A fixed arrangement with a person, a day and a place, and a friendly prediction."
+        }
+      ]
+    },
+    {
+      "id": "packing",
+      "slot": "packing",
+      "part": "Packing",
+      "q": "Paragraph 5: what should Liam bring, and what do we ask him?",
+      "de": "Fünfter Absatz: was Liam einpacken soll und eine Frage an ihn. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "clothes",
+          "label": "Clothes first",
+          "text": "Please pack a warm jacket, gloves and good boots. It’s freezing here in February! And one question: is there any food you don’t like?",
+          "why": "A clear tip for the cold weather and a useful question for the family."
+        },
+        {
+          "l": "B",
+          "id": "hobbies",
+          "label": "Question first",
+          "text": "What do you like doing in your free time? [[We’re going to plan]] a fun evening for you, so tell me! And pack warm clothes!",
+          "why": "The question comes first, and Liam sees that we want to plan the week with him."
+        }
+      ]
+    },
+    {
+      "id": "signoff",
+      "slot": "signoff",
+      "part": "Sign-off",
+      "q": "How do we end the email?",
+      "de": "Mit der Grußformel endet unsere E-Mail. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "soon",
+          "label": "See you soon",
+          "text": "See you soon,\n{NAME}",
+          "why": "Friendly, and it shows that we are looking forward to the visit."
+        },
+        {
+          "l": "B",
+          "id": "bye",
+          "label": "Bye for now",
+          "text": "Bye for now,\n{NAME}",
+          "why": "A friendly, informal ending for a friend."
+        },
+        {
+          "l": "C",
+          "id": "wishes",
+          "label": "Best wishes",
+          "text": "Best wishes,\n{NAME}",
+          "why": "Polite and friendly, good for many emails."
+        }
+      ]
+    }
+  ],
+  "order": [
+    "subject",
+    "greeting",
+    "opening",
+    "sunday",
+    "school",
+    "trip",
+    "packing",
+    "signoff"
+  ],
+  "checks": [
+    {
+      "en": "The subject line fits our email"
+    },
+    {
+      "en": "Friendly, informal style for a friend"
+    },
+    {
+      "en": "We say when and how we are going to meet Liam"
+    },
+    {
+      "en": "Plans for Sunday, the school days and a special trip"
+    },
+    {
+      "en": "What Liam should bring and a question for him"
+    },
+    {
+      "en": "Plans use going to (am / is / are + going to + verb) or the present progressive"
+    },
+    {
+      "en": "The closing formula and the name are on two lines"
+    }
+  ],
+  "teacher": {
+    "aim": "Die Klasse schreibt gemeinsam eine freundliche E-Mail an einen Austauschschüler aus Australien und übt going to und das Present progressive für Pläne und fixe Verabredungen.",
+    "prep": "A/B/C/D-Karten austeilen, Hefte bereitlegen, Beamer im Vollbild. Einsatz ab: going to (Pläne und Vorhersagen) und Present progressive mit Zukunftsbedeutung (fixe Verabredungen); Present perfect mit never kommt einmal vor. Bei Bedarf an die Tafel: cable car (Seilbahn), sledging (Rodeln), salt mine (Salzbergwerk), slide (Rutsche), slopes (Pisten), ski instructor (Skilehrer:in), freezing (eiskalt).",
+    "heft": "Neue Seite: Datum (rechts) und „Email“ als Überschrift (wie am Beamer). Darunter der Kopf in vier Zeilen wie am Beamer: To, From, Date, Subject (Date ist der Tag der Stunde). Dann die Anrede auf eigener Zeile; jeder Absatz beginnt nach einer Leerzeile, am Rand steht der Name des Teils wie am Beamer (Opening, Sunday, School days, Trip, Packing). Nach einer Leerzeile Grußformel und Name auf eigenen Zeilen. Am Ende alle Formen mit going to und Present progressive grün unterstreichen.",
+    "flow": "Volltext (50 min): 3 min Aufgabe lesen und Seite anlegen · 8 Entscheidungen à ca. 2 min, zusammen ca. 16 min · Abschreiben nach jeder Entscheidung, zusammen ca. 20 min (rund 125 Wörter) · 6 min Checkliste und Unterstreichen · 5 min Puffer. Den Namen für die Unterschrift ruft die Klasse erst beim Sign-off. Wenn die Zeit knapp wird: Unterstreichen als Hausübung. Pro abgelehnter Falle etwa eine Minute extra einplanen.",
+    "traps": "Opening B (TA, Erfüllung der Aufgabenstellung): Briefstil wie an eine Firma („I am writing to inform you …“) statt freundlich und informell an einen Gleichaltrigen. Sunday C (CC, Kohärenz und Kohäsion): „so“ (deshalb) statt „because“ (weil), obwohl danach ein Grund folgt. Trip A (LSA, Sprachrichtigkeit): going to falsch gebildet: „is going show“ (to fehlt) und „we going to eat“ (are bzw. ’re fehlt).",
+    "notes": "Almbruck, Liam und die Familie sind frei erfunden. Salzbergwerke mit langen Holzrutschen gibt es in Österreich wirklich (Anlass für ein kurzes Landeskunde-Gespräch). Unterschied besprechen: going to = Plan oder Vorhersage (Thursday is going to be special, you’re going to love it), Present progressive = fixe Verabredung mit Zeit und Ort (My mum and I are meeting you at the airport). Fahrpläne und Stundenpläne stehen im Present simple (School starts at ten to eight): Das ist kein Fehler. Differenzierung: Schnelle schreiben einen weiteren Satz für den Freitagabend. Hausübung: Liams Antwort-E-Mail (ca. 80 Wörter) mit einem eigenen Plan und zwei Fragen."
+  }
+}

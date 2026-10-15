@@ -1,0 +1,370 @@
+{
+  "id": "g7-email-thank-you-host-family",
+  "title": "Thank you for a wonderful week!",
+  "titleDe": "Dankes-E-Mail an die Gastfamilie",
+  "grade": 7,
+  "level": "A2",
+  "theme": "Reisen & andere Länder",
+  "textType": "email",
+  "modes": [
+    "full"
+  ],
+  "lengths": {
+    "short": {
+      "label": "around 120 words",
+      "min": 105,
+      "max": 135
+    }
+  },
+  "minutes": {
+    "full": {
+      "short": 50
+    }
+  },
+  "task": {
+    "situation": "You have just spent a language week in Tenby, a seaside town in Wales. You stayed with the Jones family: Sunita and Gareth, their son Rhys (13) and their dog, Pip. You got home on Saturday evening. Now you want to thank your host family.",
+    "instruction": "Write a thank-you email to the Jones family. In your email:",
+    "points": [
+      "thank the family and say that you are home again",
+      "write about the best moments of your week",
+      "say what you have done for the first time",
+      "invite the family to Austria"
+    ],
+    "words": {
+      "short": "Write around 120 words."
+    },
+    "de": "Eine Dankes-E-Mail an die Gastfamilie in Wales nach einer Sprachwoche: Dank, die schönsten Momente, was ihr zum ersten Mal gemacht habt, und eine Einladung nach Österreich."
+  },
+  "meta": {
+    "from": "language.week@classmail.example",
+    "to": "the.joneses@familypost.example",
+    "subjectSlot": "subject"
+  },
+  "focus": {
+    "label": "present perfect (ever / never / just)",
+    "labelDe": "Present perfect (ever / never / just)",
+    "min": {
+      "short": 5
+    },
+    "note": "Marked: every present perfect form (have / has + past participle), with or without ever, never, just, even and finally."
+  },
+  "topicWords": [
+    "tenby",
+    "wales",
+    "welsh",
+    "rhys",
+    "pip",
+    "sunita",
+    "gareth"
+  ],
+  "gaps": [
+    {
+      "id": "NAME",
+      "step": "signoff",
+      "q": "Who is writing this email? Shout a first name.",
+      "qDe": "Ruft einen Vornamen für den Text am Beamer. Keine Namen von Mitschüler:innen oder Lehrer:innen. Im Heft dürft ihr mit eurem eigenen Namen unterschreiben.",
+      "type": "text",
+      "default": "Amina",
+      "max": 20
+    }
+  ],
+  "steps": [
+    {
+      "id": "subject",
+      "slot": "subject",
+      "part": "Subject",
+      "q": "Which subject line do we choose?",
+      "de": "Die Betreffzeile sagt kurz, worum es in unserer E-Mail geht.",
+      "options": [
+        {
+          "l": "A",
+          "id": "thanks",
+          "label": "A big thank-you",
+          "text": "Thank you for a wonderful week!",
+          "why": "The family knows at once why we are writing."
+        },
+        {
+          "l": "B",
+          "id": "missing",
+          "label": "Back home",
+          "text": "Back home in Austria",
+          "why": "Short and clear: the family knows that we got home safely."
+        },
+        {
+          "l": "C",
+          "id": "home",
+          "label": "Missing you",
+          "text": "Missing you all already!",
+          "why": "Short and warm: it shows how much we liked the week."
+        }
+      ]
+    },
+    {
+      "id": "greeting",
+      "slot": "greeting",
+      "part": "Greeting",
+      "q": "How do we greet the family?",
+      "de": "Hier wählen wir die Anrede für die Gastfamilie. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "names",
+          "label": "All the names",
+          "text": "Dear Sunita, Gareth and Rhys,",
+          "why": "Warm and personal: everybody in the family is in the greeting."
+        },
+        {
+          "l": "B",
+          "id": "everyone",
+          "label": "Everyone",
+          "text": "Hi everyone,",
+          "why": "Short and friendly, good for a family we know well now."
+        },
+        {
+          "l": "C",
+          "id": "family",
+          "label": "The family",
+          "text": "Dear Jones family,",
+          "why": "Friendly, and it includes the whole family."
+        }
+      ]
+    },
+    {
+      "id": "opening",
+      "slot": "opening",
+      "part": "Opening",
+      "q": "Paragraph 1: how do we start?",
+      "de": "Erster Absatz: Dank und die Nachricht, dass wir wieder zu Hause sind. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "thankyou",
+          "label": "Start with thanks",
+          "text": "Thank you so much for everything! [[I’ve just unpacked]] my suitcase, and my room at home feels very quiet without Pip.",
+          "why": "Thanks first, then ‘just’ for something that happened a moment ago."
+        },
+        {
+          "l": "B",
+          "id": "news",
+          "label": "Start with the news",
+          "text": "Hello from Austria! I got home safely on Saturday, and [[I’ve just told]] my parents all about my week. Thank you for everything!",
+          "why": "Past simple for Saturday, present perfect with ‘just’ for now, and a warm thank-you."
+        },
+        {
+          "l": "C",
+          "id": "journey",
+          "label": "Start with the journey",
+          "text": "I have arrived home safely on Saturday evening. On Sunday, I have slept until twelve o’clock, and now I miss you all a lot!",
+          "trap": true,
+          "crit": "LSA",
+          "reject": "Two mistakes: with a finished time (on Saturday, on Sunday), use the past simple: I arrived …, I slept …",
+          "rejectDe": "Zwei Fehler: Bei einer abgeschlossenen Zeit (on Saturday, on Sunday) steht das Past simple: I arrived, I slept."
+        }
+      ]
+    },
+    {
+      "id": "moments",
+      "slot": "moments",
+      "part": "Best moments",
+      "q": "Paragraph 2: what were the best moments of the week?",
+      "de": "Zweiter Absatz: die schönsten Momente der Woche. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "beach",
+          "label": "A day at the beach",
+          "text": "Wednesday was my favourite day. We walked on the beach with Rhys and Pip and had the best fish and chips [[I’ve ever eaten]]!",
+          "why": "One special day with details, and ‘ever’ for the best food of our life so far."
+        },
+        {
+          "l": "B",
+          "id": "harbour",
+          "label": "The harbour",
+          "text": "The day at the harbour was really nice. The boats were nice, the ice cream was nice, and the weather was nice too. Everything was nice!",
+          "trap": true,
+          "crit": "LSR",
+          "reject": "‘Nice’ five times is boring for readers. Use different words: beautiful, delicious, sunny, wonderful.",
+          "rejectDe": "Fünfmal „nice“ ist langweilig. Nehmt verschiedene Wörter, z. B. beautiful, delicious, sunny."
+        },
+        {
+          "l": "C",
+          "id": "boat",
+          "label": "The boat trip",
+          "text": "The boat trip with Gareth was the best part of the week. We saw seals on the rocks, and [[I’ve shown]] my seal photos to all my friends!",
+          "why": "The trip in the past simple, then the present perfect for what we have done since."
+        },
+        {
+          "l": "D",
+          "id": "castle",
+          "label": "Sunset at the castle",
+          "text": "On our last evening, Sunita took Rhys and me up to the old castle to watch the sunset. [[I’ve never seen]] a more beautiful sky!",
+          "why": "A clear picture of one evening, and ‘never’ shows how special it was."
+        }
+      ]
+    },
+    {
+      "id": "firsts",
+      "slot": "firsts",
+      "part": "First time",
+      "q": "Paragraph 3: what have we done for the first time?",
+      "de": "Dritter Absatz: was ihr in Wales zum ersten Mal gemacht habt. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "words",
+          "label": "Welsh words",
+          "text": "This was my first time in Wales, and [[I’ve learnt]] some Welsh words. ‘Diolch’ means ‘thank you’, and ‘bore da’ means ‘good morning’!",
+          "why": "Two new words make the email personal and fun to read."
+        },
+        {
+          "l": "B",
+          "id": "surfing",
+          "label": "Surfing",
+          "text": "Thanks to Rhys, [[I’ve finally tried]] surfing! I fell into the water about fifty times, but now I want to learn more.",
+          "why": "A funny detail, and we thank Rhys at the same time."
+        },
+        {
+          "l": "C",
+          "id": "food",
+          "label": "Welsh food",
+          "text": "Welsh food was all new for me. Gareth’s Welsh cakes were delicious, and [[I’ve even tried]] laverbread. Yes, that’s seaweed!",
+          "why": "‘Even’ shows that this was a brave new experience."
+        }
+      ]
+    },
+    {
+      "id": "family",
+      "slot": "family",
+      "part": "Family",
+      "q": "Paragraph 4: what do we say about the family?",
+      "de": "Vierter Absatz: was wir an der Gastfamilie besonders mochten. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "friend",
+          "label": "A new friend",
+          "text": "Rhys was a great friend all week. [[I’ve already sent]] him a message, and we’re going to write to each other every week.",
+          "why": "It shows that the friendship goes on after the trip."
+        },
+        {
+          "l": "B",
+          "id": "dog",
+          "label": "The dog",
+          "text": "I miss everybody, even Pip! He woke me up every morning, and [[I’ve just put]] a photo of him on my desk.",
+          "why": "A small, funny detail shows how much we liked the family."
+        },
+        {
+          "l": "C",
+          "id": "parents",
+          "label": "The parents",
+          "text": "Sunita and Gareth, you were wonderful hosts. [[I’ve never laughed]] more at dinner, and my English is a lot better now!",
+          "why": "We speak to the parents directly and say why they were great hosts."
+        }
+      ]
+    },
+    {
+      "id": "invite",
+      "slot": "invite",
+      "part": "Invitation",
+      "q": "Paragraph 5: how do we invite the family?",
+      "de": "Fünfter Absatz: eine Einladung nach Österreich. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "alps",
+          "label": "The Alps",
+          "text": "Have you ever saw the Alps? Please come and visit us next summer! My parents have never meet a Welsh family, and they would love to see you.",
+          "trap": true,
+          "crit": "LSA",
+          "reject": "Two mistakes: after ‘have’, use the past participle (3rd form): ‘Have you ever seen …?’ and ‘My parents have never met …’.",
+          "rejectDe": "Zwei Fehler: Nach have steht die 3. Form: „Have you ever seen …?“ und „My parents have never met …“."
+        },
+        {
+          "l": "B",
+          "id": "summer",
+          "label": "A question",
+          "text": "[[Have you ever been]] to Austria? My parents would love to meet you, so please come and visit us next summer. We can go hiking!",
+          "why": "A question with ‘ever’ leads to the invitation in a natural way."
+        },
+        {
+          "l": "C",
+          "id": "winter",
+          "label": "A winter visit",
+          "text": "Please come and visit us in Austria! Rhys [[has never been]] on skis, so winter is the perfect time. Our house is big enough for everybody.",
+          "why": "A clear invitation with a good reason to come in winter."
+        }
+      ]
+    },
+    {
+      "id": "signoff",
+      "slot": "signoff",
+      "part": "Sign-off",
+      "q": "How do we end the email?",
+      "de": "Mit der Grußformel endet unsere E-Mail. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "love",
+          "label": "Lots of love",
+          "text": "Lots of love,\n{NAME}",
+          "why": "Warm and personal, just right after a week with the family."
+        },
+        {
+          "l": "B",
+          "id": "wishes",
+          "label": "Best wishes",
+          "text": "Best wishes,\n{NAME}",
+          "why": "Friendly and polite, good for the whole family."
+        },
+        {
+          "l": "C",
+          "id": "care",
+          "label": "Take care",
+          "text": "Take care,\n{NAME}",
+          "why": "Short and warm, a friendly way to say goodbye."
+        }
+      ]
+    }
+  ],
+  "order": [
+    "subject",
+    "greeting",
+    "opening",
+    "moments",
+    "firsts",
+    "family",
+    "invite",
+    "signoff"
+  ],
+  "checks": [
+    {
+      "en": "We thank the family and say that we are home again"
+    },
+    {
+      "en": "The best moments of the week, with details"
+    },
+    {
+      "en": "Something we have done for the first time"
+    },
+    {
+      "en": "An invitation to Austria"
+    },
+    {
+      "en": "Past simple for finished times (on Saturday), present perfect with ever, never and just"
+    },
+    {
+      "en": "Different, interesting words (not ‘nice’ all the time)"
+    },
+    {
+      "en": "The closing formula and the name are on two lines"
+    }
+  ],
+  "teacher": {
+    "aim": "Die Klasse schreibt gemeinsam eine herzliche Dankes-E-Mail an eine Gastfamilie in Wales und übt das Present perfect mit ever, never und just, abgegrenzt vom Past simple bei abgeschlossenen Zeitangaben.",
+    "prep": "A/B/C/D-Karten austeilen, Hefte bereitlegen, Beamer im Vollbild. Einsatz ab: Present perfect (Bildung, ever / never / just) und der Unterschied zum Past simple mit Zeitangaben wie on Saturday, last week. Bei Bedarf an die Tafel: host family (Gastfamilie), seals (Robben), sunset (Sonnenuntergang), surfing (Wellenreiten), Welsh cakes (walisische Teekuchen), laverbread (Algenpüree aus Wales), seaweed (Seetang).",
+    "heft": "Neue Seite: Datum (rechts) und „Email“ als Überschrift (wie am Beamer). Darunter der Kopf in vier Zeilen wie am Beamer: To, From, Date, Subject (Date ist der Tag der Stunde). Dann die Anrede auf eigener Zeile; jeder Absatz beginnt nach einer Leerzeile, am Rand steht der Name des Teils wie am Beamer (Opening, Best moments, First time, Family, Invitation). Nach einer Leerzeile Grußformel und Name auf eigenen Zeilen. Am Ende alle Present-perfect-Formen grün unterstreichen.",
+    "flow": "Volltext (50 min): 3 min Aufgabe lesen und Seite anlegen · 8 Entscheidungen à ca. 2 min, zusammen ca. 16 min · Abschreiben nach jeder Entscheidung, zusammen ca. 20 min (rund 120 Wörter) · 6 min Checkliste und Unterstreichen · 5 min Puffer. Den Namen für die Unterschrift ruft die Klasse erst beim Sign-off. Wenn die Zeit knapp wird: Unterstreichen als Hausübung. Pro abgelehnter Falle etwa eine Minute extra einplanen.",
+    "traps": "Opening C (LSA, Sprachrichtigkeit): Present perfect mit abgeschlossener Zeitangabe („I have arrived … on Saturday“, „On Sunday, I have slept …“) statt Past simple. Best moments B (LSR, Spektrum sprachlicher Mittel): fünfmal „nice“ – sehr einfacher, wiederholter Wortschatz statt treffender Adjektive (beautiful, delicious, sunny …). Invitation A (LSA, Sprachrichtigkeit): falsche 3. Form im Present perfect („Have you ever saw …?“ statt seen, „have never meet“ statt met).",
+    "notes": "Tenby ist eine echte Küstenstadt in Wales (Strände, Hafen, Reste einer Burg, Bootsfahrten zu Robben); die Familie Jones und die Sprachwoche sind erfunden. Diolch (danke) und bore da (guten Morgen) sind echte walisische Wörter. Opening C zeigt Present perfect, wo Past simple nötig ist; Invitation A prüft die Bildung des Present perfect (have + 3. Form). Gut als Merkregel an die Tafel: abgeschlossene Zeit → Past simple, Erfahrung bis jetzt (ever / never) oder gerade eben (just) → Present perfect. Differenzierung: Schnelle ergänzen einen Satz mit already oder yet. Hausübung: die Antwort von Rhys (ca. 80 Wörter) mit zwei Sätzen im Present perfect."
+  }
+}

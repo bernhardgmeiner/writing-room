@@ -1,0 +1,368 @@
+{
+  "id": "g6-story-halloween-mystery",
+  "title": "A Halloween mystery",
+  "titleDe": "Wer hat die Kürbisse genommen?",
+  "grade": 6,
+  "level": "A1+/A2",
+  "theme": "Feste & Feiern",
+  "textType": "story",
+  "modes": [
+    "full"
+  ],
+  "lengths": {
+    "short": {
+      "label": "around 100 words",
+      "min": 85,
+      "max": 115
+    }
+  },
+  "minutes": {
+    "full": {
+      "short": 50
+    }
+  },
+  "task": {
+    "situation": "It is Halloween, and there is a party at school in the evening. Lina and Kemal are good friends. Their class carved pumpkins for the party, but on the morning of Halloween the pumpkins are gone! Write a mystery story. You decide who took them: Mr Novak (the caretaker), Ms Okafor (the art teacher) or some older students.",
+    "instruction": "Write a story with:",
+    "points": [
+      "a beginning: who, where and when",
+      "the problem and the clues",
+      "the solution and an ending",
+      "a good title"
+    ],
+    "words": {
+      "short": "Write around 100 words in the past simple."
+    },
+    "de": "Gemeinsamer Halloween-Krimi an der Schule: Anfang mit wer, wo, wann, dann das Problem, die Spuren, die Auflösung und ein Schluss. Erzählt wird im Past simple. Zuerst entscheidet ihr, wer die Kürbisse genommen hat; verraten wird es erst in der Auflösung. Den Titel wählen wir zuletzt."
+  },
+  "meta": {},
+  "focus": {
+    "label": "was / were and regular past simple verbs",
+    "labelDe": "was / were und regelmäßige Verben im Past simple",
+    "min": {
+      "short": 12
+    },
+    "note": "Marked: every was/were and every regular past simple verb (-ed), also inside direct speech. Not marked: irregular verbs (said, gave) and present tense inside direct speech."
+  },
+  "topicWords": [
+    "halloween",
+    "pumpkins",
+    "pumpkin",
+    "lina",
+    "kemal",
+    "novak",
+    "okafor",
+    "friends",
+    "students"
+  ],
+  "gaps": [
+    {
+      "id": "N",
+      "step": "problem",
+      "q": "How many pumpkins are gone? Shout a number!",
+      "qDe": "Wie viele Kürbisse sind verschwunden? Ruft eine Zahl (5 bis 30).",
+      "type": "number",
+      "default": 12,
+      "min": 5,
+      "max": 30
+    }
+  ],
+  "steps": [
+    {
+      "id": "thief",
+      "part": "The thief",
+      "q": "Who took the pumpkins? We decide now, but our readers find out at the end!",
+      "de": "Hier entscheidet ihr, wer die Kürbisse genommen hat; verraten wird es erst in der Auflösung.",
+      "options": [
+        {
+          "l": "A",
+          "id": "caretaker",
+          "label": "Mr Novak, the caretaker",
+          "teaser": "He listens to the weather forecast every day and always worries about storms."
+        },
+        {
+          "l": "B",
+          "id": "teacher",
+          "label": "Ms Okafor, the art teacher",
+          "teaser": "She loves surprises and has got a new paint that glows in the dark."
+        },
+        {
+          "l": "C",
+          "id": "students",
+          "label": "Some older students",
+          "teaser": "They are planning a big Halloween game for the whole school."
+        }
+      ]
+    },
+    {
+      "id": "beginning",
+      "slot": "beginning",
+      "part": "Beginning",
+      "q": "How does our story start? Who? Where? When?",
+      "de": "Der Anfang erzählt, wer dabei ist und wo und wann die Geschichte spielt. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "time",
+          "label": "Start with WHEN",
+          "text": "It [[was]] Halloween morning, and the school party [[was]] that evening. Lina and Kemal [[arrived]] early to look at their class’s pumpkins.",
+          "why": "Starts with the time, like many stories. We know at once who, where and when."
+        },
+        {
+          "l": "B",
+          "id": "speech",
+          "label": "Start with direct speech",
+          "text": "“Hurry up, Kemal!” [[shouted]] Lina on Halloween morning. The friends [[raced]] to school. The night before, their class’s pumpkins [[were]] on the front steps.",
+          "why": "Direct speech puts us right into the story and makes it lively."
+        },
+        {
+          "l": "C",
+          "id": "weather",
+          "label": "Start with the weather",
+          "text": "It [[was]] a grey, foggy Halloween morning. Lina and Kemal [[walked]] to school and [[talked]] about their class’s pumpkins for the party.",
+          "why": "Grey and foggy: the weather gives the story a mysterious mood from the first line."
+        }
+      ]
+    },
+    {
+      "id": "problem",
+      "slot": "problem",
+      "part": "Problem",
+      "q": "What goes wrong? How do the friends find out?",
+      "de": "Hier merken die beiden, dass die Kürbisse fehlen. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "gate",
+          "label": "At the school gate",
+          "text": "Suddenly, Lina [[stopped]] at the school gate and [[pointed]] at the steps. They [[were]] empty! All {N} pumpkins [[were]] gone.",
+          "why": "‘Suddenly’ and short sentences make the problem exciting."
+        },
+        {
+          "l": "B",
+          "id": "trap",
+          "label": "At the front steps",
+          "trap": true,
+          "crit": "LSA",
+          "text": "Suddenly, Kemal stoped at the school gate and looked at the steps. They were empty! All {N} pumpkins was gone.",
+          "reject": "Two mistakes: ‘stoped’ → stopped (double p) and ‘pumpkins was’ → pumpkins were.",
+          "rejectDe": "Zwei Fehler: stopped schreibt man mit Doppel-p, und bei pumpkins (Mehrzahl) heißt es were."
+        },
+        {
+          "l": "C",
+          "id": "question",
+          "label": "With a question",
+          "text": "At the school door, the friends [[stared]] at the empty steps. All {N} pumpkins [[were]] gone! “Who did this?” Kemal [[asked]].",
+          "why": "Kemal’s question is the question of every mystery story: who did it?"
+        }
+      ]
+    },
+    {
+      "id": "clue",
+      "slot": "clue",
+      "part": "Clues",
+      "q": "What clues do the friends find?",
+      "de": "Hier suchen Lina und Kemal nach Spuren. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "trail",
+          "label": "Follow a trail",
+          "text": {
+            "by": "thief",
+            "map": {
+              "caretaker": "The two detectives [[looked]] for clues. In the mud, there [[was]] a long line from a wheelbarrow. They [[followed]] it to the gym.",
+              "teacher": "The two detectives [[looked]] for clues. In the entrance hall, there [[were]] little drops of green paint. They [[followed]] them up the stairs.",
+              "students": "The two detectives [[looked]] for clues. Next to the door, there [[were]] small arrows in orange chalk. They [[followed]] them to the library."
+            }
+          },
+          "why": "A clear trail: the reader follows the clues together with the detectives."
+        },
+        {
+          "l": "B",
+          "id": "strange",
+          "label": "Something strange",
+          "text": {
+            "by": "thief",
+            "map": {
+              "caretaker": "Then Kemal [[noticed]] something strange. The gym door [[was]] open, and there [[was]] a light inside. The friends [[tiptoed]] across the playground.",
+              "teacher": "Then Kemal [[noticed]] something strange. There [[was]] a strong smell of paint in the corridor. The friends [[followed]] it up the stairs.",
+              "students": "Then Kemal [[noticed]] a note on the door: “Look for the pumpkins where the books sleep!” The friends [[hurried]] to the library."
+            }
+          },
+          "why": "A strange clue makes readers curious, and they want to know more."
+        }
+      ]
+    },
+    {
+      "id": "solution",
+      "slot": "solution",
+      "part": "Solution",
+      "q": "Where are the pumpkins? Who took them?",
+      "de": "Hier finden Lina und Kemal die Kürbisse und erfahren, wer sie genommen hat. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "trap",
+          "label": "A long search",
+          "trap": true,
+          "crit": "TA",
+          "text": "Lina and Kemal searched every room, but the pumpkins were gone. Nobody ever found out who took them. It is still a mystery!",
+          "reject": "The task asks us to find the thief. Here nobody does, so the readers still do not know who took the pumpkins!",
+          "rejectDe": "Die Aufgabe will, dass der Dieb gefunden wird, und hier erfahren es die Leser:innen nie."
+        },
+        {
+          "l": "B",
+          "id": "speech",
+          "label": "The thief speaks",
+          "text": {
+            "by": "thief",
+            "map": {
+              "caretaker": "In the gym, Mr Novak [[smiled]]. “Your pumpkins are safe!” he said. “A storm is coming, so I [[carried]] them inside.”",
+              "teacher": "In the art room, Ms Okafor [[smiled]]. “Surprise!” she said. “I [[painted]] your pumpkins with special paint. They glow in the dark!”",
+              "students": "There, some older students [[jumped]] out from behind the shelves. “Happy Halloween!” they [[shouted]]. “You [[solved]] our treasure hunt!”"
+            }
+          },
+          "why": "The thief explains everything in direct speech. That makes the solution lively."
+        },
+        {
+          "l": "C",
+          "id": "scene",
+          "label": "Describe the scene",
+          "text": {
+            "by": "thief",
+            "map": {
+              "caretaker": "Inside the gym, the pumpkins [[were]] in a row next to Mr Novak. He [[wanted]] to keep them safe from a storm.",
+              "teacher": "In the art room, the curtains [[were]] closed, and all the pumpkins [[glowed]] green in the dark! Ms Okafor [[wanted]] to surprise everybody.",
+              "students": "Between the shelves, the pumpkins [[were]] in a circle. Some older students [[waited]] there with a sign: “You [[solved]] our treasure hunt!”"
+            }
+          },
+          "why": "We see the place and the pumpkins first, then we find out why."
+        }
+      ]
+    },
+    {
+      "id": "ending",
+      "slot": "ending",
+      "part": "Ending",
+      "q": "How does our story end?",
+      "de": "Der Schluss erzählt, wie die Geschichte ausgeht. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "party",
+          "label": "At the party",
+          "text": {
+            "by": "thief",
+            "map": {
+              "caretaker": "That evening, the storm [[arrived]], but the party in the gym [[was]] warm and dry. Mr Novak [[was]] the hero of Halloween!",
+              "teacher": "That evening, the green pumpkins [[glowed]] in the dark playground, and everybody [[loved]] them. It [[was]] the best school party ever!",
+              "students": "That evening, the whole school [[played]] the treasure hunt. This time, Lina and Kemal [[helped]] the older students with the clues."
+            }
+          },
+          "why": "The story ends at the party: the problem is solved, and everybody is happy."
+        },
+        {
+          "l": "B",
+          "id": "funny",
+          "label": "A funny last line",
+          "text": {
+            "by": "thief",
+            "map": {
+              "caretaker": "After that, Lina and Kemal [[helped]] Mr Novak with the decorations. From that day on, everybody at school [[called]] him Mr Pumpkin!",
+              "teacher": "After that, the friends [[painted]] faces on the windows with Ms Okafor. Their hands [[were]] green for a week!",
+              "students": "After that, the older students gave the friends a big bag of sweets. Lina and Kemal [[shared]] it with their whole class."
+            }
+          },
+          "why": "A funny or friendly last sentence makes readers smile."
+        }
+      ]
+    },
+    {
+      "id": "title",
+      "slot": "title",
+      "part": "Title",
+      "q": "Our story is finished. Which title do we choose?",
+      "de": "Zum Schluss wählen wir den Titel unserer Geschichte.",
+      "options": [
+        {
+          "l": "A",
+          "id": "question",
+          "label": "A question",
+          "text": "Where Did the Pumpkins Go?",
+          "why": "A question makes readers curious, and it keeps the secret."
+        },
+        {
+          "l": "B",
+          "id": "hint",
+          "label": "A small hint",
+          "text": {
+            "by": "thief",
+            "map": {
+              "caretaker": "Before the Storm",
+              "teacher": "A Very Green Surprise",
+              "students": "Follow the Clues!"
+            }
+          },
+          "why": "It gives a little hint, but it doesn’t tell the solution."
+        },
+        {
+          "l": "C",
+          "id": "detectives",
+          "label": "Name the detectives",
+          "text": "Two Detectives on Halloween",
+          "why": "Readers know at once: this is a mystery story with Halloween fun."
+        },
+        {
+          "l": "D",
+          "id": "trap",
+          "label": "Name the topic",
+          "trap": true,
+          "crit": "TA",
+          "text": "A Halloween Story",
+          "reject": "This title only names the topic: every Halloween story could have it. A good title makes readers curious about OUR story.",
+          "rejectDe": "Der Titel nennt nur das Thema, so könnte jede Halloween-Geschichte heißen. Ein guter Titel macht neugierig auf UNSERE Geschichte."
+        }
+      ]
+    }
+  ],
+  "order": [
+    "title",
+    "beginning",
+    "problem",
+    "clue",
+    "solution",
+    "ending"
+  ],
+  "checks": [
+    {
+      "en": "A title that makes readers curious about our story"
+    },
+    {
+      "en": "Beginning: who, where and when"
+    },
+    {
+      "en": "The problem, the clues and the solution are all in the story"
+    },
+    {
+      "en": "The story is in the past simple (direct speech can be in the present)"
+    },
+    {
+      "en": "We use was for one person or thing and were for more: the pumpkins were …"
+    },
+    {
+      "en": "Regular verbs end in -ed: stopped, carried, followed"
+    },
+    {
+      "en": "A real ending: the mystery is solved"
+    }
+  ],
+  "teacher": {
+    "aim": "Die Klasse schreibt gemeinsam einen kurzen Halloween-Krimi an der Schule und übt dabei das Past simple mit was/were und regelmäßigen Verben (auch die Schreibung: stopped, carried) sowie den Aufbau einer Geschichte mit Problem, Spuren und Auflösung.",
+    "prep": "A/B/C/D-Karten austeilen, Beamer im Vollbild. Einsatz ab: Past simple mit was/were und regelmäßigen Verben; zwei häufige unregelmäßige Formen (said, gave) kommen vor. Optional die -ed-Schreibregeln an die Tafel: stop → stopped, carry → carried, decide → decided. Bei Bedarf Wörter an die Tafel: carve (schnitzen), caretaker (Schulwart:in), clue (Hinweis, Spur), trail (Spur), wheelbarrow (Schubkarre), glow in the dark (im Dunkeln leuchten), corridor (Gang), curtains (Vorhänge), shelves (Regale), tiptoed (schlich auf Zehenspitzen). Die Aufgabe am Beamer enthält alles Nötige.",
+    "heft": "Neue Seite: Datum (rechts) und „Story“ als Überschrift (wie am Beamer), darunter 2 Zeilen für den Titel frei lassen. Jeder Teil beginnt nach einer Leerzeile, am Rand steht der Name des Teils wie am Beamer: Beginning, Problem, Clues, Solution, Ending. Am Ende was/were und die -ed-Formen grün unterstreichen.",
+    "flow": "Volltext (50 min): 4 min Aufgabe und Heft vorbereiten · 7 Entscheidungen (eine davon reine Wahl: The thief) à ca. 2 min, zusammen ca. 14 min · Abschreiben nach jeder Entscheidung, zusammen ca. 20 min · 5 min Checkliste und Past-simple-Formen zählen · 7 min Puffer. Wenn die Zeit knapp wird: Checkliste als Hausübung.",
+    "traps": "Problem B (LSA, Sprachrichtigkeit): stoped statt stopped, the pumpkins was statt were. Solution A (TA, Erfüllung der Aufgabenstellung): Der Fall wird nicht gelöst, ein Krimi braucht aber eine Auflösung. Title D (TA, Erfüllung der Aufgabenstellung): „A Halloween Story“ nennt nur das Thema, so könnte jede Halloween-Geschichte heißen.",
+    "notes": "Alle Figuren und die Schule sind frei erfunden. Die Geschichte ist ein lustiger Schulkrimi ohne Gruselelemente: Niemand hat wirklich etwas gestohlen, und wer die Kürbisse genommen hat, hatte einen guten Grund. Die Zahl der Kürbisse ruft die Klasse selbst. Wer die Kürbisse genommen hat, wählt die Klasse gleich am Anfang, damit die Spuren zur Auflösung passen. Differenzierung: Schnelle ergänzen im Absatz Clues einen Satz mit direkter Rede. Hausübung: zweite Fassung mit einer anderen Auflösung (andere Person, andere Spuren). Halloween wird nicht in allen Familien gefeiert; die Geschichte ist ein harmloser Schulkrimi, und niemand muss über eigenes Feiern sprechen."
+  }
+}

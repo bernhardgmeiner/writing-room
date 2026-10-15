@@ -1,0 +1,361 @@
+{
+  "id": "g8-story-lights-out",
+  "title": "The night the lights went out",
+  "titleDe": "Eine Nacht ohne Strom",
+  "grade": 8,
+  "level": "A2+",
+  "theme": "Gesellschaft & Zusammenleben",
+  "textType": "story",
+  "modes": [
+    "full"
+  ],
+  "lengths": {
+    "short": {
+      "label": "around 150 words",
+      "min": 135,
+      "max": 165
+    }
+  },
+  "minutes": {
+    "full": {
+      "short": 50
+    }
+  },
+  "task": {
+    "situation": "One cold evening in January, there is a power cut in the whole town of Steyr in Upper Austria. Nobody is in danger, but for a few hours there is no light, no TV and no Wi-Fi. Selin, 13, lives in a flat with her mum and her grandpa. Two of their neighbours are Mr Haas from next door and Mrs Okoro from the second floor. Write a story about the family’s special night.",
+    "instruction": "Write a story with:",
+    "points": [
+      "what the family was doing when the lights went out",
+      "how they spent the evening without electricity",
+      "how the neighbours joined in",
+      "how the night ended"
+    ],
+    "words": {
+      "short": "Write around 150 words. Use the past perfect for things that had happened before."
+    },
+    "de": "Gemeinsame Geschichte über einen Stromausfall in der ganzen Stadt: eine ruhige, schöne Nacht mit Kerzen, Spielen und Nachbar:innen. Erzählt wird in der Vergangenheit, mit Past perfect für das, was schon vorher passiert war. Zuerst wählt ihr, was die Familie gerade macht. Den Titel wählen wir zuletzt."
+  },
+  "meta": {},
+  "focus": {
+    "label": "past perfect",
+    "labelDe": "Past perfect (had + 3. Form)",
+    "min": {
+      "short": 4
+    },
+    "note": "Marked: every past perfect form (had + past participle), also with just, already or almost and in negatives (hadn’t played). Not marked: past simple forms."
+  },
+  "topicWords": [
+    "selin",
+    "grandpa",
+    "mum",
+    "candles",
+    "lights",
+    "power",
+    "neighbours",
+    "soup",
+    "lentil",
+    "haas",
+    "okoro",
+    "steyr",
+    "town",
+    "film",
+    "story",
+    "laptop"
+  ],
+  "gaps": [
+    {
+      "id": "N",
+      "step": "ending",
+      "q": "How many hours did the power cut last? Shout a number from 2 to 6.",
+      "qDe": "Wie viele Stunden war der Strom weg? Ruft eine Zahl von 2 bis 6.",
+      "type": "number",
+      "default": 4,
+      "min": 2,
+      "max": 6
+    }
+  ],
+  "steps": [
+    {
+      "id": "evening",
+      "part": "Before the power cut",
+      "q": "What was the family doing when the lights went out?",
+      "de": "Hier entscheidet ihr, was die Familie gerade macht, als der Strom ausfällt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "cook",
+          "label": "Cooking dinner",
+          "teaser": "Grandpa is making his famous lentil soup. It is almost ready."
+        },
+        {
+          "l": "B",
+          "id": "film",
+          "label": "Watching a film",
+          "teaser": "The whole family is on the sofa, and the film is getting exciting."
+        },
+        {
+          "l": "C",
+          "id": "homework",
+          "label": "Doing homework",
+          "teaser": "Selin is writing a story for English on her laptop. She is nearly finished."
+        }
+      ]
+    },
+    {
+      "id": "beginning",
+      "slot": "beginning",
+      "part": "Beginning",
+      "q": "How does our story start? Who? Where? When?",
+      "de": "Der Anfang stellt die Familie vor und sagt, wo und wann die Geschichte spielt. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "time",
+          "label": "Start with the time and place",
+          "why": "Readers know at once who, where and when, and the past perfect shows what had happened before.",
+          "text": {
+            "by": "evening",
+            "map": {
+              "cook": "It was a cold evening in January. In their flat in Steyr, Selin, her mum and her grandpa were in the kitchen. Grandpa’s lentil soup [[had been]] on the stove for an hour.",
+              "film": "It was a cold evening in January. In their flat in Steyr, Selin, her mum and her grandpa were on the sofa. They [[had already watched]] half of a film about a friendly dragon.",
+              "homework": "It was a cold evening in January. In their flat in Steyr, Selin’s mum and grandpa were cooking, and Selin was writing a story on her laptop. She [[had almost finished]] it."
+            }
+          }
+        },
+        {
+          "l": "B",
+          "id": "speech",
+          "label": "Start with direct speech",
+          "why": "Direct speech puts us right into the scene, and the family is introduced in the next sentence.",
+          "text": {
+            "by": "evening",
+            "map": {
+              "cook": "“Dinner in ten minutes!” Grandpa called. It was a cold January evening, and Selin and her mum were setting the table in their flat in Steyr. The soup smelt wonderful.",
+              "film": "“This is the best part!” Mum whispered. It was a cold January evening, and Selin, her mum and her grandpa were watching a film in their flat in Steyr.",
+              "homework": "“Only one more page!” Selin said to herself. It was a cold January evening in Steyr. Her mum and her grandpa were cooking, and she was writing a story on her laptop."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "blackout",
+      "slot": "blackout",
+      "part": "Power cut",
+      "q": "What happens when the lights go out?",
+      "de": "Hier fällt der Strom aus, und die Familie merkt, was los ist. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "sudden",
+          "label": "Short sentences",
+          "why": "‘Suddenly’ and short sentences make the moment exciting.",
+          "text": {
+            "by": "evening",
+            "map": {
+              "cook": "Suddenly, everything went black. The soup stopped bubbling, and the fridge was silent. Selin felt her way to the window. The whole town [[had gone]] dark.",
+              "film": "Suddenly, everything went black. The TV was silent, right in the middle of the best scene. Selin felt her way to the window. The whole town [[had gone]] dark.",
+              "homework": "Suddenly, everything went black. Only her laptop screen was still on, but the Wi-Fi [[had stopped]] working. Selin looked out of the window. The whole town was dark."
+            }
+          }
+        },
+        {
+          "l": "B",
+          "id": "senses",
+          "label": "What they heard and saw",
+          "why": "Sounds and pictures help readers to imagine the dark flat and the dark street.",
+          "text": {
+            "by": "evening",
+            "map": {
+              "cook": "At seven o’clock, the kitchen light went out, and the fridge stopped humming. Mum opened the curtains. Every window in the street [[had turned]] black.",
+              "film": "At seven o’clock, the screen went black, and the room went quiet. Mum opened the curtains. Every window in the street [[had turned]] black.",
+              "homework": "At seven o’clock, the desk lamp went out, and the radio in the kitchen stopped. Mum opened the curtains. Every window in the street [[had turned]] black."
+            }
+          }
+        },
+        {
+          "l": "C",
+          "id": "trap",
+          "label": "What they saw outside",
+          "trap": true,
+          "crit": "LSA",
+          "reject": "Two mistakes: ‘had went’ (→ had gone: had + past participle) and ‘didn’t had’ (→ didn’t have).",
+          "rejectDe": "Zwei Fehler: Nach had kommt die 3. Form (had gone), und nach didn’t steht die Grundform (didn’t have).",
+          "text": "Suddenly, it was completely dark in the flat. Selin went to the window. The whole town had went dark, and they didn’t had any light at all."
+        }
+      ]
+    },
+    {
+      "id": "dark",
+      "slot": "dark",
+      "part": "In the dark",
+      "q": "How does the family spend the evening?",
+      "de": "Hier macht die Familie das Beste aus der dunklen Wohnung. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "trap",
+          "label": "Quiz night",
+          "trap": true,
+          "crit": "CC",
+          "reject": "That can’t happen: there is no electricity, so the TV doesn’t work. A story must make sense from start to end.",
+          "rejectDe": "Das geht nicht: Ohne Strom läuft kein Fernseher, und eine Geschichte muss zusammenpassen.",
+          "text": "Mum found some candles in a drawer and lit them. Then Selin switched on the TV, and the whole family watched a funny quiz show together. It was a lovely evening."
+        },
+        {
+          "l": "B",
+          "id": "game",
+          "label": "An old board game",
+          "why": "The past perfect tells us what had happened earlier: the candles and the old game.",
+          "text": "Mum found some candles that she [[had bought]] for Christmas. Then Grandpa took an old board game out of the cupboard. They [[hadn’t played]] it for years, but soon everybody was laughing."
+        },
+        {
+          "l": "C",
+          "id": "shadows",
+          "label": "Shadow animals",
+          "why": "A small, warm detail: we can see the shadows on the wall.",
+          "text": "Grandpa lit some old candles. In their warm light, Selin made shadow animals on the wall: a rabbit, a dog and an eagle. Mum [[had taught]] her this trick years ago."
+        }
+      ]
+    },
+    {
+      "id": "neighbours",
+      "slot": "neighbours",
+      "part": "Neighbours",
+      "q": "How do the neighbours join in?",
+      "de": "Hier kommen die Nachbar:innen dazu. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "guitar",
+          "label": "A visitor from next door",
+          "why": "One visitor brings music, and the evening becomes a small party.",
+          "text": "An hour later, there was a knock at the door. Mr Haas from next door [[had brought]] his guitar and a torch. He played old songs all evening, and everybody sang along."
+        },
+        {
+          "l": "B",
+          "id": "stairs",
+          "label": "Voices on the stairs",
+          "why": "The whole house comes together, and the past perfect explains where the tea came from.",
+          "text": "Later, they heard voices on the stairs. Most of the neighbours [[had come]] out of their flats with candles. Mrs Okoro shared hot tea that she [[had made]] before the power cut."
+        }
+      ]
+    },
+    {
+      "id": "ending",
+      "slot": "ending",
+      "part": "Ending",
+      "q": "How does our story end?",
+      "de": "Der Schluss erzählt, wie die besondere Nacht ausgeht. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "back",
+          "label": "The lights come back",
+          "why": "The ending goes back to the start of the story and shows what Selin has learnt.",
+          "text": {
+            "by": "evening",
+            "map": {
+              "cook": "After {N} hours, the lights came back on. Grandpa heated up his soup, and they ate it by candlelight anyway. Selin realised that she [[hadn’t looked]] at her phone all evening.",
+              "film": "After {N} hours, the lights came back on, but nobody wanted to finish the film. Selin realised that she [[hadn’t looked]] at her phone all evening.",
+              "homework": "After {N} hours, the lights came back on. Selin’s laptop battery [[had died]] long before, but she didn’t mind. Now she knew exactly how to finish her story."
+            }
+          }
+        },
+        {
+          "l": "B",
+          "id": "trap",
+          "label": "Off to bed",
+          "trap": true,
+          "crit": "TA",
+          "reject": "The task asks how the night ended. A story needs a real ending, not ‘to be continued’.",
+          "rejectDe": "Die Aufgabe fragt, wie die Nacht endet: Eine Geschichte braucht einen echten Schluss, keine Fortsetzung.",
+          "text": "After {N} hours, the lights were still off, and everybody was tired. Selin went to bed with a torch. What happened next? Find out in part two of my story!"
+        },
+        {
+          "l": "C",
+          "id": "morning",
+          "label": "The next morning",
+          "why": "A look back the next morning, with a funny or warm last line.",
+          "text": {
+            "by": "evening",
+            "map": {
+              "cook": "When Selin woke up the next morning, the fridge was humming again. The town [[had been]] dark for {N} hours. For breakfast, Grandpa served his lentil soup. “Best power cut ever!” he laughed.",
+              "film": "When Selin woke up the next morning, the fridge was humming again. The town [[had been]] dark for {N} hours. “Can we have another power cut tonight?” she asked at breakfast.",
+              "homework": "When Selin woke up the next morning, the fridge was humming again. The town [[had been]] dark for {N} hours. At breakfast, she started a new story about a town without electricity."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "title",
+      "slot": "title",
+      "part": "Title",
+      "q": "Our story is finished. Which title do we choose?",
+      "de": "Zum Schluss wählen wir den Titel unserer Geschichte.",
+      "options": [
+        {
+          "l": "A",
+          "id": "night",
+          "label": "Name the night",
+          "why": "It sounds like the start of a good story and makes readers curious.",
+          "text": "The night the lights went out"
+        },
+        {
+          "l": "B",
+          "id": "place",
+          "label": "Name the place",
+          "why": "A warm picture and a real place: readers can imagine the town by candlelight.",
+          "text": "Candlelight in Steyr"
+        },
+        {
+          "l": "C",
+          "id": "question",
+          "label": "A question",
+          "why": "A question with a twinkle: the story shows that a night without electricity can be fun.",
+          "text": "Who needs electricity?"
+        }
+      ]
+    }
+  ],
+  "order": [
+    "title",
+    "beginning",
+    "blackout",
+    "dark",
+    "neighbours",
+    "ending"
+  ],
+  "checks": [
+    {
+      "en": "A title that makes readers curious"
+    },
+    {
+      "en": "Beginning: who, where and when"
+    },
+    {
+      "en": "The power cut, the evening in the dark and the neighbours are all in the story"
+    },
+    {
+      "en": "The story is told in the past (direct speech can be in the present)"
+    },
+    {
+      "en": "Past perfect for things that had happened before: had + past participle (had gone, had bought)"
+    },
+    {
+      "en": "Everything fits the power cut: no light, no TV, no Wi-Fi"
+    },
+    {
+      "en": "A real ending: the night is over"
+    }
+  ],
+  "teacher": {
+    "aim": "Die Klasse schreibt gemeinsam eine ruhige, positive Geschichte über eine Nacht ohne Strom, in der eine Familie und ihre Nachbar:innen zusammenrücken. Dabei üben die Schüler:innen das Past perfect für Vorzeitigkeit (had + 3. Form) neben dem Past simple.",
+    "prep": "A/B/C/D-Karten austeilen, Beamer im Vollbild, Hefte bereit. Einsatz ab: Past simple und Past progressive (sicher), Past perfect (had + 3. Form, eingeführt). Optional an die Tafel: go – went – gone, buy – bought – bought, teach – taught – taught. Wörter bei Bedarf erklären: power cut (Stromausfall), stove (Herd), humming (summen), torch (Taschenlampe).",
+    "heft": "Neue Seite: Datum (rechts) und „Story“ als Überschrift (wie am Beamer), darunter 2 Zeilen für den Titel frei lassen (er kommt zuletzt). Jeder Teil beginnt nach einer Leerzeile, am Rand steht der Name des Teils wie am Beamer: Beginning, Power cut, In the dark, Neighbours, Ending. Am Ende alle Past-perfect-Formen grün unterstreichen.",
+    "flow": "Volltext (50 min): 4 min Aufgabe und Heft vorbereiten · 7 Entscheidungen (die erste ist eine reine Wahl: Was macht die Familie gerade?) à ca. 2 min, zusammen ca. 14 min · Abschreiben nach jeder Entscheidung (rund 150 Wörter), zusammen ca. 22 min · 5 min Checkliste und Past-perfect-Formen markieren · 5 min Puffer. Wenn die Zeit knapp wird: Checkliste als Hausübung.",
+    "traps": "Power cut C (LSA, Sprachrichtigkeit): „had went“ statt had gone, „didn’t had“ statt didn’t have. In the dark A (CC, Kohärenz und Kohäsion): Widerspruch zum Stromausfall (der Fernseher läuft ohne Strom). Ending B (TA, Erfüllung der Aufgabenstellung): kein Schluss („Find out in part two“), die Aufgabe verlangt, wie die Nacht endet.",
+    "notes": "Die Geschichte ist ruhig und positiv: Niemand ist in Gefahr, es geht um Kerzen, Spiele und Nachbarschaft. Familie, Nachbar:innen und Wohnung sind frei erfunden; Steyr ist nur der Schauplatz. Die Stundenzahl ruft die Klasse selbst. Nach dem Abschreiben gemeinsam klären, warum jeweils Past perfect steht: Es passierte vor einem anderen Ereignis in der Vergangenheit (Grandpa’s soup had been on the stove for an hour when the lights went out). Differenzierung: Schnelle schreiben einen zusätzlichen Satz mit „because she had …“. Hausübung: zweite Fassung mit einer anderen ersten Wahl (Abendessen, Film oder Hausübung) und einem anderen Schluss."
+  }
+}

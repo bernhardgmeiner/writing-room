@@ -1,0 +1,436 @@
+{
+  "id": "g8-blog-summer-in-the-wild",
+  "title": "A summer in the wild",
+  "titleDe": "Blogbeitrag über einen besonderen Ort",
+  "grade": 8,
+  "level": "A2+",
+  "theme": "Tiere & Natur",
+  "textType": "blog",
+  "modes": [
+    "full"
+  ],
+  "lengths": {
+    "short": {
+      "label": "around 150 words",
+      "min": 135,
+      "max": 165
+    }
+  },
+  "minutes": {
+    "full": {
+      "short": 50
+    }
+  },
+  "task": {
+    "situation": "Our class nature blog ‘Field Notes’ is collecting posts about special places and the animals that live there. Our blogger, a young nature photographer from Vienna, spent part of the summer holidays in a very special place and wants to tell readers about it.",
+    "instruction": "Write a blog post in which you:",
+    "points": [
+      "describe the landscape and compare it with places you know",
+      "tell readers about the animals that surprised you most",
+      "give tips for a visit and explain how visitors can protect the place"
+    ],
+    "words": {
+      "short": "Write around 150 words."
+    },
+    "de": "Gemeinsamer Blogbeitrag über einen besonderen Ort: die Landschaft beschreiben und vergleichen, die eindrucksvollsten Tiere vorstellen, Tipps für einen Besuch und zum Schutz des Ortes geben. Mit Komparativen und Superlativen vergleicht ihr Orte und Tiere. Zuerst wählt ihr den Ort, der Titel kommt zuletzt."
+  },
+  "meta": {
+    "user": "wild_eyes_photos"
+  },
+  "focus": {
+    "label": "comparatives and superlatives",
+    "labelDe": "Komparative (mit much, far, by far) und Superlative",
+    "min": {
+      "short": 5
+    },
+    "note": "Marked: every comparative and superlative form, together with its intensifier (much, a lot, far, even, by far)."
+  },
+  "topicWords": [],
+  "gaps": [
+    {
+      "id": "N",
+      "step": "intro",
+      "q": "How many photos did our blogger take? Shout a number.",
+      "qDe": "Wie viele Fotos sind auf der Reise entstanden? Ruft eine Zahl zwischen 20 und 999.",
+      "type": "number",
+      "default": 347,
+      "min": 20,
+      "max": 999
+    }
+  ],
+  "steps": [
+    {
+      "id": "place",
+      "part": "Place",
+      "q": "Where did our blogger spend the summer?",
+      "de": "Hier wählt ihr den Ort, von dem unser Blogbeitrag erzählt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "tauern",
+          "label": "Hohe Tauern National Park, Austria",
+          "teaser": "Austria’s highest mountain, a huge glacier and a vulture that eats bones."
+        },
+        {
+          "l": "B",
+          "id": "iceland",
+          "label": "Iceland",
+          "teaser": "Waterfalls, black beaches, hot springs and thousands of puffins."
+        },
+        {
+          "l": "C",
+          "id": "costa",
+          "label": "Costa Rica",
+          "teaser": "A rainforest full of sloths, monkeys and frogs with bright red eyes."
+        }
+      ]
+    },
+    {
+      "id": "intro",
+      "slot": "intro",
+      "part": "Introduction",
+      "q": "How do we start our blog post?",
+      "de": "Mit der Einleitung beginnt unser Blogbeitrag. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "question",
+          "label": "Ask the readers a question",
+          "why": "A question speaks to readers directly and makes them curious.",
+          "text": {
+            "by": "place",
+            "map": {
+              "tauern": "Have you ever seen a real glacier? I have! This summer, I spent a week in the Hohe Tauern, [[the most exciting]] place in Austria, and took {N} photos.",
+              "iceland": "Have you ever walked behind a waterfall? I have! This summer, I spent a week in Iceland, [[the most amazing]] country I know, and took {N} photos.",
+              "costa": "Have you ever seen a frog with red eyes? I have! This summer, I spent two weeks in Costa Rica, [[the wildest]] place I know, and took {N} photos."
+            }
+          }
+        },
+        {
+          "l": "B",
+          "id": "feeling",
+          "label": "Start with a feeling",
+          "why": "Starts with a feeling: readers want to know what made the blogger so happy.",
+          "text": {
+            "by": "place",
+            "map": {
+              "tauern": "I’m still smiling! I’ve just come back from a week in the Hohe Tauern, Austria’s [[biggest]] national park. I took {N} photos, and here are my [[most exciting]] moments!",
+              "iceland": "I’m still smiling! I’ve just come back from a week in Iceland, a country of ice, fire and water. I took {N} photos, and here are my [[most exciting]] moments!",
+              "costa": "I’m still smiling! I’ve just come back from two weeks in Costa Rica, a small country in Central America. I took {N} photos, and here are my [[most exciting]] moments!"
+            }
+          }
+        },
+        {
+          "l": "C",
+          "id": "fact",
+          "label": "Start with a surprising fact",
+          "why": "A surprising fact with a comparison grabs the readers’ attention at once.",
+          "text": {
+            "by": "place",
+            "map": {
+              "tauern": "At 3,798 metres, the Großglockner is [[the highest]] mountain in Austria. This summer, I saw it with my own eyes in the Hohe Tauern National Park, and I took {N} photos!",
+              "iceland": "Iceland is [[bigger]] than Austria, but [[far fewer]] people live in the whole country than in Vienna. This summer, I spent a week on this wild island, and I took {N} photos!",
+              "costa": "Costa Rica is [[smaller]] than Austria, but it is home to a huge number of animals and plants. This summer, I spent two weeks there, and I took {N} photos!"
+            }
+          }
+        },
+        {
+          "l": "D",
+          "id": "trap",
+          "label": "Give an overview",
+          "trap": true,
+          "crit": "TA",
+          "reject": "This only lists what the post will be about, and the place is missing. A blog post starts with its topic: name the place and make readers curious.",
+          "rejectDe": "Hier wird nur angekündigt, worum es gehen wird, und der Ort fehlt. Ein Blogbeitrag beginnt mit dem Thema: Er nennt den Ort und macht neugierig.",
+          "text": "In this blog post, I am going to write about my holidays. First, I will describe the landscape, then the animals, and finally I will give you tips. I took {N} photos."
+        }
+      ]
+    },
+    {
+      "id": "landscape",
+      "slot": "landscape",
+      "part": "Body 1",
+      "q": "What did the landscape look like?",
+      "de": "Erster Inhaltspunkt: die Landschaft an unserem Reiseziel. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "home",
+          "label": "Compare it with home",
+          "why": "Readers can imagine the place because the blogger compares it with places at home.",
+          "text": {
+            "by": "place",
+            "map": {
+              "tauern": "Compared with the hills around Vienna, the mountains there are [[much higher]], and the air is [[a lot fresher]]. From a viewpoint, we looked down at the Pasterze, [[the longest]] glacier in Austria.",
+              "iceland": "Compared with Austria, Iceland looks [[much wilder]]. Instead of forests, there are waterfalls everywhere. At Reynisfjara, even the sand is black! The beach looked [[far stranger]] than anything I know from home.",
+              "costa": "Compared with Austria, Costa Rica feels [[much hotter]] and [[wetter]]. The rainforest is [[a lot greener]] than any forest at home, and the trees are so tall that you can hardly see the sky."
+            }
+          }
+        },
+        {
+          "l": "B",
+          "id": "spot",
+          "label": "Describe one special spot",
+          "why": "One special spot in detail, compared with places we know, paints a clear picture in the readers’ heads.",
+          "text": {
+            "by": "place",
+            "map": {
+              "tauern": "For me, [[the most beautiful]] view came at the end of a long hike. Below us, there were green valleys and tiny lakes, and above us, the snowy mountains looked [[much higher]] than anything near Vienna.",
+              "iceland": "For me, [[the most impressive]] place was the Geysir area. Every few minutes, a geyser called Strokkur shoots hot water high into the air. Nothing in Austria looks [[stranger]] than that!",
+              "costa": "For me, [[the most beautiful]] place was the cloud forest of Monteverde. It is [[much greener]] than any forest in Austria. We walked over hanging bridges in the treetops, and the clouds were [[lower]] than the bridges!"
+            }
+          }
+        },
+        {
+          "l": "C",
+          "id": "trap",
+          "label": "The biggest sights",
+          "trap": true,
+          "crit": "LSA",
+          "reject": "Two mistakes: before a comparative, use ‘much’ or ‘far’, not ‘very’ (much higher), and it is ‘the biggest’, not ‘the most big’.",
+          "rejectDe": "Zwei Fehler: Vor einem Komparativ steht much oder far, nicht very (much higher), und es heißt the biggest, nicht the most big.",
+          "text": {
+            "by": "place",
+            "map": {
+              "tauern": "The mountains there are very higher than the hills around Vienna, and the air is fresh. We looked down at the Pasterze glacier. It was the most big thing I have ever seen.",
+              "iceland": "Iceland looks very wilder than Austria, and there are hardly any trees. At Skógafoss, I saw the most big waterfall of my life, and the black beach at Reynisfjara looked strange.",
+              "costa": "The weather in Costa Rica is very hotter than in Austria, and the rainforest is very green. The trees were the most big trees I have ever seen, and you could hardly see the sky."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "wildlife",
+      "slot": "wildlife",
+      "part": "Body 2",
+      "q": "Which animals do we write about?",
+      "de": "Zweiter Inhaltspunkt: die Tiere, die wir gesehen haben. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "trap",
+          "label": "A quick tour of the animals",
+          "trap": true,
+          "crit": "LSR",
+          "reject": "Boring and repetitive: ‘very’ again and again, and no comparisons. Compare the animals instead: the cutest, much bigger than, by far the loudest …",
+          "rejectDe": "Langweilig und voller Wiederholungen: immer wieder very und kein einziger Vergleich. Vergleicht die Tiere lieber: the cutest, much bigger than, by far the loudest …",
+          "text": {
+            "by": "place",
+            "map": {
+              "tauern": "We saw a lot of animals there. The marmots were very cute, and the ibexes were very big. The vulture was very nice, and it was great to see all the animals in the wild.",
+              "iceland": "We saw a lot of animals there. The puffins were very cute, and the seals were very big. The fox was very nice, and it was great to see all the animals in the wild.",
+              "costa": "We saw a lot of animals there. The sloths were very cute, and the monkeys were very loud. The frogs were very nice, and it was great to see all the animals in the wild."
+            }
+          }
+        },
+        {
+          "l": "B",
+          "id": "star",
+          "label": "One animal in detail",
+          "why": "One animal with surprising facts is more interesting than a long list.",
+          "text": {
+            "by": "place",
+            "map": {
+              "tauern": "[[The most amazing]] animal was the bearded vulture. Its wings are up to 2.8 metres wide, and it mostly eats bones! Bearded vultures once died out in the Alps, but now they’re back.",
+              "iceland": "[[The cutest]] animals were the puffins. They are [[smaller]] than I expected, only about 30 centimetres long, with orange feet and colourful beaks. Watching them land on the cliffs was [[the funniest]] thing ever!",
+              "costa": "[[The funniest]] animal was the sloth, [[by far the slowest]] mammal in the world. Its fur even looks a bit green! It only climbs down from its tree about once a week."
+            }
+          }
+        },
+        {
+          "l": "C",
+          "id": "compare",
+          "label": "Compare two animals",
+          "why": "Comparing two animals shows how different they are and uses lots of comparatives.",
+          "text": {
+            "by": "place",
+            "map": {
+              "tauern": "We saw lots of marmots and a few ibexes. The marmots were [[much cuter]], but the ibexes were [[far more impressive]]: their horns are [[longer]] than my arm! Marmots whistle loudly to warn each other.",
+              "iceland": "We saw puffins and an Arctic fox. The puffins were [[much easier]] to find: there were thousands on the cliffs. The fox was [[a lot shyer]], but it was [[the most beautiful]] animal I saw.",
+              "costa": "We saw howler monkeys and red-eyed tree frogs. The frogs were [[much smaller]] than my hand, but the monkeys were [[far louder]] than an alarm clock. They woke us up at five every morning!"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "tips",
+      "slot": "tips",
+      "part": "Body 3",
+      "q": "Which tips do we give our readers?",
+      "de": "Dritter Inhaltspunkt: Tipps für Besucher:innen und wie man den Ort schützen kann. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "rules",
+          "label": "Rules for visitors",
+          "why": "Clear rules show readers how they can protect the place and its animals.",
+          "text": {
+            "by": "place",
+            "map": {
+              "tauern": "If you go there, stay on the paths and take your rubbish home. Never feed wild animals: human food makes them ill. [[The safest]] way to watch animals is from a distance.",
+              "iceland": "If you go there, stay on the paths: Iceland’s moss grows very slowly, and one footstep can damage it. Keep away from the puffins’ nests, too. [[The best]] photos come from a distance.",
+              "costa": "If you go there, stay on the paths and never touch or feed the animals. Take a local guide: guides spot animals [[much faster]] than tourists, even in the dark."
+            }
+          }
+        },
+        {
+          "l": "B",
+          "id": "danger",
+          "label": "Explain a danger to nature",
+          "why": "Explains a real danger and tells readers what they can do about it.",
+          "text": {
+            "by": "place",
+            "map": {
+              "tauern": "Sadly, the glaciers in the Alps are melting [[faster]] than ever because of climate change. You can help a little: travel there by train and bus, not by car.",
+              "iceland": "Sadly, puffins are in danger: there are [[fewer]] small fish in the sea than before, and many young puffins go hungry. If you visit, please don’t make their lives [[harder]]: keep away from their nests.",
+              "costa": "Sadly, rainforests around the world are getting [[smaller]], although Costa Rica’s forest has grown back. About a quarter of its land is in parks and reserves. You can help: choose tours that protect nature."
+            }
+          }
+        },
+        {
+          "l": "C",
+          "id": "season",
+          "label": "Give practical travel tips",
+          "why": "Practical travel tips are useful, and the blogger also asks readers to respect nature.",
+          "text": {
+            "by": "place",
+            "map": {
+              "tauern": "My top tip: go in July or August, when marmots are everywhere. Bring a warm jacket, and please stay on the paths. In the mountains, the weather changes [[faster]] than you think!",
+              "iceland": "My top tip: go in June or July, when the puffins are there. Bring a raincoat, and please stay on the paths. The weather changes [[faster]] than you can say ‘waterfall’!",
+              "costa": "My top tip: bring a raincoat because it rains almost every afternoon. Stay on the paths and never feed wild animals. Quiet groups see [[far more]] animals than loud ones!"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "ending",
+      "slot": "ending",
+      "part": "Conclusion",
+      "q": "How do we end our blog post?",
+      "de": "Im Schluss sprechen wir die Leser:innen direkt an. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "place",
+          "label": "Ask about the readers’ favourite places",
+          "why": "Sums up the trip and asks readers a question they can answer in the comments.",
+          "text": "All in all, it was [[the best]] holiday of my life. What is [[the most unusual]] place you have visited? Tell me in the comments!"
+        },
+        {
+          "l": "B",
+          "id": "trap",
+          "label": "Sum up the trip",
+          "trap": true,
+          "crit": "CC",
+          "reject": "‘At last’ means that you waited a long time for something (endlich). To sum up at the end of a post, use ‘All in all’.",
+          "rejectDe": "„At last“ heißt „endlich“ (nach langem Warten); zum Zusammenfassen passt „All in all“.",
+          "text": "At last, I can say that it was the best holiday of my life. What is your favourite place? Tell me in the comments!"
+        },
+        {
+          "l": "C",
+          "id": "animal",
+          "label": "Ask about the readers’ animal stories",
+          "why": "Readers love telling their own animal stories, so they will comment.",
+          "text": "I hope I can go back one day. What is [[the strangest]] animal you know? Write about it in the comments below!"
+        },
+        {
+          "l": "D",
+          "id": "next",
+          "label": "Ask for ideas for the next trip",
+          "why": "Asking for ideas invites readers to help and to follow the class blog.",
+          "text": "Now I want to travel [[even more]]. Where should I go next? Leave your ideas in the comments, and don’t forget to follow our class blog!"
+        }
+      ]
+    },
+    {
+      "id": "title",
+      "slot": "title",
+      "part": "Title",
+      "q": "Our blog post is finished. Which title do we choose?",
+      "de": "Zum Schluss wählen wir den Titel unseres Blogbeitrags.",
+      "options": [
+        {
+          "l": "A",
+          "id": "big",
+          "label": "A big claim",
+          "why": "A superlative in the title promises something special.",
+          "text": {
+            "by": "place",
+            "map": {
+              "tauern": "Austria’s [[most amazing]] national park",
+              "iceland": "[[The wildest]] island in Europe?",
+              "costa": "[[The greenest]] place on earth?"
+            }
+          }
+        },
+        {
+          "l": "B",
+          "id": "welcome",
+          "label": "Welcome the readers",
+          "why": "Speaks to readers directly, as if they were coming along.",
+          "text": {
+            "by": "place",
+            "map": {
+              "tauern": "Welcome to the top of Austria!",
+              "iceland": "Welcome to the land of ice and fire!",
+              "costa": "Welcome to the rainforest!"
+            }
+          }
+        },
+        {
+          "l": "C",
+          "id": "curious",
+          "label": "Make them curious",
+          "why": "Short and a little mysterious: readers want to find out more.",
+          "text": {
+            "by": "place",
+            "map": {
+              "tauern": "My week above the clouds",
+              "iceland": "My week at the edge of the Arctic",
+              "costa": "Two weeks in the jungle"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "order": [
+    "title",
+    "intro",
+    "landscape",
+    "wildlife",
+    "tips",
+    "ending"
+  ],
+  "checks": [
+    {
+      "en": "A title that catches the readers’ attention"
+    },
+    {
+      "en": "The introduction names the place and makes readers curious"
+    },
+    {
+      "en": "Landscape, animals and tips for visitors are all in the post"
+    },
+    {
+      "en": "Comparisons that help readers imagine the place: much higher than, the most beautiful, by far the slowest"
+    },
+    {
+      "en": "Much or far before a comparative (much higher, not very higher), and no ‘the most big’"
+    },
+    {
+      "en": "The post ends with a question for the readers"
+    }
+  ],
+  "teacher": {
+    "aim": "Die Klasse baut gemeinsam einen Blogbeitrag über einen besonderen Ort und seine Tierwelt (Hohe Tauern, Island oder Costa Rica) und wiederholt dabei die Steigerung der Adjektive mit Intensifiers (much higher, far more impressive, by far the slowest) und Superlativen.",
+    "prep": "A/B/C/D-Karten austeilen, Beamer im Vollbild, Timer bereithalten. Bei Bedarf Wörter an die Tafel: glacier (Gletscher), bearded vulture (Bartgeier), ibex (Steinbock), marmot (Murmeltier), puffin (Papageitaucher), moss (Moos), cloud forest (Nebelwald), hanging bridge (Hängebrücke), sloth (Faultier), howler monkey (Brüllaffe), mammal (Säugetier), cliff (Klippe), beak (Schnabel), whistle (pfeifen), shy (scheu), geyser (Geysir), die out (aussterben), reserve (Schutzgebiet). Einsatz ab: Steigerung der Adjektive (Komparativ mit than, Superlativ) und Past simple.",
+    "heft": "Neue Seite: Datum rechts oben, darunter „Blog post“ als Überschrift (wie am Beamer). Dann 2 Zeilen für den Titel frei lassen (der Titel kommt zuletzt), darunter Username und Datum in einer Zeile (wie am Beamer). Jeder Absatz beginnt nach einer Leerzeile, am Rand steht der Name des Teils wie am Beamer: Introduction, Body 1, Body 2, Body 3, Conclusion. Komparative und Superlative (mit much, far, by far …) grün unterstreichen.",
+    "flow": "Volltext (50 min): 4 min Aufgabe lesen und Ort wählen · 6 weitere Entscheidungen à ca. 2–3 min, zusammen ca. 15 min · Abschreiben nach jeder Entscheidung, zusammen ca. 20 min · 5 min Checkliste · 6 min Puffer. Wenn die Zeit knapp wird: Checkliste als Hausübung.",
+    "traps": "Introduction D (TA, Erfüllung der Aufgabenstellung): kündigt nur die Inhaltspunkte an, der Ort fehlt. Body 1 C (LSA, Sprachrichtigkeit): „very higher“ / „very wilder“ / „very hotter“ (je nach Ort) statt much / far + Komparativ, und „the most big“ statt the biggest. Gut zum Besprechen: very green (richtig) neben very hotter (falsch). Body 2 A (LSR, Spektrum sprachlicher Mittel): immer wieder „very“ (very cute, very big, very nice), keine Vergleiche. Conclusion B (CC, Kohärenz und Kohäsion): „At last“ (endlich) statt „All in all“ zum Zusammenfassen, typische Verwechslung mit „zuletzt“.",
+    "notes": "Die Fakten sind geprüft: Großglockner 3.798 m, Hohe Tauern größter Nationalpark Österreichs, Pasterze längster Gletscher Österreichs, Bartgeier (Spannweite bis 2,8 m, frisst vor allem Knochen) in den Alpen ausgestorben und seit 1986 wieder angesiedelt; Island ist größer als Österreich, hat aber viel weniger Einwohner:innen als Wien, Strokkur bricht alle paar Minuten aus, isländisches Moos wächst extrem langsam (ein Fußtritt hinterlässt jahrelang Schäden), Papageitaucher (ca. 30 cm) gelten als gefährdet, weil ihnen Futterfische fehlen; Costa Rica ist kleiner als Österreich und schützt rund ein Viertel seiner Fläche (Nationalparks allein ca. 13 %, dazu Reservate und Schutzgebiete); die Waldfläche ist dort seit den 1980er-Jahren wieder gewachsen, weltweit schrumpfen Regenwälder aber weiter, Faultiere klettern etwa einmal pro Woche vom Baum, Algen färben ihr Fell grünlich. Die Steigerung von shy ist shyer (auch shier möglich). In Body 1 vergleicht jede Karte den Ort mit Bekanntem aus Österreich (erster Inhaltspunkt). Bei schwächeren Gruppen die Falle in der Introduction nur kurz besprechen. Nicht direkt nach dem Neuseeland-Blog einsetzen: gleiche Textsorte, ähnliche Situation. Differenzierung: Schnelle schreiben einen eigenen Satz mit by far + Superlativ über ein Tier aus dem Text. Hausübung: zweite Fassung mit einem anderen Ort oder ein Blog-Kommentar (ca. 50 Wörter) als Antwort auf die Frage im Schluss."
+  }
+}

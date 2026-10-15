@@ -1,0 +1,305 @@
+{
+  "id": "g7-review-film-night",
+  "title": "Worth watching? Our film night review",
+  "titleDe": "Filmkritik nach dem Filmabend",
+  "grade": 7,
+  "level": "A2",
+  "theme": "Kultur & Kreativität",
+  "textType": "review",
+  "modes": [
+    "full"
+  ],
+  "lengths": {
+    "short": {
+      "label": "around 120 words",
+      "min": 105,
+      "max": 135
+    }
+  },
+  "minutes": {
+    "full": {
+      "short": 50
+    }
+  },
+  "task": {
+    "situation": "Last Friday, your class had a film night and watched “The Kettlebridge Ghost Club”, a new family adventure film. In the film, three friends, Nell, Priya and Ade, live in a quiet seaside town. Every night, strange lights appear in the old cinema. Write a review of the film for the school website.",
+    "instruction": "Write a film review. In your review:",
+    "points": [
+      "say what the film is about (no spoilers!)",
+      "describe what works well in the film",
+      "say who should watch it and why it gets four stars"
+    ],
+    "words": {
+      "short": "Write around 120 words."
+    },
+    "de": "Eine Filmkritik für die Schulwebsite zu einem erfundenen Familienfilm: worum es geht (ohne das Ende zu verraten), was gut gelungen ist, für wen der Film passt und warum er vier Sterne bekommt."
+  },
+  "meta": {
+    "publication": "The Film Night Page",
+    "rating": 4,
+    "byline": "the film club"
+  },
+  "focus": {
+    "label": "-ed / -ing adjectives + opinion phrases",
+    "labelDe": "Adjektive auf -ed / -ing und Meinungsausdrücke",
+    "min": {
+      "short": 4
+    },
+    "note": "Marked: every adjective ending in -ed or -ing (frightened / frightening) and the opinion phrases In my opinion, I think, For me, If you ask me, I found and To be honest."
+  },
+  "topicWords": [
+    "film",
+    "ghost",
+    "club",
+    "kettlebridge",
+    "cinema",
+    "nell",
+    "priya",
+    "ade"
+  ],
+  "gaps": [
+    {
+      "id": "AGE",
+      "step": "recommend",
+      "q": "What is the youngest age for this film? Shout a number from 6 to 12.",
+      "qDe": "Ab welchem Alter passt der Film? Ruft eine Zahl zwischen 6 und 12.",
+      "type": "number",
+      "default": 9,
+      "min": 6,
+      "max": 12
+    }
+  ],
+  "steps": [
+    {
+      "id": "intro",
+      "slot": "intro",
+      "part": "Introduction",
+      "q": "How do we start the review?",
+      "de": "Erster Absatz: welcher Film, wann wir ihn gesehen haben und ein erster Eindruck. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "question",
+          "label": "Start with a question",
+          "text": "Do you like funny films with a few scary moments? Then “The Kettlebridge Ghost Club” is for you. We watched it at our film night last Friday.",
+          "why": "The question speaks to readers directly and tells them what kind of film it is."
+        },
+        {
+          "l": "B",
+          "id": "evening",
+          "label": "Start with the evening",
+          "text": "Last Friday was our class film night, and we watched “The Kettlebridge Ghost Club”. [[In my opinion]], it is one of the best family films of the year.",
+          "why": "First the facts, then a clear opinion: readers know what we think."
+        },
+        {
+          "l": "C",
+          "id": "surprise",
+          "label": "Start with a surprise",
+          "text": "What a [[surprising]] film! At our film night last Friday, we watched “The Kettlebridge Ghost Club”, and it was much better than we expected.",
+          "why": "A short, strong first sentence makes readers curious."
+        }
+      ]
+    },
+    {
+      "id": "plot",
+      "slot": "plot",
+      "part": "The story",
+      "q": "What is the film about?",
+      "de": "Zweiter Absatz: worum es im Film geht. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "ending",
+          "label": "From start to finish",
+          "text": "Nell, Priya and Ade start a ghost club in their seaside town. In the end, they find out that the ghost is just Priya’s grandad with a torch!",
+          "trap": true,
+          "crit": "TA",
+          "reject": "Spoiler! This tells the end of the film, so now nobody needs to watch it. A review keeps the ending secret.",
+          "rejectDe": "Achtung, Spoiler: Hier wird das Ende verraten. In einer Kritik bleibt der Schluss geheim."
+        },
+        {
+          "l": "B",
+          "id": "lights",
+          "label": "The strange lights",
+          "text": "The film is set in a quiet seaside town. When strange lights appear in the old cinema every night, Nell, Priya and Ade decide to start a ghost club.",
+          "why": "It tells the start of the story and makes readers curious."
+        },
+        {
+          "l": "C",
+          "id": "newgirl",
+          "label": "The new girl",
+          "text": "Nell is new in town, and she feels lonely. One day she meets Priya and Ade, and together they discover a [[frightening]] secret in the old cinema.",
+          "why": "We meet the main character first, and the secret stays a secret."
+        }
+      ]
+    },
+    {
+      "id": "good",
+      "slot": "good",
+      "part": "What works well",
+      "q": "What works well in the film?",
+      "de": "Dritter Absatz: was am Film gut gelungen ist. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "actors",
+          "label": "The actors",
+          "text": "The young actors are great. Ade is always [[frightened]], but he never runs away, and [[for me]], he is the funniest character.",
+          "why": "Frightened describes how Ade feels, so it ends in -ed."
+        },
+        {
+          "l": "B",
+          "id": "look",
+          "label": "The look and the music",
+          "text": "The old cinema looks [[amazing]], with dusty red seats and velvet curtains. [[I found]] the music [[exciting]] too, especially in the chase scenes.",
+          "why": "Amazing and exciting describe what the film does to us, so they end in -ing."
+        },
+        {
+          "l": "C",
+          "id": "scenes",
+          "label": "The night scenes",
+          "text": "The night scenes in the cinema are really excited, and I was very interesting in the story from start to finish.",
+          "trap": true,
+          "crit": "LSA",
+          "reject": "Two mistakes: the scenes are exciting (they make us feel something), and I was interested (that is how I felt).",
+          "rejectDe": "Zwei Fehler: Die Szenen sind „exciting“ (sie lösen ein Gefühl aus), und ich war „interested“ (so habe ich mich gefühlt)."
+        }
+      ]
+    },
+    {
+      "id": "best",
+      "slot": "best",
+      "part": "Best part",
+      "q": "What is the best part of the film?",
+      "de": "Vierter Absatz: unser Lieblingsteil des Films, ohne das Ende zu verraten. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "dog",
+          "label": "The dog",
+          "text": "[[If you ask me]], the real star is Pickle, Ade’s little dog. Every scene with him is [[amusing]], and we all laughed when he stole the popcorn.",
+          "why": "A funny detail shows readers why the film is fun."
+        },
+        {
+          "l": "B",
+          "id": "jokes",
+          "label": "Funny moments",
+          "text": "There are lots of funny moments in the film. For example, the music is great, and the colours are beautiful too.",
+          "trap": true,
+          "crit": "CC",
+          "reject": "‘For example’ must give an example of the sentence before. Great music is not a funny moment.",
+          "rejectDe": "Nach „For example“ muss ein Beispiel für den Satz davor kommen. Gute Musik ist aber kein lustiger Moment."
+        },
+        {
+          "l": "C",
+          "id": "night",
+          "label": "The night scene",
+          "text": "The [[thrilling]] night scene is the best part of the film. [[I think]] even our teachers were a bit [[scared]], and some of us screamed!",
+          "why": "Thrilling describes the scene, and scared describes how people felt."
+        }
+      ]
+    },
+    {
+      "id": "recommend",
+      "slot": "recommend",
+      "part": "Recommendation",
+      "q": "Who should watch it, and why four stars?",
+      "de": "Letzter Absatz: für wen der Film passt und warum er vier Sterne bekommt. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "verdict",
+          "label": "Our verdict",
+          "text": "After my opinion, it is a great film for everybody over {AGE}. It makes a lot of fun, and we give it four stars. Don’t miss it!",
+          "trap": true,
+          "crit": "LSA",
+          "reject": "Two mistakes from German: say ‘In my opinion’ (not ‘After my opinion’) and ‘It is a lot of fun’ (not ‘It makes a lot of fun’).",
+          "rejectDe": "Zwei Fehler aus dem Deutschen: „Meiner Meinung nach“ heißt „In my opinion“, und „Es macht viel Spaß“ heißt „It is a lot of fun“."
+        },
+        {
+          "l": "B",
+          "id": "honest",
+          "label": "One small problem",
+          "text": "[[To be honest]], the middle is a bit slow, so it only gets four stars. Still, it is great for anyone aged {AGE} or older.",
+          "why": "We are fair: one weak point explains why it gets four stars, not five."
+        },
+        {
+          "l": "C",
+          "id": "worth",
+          "label": "Worth watching?",
+          "text": "Worth watching? Yes! Everybody from {AGE} to 80 is going to love it. We give it four stars because the middle is a little long.",
+          "why": "A short question and answer, then the stars with a reason."
+        }
+      ]
+    },
+    {
+      "id": "title",
+      "slot": "title",
+      "part": "Title",
+      "q": "Which title do we choose for our review?",
+      "de": "Wählt einen Titel, der neugierig auf die Kritik macht.",
+      "options": [
+        {
+          "l": "A",
+          "id": "lights",
+          "label": "A play on words",
+          "text": "Lights, camera, ghosts!",
+          "why": "It plays with a famous film phrase and fits the story."
+        },
+        {
+          "l": "B",
+          "id": "night",
+          "label": "A promise",
+          "text": "A spooky night you won’t forget",
+          "why": "It tells readers how the film feels."
+        },
+        {
+          "l": "C",
+          "id": "verdict",
+          "label": "Our verdict",
+          "text": "Funny, spooky and worth it",
+          "why": "Readers get our opinion before they read the review."
+        }
+      ]
+    }
+  ],
+  "order": [
+    "title",
+    "intro",
+    "plot",
+    "good",
+    "best",
+    "recommend"
+  ],
+  "checks": [
+    {
+      "en": "The title makes readers curious"
+    },
+    {
+      "en": "The first paragraph names the film and our film night"
+    },
+    {
+      "en": "The story has no spoilers"
+    },
+    {
+      "en": "We say what works well in the film"
+    },
+    {
+      "en": "We say who should watch it, and the stars match our opinion"
+    },
+    {
+      "en": "-ed adjectives for feelings, -ing adjectives for things that cause them"
+    },
+    {
+      "en": "Opinion phrases like ‘In my opinion’ or ‘I think’"
+    }
+  ],
+  "teacher": {
+    "aim": "Die Klasse schreibt gemeinsam eine Filmkritik zu einem erfundenen Familienfilm für die Schulwebsite und übt Adjektive auf -ed und -ing (frightened / frightening) sowie Meinungsausdrücke (In my opinion, I think, For me …).",
+    "prep": "A/B/C/D-Karten austeilen, Hefte bereitlegen, Beamer im Vollbild. Einsatz ab: Past simple, Present simple für den Inhalt einer Geschichte und der Unterschied zwischen -ed-Adjektiven (Gefühl) und -ing-Adjektiven (Auslöser). Bei Bedarf an die Tafel: spoiler (Verraten des Endes), torch (Taschenlampe), velvet curtains (Samtvorhänge), chase scene (Verfolgungsjagd), thrilling (spannend), amusing (lustig), scared (ängstlich, erschrocken).",
+    "heft": "Neue Seite: Datum (rechts) und „Review“ als Überschrift (wie am Beamer). Zwei Zeilen für den Titel frei lassen, darunter vier von fünf Sternen zeichnen und „by the film club“ schreiben. Jeder Absatz beginnt nach einer Leerzeile, am Rand steht der Name des Teils wie am Beamer (Introduction, The story, What works well, Best part, Recommendation). Am Ende -ed/-ing-Adjektive grün, Meinungsausdrücke blau unterstreichen.",
+    "flow": "Volltext (50 min): 3 min Aufgabe lesen und Seite anlegen · 6 Entscheidungen à ca. 3 min, zusammen ca. 17 min (das Alter für die Empfehlung ruft die Klasse bei Recommendation) · Abschreiben nach jeder Entscheidung, zusammen ca. 20 min (rund 120 Wörter) · 6 min Checkliste und Unterstreichen · 4 min Puffer. Den Titel wählt die Klasse am Ende, er steht aber oben im Heft.",
+    "traps": "The story A (TA, Erfüllung der Aufgabenstellung): verrät das Ende des Films (Spoiler). What works well C (LSA, Sprachrichtigkeit): „excited“ statt „exciting“ für die Szenen, „interesting“ statt „interested“ für das eigene Gefühl. Best part B (CC, Kohärenz und Kohäsion): „For example“ leitet kein Beispiel für den Satz davor ein (Musik und Farben sind keine lustigen Momente). Recommendation A (LSA, Sprachrichtigkeit): Transfer aus dem Deutschen: „After my opinion“ statt „In my opinion“, „It makes a lot of fun“ statt „It is a lot of fun“.",
+    "notes": "Film, Figuren und Stadt sind frei erfunden. Die Merkregel an die Tafel: -ed = so fühle ich mich (I was frightened), -ing = so ist etwas (a frightening secret). Die Handlung steht im Present simple, der Filmabend im Past simple. Alle gültigen Empfehlungen passen zu vier Sternen; wer möchte, kann die Klasse kurz diskutieren lassen, ob ein langsamer Mittelteil einen Stern kosten soll. Differenzierung: Schnelle schreiben einen Satz über ihre Lieblingsfigur mit einem -ed- und einem -ing-Adjektiv. Hausübung: eine kurze Kritik (ca. 80 Wörter) zu einem Film oder einer Serie nach Wahl, mit Sternen."
+  }
+}

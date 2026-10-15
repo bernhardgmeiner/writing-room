@@ -1,0 +1,476 @@
+{
+  "id": "g11-article-working-from-home",
+  "title": "Working from home: dream or trap?",
+  "titleDe": "Homeoffice – Traum oder Falle?",
+  "grade": 11,
+  "level": "B1+/B2",
+  "theme": "Arbeit & Zukunft",
+  "textType": "article",
+  "modes": [
+    "full",
+    "frame"
+  ],
+  "lengths": {
+    "short": {
+      "label": "around 250 words",
+      "min": 225,
+      "max": 275
+    },
+    "long": {
+      "label": "around 400 words",
+      "min": 360,
+      "max": 440
+    }
+  },
+  "minutes": {
+    "full": {
+      "short": 50,
+      "long": 100
+    },
+    "frame": {
+      "short": 60,
+      "long": 100
+    }
+  },
+  "task": {
+    "situation": "‘Fresh Ink’, an online magazine written by young people, is preparing an issue called ‘Tomorrow’s jobs’. Many adults now work from home on some days of the week, and the editors want to know what young readers think about it. They have invited articles on the question ‘Working from home: dream or trap?’",
+    "instruction": "Write an article in which you:",
+    "points": [
+      "describe how working from home changes people’s everyday lives",
+      "weigh up the advantages and drawbacks of working from home for employees",
+      "predict how your generation will work in the future"
+    ],
+    "words": {
+      "short": "Give your article a title. Write around 250 words.",
+      "long": "Give your article a title. Write around 400 words."
+    },
+    "de": "Ein Artikel für ein Online-Magazin junger Leute zum Thema Homeoffice. Drei Inhaltspunkte: beschreiben, wie Homeoffice den Alltag verändert; Vor- und Nachteile für Arbeitnehmer:innen abwägen; vorhersagen, wie eure Generation arbeiten wird. Den Titel wählen wir ganz zum Schluss."
+  },
+  "meta": {
+    "publication": "Fresh Ink · online magazine · issue ‘Tomorrow’s jobs’"
+  },
+  "focus": {
+    "label": "future forms for predictions",
+    "labelDe": "Zukunftsformen für Vorhersagen",
+    "min": {
+      "short": 5,
+      "long": 8
+    },
+    "note": "Marked: verb forms that make predictions, from the future word to the main verb: will / won’t + verb (will spend), will be + -ing (will be working), will have + past participle (will have disappeared) and be likely / unlikely to + verb. ‘Would’, ‘could’ and ‘might’ are not marked."
+  },
+  "topicWords": [
+    "work",
+    "working",
+    "home",
+    "office",
+    "offices",
+    "job",
+    "jobs",
+    "employees"
+  ],
+  "gaps": [
+    {
+      "id": "NAME",
+      "step": "everyday",
+      "q": "Who do we quote? Give our web designer a first name.",
+      "qDe": "Ruft einen Vornamen für die Person, die wir zitieren. Keine Namen von Mitschüler:innen oder Lehrer:innen.",
+      "type": "text",
+      "default": "Miriam",
+      "max": 20
+    },
+    {
+      "id": "AGE",
+      "step": "everyday",
+      "q": "How old is the web designer?",
+      "qDe": "Wie alt ist die Person? Ruft ein Alter zwischen 22 und 65.",
+      "type": "number",
+      "default": 29,
+      "min": 22,
+      "max": 65
+    }
+  ],
+  "steps": [
+    {
+      "id": "angle",
+      "part": "Position",
+      "q": "Which position does our article take?",
+      "de": "Zuerst wählt ihr die Position, nach der sich Abwägung, Vorhersage und Schluss richten.",
+      "options": [
+        {
+          "l": "A",
+          "id": "dream",
+          "label": "Mostly a dream",
+          "teaser": "Working from home gives people more freedom, as long as they set clear rules."
+        },
+        {
+          "l": "B",
+          "id": "pitfall",
+          "label": "More of a trap",
+          "teaser": "Working from home sounds great, but it often costs more than it gives."
+        }
+      ]
+    },
+    {
+      "id": "intro",
+      "slot": "intro",
+      "part": "Introduction",
+      "q": "How do we open the article?",
+      "de": "Der erste Absatz soll Leser:innen neugierig machen und zur Frage des Artikels führen. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then finish the introduction in your own words and end with a question to the readers.",
+      "ownDe": "Gerüst abschreiben, dann den Einstieg mit eigenen Worten fertigschreiben und mit einer Frage an die Leser:innen enden.",
+      "options": [
+        {
+          "l": "A",
+          "id": "trap",
+          "label": "Straight to the topic",
+          "trap": true,
+          "crit": "LSR",
+          "text": "Many people work at home now. It is nice for them because they have more time. They can get up later and they do not need to take the bus. But it is also bad for them. They are alone a lot and they work a lot. So is it a good thing or a bad thing? This article will tell you.",
+          "reject": "Short, very basic sentences and vague words (nice, good, bad, a lot) make this sound far below B2. An introduction needs a hook and a wider range of vocabulary.",
+          "rejectDe": "Kurze, sehr einfache Sätze und vage Wörter (nice, good, bad, a lot): Für dieses Niveau braucht es einen Hook und mehr Wortschatz."
+        },
+        {
+          "l": "B",
+          "id": "question",
+          "label": "Ask the readers",
+          "text": "{{Have you ever seen someone answer work emails}} at the weekend or join a video call in slippers? Scenes like these are now normal. {{For some, working from home is}} pure freedom, while others feel they never really leave the office. {{So which [[will it be]]}} for our generation: dream or trap?",
+          "why": "A question about the readers’ own experience makes the topic personal at once."
+        },
+        {
+          "l": "C",
+          "id": "scene",
+          "label": "Start with a scene",
+          "text": "{{It is ten o’clock at night. Although}} work officially ended hours ago, the laptop is still open on the kitchen table and the phone keeps buzzing. {{For millions of people, this is}} what working from home looks like. Is it the freedom everybody dreamt of, or a trap that [[will catch]] our generation too?",
+          "why": "A short scene shows the problem without explaining it. The final question opens the debate."
+        }
+      ]
+    },
+    {
+      "id": "everyday",
+      "slot": "everyday",
+      "part": "Body paragraph 1",
+      "q": "Content point 1: how does working from home change everyday life?",
+      "de": "Erster Inhaltspunkt: wie Homeoffice den Alltag verändert. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then describe in your own words how everyday life changes. Give an example of your own (you can invent it).",
+      "ownDe": "Gerüst abschreiben, dann mit eigenen Worten beschreiben, wie sich der Alltag verändert. Ein eigenes, gern erfundenes Beispiel geben.",
+      "options": [
+        {
+          "l": "A",
+          "id": "routines",
+          "label": "New routines",
+          "text": "{{When the office moves into your flat,}} everyday routines change completely. The living room becomes an office, and the commute shrinks to ten steps from the bedroom. {{The catch is that}} work also creeps into the evenings: a quick look at the phone after dinner easily turns into an hour of emails.",
+          "why": "Clear topic sentence and everyday examples that every reader can picture."
+        },
+        {
+          "l": "B",
+          "id": "voice",
+          "label": "A real example",
+          "text": "{{For many employees, the working day no longer has a clear end.}} {NAME}, {AGE}, a web designer from Linz, knows this well. “I start at eight, take the dog for a walk at lunchtime and answer emails until late at night,” {{the designer explains.}} “{{On top of that,}} my desk is our dining table.”",
+          "why": "A quote from a real-sounding person shows the change instead of just explaining it."
+        },
+        {
+          "l": "C",
+          "id": "trap",
+          "label": "Describe everyday life",
+          "trap": true,
+          "crit": "LSA",
+          "text": "Many people work from home since the pandemic. They can cook their own lunch and wear comfortable clothes, but often their boss calls them in the evening because the company wants that they send some more informations. Some even check their emails in bed late at night. So work and free time get mixed up.",
+          "reject": "Three typical mistakes: ‘work from home since the pandemic’ (→ have been working), ‘wants that they send’ (→ wants them to send) and ‘informations’ (→ information, no plural).",
+          "rejectDe": "Drei typische Fehler: since verlangt Present perfect (have been working), want that → want them to send, information hat keine Mehrzahl."
+        }
+      ]
+    },
+    {
+      "id": "who",
+      "slot": "who",
+      "part": "Body paragraph 1",
+      "join": true,
+      "len": "long",
+      "q": "Who can work from home, and who cannot?",
+      "de": "Der Absatz geht weiter: Wer kann im Homeoffice arbeiten und wer nicht? Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then add two jobs that cannot be done from home and say why.",
+      "ownDe": "Gerüst abschreiben, dann zwei Berufe ergänzen, die man nicht im Homeoffice ausüben kann, und begründen.",
+      "options": [
+        {
+          "l": "A",
+          "id": "jobs",
+          "label": "Jobs that need people on the spot",
+          "text": "{{Working from home, though, is only possible in}} certain jobs. Nurses, bus drivers, bakers and hairdressers cannot do their work from a laptop because their jobs depend on being there in person. {{For them, everyday life [[will hardly change]]:}} home and work [[will always remain]] two very different places.",
+          "why": "Adds an important limit to the trend and gives several concrete examples."
+        },
+        {
+          "l": "B",
+          "id": "privilege",
+          "label": "A privilege for some",
+          "text": "{{Of course, not everyone can work from home.}} A dentist cannot treat patients over Wi-Fi, and a mechanic cannot repair a car from the sofa. {{In other words, working from home is mainly}} an option for office workers, and that [[is unlikely to change]]: many people [[will continue]] to go out to work every day.",
+          "why": "Two surprising examples make the point memorable. ‘In other words’ sums it up."
+        }
+      ]
+    },
+    {
+      "id": "weigh",
+      "slot": "weigh",
+      "part": "Body paragraph 2",
+      "q": "Content point 2: what are the advantages and drawbacks?",
+      "de": "Zweiter Inhaltspunkt: Was bedeutet Homeoffice für Arbeitnehmer:innen? Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then add one advantage and one drawback in your own words.",
+      "ownDe": "Gerüst abschreiben, dann einen Vorteil und einen Nachteil mit eigenen Worten ergänzen.",
+      "options": [
+        {
+          "l": "A",
+          "id": "trap",
+          "label": "Time, clothes and lunch",
+          "trap": true,
+          "crit": "TA",
+          "text": "For employees, the advantages are really great. You save time because you do not have to commute, you can wear comfortable clothes and you can plan your day the way you like. You can also cook your own lunch and spend more time with your pets. On top of that, you can take a short break whenever you want.",
+          "reject": "The task says ‘weigh up the advantages AND drawbacks’. This paragraph only lists advantages, so content point 2 is only half done.",
+          "rejectDe": "„Weigh up“ heißt Vor- UND Nachteile abwägen. Hier stehen nur Vorteile: Inhaltspunkt 2 ist nur halb erfüllt."
+        },
+        {
+          "l": "B",
+          "id": "twosides",
+          "label": "Weigh up both sides",
+          "text": {
+            "by": "angle",
+            "map": {
+              "dream": "{{On the one hand, the benefits for remote workers are obvious.}} Employees save the time and money they would spend commuting, and flexible hours let them work when they concentrate best. {{On the other hand, some people feel lonely}} without colleagues, and it can be hard to switch off. {{Even so,}} clear rules [[will solve]] most of these problems.",
+              "pitfall": "{{On the one hand, the benefits for remote workers are obvious.}} Employees save the time and money they would spend commuting, and flexible hours let them work when they concentrate best. {{On the other hand, some people feel lonely}} without colleagues, and it can be hard to switch off. {{In the end,}} these drawbacks [[are likely to outweigh]] the time people save."
+            }
+          },
+          "why": "The classic structure for weighing up, with a final sentence that shows our position."
+        },
+        {
+          "l": "C",
+          "id": "benefitsfirst",
+          "label": "Benefits first, then the catch",
+          "text": {
+            "by": "angle",
+            "map": {
+              "dream": "{{Still, working from home clearly}} has real benefits. Without a daily commute, employees gain time for sport or sleep. {{In addition,}} many work better in a quiet room than in an open-plan office. {{However, there is a drawback, too:}} colleagues turn into faces on a screen. {{Even so,}} few who have tried it [[will want]] to go back.",
+              "pitfall": "{{Still, working from home clearly}} has real benefits. Without a daily commute, employees gain time for sport or sleep. {{In addition,}} many work better in a quiet room than in an open-plan office. {{However, the price is high:}} colleagues turn into faces on a screen, and the job follows you into every room. Sooner or later, many [[will miss]] the office."
+            }
+          },
+          "why": "Starts with a strong statement, then turns with ‘however’. The ending shows which side wins for us."
+        }
+      ]
+    },
+    {
+      "id": "limits",
+      "slot": "limits",
+      "part": "Body paragraph 2",
+      "join": true,
+      "len": "long",
+      "q": "How can people protect their private life?",
+      "de": "Der Absatz geht weiter: Wie lassen sich Arbeit und Freizeit trennen? Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then add one more tip and explain why it works.",
+      "ownDe": "Gerüst abschreiben, dann einen weiteren Tipp ergänzen und begründen.",
+      "options": [
+        {
+          "l": "A",
+          "id": "rules",
+          "label": "Simple personal rules",
+          "text": "{{Keeping work and home life apart is the real challenge, but simple habits help.}} A separate corner for work tells the brain to switch modes. {{Moreover, a short walk at the end of the day}} can replace the journey home. People who build such habits now [[will find]] it easier to relax later.",
+          "why": "Practical tips that anyone can try, with a reason for each."
+        },
+        {
+          "l": "B",
+          "id": "employers",
+          "label": "What employers can do",
+          "text": "{{Employers can help with the biggest challenge: keeping work and free time apart.}} Some companies, for example, block internal emails in the evening so that nobody feels pressure to answer at night. {{Measures like these}} protect people’s private lives, and more firms [[will follow]] soon.",
+          "why": "Shows that employers can help, too, with a real measure as an example."
+        }
+      ]
+    },
+    {
+      "id": "predict",
+      "slot": "predict",
+      "part": "Body paragraph 3",
+      "q": "Content point 3: how will our generation work?",
+      "de": "Dritter Inhaltspunkt: Wie wird unsere Generation in Zukunft arbeiten? Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then write your own prediction with ‘will be working’, ‘will have changed’ or ‘is likely to’.",
+      "ownDe": "Gerüst abschreiben, dann eine eigene Vorhersage mit will be working, will have changed oder is likely to schreiben.",
+      "options": [
+        {
+          "l": "A",
+          "id": "hybrid",
+          "label": "A hybrid future",
+          "text": {
+            "by": "angle",
+            "map": {
+              "dream": "{{As for the future, I expect that by the time we are thirty,}} the classic nine-to-five job [[will have disappeared]]. {{Instead, most of us [[will work]]}} in a hybrid way, spending two or three days at home and the rest in the office. {{Thanks to fast internet,}} some [[will be answering]] emails from a beach in Greece.",
+              "pitfall": "{{As for the future, I expect my generation [[will work]] flexibly,}} but not alone behind a screen. {{Instead, many of us [[will probably prefer]]}} co-working spaces or offices with fixed team days because we need other people. {{Furthermore, I could imagine}} a ‘right to disconnect’, as in France, becoming law in Austria."
+            }
+          },
+          "why": "A clear prediction with future forms, supported by concrete details."
+        },
+        {
+          "l": "B",
+          "id": "freelance",
+          "label": "A generation of freelancers",
+          "text": {
+            "by": "angle",
+            "map": {
+              "dream": "{{Looking ahead, I think}} fewer of us [[will spend]] our whole career with one company. {{Instead, many [[will be working]]}} as freelancers, choosing their own projects and hours. {{Because of this, the most important skill [[will be]]}} self-management: knowing when to start, when to stop and how to stay motivated without a boss.",
+              "pitfall": "{{Looking ahead, I think}} more and more of us [[will work]] as freelancers or gig workers. This may sound exciting, yet it also means less job security and no colleagues to share problems with. {{In such a world, the most important skill [[will be]]}} knowing where your job ends and your life begins."
+            }
+          },
+          "why": "Uses topic vocabulary such as ‘freelancer’ and shows what the change means for our generation."
+        },
+        {
+          "l": "C",
+          "id": "trap",
+          "label": "Computers and robots",
+          "trap": true,
+          "crit": "CC",
+          "text": "Meanwhile, my generation will work in many different ways. Some people, for instance, will work from home every day, while others will never work from home. Moreover, many jobs will need fast computers and good internet at home. Consequently, robots will do a lot of jobs instead of people, especially in big factories.",
+          "reject": "The linking words are used wrongly: ‘Meanwhile’ refers to nothing that happens at the same time, and ‘Consequently’ presents robots in factories as a result of fast internet at home. Linkers must show the real logic.",
+          "rejectDe": "Die Linking words passen nicht zur Logik: Meanwhile ohne gleichzeitiges Geschehen, Consequently ohne Ursache."
+        }
+      ]
+    },
+    {
+      "id": "places",
+      "slot": "places",
+      "part": "Body paragraph 3",
+      "join": true,
+      "len": "long",
+      "q": "How could this change our towns and villages?",
+      "de": "Der Absatz geht weiter: Was könnte sich in Städten und Dörfern verändern? Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then add one more change you expect and explain it.",
+      "ownDe": "Gerüst abschreiben, dann eine weitere Veränderung vorhersagen und begründen.",
+      "options": [
+        {
+          "l": "A",
+          "id": "villages",
+          "label": "New life in the countryside",
+          "text": "{{These changes [[will not stop]] at our desks.}} {{If fewer people commute,}} young families [[will no longer need]] to live near the city, so small villages could come back to life. Local cafés and shops could gain new customers, and the motorways into the big cities might finally become a little quieter.",
+          "why": "Thinks one step further: the trend could change whole regions."
+        },
+        {
+          "l": "B",
+          "id": "cities",
+          "label": "Changing cities",
+          "text": "{{By 2040, the trend [[will have reshaped]] not just our jobs but our city centres.}} If companies need less office space, empty office towers could be turned into flats, which many young people urgently need. {{What is more, fewer commuters [[will mean]]}} less traffic and cleaner air, even for those who cannot work from home.",
+          "why": "Connects the trend with problems young readers know: flats and traffic."
+        }
+      ]
+    },
+    {
+      "id": "concl",
+      "slot": "concl",
+      "part": "Conclusion",
+      "q": "How do we end the article?",
+      "de": "Der Schluss rundet den Artikel ab. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then sum up our view in two or three sentences of your own.",
+      "ownDe": "Gerüst abschreiben, dann unsere Sicht in zwei bis drei eigenen Sätzen zusammenfassen.",
+      "options": [
+        {
+          "l": "A",
+          "id": "sumup",
+          "label": "Sum up",
+          "text": {
+            "by": "angle",
+            "map": {
+              "dream": "{{All in all, working from home is}} more dream than trap, as long as we stay in control of it. The laptop [[is likely to stay]] in our homes, but it should not take over our free time. {{So, are you ready for}} the office of the future?",
+              "pitfall": "{{All in all, working from home is}} a dream that can quickly turn into a trap. Freedom without limits is not really freedom, and our generation [[will have to learn]] where to draw the line. {{So, are you ready for}} that challenge?"
+            }
+          },
+          "why": "Sums up our position in one sentence and ends with a question to the readers."
+        },
+        {
+          "l": "B",
+          "id": "readers",
+          "label": "Turn to the readers",
+          "text": {
+            "by": "angle",
+            "map": {
+              "dream": "{{Next time you hear someone complain about working from home,}} think of the time and freedom it gives. Used wisely, it [[is likely to make]] our generation’s working lives healthier, not more stressful. {{After all,}} who would not want to skip the morning rush hour?",
+              "pitfall": "{{Next time your laptop calls you at nine in the evening, ask yourself:}} who is in charge here, you or your job? Without clear limits, the dream [[will soon turn]] into a trap. {{After all,}} a home should be a place to rest, not a second office."
+            }
+          },
+          "why": "Speaks to readers directly and leaves them with something to think about."
+        }
+      ]
+    },
+    {
+      "id": "title",
+      "slot": "title",
+      "part": "Title",
+      "q": "Now that the article is finished, which title do we choose?",
+      "de": "Zuletzt wählen wir den Titel für unseren Artikel.",
+      "own": "Catchy and short: a play on words, a question or a surprising statement that fits our article.",
+      "ownDe": "Kurz und packend: ein Wortspiel, eine Frage oder eine überraschende Aussage, passend zu unserem Artikel.",
+      "options": [
+        {
+          "l": "A",
+          "id": "sweet",
+          "label": "A play on words",
+          "text": "Home sweet office?",
+          "why": "Plays on the saying ‘Home sweet home’. The question mark shows that it might not be so sweet."
+        },
+        {
+          "l": "B",
+          "id": "anytime",
+          "label": "A twist on an old phrase",
+          "text": "Anytime, anywhere: the new nine-to-five",
+          "why": "Contrasts the old nine-to-five job with the new way of working in just a few words."
+        },
+        {
+          "l": "C",
+          "id": "slogan",
+          "label": "A slogan for our position",
+          "text": {
+            "by": "angle",
+            "map": {
+              "dream": "Freedom in your slippers",
+              "pitfall": "Always on, never off"
+            }
+          },
+          "why": "Sums up our position in a short, catchy phrase."
+        }
+      ]
+    }
+  ],
+  "order": [
+    "title",
+    "intro",
+    "everyday",
+    "who",
+    "weigh",
+    "limits",
+    "predict",
+    "places",
+    "concl"
+  ],
+  "checks": [
+    {
+      "en": "A catchy title, ideally a play on words or a question"
+    },
+    {
+      "en": "An introduction with a hook that ends with a question"
+    },
+    {
+      "en": "All three content points: everyday life, advantages and drawbacks, a prediction"
+    },
+    {
+      "en": "Five paragraphs; each body paragraph opens with a topic sentence linked to what came before"
+    },
+    {
+      "en": "Future forms for predictions (will, will be working, will have changed, is likely to)"
+    },
+    {
+      "en": "Linking words that show the real logic (contrast, reason, result)"
+    },
+    {
+      "en": "Readers are addressed directly; neutral to semi-informal register, no slang"
+    }
+  ],
+  "teacher": {
+    "aim": "Die Klasse baut gemeinsam einen Artikel nach SRDP-Standard zum Thema Homeoffice und übt dabei, Vor- und Nachteile abzuwägen und eine begründete Vorhersage zu treffen. Fokus: Zukunftsformen für Vorhersagen – will, will be working (Future progressive), will have changed (Future perfect) und be likely to.",
+    "prep": "A/B/C/D-Karten austeilen, eine Garnitur pro Person (ohne Karten: 1–4 Finger, die Tasten 1–4 wählen wie A–D). Beamer im Vollbild. Die Aufgabe am Beamer enthält alles Nötige. Im Gerüst-Modus den eingebauten Timer nutzen: 5–6 min pro Absatz.",
+    "heft": "Neue Seite: Datum (rechts), „Article“ als Überschrift, darunter 2 Zeilen für den Titel frei lassen (der Titel kommt zuletzt). Fünf Absätze, jeder beginnt nach einer Leerzeile; am Rand stehen Intro, Body 1, Body 2, Body 3 und Conclusion. Zukunftsformen grün unterstreichen.",
+    "flow": "Volltext kurz (50 min): 3 min Aufgabe lesen, Position wählen, 6 weitere Entscheidungen à ca. 2 min, Abschreiben ca. 25 min, 5 min Checkliste. Volltext lang (100 min): zusätzlich je eine Fortsetzung für Body 1, Body 2 und Body 3 (gleicher Absatz, keine neue Zeile), Abschreiben ca. 40 min, am Ende Wortzahl und Zukunftsformen zählen. Gerüst kurz (60 min): 3 min Aufgabe und Position, pro Absatz 1 min Entscheidung, 5–6 min eigenes Schreiben, 1 min Vergleich mit dem Modell; am Ende 2 min Titel und 4 min Checkliste. In 50 Minuten: Schluss und Titel als Hausübung. Gerüst lang (100 min): dieselben fünf Absätze, bei Body 1–3 nach der Fortsetzungs-Entscheidung noch 3–4 min Schreiben im selben Absatz. Vor Body 3 kurz an die Tafel: will be working (Vorgang in der Zukunft), will have changed (bis zu einem Zeitpunkt abgeschlossen), is likely to (wahrscheinlich).",
+    "traps": "Introduction A (LSR): kurze Basissätze und vage Wörter (nice, good, bad, a lot). Body 1 C (LSA): since + Present simple statt Present perfect, want that statt want sb to do, informations. Body 2 A (TA): nur Vorteile, keine Nachteile. Body 3 C (CC): Linking words passen nicht zur Logik (Meanwhile, Consequently). Kürzel: TA = Erfüllung der Aufgabenstellung, CC = Kohärenz und Kohäsion, LSR = Spektrum sprachlicher Mittel, LSA = Sprachrichtigkeit.",
+    "notes": "Sensibel: keine Fragen zur Arbeitssituation der eigenen Eltern stellen; das Beispiel bleibt allgemein. Für den Namen in Body 1 (Option B) nur erfundene Namen, keine Namen von Mitschüler:innen oder Lehrer:innen. Der Artikel hat in beiden Längen genau fünf Absätze (Einleitung, drei Hauptteile, Schluss); die lange Fassung macht Body 1, Body 2 und Body 3 mit Fortsetzungsblöcken länger, statt neue Absätze anzuhängen. Die Position im ersten Schritt steuert das Ende von Body 2, die Vorhersage, den Schluss und einen der Titel. Markiert sind nur Zukunftsformen, die etwas vorhersagen; would, could und might bleiben unmarkiert (gut für ein kurzes Gespräch über Sicherheitsgrade). Differenzierung: Schnelle schreiben im Gerüst-Modus zu Body 3 eine zweite Vorhersage mit „By 2040, … will have …“. Hausübung: zweite Fassung mit der anderen Position."
+  }
+}

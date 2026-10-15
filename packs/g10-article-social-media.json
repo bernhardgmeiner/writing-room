@@ -1,0 +1,389 @@
+{
+  "id": "g10-article-social-media",
+  "title": "Social media and us",
+  "titleDe": "Social Media im Alltag",
+  "grade": 10,
+  "level": "B1",
+  "theme": "Medien & Technik",
+  "textType": "article",
+  "modes": [
+    "full",
+    "frame"
+  ],
+  "lengths": {
+    "short": {
+      "label": "around 250 words",
+      "min": 225,
+      "max": 275
+    },
+    "long": {
+      "label": "around 350 words",
+      "min": 315,
+      "max": 385
+    }
+  },
+  "minutes": {
+    "full": {
+      "short": 50,
+      "long": 90
+    },
+    "frame": {
+      "short": 60,
+      "long": 100
+    }
+  },
+  "task": {
+    "situation": "Your school magazine is planning a special issue called ‘Life online’. The editor has asked students to write articles about social media for teenage readers.",
+    "instruction": "Write an article. In your article you should:",
+    "points": [
+      "describe how young people use social media",
+      "explain why some experts see social media as a risk",
+      "suggest how young people can use social media in a healthy way"
+    ],
+    "words": {
+      "short": "Give your article a title. Write around 250 words.",
+      "long": "Give your article a title. Write around 350 words."
+    },
+    "de": "Artikel für die Schulzeitung, Zielgruppe Jugendliche. Drei Inhaltspunkte: Nutzung beschreiben, Risiken erklären, gesunden Umgang vorschlagen. Den Titel wählen wir ganz zum Schluss."
+  },
+  "meta": {
+    "publication": "School magazine · Special issue ‘Life online’"
+  },
+  "focus": {
+    "label": "cause and effect",
+    "labelDe": "Ursache und Wirkung",
+    "min": {
+      "short": 5,
+      "long": 6
+    },
+    "note": "Marked: linking words that connect a cause and its effect (because, because of, so, as, since, as a result, this means that, which means that, that is why). Other linking words and ‘so that’ (purpose) are not marked."
+  },
+  "gaps": [
+    {
+      "id": "NAME",
+      "step": "intro",
+      "q": "Our example teenager needs a first name. What is it?",
+      "qDe": "Ruft einen Vornamen für unsere Beispielperson. Keine Namen von Mitschüler:innen oder Lehrer:innen.",
+      "type": "text",
+      "default": "Maja",
+      "max": 20
+    },
+    {
+      "id": "SNAME",
+      "step": "voice",
+      "q": "Which student do we quote? First name only.",
+      "qDe": "Ruft einen Vornamen für die Person, die wir zitieren. Keine Namen von Mitschüler:innen oder Lehrer:innen.",
+      "type": "text",
+      "default": "Theo",
+      "max": 20
+    }
+  ],
+  "steps": [
+    {
+      "id": "intro",
+      "slot": "intro",
+      "part": "Introduction",
+      "q": "How do we open the article?",
+      "de": "Der erste Absatz führt die Leser:innen zum Thema Social Media. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then finish the introduction in your own words: make readers curious.",
+      "ownDe": "Gerüst abschreiben, dann den Einstieg mit eigenen Worten fertigschreiben.",
+      "options": [
+        {
+          "l": "A",
+          "id": "question",
+          "label": "Ask the readers a question",
+          "text": "{{How many times have you checked your phone today?}} If you are like most teenagers, the answer is probably ‘too often to count’. {{Social media is part of our everyday lives, [[so]] it is fair to ask:}} is it a good friend or a bad habit?",
+          "why": "A rhetorical question speaks to readers directly and makes them think about their own habits."
+        },
+        {
+          "l": "B",
+          "id": "scene",
+          "label": "Start with a scene",
+          "text": "{{It is seven o’clock in the morning,}} and the alarm has just gone off. Before getting out of bed, {NAME} checks three group chats and watches two funny videos, [[so]] breakfast has to be quick. {{Sounds familiar? For many young people,}} this is how every single day starts.",
+          "why": "A short scene puts readers right into the topic. Many of them will recognise themselves."
+        },
+        {
+          "l": "C",
+          "id": "trap",
+          "label": "Start with a definition",
+          "trap": true,
+          "crit": "TA",
+          "text": "Social media means websites and apps that allow users to create and share content or to take part in social networking. In this article I will write about social media and whether it is good or bad for teenagers like us.",
+          "reject": "This is a dictionary entry, not a hook. ‘In this article I will write about …’ tells readers nothing new. An article must make people want to read on.",
+          "rejectDe": "Eine Definition ist kein Einstieg, und „In this article I will write about …“ langweilt. Ein Artikel muss neugierig machen."
+        }
+      ]
+    },
+    {
+      "id": "use",
+      "slot": "use",
+      "part": "Body paragraph 1",
+      "q": "Content point 1: how do young people use social media?",
+      "de": "Erster Inhaltspunkt: wie Jugendliche Social Media nutzen. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the blue words. Then add two more examples of how young people use social media, not the ones from the board, and finish the last sentence.",
+      "ownDe": "Gerüst abschreiben, dann zwei weitere Beispiele ergänzen, wie Jugendliche Social Media nutzen (nicht die vom Beamer), und den letzten Satz fertigschreiben.",
+      "options": [
+        {
+          "l": "A",
+          "id": "apps",
+          "label": "One phone, many jobs",
+          "text": "{{To begin with, social media is not just one thing.}} Most teenagers use messaging apps to keep in touch with friends, video platforms to learn or relax, and photo apps to share pictures and short clips. {{[[That is why]] the phone has become}} our message board, our TV and our photo album at the same time.",
+          "why": "Clear topic sentence, then concrete examples, then a sentence that shows the effect."
+        },
+        {
+          "l": "B",
+          "id": "school",
+          "label": "More than chatting",
+          "text": "{{To begin with, young people use social media for much more than chatting.}} {{For example,}} they help each other with homework in class groups, follow their favourite athletes and musicians, and find tutorials for almost any hobby, from skateboarding to baking. {{[[This means that]] for many of us,}} it is the first place we go for information.",
+          "why": "Shows uses readers might not think of. ‘This means that’ leads from the examples to the result."
+        }
+      ]
+    },
+    {
+      "id": "voice",
+      "slot": "voice",
+      "part": "Body paragraph 1",
+      "len": "long",
+      "q": "What do students at our school say?",
+      "de": "Der Absatz geht weiter, eine Person von unserer Schule kommt mit einem Zitat zu Wort. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then finish the quote in your own words: what might the student say about social media?",
+      "ownDe": "Gerüst abschreiben, dann das Zitat mit eigenen Worten fertigschreiben: Was könnte die befragte Person über Social Media sagen?",
+      "options": [
+        {
+          "l": "A",
+          "id": "survey",
+          "label": "A class survey",
+          "text": "{{When we asked students at our school about their habits,}} almost everyone said they use social media every day, and most of them clearly enjoy it. {{“I love sharing photos,” said}} {SNAME}, 16, “and my grandparents love seeing them even more.”",
+          "why": "A small survey plus a real-sounding quote makes the article lively and believable."
+        },
+        {
+          "l": "B",
+          "id": "portrait",
+          "label": "One student’s story",
+          "text": "{{Of course, every user is different.}} {SNAME}, a student at our school, mainly watches cooking videos and has learnt to make fresh pasta from scratch. {{“For me, social media is}} like a free cookbook,” {SNAME} explains, “and my family loves the results.”",
+          "why": "A short portrait shows a positive, unusual use. The quote adds a personal voice."
+        }
+      ],
+      "join": true
+    },
+    {
+      "id": "risk",
+      "slot": "risk",
+      "part": "Body paragraph 2",
+      "q": "Content point 2: why do some experts see a risk?",
+      "de": "Zweiter Inhaltspunkt: warum manche Fachleute in Social Media ein Risiko sehen. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then explain the risk in your own words and show the effect it has on young people.",
+      "ownDe": "Gerüst abschreiben, dann das Risiko mit eigenen Worten erklären und zeigen, welche Folgen es für Jugendliche hat.",
+      "options": [
+        {
+          "l": "A",
+          "id": "trap",
+          "label": "Warn the readers",
+          "trap": true,
+          "crit": "LSA",
+          "text": "Experts warn that social media can be bad for teenagers’ well-being. The most young people make photos of everything they do and post them online. When they get not enough likes, they often feel worse about themselves because they compare their own lives with the perfect pictures of others.",
+          "reject": "Three typical mistakes: ‘The most young people’ (→ Most young people), ‘make photos’ (→ take photos) and ‘get not enough likes’ (→ don’t get enough likes).",
+          "rejectDe": "Drei typische Fehler: the most young people → most young people, make photos → take photos, get not enough → don’t get enough."
+        },
+        {
+          "l": "B",
+          "id": "pressure",
+          "label": "Focus on pressure",
+          "text": "{{However, experts are worried about}} the pressure to present a perfect life online. Most posts only show holidays, parties and new trainers, never the ordinary days. {{[[As a result,]] real life can seem}} boring in comparison. Some young people even start to doubt themselves [[because]] they keep comparing their everyday lives with other people’s highlights.",
+          "why": "Explains where the pressure comes from: ‘as a result’ and ‘because’ link other people’s highlights to how young people feel."
+        },
+        {
+          "l": "C",
+          "id": "time",
+          "label": "Focus on time",
+          "text": "{{Some experts, however, see a risk in}} how much time we spend online. Many apps are designed to keep us scrolling, [[which means that]] an hour can disappear before we even notice it. {{[[As a result,]] there is less time for}} sleep, sport and meeting friends face to face.",
+          "why": "Cause and effect: ‘which means that’ and ‘as a result’ show how one thing leads to another."
+        }
+      ]
+    },
+    {
+      "id": "healthy",
+      "slot": "healthy",
+      "part": "Body paragraph 3",
+      "q": "Content point 3: how can young people use social media in a healthy way?",
+      "de": "Dritter Inhaltspunkt: Vorschläge für einen gesunden Umgang mit Social Media. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then add your own tips and explain why they help.",
+      "ownDe": "Gerüst abschreiben, dann eigene Tipps ergänzen und begründen.",
+      "options": [
+        {
+          "l": "A",
+          "id": "trap",
+          "label": "Rules at home and at school",
+          "trap": true,
+          "crit": "TA",
+          "text": "Parents should check their children’s phones every evening and delete apps that are dangerous. Schools should also ban phones completely because then nobody can use social media in the wrong way. In addition, the government should pass a law that allows social media only for adults. Teachers could also give lessons about online safety.",
+          "reject": "The task asks how YOUNG PEOPLE can use social media in a healthy way. This paragraph only tells parents, schools and the government what to do. The content point is missed.",
+          "rejectDe": "Gefragt ist, was JUGENDLICHE selbst tun können. Hier geht es nur um Eltern, Schule und Staat: Inhaltspunkt verfehlt."
+        },
+        {
+          "l": "B",
+          "id": "tips",
+          "label": "Three clear tips",
+          "text": "{{Luckily, there are simple ways to protect ourselves.}} {{First of all, it helps to}} switch off notifications, [[since]] the phone should not decide when we look at it. {{Secondly, we can follow}} accounts that make us laugh or learn something new instead of accounts that make us feel bad. {{Finally,}} a phone-free hour before bed is a small change with a big effect.",
+          "why": "Clear order with ‘first of all’, ‘secondly’ and ‘finally’, and the first tip comes with a reason (‘since’)."
+        },
+        {
+          "l": "C",
+          "id": "together",
+          "label": "Do it together",
+          "text": "{{The good news is that healthy online habits are easier to learn than}} many people think. Friends can agree on phone-free times, for instance during meals or when they meet up. {{Another good idea is to}} check your screen time once a week, [[as]] the numbers are often surprising.",
+          "why": "Practical tips that friends can try together. ‘As’ gives the reason for the second tip."
+        }
+      ]
+    },
+    {
+      "id": "helping",
+      "slot": "helping",
+      "part": "Body paragraph 3",
+      "len": "long",
+      "q": "What can social media offer when we use it well?",
+      "de": "Der Absatz geht weiter und zeigt, was Social Media bei gutem Umgang bringen kann. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then describe one more example of what social media can offer when we use it well.",
+      "ownDe": "Gerüst abschreiben, dann ein weiteres Beispiel beschreiben, was Social Media bei gutem Umgang bieten kann.",
+      "options": [
+        {
+          "l": "A",
+          "id": "chances",
+          "label": "New opportunities",
+          "text": "{{With habits like these, social media can even open doors.}} Some teenagers have found a volunteering project [[because]] a local animal shelter posted that it needed helpers. {{Others have discovered}} a sports club or a summer job through a friend’s post. {{This shows that}} a single post can lead to real opportunities.",
+          "why": "Concrete examples show what social media can offer when we use it well."
+        },
+        {
+          "l": "B",
+          "id": "trap",
+          "label": "Help with school and charity",
+          "trap": true,
+          "crit": "CC",
+          "text": "Social media can also help young people in useful ways. Many students find some topics in class hard to understand. Despite this, they look for explanations online. Luckily, short videos often explain things clearly. Thus, many teenagers now use social media to raise money for charity, and some online groups even organise clean-ups in local parks.",
+          "reject": "The ideas fit the topic, but the linking words don’t: looking for help online is a result of finding topics hard, not a contrast (‘Despite this’), and ‘Thus’ suggests that teenagers raise money for charity because videos explain things clearly.",
+          "rejectDe": "Die Ideen passen, die Linking words nicht: Despite this vor einer Folge, Thus ohne Ursache."
+        },
+        {
+          "l": "C",
+          "id": "community",
+          "label": "Online communities",
+          "text": "{{Used wisely, social media can bring people closer together.}} Many teenagers go online to organise clean-ups, raise money for charity or find others who share an unusual hobby. {{For someone who feels alone,}} an online community can be a real support [[because]] it shows them that they are not the only one.",
+          "why": "Shows what social media can do for young people and explains why it matters."
+        }
+      ],
+      "join": true
+    },
+    {
+      "id": "concl",
+      "slot": "concl",
+      "part": "Conclusion",
+      "q": "How do we end the article?",
+      "de": "Der Schluss rundet den Artikel ab. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then complete the sentences in your own words and send a clear message to the readers.",
+      "ownDe": "Gerüst abschreiben, dann die Sätze mit eigenen Worten fertigschreiben: eine klare Botschaft an die Leser:innen.",
+      "options": [
+        {
+          "l": "A",
+          "id": "balance",
+          "label": "A balanced ending",
+          "text": "{{All in all, social media is neither good nor bad.}} What matters is how we use it. {{If we stay in control,}} it can make our lives richer rather than run them. {{[[So]] let’s enjoy}} the good side and keep an eye on the risks.",
+          "why": "Sums up the article in a balanced way and repeats the key idea."
+        },
+        {
+          "l": "B",
+          "id": "challenge",
+          "label": "Challenge the readers",
+          "text": "{{Social media gives us a lot, but it can also take a lot.}} {{Next time you reach for your phone,}} ask yourself one simple question: am I using it, or is it using me? Your honest answer might change the way you scroll.",
+          "why": "Sums up both sides in one sentence and leaves readers with a question to think about."
+        }
+      ]
+    },
+    {
+      "id": "title",
+      "slot": "title",
+      "part": "Title",
+      "q": "Now that the article is finished, which title do we choose?",
+      "de": "Der Titel kommt zuletzt und soll neugierig machen und zum Inhalt passen.",
+      "own": "Short and catchy: make teenagers want to read the article.",
+      "ownDe": "Kurz und treffend: Der Titel soll Jugendliche neugierig auf den Artikel machen.",
+      "options": [
+        {
+          "l": "A",
+          "id": "friend",
+          "label": "A question",
+          "text": "Friend or foe? Life on social media",
+          "why": "A question in the title makes readers curious, and ‘friend or foe’ sums up both sides."
+        },
+        {
+          "l": "B",
+          "id": "trap",
+          "label": "A dramatic headline",
+          "trap": true,
+          "crit": "TA",
+          "text": "Social media: the shocking truth!",
+          "reject": "This is clickbait: it promises a ‘shocking truth’ that the article never reveals. A good title is catchy, but it must fit the content.",
+          "rejectDe": "Das ist Clickbait: Der Titel verspricht eine Sensation, die der Artikel nicht hält. Ein guter Titel macht neugierig und passt zum Inhalt."
+        },
+        {
+          "l": "C",
+          "id": "scroll",
+          "label": "A short slogan",
+          "text": "Scroll less, live more",
+          "why": "Short and catchy, and it already contains the article’s message."
+        },
+        {
+          "l": "D",
+          "id": "nofilter",
+          "label": "A hashtag",
+          "text": "#NoFilter: social media, honestly",
+          "why": "Uses the language of social media itself and promises an honest look."
+        }
+      ]
+    }
+  ],
+  "order": [
+    "title",
+    "intro",
+    "use",
+    "voice",
+    "risk",
+    "healthy",
+    "helping",
+    "concl"
+  ],
+  "checks": [
+    {
+      "en": "A title that makes readers curious"
+    },
+    {
+      "en": "An introduction with a hook (question or scene)"
+    },
+    {
+      "en": "All three content points: use, risks, healthy use"
+    },
+    {
+      "en": "Five paragraphs: each body paragraph opens with a clear link to the one before"
+    },
+    {
+      "en": "Causes and effects are linked clearly (because, so, as a result, this means that)"
+    },
+    {
+      "en": "Readers are addressed directly (you, we, questions)"
+    },
+    {
+      "en": "Neutral, friendly register: no slang, no text-message language"
+    }
+  ],
+  "teacher": {
+    "aim": "Die Klasse baut gemeinsam einen B1-Artikel über Social Media im Alltag Jugendlicher mit drei Inhaltspunkten und übt dabei Einstieg, Topic Sentences und vor allem Linking words für Ursache und Wirkung (because, so, as a result, this means that, that is why). Aufbau (Titel, Hook, Topic Sentences, Schluss mit Ansprache) explizit besprechen.",
+    "prep": "A/B/C/D-Karten austeilen (eine Garnitur pro Person). Beamer im Vollbild. Die Aufgabe am Beamer enthält alles Nötige. Im Gerüst-Modus den eingebauten Timer nutzen: 5 min pro Absatz, bei Bedarf +1.",
+    "heft": "Neue Seite: Datum rechts oben, darunter „Article“ als Überschrift (wie am Beamer). Dann 2 Zeilen für den Titel frei lassen, der Titel kommt zuletzt. Jeder der fünf Absätze beginnt nach einer Leerzeile, am Rand steht das Kurzwort: Intro, Body 1, Body 2, Body 3, Conclusion. Fortsetzungen (nur lang) gehören ohne neue Zeile zum selben Absatz. Linking words für Ursache und Wirkung grün unterstreichen.",
+    "flow": "Volltext kurz (50 min): 5 min Aufgabe lesen, 6 Entscheidungen à 2 min, Abschreiben ca. 20 min, 5 min Checkliste. Volltext lang (Doppelstunde): wie kurz, dazu zwei Fortsetzungen: Body 1 wird um ein Zitat länger, Body 3 um eine positive Seite von Social Media bei gutem Umgang. Das gemeinsame Schreiben dauert ca. 65 min; die restliche Zeit für die Besprechung der Fallen und den Beginn der Hausübung nutzen. Gerüst kurz (realistisch ca. 60 min): 5 min Aufgabe; pro Absatz 1 min Entscheidung, 5–6 min eigenes Schreiben, 1 min Vergleich mit dem Modell; am Ende 5 min Checkliste. In einer 50-Minuten-Stunde den Titel als Hausübung wählen lassen. Nach der Abstimmung in Body 2 die Ursache und die Folge der gewählten Option kurz an die Tafel schreiben. Gerüst lang: Doppelstunde (100 min), gleicher Rhythmus, dazwischen Zeit für eine Vergleichsrunde zu zweit.",
+    "traps": "Introduction C (TA): Definition statt Einstieg. Body 2 A (LSA): the most young people, make photos, get not enough likes. Body 3 A (TA): Inhaltspunkt verfehlt, nur Eltern, Schule und Staat bestimmen. Body 3, Fortsetzung B (CC, nur lang): Linking words passen nicht zur Logik (Despite this vor einer Folge, Thus ohne Ursache). Title B (TA): Clickbait, der Titel verspricht eine Sensation, die der Artikel nicht hält. Kürzel: TA = Erfüllung der Aufgabenstellung, CC = Kohärenz und Kohäsion, LSR = Spektrum sprachlicher Mittel, LSA = Sprachrichtigkeit.",
+    "notes": "Der Artikel hat in beiden Längen genau fünf Absätze (Intro, drei Body paragraphs mit je einem Inhaltspunkt, Conclusion); die lange Fassung macht Body 1 und Body 3 länger, statt neue Absätze anzuhängen. Sensibles Thema: keine persönlichen Erfahrungen mit psychischer Belastung einfordern, beim allgemeinen „young people“ bleiben; bei Bedarf auf Schulpsychologie und Rat auf Draht (147) hinweisen. Die Texte nennen keine echten Apps oder Plattformen. Die kurze Fassung hat nur sechs Entscheidungen; die gewonnene Zeit für die Besprechung der Fallen nutzen. Für die Namenslücken nur erfundene Vornamen verwenden, keine Namen von Mitschüler:innen oder Lehrer:innen. Differenzierung: Schnelle schreiben im Gerüst-Modus pro Absatz einen zusätzlichen Satz mit as a result oder this means that. Hausübung: zweite Fassung mit zwei anderen Entscheidungen."
+  },
+  "topicWords": [
+    "social",
+    "media"
+  ]
+}

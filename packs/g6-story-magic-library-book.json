@@ -1,0 +1,404 @@
+{
+  "id": "g6-story-magic-library-book",
+  "title": "The magic library book",
+  "titleDe": "Das magische Buch",
+  "grade": 6,
+  "level": "A1+/A2",
+  "theme": "Kultur & Kreativität",
+  "textType": "story",
+  "modes": [
+    "full"
+  ],
+  "lengths": {
+    "short": {
+      "label": "around 100 words",
+      "min": 85,
+      "max": 115
+    }
+  },
+  "minutes": {
+    "full": {
+      "short": 50
+    }
+  },
+  "task": {
+    "situation": "Aylin, Jakob and Grace are three friends who love reading. One Saturday afternoon, they are at the old library in their town. There they find a strange old book, and it pulls them into its story! Write an adventure story about the three friends and the magic library book.",
+    "instruction": "Write a story with:",
+    "points": [
+      "a beginning: who, where and when",
+      "the magic moment and what the friends did inside the book",
+      "how they got back and how the story ends",
+      "a good title"
+    ],
+    "words": {
+      "short": "Write around 100 words in the past simple."
+    },
+    "de": "Gemeinsame Abenteuergeschichte: Drei Freund:innen finden in der Stadtbücherei ein altes Buch, das sie in seine Geschichte zieht. Anfang mit wer, wo, wann, dann der magische Moment, was sie im Buch erleben, wie sie zurückkommen und ein Schluss. Erzählt wird im Past simple, mit unregelmäßigen Verben und Story words (suddenly, then, at once …). Den Titel wählen wir zuletzt."
+  },
+  "meta": {},
+  "focus": {
+    "label": "irregular past forms and story words",
+    "labelDe": "Unregelmäßige Verben und Story words",
+    "min": {
+      "short": 8
+    },
+    "note": "Marked: every irregular past simple form (found, fell, ran, was/were …) and the story words suddenly, then, just then, at once, later, after that. Regular past forms (opened, landed …) and present tense inside direct speech are not marked."
+  },
+  "topicWords": [
+    "aylin",
+    "jakob",
+    "jakob’s",
+    "grace",
+    "library",
+    "book",
+    "books",
+    "story",
+    "friends",
+    "three"
+  ],
+  "gaps": [
+    {
+      "id": "LIB",
+      "step": "beginning",
+      "q": "What is the librarian’s name? Mrs or Mr + ONE family name.",
+      "qDe": "Wie heißt die Bibliothekarin oder der Bibliothekar? Mrs oder Mr und ein Nachname. Keine Namen von Mitschüler:innen oder Lehrer:innen.",
+      "type": "text",
+      "default": "Mrs Page",
+      "minWords": 2,
+      "max": 25
+    },
+    {
+      "id": "YEAR",
+      "step": "problem",
+      "q": "What year is the magic book from? Shout a year from long ago!",
+      "qDe": "Aus welchem Jahr ist das alte Buch? Ruft eine Jahreszahl zwischen 1500 und 1980.",
+      "type": "number",
+      "default": 1888,
+      "min": 1500,
+      "max": 1980
+    }
+  ],
+  "steps": [
+    {
+      "id": "book",
+      "part": "Magic book",
+      "q": "What kind of magic book do the friends find?",
+      "de": "Hier wählt ihr, in welche Geschichte das Buch Aylin, Jakob und Grace zieht.",
+      "options": [
+        {
+          "l": "A",
+          "id": "pirates",
+          "label": "A pirate story",
+          "teaser": "A book that smells of the sea. Perfect for adventure fans!"
+        },
+        {
+          "l": "B",
+          "id": "jungle",
+          "label": "A jungle story",
+          "teaser": "Hot, green and very noisy. Who lives in this jungle?"
+        },
+        {
+          "l": "C",
+          "id": "space",
+          "label": "A space story",
+          "teaser": "Stars, planets and strange lights. How do you get home from space?"
+        }
+      ]
+    },
+    {
+      "id": "beginning",
+      "slot": "beginning",
+      "part": "Beginning",
+      "q": "How does our story start? Who? Where? When?",
+      "de": "Der Anfang erzählt, wer dabei ist und wo und wann die Geschichte spielt. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "time",
+          "label": "Start with WHEN",
+          "why": "Starts with the time, like many stories. We know at once who, where and when.",
+          "text": "On Saturday afternoon, Aylin, Jakob and Grace [[went]] to the town library. The librarian, {LIB}, [[kept]] a table by the window for them."
+        },
+        {
+          "l": "B",
+          "id": "speech",
+          "label": "Start with direct speech",
+          "why": "Direct speech puts us right into the scene. Then we learn where and when.",
+          "text": "“So many old books!” Jakob [[said]] to Aylin and Grace. It [[was]] Saturday afternoon at the town library, and {LIB}, the librarian, smiled."
+        },
+        {
+          "l": "C",
+          "id": "scene",
+          "label": "Start with the weather",
+          "why": "Rain outside and a quiet library: a good start for an adventure.",
+          "text": "It [[was]] a rainy Saturday afternoon. Aylin, Jakob and Grace [[sat]] in the town library, and {LIB}, the librarian, [[brought]] them hot chocolate."
+        }
+      ]
+    },
+    {
+      "id": "problem",
+      "slot": "problem",
+      "part": "Magic moment",
+      "q": "What happens with the book?",
+      "de": "Jetzt passiert mit dem alten Buch etwas Magisches. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "fall",
+          "label": "A book falls",
+          "why": "‘Suddenly’ and a falling book: something strange happens right away.",
+          "text": {
+            "by": "book",
+            "map": {
+              "pirates": "[[Suddenly]], an old book from {YEAR} [[fell]] off a shelf. When Jakob opened it, a strong wind pulled the friends into the story!",
+              "jungle": "[[Suddenly]], an old book from {YEAR} [[fell]] off a shelf. When Aylin opened it, green leaves [[grew]] out and pulled the friends inside!",
+              "space": "[[Suddenly]], an old book from {YEAR} [[fell]] off a shelf. When Grace opened it, a bright light [[shone]] out and pulled the friends inside!"
+            }
+          }
+        },
+        {
+          "l": "B",
+          "id": "find",
+          "label": "A strange find",
+          "why": "We can smell or feel the book first. That makes the magic moment exciting.",
+          "text": {
+            "by": "book",
+            "map": {
+              "pirates": "At four o’clock, Jakob [[found]] a strange book from {YEAR}. It smelled of the sea! When he opened it, the friends [[fell]] into the story.",
+              "jungle": "At four o’clock, Aylin [[found]] a strange book from {YEAR}. It [[felt]] warm and wet! When she opened it, the friends [[fell]] into the story.",
+              "space": "At four o’clock, Grace [[found]] a strange book from {YEAR}. It [[felt]] ice-cold! When she opened it, the friends [[fell]] into the story."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "action",
+      "slot": "action",
+      "part": "In the book",
+      "q": "What happened inside the book?",
+      "de": "Hier erzählen wir, was die drei in der Geschichte erleben. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "act",
+          "label": "Short and lively",
+          "why": "Short sentences and strong verbs make the scene lively.",
+          "text": {
+            "by": "book",
+            "map": {
+              "pirates": "They landed on a pirate ship! The angry captain shouted at them, so the friends quickly [[hid]] behind some barrels.",
+              "jungle": "They landed in a hot, green jungle. A huge snake [[came]] closer, so the friends quickly [[ran]] away.",
+              "space": "They landed on a small red planet. Strange lights [[came]] closer, so the friends quickly [[hid]] behind a rock."
+            }
+          }
+        },
+        {
+          "l": "B",
+          "id": "feel",
+          "label": "A problem with ‘but’",
+          "why": "‘But’ shows a surprise or a problem. That makes the scene more interesting.",
+          "text": {
+            "by": "book",
+            "map": {
+              "pirates": "They landed on a big pirate ship! Jakob loved it, but Aylin and Grace [[felt]] seasick.",
+              "jungle": "They landed in a jungle full of noisy parrots. Grace loved the birds, but Jakob [[was]] afraid of the spiders.",
+              "space": "They landed on a tiny planet with purple trees. Grace [[thought]] it [[was]] beautiful, but there [[was]] no way home!"
+            }
+          }
+        },
+        {
+          "l": "C",
+          "id": "trap",
+          "label": "The whole scene",
+          "trap": true,
+          "crit": "CC",
+          "reject": "Too many ‘and then’! That sounds boring. Use short sentences and other linking words like so, but or because.",
+          "rejectDe": "Zu viele „and then“ klingen langweilig: Besser sind kurze Sätze und Linking words wie so, but oder because.",
+          "text": {
+            "by": "book",
+            "map": {
+              "pirates": "They landed on a ship and then the captain shouted and then they hid and then they were very scared.",
+              "jungle": "They landed in a jungle and then they saw a snake and then they were scared and then they ran away.",
+              "space": "They landed on a planet and then they saw green lights and then they hid and then they were very cold."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "twist",
+      "slot": "twist",
+      "part": "Way back",
+      "q": "How did the friends get back?",
+      "de": "Hier erzählen wir, wie die drei wieder aus dem Buch herauskommen. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "trap",
+          "label": "Think hard",
+          "trap": true,
+          "crit": "LSA",
+          "reject": "Two wrong past forms: ‘thinked’ (→ thought) and ‘finded’ (→ found). These verbs are irregular.",
+          "rejectDe": "Zwei falsche Vergangenheitsformen: thinked → thought, finded → found. Das sind unregelmäßige Verben.",
+          "text": {
+            "by": "book",
+            "map": {
+              "pirates": "Then Aylin thinked hard and finded the answer. She shouted, “The End!” and they were back in the library.",
+              "jungle": "Then Jakob thinked hard and finded an old map in his pocket. It showed them the way back to the library.",
+              "space": "Then Aylin thinked hard and finded a button on the book. She pressed it, and they flew back."
+            }
+          }
+        },
+        {
+          "l": "B",
+          "id": "idea",
+          "label": "A clever idea",
+          "why": "‘Just then’ is a good sentence starter: the hero has an idea at the last moment.",
+          "text": {
+            "by": "book",
+            "map": {
+              "pirates": "[[Just then]], Grace [[had]] a clever idea. “The End!” she shouted. [[At once]], the friends [[were]] back in the library.",
+              "jungle": "[[Just then]], Grace [[had]] a clever idea. She [[drew]] a door in the mud. They [[went]] through it and [[were]] back in the library!",
+              "space": "[[Just then]], Grace [[had]] a clever idea. She [[sent]] a signal with her torch, and a friendly rocket [[brought]] them back."
+            }
+          }
+        },
+        {
+          "l": "C",
+          "id": "then",
+          "label": "Something surprising",
+          "why": "A surprise solves the problem. ‘Then’ shows the order of events.",
+          "text": {
+            "by": "book",
+            "map": {
+              "pirates": "[[Then]] a huge wave [[hit]] the ship, and everything [[went]] dark. When they opened their eyes, they [[were]] back in the library.",
+              "jungle": "[[Then]] a blue parrot [[flew]] down. “Follow me!” it [[said]]. It [[led]] them to a waterfall, and behind the water [[was]] the library!",
+              "space": "[[Then]] a shooting star [[flew]] past. The friends [[held]] on to its tail, and [[at once]] they [[were]] back in the library."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "ending",
+      "slot": "ending",
+      "part": "Ending",
+      "q": "How does our story end?",
+      "de": "Der Schluss erzählt, wie unsere Geschichte ausgeht. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "later",
+          "label": "Back to normal, with a little secret",
+          "why": "Everything is normal again, but one small detail shows that the magic was real.",
+          "text": {
+            "by": "book",
+            "map": {
+              "pirates": "[[Later]], {LIB} [[made]] tea for everybody. Nobody [[knew]] about the adventure, but Jakob’s shoes [[were]] wet with sea water!",
+              "jungle": "[[Later]], the friends [[gave]] the book back to {LIB}. Nobody [[saw]] the green leaf in Aylin’s hair!",
+              "space": "[[Later]], the friends [[put]] the book back on the shelf. {LIB} [[saw]] something in Grace’s hair. It [[was]] stardust!"
+            }
+          }
+        },
+        {
+          "l": "B",
+          "id": "after",
+          "label": "A funny last line",
+          "why": "A funny last sentence tells us what happened later and makes readers smile.",
+          "text": {
+            "by": "book",
+            "map": {
+              "pirates": "[[After that]], Jakob [[read]] pirate stories every evening. But Aylin and Grace only [[chose]] books without any sea in them!",
+              "jungle": "[[After that]], the friends [[met]] at the library every Saturday. But they never [[went]] near the jungle book again!",
+              "space": "[[After that]], the three friends [[became]] real space fans. Grace even [[got]] a telescope for her birthday!"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "title",
+      "slot": "title",
+      "part": "Title",
+      "q": "Our story is finished. Which title do we choose?",
+      "de": "Zum Schluss wählen wir den Titel unserer Geschichte.",
+      "options": [
+        {
+          "l": "A",
+          "id": "book",
+          "label": "A title about our book",
+          "why": "Short and clear. It makes readers curious about the book.",
+          "text": {
+            "by": "book",
+            "map": {
+              "pirates": "Trapped in a Pirate Story",
+              "jungle": "Lost in a Jungle Story",
+              "space": "A Planet Inside a Book"
+            }
+          }
+        },
+        {
+          "l": "B",
+          "id": "trap",
+          "label": "A happy title",
+          "trap": true,
+          "crit": "TA",
+          "reject": "This title gives away the ending! A good title makes readers curious and doesn’t tell how the story ends.",
+          "rejectDe": "Der Titel verrät schon das Ende. Ein guter Titel macht neugierig.",
+          "text": "A Happy Ending for Everyone"
+        },
+        {
+          "l": "C",
+          "id": "strange",
+          "label": "A strange afternoon",
+          "why": "The word ‘strange’ makes readers curious, like a mystery title.",
+          "text": "A Very Strange Saturday"
+        },
+        {
+          "l": "D",
+          "id": "year",
+          "label": "Use our year",
+          "why": "Our own year makes the title special and mysterious.",
+          "text": "The Book from {YEAR}"
+        }
+      ]
+    }
+  ],
+  "order": [
+    "title",
+    "beginning",
+    "problem",
+    "action",
+    "twist",
+    "ending"
+  ],
+  "checks": [
+    {
+      "en": "A short title that makes readers curious"
+    },
+    {
+      "en": "Beginning: who, where and when"
+    },
+    {
+      "en": "A magic moment, an adventure inside the book and a way back"
+    },
+    {
+      "en": "The story is in the past simple (direct speech can be in the present)"
+    },
+    {
+      "en": "Irregular verbs are correct: found, fell, hid, drew, held …"
+    },
+    {
+      "en": "Story words like suddenly, just then, at once and after that, not ‘and then’ all the time"
+    }
+  ],
+  "teacher": {
+    "aim": "Die Klasse schreibt gemeinsam eine Abenteuergeschichte über drei Freund:innen, die ein magisches Buch in seine Geschichte zieht, und übt dabei das Past simple, besonders unregelmäßige Verben (found, fell, hid, drew …), und Story words (suddenly, just then, at once, after that).",
+    "prep": "A/B/C/D-Karten austeilen. Beamer im Vollbild. Optional: unregelmäßige Verben aus der Geschichte an die Tafel (find, fall, hide, run, fly, draw, hold, bring, lead). Einsatz ab: Past simple regelmäßiger und unregelmäßiger Verben, was/were. Bei Bedarf Wörter an die Tafel: barrels (Fässer), parrots (Papageien), seasick (seekrank), telescope (Fernrohr), stardust (Sternenstaub), trapped (gefangen).",
+    "heft": "Neue Seite: Datum (rechts) und „Story“ als Überschrift (wie am Beamer), darunter 2 Zeilen für den Titel frei lassen. Jeder Teil beginnt nach einer Leerzeile, am Rand steht der Name des Teils wie am Beamer: Beginning, Magic moment, In the book, Way back, Ending. Unregelmäßige Verben und Story words am Ende grün unterstreichen.",
+    "flow": "Volltext (50 min): 4 min Aufgabe und Heft vorbereiten · 7 Entscheidungen (die erste ist eine reine Wahl: welches Buch) à ca. 2 min, zusammen ca. 15 min · Abschreiben nach jeder Entscheidung, zusammen ca. 20 min · 5 min Checkliste und markierte Formen zählen · 6 min Puffer. Wenn die Zeit knapp wird: Checkliste als Hausübung.",
+    "traps": "In the book C (CC, Kohärenz und Kohäsion): „and then … and then“ ohne Punkt. Way back A (LSA, Sprachrichtigkeit): thinked, finded. Title B (TA, Erfüllung der Aufgabenstellung): verrät das Ende.",
+    "notes": "Regelmäßige Past-simple-Formen (opened, landed, shouted) sind nicht markiert, damit die unregelmäßigen auffallen; man kann sie in einer zweiten Farbe unterstreichen lassen. Differenzierung: Schnelle schreiben die Infinitive der markierten Verben an den Rand. Hausübung: eine zweite Fassung mit einem anderen Buch oder ein kurzer Klappentext (ca. 50 Wörter) zum magischen Buch."
+  }
+}

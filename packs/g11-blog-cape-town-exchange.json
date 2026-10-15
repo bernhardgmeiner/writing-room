@@ -1,0 +1,553 @@
+{
+  "id": "g11-blog-cape-town-exchange",
+  "title": "Cape Town exchange blog",
+  "titleDe": "Austausch nach Kapstadt",
+  "grade": 11,
+  "level": "B1+/B2",
+  "theme": "Reisen & andere Länder",
+  "textType": "blog",
+  "modes": [
+    "full",
+    "frame"
+  ],
+  "lengths": {
+    "short": {
+      "label": "around 250 words",
+      "min": 225,
+      "max": 275
+    },
+    "long": {
+      "label": "around 400 words",
+      "min": 360,
+      "max": 440
+    }
+  },
+  "minutes": {
+    "full": {
+      "short": 50,
+      "long": 100
+    },
+    "frame": {
+      "short": 60,
+      "long": 100
+    }
+  },
+  "task": {
+    "situation": "Your class is taking part in an exchange with a partner school in Cape Town, South Africa. The exchange programme’s blog ‘Two Schools, One World’ publishes posts by students, written either before or after their trip. You have decided to write a blog post.",
+    "instruction": "In your blog post you should:",
+    "points": [
+      "describe what you expect to see or what you saw in and around Cape Town",
+      "explain what the country’s history, especially apartheid and Nelson Mandela, means for South Africa today",
+      "recommend two experiences to students who will visit Cape Town in the future"
+    ],
+    "words": {
+      "short": "Give your blog post a title. Write around 250 words.",
+      "long": "Give your blog post a title. Write around 400 words."
+    },
+    "de": "Blogbeitrag für den Blog eines Schulaustauschs: Titel, Username, Datum, Einstieg mit Hook, klare Absätze, Schluss mit Aufruf zum Kommentieren. Drei Inhaltspunkte: Kapstadt beschreiben, Bedeutung von Apartheid und Mandela für heute erklären, zwei Erlebnisse empfehlen. Zuerst entscheidet ihr, ob der Blog vor oder nach der Reise geschrieben wird."
+  },
+  "meta": {
+    "user": "alps_to_the_cape"
+  },
+  "focus": {
+    "label": "mixed tenses",
+    "labelDe": "Gemischte Zeitformen",
+    "min": {
+      "short": 6,
+      "long": 10
+    },
+    "note": "Marked: verb forms that place events in the past or in the future: past simple and past progressive, present perfect (simple and progressive), all of them also in the passive, and future forms (will, going to, present progressive and future progressive for plans). With contractions, the pronoun is marked too (I’ll, we’re, I’ve). Present simple, present progressive for things happening now, modal verbs and ‘would’ are not marked."
+  },
+  "topicWords": [
+    "cape",
+    "town",
+    "south",
+    "africa",
+    "african",
+    "africans",
+    "apartheid",
+    "mandela",
+    "exchange",
+    "partner",
+    "partners",
+    "townships"
+  ],
+  "gaps": [
+    {
+      "id": "DAYS",
+      "step": "intro",
+      "q": "How many days does the exchange last? Shout a number.",
+      "qDe": "Wie viele Tage dauert der Austausch? Ruft eine realistische Zahl, z. B. 10–16.",
+      "type": "number",
+      "default": 12,
+      "min": 7,
+      "max": 21
+    },
+    {
+      "id": "PARTNER",
+      "step": "partner",
+      "q": "What is the exchange partner’s first name?",
+      "qDe": "Gebt der Austauschpartnerin oder dem Austauschpartner einen Vornamen (z. B. Ayanda, Kayla, Aisha, Pieter oder Sipho). Keine Namen von Mitschüler:innen oder Lehrer:innen.",
+      "type": "text",
+      "default": "Ayanda",
+      "max": 20
+    }
+  ],
+  "steps": [
+    {
+      "id": "timing",
+      "part": "Timing",
+      "q": "When does our blogger write: before or after the trip?",
+      "de": "Vor oder nach der Reise: Diese Entscheidung bestimmt die Zeitformen im ganzen Blogbeitrag.",
+      "options": [
+        {
+          "l": "A",
+          "id": "before",
+          "label": "Before the trip",
+          "teaser": "We fly to Cape Town on Saturday. The blog is full of plans, tips from our partners and expectations."
+        },
+        {
+          "l": "B",
+          "id": "after",
+          "label": "After the trip",
+          "teaser": "We’ve just come back. The blog looks back on what we saw, learnt and loved."
+        }
+      ]
+    },
+    {
+      "id": "intro",
+      "slot": "intro",
+      "part": "Introduction",
+      "q": "How do we hook our readers?",
+      "de": "Der Einstieg stellt die Reise vor und macht Lust aufs Weiterlesen. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then finish the introduction in your own words: how does our blogger feel about the exchange?",
+      "ownDe": "Gerüst abschreiben, dann den Einstieg mit eigenen Worten fertigschreiben: Wie geht es unserer Bloggerin oder unserem Blogger mit dem Austausch?",
+      "options": [
+        {
+          "l": "A",
+          "id": "guess",
+          "label": "A playful question",
+          "why": "A cheeky question speaks to readers directly and gives the key facts at once.",
+          "text": {
+            "by": "timing",
+            "map": {
+              "before": "{{Guess [[who’s flying]] to Cape Town}} on Saturday? Our class [[is setting off]] for {{the {DAYS}-day exchange}} with our partner school, {{and [[I’ve been counting]] down the days for months.}} {{In fact,}} my suitcase [[has been packed]] since last weekend.",
+              "after": "{{Guess who’s back}} from the other end of the world? Our class [[has just returned]] from {{the {DAYS}-day exchange}} with our partner school in Cape Town. {{I [[haven’t stopped]] talking about it since.}} {{That’s why}} my family [[has asked]] me to write it all down here."
+            }
+          }
+        },
+        {
+          "l": "B",
+          "id": "scene",
+          "label": "Start with a scene",
+          "why": "A small picture of the blogger’s situation pulls readers into the story.",
+          "text": {
+            "by": "timing",
+            "map": {
+              "before": "{{Right now, I’m sitting on my bed}} surrounded by sun cream, hiking boots and a guidebook. {{That’s because}} on Saturday, our class [[is flying]] to Cape Town for {{the {DAYS}-day exchange}} with our partner school. {{I’m sure it [[will be]]}} the trip of a lifetime.",
+              "after": "{{A week ago, I [[was watching]]}} the sun go down over the Atlantic. Today, however, I’m back at my desk at home, staring at a pile of homework. {{Our {DAYS}-day exchange in Cape Town [[ended]] last Sunday, and I’m already missing}} every minute of it."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "partner",
+      "slot": "partner",
+      "part": "Introduction",
+      "join": true,
+      "len": "long",
+      "q": "Who do we stay with?",
+      "de": "Der Absatz geht weiter: der persönliche Teil des Austauschs; den Namen der Austauschperson bestimmt ihr gleich selbst. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then add more details about the exchange partner or the partner school (invent them).",
+      "ownDe": "Gerüst abschreiben, dann weitere erfundene Details zur Austauschperson oder zur Partnerschule ergänzen.",
+      "options": [
+        {
+          "l": "A",
+          "id": "family",
+          "label": "My exchange partner",
+          "why": "Food and a little worry make the post personal and fun to read.",
+          "text": {
+            "by": "timing",
+            "map": {
+              "before": "{{[[I’ll be staying]] with my exchange partner,}} {PARTNER}, and their family. {PARTNER} [[has already sent]] me a list of dishes to try, from bobotie to a proper braai, so I [[won’t go]] hungry. {{I’m a bit nervous, though:}} what if I can’t understand the South African accent?",
+              "after": "{{I [[stayed]] with my exchange partner,}} {PARTNER}, and their family, who [[made]] me feel at home from day one. {{Thanks to}} {PARTNER}, I [[tried]] bobotie and my first proper braai, so I definitely [[didn’t go]] hungry. {{It [[took]] me a few days, though, to}} get used to the South African accent."
+            }
+          }
+        },
+        {
+          "l": "B",
+          "id": "school",
+          "label": "Our partner school",
+          "why": "A funny detail about school life shows a real difference between the two countries.",
+          "text": {
+            "by": "timing",
+            "map": {
+              "before": "{{Our exchange school is in}} a suburb of Cape Town, and its students [[visited]] us in Austria last year. My exchange partner, {PARTNER}, and I [[have been messaging]] almost every day since then. Apparently, everyone there wears a school uniform, {{which is why I wonder how [[I’ll look]] in}} a blazer and tie.",
+              "after": "{{Our exchange school is in}} a suburb of Cape Town, and I [[spent]] three days there with my exchange partner, {PARTNER}. Like most South African students, {PARTNER} wears a school uniform, {{which is why I [[felt]] a bit underdressed in}} my jeans and hoodie on the first day."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "sights",
+      "slot": "sights",
+      "part": "Body paragraph 1",
+      "q": "Content point 1: what do we see in Cape Town?",
+      "de": "Erster Inhaltspunkt: Was gibt es in Kapstadt zu sehen? Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then describe what you can see there with precise, colourful words. Use facts from the options we read (the teacher writes them on the board).",
+      "ownDe": "Gerüst abschreiben, dann mit genauen, anschaulichen Wörtern beschreiben, was man sieht. Fakten von der Tafel verwenden.",
+      "options": [
+        {
+          "l": "A",
+          "id": "mountain",
+          "label": "Table Mountain",
+          "why": "Concrete details (the turning cable car, the ‘tablecloth’) make the description vivid.",
+          "text": {
+            "by": "timing",
+            "map": {
+              "before": "{{The first thing on our list is Table Mountain,}} the flat-topped giant above the city. {{While}} you can hike up, [[we’re taking]] the cable car, whose floor turns so that everyone gets the full view. {{If the famous ‘tablecloth’ of cloud stays away, [[we’ll see]]}} the whole city, the ocean and even Robben Island.",
+              "after": "{{The first highlight [[was]] Table Mountain,}} the flat-topped giant above the city. {{While}} some of us [[wanted]] to hike up, we [[took]] the cable car, whose floor turns so that everyone gets the full view. {{Luckily, the famous ‘tablecloth’ of cloud [[stayed]] away, which [[meant]] that}} we could see the whole city, the ocean and even Robben Island."
+            }
+          }
+        },
+        {
+          "l": "B",
+          "id": "streets",
+          "label": "Colourful streets",
+          "why": "Takes readers for a walk through the city and adds a little history and food.",
+          "text": {
+            "by": "timing",
+            "map": {
+              "before": "{{Cape Town itself looks amazing in every photo [[I’ve seen]].}} I want to wander through the Bo-Kaap, where the houses are painted in every colour you can imagine, and learn about the Cape Malay community, which [[has lived]] there for over 200 years. {{After that, [[we’re heading]] to}} the Waterfront for fish and chips.",
+              "after": "{{Cape Town itself [[was]] even more colourful than in the photos.}} We [[wandered]] through the Bo-Kaap, where the houses are painted in every colour you can imagine, and [[learnt]] about the Cape Malay community, which [[has lived]] there for over 200 years. {{After that, we [[headed]] to}} the Waterfront for fish and chips."
+            }
+          }
+        },
+        {
+          "l": "C",
+          "id": "trap",
+          "label": "First impressions",
+          "trap": true,
+          "crit": "LSR",
+          "text": "In Cape Town there is a big mountain called Table Mountain. There is also a cable car, and there are a lot of beaches. There are colourful houses in the Bo-Kaap, and there is a harbour with a lot of restaurants. There is a lot to see in Cape Town, and there are tourists everywhere.",
+          "reject": "Correct, but almost every sentence is built with ‘there is’ or ‘there are’, and the description stays general. Use a range of structures and precise details: what exactly can you see and do there?",
+          "rejectDe": "Richtig, aber fast jeder Satz mit „there is/there are“ gebaut, und alles bleibt allgemein. Abwechslungsreiche Satzmuster und genaue Details verwenden!"
+        }
+      ]
+    },
+    {
+      "id": "nature",
+      "slot": "nature",
+      "part": "Body paragraph 1",
+      "join": true,
+      "len": "long",
+      "q": "Which nature trip do we describe?",
+      "de": "Der Absatz geht weiter: ein Ausflug in die Natur rund um Kapstadt. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then describe the trip in your own words and add one surprising detail.",
+      "ownDe": "Gerüst abschreiben, dann den Ausflug beschreiben und ein überraschendes Detail ergänzen.",
+      "options": [
+        {
+          "l": "A",
+          "id": "penguins",
+          "label": "Penguins and Cape Point",
+          "why": "Penguins are a surprise for most readers, and the fun fact about Africa’s southern tip is true.",
+          "text": {
+            "by": "timing",
+            "map": {
+              "before": "{{Nature is another reason I can’t wait to go.}} On a day trip along the coast, [[we’re visiting]] Boulders Beach, where critically endangered African penguins waddle around between the rocks. {{From there, [[we’re driving]] to Cape Point, which, by the way, is not the southern tip of Africa.}} That’s Cape Agulhas, about 150 kilometres to the south-east.",
+              "after": "{{Nature [[was]] another big highlight.}} On a day trip along the coast, we [[visited]] Boulders Beach, where critically endangered African penguins waddle around between the rocks. {{From there, we [[drove]] to Cape Point, which, by the way, is not the southern tip of Africa.}} That’s Cape Agulhas, about 150 kilometres to the south-east."
+            }
+          }
+        },
+        {
+          "l": "B",
+          "id": "reserve",
+          "label": "A game reserve",
+          "why": "Wildlife plus a touch of humour: readers can share the excitement.",
+          "text": {
+            "by": "timing",
+            "map": {
+              "before": "{{Of course, the trip isn’t only about the city.}} One day, [[we’re going]] to a game reserve a few hours from Cape Town, where we hope to see zebras, springbok and, with a bit of luck, a rhino. {{Because}} my little brother loves rhinos, {{[[I’ve already promised]] him}} at least a hundred photos.",
+              "after": "{{Of course, the trip [[wasn’t]] only about the city.}} One day, we [[drove]] to a game reserve a few hours from Cape Town and [[saw]] zebras, springbok and, after two hours of waiting, a rhino! {{I [[came]] home with}} 400 photos, although only about ten of them aren’t blurry."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "history",
+      "slot": "history",
+      "part": "Body paragraph 2",
+      "q": "Content point 2: what does the country’s history mean for South Africa today?",
+      "de": "Zweiter Inhaltspunkt: die Geschichte des Landes und ihre Bedeutung für heute. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then explain in your own words what apartheid still means for South Africa today. Use a fact from the options we read (the teacher writes them on the board).",
+      "ownDe": "Gerüst abschreiben, dann mit eigenen Worten erklären, was die Apartheid heute noch bedeutet. Einen Fakt von der Tafel verwenden.",
+      "options": [
+        {
+          "l": "A",
+          "id": "trap",
+          "label": "Mandela’s story",
+          "trap": true,
+          "crit": "LSA",
+          "text": "South Africa became a democracy in 1994, and Nelson Mandela was its first democratically elected president. He was in prison during 27 years, most of them on the Robben Island, but he wanted never revenge and worked for reconciliation, and many South Africans still see him as a symbol of hope today. Even so, many people in the townships are still poor.",
+          "reject": "Three typical mistakes: ‘during 27 years’ (→ for 27 years), ‘the Robben Island’ (→ Robben Island, no article) and ‘he wanted never revenge’ (→ he never wanted revenge: ‘never’ goes before the main verb).",
+          "rejectDe": "Drei typische Fehler: during 27 years → for 27 years, the Robben Island → Robben Island, he wanted never → he never wanted (never steht vor dem Verb)."
+        },
+        {
+          "l": "B",
+          "id": "robben",
+          "label": "Robben Island",
+          "why": "Moves from a real place to its meaning today; ‘despite’ and ‘even so’ guide the reader.",
+          "text": {
+            "by": "timing",
+            "map": {
+              "before": "{{[[We’re also going]] to Robben Island,}} where Nelson Mandela [[spent]] 18 of his 27 years in prison for fighting apartheid, the system of racial segregation. {{Despite the end of apartheid in the early 1990s, its effects are still visible today:}} township schools often have far fewer teachers and books than those in richer suburbs. {{Even so,}} Mandela’s message of reconciliation gives many people hope.",
+              "after": "{{The most moving day [[was]] on Robben Island,}} where Nelson Mandela [[spent]] 18 of his 27 years in prison for fighting apartheid, the system of racial segregation. {{Despite the end of apartheid in the early 1990s, its effects are still visible today:}} township schools often have far fewer teachers and books than those in richer suburbs. {{Even so,}} Mandela’s message of reconciliation gives many people hope."
+            }
+          }
+        },
+        {
+          "l": "C",
+          "id": "district",
+          "label": "The District Six Museum",
+          "why": "Explains apartheid with one clear example, then shows what it still means for families today.",
+          "text": {
+            "by": "timing",
+            "map": {
+              "before": "{{[[We’re also visiting]] the District Six Museum.}} Under apartheid, this mixed district [[was declared]] ‘whites only’. {{As a result,}} more than 60,000 people [[were forced]] to leave. {{Since 1994, when Nelson Mandela [[became]] the first democratically elected president,}} all South Africans [[have had]] the equal rights he [[fought]] for. {{Even so,}} many families still live where they [[were moved]] to, far from the city centre.",
+              "after": "{{We also [[visited]] the District Six Museum.}} Under apartheid, this mixed district [[was declared]] ‘whites only’. {{As a result,}} more than 60,000 people [[were forced]] to leave. {{Since 1994, when Nelson Mandela [[became]] the first democratically elected president,}} all South Africans [[have had]] the equal rights he [[fought]] for. {{Even so,}} many families still live where they [[were moved]] to, far from the city centre."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "today",
+      "slot": "today",
+      "part": "Body paragraph 2",
+      "join": true,
+      "len": "long",
+      "q": "How do young South Africans see their country today?",
+      "de": "Der Absatz geht weiter: ein Blick auf das Südafrika von heute. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then finish the paragraph with your own thoughts about young people in South Africa today.",
+      "ownDe": "Gerüst abschreiben, dann den Absatz mit eigenen Gedanken über junge Menschen im heutigen Südafrika fertigschreiben.",
+      "options": [
+        {
+          "l": "A",
+          "id": "plans",
+          "label": "A partner’s plans",
+          "why": "One person’s plan makes a big topic, young people’s chances, easy to understand.",
+          "text": {
+            "by": "timing",
+            "map": {
+              "before": "{{Today, with so many young South Africans out of work, education feels like a ticket to a better future.}} {{For example,}} {PARTNER} [[is going to apply]] to university next year and would be the first in the family to study. {{I’m curious to hear}} what else young people there hope for.",
+              "after": "{{Today, with so many young South Africans out of work, education feels like a ticket to a better future.}} {{One evening, {PARTNER} [[told]] me about}} a big plan: to apply to university next year and become the first in the family to study. {{That conversation [[made]] me realise}} how much hope young people there put into a degree."
+            }
+          }
+        },
+        {
+          "l": "B",
+          "id": "trap",
+          "label": "Today’s South Africa",
+          "trap": true,
+          "crit": "CC",
+          "text": "Nowadays many young South Africans still find it hard to get a job after school. Similarly, amapiano music from the townships is popular all over the world. In other words, apartheid ended in the early 1990s. Otherwise, young people are very proud of their country, and many of them want to build their future there.",
+          "reject": "The linking words don’t make sense: music has nothing in common with unemployment (‘Similarly’), ‘In other words’ repeats nothing and ‘Otherwise’ introduces no alternative. The ideas jump around without a topic sentence.",
+          "rejectDe": "Die Linking words passen nicht: Similarly ohne Ähnlichkeit, In other words ohne Umschreibung, Otherwise ohne Alternative. Kein Topic Sentence, der rote Faden fehlt."
+        },
+        {
+          "l": "C",
+          "id": "music",
+          "label": "A new sound",
+          "why": "Shows with a surprising example how places shaped by apartheid now give something to the world.",
+          "text": {
+            "by": "timing",
+            "map": {
+              "before": "{{There is a brighter side, too.}} {{Through our partners, [[I’ve discovered]]}} amapiano, a dance music style from the townships around Johannesburg and Pretoria. {{It’s amazing that places that [[were built]] to keep people apart}} now set the beat for dance floors worldwide. {{I’m curious to find out}} what young people there are singing about.",
+              "after": "{{There is a brighter side, too.}} {{Through our partners, [[I’ve discovered]]}} amapiano, a dance music style from the townships around Johannesburg and Pretoria. {{It’s amazing that places that [[were built]] to keep people apart}} now set the beat for dance floors worldwide. {{At the farewell party, we [[danced]] to it}} until the teachers [[switched]] off the music."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "recommend",
+      "slot": "recommend",
+      "part": "Body paragraph 3",
+      "q": "Content point 3: which two experiences do we recommend?",
+      "de": "Dritter Inhaltspunkt: zwei Empfehlungen für künftige Besucher:innen. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then add two recommendations for future visitors, with a reason for each.",
+      "ownDe": "Gerüst abschreiben, dann zwei Empfehlungen für künftige Besucher:innen mit Begründung ergänzen.",
+      "options": [
+        {
+          "l": "A",
+          "id": "people",
+          "label": "Meet the people",
+          "why": "Two clear tips, each with a reason, and a respectful attitude towards the people who live there.",
+          "text": {
+            "by": "timing",
+            "map": {
+              "before": "{{Planning a trip there yourself? Here are our partners’ two tips.}} {{First of all,}} book a walking tour of Langa, the city’s oldest township, with a guide who [[grew up]] there. It’s a neighbourhood, not a sightseeing attraction, so always ask before taking photos. {{Secondly, try to learn}} a few words of isiXhosa, clicks included: locals love it.",
+              "after": "{{Planning a trip there yourself? Here are my two top tips.}} {{First of all,}} book a walking tour of Langa, the city’s oldest township, with a guide who [[grew up]] there. It’s a neighbourhood, not a sightseeing attraction, so always ask before taking photos. {{Secondly, try to learn}} a few words of isiXhosa, clicks included: locals love it."
+            }
+          }
+        },
+        {
+          "l": "B",
+          "id": "outdoors",
+          "label": "For nature lovers",
+          "why": "Links back to the history paragraph, then two clear tips for active readers with useful practical details.",
+          "text": {
+            "by": "timing",
+            "map": {
+              "before": "{{Beyond its history, Cape Town offers two outdoor experiences that our partners call a must.}} {{First of all,}} climb Lion’s Head at sunrise: the path is steep, with a few chains near the top, but the view over the ocean is said to be breathtaking. {{Secondly, don’t miss}} the treetop walkway at Kirstenbosch, the botanical garden below Table Mountain.",
+              "after": "{{Beyond its history, Cape Town offers two outdoor experiences that are a must.}} {{First of all,}} climb Lion’s Head at sunrise: the path is steep, with a few chains near the top, but the view over the ocean is worth every step. {{Secondly, don’t miss}} the treetop walkway at Kirstenbosch, the botanical garden below Table Mountain."
+            }
+          }
+        },
+        {
+          "l": "C",
+          "id": "trap",
+          "label": "Tours and shopping",
+          "trap": true,
+          "crit": "TA",
+          "text": "My first tip is a township tour. You can drive through a township by bus and take photos of the poor houses and the people from the window, so you see a lot in a short time. My second tip is the shopping centre at the Waterfront because it has the same shops as at home.",
+          "reject": "Taking photos of people and their homes from a bus is disrespectful: a township is a neighbourhood, not a zoo. And why fly to Cape Town for the same shops as at home? Recommendations must be respectful and convincing.",
+          "rejectDe": "Fotos von Menschen und ihren Häusern aus dem Bus sind respektlos, und dieselben Geschäfte wie zu Hause überzeugen niemanden."
+        }
+      ]
+    },
+    {
+      "id": "concl",
+      "slot": "concl",
+      "part": "Conclusion",
+      "q": "How do we end our blog post?",
+      "de": "Der Schluss rundet den Blogbeitrag ab. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then sum up the trip in your own words and finish with a call to comment.",
+      "ownDe": "Gerüst abschreiben, dann die Reise mit eigenen Worten zusammenfassen und mit einem Aufruf zum Kommentieren enden.",
+      "options": [
+        {
+          "l": "A",
+          "id": "trap",
+          "label": "More exchanges for Austria",
+          "trap": true,
+          "crit": "TA",
+          "text": "In conclusion, South Africa is a country with a complex history, beautiful landscapes and many interesting sights. It is therefore recommended that more Austrian schools organise exchange programmes with South African schools, as such exchanges help young people to understand other cultures much better.",
+          "reject": "This is the ending of a report (‘It is therefore recommended that …’), and it does not invite readers to comment. A blog post ends by talking to its readers and asking for their opinion.",
+          "rejectDe": "Das ist ein Report-Schluss („It is therefore recommended …“), und der Aufruf zum Kommentieren fehlt, mit dem ein Blog endet."
+        },
+        {
+          "l": "B",
+          "id": "ask",
+          "label": "Ask the readers",
+          "why": "Sums up the trip in one sentence and invites readers to join the conversation.",
+          "text": {
+            "by": "timing",
+            "map": {
+              "before": "{{All in all, I suspect this trip [[will change]] the way I see}} South Africa, and maybe even Austria. Of course, [[I’ll post]] lots of photos as soon as I’m back. {{[[Have]] you ever [[been]] to Cape Town?}} Tell me in the comments what I absolutely shouldn’t miss!",
+              "after": "{{All in all, this trip [[has changed]] the way I see}} South Africa, and maybe even Austria. {{[[Have]] you ever [[been]] to Cape Town,}} or [[have]] my tips [[put]] it on your list? Tell me in the comments, and [[I’ll answer]] all your questions!"
+            }
+          }
+        },
+        {
+          "l": "C",
+          "id": "thought",
+          "label": "A final thought",
+          "why": "A surprising last thought: the trip is about more than sightseeing. Then a question for the comments.",
+          "text": {
+            "by": "timing",
+            "map": {
+              "before": "{{To sum up, [[I’m going]] to Cape Town for}} the views, but I suspect [[I’ll come]] back with much more: new friends and a new way of looking at history. {{What would you like to see in South Africa?}} Let me know in the comments!",
+              "after": "{{To sum up, I [[went]] to Cape Town for}} the views, but I [[came]] back with much more: new friends and a new way of looking at history. {{What would you like to see in South Africa?}} Let me know in the comments!"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "title",
+      "slot": "title",
+      "part": "Title",
+      "q": "Now that the blog post is finished, which title do we choose?",
+      "de": "Den Titel wählen wir zuletzt: Er soll neugierig machen und zu unserem Zeitpunkt passen.",
+      "own": "Short and catchy: the title should make readers curious and fit our timing.",
+      "ownDe": "Kurz und griffig: Der Titel soll neugierig machen und zum Zeitpunkt (vor oder nach der Reise) passen.",
+      "options": [
+        {
+          "l": "A",
+          "id": "excited",
+          "label": "An excited title",
+          "why": "Shows the blogger’s mood at once and fits the timing of our post.",
+          "text": {
+            "by": "timing",
+            "map": {
+              "before": "Cape Town, here we come!",
+              "after": "Back from Cape Town, but not quite home"
+            }
+          }
+        },
+        {
+          "l": "B",
+          "id": "distance",
+          "label": "A number",
+          "why": "A big number makes readers curious. Austria and Cape Town really are about 9,000 kilometres apart.",
+          "text": "9,000 kilometres from home"
+        },
+        {
+          "l": "C",
+          "id": "postcard",
+          "label": "A promise",
+          "why": "Promises readers more than the usual holiday photos.",
+          "text": "Why Cape Town is more than a postcard"
+        }
+      ]
+    }
+  ],
+  "order": [
+    "title",
+    "intro",
+    "partner",
+    "sights",
+    "nature",
+    "history",
+    "today",
+    "recommend",
+    "concl"
+  ],
+  "checks": [
+    {
+      "en": "A title that makes readers curious, with user name and date under it"
+    },
+    {
+      "en": "Tenses fit the timing: future forms before the trip, past forms after it"
+    },
+    {
+      "en": "Present perfect for things that lead up to now (I’ve been counting, this trip has changed)"
+    },
+    {
+      "en": "All three content points: Cape Town, history and today, two recommendations"
+    },
+    {
+      "en": "Facts about apartheid and Mandela are correct and respectful"
+    },
+    {
+      "en": "Five paragraphs; each body paragraph opens with a topic sentence linked to what came before"
+    },
+    {
+      "en": "Friendly blog style: contractions, questions and ‘you’"
+    },
+    {
+      "en": "The ending invites readers to comment"
+    }
+  ],
+  "teacher": {
+    "aim": "Die Klasse baut gemeinsam einen Blogbeitrag (B1+/B2) mit drei SRDP-Inhaltspunkten. Schwerpunkte: gemischte Zeitformen (je nach Zeitpunkt Zukunfts- oder Vergangenheitsformen, dazu Present perfect) sowie korrekte und respektvolle Fakten zu Apartheid und Mandela.",
+    "prep": "A/B/C/D-Karten austeilen (ohne Karten: 1–4 Finger, die Tasten 1–4 wählen wie A–D), Beamer im Vollbild. Im Gerüst-Modus den eingebauten Timer nutzen: 5 min pro Absatz.",
+    "heft": "Neue Seite: rechts oben das Datum, als Überschrift „Blog post“ (wie am Beamer). Darunter 2 Zeilen für den Titel frei lassen (der Titel kommt zuletzt), darunter Username · Datum. Fünf Absätze, jeder beginnt nach einer Leerzeile; am Rand stehen Intro, Body 1, Body 2, Body 3 und Conclusion. Die markierten Zeitformen grün unterstreichen.",
+    "flow": "Volltext kurz (50 min): 5 min Aufgabe und Blog-Merkmale, Zeitpunkt wählen, 6 Text-Entscheidungen à ca. 2 min, Abschreiben ca. 25 min, 5 min Checkliste. Volltext lang (100 min): dazu drei Fortsetzungen im selben Absatz ohne neue Zeile: Intro (Austauschfamilie oder Schule), Body 1 (Natur) und Body 2 (Südafrika heute). Gerüst kurz (ca. 60 min): 3 min Aufgabe und Zeitpunkt, pro Absatz 1 min Entscheidung, 5–6 min eigenes Schreiben, 1 min Vergleich mit dem Modell; am Ende 3 min Titel und 5 min Checkliste. In einer 50-Minuten-Stunde Titel und Checkliste am Beginn der nächsten Stunde. Gerüst: nach der Abstimmung bei Body 1 (auch bei seiner Fortsetzung) und Body 2 die Fakten der gewählten Option kurz an die Tafel schreiben (z. B. Boulders Beach, Cape Point/Cape Agulhas). Gerüst lang (100 min): dieselben fünf Absätze plus Titel; bei Intro, Body 1 und Body 2 nach der Fortsetzungs-Entscheidung noch 3–4 min Schreiben im selben Absatz.",
+    "traps": "Body 1 C (LSR): fast jeder Satz mit there is/there are, keine genauen Details. Body 2 A (LSA): during 27 years, the Robben Island, he wanted never (Stellung von never). Body 2, Fortsetzung B (CC, nur lang): Similarly, In other words und Otherwise ohne Sinn, kein Topic Sentence. Body 3 C (TA): respektlose Township-Busfahrt mit Fotos aus dem Fenster und eine Empfehlung ohne Überzeugungskraft. Conclusion A (TA): Report-Schluss statt Blog-Ende, kein Aufruf zum Kommentieren. Kürzel: TA = Erfüllung der Aufgabenstellung, CC = Kohärenz und Kohäsion, LSR = Spektrum sprachlicher Mittel, LSA = Sprachrichtigkeit.",
+    "notes": "Sensibel: Townships respektvoll behandeln (Falle Body 3 C besprechen), Hautfarben-Kategorien nur als Geschichte, nie auf Mitschüler:innen anwenden; die Herkunft der Schüler:innen bleibt privat. Der Blogbeitrag hat in beiden Längen genau fünf Absätze (Einleitung, drei Hauptteile, Schluss); die lange Fassung macht Intro, Body 1 und Body 2 mit Fortsetzungsblöcken länger, statt neue Absätze anzuhängen. Fakten (geprüft): Mandela verbrachte 18 seiner 27 Haftjahre auf Robben Island und wurde 1994 erster demokratisch gewählter Präsident; aus District Six wurden über 60.000 Menschen vertrieben; Cape Agulhas, nicht Cape Point, ist die Südspitze Afrikas; der Brillenpinguin gilt seit 2024 als vom Aussterben bedroht (IUCN: critically endangered); Amapiano ist ein Tanzmusikstil aus den Townships rund um Johannesburg und Pretoria. Zeitformen: Markiert sind Vergangenheit (Past simple, Past progressive), Present perfect und Zukunftsformen; bei Kurzformen wird das Pronomen mitmarkiert (I’ll, we’re). Gut zum Besprechen: „I’m sitting on my bed“ (jetzt, nicht markiert) gegenüber „we’re taking the cable car“ (fester Plan, markiert) sowie Present simple nach if und as soon as („If the cloud stays away, we’ll see …“, „as soon as I’m back“). Für den Namen der Austauschperson nur erfundene Namen, keine Namen von Mitschüler:innen oder Lehrer:innen. Differenzierung: Schnelle schreiben eine zweite Version mit dem anderen Zeitpunkt (vorher/nachher) und vergleichen die Zeitformen. Hausübung: Blog-Kommentar (ca. 150 Wörter) einer Austauschperson aus Kapstadt auf unseren Blog."
+  }
+}

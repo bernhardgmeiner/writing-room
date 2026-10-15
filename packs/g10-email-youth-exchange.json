@@ -1,0 +1,451 @@
+{
+  "id": "g10-email-youth-exchange",
+  "title": "Count me in: a youth exchange",
+  "titleDe": "Bewerbung für einen Jugendaustausch",
+  "grade": 10,
+  "level": "B1",
+  "theme": "Gesellschaft & Zusammenleben",
+  "textType": "email",
+  "modes": [
+    "full",
+    "frame"
+  ],
+  "lengths": {
+    "short": {
+      "label": "around 250 words",
+      "min": 225,
+      "max": 275
+    },
+    "long": {
+      "label": "around 350 words",
+      "min": 315,
+      "max": 385
+    }
+  },
+  "minutes": {
+    "full": {
+      "short": 50,
+      "long": 90
+    },
+    "frame": {
+      "short": 60,
+      "long": 100
+    }
+  },
+  "task": {
+    "situation": "On the website of the Leafline Youth Network, you have read about ‘Green Cities, Young Voices’, a ten-day youth exchange in Ghent, Belgium, next summer. The exchange is funded by an EU youth programme. Young people aged 15 to 19 from five European countries will work together on ideas for greener towns. You would like to take part and decide to write to the organisers.",
+    "instruction": "In your email you should:",
+    "points": [
+      "express your interest and introduce yourself",
+      "explain what you could contribute to the exchange",
+      "ask about the dates, costs and requirements"
+    ],
+    "words": {
+      "short": "Write around 250 words.",
+      "long": "Write around 350 words."
+    },
+    "de": "Formelle E-Mail an die Organisator:innen eines erfundenen, von der EU geförderten Jugendaustauschs in Gent. Drei Inhaltspunkte: Interesse zeigen und sich vorstellen; den eigenen Beitrag erklären; nach Terminen, Kosten und Voraussetzungen fragen. Formelles Register, keine Kurzformen."
+  },
+  "meta": {
+    "from": "exchange.applicant@classmail.example",
+    "to": "exchange@leafline-youth.example",
+    "subjectSlot": "subject"
+  },
+  "focus": {
+    "label": "formal phrases for interest and offers",
+    "labelDe": "Formelle Wendungen: Interesse und Angebote",
+    "min": {
+      "short": 5,
+      "long": 7
+    },
+    "note": "Marked: fixed formal email phrases, i.e. greeting and closing formula, purpose statements (I am writing to …, With reference to …), offers (I would be happy to …, I would be glad to …), polite requests and indirect questions (Could you please tell me …, I would also like to know …) and closing sentences (Thank you …, I look forward to …). Linking words and topic introducers are not marked; the subject line is not marked."
+  },
+  "topicWords": [
+    "exchange",
+    "youth",
+    "europe",
+    "european",
+    "ghent",
+    "erasmus+",
+    "green",
+    "greener",
+    "cities",
+    "towns",
+    "young",
+    "voices"
+  ],
+  "gaps": [
+    {
+      "id": "AGE",
+      "step": "opening",
+      "q": "How old is our writer? The exchange is for 15- to 19-year-olds.",
+      "qDe": "Wie alt ist die Person? Ruft ein Alter zwischen 15 und 17.",
+      "type": "number",
+      "default": 16,
+      "min": 15,
+      "max": 17
+    },
+    {
+      "id": "NAME",
+      "step": "signoff",
+      "q": "Who is writing the email? First name and family name.",
+      "qDe": "Ruft einen Vor- und Nachnamen für die Person, die die E-Mail schreibt. Keine Namen von Mitschüler:innen oder Lehrer:innen.",
+      "type": "text",
+      "default": "Milan Hofbauer",
+      "max": 40,
+      "minWords": 2
+    }
+  ],
+  "steps": [
+    {
+      "id": "recipient",
+      "part": "Recipient",
+      "q": "Who do we write to?",
+      "de": "Wir entscheiden, an wen die E-Mail geht, und davon hängen Anrede und Grußformel ab.",
+      "options": [
+        {
+          "l": "A",
+          "id": "office",
+          "label": "The project office (no name)",
+          "teaser": "The website only gives an email address. We do not know who reads the emails."
+        },
+        {
+          "l": "B",
+          "id": "named",
+          "label": "The project coordinator, Ms Peeters",
+          "teaser": "The website says: “Any questions? Contact our project coordinator, Ms Anna Peeters.”"
+        }
+      ]
+    },
+    {
+      "id": "subject",
+      "slot": "subject",
+      "part": "Subject",
+      "q": "What do we write in the subject line?",
+      "de": "Die Betreffzeile sagt in wenigen Wörtern, worum es in der E-Mail geht.",
+      "own": "Short and specific: what is the email about?",
+      "ownDe": "Kurz und konkret: Worum geht es in der E-Mail?",
+      "options": [
+        {
+          "l": "A",
+          "id": "interest",
+          "label": "Name the exchange",
+          "text": "Interest in your youth exchange ‘Green Cities, Young Voices’",
+          "why": "The name of the exchange shows the organisers at once what the email is about."
+        },
+        {
+          "l": "B",
+          "id": "questions",
+          "label": "Name our questions",
+          "text": "Youth exchange in Ghent: questions about dates, costs and requirements",
+          "why": "Tells the reader that the email contains questions and what they are about."
+        },
+        {
+          "l": "C",
+          "id": "enquiry",
+          "label": "Who we are",
+          "text": "Enquiry from an Austrian student about your youth exchange",
+          "why": "‘Enquiry’ is a typical formal word for a subject line, and it says who is writing."
+        }
+      ]
+    },
+    {
+      "id": "greeting",
+      "slot": "greeting",
+      "part": "Greeting",
+      "q": "How do we greet the reader?",
+      "de": "Hier wählen wir die Anrede für unsere E-Mail. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the greeting. Then leave one line free.",
+      "ownDe": "Anrede abschreiben, danach eine Zeile frei lassen.",
+      "options": [
+        {
+          "l": "A",
+          "id": "formal",
+          "label": "Greeting A",
+          "text": {
+            "by": "recipient",
+            "map": {
+              "office": "{{[[Dear Sir or Madam,]]}}",
+              "named": "{{[[Dear Ms Peeters,]]}}"
+            }
+          },
+          "why": "No name: ‘Dear Sir or Madam’. Name known: ‘Dear Ms’ + surname, never the first name."
+        },
+        {
+          "l": "B",
+          "id": "trap",
+          "label": "Greeting B",
+          "trap": true,
+          "crit": "TA",
+          "text": {
+            "by": "recipient",
+            "map": {
+              "office": "Dear Sirs,",
+              "named": "Dear Ms Anna Peeters,"
+            }
+          },
+          "reject": "This greeting does not suit a formal email to someone we have never met. Without a name, write ‘Dear Sir or Madam,’ (‘Dear Sirs’ is old-fashioned and leaves out women); with a name, write ‘Dear Ms Peeters,’ (title and family name only, no first name).",
+          "rejectDe": "Passt nicht zu einer formellen E-Mail: ohne Namen „Dear Sir or Madam,“ („Dear Sirs“ ist veraltet und schließt Frauen aus), mit Namen „Dear Ms Peeters,“ (Anrede und Nachname, ohne Vornamen)."
+        }
+      ]
+    },
+    {
+      "id": "opening",
+      "slot": "opening",
+      "part": "Introduction",
+      "q": "Introduction: how do we start? The purpose comes first!",
+      "de": "Der erste Absatz nennt den Anlass der E-Mail und stellt uns kurz vor. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then complete the sentences in your own words: name the exchange and say where the writer is from.",
+      "ownDe": "Gerüst abschreiben, dann die Sätze mit eigenen Worten fertigschreiben: den Austausch nennen und sagen, woher die schreibende Person kommt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "interest",
+          "label": "Purpose, then who we are",
+          "text": "{{[[I am writing to express my interest in]]}} your youth exchange ‘Green Cities, Young Voices’, which I read about on your website. {{I am a {AGE}-year-old student}} at a grammar school in Linz, Austria, and I would very much like to take part.",
+          "why": "The classic formal opening: the purpose in the very first words, then a short introduction."
+        },
+        {
+          "l": "B",
+          "id": "reference",
+          "label": "Start with where we found it",
+          "text": "{{[[With reference to]] the information on your website,}} I am very interested in taking part in your youth exchange ‘Green Cities, Young Voices’ in Ghent. {{I am a {AGE}-year-old student}} from Linz, Austria, and I am keen to learn how cities can become greener.",
+          "why": "‘With reference to’ is a formal way to refer to an announcement or advert. The purpose follows at once."
+        }
+      ]
+    },
+    {
+      "id": "me",
+      "slot": "me",
+      "part": "Body paragraph 1",
+      "q": "Body paragraph 1: who are we, and why are we interested?",
+      "de": "Erster Inhaltspunkt: wer wir sind und warum uns der Austausch interessiert. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then write about the writer’s interests and why the exchange suits them. You can invent the details.",
+      "ownDe": "Gerüst abschreiben, dann über die Interessen der schreibenden Person schreiben und erklären, warum der Austausch zu ihr passt. Details dürfen erfunden sein.",
+      "options": [
+        {
+          "l": "A",
+          "id": "school",
+          "label": "A school project",
+          "text": "{{My interest in greener cities began at school,}} where my favourite subjects are geography and biology. Last year I helped to set up a school recycling project, and {{since then, environmental topics have become}} more and more important to me. {{That is why}} the idea of working on greener towns with young people from all over Europe appeals to me so much.",
+          "why": "The topic sentence links our interest to the exchange, and a school project shows that it is real."
+        },
+        {
+          "l": "B",
+          "id": "travel",
+          "label": "Languages and travelling",
+          "text": "{{What attracts me most is the international side of the exchange.}} {{Besides German and English, I speak}} some French. {{Last summer, I travelled}} by train through Slovenia and Croatia with my family. On the way, I met young people from several countries and realised how much we have in common. {{For this reason,}} your exchange is exactly what I am looking for.",
+          "why": "The topic sentence names what attracts us, and a short personal experience proves it."
+        }
+      ]
+    },
+    {
+      "id": "eu",
+      "slot": "eu",
+      "part": "Body paragraph 1",
+      "len": "long",
+      "q": "Why does a European exchange matter to us?",
+      "de": "Body paragraph 1 geht weiter: was ein europäischer Austausch für junge Menschen wie uns bedeutet. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then explain in your own words what Europe means to young people.",
+      "ownDe": "Gerüst abschreiben, dann mit eigenen Worten erklären, was Europa für junge Menschen bedeutet.",
+      "options": [
+        {
+          "l": "A",
+          "id": "granted",
+          "label": "Things we take for granted",
+          "text": "{{Europe matters to me, too. Like many young Austrians, I have always taken}} the EU for granted: we can study and work in other member states. {{However, I have only recently realised that}} these freedoms are not normal everywhere in the world. {{EU youth programmes give young people the chance to}} join exchanges abroad, and I would like to make the most of such programmes while I am still at school.",
+          "why": "Links the exchange to our own lives, with useful phrases such as ‘take for granted’ and ‘make the most of’."
+        },
+        {
+          "l": "B",
+          "id": "people",
+          "label": "Europe is about people",
+          "text": "{{In my opinion, a European exchange like yours is about much more than}} a project. {{Real understanding grows when}} young people meet face to face, work together and share their ideas, even if their first languages are different. {{I am convinced that}} friendships made in Ghent could last much longer than ten days. Experiences like these cannot be gained from a textbook.",
+          "why": "A clear personal opinion, supported by a reason. The last short sentence makes the point stick."
+        }
+      ],
+      "join": true
+    },
+    {
+      "id": "contribute",
+      "slot": "contribute",
+      "part": "Body paragraph 2",
+      "q": "Body paragraph 2: what could we contribute?",
+      "de": "Zweiter Inhaltspunkt: was wir zum Austausch beitragen können. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then describe one more skill the writer could offer and how the group could use it.",
+      "ownDe": "Gerüst abschreiben, dann eine weitere Fähigkeit der schreibenden Person beschreiben und erklären, wie die Gruppe davon profitieren könnte.",
+      "options": [
+        {
+          "l": "A",
+          "id": "media",
+          "label": "Photos and videos",
+          "text": "{{If I am given a place, [[I would be glad to]]}} document the exchange. I take photos for our school magazine and know how to edit short videos, so I could make a video diary of our time in Ghent. {{It would give the other participants something to show}} when they present the project at their own schools.",
+          "why": "The topic sentence links our offer to taking part, and the paragraph explains how the group could profit."
+        },
+        {
+          "l": "B",
+          "id": "evening",
+          "label": "A taste of Austria",
+          "text": "{{In return for this chance, [[I would be happy to]] help organise}} an intercultural evening. Together with other Austrian participants, I could present a few typical dishes, including Kaiserschmarrn, and teach the group a simple card game from Austria. {{Moreover, I play the guitar,}} so music could be part of the evening as well.",
+          "why": "The topic sentence links back to the chance we hope for. ‘Moreover’ adds a second thing we could offer."
+        },
+        {
+          "l": "C",
+          "id": "trap",
+          "label": "Photos, videos and music",
+          "trap": true,
+          "crit": "LSR",
+          "text": "I can help the group in a lot of ways, and I can take photos, and I can make short videos, and then I can show them to everybody at the end, and I can also help with an Austrian evening, and I can cook something, and I can play the guitar, so I can do a lot for the exchange.",
+          "reject": "Correct, but it is all one very long sentence: ‘and’ six times and ‘I can’ eight times. Use separate sentences and formal phrases for offers: I would be glad to …, I would be happy to …, Moreover, …",
+          "rejectDe": "Richtig, aber alles in einem einzigen langen Satz: sechsmal „and“, achtmal „I can“. Getrennte Sätze und formelle Wendungen für Angebote verwenden (I would be glad to …, I would be happy to …, Moreover …)."
+        }
+      ]
+    },
+    {
+      "id": "questions",
+      "slot": "questions",
+      "part": "Body paragraph 3",
+      "q": "Body paragraph 3: what do we ask about dates, costs and requirements?",
+      "de": "Dritter Inhaltspunkt: unsere Fragen zu Terminen, Kosten und Voraussetzungen. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then write your own polite questions about the dates, costs and requirements.",
+      "ownDe": "Gerüst abschreiben, dann eigene höfliche Fragen zu Terminen, Kosten und Voraussetzungen formulieren.",
+      "options": [
+        {
+          "l": "A",
+          "id": "trap",
+          "label": "Straight to the questions",
+          "trap": true,
+          "crit": "LSA",
+          "text": "Finally, I have some questions about the practical details. When does the exchange exactly take place, and how much costs the trip to Ghent? I would also like to know if there is a deadline for applications. Will we stay with host families? Do I need a certain level of English, or is it enough when I can communicate well?",
+          "reject": "Three typical mistakes: ‘When does the exchange exactly take place’ (→ When exactly does …), ‘how much costs the trip’ (→ how much does the trip cost) and ‘enough when’ (→ enough if).",
+          "rejectDe": "Drei typische Fehler: does … exactly take place → When exactly does … take place, how much costs → how much does … cost, enough when → enough if (Bedingung)."
+        },
+        {
+          "l": "B",
+          "id": "list",
+          "label": "One question after the other",
+          "text": "{{Before I apply, I have a few questions.}} {{[[Could you please tell me]]}} the exact dates and the deadline for applications? {{[[I would also like to know]] whether}} travel costs are covered by the programme or whether participants pay a fee. {{Lastly, [[I would be interested to know]] whether}} there are any requirements, such as a minimum level of English or parental consent.",
+          "why": "Dates, costs and requirements in a clear order, each with a polite formal phrase."
+        },
+        {
+          "l": "C",
+          "id": "practical",
+          "label": "Practical details",
+          "text": "{{When it comes to the practical details, [[I would be grateful if you could tell me]]}} when exactly the exchange starts and ends. {{[[It would also be helpful to know]]}} how much participants have to pay themselves and which costs are covered by the programme. {{Furthermore, [[please let me know]] if}} there are any requirements, such as a language test.",
+          "why": "Three indirect questions with three different formal phrases. No question word order inside them."
+        }
+      ]
+    },
+    {
+      "id": "closing",
+      "slot": "closing",
+      "part": "Conclusion",
+      "q": "Conclusion: how do we end the email?",
+      "de": "Der Schluss greift unser Anliegen auf und rundet die E-Mail ab. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then add one sentence of your own that links back to the writer’s wish to take part.",
+      "ownDe": "Gerüst abschreiben, dann in einem eigenen Satz auf den Wunsch der schreibenden Person zurückverweisen, am Austausch teilzunehmen.",
+      "options": [
+        {
+          "l": "A",
+          "id": "reply",
+          "label": "Thanks and a reason to reply soon",
+          "text": "{{[[Thank you in advance for]]}} your answers. I would love to bring my ideas to Ghent, and as I need to talk to my parents and my school first, {{[[I would appreciate an early reply.]]}}",
+          "why": "It picks up our wish to take part and gives a good reason for a quick reply."
+        },
+        {
+          "l": "B",
+          "id": "trap",
+          "label": "Thanks and a final detail",
+          "trap": true,
+          "crit": "CC",
+          "text": "Thank you for your help. By the way, can my best friend come too, even though she is only fourteen? And is there Wi-Fi in the youth hostel? I look forward to hearing from you.",
+          "reject": "New questions do not belong in the conclusion. The conclusion only thanks the reader and asks for a reply; all questions go into the paragraph before.",
+          "rejectDe": "Neue Fragen gehören nicht in den Schluss. Der Schluss bedankt sich nur und bittet um eine Antwort."
+        },
+        {
+          "l": "C",
+          "id": "forward",
+          "label": "Thanks and a classic last line",
+          "text": "{{[[Thank you for taking the time to read my email.]]}} I very much hope to join the exchange next summer and to share my ideas with the group. {{[[I look forward to hearing from you]]}} soon.",
+          "why": "It picks up our wish to join and our ideas, and ends with the classic last sentence of a formal email."
+        }
+      ]
+    },
+    {
+      "id": "signoff",
+      "slot": "signoff",
+      "part": "Sign-off",
+      "q": "How do we sign off?",
+      "de": "Am Ende stehen die Grußformel und darunter der volle Name, den ihr gleich selbst bestimmt. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the closing formula and, on the next line, the full name we chose.",
+      "ownDe": "Grußformel abschreiben, darunter den gewählten vollen Namen.",
+      "options": [
+        {
+          "l": "A",
+          "id": "trap",
+          "label": "Sign-off A",
+          "trap": true,
+          "crit": "TA",
+          "text": "Friendly greetings,\n{NAME}",
+          "reject": "‘Friendly greetings’ is a word-for-word translation of ‘Mit freundlichen Grüßen’ and is not used in English. A formal email ends with ‘Yours faithfully’ (no name) or ‘Yours sincerely’ (with a name).",
+          "rejectDe": "„Friendly greetings“ ist wörtlich aus „Mit freundlichen Grüßen“ übersetzt und im Englischen unüblich. Formell: „Yours faithfully“ (ohne Namen) bzw. „Yours sincerely“ (mit Namen)."
+        },
+        {
+          "l": "B",
+          "id": "name",
+          "label": "Sign-off B",
+          "text": {
+            "by": "recipient",
+            "map": {
+              "office": "{{[[Yours faithfully,]]}}\n{NAME}",
+              "named": "{{[[Yours sincerely,]]}}\n{NAME}"
+            }
+          },
+          "why": "‘Dear Sir or Madam’ goes with ‘Yours faithfully’, ‘Dear Ms Peeters’ with ‘Yours sincerely’. Then our full name."
+        }
+      ]
+    }
+  ],
+  "order": [
+    "subject",
+    "greeting",
+    "opening",
+    "me",
+    "eu",
+    "contribute",
+    "questions",
+    "closing",
+    "signoff"
+  ],
+  "checks": [
+    {
+      "en": "A subject line that says clearly what the email is about"
+    },
+    {
+      "en": "Greeting and closing match: Dear Sir or Madam → Yours faithfully, Dear Ms … → Yours sincerely"
+    },
+    {
+      "en": "The first sentence says why we are writing"
+    },
+    {
+      "en": "All three content points: interest and introduction, our contribution, questions about dates, costs and requirements"
+    },
+    {
+      "en": "Five paragraphs: introduction, one paragraph per content point, conclusion; no new questions in the conclusion"
+    },
+    {
+      "en": "Formal register: no contractions, no slang, polite indirect questions"
+    },
+    {
+      "en": "The conclusion picks up our wish to take part and asks for a reply; our full name comes at the end"
+    }
+  ],
+  "teacher": {
+    "aim": "Die Klasse baut gemeinsam eine formelle E-Mail (B1) an die Organisator:innen eines von der EU geförderten Jugendaustauschs und übt dabei die Konventionen der formellen E-Mail: Betreff, passende Anrede und Grußformel, Zweck im ersten Satz, ein Punkt pro Absatz, höfliche indirekte Fragen, kein Slang und keine Kurzformen.",
+    "prep": "A/B/C/D-Karten austeilen, Beamer im Vollbild. An der Tafel eine kleine Tabelle vorbereiten: „Dear Sir or Madam → Yours faithfully“ und „Dear Ms … → Yours sincerely“. Nach Schritt 1 markieren, welche Zeile für unsere E-Mail gilt. Im Gerüst-Modus den eingebauten Timer nutzen: 5 min pro Absatz, bei Bedarf +1. Hefte bereitlegen. Die Aufgabe am Beamer enthält alles Nötige.",
+    "heft": "Neue Seite: Datum (rechts) und „Email“ als Überschrift (wie am Beamer). Darunter der E-Mail-Kopf mit vier Zeilen (To, From, Date, Subject) wie am Beamer; der Betreff kommt nach der zweiten Entscheidung in die Subject-Zeile, der Name erst unter die Grußformel. Anrede in einer eigenen Zeile, dann eine Zeile frei. Jeder Absatz beginnt nach einer Leerzeile, am Rand steht das Randwort (Intro, Body 1, Body 2, Body 3, Conclusion). Vor der Grußformel eine Zeile frei, dann Grußformel und Name in zwei eigenen Zeilen. Formelle Wendungen (Interesse, Angebote, Bitten, Schluss) grün unterstreichen.",
+    "flow": "Volltext kurz (50 min): 5 min Aufgabe lesen, 9 Entscheidungen (Empfänger:in, Betreff, Anrede und Grußformel gehen schnell, ca. 1 min; Absätze ca. 2 min), Abschreiben ca. 20 min, 5 min Checkliste. Volltext lang (Doppelstunde): wie kurz, zusätzlich eine Fortsetzung von Body 1 (was Europa für junge Menschen bedeutet, ca. 65 Wörter mehr) mit nützlichen Wendungen (take for granted, make the most of). Das gemeinsame Schreiben dauert ca. 60 min; die restliche Zeit für die Besprechung der Fallen und den Beginn der Hausübung nutzen. Gerüst kurz (geplant 60 min): 5 min Aufgabe; Empfänger:in, Betreff, Anrede und Grußformel je ca. 1 min; pro Absatz 1 min Entscheidung, realistisch 5–6 min eigenes Schreiben, 1 min Vergleich mit dem Modell. In 50 min: beim Schluss nur abstimmen und das Gerüst abschreiben, den eigenen Satz und die Checkliste als Hausübung. Gerüst lang: Doppelstunde mit 100 min, für die Fortsetzung von Body 1 zusätzlich ca. 8 min.",
+    "traps": "Greeting B (TA): „Dear Sirs,“ (veraltet, schließt Frauen aus) bzw. „Dear Ms Anna Peeters,“ (nach Ms nur der Nachname). Body 2 C (LSR): ein einziger langer Satz mit sechsmal „and“ und achtmal „I can“ statt formeller Angebote. Body 3 A (LSA): When does the exchange exactly take place, how much costs the trip, enough when. Conclusion B (CC): neue Fragen im Schluss. Sign-off A (TA): „Friendly greetings“, wörtlich übersetzt aus „Mit freundlichen Grüßen“. Kürzel: TA = Erfüllung der Aufgabenstellung, CC = Kohärenz und Kohäsion, LSR = Spektrum sprachlicher Mittel, LSA = Sprachrichtigkeit.",
+    "notes": "Jede Fassung hat fünf Absätze (Einleitung, drei Hauptabsätze, Schluss); die lange Fassung macht Body 1 länger, sie fügt keinen Absatz hinzu. Bei „Greeting“ und „Sign-off“ gibt es nur eine richtige Option: Die eigentliche Entscheidung (Name bekannt oder nicht) fällt in Schritt 1, hier geht es nur um die Falle. Austausch, Netzwerk, Kontaktperson und Adressen sind erfunden; Das EU-Förderprogramm bleibt bewusst ohne Namen. Für den Namen in der Grußformel nur erfundene Namen, keine Namen von Mitschüler:innen oder Lehrer:innen. Differenzierung: Schnelle ergänzen im Gerüst-Modus eine zusätzliche Frage, z. B. zur Unterkunft. Hausübung: zweite Fassung an die andere Empfängerin bzw. das Büro, mit angepasster Anrede und Grußformel und zwei anderen Entscheidungen."
+  }
+}

@@ -1,0 +1,437 @@
+{
+  "id": "g6-blog-favourite-hobby",
+  "title": "My favourite hobby",
+  "titleDe": "Blogbeitrag über ein Lieblingshobby",
+  "grade": 6,
+  "level": "A1+/A2",
+  "theme": "Freizeit, Hobbys & Sport",
+  "textType": "blog",
+  "modes": [
+    "full"
+  ],
+  "lengths": {
+    "short": {
+      "label": "around 100 words",
+      "min": 85,
+      "max": 115
+    }
+  },
+  "minutes": {
+    "full": {
+      "short": 50
+    }
+  },
+  "task": {
+    "situation": "Your class has got a blog about free time. This month, everybody writes a post about a hobby they really love.",
+    "instruction": "Write a blog post. Write about:",
+    "points": [
+      "what your hobby is",
+      "when and where you do it",
+      "why you love it",
+      "one thing you don’t like about it"
+    ],
+    "words": {
+      "short": "Write around 100 words."
+    },
+    "de": "Ein Blogbeitrag über ein Lieblingshobby (Skateboarden, Zeichnen oder Reiten): was, wann und wo, warum und was weniger Spaß macht. Schwerpunkt: like, love und hate + -ing. Der Titel kommt zuletzt."
+  },
+  "meta": {
+    "user": "just_my_hobby"
+  },
+  "focus": {
+    "label": "like / love / hate + -ing",
+    "labelDe": "like / love / hate + -ing",
+    "min": {
+      "short": 5
+    },
+    "note": "Marked: like, love and hate (also don’t like, loves, hates) + the -ing form."
+  },
+  "topicWords": [
+    "hobby",
+    "favourite",
+    "skateboarding",
+    "drawing",
+    "riding",
+    "horse",
+    "pony"
+  ],
+  "gaps": [
+    {
+      "id": "FRIEND",
+      "step": "when",
+      "q": "Who does our hobby with us? Shout a first name.",
+      "qDe": "Ruft einen Vornamen für eine Freundin oder einen Freund. Keine Namen von Mitschüler:innen oder Lehrer:innen.",
+      "type": "text",
+      "default": "Sofia",
+      "max": 20
+    }
+  ],
+  "steps": [
+    {
+      "id": "hobby",
+      "part": "Hobby",
+      "q": "Which hobby is our blog post about?",
+      "de": "Hier wählen wir das Hobby für unseren Blogbeitrag.",
+      "options": [
+        {
+          "l": "A",
+          "id": "skate",
+          "label": "Skateboarding",
+          "teaser": "Four wheels, ramps and lots of tricks."
+        },
+        {
+          "l": "B",
+          "id": "draw",
+          "label": "Drawing",
+          "teaser": "A pencil, some paper and a head full of ideas."
+        },
+        {
+          "l": "C",
+          "id": "ride",
+          "label": "Horse riding",
+          "teaser": "Ponies, a riding school and fresh air."
+        }
+      ]
+    },
+    {
+      "id": "intro",
+      "slot": "intro",
+      "part": "Introduction",
+      "q": "How do we start our blog post?",
+      "de": "Die Einleitung sagt, welches Hobby wir haben. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "hi",
+          "label": "Say hello",
+          "why": "A friendly hello, the hobby and how it all started.",
+          "text": {
+            "by": "hobby",
+            "map": {
+              "skate": "Hi, everyone! My favourite hobby is skateboarding. I got my first board two years ago, and I [[love learning]] new tricks.",
+              "draw": "Hi, everyone! My favourite hobby is drawing. My grandma gave me my first sketchbook two years ago, and I [[love filling]] it with pictures.",
+              "ride": "Hi, everyone! My favourite hobby is horse riding. I started riding two years ago, and I [[love spending]] time with the ponies."
+            }
+          }
+        },
+        {
+          "l": "B",
+          "id": "since",
+          "label": "Say hello to the readers",
+          "trap": true,
+          "crit": "LSA",
+          "text": {
+            "by": "hobby",
+            "map": {
+              "skate": "Hello, readers! Skateboarding is my favourite hobby since two years. I love learn new tricks, and I practise a lot.",
+              "draw": "Hello, readers! Drawing is my favourite hobby since two years. I love draw animals and faces, and I practise a lot.",
+              "ride": "Hello, readers! Horse riding is my favourite hobby since two years. I love ride our ponies, and I practise a lot."
+            }
+          },
+          "reject": "Two mistakes: say ‘I started two years ago’, not ‘is my favourite hobby since two years’. And ‘love’ needs -ing or to (love learning, love to learn), never the bare verb: ‘love learn’ is wrong.",
+          "rejectDe": "Zwei Fehler: „seit zwei Jahren“ heißt hier „I started two years ago“, und nach love steht -ing oder to (love learning, love to learn), nie die Grundform allein."
+        },
+        {
+          "l": "C",
+          "id": "guess",
+          "label": "Start with a riddle",
+          "why": "A little riddle makes readers curious before we say the answer.",
+          "text": {
+            "by": "hobby",
+            "map": {
+              "skate": "Can you guess my favourite hobby? Here’s a clue: you need a board with four wheels. Yes, I [[love skateboarding]]!",
+              "draw": "Can you guess my favourite hobby? Here’s a clue: you only need a pencil and some paper. Yes, I [[love drawing]]!",
+              "ride": "Can you guess my favourite hobby? Here’s a clue: you need a horse or a pony. Yes, I [[love riding]]!"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "when",
+      "slot": "when",
+      "part": "When and where",
+      "q": "When and where do we do our hobby?",
+      "de": "Dieser Absatz sagt, wann und wo wir unser Hobby machen. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "friend",
+          "label": "With a friend",
+          "why": "When, where and with whom: the reader gets the full picture.",
+          "text": {
+            "by": "hobby",
+            "map": {
+              "skate": "On sunny afternoons, I meet my friend {FRIEND} at the skate park near our flat. We [[hate going]] home before it gets dark!",
+              "draw": "On rainy afternoons, I sit at my desk with my friend {FRIEND}, and we draw comics together. We [[hate stopping]] for dinner!",
+              "ride": "Every Saturday, my friend {FRIEND} and I take the bus to a riding school. After our lesson, we [[hate leaving]] the ponies!"
+            }
+          }
+        },
+        {
+          "l": "B",
+          "id": "weekend",
+          "label": "At the weekend",
+          "why": "Starts with the time, then says where, and ends with what we like doing there.",
+          "text": {
+            "by": "hobby",
+            "map": {
+              "skate": "At the weekend, I take my board to the park by the river. I [[like watching]] the older skaters there.",
+              "draw": "At the weekend, I take my sketchbook to the park or to a café. I [[like sketching]] the people around me.",
+              "ride": "At the weekend, I go to a riding school outside town. I [[like exploring]] the forest with the other kids."
+            }
+          }
+        },
+        {
+          "l": "C",
+          "id": "club",
+          "label": "Twice a week",
+          "why": "How often and where, plus a fun detail about a person or an animal.",
+          "text": {
+            "by": "hobby",
+            "map": {
+              "skate": "Twice a week, I go to a skateboarding class at the youth centre. Our coach there [[hates seeing]] kids without helmets!",
+              "draw": "Twice a week, I go to an art club at the youth centre. Our teacher [[loves trying]] out new colours with us.",
+              "ride": "Twice a week, I have a riding lesson at a farm outside town. My favourite pony, Biscuit, [[loves eating]] carrots!"
+            }
+          }
+        },
+        {
+          "l": "D",
+          "id": "place",
+          "label": "My favourite place",
+          "trap": true,
+          "crit": "TA",
+          "text": {
+            "by": "hobby",
+            "map": {
+              "skate": "There is a big skate park near our school. It has got six ramps, and my friend {FRIEND} and I love trying new tricks there.",
+              "draw": "My desk is next to the window in my room. It has got a big lamp, and my friend {FRIEND} and I love drawing comics there.",
+              "ride": "There is a big riding school near our village. It has got twenty horses, and my friend {FRIEND} and I love riding there."
+            }
+          },
+          "reject": "This says WHERE, but not WHEN. The paragraph needs both.",
+          "rejectDe": "Hier steht, wo, aber nicht, wann wir unser Hobby machen. Der Absatz braucht beides."
+        }
+      ]
+    },
+    {
+      "id": "why",
+      "slot": "why",
+      "part": "Why I love it",
+      "q": "Why do we love our hobby?",
+      "de": "Dieser Absatz nennt Gründe, warum wir unser Hobby so mögen. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "nice",
+          "label": "My reasons",
+          "trap": true,
+          "crit": "LSR",
+          "text": {
+            "by": "hobby",
+            "map": {
+              "skate": "I like skateboarding because it is nice. The skate park is nice, and the people there are nice. My board is nice, too.",
+              "draw": "I like drawing because it is nice. My pencils are nice, and my sketchbook is nice. My pictures look nice, too.",
+              "ride": "I like horse riding because it is nice. The stables are nice, and the horses are nice. My riding teacher is nice, too."
+            }
+          },
+          "reject": "‘nice’ four times! That is boring for readers. Use other words: fun, friendly, exciting, cool …",
+          "rejectDe": "Viermal „nice“ ist langweilig. Verwendet andere Wörter: fun, friendly, exciting, cool …"
+        },
+        {
+          "l": "B",
+          "id": "feeling",
+          "label": "How it feels",
+          "why": "Real feelings and a clear picture: readers understand why we love it.",
+          "text": {
+            "by": "hobby",
+            "map": {
+              "skate": "Skateboarding makes me feel free. When I land a new trick, I’m so proud! I also [[love being]] outside with my friends.",
+              "draw": "Drawing makes me calm. When I draw, I forget about the time. I also [[love showing]] my pictures to my family.",
+              "ride": "Horses make me calm. When I sit on a horse, I forget all about my homework! I also [[love being]] outside in the fresh air."
+            }
+          }
+        },
+        {
+          "l": "C",
+          "id": "good",
+          "label": "Good for me",
+          "why": "Two reasons first, then ‘best of all’ for the most important one.",
+          "text": {
+            "by": "hobby",
+            "map": {
+              "skate": "Skateboarding keeps me fit, and it’s cheap. Best of all, I [[love meeting]] new people on the ramps.",
+              "draw": "Drawing is cheap, and you can do it anywhere, even on the bus! Best of all, I [[love creating]] my own worlds.",
+              "ride": "Riding keeps me fit, and I learn a lot about animals. Best of all, I [[love talking]] to the horses. They are great listeners!"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "hard",
+      "slot": "hard",
+      "part": "The hard part",
+      "q": "What don’t we like about our hobby?",
+      "de": "Dieser Absatz zeigt, dass auch ein tolles Hobby eine schwierige Seite hat. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "mistakes",
+          "label": "Things that go wrong",
+          "why": "An honest problem and a real example.",
+          "text": {
+            "by": "hobby",
+            "map": {
+              "skate": "Of course, I [[hate falling]] off my board. Last month, I hurt my knee, so now I always wear knee pads.",
+              "draw": "Of course, I [[hate making]] mistakes with my pens because I can’t rub them out. Luckily, I can turn them into something new!",
+              "ride": "Of course, I [[hate falling]] off. Last month, my pony stopped at a jump, and I landed in the sand. Ouch!"
+            }
+          }
+        },
+        {
+          "l": "B",
+          "id": "annoying",
+          "label": "Something annoying",
+          "why": "A small, everyday problem that other fans know, too.",
+          "text": {
+            "by": "hobby",
+            "map": {
+              "skate": "I [[don’t like waiting]] for my turn on busy days. Sometimes there are thirty kids and only three ramps!",
+              "draw": "I [[don’t like tidying]] up afterwards. After two hours at my desk, there is paper all over my room!",
+              "ride": "I [[don’t like riding]] in the rain. In winter, my boots get wet, and my fingers freeze!"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "ending",
+      "slot": "ending",
+      "part": "Conclusion",
+      "q": "How do we end our blog post?",
+      "de": "Am Ende laden wir die Leser:innen zum Kommentieren ein. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "you",
+          "label": "Ask the readers",
+          "why": "A direct question to the readers asks for answers in the comments.",
+          "text": "What about you? What do you [[love doing]] in your free time? Let me know in the comments!"
+        },
+        {
+          "l": "B",
+          "id": "try",
+          "label": "Invite the readers",
+          "why": "An invitation to try our hobby, then a call to comment.",
+          "text": {
+            "by": "hobby",
+            "map": {
+              "skate": "Do you [[like trying]] new things? Then grab a board and come to the park! Leave a comment below.",
+              "draw": "Do you [[like trying]] new things? Then grab a pencil and start today! Leave a comment below.",
+              "ride": "Do you [[like trying]] new things? Then book a riding lesson! Leave a comment below."
+            }
+          }
+        },
+        {
+          "l": "C",
+          "id": "bye",
+          "label": "Say goodbye",
+          "why": "A friendly goodbye that still asks readers to write back.",
+          "text": "That’s all for today! I [[like reading]] your comments. Please tell me about your favourite hobby, too. See you soon!"
+        }
+      ]
+    },
+    {
+      "id": "title",
+      "slot": "title",
+      "part": "Title",
+      "q": "Our post is ready. Which title fits it best?",
+      "de": "Zum Schluss wählen wir einen Titel für unseren Blogbeitrag.",
+      "options": [
+        {
+          "l": "A",
+          "id": "life",
+          "label": "A picture",
+          "why": "Short, and readers can see the hobby at once.",
+          "text": {
+            "by": "hobby",
+            "map": {
+              "skate": "Life on Four Wheels",
+              "draw": "Life with a Pencil",
+              "ride": "Life in the Saddle"
+            }
+          }
+        },
+        {
+          "l": "B",
+          "id": "whyi",
+          "label": "A reason",
+          "why": "It says clearly what the post is about.",
+          "text": {
+            "by": "hobby",
+            "map": {
+              "skate": "Why I [[Love Skateboarding]]",
+              "draw": "Why I [[Love Drawing]]",
+              "ride": "Why I [[Love Riding]]"
+            }
+          }
+        },
+        {
+          "l": "C",
+          "id": "three",
+          "label": "Three things",
+          "why": "Three typical things make readers smile and want to read on.",
+          "text": {
+            "by": "hobby",
+            "map": {
+              "skate": "Ramps, Tricks and a Lot of Plasters",
+              "draw": "Pencils, Paper and Big Ideas",
+              "ride": "Hay, Helmets and Happy Ponies"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "order": [
+    "title",
+    "intro",
+    "when",
+    "why",
+    "hard",
+    "ending"
+  ],
+  "checks": [
+    {
+      "en": "The title fits the whole post"
+    },
+    {
+      "en": "It says what our hobby is"
+    },
+    {
+      "en": "It says when AND where we do it"
+    },
+    {
+      "en": "It gives real reasons why we love it"
+    },
+    {
+      "en": "It tells one thing we don’t like about it"
+    },
+    {
+      "en": "Like, love and hate come with -ing: I love drawing, I hate falling off"
+    },
+    {
+      "en": "The post ends with a message for the readers"
+    }
+  ],
+  "teacher": {
+    "aim": "Die Klasse baut gemeinsam einen Blogbeitrag über ein Lieblingshobby (Skateboarden, Zeichnen oder Reiten) und übt dabei like, love und hate mit der -ing-Form (I love drawing, I hate falling off, I don’t like waiting).",
+    "prep": "A/B/C/D-Karten austeilen, Hefte bereitlegen, Beamer im Vollbild. Einsatz ab: Present simple (auch he/she/it mit -s), Past simple für einzelne Ereignisse (I got, I hurt) und like/love/hate + -ing. Bei Bedarf Wörter an die Tafel: ramp (Rampe), land a trick (einen Trick schaffen), knee pads (Knieschützer), coach (Trainer:in), sketchbook (Skizzenbuch), rub out (wegradieren), stables (Stall), saddle (Sattel), hay (Heu), plasters (Pflaster).",
+    "heft": "Neue Seite: Datum rechts oben, darunter „Blog post“ als Überschrift (wie am Beamer). Dann 2 Zeilen für den Titel frei lassen (der Titel kommt zuletzt), darunter Username und Datum in einer Zeile (wie am Beamer). Jeder Absatz beginnt nach einer Leerzeile, am Rand steht der Name des Teils wie am Beamer. like/love/hate + -ing grün unterstreichen.",
+    "flow": "Volltext (50 min): 5 min Aufgabe lesen und Hobby wählen · 6 Entscheidungen à ca. 2 min, zusammen ca. 13 min · Abschreiben nach jeder Entscheidung, zusammen ca. 20 min · 5 min Checkliste · 5–7 min Puffer. Wenn die Zeit knapp wird: Checkliste als Hausübung.",
+    "traps": "Introduction B (LSA, Sprachrichtigkeit): „is my favourite hobby since two years“ (wörtlich aus „seit zwei Jahren“; auf diesem Niveau einfacher: I started two years ago) und „love learn / love draw / love ride“ ohne -ing. When and where D (TA, Erfüllung der Aufgabenstellung): Der Absatz sagt nur, wo, aber nicht, wann wir unser Hobby machen. Why I love it A (LSR, Spektrum sprachlicher Mittel): viermal nice, sehr einfacher Wortschatz statt echter Gründe.",
+    "notes": "Im britischen Englisch sind I love to draw und I love drawing beide richtig; die Einheit übt die -ing-Form. Falsch ist immer die Grundform ohne to (love draw). Auf he/she/it achten: Our coach hates seeing …, Our teacher loves trying … Den Namen der Freundin oder des Freundes ruft die Klasse; Hobby, Orte und Tiere sind erfunden. Differenzierung: Schnelle schreiben drei eigene Sätze mit I love …, I don’t like … und I hate … + -ing. Hausübung: zweite Fassung über ein anderes Hobby oder ein Kommentar (ca. 50 Wörter) zum Blogbeitrag."
+  }
+}

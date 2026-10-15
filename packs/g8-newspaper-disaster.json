@@ -1,0 +1,530 @@
+{
+  "id": "g8-newspaper-disaster",
+  "title": "Disaster on the front page",
+  "titleDe": "Naturkatastrophe auf der Titelseite",
+  "grade": 8,
+  "level": "A2+",
+  "theme": "Umwelt & Nachhaltigkeit",
+  "textType": "newspaper",
+  "modes": [
+    "full"
+  ],
+  "lengths": {
+    "short": {
+      "label": "around 150 words",
+      "min": 135,
+      "max": 165
+    }
+  },
+  "minutes": {
+    "full": {
+      "short": 50
+    }
+  },
+  "task": {
+    "situation": "Our class newspaper needs a front-page story about a natural disaster. The places and people are invented, but the story must sound like real news. Nobody is badly hurt: the report is about the damage, the rescue and how people helped.",
+    "instruction": "Write a newspaper article with:",
+    "points": [
+      "a headline and a lead that answers the 5 Ws",
+      "what happened and how people helped",
+      "a quote from a witness and a conclusion"
+    ],
+    "words": {
+      "short": "Write around 150 words."
+    },
+    "de": "Gemeinsamer Zeitungsbericht über eine erfundene Naturkatastrophe: Lead mit den W-Fragen, Passiv im Bericht, Rettung und Hilfe, ein Zitat und ein Schluss. Die Headline kommt zuletzt."
+  },
+  "meta": {
+    "publication": "The Class Times",
+    "byline": "our class newsroom"
+  },
+  "focus": {
+    "label": "passive forms",
+    "labelDe": "Passivformen",
+    "min": {
+      "short": 4
+    },
+    "note": "Marked: every passive form, including shortened passives in headlines."
+  },
+  "topicWords": [],
+  "gaps": [
+    {
+      "id": "N",
+      "step": "facts",
+      "q": "How many helpers came? Shout a realistic number.",
+      "qDe": "Wie viele Helfer:innen waren im Einsatz? Ruft eine realistische Zahl, z. B. 50 bis 300.",
+      "type": "number",
+      "default": 120,
+      "min": 10,
+      "max": 2000
+    },
+    {
+      "id": "NAME",
+      "step": "quote",
+      "q": "Who is our witness? First name and family name.",
+      "qDe": "Erfindet einen Vor- und Nachnamen für die Augenzeugin oder den Augenzeugen. Keine Namen von Mitschüler:innen oder Lehrer:innen.",
+      "type": "text",
+      "default": "Lisa Berger",
+      "max": 40,
+      "minWords": 2
+    },
+    {
+      "id": "AGE",
+      "step": "quote",
+      "q": "How old is the witness?",
+      "qDe": "Wie alt ist die erwachsene Person? Ruft ein Alter, das zum Beruf passt (18 bis 90).",
+      "type": "number",
+      "default": 41,
+      "min": 18,
+      "max": 90
+    },
+    {
+      "id": "SAGE",
+      "step": "quote",
+      "q": "How old is the student?",
+      "qDe": "Wie alt ist die junge Person? Sie geht noch zur Schule. Ruft ein Alter zwischen 10 und 19.",
+      "type": "number",
+      "default": 14,
+      "min": 10,
+      "max": 19
+    }
+  ],
+  "steps": [
+    {
+      "id": "story",
+      "part": "Story",
+      "q": "Which story goes on our front page?",
+      "de": "Hier wählt ihr, welche Geschichte auf unsere Titelseite kommt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "A",
+          "label": "Hailstorm in a small town",
+          "teaser": "Hailstones as big as golf balls hit Sonnwies, a small town in the hills."
+        },
+        {
+          "l": "B",
+          "id": "B",
+          "label": "Mudslide in the mountains",
+          "teaser": "After days of rain, a river of mud cuts off a small mountain village."
+        },
+        {
+          "l": "C",
+          "id": "C",
+          "label": "Forest fire after a dry summer",
+          "teaser": "Weeks without rain, then the forest burns. Hikers are trapped on the mountain."
+        },
+        {
+          "l": "D",
+          "id": "D",
+          "label": "Tornado in a wine village",
+          "teaser": "Five minutes, dozens of roofs gone. Tornadoes can happen here, too!"
+        }
+      ]
+    },
+    {
+      "id": "lead",
+      "slot": "lead",
+      "part": "Lead",
+      "q": "How do we start? The lead answers the 5 Ws.",
+      "de": "Mit dem Lead beginnt unser Zeitungsbericht. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "place",
+          "label": "Start with WHERE",
+          "why": "Starts with WHERE: readers from this area want to read on at once.",
+          "text": {
+            "by": "story",
+            "map": {
+              "A": "In Sonnwies, a small town in the hills, a hailstorm caused chaos on Tuesday afternoon after a hot day. Hundreds of cars and windows [[were damaged]] by hailstones as big as golf balls.",
+              "B": "In Felsbach, a small village in the mountains, a huge mudslide buried the only road on Tuesday evening after days of heavy rain. Thirty people [[were evacuated]] from their homes.",
+              "C": "Near the small village of Lindenbach, a big forest fire broke out on Tuesday afternoon after weeks without rain. An area as big as 50 football pitches [[was destroyed]].",
+              "D": "In Weinhofen, a village among the vineyards, a tornado caused heavy damage on Tuesday evening after a hot, humid day. Dozens of roofs [[were blown away]] in less than five minutes."
+            }
+          }
+        },
+        {
+          "l": "B",
+          "id": "damage",
+          "label": "Start with the DAMAGE",
+          "why": "Starts with the worst damage: the most dramatic fact comes first.",
+          "text": {
+            "by": "story",
+            "map": {
+              "A": "Hundreds of cars and windows [[were damaged]] on Tuesday afternoon when a hailstorm hit Sonnwies, a small town in the hills, after a hot day. Some hailstones were as big as golf balls.",
+              "B": "Thirty people [[were evacuated]] from their homes on Tuesday evening when a huge mudslide hit Felsbach, a small village in the mountains. It came after days of heavy rain.",
+              "C": "An area of forest as big as 50 football pitches [[was destroyed]] on Tuesday afternoon when a big fire broke out near the small village of Lindenbach. It had not rained for weeks.",
+              "D": "Dozens of roofs [[were blown away]] on Tuesday evening when a tornado hit Weinhofen, a village among the vineyards, after a hot, humid day. It all happened in less than five minutes."
+            }
+          }
+        },
+        {
+          "l": "C",
+          "id": "trap",
+          "label": "Start with a mystery",
+          "trap": true,
+          "crit": "TA",
+          "reject": "Where exactly? When exactly? What happened? A lead gives concrete facts (the 5 Ws), not a mystery.",
+          "rejectDe": "Wo genau? Wann genau? Was genau? Ein Lead nennt sofort konkrete Fakten.",
+          "text": "Something terrible happened last week. Many people were shocked, and the news spread fast. Nobody could believe what they saw. Read on to find out more!"
+        },
+        {
+          "l": "D",
+          "id": "time",
+          "label": "Start with WHEN",
+          "why": "Starts with WHEN: the classic opening of a news report.",
+          "text": {
+            "by": "story",
+            "map": {
+              "A": "On Tuesday afternoon, after a hot day, a heavy hailstorm hit Sonnwies, a small town in the hills. Hundreds of cars and windows [[were damaged]] by hailstones as big as golf balls.",
+              "B": "On Tuesday evening, after days of heavy rain, a huge mudslide hit Felsbach, a small village in the mountains. Thirty people [[were evacuated]] from their homes.",
+              "C": "On Tuesday afternoon, after weeks without rain, a big forest fire broke out near the small village of Lindenbach. An area as big as 50 football pitches [[was destroyed]].",
+              "D": "On Tuesday evening, after a hot, humid day, a tornado hit Weinhofen, a village among the vineyards. In less than five minutes, dozens of roofs [[were blown away]]."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "intro",
+      "slot": "intro",
+      "part": "Introduction",
+      "q": "What happened in detail? Which version do we print?",
+      "de": "Hier erzählen wir die Ereignisse im Detail. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "passive",
+          "label": "Version A",
+          "why": "Passive: the focus is on what happened TO cars, roads and houses. Very typical for news.",
+          "text": {
+            "by": "story",
+            "map": {
+              "A": "Shortly after 3 pm, the storm started. In less than twenty minutes, roof tiles [[were broken]], trees [[were damaged]] and the market square [[was flooded]]. Some streets turned into rivers, and traffic [[was stopped]] for an hour.",
+              "B": "At about 7 pm, the mudslide started. Within minutes, the road into the village [[was covered]] in mud and rocks, and two barns [[were destroyed]]. The power line [[was damaged]], too, so the valley was dark for hours.",
+              "C": "At about 1 pm, the fire started. The flames [[were driven]] up the mountain by strong winds, the valley [[was covered]] in thick smoke and two roads [[were closed]]. Families on two nearby farms [[were told]] to leave at once.",
+              "D": "At about 8 pm, the tornado arrived. Trees [[were torn]] out of the ground, cars [[were turned over]] and the church tower [[was damaged]]. By half past eight, the main street [[was covered]] with broken roof tiles and branches."
+            }
+          }
+        },
+        {
+          "l": "B",
+          "id": "trap",
+          "label": "Version B",
+          "trap": true,
+          "crit": "LSA",
+          "reject": "Two wrong verb forms: the event is over, so we need the past simple. One verb is in the present, and one is with ‘will’. Only the outlook at the very end may look into the future.",
+          "rejectDe": "Zwei falsche Zeitformen: Das Ereignis ist vorbei, also Past simple; ein Verb steht im Present, eines mit will.",
+          "text": {
+            "by": "story",
+            "map": {
+              "A": "Shortly after 3 pm, the storm started. In less than twenty minutes, hailstones break roof tiles and damaged trees, and water flooded the market square. Some streets turned into rivers, and the police will stop traffic for an hour.",
+              "B": "At about 7 pm, the mudslide started. Within minutes, mud and rocks cover the road into the village and destroyed two barns. The mud also damaged the power line, so the valley will be dark for hours.",
+              "C": "At about 1 pm, the fire started. Strong winds drove the flames up the mountain, and thick smoke covers the valley. The police will close two roads and told the families on two nearby farms to leave at once.",
+              "D": "At about 8 pm, the tornado arrived. It tears trees out of the ground, turned over cars and damaged the church tower. By half past eight, broken roof tiles and branches will cover the main street."
+            }
+          }
+        },
+        {
+          "l": "C",
+          "id": "active",
+          "label": "Version C",
+          "why": "Active: the focus is on what the disaster DID. Strong verbs make it dramatic.",
+          "text": {
+            "by": "story",
+            "map": {
+              "A": "Shortly after 3 pm, the storm started. In less than twenty minutes, hailstones broke roof tiles and damaged trees, and water flooded the market square. Some streets turned into rivers, and the police stopped traffic for an hour.",
+              "B": "At about 7 pm, the mudslide started. Within minutes, mud and rocks covered the road into the village and destroyed two barns. The mud also damaged the power line, so the valley was dark for hours.",
+              "C": "At about 1 pm, the fire started. Strong winds drove the flames up the mountain, and thick smoke covered the valley. The police closed two roads and told the families on two nearby farms to leave at once.",
+              "D": "At about 8 pm, the tornado arrived. It tore trees out of the ground, turned over cars and damaged the church tower. By half past eight, broken roof tiles and branches covered the main street."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "facts",
+      "slot": "facts",
+      "part": "Main body",
+      "q": "Which detail do we report next?",
+      "de": "Der Hauptteil bringt weitere Fakten. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "rescue",
+          "label": "The rescue",
+          "why": "Readers want to know: Who helped? Who was saved?",
+          "text": {
+            "by": "story",
+            "map": {
+              "A": "More than {N} firefighters [[were sent]] to the town. All evening, water [[was pumped]] out of flooded garages, and a woman and her dog [[were rescued]] from a car.",
+              "B": "More than {N} firefighters and mountain rescuers came to help. An old man [[was rescued]] from his house with a ladder and [[was taken]] to his daughter’s home in the next village.",
+              "C": "More than {N} firefighters [[were called]] to the area. Twenty hikers [[were brought]] down from the mountain safely, and three houses [[were saved]] at the last minute.",
+              "D": "Soon, more than {N} firefighters arrived in the village. A tree [[was blown]] onto a car, and a family [[was rescued]] from it. Nobody else [[was trapped]]."
+            }
+          }
+        },
+        {
+          "l": "B",
+          "id": "damage",
+          "label": "The damage",
+          "why": "Numbers show how big the disaster was.",
+          "text": {
+            "by": "story",
+            "map": {
+              "A": "So far, the cost [[has been estimated]] at several million euros. About 500 cars [[have been damaged]], and more than {N} helpers worked through the night.",
+              "B": "So far, the cost [[has been estimated]] at two million euros. The road [[has been closed]], and more than {N} helpers are working day and night to clear it.",
+              "C": "So far, the cost [[has not been calculated]]. Thousands of trees [[have been destroyed]], and more than {N} firefighters are still fighting the last flames.",
+              "D": "So far, the cost [[has been estimated]] at five million euros. About 60 houses [[have been damaged]], and more than {N} firefighters are helping day and night."
+            }
+          }
+        },
+        {
+          "l": "C",
+          "id": "daily",
+          "label": "Everyday life",
+          "why": "Shows how the disaster changed people’s everyday life.",
+          "text": {
+            "by": "story",
+            "map": {
+              "A": "Because of the storm, the railway line to Graz [[was closed]] for the evening, and the outdoor pool [[was shut]]. More than {N} helpers [[were needed]] to clear the streets.",
+              "B": "Because of the mudslide, Felsbach [[was cut off]] from the rest of the valley. Food and medicine [[were flown in]] by helicopter, and more than {N} helpers [[were sent]] to the area.",
+              "C": "Because of the smoke, people in Lindenbach [[were asked]] to keep their windows closed. Water [[was dropped]] from helicopters, and more than {N} firefighters [[were called]] to help.",
+              "D": "Because of the tornado, the power [[was cut off]] for the whole night. The school [[was closed]] on Wednesday, and more than {N} firefighters [[were sent]] to the village."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "quote",
+      "slot": "quote",
+      "part": "Quote",
+      "q": "Who do we quote?",
+      "de": "Ein Zitat macht unseren Bericht lebendig. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "fire",
+          "label": "Someone who helped",
+          "why": "Someone who helped sounds reliable: “…,” said + job + name + age.",
+          "text": {
+            "by": "story",
+            "map": {
+              "A": "“It sounded like someone was throwing stones at the roofs,” said firefighter {NAME}, {AGE}. “Fortunately, nobody [[was hurt]].”",
+              "B": "“The ground was moving like a river,” said mountain rescuer {NAME}, {AGE}. “Fortunately, all the families [[were warned]] in time.”",
+              "C": "“The fire was moving faster than we could run,” said firefighter {NAME}, {AGE}. “Fortunately, nobody [[was hurt]], and the animals on the farms [[were saved]], too.”",
+              "D": "“The roofs were flying through the air like paper,” said firefighter {NAME}, {AGE}. “Fortunately, everyone [[was found]] safe and well by midnight.”"
+            }
+          }
+        },
+        {
+          "l": "B",
+          "id": "trap",
+          "label": "Our reporter",
+          "trap": true,
+          "crit": "TA",
+          "reject": "Journalists don’t write about themselves and don’t give their own opinions. We quote WITNESSES: people who were there.",
+          "rejectDe": "Journalist:innen schreiben nicht über sich und geben keine eigene Meinung ab. Zitiert werden Augenzeug:innen.",
+          "text": "“I was really scared when I saw it, and I think the government should do much more,” wrote our reporter {NAME}, {AGE}."
+        },
+        {
+          "l": "C",
+          "id": "student",
+          "label": "A student",
+          "why": "A young witness: readers can imagine it was them.",
+          "text": {
+            "by": "story",
+            "map": {
+              "A": "“The hail was so loud that we couldn’t hear the TV,” said {NAME}, {SAGE}, a student from Sonnwies. “Afterwards, our garden [[was covered]] in ice.”",
+              "B": "“We were having dinner when we heard a loud noise,” said {NAME}, {SAGE}, a student from Felsbach. “Our whole street [[was buried]] under mud.”",
+              "C": "“From our classroom window, the whole sky looked orange,” said {NAME}, {SAGE}, a student in Lindenbach. “We [[were sent]] home early.”",
+              "D": "“We hid in the cellar with our dog,” said {NAME}, {SAGE}, a student from Weinhofen. “When we came out, our garden was full of broken branches.”"
+            }
+          }
+        },
+        {
+          "l": "D",
+          "id": "local",
+          "label": "Someone who lives there",
+          "why": "Someone who lives there: the quote shows feelings, but the article stays neutral.",
+          "text": {
+            "by": "story",
+            "map": {
+              "A": "“My café window [[was broken]] in seconds,” said café owner {NAME}, {AGE}. “But my neighbours helped me to clean up.”",
+              "B": "“My barn [[was destroyed]] in seconds,” said farmer {NAME}, {AGE}. “But my cows [[were saved]] by my neighbours.”",
+              "C": "“The flames almost reached my little hotel,” said hotel owner {NAME}, {AGE}. “I want to thank the firefighters.”",
+              "D": "“Half of my vineyard [[was destroyed]],” said winemaker {NAME}, {AGE}. “We have lost this year’s grapes, but we will start again.”"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "end",
+      "slot": "end",
+      "part": "Conclusion",
+      "q": "How do we end the article?",
+      "de": "Mit dem Schluss endet unser Bericht. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "hope",
+          "label": "Positive outlook",
+          "why": "Ends with hope: a positive look into the future.",
+          "text": {
+            "by": "story",
+            "map": {
+              "A": "The town is already getting back to normal. Most broken roofs and cars [[will be repaired]] within a few weeks. For now, damaged windows [[have been covered]] with wood and plastic.",
+              "B": "Help is coming from everywhere. The road [[will be reopened]] next week, and in the meantime, the families [[have been offered]] food and warm beds.",
+              "C": "There is hope for the forest. New trees [[will be planted]] next spring, and help [[has already been offered]] by the local school and many families.",
+              "D": "The village is not giving up. Most roofs [[will be repaired]] before winter, and builders from all over the region are already on their way."
+            }
+          }
+        },
+        {
+          "l": "B",
+          "id": "warn",
+          "label": "A warning",
+          "why": "Ends with a warning: what can happen in the future?",
+          "text": {
+            "by": "story",
+            "map": {
+              "A": "Experts warn that storms like this will become more common because of climate change. Cars [[must be better protected]], and the town [[has been asked]] to put hail nets over its car parks.",
+              "B": "Experts warn that heavy rain will become more common because of climate change. Villages in the mountains [[must be better protected]], and new protective walls [[will be built]] above Felsbach next year.",
+              "C": "Experts warn that hot, dry summers will become more common because of climate change. Forests [[must be watched]] more carefully, and campfires and barbecues [[will not be allowed]] in the forest this summer.",
+              "D": "Experts say that tornadoes are rare in this region. However, they are very hard to predict, even with modern technology. Warning systems [[must be improved]] so that people [[can be warned]] earlier next time."
+            }
+          }
+        },
+        {
+          "l": "C",
+          "id": "next",
+          "label": "What happens next",
+          "why": "Ends with useful information for readers.",
+          "text": {
+            "by": "story",
+            "map": {
+              "A": "Clean-up work is still going on. Two streets [[will be closed]] until Friday, and people [[are asked]] to park outside the centre. Families who need help can call the town hotline.",
+              "B": "Diggers are still working on the road. The families cannot return before Friday, so they [[have been given]] beds in the village hall. The local school [[will be closed]] until then.",
+              "C": "By now, the fire is almost under control, but the forest paths [[will be closed]] for at least two weeks. Hikers [[are asked]] to stay away until it rains again.",
+              "D": "Clean-up work is still going on. Volunteers from nearby villages [[are asked]] to bring tools and help on Saturday. Food and drinks [[will be served]] by the local fire brigade."
+            }
+          }
+        },
+        {
+          "l": "D",
+          "id": "trap",
+          "label": "A fun fact",
+          "trap": true,
+          "crit": "CC",
+          "reject": "A conclusion brings NO new facts. It sums up the story or looks into the future.",
+          "rejectDe": "Im Schluss kommen keine neuen Fakten. Er fasst zusammen oder blickt in die Zukunft.",
+          "text": {
+            "by": "story",
+            "map": {
+              "A": "To sum up, it was a terrible storm. By the way, a cat was found on the roof of the town hall, but nobody knows how it got there. The cat is now at an animal shelter.",
+              "B": "To sum up, it was a terrible mudslide. By the way, a goat was found on the roof of a barn, but nobody knows how it got there. The goat is now back with its owner.",
+              "C": "To sum up, it was a terrible fire. By the way, a fox was seen in the school canteen, but nobody knows how it got there. The fox ran back into the forest.",
+              "D": "To sum up, it was a terrible tornado. By the way, a garden gnome was found on the church tower, but nobody knows how it got there. Its owner has not been found yet."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "title",
+      "slot": "title",
+      "part": "Headline",
+      "q": "Our report is finished. Which headline do we choose?",
+      "de": "Zum Schluss wählen wir die Headline unseres Berichts.",
+      "options": [
+        {
+          "l": "A",
+          "id": "short",
+          "label": "Short and direct",
+          "why": "Short, active, present tense: typical for headlines.",
+          "text": {
+            "by": "story",
+            "map": {
+              "A": "Hailstorm hits small town",
+              "B": "Mudslide cuts off mountain village",
+              "C": "Huge fire hits forest near Lindenbach",
+              "D": "Tornado hits wine village"
+            }
+          }
+        },
+        {
+          "l": "B",
+          "id": "passive",
+          "label": "Passive headline",
+          "why": "A shortened passive: headlines leave out ‘is / was / were’. Short and strong.",
+          "text": {
+            "by": "story",
+            "map": {
+              "A": "Cars and windows [[smashed]] by giant hailstones",
+              "B": "30 people [[evacuated]] after mudslide in the mountains",
+              "C": "Forest [[destroyed]] by fire near Lindenbach",
+              "D": "Roofs [[blown away]] by tornado in Weinhofen"
+            }
+          }
+        },
+        {
+          "l": "C",
+          "id": "creative",
+          "label": "Make them curious",
+          "why": "A creative headline makes readers want to read on.",
+          "text": {
+            "by": "story",
+            "map": {
+              "A": "Ice from the sky: chaos in Sonnwies",
+              "B": "A river of mud in Felsbach",
+              "C": "Orange sky over Lindenbach",
+              "D": "Five minutes that changed a village"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "order": [
+    "title",
+    "lead",
+    "intro",
+    "facts",
+    "quote",
+    "end"
+  ],
+  "checks": [
+    {
+      "en": "Headline: short and catchy"
+    },
+    {
+      "en": "Lead: what, where, when, who, why"
+    },
+    {
+      "en": "Past tense for the event, future only in the outlook"
+    },
+    {
+      "en": "The report says how people helped"
+    },
+    {
+      "en": "A quote with name and age: “…,” said …"
+    },
+    {
+      "en": "No new facts in the conclusion"
+    },
+    {
+      "en": "Neutral: no ‘I think’, no ‘OMG’, no emojis"
+    }
+  ],
+  "teacher": {
+    "aim": "Die Klasse baut gemeinsam einen Zeitungsbericht über eine erfundene Naturkatastrophe und übt dabei das Passiv in mehreren Zeitformen. Im Mittelpunkt stehen Rettung und Hilfe, nicht das Leid.",
+    "prep": "A/B/C/D-Karten austeilen, Hefte bereitlegen, Beamer im Vollbild. Einsatz ab: Passiv im Present simple und Past simple (is / are, was / were + 3. Form); die Formen mit has been, will be sowie must be / can be kommen als Erweiterung vor und können kurz erklärt werden. Bei Bedarf schwierige Wörter an die Tafel: estimated (geschätzt), evacuated (evakuiert), barn (Scheune), power line (Stromleitung), hail nets (Hagelnetze), protective walls (Schutzmauern), vineyard (Weingarten), calculated (berechnet), rescuer (Retter:in).",
+    "heft": "Neue Seite: Datum (rechts) und „News report“ als Überschrift (wie am Beamer), darunter 2 Zeilen für die Headline frei lassen (sie kommt zuletzt), dann der Lead. Jeder Absatz beginnt nach einer Leerzeile, am Rand steht der Name des Teils wie am Beamer: Lead, Introduction, Main body, Quote, Conclusion. Passivformen grün unterstreichen.",
+    "flow": "Volltext (50 min): 3 min Aufgabe · 7 Entscheidungen (die erste ist eine reine Wahl: welche Geschichte) à ca. 2–3 min, bei Introduction und Conclusion zuerst 1 min still lesen, zusammen ca. 18 min · Abschreiben nach jeder Entscheidung, zusammen ca. 20 min · 5 min Checkliste · 4 min Puffer. Wenn die Zeit knapp wird: Checkliste als Hausübung. Pro abgelehnter Falle etwa eine Minute extra einplanen.",
+    "traps": "Lead C (TA, Erfüllung der Aufgabenstellung): kein konkreter Fakt, nur Spannung. Introduction B (LSA, Sprachrichtigkeit): zwei falsche Zeitformen, ein Verb im Present (break / cover / covers / tears) und eines mit will (will stop / will be / will close / will cover) statt Past simple. Quote B (TA, Erfüllung der Aufgabenstellung): Reporter:in mit eigener Meinung statt Augenzeug:in. Conclusion D (CC, Kohärenz und Kohäsion): neuer Fakt im Schluss.",
+    "notes": "Sensibles Thema: Vor der Stunde ankündigen, dass es um eine (erfundene) Naturkatastrophe geht. Alle vier Ereignisse und Orte sind erfunden, in keinem Bericht stirbt jemand, der Schwerpunkt liegt auf Rettung und Hilfe. Wer selbst von einem Unwetter oder einer Katastrophe betroffen war, muss nicht davon erzählen; dann eine Geschichte wählen, die nicht an das eigene Erlebnis erinnert; die Lehrkraft darf die Wahl auch vorgeben. Wenn das Thema jemanden belastet: Schulpsychologie oder Rat auf Draht (147) als Anlaufstellen nennen. Bei schwächeren Gruppen die Falle im Lead nur kurz besprechen. Bei langen Optionen (Introduction, Conclusion) zuerst 1 Minute still lesen lassen, dann abstimmen. Nur erfundene Namen, keine Namen von Mitschüler:innen oder Lehrer:innen. Hausübung: „Second edition“ mit zwei anderen Entscheidungen."
+  }
+}

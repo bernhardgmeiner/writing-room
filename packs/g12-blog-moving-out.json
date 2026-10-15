@@ -1,0 +1,463 @@
+{
+  "id": "g12-blog-moving-out",
+  "title": "Moving out: my first month",
+  "titleDe": "Der erste Monat in der WG",
+  "grade": 12,
+  "level": "B2",
+  "theme": "Arbeit & Zukunft",
+  "textType": "blog",
+  "modes": [
+    "full",
+    "frame"
+  ],
+  "lengths": {
+    "short": {
+      "label": "around 250 words",
+      "min": 225,
+      "max": 275
+    },
+    "long": {
+      "label": "around 400 words",
+      "min": 360,
+      "max": 440
+    }
+  },
+  "minutes": {
+    "full": {
+      "short": 50,
+      "long": 100
+    },
+    "frame": {
+      "short": 60,
+      "long": 100
+    }
+  },
+  "task": {
+    "situation": "You finished school with the Matura last summer. A month ago, you moved into a shared flat in a university town with two other students, Defne and Kwame. ‘Next Step’, a website for school leavers, publishes blog posts by young people about life after school.",
+    "instruction": "Write a blog post in which you:",
+    "points": [
+      "describe your new flat and the people you share it with",
+      "explain how you are coping with money and household chores",
+      "give advice to students who are planning to move out after the Matura"
+    ],
+    "words": {
+      "short": "Give your blog post a title. Write around 250 words.",
+      "long": "Give your blog post a title. Write around 400 words."
+    },
+    "de": "Blogbeitrag für eine Website für Schulabgänger:innen über den ersten Monat in einer WG nach der Matura: Titel, Username, Datum, Einstieg mit Hook, klare Absätze, Schluss mit Aufruf zum Kommentieren. Drei Inhaltspunkte: Wohnung und Mitbewohner:innen beschreiben; erklären, wie es mit Geld und Haushalt klappt; Tipps für alle geben, die nach der Matura ausziehen wollen. Wir schreiben aus der Sicht einer erfundenen Person."
+  },
+  "meta": {
+    "user": "first_flat_files"
+  },
+  "focus": {
+    "label": "phrasal verbs",
+    "labelDe": "Phrasal Verbs",
+    "min": {
+      "short": 6,
+      "long": 10
+    },
+    "note": "Marked: phrasal verbs, i.e. a verb with an adverb particle, sometimes followed by a preposition (move out, turn up, run out of, add up to), in every tense and form. If an object stands between the verb and the particle, it is marked too (wake me up). Prepositional verbs such as ‘pay for’ or ‘ask for’ are not marked. Informal register is not marked: check it with the list at the end."
+  },
+  "topicWords": [
+    "flat",
+    "flatmates",
+    "flatmate",
+    "rent",
+    "euros",
+    "month",
+    "money",
+    "chores",
+    "matura",
+    "defne",
+    "kwame"
+  ],
+  "gaps": [
+    {
+      "id": "SUBJECT",
+      "step": "intro",
+      "q": "What does our blogger study at university? Shout a subject.",
+      "qDe": "Was studiert die Person? Ruft ein Studienfach auf Englisch, z. B. history, biology oder computer science.",
+      "type": "text",
+      "default": "history",
+      "max": 30,
+      "maxWords": 4,
+      "cap": false
+    },
+    {
+      "id": "RENT",
+      "step": "money",
+      "q": "How much is the rent for one room? Shout a number of euros.",
+      "qDe": "Wie viel kostet ein WG-Zimmer im Monat? Ruft eine realistische Zahl, z. B. 350–550.",
+      "type": "number",
+      "default": 420,
+      "min": 250,
+      "max": 800
+    }
+  ],
+  "steps": [
+    {
+      "id": "intro",
+      "slot": "intro",
+      "part": "Introduction",
+      "q": "How do we hook our readers?",
+      "de": "Der Einstieg stellt die Situation vor und macht Lust aufs Weiterlesen. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then finish the introduction in your own words: how does the first month feel for our blogger?",
+      "ownDe": "Gerüst abschreiben, dann den Einstieg mit eigenen Worten fertigschreiben: Wie fühlt sich der erste Monat für die Person an?",
+      "options": [
+        {
+          "l": "A",
+          "id": "scene",
+          "label": "Start with a scene",
+          "text": "{{It’s Sunday evening, and I’m sitting on a beanbag}} in a room that still smells of fresh paint. A month ago, I [[moved out]] of home to start studying {SUBJECT}. {{So, how’s it going? Honestly,}} better than I expected, most of the time.",
+          "why": "A scene with a small detail puts readers into the room, and the question leads into the post."
+        },
+        {
+          "l": "B",
+          "id": "formal",
+          "label": "Introduce the topic",
+          "trap": true,
+          "crit": "LSR",
+          "text": "Dear readers, I would like to inform you that I have recently relocated to a shared apartment in order to commence my studies of {SUBJECT}. In the following text, I shall describe my accommodation and explain how I am managing my finances.",
+          "reject": "Far too formal for a blog post: ‘I would like to inform you’, ‘relocated’, ‘commence’, ‘I shall’. A blog sounds personal and relaxed, like talking to a friend.",
+          "rejectDe": "Viel zu förmlich für einen Blog: I would like to inform you, relocated, commence, I shall. Ein Blog klingt persönlich und locker."
+        },
+        {
+          "l": "C",
+          "id": "question",
+          "label": "Ask the readers a question",
+          "text": "{{Ever wondered what life after the Matura looks like?}} A month ago, I [[packed up]] my life into a borrowed van and [[moved in]] with two people I’d met online. {{So here’s how my first month of}} studying {SUBJECT} has gone.",
+          "why": "The question speaks to future school leavers, and the last sentence tells them what is coming."
+        }
+      ]
+    },
+    {
+      "id": "flat",
+      "slot": "flat",
+      "part": "Body paragraph 1",
+      "q": "Body paragraph 1: what are the flat and the flatmates like?",
+      "de": "Erster Inhaltspunkt: die Wohnung und die beiden Mitbewohner:innen. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then describe the flat and the two flatmates in your own words. Invent the details.",
+      "ownDe": "Gerüst abschreiben, dann Wohnung und Mitbewohner:innen mit eigenen Worten beschreiben. Die Details erfindet ihr.",
+      "options": [
+        {
+          "l": "A",
+          "id": "building",
+          "label": "Start with the flat",
+          "text": "{{Our flat is on the fourth floor,}} with no lift and a balcony big enough for two chairs. {{I share it with Defne, an architecture student,}} and Kwame, who studies sports science and [[gets up]] at six to go running. Luckily, the walls are thick.",
+          "why": "From the building to the people: a clear order, and the last sentence adds a joke."
+        },
+        {
+          "l": "B",
+          "id": "people",
+          "label": "Start with the people",
+          "text": "{{I was nervous about living with two strangers,}} but Defne and Kwame have [[turned out]] to be great flatmates. {{Defne, an architecture student,}} fills the kitchen with paper models, while Kwame, a sports science student, can’t live without his blender. {{The flat itself is}} small but bright.",
+          "why": "Starting with feelings about the flatmates is personal, and ‘while’ contrasts the two of them."
+        }
+      ]
+    },
+    {
+      "id": "movein",
+      "slot": "movein",
+      "part": "Body paragraph 1",
+      "len": "long",
+      "q": "What do we tell readers about the first days?",
+      "de": "Der Absatz geht weiter: der Einzug und die ersten Tage. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then tell the rest of the story in your own words and give it a funny or happy ending.",
+      "ownDe": "Gerüst abschreiben, dann die Geschichte mit eigenen Worten zu Ende erzählen, mit einem lustigen oder guten Ende.",
+      "options": [
+        {
+          "l": "A",
+          "id": "bed",
+          "label": "Moving day",
+          "text": "{{Moving day was a comedy of errors.}} My big sister and I carried eleven boxes up the stairs, only to discover that my bed wouldn’t fit through the bedroom door. {{In the end, Kwame [[took it apart]]}} and [[put it back together]] inside, and that’s how the three of us became friends.",
+          "why": "A short, funny story about moving day shows how the flatmates got to know each other."
+        },
+        {
+          "l": "B",
+          "id": "night",
+          "label": "The first night",
+          "text": "{{The first night was stranger than I’d imagined.}} The fridge was humming, a tram rattled along the street, and for the first time ever, nobody was going to [[wake me up]] except my own alarm. {{By the end of the week, though,}} those sounds had [[turned into]] the background music of my new life.",
+          "why": "Small sounds make the strange feeling easy to imagine, and the last sentence shows a change."
+        }
+      ],
+      "join": true
+    },
+    {
+      "id": "money",
+      "slot": "money",
+      "part": "Body paragraph 2",
+      "q": "Body paragraph 2: how is our blogger coping with money?",
+      "de": "Zweiter Inhaltspunkt, erster Teil: wie die Person mit dem Geld zurechtkommt. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then explain in your own words how the blogger manages money. Give one example.",
+      "ownDe": "Gerüst abschreiben, dann mit eigenen Worten erklären, wie die Person mit dem Geld auskommt. Ein Beispiel nennen.",
+      "options": [
+        {
+          "l": "A",
+          "id": "budget",
+          "label": "Every cent counts",
+          "text": "{{Living here is great, but money is the hardest part.}} My rent is {RENT} euros a month, and within a week I’d already [[run out of]] coffee, washing-up liquid and patience. {{Now I [[write down]] everything I spend}} and [[stock up on]] pasta whenever it’s on offer.",
+          "why": "A clear topic sentence, a funny list and a practical solution."
+        },
+        {
+          "l": "B",
+          "id": "job",
+          "label": "A part-time job",
+          "text": "{{All this comes at a price, and money disappears fast.}} My room costs {RENT} euros a month, and bills [[eat up]] most of what’s left, so I’ve [[taken on]] weekend shifts at a bakery. {{It’s tiring, but at least I}} no longer call home for money.",
+          "why": "An honest confession, then cause and effect: high costs lead to a weekend job."
+        },
+        {
+          "l": "C",
+          "id": "jar",
+          "label": "Sharing costs",
+          "text": "{{The good news is that sharing a flat saves money.}} We each pay {RENT} euros a month in rent, and we’ve [[set up]] a money jar for basics like toilet paper. {{Every Sunday, we also plan the week’s meals,}} so nothing [[goes off]] in the fridge.",
+          "why": "A positive angle: two concrete ideas show how flatmates can save money together."
+        },
+        {
+          "l": "D",
+          "id": "trap",
+          "label": "Watching the budget",
+          "trap": true,
+          "crit": "LSA",
+          "text": "Money has been a big problem since I moved out. My rent is {RENT} euros in the month, and I spend a lot of money for food because I don’t know yet where the cheap shops are. Now I try to safe money, so I write down everything I buy.",
+          "reject": "Three mistakes: ‘in the month’ (→ a month), ‘spend money for food’ (→ spend money on food) and ‘safe money’ (→ save money: ‘safe’ means ‘not in danger’).",
+          "rejectDe": "Drei Fehler: in the month → a month, spend money for → spend money on, safe money → save money (safe heißt sicher)."
+        }
+      ]
+    },
+    {
+      "id": "chores",
+      "slot": "chores",
+      "part": "Body paragraph 2",
+      "q": "How is our blogger coping with household chores?",
+      "de": "Der Absatz geht weiter: Putzen, Waschen, Aufräumen. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then explain in your own words how the chores work in the flat.",
+      "ownDe": "Gerüst abschreiben, dann mit eigenen Worten erklären, wie die Hausarbeit in der WG funktioniert.",
+      "options": [
+        {
+          "l": "A",
+          "id": "trap",
+          "label": "Cleaning the flat",
+          "trap": true,
+          "crit": "CC",
+          "text": "Then there was the housework. Defne once left a pan in the sink for five days. Even so, we sat down and drew up a cleaning rota. Kwame does the bathroom, Defne takes out the rubbish and I hoover on Saturdays. Likewise, the flat has never been so clean.",
+          "reject": "Two linkers don’t fit: ‘Even so’ signals a contrast, but the rota is a result of the dirty pan (→ So). ‘Likewise’ compares, but the clean flat is a result of the rota (→ As a result).",
+          "rejectDe": "Zwei Linking words passen nicht: Even so kündigt einen Gegensatz an, Likewise einen Vergleich, gemeint ist aber jeweils eine Folge (So, As a result)."
+        },
+        {
+          "l": "B",
+          "id": "rota",
+          "label": "A cleaning rota",
+          "text": "{{Then there was the housework.}} After one pan spent five days in the sink, we [[sat down]] and [[drew up]] a cleaning rota. {{Everyone has fixed jobs:}} Kwame does the bathroom, Defne [[takes out]] the rubbish and I hoover on Saturdays.",
+          "why": "A small problem leads to a solution, and the colon introduces who does what."
+        },
+        {
+          "l": "C",
+          "id": "laundry",
+          "label": "Learning the hard way",
+          "text": "{{As for chores, nobody warned me how much work a flat needs.}} At home, clean towels just [[turned up]]; here, if I don’t wash them, nobody will. {{It took me two weeks and one ruined T-shirt}} to [[figure out]] how the washing machine works.",
+          "why": "Comparing home and flat makes the point clear, and the T-shirt adds a funny detail."
+        }
+      ],
+      "join": true
+    },
+    {
+      "id": "flatlife",
+      "slot": "flatlife",
+      "part": "Body paragraph 2",
+      "len": "long",
+      "q": "What is everyday life with the flatmates like?",
+      "de": "Der Absatz geht weiter: das Zusammenleben in der WG. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then add an example of the blogger’s life in the flat in your own words.",
+      "ownDe": "Gerüst abschreiben, dann mit eigenen Worten ein Beispiel aus dem WG-Leben der Bloggerin oder des Bloggers ergänzen.",
+      "options": [
+        {
+          "l": "A",
+          "id": "dinners",
+          "label": "Evenings together",
+          "text": "{{Flat life isn’t all work: the evenings are the best part.}} Twice a week we cook together, which saves money and [[cuts down on]] washing-up. {{Kwame’s chilli has already made him}} famous, and friends from our courses often [[drop by]] when it’s on the menu.",
+          "why": "Concrete moments show the fun side of sharing a flat and link it back to money and chores."
+        },
+        {
+          "l": "B",
+          "id": "rules",
+          "label": "Small arguments",
+          "text": "{{Sharing a home isn’t always easy, of course.}} Defne likes loud music late at night, and I’m apparently the worst at closing cupboard doors. {{Instead of letting things [[build up]], we}} usually [[talk them through]] over a cup of tea, and so far we’re all on speaking terms.",
+          "why": "An honest look at problems makes the blog believable, and it shows a good way to solve them."
+        }
+      ],
+      "join": true
+    },
+    {
+      "id": "advice",
+      "slot": "advice",
+      "part": "Body paragraph 3",
+      "q": "Body paragraph 3: what advice do we give future school leavers?",
+      "de": "Dritter Inhaltspunkt: Tipps für alle, die nach der Matura ausziehen wollen. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then add your own tips for future school leavers, each with a reason.",
+      "ownDe": "Gerüst abschreiben, dann eigene Tipps für künftige Schulabgänger:innen ergänzen, jeweils mit Begründung.",
+      "options": [
+        {
+          "l": "A",
+          "id": "tips",
+          "label": "Three quick tips",
+          "text": "{{Thinking of [[moving out]] after the Matura? Learn from my mistakes. Firstly,}} before you sign anything, [[work out]] a budget. {{Secondly, learn to cook}} five cheap meals because takeaway pizza gets expensive. {{Thirdly,}} agree on house rules before small things [[pile up]].",
+          "why": "Clear signposts (Firstly, Secondly, Thirdly) guide readers through three practical tips."
+        },
+        {
+          "l": "B",
+          "id": "flat",
+          "label": "Choose carefully",
+          "text": "{{What would I tell other school leavers? Don’t [[rush into]] the first flat you see.}} Visit a few, meet the people and ask what the bills [[add up to]]. {{Once you’ve [[moved in]],}} learn a few recipes because [[eating out]] empties your account fast.",
+          "why": "A question links the blogger’s experience to the readers, then one main tip and a second tip with a clear reason."
+        },
+        {
+          "l": "C",
+          "id": "trap",
+          "label": "Tips for school leavers",
+          "trap": true,
+          "crit": "LSR",
+          "text": "Moving out is not easy. You need a lot of money. Make a budget. Food is expensive. Learn to cook some cheap meals. Flatmates can be difficult. Talk to them about the cleaning. Don’t buy too many things. Your room is small. Call your family. They can help.",
+          "reject": "Eleven short, simple sentences in a row: correct, but far below B2. Combine the ideas with ‘because’, ‘if’ or ‘before’ and vary the structures.",
+          "rejectDe": "Elf kurze, einfache Sätze hintereinander: richtig, aber weit unter B2. Gedanken mit because, if oder before verbinden und Satzmuster abwechseln."
+        }
+      ]
+    },
+    {
+      "id": "freedom",
+      "slot": "freedom",
+      "part": "Body paragraph 3",
+      "len": "long",
+      "q": "Which last piece of advice do we add?",
+      "de": "Der Absatz geht weiter: ein letzter Tipp aus eigener Erfahrung. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then explain in your own words what the blogger has learnt and why it matters for future school leavers.",
+      "ownDe": "Gerüst abschreiben, dann mit eigenen Worten erklären, was die Person gelernt hat und warum das für künftige Schulabgänger:innen wichtig ist.",
+      "options": [
+        {
+          "l": "A",
+          "id": "free",
+          "label": "Freedom feels different",
+          "text": "{{One more thing: don’t expect freedom to feel the way you imagine.}} In theory, I could eat cereal for dinner and [[stay up]] until three every night. {{Funnily enough, since nobody stops me,}} I hardly ever do. Freedom, it [[turns out]], is a lot less exciting when you have a lecture at eight.",
+          "why": "A last tip with a surprising twist and a touch of humour shows that the blogger has grown up a bit."
+        },
+        {
+          "l": "B",
+          "id": "home",
+          "label": "Appreciate home",
+          "text": "{{Finally, appreciate home while you can.}} When I [[went back]] for a weekend, my old room suddenly looked tiny, {{and I realised how much my family}} used to do without a word, from [[topping up]] my bus pass to paying the internet bill.",
+          "why": "A last tip that looks back at home from a new angle and shows what the blogger has learnt."
+        }
+      ],
+      "join": true
+    },
+    {
+      "id": "concl",
+      "slot": "concl",
+      "part": "Conclusion",
+      "q": "How do we end our blog post?",
+      "de": "Der Schluss rundet den Blogbeitrag ab und spricht die Leser:innen an. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then finish with your own question to the readers.",
+      "ownDe": "Gerüst abschreiben, dann mit einer eigenen Frage an die Leser:innen schließen.",
+      "options": [
+        {
+          "l": "A",
+          "id": "swap",
+          "label": "Would I swap?",
+          "text": "{{Would I swap}} my flatmates, the bills and the chores {{for life at home again?}} Not a chance, even if I do miss a full fridge. {{What about you? Are you about to leave home,}} or staying put for a while? Let me know in the comments!",
+          "why": "A question and a clear answer sum up the post, and the ending invites comments."
+        },
+        {
+          "l": "B",
+          "id": "trap",
+          "label": "A quick goodbye",
+          "trap": true,
+          "crit": "LSR",
+          "text": "So yeah, that’s my first month lol. Moving out is soooo worth it tbh, even if ur always broke and the kitchen is a mess. Gonna post more soon, so follow me and drop a comment if u wanna know more!!!",
+          "reject": "This is text-message language: ‘lol’, ‘tbh’, ‘ur’, ‘u’, ‘gonna’, ‘wanna’ and ‘!!!’. A blog post can be informal, but it is still written in correct, standard English.",
+          "rejectDe": "Das ist Chat-Sprache (lol, tbh, ur, gonna, wanna, !!!). Ein Blog darf locker sein, aber er bleibt korrektes Englisch."
+        },
+        {
+          "l": "C",
+          "id": "down",
+          "label": "One month down",
+          "text": "{{One month down, many more to go.}} Between bills, chores and two flatmates, I’ve [[messed up]] more than once, but I’ve learnt things no classroom could teach. {{If you’ve left home, what surprised you most?}} Still at home? What worries you most? Tell me in the comments!",
+          "why": "A short summary and two questions for different readers invite everyone to comment."
+        }
+      ]
+    },
+    {
+      "id": "title",
+      "slot": "title",
+      "part": "Title",
+      "q": "Now that the blog post is finished, which title do we choose?",
+      "de": "Den Titel wählen wir zuletzt: Er soll neugierig machen und zum Inhalt passen.",
+      "own": "Short and catchy: the title should make school leavers curious about life in a shared flat.",
+      "ownDe": "Kurz und treffend: Der Titel soll Schulabgänger:innen neugierig auf das WG-Leben machen.",
+      "options": [
+        {
+          "l": "A",
+          "id": "thirty",
+          "label": "A number",
+          "text": "Thirty days of freedom (and washing-up)",
+          "why": "The number sounds like a challenge, and the joke in brackets hints at the hard parts."
+        },
+        {
+          "l": "B",
+          "id": "keys",
+          "label": "A question",
+          "text": "My own keys, my own rules?",
+          "why": "The question mark makes readers wonder whether independence is really that easy."
+        },
+        {
+          "l": "C",
+          "id": "notes",
+          "label": "A promise",
+          "text": "One month in: notes from a shared flat",
+          "why": "It promises an honest, first-hand report and tells readers exactly what the post is about."
+        }
+      ]
+    }
+  ],
+  "order": [
+    "title",
+    "intro",
+    "flat",
+    "movein",
+    "money",
+    "chores",
+    "flatlife",
+    "advice",
+    "freedom",
+    "concl"
+  ],
+  "checks": [
+    {
+      "en": "A title that makes readers curious, with user name and date under it"
+    },
+    {
+      "en": "An introduction with a hook (a scene or a question)"
+    },
+    {
+      "en": "All three content points: flat and flatmates, money and chores, advice"
+    },
+    {
+      "en": "Phrasal verbs are used correctly, with the right particle"
+    },
+    {
+      "en": "Five paragraphs; each body paragraph opens with a topic sentence linked to what came before"
+    },
+    {
+      "en": "Informal but correct: contractions, questions and ‘you’, no text-message language"
+    },
+    {
+      "en": "The ending invites readers to comment"
+    }
+  ],
+  "teacher": {
+    "aim": "Die Klasse baut gemeinsam einen Blogbeitrag auf B2-Niveau (Reifeprüfungsformat) mit drei Inhaltspunkten über den ersten Monat in einer WG nach der Matura. Schwerpunkt: Phrasal Verbs und ein lockeres, aber korrektes Blog-Register zwischen zu förmlich (Falle Introduction B) und Chat-Sprache (Falle Conclusion B).",
+    "prep": "A/B/C/D-Karten austeilen (ohne Karten: 1–4 Finger, die Tasten 1–4 wählen wie A–D), Hefte bereit, Beamer im Vollbild. Im Gerüst-Modus den eingebauten Timer nutzen: 5–6 min pro Absatz. Die Aufgabe am Beamer enthält alles Nötige; die Person, die bloggt, und die Mitbewohner:innen Defne und Kwame sind erfunden.",
+    "heft": "Neue Seite: Datum rechts oben, als Überschrift „Blog post“ (wie am Beamer). Darunter 2 Zeilen für den Titel frei lassen (der Titel kommt zuletzt), darunter Username · Datum. Jeder Absatz beginnt nach einer Leerzeile, am Rand stehen die Randwörter Intro, Body 1, Body 2, Body 3 und Conclusion. Phrasal Verbs grün unterstreichen.",
+    "flow": "Volltext kurz (50 min): 5 min Aufgabe und Blog-Merkmale, 7 Text-Entscheidungen à ca. 2 min, Abschreiben ca. 25 min, 5 min Checkliste. Volltext lang (100 min): dazu drei Fortsetzungen ohne neuen Absatz: Einzug (Body 1), WG-Leben (Body 2) und ein letzter Tipp (Body 3). Gerüst kurz (ca. 60 min): 3 min Aufgabe, pro Absatz (und für die Fortsetzung zur Hausarbeit in Body 2) 1 min Entscheidung, 5–6 min eigenes Schreiben, 1 min Vergleich mit dem Modell; am Ende 3 min Titel und 5 min Checkliste. In einer 50-Minuten-Stunde Schluss und Checkliste als Hausübung. Gerüst: Die Namen Defne und Kwame und die Miete aus der Lücke an die Tafel schreiben. Gerüst lang (100 min): fünf Absätze, die Fortsetzung zur Hausarbeit und drei weitere Fortsetzungen à ca. 6 min (4 min Schreiben im selben Absatz), plus Titel.",
+    "traps": "Introduction B (LSR): viel zu förmlich für einen Blog (I would like to inform you, relocated, commence, I shall). Body 2 D (LSA): in the month, spend money for, safe statt save. Body 2, Fortsetzung zur Hausarbeit A (CC): Even so und Likewise statt einer Folge (So, As a result). Body 3 C (LSR): elf kurze Hauptsätze ohne Verbindung, weit unter B2. Conclusion B (LSR): Chat-Sprache (lol, tbh, ur, gonna, !!!). Kürzel: TA = Erfüllung der Aufgabenstellung, CC = Kohärenz und Kohäsion, LSR = Spektrum sprachlicher Mittel, LSA = Sprachrichtigkeit.",
+    "notes": "Der Blogbeitrag hat in beiden Längen fünf Absätze (Intro, drei Hauptteile, Schluss); Geld und Hausarbeit (Inhaltspunkt 2) stehen gemeinsam in Body 2, die lange Fassung macht Body 1, 2 und 3 mit Fortsetzungen länger, ohne neue Absätze. Markiert sind Phrasal Verbs in allen Formen (auch topping up, took it apart, wake me up), nicht markiert sind präpositionale Verben wie pay for. Gut zum Besprechen: Phrasal Verbs machen den Text locker, ohne ihn falsch zu machen; die beiden Register-Fallen (Introduction B, Conclusion B) zeigen die Grenzen nach oben und nach unten. Im Gerüst-Modus schreiben alle aus der Sicht der erfundenen Person, nie über die eigene Wohnsituation oder Familie. Differenzierung: Schnelle ersetzen in ihrem Text drei neutrale Verben durch passende Phrasal Verbs. Hausübung: ein Blog-Kommentar (ca. 120 Wörter) von Defne oder Kwame auf unseren Beitrag, mit mindestens vier Phrasal Verbs."
+  }
+}

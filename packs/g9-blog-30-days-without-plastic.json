@@ -1,0 +1,409 @@
+{
+  "id": "g9-blog-30-days-without-plastic",
+  "title": "30 days without plastic",
+  "titleDe": "30 Tage ohne Plastik",
+  "grade": 9,
+  "level": "A2+/B1",
+  "theme": "Umwelt & Nachhaltigkeit",
+  "textType": "blog",
+  "modes": [
+    "full",
+    "frame"
+  ],
+  "lengths": {
+    "short": {
+      "label": "around 200 words",
+      "min": 180,
+      "max": 220
+    },
+    "long": {
+      "label": "around 250 words",
+      "min": 225,
+      "max": 275
+    }
+  },
+  "minutes": {
+    "full": {
+      "short": 50,
+      "long": 60
+    },
+    "frame": {
+      "short": 60,
+      "long": 70
+    }
+  },
+  "task": {
+    "situation": "For almost four weeks, you have been taking part in a challenge called ‘30 days without plastic’: you try not to buy or use single-use plastic such as bags, bottles and packaging. With only a few days to go, you write a post for your personal blog.",
+    "instruction": "Write a blog post. In your blog post you should:",
+    "points": [
+      "describe what you have been doing to avoid plastic",
+      "explain what has been more difficult than you expected",
+      "explain which new habits you want to keep after the challenge"
+    ],
+    "words": {
+      "short": "Give your blog post a title. Write around 200 words.",
+      "long": "Give your blog post a title. Write around 250 words."
+    },
+    "de": "Blogbeitrag über eine 30-Tage-Challenge ohne Einwegplastik, kurz vor ihrem Ende (Titel, Username, Datum, persönlicher Ton, Kurzformen erlaubt, Leser:innen ansprechen, zum Kommentieren einladen). Drei Inhaltspunkte: was ich mache, um Plastik zu vermeiden; was schwieriger war als gedacht; welche Gewohnheiten ich behalten will. Den Titel wählen wir ganz zum Schluss."
+  },
+  "meta": {
+    "user": "refill_rookie"
+  },
+  "focus": {
+    "label": "present perfect simple and progressive",
+    "labelDe": "Present perfect simple und progressive",
+    "min": {
+      "short": 5,
+      "long": 7
+    },
+    "note": "Marked: verbs in the present perfect simple (have / has + past participle) and the present perfect progressive (have / has been + -ing). They connect the past with now: actions that started in the past and are still going on, experiences and results that matter now. Past simple and present simple verbs are not marked."
+  },
+  "topicWords": [
+    "plastic",
+    "challenge",
+    "bag",
+    "bags",
+    "bottle",
+    "bottles",
+    "cloth",
+    "glass",
+    "tap",
+    "water",
+    "snacks",
+    "crisps",
+    "shampoo",
+    "market"
+  ],
+  "gaps": [
+    {
+      "id": "COUNT",
+      "step": "intro",
+      "q": "How many pieces of plastic did our blogger throw away in one normal week? Choose a number between 20 and 150.",
+      "qDe": "Wie viele Plastikteile hat die Person, die den Blog schreibt, in einer normalen Woche weggeworfen? Ruft eine Zahl zwischen 20 und 150.",
+      "type": "number",
+      "default": 47,
+      "min": 20,
+      "max": 150
+    }
+  ],
+  "steps": [
+    {
+      "id": "intro",
+      "slot": "intro",
+      "part": "Introduction",
+      "q": "Introduction: how do we open our blog post?",
+      "de": "Der erste Absatz begrüßt die Leser:innen und stellt die Challenge vor. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then finish the introduction in your own words: say how the challenge started and how long it has been going on.",
+      "ownDe": "Gerüst abschreiben, dann mit eigenen Worten fertigschreiben, wie die Challenge begonnen hat und wie lange sie schon läuft.",
+      "options": [
+        {
+          "l": "A",
+          "id": "number",
+          "label": "Start with a number",
+          "text": "{{Hi everyone! A month ago, I counted}} every piece of plastic that I threw away in one week. The result? {COUNT} pieces! {{That’s why [[I’ve been trying]] to live}} without single-use plastic for almost four weeks now.",
+          "why": "A surprising number makes readers curious. ‘I’ve been trying … for almost four weeks’ shows an action that is still going on."
+        },
+        {
+          "l": "B",
+          "id": "question",
+          "label": "Ask the readers",
+          "text": "{{How much plastic do you throw away}} in a normal week? Before my challenge started, I counted mine: {COUNT} pieces! {{For almost four weeks now, [[I’ve been living]]}} without single-use plastic, and there are only three days to go.",
+          "why": "A question speaks to readers directly. ‘For almost four weeks now’ goes with the present perfect progressive."
+        },
+        {
+          "l": "C",
+          "id": "day",
+          "label": "Start with the date",
+          "text": "{{Day 27 of my challenge,}} and our kitchen looks different: glass jars, cloth bags, no plastic bottles! It started when I counted a week of plastic rubbish: {COUNT} pieces. {{Since that day, [[I’ve been saying]] no}} to single-use plastic.",
+          "why": "Puts readers right into the challenge. ‘Since that day’ links the start in the past with now."
+        }
+      ]
+    },
+    {
+      "id": "doing",
+      "slot": "doing",
+      "part": "Body paragraph 1",
+      "q": "Body paragraph 1: what have we been doing to avoid plastic?",
+      "de": "Erster Inhaltspunkt: was wir im Alltag anders machen. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then add two more things that the blogger has been doing to avoid plastic.",
+      "ownDe": "Gerüst abschreiben, dann zwei weitere Dinge ergänzen, die die Person, die den Blog schreibt, gegen Plastik macht.",
+      "options": [
+        {
+          "l": "A",
+          "id": "shop",
+          "label": "Shopping",
+          "text": "{{To begin with, [[I’ve changed]] the way I shop.}} I always carry a cloth bag, and my mum and I buy fruit and vegetables at the farmers’ market instead of the supermarket. {{[[We’ve also been getting]] our milk}} in glass bottles from a local farm.",
+          "why": "‘To begin with’ leads from the introduction to the first change. The present perfect progressive shows a new routine that is still going on."
+        },
+        {
+          "l": "B",
+          "id": "school",
+          "label": "A school day",
+          "text": "{{For a start, my school day [[has changed]] a lot.}} Every morning I fill a glass bottle with tap water and put my sandwich in a metal lunch box instead of a plastic bag. {{So far, [[I haven’t bought]]}} a single plastic bottle of water or juice.",
+          "why": "‘For a start’ links back to the challenge and shows it in everyday school life. ‘So far’ goes with the present perfect."
+        },
+        {
+          "l": "C",
+          "id": "trap",
+          "label": "New routines",
+          "trap": true,
+          "crit": "LSA",
+          "text": "Since three weeks I bring a cloth bag to the supermarket, and I buy fruit and vegetables without packaging. I become my milk in glass bottles from a farm near our town, and on Saturdays I go with the bike to the farmers’ market.",
+          "reject": "Three typical mistakes: ‘Since three weeks I bring’ (→ For three weeks I’ve been bringing), ‘I become my milk’ (→ I get my milk) and ‘go with the bike’ (→ go by bike).",
+          "rejectDe": "Drei typische Fehler: Since three weeks I bring → For three weeks I’ve been bringing, I become my milk → I get my milk (become heißt werden), with the bike → by bike."
+        }
+      ]
+    },
+    {
+      "id": "others",
+      "slot": "others",
+      "part": "Body paragraph 1",
+      "len": "long",
+      "q": "How have the people around us reacted?",
+      "de": "Der Absatz geht weiter: wie Familie oder Freund:innen auf die neuen Gewohnheiten reagieren. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then describe the reaction of the blogger’s family or friends in your own words.",
+      "ownDe": "Gerüst abschreiben, dann die Reaktion von Familie oder Freund:innen der Person, die den Blog schreibt, mit eigenen Worten beschreiben.",
+      "options": [
+        {
+          "l": "A",
+          "id": "brother",
+          "label": "A brother who changes his mind",
+          "text": "{{Not everyone at home liked my new habits at first.}} My brother laughed at me and called me ‘the plastic police’. {{Lately, though, he [[has been helping]] me,}} and he [[has even started]] to take his own bottle to football training.",
+          "why": "‘My new habits’ refers back to the changes we have just described. Past simple for the first reaction, present perfect for the change."
+        },
+        {
+          "l": "B",
+          "id": "friends",
+          "label": "Friends join in",
+          "text": "{{Luckily, I’m not alone: my friends [[have been]] really supportive.}} Two of them [[have joined]] the challenge, and we share tips in a group chat. {{Last weekend we even had}} a plastic-free picnic in the park with homemade lemonade.",
+          "why": "Continues the paragraph with the people around us. Present perfect up to now, past simple for last weekend."
+        }
+      ],
+      "join": true
+    },
+    {
+      "id": "hard",
+      "part": "Our problem",
+      "q": "What has been harder than we expected?",
+      "de": "Wählt das Problem, über das wir im nächsten Absatz schreiben.",
+      "options": [
+        {
+          "l": "A",
+          "id": "snacks",
+          "label": "Snacks",
+          "teaser": "Crisps, sweets and chocolate bars: almost all of them come in plastic."
+        },
+        {
+          "l": "B",
+          "id": "bathroom",
+          "label": "The bathroom",
+          "teaser": "Shampoo, shower gel and toothpaste: almost all of them come in plastic bottles and tubes."
+        }
+      ]
+    },
+    {
+      "id": "problem",
+      "slot": "problem",
+      "part": "Body paragraph 2",
+      "q": "Body paragraph 2: what has been more difficult than we expected?",
+      "de": "Zweiter Inhaltspunkt: was an der Challenge schwieriger ist als gedacht. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then explain the problem in your own words and say what the blogger has been doing about it.",
+      "ownDe": "Gerüst abschreiben, dann das Problem mit eigenen Worten erklären und sagen, was die Person, die den Blog schreibt, dagegen macht.",
+      "options": [
+        {
+          "l": "A",
+          "id": "trap",
+          "label": "The hardest part",
+          "trap": true,
+          "crit": "CC",
+          "text": {
+            "by": "hard",
+            "map": {
+              "snacks": "It hasn’t all been easy. The hardest part has been snacks. Almost every bag of crisps and every chocolate bar comes in plastic. In addition, I’ve found some plastic-free snacks at the market, like loose nuts and dried fruit. Instead, I still miss crisps, especially on Friday evenings.",
+              "bathroom": "It hasn’t all been easy. The hardest part has been the bathroom. Shampoo, shower gel and toothpaste almost always come in plastic. In addition, I’ve found shampoo bars and toothpaste tablets in a small shop in town. Instead, I still miss my old shower gel, especially after sport."
+            }
+          },
+          "reject": "The linking words don’t fit: ‘In addition’ adds more of the same, but here good news follows a problem (→ Luckily). ‘Instead’ means ‘in place of’, but nothing is replaced (→ Even so).",
+          "rejectDe": "Die Linking words passen nicht: In addition fügt Gleiches hinzu, hier folgt aber eine gute Nachricht auf ein Problem (→ Luckily). Instead heißt „stattdessen“, hier wird nichts ersetzt (→ Even so)."
+        },
+        {
+          "l": "B",
+          "id": "honest",
+          "label": "Be honest",
+          "text": {
+            "by": "hard",
+            "map": {
+              "snacks": "{{Of course, not everything [[has been]] easy.}} Snacks [[have been]] much harder than I expected because almost every bag of crisps and every chocolate bar comes in plastic. {{[[I’ve been eating]] apples and nuts}} instead, but I still dream about crisps at night!",
+              "bathroom": "{{Of course, not everything [[has been]] easy.}} The bathroom [[has been]] much harder than I expected because shampoo, shower gel and toothpaste almost always come in plastic. {{[[I’ve been testing]] shampoo bars,}} but my hair still feels strange after I wash it!"
+            }
+          },
+          "why": "The first sentence turns from the good news to the problem. Then it shows what we are doing about it, with a little humour."
+        },
+        {
+          "l": "C",
+          "id": "mistake",
+          "label": "One bad moment",
+          "text": {
+            "by": "hard",
+            "map": {
+              "snacks": "{{Still, not every day [[has been]] a success.}} I didn’t expect snacks to be so difficult. Last Friday I was hungry and bought a chocolate bar without thinking. {{Since then, [[I’ve been carrying]]}} dried fruit in my school bag, just in case.",
+              "bathroom": "{{Still, not every day [[has been]] a success.}} I didn’t expect the bathroom to be so difficult. Last week my toothpaste ran out, and every tube in the supermarket was plastic. {{Since then, [[I’ve been using]]}} toothpaste tablets. They taste strange, but they work!"
+            }
+          },
+          "why": "‘Still’ turns from the good news to a bad moment, told in the past simple; ‘Since then’ brings us back to now."
+        }
+      ]
+    },
+    {
+      "id": "keep",
+      "slot": "keep",
+      "part": "Body paragraph 3",
+      "q": "Body paragraph 3: which habits do we want to keep?",
+      "de": "Dritter Inhaltspunkt: welche neuen Gewohnheiten wir nach der Challenge behalten wollen und warum. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then name one habit the blogger wants to keep and explain why.",
+      "ownDe": "Gerüst abschreiben, dann eine Gewohnheit nennen, die die Person, die den Blog schreibt, behalten will, und begründen.",
+      "options": [
+        {
+          "l": "A",
+          "id": "easy",
+          "label": "Easy habits",
+          "text": "{{Even with these ups and downs, I’ll keep using}} cloth bags and a refillable bottle after the challenge. They’re easy to use, and [[I’ve saved]] money on drinks. {{I’m not so sure about}} shopping without packaging, though, because it takes a lot of planning.",
+          "why": "‘These ups and downs’ sums up the last two paragraphs. Then it names the habits and is honest about what will be harder."
+        },
+        {
+          "l": "B",
+          "id": "trap",
+          "label": "The habits I keep",
+          "trap": true,
+          "crit": "LSR",
+          "text": "After the challenge I will keep doing some things. I will keep the bag thing and the bottle thing. I will also keep doing the market thing because it is a nice thing to do. These things are easy to do every day, so I will do them.",
+          "reject": "Too vague and repetitive: ‘thing(s)’ six times and ‘do’ five times. Name the habits (my cloth bag, tap water) and use more precise words (easy, cheap, useful).",
+          "rejectDe": "Zu vage und eintönig: sechsmal thing(s), fünfmal do. Die Gewohnheiten genau benennen und genauere Wörter verwenden."
+        },
+        {
+          "l": "C",
+          "id": "eyes",
+          "label": "A new way of seeing",
+          "text": "{{All the same, this month [[has opened]] my eyes.}} I now check the packaging before I buy anything, and I want to keep doing that. {{I’ll also keep drinking}} tap water at school because it’s free and tastes just as good as bottled water.",
+          "why": "‘All the same’ turns from the problem back to the good side, then two habits with reasons."
+        }
+      ]
+    },
+    {
+      "id": "concl",
+      "slot": "concl",
+      "part": "Conclusion",
+      "q": "Conclusion: how do we end our blog post?",
+      "de": "Der letzte Absatz greift den ganzen Beitrag kurz auf und lädt zum Kommentieren ein. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then sum up the blogger’s month in one sentence and finish with your own question or invitation to the readers.",
+      "ownDe": "Gerüst abschreiben, dann den Monat der Person, die den Blog schreibt, in einem Satz zusammenfassen und mit einer eigenen Frage oder Einladung an die Leser:innen enden.",
+      "options": [
+        {
+          "l": "A",
+          "id": "tried",
+          "label": "Sum up, then ask the readers",
+          "text": {
+            "by": "hard",
+            "map": {
+              "snacks": "{{So, after a month of glass bottles and}} very few snacks, here’s my verdict: less plastic takes effort, but a few good habits are here to stay. {{[[Have you ever tried]] a challenge like this?}} Tell me about it in the comments!",
+              "bathroom": "{{So, after a month of glass bottles and}} a very strange bathroom, here’s my verdict: less plastic takes effort, but a few good habits are here to stay. {{[[Have you ever tried]] a challenge like this?}} Tell me about it in the comments!"
+            }
+          },
+          "why": "Looks back at the whole month in one sentence, then ‘Have you ever …?’ invites comments."
+        },
+        {
+          "l": "B",
+          "id": "step",
+          "label": "One lesson and a task for readers",
+          "text": "{{Nearly at the finish line, [[I’ve learnt]] one thing:}} small changes add up, even when they’re hard, and some will stay. {{[[Have I made]] you curious?}} Then why not start with one small step? {{Let me know in the comments}} how it goes!",
+          "why": "Sums up the month in one lesson, then gives readers something easy to try and asks them to report back."
+        }
+      ]
+    },
+    {
+      "id": "title",
+      "slot": "title",
+      "part": "Title",
+      "q": "Now that the blog post is finished, which title do we choose?",
+      "de": "Der Titel kommt zuletzt und soll neugierig machen und zum Inhalt passen.",
+      "own": "Short and catchy: make readers curious about our challenge.",
+      "ownDe": "Kurz und treffend: Der Titel soll neugierig auf unsere Challenge machen.",
+      "options": [
+        {
+          "l": "A",
+          "id": "harder",
+          "label": "An honest title",
+          "text": "My plastic-free month: harder than I thought",
+          "why": "Names the topic and promises an honest story."
+        },
+        {
+          "l": "B",
+          "id": "question",
+          "label": "A question",
+          "text": "Can I really live without plastic?",
+          "why": "A question makes readers want to find out the answer."
+        },
+        {
+          "l": "C",
+          "id": "picture",
+          "label": "A title with a picture",
+          "text": "Cloth bags, glass jars and a lot of patience",
+          "why": "Readers can see the challenge, and ‘patience’ hints at the difficult parts."
+        },
+        {
+          "l": "D",
+          "id": "trap",
+          "label": "Topic and text type",
+          "trap": true,
+          "crit": "TA",
+          "text": "A blog post about my plastic challenge",
+          "reject": "This is a label, not a title. It doesn’t make anybody curious. A good blog title is catchy: a question, a picture or a surprising statement.",
+          "rejectDe": "Das ist ein Etikett, kein Titel. Ein guter Blog-Titel macht neugierig."
+        }
+      ]
+    }
+  ],
+  "order": [
+    "title",
+    "intro",
+    "doing",
+    "others",
+    "problem",
+    "keep",
+    "concl"
+  ],
+  "checks": [
+    {
+      "en": "A title that makes readers curious, with user name and date under it"
+    },
+    {
+      "en": "Each content point has its own body paragraph, in the order of the task"
+    },
+    {
+      "en": "All three content points: what we have been doing, a problem, habits to keep"
+    },
+    {
+      "en": "Every body paragraph starts with a sentence that links back to the paragraph before"
+    },
+    {
+      "en": "Present perfect progressive for actions that are still going on (I’ve been trying …)"
+    },
+    {
+      "en": "Present perfect simple for results and experiences (I’ve saved …, Have you ever …?)"
+    },
+    {
+      "en": "Past simple for finished times (last Friday, a month ago)"
+    },
+    {
+      "en": "The conclusion looks back at the month and invites readers to comment"
+    }
+  ],
+  "teacher": {
+    "aim": "Die Klasse baut gemeinsam einen Blogbeitrag (A2+/B1) über eine 30-Tage-Challenge ohne Einwegplastik und übt dabei Present perfect simple und progressive (Dauer bis jetzt, Ergebnisse, Erfahrungen) im Kontrast zum Past simple sowie die Konventionen eines Blogs.",
+    "prep": "A/B/C/D-Karten austeilen (eine Garnitur pro Person), Hefte bereitlegen. Beamer im Vollbild. Im Gerüst-Modus den eingebauten Timer nutzen: 5 min pro Absatz, bei Bedarf +1. Die Aufgabe am Beamer enthält alles Nötige.",
+    "heft": "Neue Seite: Datum rechts oben, darunter „Blog post“ als Überschrift (wie am Beamer). Dann 2 Zeilen für den Titel frei lassen (der Titel kommt zuletzt), darunter Username und Datum in einer Zeile (wie am Beamer). Fünf Absätze, jeder nach einer Leerzeile, am Rand Intro, Body 1, Body 2, Body 3, Conclusion. In der langen Fassung geht Body 1 ohne neue Zeile weiter. Present-perfect-Formen grün unterstreichen.",
+    "flow": "Volltext kurz (50 min): 5 min Aufgabe und Kopf, 7 Entscheidungen (inklusive Wahl des Problems) à ca. 2 min, Abschreiben ca. 20 min, 5 min Checkliste. Volltext lang (ca. 60 min): wie kurz, dazu eine Fortsetzung von Body 1 (Reaktionen von Familie oder Freund:innen); das sind eine Entscheidung und rund 40 Wörter Abschreiben mehr. In einer Doppelstunde die restliche Zeit für die Besprechung der Fallen nutzen und die Hausübung zu zweit beginnen. Gerüst kurz (realistisch ca. 60 min): 5 min Aufgabe und Kopf; pro Absatz 1 min Entscheidung, 5–6 min eigenes Schreiben, 1 min Vergleich mit dem Modell; am Ende 5 min Checkliste. In einer 50-Minuten-Stunde den Schluss nur abstimmen und das Gerüst abschreiben lassen; Schluss fertigschreiben und eigenen Titel finden als Hausübung. Gerüst lang (ca. 70 min): gleicher Rhythmus wie kurz, dazu die Fortsetzung von Body 1 mit ca. 5 min Schreiben. In einer Doppelstunde danach eine Vergleichsrunde zu zweit.",
+    "traps": "Body 1 C (LSA): Since three weeks I bring (→ For three weeks I’ve been bringing), I become my milk (false friend, → get), go with the bike (→ by bike). Body 2 A (CC): In addition verbindet Problem und gute Nachricht, Instead ohne Ersatz. Body 3 B (LSR): sechsmal thing(s), fünfmal do, keine genauen Wörter. Title D (TA): Etikett statt Titel. Kürzel: TA = Erfüllung der Aufgabenstellung, CC = Kohärenz und Kohäsion, LSR = Spektrum sprachlicher Mittel, LSA = Sprachrichtigkeit.",
+    "notes": "Aufbau: Jeder Text hat fünf Absätze (Einleitung, drei Hauptabsätze, Schluss); die lange Fassung macht Body 1 länger, sie fügt keinen Absatz hinzu. Fokus: markiert sind Present perfect simple und progressive. Nach Body 1 lohnt eine Minute an der Tafel: for + Zeitraum (for almost four weeks), since + Zeitpunkt (since that day, since then), dazu so far und lately; Progressive für Tätigkeiten, die noch andauern (I’ve been trying), Simple für Ergebnisse und Erfahrungen (I’ve saved, Have you ever tried?). Kohäsion: Die Klasse achtet darauf, wie jeder Hauptabsatz an den vorigen anschließt (For a start, Of course, not everything …, All the same) und wie der Schluss den ganzen Monat aufgreift. Die Challenge, der Username und alle Personen sind erfunden; die Zahl der Plastikteile ruft die Klasse selbst. Shampoo-Stücke und Zahnputztabletten gibt es tatsächlich; keine Marken nennen. Differenzierung: Schnelle ergänzen im Gerüst-Modus einen Satz mit „I haven’t … since …“. Hausübung: Blog-Kommentar (ca. 80 Wörter) als Antwort auf den Beitrag, mit einem eigenen Tipp gegen Plastik."
+  }
+}

@@ -1,0 +1,420 @@
+{
+  "id": "g8-email-future-plans",
+  "title": "What’s next after this school year?",
+  "titleDe": "Pläne nach der 4. Klasse",
+  "grade": 8,
+  "level": "A2+",
+  "theme": "Arbeit & Zukunft",
+  "textType": "email",
+  "modes": [
+    "full"
+  ],
+  "lengths": {
+    "short": {
+      "label": "around 150 words",
+      "min": 135,
+      "max": 165
+    }
+  },
+  "minutes": {
+    "full": {
+      "short": 50
+    }
+  },
+  "task": {
+    "situation": "Your pen friend Maeve lives in Cork, Ireland. In her last email, she asked what you are going to do after the 4th form and what your parents think about it. In Austria, you can stay at your school (Oberstufe), go to a five-year school like an HTL or a HAK, or do one more year at school and then start an apprenticeship.",
+    "instruction": "Write an email to Maeve. Write about:",
+    "points": [
+      "your plan for after the 4th form (explain it for a reader from another country)",
+      "your strengths and why the plan is right for you",
+      "what your parents said about your plan"
+    ],
+    "words": {
+      "short": "Write around 150 words."
+    },
+    "de": "Informelle E-Mail an die Brieffreundin Maeve in Irland: euer Plan nach der 4. Klasse, eure Stärken und was eure Eltern dazu gesagt haben. Zuerst wählt ihr einen der drei Wege: Oberstufe, HTL oder Lehre."
+  },
+  "meta": {
+    "from": "future.plans@classmail.example",
+    "to": "maeve.cork@classmail.example",
+    "subjectSlot": "subject"
+  },
+  "focus": {
+    "label": "future forms",
+    "labelDe": "Zukunftsformen (will, going to)",
+    "min": {
+      "short": 5
+    },
+    "note": "Marked: every future form with will / ’ll or (be) going to + verb. Reported ‘would’ is not marked."
+  },
+  "topicWords": [
+    "school",
+    "matura",
+    "htl",
+    "plan"
+  ],
+  "gaps": [
+    {
+      "id": "NAME",
+      "step": "signoff",
+      "q": "Who is writing this email? Shout a first name.",
+      "qDe": "Ruft einen Vornamen für den Text am Beamer. Keine Namen von Mitschüler:innen oder Lehrer:innen. Im Heft dürft ihr mit eurem eigenen Namen unterschreiben.",
+      "type": "text",
+      "default": "Luca",
+      "max": 20
+    }
+  ],
+  "steps": [
+    {
+      "id": "path",
+      "part": "Path",
+      "q": "Which path after the 4th form do we write about?",
+      "de": "Hier wählt ihr, welchen Weg nach der 4. Klasse unsere E-Mail beschreibt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "school",
+          "label": "Oberstufe: stay at my school",
+          "teaser": "Four more years at our school, the Matura at the end, and then maybe university."
+        },
+        {
+          "l": "B",
+          "id": "htl",
+          "label": "HTL: a technical college",
+          "teaser": "Five years of IT or engineering, work placements in the summer and the Matura at the end."
+        },
+        {
+          "l": "C",
+          "id": "apprentice",
+          "label": "Apprenticeship: learn a job",
+          "teaser": "One more year at school, then three years of training as a chef: work, learn and earn money."
+        }
+      ]
+    },
+    {
+      "id": "subject",
+      "slot": "subject",
+      "part": "Subject",
+      "q": "Which subject line do we choose?",
+      "de": "Die Betreffzeile sagt kurz, worum es in unserer E-Mail geht.",
+      "options": [
+        {
+          "l": "A",
+          "id": "news",
+          "label": "Big news",
+          "text": "Big news about my future!",
+          "why": "Short and exciting: Maeve wants to open the email at once."
+        },
+        {
+          "l": "B",
+          "id": "guess",
+          "label": "Make her curious",
+          "text": "Guess what I[[’m going to do]]!",
+          "why": "A little puzzle in the subject line makes the reader curious."
+        },
+        {
+          "l": "C",
+          "id": "plan",
+          "label": "Say the plan",
+          "text": {
+            "by": "path",
+            "map": {
+              "school": "My plan: four more years at school",
+              "htl": "My plan: HTL, here I come!",
+              "apprentice": "My plan: training to be a chef"
+            }
+          },
+          "why": "Maeve knows the answer to her question before she opens the email."
+        }
+      ]
+    },
+    {
+      "id": "greeting",
+      "slot": "greeting",
+      "part": "Greeting",
+      "q": "How do we greet Maeve?",
+      "de": "Hier wählen wir die Anrede für Maeve. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "hi",
+          "label": "Hi …,",
+          "text": "Hi Maeve,",
+          "why": "Short and friendly: perfect for a pen friend."
+        },
+        {
+          "l": "B",
+          "id": "dear",
+          "label": "Dear …,",
+          "text": "Dear Maeve,",
+          "why": "Warm and friendly. With a first name, ‘Dear’ is fine for friends too."
+        }
+      ]
+    },
+    {
+      "id": "intro",
+      "slot": "intro",
+      "part": "Introduction",
+      "q": "Paragraph 1: how do we start our answer?",
+      "de": "Erster Absatz: Wir antworten Maeve und kommen zum Thema. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "trap",
+          "label": "News first",
+          "trap": true,
+          "crit": "TA",
+          "text": "How are you? Last weekend, I went to a concert with my cousins, and it was amazing! The band played for three hours, and we sang every song. I’ll send you some photos soon.",
+          "reject": "Nice news, but Maeve asked about your plans. The first paragraph answers her email and leads to the topic.",
+          "rejectDe": "Nette Neuigkeiten, aber Maeve hat nach euren Plänen gefragt: Der erste Absatz antwortet auf ihre E-Mail und führt zum Thema."
+        },
+        {
+          "l": "B",
+          "id": "thanks",
+          "label": "Thanks for your email",
+          "text": "Thanks for your email and the photos from your school trip! You asked me about my plans for after this school year. Well, I’ve finally made a decision, and I think you[[’ll like]] it!",
+          "why": "A friendly thank-you, then Maeve’s question: the reader knows at once what the email is about."
+        },
+        {
+          "l": "C",
+          "id": "sorry",
+          "label": "Say sorry first",
+          "text": "How are you? Sorry for not writing sooner, but we had three tests last week. You wanted to know about my plans for next year, so I[[’ll tell]] you everything now!",
+          "why": "A friendly question, a short excuse and a promise with ‘I’ll’: chatty and natural."
+        }
+      ]
+    },
+    {
+      "id": "plans",
+      "slot": "plans",
+      "part": "Plans",
+      "q": "Paragraph 2: what is our plan?",
+      "de": "Zweiter Absatz: unser Plan nach der 4. Klasse, so erklärt, dass Maeve ihn versteht. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "steps",
+          "label": "Step by step",
+          "text": {
+            "by": "path",
+            "map": {
+              "school": "After the summer, I[[’m going to stay]] at my school for four more years. In Austria, we call this the ‘Oberstufe’. At the end, I[[’ll take]] the Matura, our school-leaving exam. With this exam, you can go to university.",
+              "htl": "After the summer, I[[’m going to start]] at an HTL, a five-year technical college. You learn a lot about IT or engineering there. At the end, I[[’ll get]] a diploma and the Matura, our school-leaving exam.",
+              "apprentice": "In Austria, everybody has to go to school for nine years. That’s why I[[’m going to do]] one more year at a pre-vocational school first. We call it ‘Poly’. After that, I[[’m going to start]] a three-year apprenticeship as a chef."
+            }
+          },
+          "why": "‘Going to’ for the plan, step by step, and a short explanation of the Austrian school system for Maeve."
+        },
+        {
+          "l": "B",
+          "id": "plan",
+          "label": "Start with the plan",
+          "text": {
+            "by": "path",
+            "map": {
+              "school": "In September, I[[’m going to start]] the Oberstufe at my school. It takes four years, and then I[[’ll do]] the Matura. That’s a bit like your Leaving Cert: you need it if you want to go to university.",
+              "htl": "In September, I[[’m going to leave]] my school and go to an HTL, a technical college. I[[’m going to choose]] IT. We[[’ll have]] lessons there for five years and work placements in the summer holidays.",
+              "apprentice": "First, I[[’m going to spend]] a year at a pre-vocational school because in Austria you must go to school for nine years. Then I[[’m going to start]] a three-year apprenticeship as a chef: I[[’ll work]] in a hotel and go to vocational school."
+            }
+          },
+          "why": "The plan comes first, then an explanation that makes sense for a reader in Ireland."
+        },
+        {
+          "l": "C",
+          "id": "trap",
+          "label": "The goal at the end",
+          "trap": true,
+          "crit": "LSA",
+          "text": {
+            "by": "path",
+            "map": {
+              "school": "After the summer, I will to stay at my school for four more years. In Austria, this is called the ‘Oberstufe’. At the end, there is the Matura, and with the Matura, I can become a place at university.",
+              "htl": "In September, I will to start at an HTL. That is a technical college, and it takes five years. You learn a lot about IT, and at the end, I’ll become a diploma and the Matura.",
+              "apprentice": "First, I will to do one more year at a pre-vocational school because in Austria you must go to school for nine years. Then I’ll start a three-year apprenticeship as a chef in a hotel, and I’ll become money every month."
+            }
+          },
+          "reject": "Two mistakes: after ‘will’ there is no ‘to’ (will + verb), and ‘become’ means ‘werden’, not ‘bekommen’ (→ get, or earn for money).",
+          "rejectDe": "Zwei typische Fehler: Nach will steht kein to, und become heißt „werden“, nicht „bekommen“ (richtig: get, bei Geld auch earn)."
+        }
+      ]
+    },
+    {
+      "id": "strengths",
+      "slot": "strengths",
+      "part": "Strengths",
+      "q": "Paragraph 3: what are our strengths?",
+      "de": "Dritter Absatz: unsere Stärken und warum der Plan zu uns passt. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "example",
+          "label": "An example from my life",
+          "text": {
+            "by": "path",
+            "map": {
+              "school": "I’m good at biology, and I love animals. Last summer, I helped on my uncle’s farm every day. I want to be a vet one day. It[[’ll be]] hard work, but I’m very patient.",
+              "htl": "I’m good at maths, and computers are my hobby. Last year, I made a website for my football club, and everybody liked it. I think I[[’ll be]] a good programmer one day.",
+              "apprentice": "I’m good at working with my hands, and I love cooking. Every Sunday, I cook lunch for my whole family, and they always want more! I think I[[’ll be]] a great chef one day."
+            }
+          },
+          "why": "Strengths with a real example, and ‘will’ for a prediction about the future."
+        },
+        {
+          "l": "B",
+          "id": "trap",
+          "label": "Strengths and goals",
+          "trap": true,
+          "crit": "CC",
+          "text": {
+            "by": "path",
+            "map": {
+              "school": "I am good at biology. I am good at languages. I am patient. I like animals. I like people. I want to go to university one day. I think I will be a good vet.",
+              "htl": "I am good at maths. I am good at computers. I like robots. I made a website last year. I want to be a programmer. I think I will be good at it.",
+              "apprentice": "I am good at cooking. I am good at working with my hands. I am creative. I cook every Sunday. I want to be a chef. I think I will be good at it."
+            }
+          },
+          "reject": "Every sentence starts with ‘I’, and nothing is linked. Join your ideas with and, so, because or when.",
+          "rejectDe": "Jeder Satz beginnt mit I, und nichts ist verbunden. Verbindet eure Ideen mit and, so, because oder when."
+        },
+        {
+          "l": "C",
+          "id": "biggest",
+          "label": "My biggest strengths",
+          "text": {
+            "by": "path",
+            "map": {
+              "school": "My biggest strengths are languages and talking to people. I love English and French, and I’m good at explaining things to others. Maybe I[[’ll become]] a teacher or a journalist one day. Who knows?",
+              "htl": "My biggest strengths are maths and solving problems. I can spend hours working on my computer or my old bike because I love finding out how things work. Maybe I[[’ll build]] robots one day!",
+              "apprentice": "My biggest strengths are cooking and working in a team. I’m creative, and I stay calm when things get busy. At weekends, I often help in my aunt’s restaurant. One day, I[[’ll open]] my own café!"
+            }
+          },
+          "why": "A clear first sentence names the strengths; the rest explains them, and ‘I’ll …’ looks into the future."
+        }
+      ]
+    },
+    {
+      "id": "parents",
+      "slot": "parents",
+      "part": "Parents",
+      "q": "Paragraph 4: what did our parents say? How do we end?",
+      "de": "Vierter Absatz: was unsere Eltern zum Plan gesagt haben, und ein freundlicher Schluss. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "happy",
+          "label": "Good news",
+          "text": {
+            "by": "path",
+            "map": {
+              "school": "Luckily, my parents like my plan. Mum said that she was really proud of me, and Dad told me that they would always help me. What [[are you going to do]] next year?",
+              "htl": "Luckily, my parents like my plan. Dad said that an HTL was perfect for me, and Mum told me that she would take me to the open day. What [[are you going to do]] next year?",
+              "apprentice": "Luckily, my parents like the idea. Dad said that good chefs could find a job anywhere in the world, and Mum told me that she would buy me a chef’s knife. I[[’ll cook]] for you if you ever come to Austria!"
+            }
+          },
+          "why": "Indirect speech (said that …, told me that …) and a friendly last sentence for Maeve."
+        },
+        {
+          "l": "B",
+          "id": "unsure",
+          "label": "Not sure at first",
+          "text": {
+            "by": "path",
+            "map": {
+              "school": "At first, Dad wasn’t sure. He said that it was a long way to the Matura. Then Mum told him that I loved learning, and now he agrees. Do you think you[[’ll stay]] at your school too?",
+              "htl": "At first, Mum wasn’t sure. She said that five years at an HTL would be hard. Then Dad told her that I was ready for it, and she agreed. I[[’ll send]] you photos of my new school!",
+              "apprentice": "At first, Mum wasn’t happy. She said that I was too young to decide. Then Dad told her that he had worked in a kitchen as a teenager, and she agreed. Now he[[’s going to teach]] me his best recipes. What about you?"
+            }
+          },
+          "why": "A small story with a happy ending. In indirect speech, the verbs move one step into the past."
+        },
+        {
+          "l": "C",
+          "id": "trap",
+          "label": "Mum and Dad",
+          "trap": true,
+          "crit": "LSA",
+          "text": {
+            "by": "path",
+            "map": {
+              "school": "My parents were surprised at first. Mum said me that I needed a break from school, and Dad said that the Oberstufe will be too hard for me. Now they both like my plan. Write soon!",
+              "htl": "My parents had different ideas. Dad said me that I could also do an apprenticeship, and Mum said that the HTL will be too stressful for me. In the end, they both said yes. Wish me luck!",
+              "apprentice": "My parents needed some time to think. Mum said me that the Matura was important, and Dad said that a kitchen job will be too hard for me. Now they both agree with my plan. Keep your fingers crossed!"
+            }
+          },
+          "reject": "Two mistakes in the indirect speech: ‘said me’ (→ told me) and ‘will’ after ‘said that’ (→ would).",
+          "rejectDe": "Zwei Fehler in der indirekten Rede: Es heißt told me, nicht said me. Und nach said that wird will zu would."
+        }
+      ]
+    },
+    {
+      "id": "signoff",
+      "slot": "signoff",
+      "part": "Sign-off",
+      "q": "How do we close the email?",
+      "de": "Mit der Grußformel und unserem Namen endet die E-Mail. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "best",
+          "label": "Best wishes,",
+          "text": "Best wishes,\n{NAME}",
+          "why": "Friendly and a little more polite: good for pen friends."
+        },
+        {
+          "l": "B",
+          "id": "care",
+          "label": "Take care,",
+          "text": "Take care,\n{NAME}",
+          "why": "Warm and informal: typical between friends."
+        },
+        {
+          "l": "C",
+          "id": "bye",
+          "label": "Bye for now,",
+          "text": "Bye for now,\n{NAME}",
+          "why": "Chatty and informal: Maeve knows another email will come soon."
+        }
+      ]
+    }
+  ],
+  "order": [
+    "subject",
+    "greeting",
+    "intro",
+    "plans",
+    "strengths",
+    "parents",
+    "signoff"
+  ],
+  "checks": [
+    {
+      "en": "A short subject line that makes Maeve want to read the email"
+    },
+    {
+      "en": "Friendly greeting and sign-off: Hi Maeve, / Dear Maeve, … Best wishes, + name"
+    },
+    {
+      "en": "The plan is explained so that a reader in Ireland understands it"
+    },
+    {
+      "en": "‘Going to’ for plans, ‘will’ for predictions, promises and future facts (no ‘will to’)"
+    },
+    {
+      "en": "Strengths with an example or a reason"
+    },
+    {
+      "en": "What the parents said in indirect speech: said that …, told me that …"
+    },
+    {
+      "en": "Chatty style for a friend: contractions like I’m and I’ll are fine"
+    }
+  ],
+  "teacher": {
+    "aim": "Die Klasse schreibt gemeinsam eine informelle E-Mail an eine Brieffreundin in Irland über die Pläne nach der 4. Klasse (Oberstufe, HTL oder Lehre) und übt will-future und going to (Wiederholung) sowie die Grundlagen der indirekten Rede (said that, told me that; will wird zu would).",
+    "prep": "A/B/C/D-Karten austeilen, Beamer im Vollbild, Timer für die Abstimmungen bereithalten. Bei Bedarf an die Tafel: apprenticeship (Lehre), pre-vocational school (Polytechnische Schule), technical college (HTL), work placement (Praktikum), Leaving Cert (irische Matura), open day (Tag der offenen Tür), vocational school (Berufsschule), engineering (Technik), diploma (Diplom). Regel an die Tafel: going to für Pläne, will für Vorhersagen (I think …, maybe …), Versprechen und feststehende Zukunft (At the end, I’ll take the Matura). Einsatz ab: will-future und going to sowie erste Sätze in indirekter Rede (said that …, told me that …).",
+    "heft": "Neue Seite: Datum (rechts) und „Email“ als Überschrift (wie am Beamer). Darunter der Kopf in vier Zeilen wie am Beamer: To, From, Date, Subject (Date ist der Tag der Stunde). Dann die Anrede auf eigener Zeile; jeder Absatz beginnt nach einer Leerzeile, am Rand steht der Name des Teils wie am Beamer (Introduction, Plans, Strengths, Parents). Nach einer Leerzeile Grußformel und Name auf eigenen Zeilen. Zukunftsformen (will, ’ll, going to) grün unterstreichen.",
+    "flow": "Volltext (50 min): 4 min Aufgabe und Wahl des Wegs · 7 weitere Entscheidungen à ca. 2 min (bei Plans und Parents zuerst 1 min still lesen), zusammen ca. 15 min · Abschreiben nach jeder Entscheidung, zusammen ca. 22 min · 5 min Checkliste · 4 min Puffer. Wenn die Zeit knapp wird: Checkliste als Hausübung. Pro abgelehnter Falle etwa eine Minute extra einplanen.",
+    "traps": "Introduction A (TA, Erfüllung der Aufgabenstellung): erzählt von etwas anderem (Konzert) und geht nicht auf Maeves Frage nach den Plänen ein. Plans C (LSA, Sprachrichtigkeit): „will to + Verb“ und become statt get (become = werden, nicht bekommen). Strengths B (CC, Kohärenz und Kohäsion): Liste kurzer Sätze ohne Bindewörter, jeder Satz beginnt mit I. Parents C (LSA, Sprachrichtigkeit): „said me“ statt told me und will statt would nach said that (Rückverschiebung in der indirekten Rede; die Eltern haben diese Meinung inzwischen aufgegeben).",
+    "notes": "Die drei Wege sind vereinfacht, aber korrekt: Oberstufe (4 Jahre, Matura), HTL (5 Jahre, Reife- und Diplomprüfung, Pflichtpraktika in den Ferien), Lehre (zuerst das 9. Schuljahr, meist an der Polytechnischen Schule; die Lehre dauert meist 3 Jahre, im Betrieb und in der Berufsschule, mit Lehrlingseinkommen; danach gilt die Ausbildungspflicht bis 18, die mit der Lehre erfüllt ist). Die E-Mail ist ein Rollentext: Niemand muss die eigenen Pläne verraten. Wer schon einen eigenen Plan hat, darf im Heft einen Satz dazu ergänzen. Differenzierung: Schnelle berichten einen weiteren Satz der Eltern in indirekter Rede. Hausübung: zweite Fassung mit einem anderen Weg oder Maeves Antwort (ca. 80 Wörter) mit zwei Sätzen mit going to und zwei mit will."
+  }
+}

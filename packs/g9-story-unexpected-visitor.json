@@ -1,0 +1,475 @@
+{
+  "id": "g9-story-unexpected-visitor",
+  "title": "An unexpected visitor",
+  "titleDe": "Ein unerwarteter Besuch",
+  "grade": 9,
+  "level": "A2+/B1",
+  "theme": "Kultur & Kreativität",
+  "textType": "story",
+  "modes": [
+    "full",
+    "frame"
+  ],
+  "lengths": {
+    "short": {
+      "label": "around 200 words",
+      "min": 180,
+      "max": 220
+    },
+    "long": {
+      "label": "around 250 words",
+      "min": 225,
+      "max": 275
+    }
+  },
+  "minutes": {
+    "full": {
+      "short": 50,
+      "long": 60
+    },
+    "frame": {
+      "short": 60,
+      "long": 70
+    }
+  },
+  "task": {
+    "situation": "An online youth magazine is collecting short stories for its creative writing page. This month’s topic is ‘An unexpected visitor’. Your story is about Kofi, 15, who lives with his mum and his little sister Zoe in a flat in Linz. One rainy evening, the doorbell rings. You decide who is at the door: Mr Nowak, an old man with a violin case; Ana, an actor in costume from the theatre round the corner; or Yusuf, a film student with a camera.",
+    "instruction": "Write a story with direct and reported speech. In your story you should:",
+    "points": [
+      "describe the ordinary evening before the visit",
+      "narrate who the visitor was and what he or she wanted",
+      "explain how the visit changed the evening for the family"
+    ],
+    "words": {
+      "short": "Give your story a title. Write around 200 words.",
+      "long": "Give your story a title. Write around 250 words."
+    },
+    "de": "Geschichte für die Kreativseite eines Online-Jugendmagazins: Ein unerwarteter Besuch verändert einen gewöhnlichen Abend. Drei Inhaltspunkte: der gewöhnliche Abend, wer kommt und was die Person will, wie der Besuch den Abend verändert. Direkte und indirekte Rede verwenden. Zuerst wählt ihr, wer vor der Tür steht. Den Titel wählen wir ganz zum Schluss."
+  },
+  "meta": {},
+  "focus": {
+    "label": "speech verbs",
+    "labelDe": "Redeeinleitende Verben (direkte und indirekte Rede)",
+    "min": {
+      "short": 5,
+      "long": 6
+    },
+    "note": "Marked: every verb that introduces direct speech (“…,” he whispered) or reported speech, together with the word that follows it in reported speech (explained that, asked if, told them to). In reported speech, the verbs move one step into the past (can → could, has broken → had broken)."
+  },
+  "topicWords": [
+    "kofi",
+    "zoe",
+    "mum",
+    "visitor",
+    "violin",
+    "teapot",
+    "camera",
+    "film",
+    "window",
+    "kitchen",
+    "flat",
+    "rain",
+    "cat",
+    "mr",
+    "nowak",
+    "ana",
+    "yusuf",
+    "show",
+    "theatre",
+    "evening",
+    "tuesday",
+    "maths",
+    "homework",
+    "rooftops"
+  ],
+  "gaps": [
+    {
+      "id": "CAT",
+      "step": "beginning",
+      "q": "The family has a cat. What is its name?",
+      "qDe": "Ruft einen Namen für die Katze. Keine Namen von Mitschüler:innen oder Lehrer:innen.",
+      "type": "text",
+      "default": "Mango",
+      "max": 20
+    }
+  ],
+  "steps": [
+    {
+      "id": "visitor",
+      "part": "The visitor",
+      "q": "Who is at the door? We decide now, but our readers find out later!",
+      "de": "Hier entscheidet ihr, wer an diesem Abend vor der Tür steht.",
+      "options": [
+        {
+          "l": "A",
+          "id": "violin",
+          "label": "An old man with a violin case",
+          "teaser": "Mr Nowak is about eighty. He has a secret connection to the flat."
+        },
+        {
+          "l": "B",
+          "id": "actor",
+          "label": "An actor in costume",
+          "teaser": "Ana comes straight from the theatre round the corner. Something has gone wrong before the show."
+        },
+        {
+          "l": "C",
+          "id": "film",
+          "label": "A film student",
+          "teaser": "Yusuf needs something for his film that only this flat has."
+        }
+      ]
+    },
+    {
+      "id": "beginning",
+      "slot": "beginning",
+      "part": "Introduction",
+      "q": "Introduction: how does our story begin?",
+      "de": "Der Anfang zeigt einen ganz gewöhnlichen Abend in Kofis Familie. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then describe the ordinary evening in your own words: what was everyone doing?",
+      "ownDe": "Gerüst abschreiben, dann mit eigenen Worten beschreiben, was alle an diesem gewöhnlichen Abend machten.",
+      "options": [
+        {
+          "l": "A",
+          "id": "scene",
+          "label": "Start with the scene",
+          "text": "{{It was a wet Tuesday evening in November.}} Kofi was doing his maths homework at the kitchen table, {CAT} the cat was asleep on the radiator, and Zoe was practising her recorder. {{“Please stop,” Kofi [[groaned]],}} but she only played louder.",
+          "why": "The scene comes first. Then a short line of direct speech with a strong verb shows Kofi’s mood."
+        },
+        {
+          "l": "B",
+          "id": "speech",
+          "label": "Start with speech",
+          "text": "{{“Is dinner ready yet?” Zoe [[asked]] for the third time that Tuesday evening.}} Mum [[replied that]] it would take another twenty minutes. {{Outside, it was pouring with rain,}} and even {CAT} the cat looked bored. So did Kofi, who was stuck on his maths homework.",
+          "why": "Direct speech pulls readers in at once, and ‘replied that’ reports Mum’s answer."
+        },
+        {
+          "l": "C",
+          "id": "sound",
+          "label": "Start with a sound",
+          "text": "{{Tick, tock, tick, tock.}} On Tuesday evenings, the kitchen clock was the loudest thing in the flat. Mum was reading to Zoe, {CAT} the cat was asleep, and Kofi was staring at his maths homework. {{“Why is nothing ever exciting here?” he [[sighed]].}}",
+          "why": "A sound sets the quiet mood, and the line of direct speech at the end shows how bored Kofi is."
+        }
+      ]
+    },
+    {
+      "id": "door",
+      "slot": "door",
+      "part": "Body paragraph 1",
+      "q": "Body paragraph 1: the doorbell rings. Who opens, and what do we hear first?",
+      "de": "Jetzt kommt der Besuch: Wer steht vor der Tür, und was sagt die Person? Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then describe the visitor in your own words and finish what was said.",
+      "ownDe": "Gerüst abschreiben, dann die Person mit eigenen Worten beschreiben und fertigschreiben, was gesagt wurde.",
+      "options": [
+        {
+          "l": "A",
+          "id": "open",
+          "label": "Kofi opens the door",
+          "text": {
+            "by": "visitor",
+            "map": {
+              "violin": "{{Just after seven, the doorbell rang.}} Kofi opened the door and saw an old man with a violin case under his arm. {{“Good evening, my name is Nowak,” the man [[said]] politely.}} “I’m sorry to disturb you so late.”",
+              "actor": "{{Just after seven, the doorbell rang.}} Kofi opened the door and stared. A young woman in a long silver dress and a golden crown was standing there. {{“Hi, I’m Ana from the theatre round the corner,” she [[gasped]].}} “I need your help!”",
+              "film": "{{Just after seven, the doorbell rang.}} Kofi opened the door to a young man with a big camera and a wet hood. {{“Good evening, I’m Yusuf,” he [[said]] with a shy smile.}} “This will sound strange, but I need your window.”"
+            }
+          },
+          "why": "Direct speech lets the visitor speak for themselves, so readers meet the stranger together with Kofi."
+        },
+        {
+          "l": "B",
+          "id": "bell",
+          "label": "Mum hears the bell",
+          "trap": true,
+          "crit": "LSA",
+          "text": {
+            "by": "visitor",
+            "map": {
+              "violin": "When the doorbell rang, Mum said Kofi to open it. On the doormat stood an old man with a violin case. He asked if he can come in for a minute and said that his name was Nowak.",
+              "actor": "When the doorbell rang, Mum said Kofi to open it. On the doormat stood a young woman in a silver dress and a golden crown. She asked if she can come in for a minute and said that her name was Ana.",
+              "film": "When the doorbell rang, Mum said Kofi to open it. On the doormat stood a young man with a big camera and a wet hood. He asked if he can come in for a minute and said that his name was Yusuf."
+            }
+          },
+          "reject": "Two typical mistakes: ‘Mum said Kofi to open it’ (→ Mum told Kofi to open it) and ‘asked if he / she can come in’ (→ could come in: after a past reporting verb, the verb moves back).",
+          "rejectDe": "Zwei typische Fehler: said Kofi to → told Kofi to (nach say steht keine Person ohne to; Aufforderungen: tell / ask somebody to) und asked if … can → could (Rückverschiebung)."
+        },
+        {
+          "l": "C",
+          "id": "report",
+          "label": "Report the words",
+          "text": {
+            "by": "visitor",
+            "map": {
+              "violin": "{{When the doorbell rang, Mum [[asked Kofi to]] get it.}} On the doormat stood an old man with a violin case. {{He [[said that]] his name was Nowak}} and that he was sorry about the late visit.",
+              "actor": "{{When the doorbell rang, Mum [[asked Kofi to]] get it.}} On the doormat stood a young woman in a silver dress and a golden crown. {{She [[said that]] her name was Ana}} and that she worked at the theatre round the corner.",
+              "film": "{{When the doorbell rang, Mum [[asked Kofi to]] get it.}} On the doormat stood a young man with a big camera and a wet hood. {{He [[told Kofi that]] his name was Yusuf}} and that he was a film student."
+            }
+          },
+          "why": "Reported speech: ‘asked Kofi to’ reports a request, and ‘said that’ or ‘told Kofi that’ report the visitor’s words."
+        }
+      ]
+    },
+    {
+      "id": "inside",
+      "slot": "inside",
+      "part": "Body paragraph 1",
+      "len": "long",
+      "q": "How does the family react?",
+      "de": "Der Absatz geht weiter: Wie reagiert die Familie auf den Besuch? Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then describe in your own words how the family reacted.",
+      "ownDe": "Gerüst abschreiben, dann mit eigenen Worten beschreiben, wie die Familie reagierte.",
+      "options": [
+        {
+          "l": "A",
+          "id": "towel",
+          "label": "Mum takes over",
+          "text": "{{A moment later, Mum appeared in the hall.}} “Please come in out of the rain,” she [[called]], and she fetched a towel. Zoe stared at the stranger with big eyes, {{while {CAT} the cat walked straight up to the visitor}} and sniffed the wet shoes.",
+          "why": "Mum’s words in direct speech make the scene warm, and the cat adds a funny detail."
+        },
+        {
+          "l": "B",
+          "id": "whisper",
+          "label": "Voices in the hall",
+          "text": "{{Kofi didn’t know what to do,}} so he [[shouted]], “Mum, can you come here?” Mum took one look at the dripping visitor and [[insisted that]] nobody should stand outside in weather like this. {{Behind her, Zoe [[whispered]],}} “Who is it? Is it someone famous?”",
+          "why": "Three different speech verbs (shouted, insisted, whispered) show how each person feels."
+        }
+      ],
+      "join": true
+    },
+    {
+      "id": "reason",
+      "slot": "reason",
+      "part": "Body paragraph 2",
+      "q": "Body paragraph 2: what does the visitor want?",
+      "de": "Die Person erklärt, warum sie gekommen ist. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then let the visitor explain the reason in your own words.",
+      "ownDe": "Gerüst abschreiben, dann die Person mit eigenen Worten den Grund für ihren Besuch erklären lassen.",
+      "options": [
+        {
+          "l": "A",
+          "id": "dialogue",
+          "label": "A quick dialogue",
+          "trap": true,
+          "crit": "CC",
+          "text": {
+            "by": "visitor",
+            "map": {
+              "violin": "“Sixty years ago, I lived here as a boy.” “Really?” “Every evening I practised the violin at your kitchen window.” “At our window?” “Yes. Could I play one song there?” “Of course.” “Just one, for old times’ sake.”",
+              "actor": "“Our teapot has just broken!” “Your teapot?” “The show starts in twenty minutes, and the queen can’t have her tea without one.” “What can we do?” “Could I borrow yours?” “Of course.” “I’ll bring it back after the show.”",
+              "film": "“I’m making a short film for my film school.” “A film?” “The last scene needs a view over the rooftops at night.” “From here?” “Yes. Your window is perfect.” “How long will it take?” “Only ten minutes, I promise.”"
+            }
+          },
+          "reject": "Readers can’t tell who is speaking: there are no names and no speech verbs. In a story, always show who says what (the visitor explained, Kofi asked).",
+          "rejectDe": "Man weiß nicht, wer spricht: keine Namen, keine redeeinleitenden Verben. In einer Geschichte immer zeigen, wer etwas sagt."
+        },
+        {
+          "l": "B",
+          "id": "direct",
+          "label": "The visitor explains",
+          "text": {
+            "by": "visitor",
+            "map": {
+              "violin": "{{In the kitchen, Mr Nowak looked around and smiled.}} “Sixty years ago, I lived here as a boy,” he [[explained]]. “Every evening I practised the violin at that window.” {{Then he [[asked]],}} “Could I play one song there? Just one, for old times’ sake.”",
+              "actor": "{{Inside, Ana could hardly stand still.}} “Our teapot has just broken, and the show starts in twenty minutes!” she [[explained]]. “The queen can’t have her tea without a teapot.” {{Then she [[asked]],}} “Could I borrow yours? I’ll bring it back after the show.”",
+              "film": "{{In the kitchen, Yusuf wiped the rain off his camera.}} “I’m making a short film for my film school,” he [[explained]]. “The last scene needs a view over the rooftops at night.” {{He pointed at the window and [[added]],}} “Yours is perfect. I only need ten minutes.”"
+            }
+          },
+          "why": "A short scene leads into the visitor’s own words, and clear speech verbs (explained, asked, added) show who is speaking."
+        },
+        {
+          "l": "C",
+          "id": "reported",
+          "label": "Retell the reason",
+          "text": {
+            "by": "visitor",
+            "map": {
+              "violin": "{{Over a cup of tea, Mr Nowak [[told them that]]}} he had grown up in this very flat. Every evening he had practised the violin at the kitchen window. {{Shyly, he [[asked if]] he could play}} one song there, just for old times’ sake.",
+              "actor": "{{In a rush, Ana [[explained that]]}} the theatre’s only teapot had just broken. The show was starting in twenty minutes, and the queen in the play needed her tea. {{She [[asked if]] she could borrow}} their teapot until the end of the show.",
+              "film": "{{Quietly, Yusuf [[explained that]]}} he was making a short film for his film school. For the last scene, he needed a view over the rooftops at night. {{He [[asked whether]] he could film}} from their window for ten minutes."
+            }
+          },
+          "why": "Reported speech sums up a long explanation quickly, and the verbs move one step back (can → could)."
+        }
+      ]
+    },
+    {
+      "id": "change",
+      "slot": "change",
+      "part": "Body paragraph 3",
+      "q": "Body paragraph 3: how does the visit change the evening?",
+      "de": "Der Besuch verändert den Abend: Was passiert jetzt? Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then tell in your own words what happened next. Use at least one speech verb.",
+      "ownDe": "Gerüst abschreiben, dann mit eigenen Worten erzählen, was als Nächstes passierte. Mindestens ein redeeinleitendes Verb verwenden.",
+      "options": [
+        {
+          "l": "A",
+          "id": "moment",
+          "label": "A special moment",
+          "text": {
+            "by": "visitor",
+            "map": {
+              "violin": "{{Mr Nowak stood at the kitchen window and closed his eyes.}} He played a slow, beautiful song. When he finished, Zoe picked up her recorder and [[begged him to]] teach her that tune. {{“With pleasure,” he [[replied]].}}",
+              "actor": "{{Ten minutes later, the whole family was running through the rain}} with Ana and Mum’s old blue teapot. At the stage door, Ana [[told them to]] wait. {{Soon she came back with three free tickets}} and [[whispered]], “Enjoy the show!”",
+              "film": "{{Yusuf set up his camera by the window and switched off the lights.}} He [[asked everyone to]] keep quiet. Nobody dared to move. {{Then he showed them the result:}} the wet rooftops, the city lights and {CAT} the cat on the windowsill."
+            }
+          },
+          "why": "The visitor’s words and actions turn the ordinary evening into something special."
+        },
+        {
+          "l": "B",
+          "id": "surprise",
+          "label": "A surprise for the family",
+          "text": {
+            "by": "visitor",
+            "map": {
+              "violin": "{{After playing his song, Mr Nowak took an old photo out of his violin case.}} It showed a thin boy with a violin at the same window. Before he left, he [[promised to]] come back on Sunday and give Zoe her first violin lesson.",
+              "actor": "{{Before she ran off with the teapot, Ana [[wanted to know whether]] they liked the theatre.}} Twenty minutes later, thanks to three free tickets, the family was sitting in the front row, and Mum’s old blue teapot was the star of the show.",
+              "film": "{{Yusuf filmed the rooftops for a while, and then he had an idea.}} He [[asked Kofi to]] stand at the window and look out into the night. {{“Don’t smile,” he [[said]] softly.}} “Just think of something far away.”"
+            }
+          },
+          "why": "One small idea of the visitor turns into a surprise for the whole family."
+        },
+        {
+          "l": "C",
+          "id": "said",
+          "label": "What everyone said",
+          "trap": true,
+          "crit": "LSR",
+          "text": {
+            "by": "visitor",
+            "map": {
+              "violin": "Mr Nowak stood at the kitchen window and played a beautiful song. “That was lovely,” Mum said. “Can you teach me?” Zoe said. “Of course,” Mr Nowak said. “Come and sit next to me,” he said.",
+              "actor": "Ten minutes later, the family was running through the rain with Ana and Mum’s old teapot. “Wait here,” Ana said at the stage door. “Thank you,” Mum said. “Here are three tickets,” Ana said. “Enjoy the show,” she said.",
+              "film": "Yusuf set up his camera by the window and switched off all the lights in the kitchen. “Quiet, please,” he said. “Can I watch?” Zoe said. “Of course,” Yusuf said. “But please don’t move,” he said."
+            }
+          },
+          "reject": "Every speech verb is ‘said’, four times in a row. More precise verbs show how people speak: asked, replied, whispered, promised.",
+          "rejectDe": "Viermal „said“ hintereinander. Genauere Verben zeigen, wie jemand spricht: asked, replied, whispered, promised."
+        }
+      ]
+    },
+    {
+      "id": "ending",
+      "slot": "ending",
+      "part": "Conclusion",
+      "q": "Conclusion: how does our story end?",
+      "de": "Der Schluss rundet die Geschichte ab. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then explain in your own words how the evening was different in the end.",
+      "ownDe": "Gerüst abschreiben, dann mit eigenen Worten erklären, was am Ende anders war.",
+      "options": [
+        {
+          "l": "A",
+          "id": "night",
+          "label": "Late at night",
+          "text": "{{That night, Kofi lay awake for a long time.}} His maths homework was still not finished, but he didn’t care. When Mum came in to say good night, {{he [[admitted that]]}} it had been the best Tuesday of his life.",
+          "why": "Kofi’s words in reported speech show how the visit changed his view of an ordinary Tuesday."
+        },
+        {
+          "l": "B",
+          "id": "echo",
+          "label": "Back to the start",
+          "text": {
+            "by": "visitor",
+            "map": {
+              "violin": "{{The evening had started like any other Tuesday,}} but it ended with music. As Mr Nowak walked off into the rain, {{Mum [[said]] softly,}} “Some visitors bring flowers. He brought us a song.”",
+              "actor": "{{The evening had started like any other Tuesday,}} but it ended with loud applause. On the way home, Zoe [[announced that]] she wanted to become an actor. {{“Then you’ll need a teapot,” Mum [[replied]].}}",
+              "film": "{{The evening had started like any other Tuesday,}} but it ended with a film. Months later, Yusuf sent them an invitation to the first screening. {{“Our window is famous!” Zoe [[shouted]]}} when she saw the film."
+            }
+          },
+          "why": "The ending goes back to the ordinary start, so readers see how much the evening changed."
+        },
+        {
+          "l": "C",
+          "id": "same",
+          "label": "After the visit",
+          "trap": true,
+          "crit": "TA",
+          "text": "After ten minutes, the visitor said goodbye and left. Kofi closed the door and went back to his maths homework, Zoe played her recorder again, and the rest of the evening was exactly like every other Tuesday.",
+          "reject": "The task asks how the visit CHANGED the evening, but here everything goes back to normal. The third content point is missing, and the story loses its point.",
+          "rejectDe": "Gefragt ist, wie der Besuch den Abend verändert hat. Hier bleibt alles gleich: Der dritte Inhaltspunkt fehlt."
+        }
+      ]
+    },
+    {
+      "id": "title",
+      "slot": "title",
+      "part": "Title",
+      "q": "Our story is finished. Which title do we choose?",
+      "de": "Der Titel kommt zuletzt und soll neugierig machen, ohne die Überraschung zu verraten.",
+      "own": "Short and catchy: make readers curious about the visitor.",
+      "ownDe": "Kurz und treffend: Der Titel soll neugierig auf den Besuch machen.",
+      "options": [
+        {
+          "l": "A",
+          "id": "tuesday",
+          "label": "A title with a wink",
+          "text": "Just another Tuesday",
+          "why": "It sounds boring on purpose, so readers expect a surprise."
+        },
+        {
+          "l": "B",
+          "id": "door",
+          "label": "A question",
+          "text": "Who’s at the door?",
+          "why": "A question makes readers want to find out."
+        },
+        {
+          "l": "C",
+          "id": "object",
+          "label": "One object",
+          "text": {
+            "by": "visitor",
+            "map": {
+              "violin": "The violin case",
+              "actor": "The borrowed teapot",
+              "film": "The perfect window"
+            }
+          },
+          "why": "It names one object from the story and makes readers wonder why it matters."
+        }
+      ]
+    }
+  ],
+  "order": [
+    "title",
+    "beginning",
+    "door",
+    "inside",
+    "reason",
+    "change",
+    "ending"
+  ],
+  "checks": [
+    {
+      "en": "The beginning shows an ordinary evening in Kofi’s family"
+    },
+    {
+      "en": "Five paragraphs: a beginning, three middle paragraphs and an ending"
+    },
+    {
+      "en": "All three content points: the ordinary evening, the visitor and the reason, the change"
+    },
+    {
+      "en": "Direct speech in quotation marks, with a comma before the closing mark: “Please stop,” Kofi groaned."
+    },
+    {
+      "en": "Different speech verbs: asked, replied, whispered, explained"
+    },
+    {
+      "en": "Reported speech: told Kofi that, asked if, asked Kofi to; the verbs move back (can → could)"
+    },
+    {
+      "en": "It is always clear who is speaking"
+    },
+    {
+      "en": "A title that makes readers curious but does not give away the surprise"
+    }
+  ],
+  "teacher": {
+    "aim": "Die Klasse schreibt gemeinsam eine Geschichte (A2+/B1) über einen unerwarteten, freundlichen Besuch und übt dabei direkte Rede mit abwechslungsreichen redeeinleitenden Verben (whispered, explained, replied) und indirekte Rede (told him that, asked if, asked Kofi to) mit Rückverschiebung.",
+    "prep": "A/B/C/D-Karten austeilen (eine Garnitur pro Person), Hefte bereitlegen. Beamer im Vollbild. Im Gerüst-Modus den eingebauten Timer nutzen: 5 min pro Absatz, bei Bedarf +1. Wörter bei Bedarf erklären: recorder (Blockflöte), doormat (Fußmatte), stage door (Bühneneingang), rooftops (Dächer), screening (Vorführung), for old times’ sake (den alten Zeiten zuliebe).",
+    "heft": "Neue Seite: Datum rechts oben, darunter „Story“ als Überschrift (wie am Beamer). Dann 2 Zeilen für den Titel frei lassen, der Titel kommt zuletzt. Fünf Absätze, jeder nach einer Leerzeile, am Rand die Randwörter Intro, Body 1, Body 2, Body 3, Conclusion. Anführungszeichen der direkten Rede sauber setzen; am Ende die redeeinleitenden Verben grün unterstreichen.",
+    "flow": "Volltext kurz (50 min): 5 min Aufgabe lesen; 7 Entscheidungen (die erste ist eine reine Wahl: Wer steht vor der Tür?) à ca. 2 min, Abschreiben ca. 20 min, 5 min Checkliste. Volltext lang (ca. 60 min): wie kurz, dazu eine Fortsetzung von Body 1 (Reaktion der Familie); das sind eine Entscheidung und rund 45 Wörter Abschreiben mehr. In einer Doppelstunde die restliche Zeit für die Besprechung der Fallen nutzen und die Hausübung zu zweit beginnen. Gerüst kurz (realistisch ca. 60 min): 5 min Aufgabe; pro Absatz 1 min Entscheidung, 5–6 min eigenes Schreiben, 1 min Vergleich mit dem Modell; am Ende 5 min Checkliste. In einer 50-Minuten-Stunde die Conclusion noch abstimmen und das Gerüst abschreiben lassen; den Schluss fertigschreiben und einen eigenen Titel finden als Hausübung. Gerüst lang (ca. 70 min): gleicher Rhythmus wie kurz, dazu die Fortsetzung von Body 1 mit ca. 7 min. In einer Doppelstunde danach eine Vergleichsrunde zu zweit. Nach der ersten Wahl Name und Anliegen der Besuchsperson an die Tafel schreiben (Mr Nowak: hat als Kind in der Wohnung gewohnt; Ana: Teekanne für die Vorstellung kaputt; Yusuf: braucht den Blick aus dem Fenster für einen Kurzfilm).",
+    "traps": "Body 1 B (LSA): said Kofi to statt told Kofi to, asked if … can statt could. Body 2 A (CC): Dialog ohne Namen und ohne redeeinleitende Verben, unklar, wer spricht. Body 3 C (LSR): viermal said hintereinander. Conclusion C (TA): Nach dem Besuch bleibt alles wie vorher, der dritte Inhaltspunkt fehlt. Kürzel: TA = Erfüllung der Aufgabenstellung, CC = Kohärenz und Kohäsion, LSR = Spektrum sprachlicher Mittel, LSA = Sprachrichtigkeit.",
+    "notes": "Aufbau: Die Geschichte hat fünf Absätze (Anfang, drei Absätze in der Mitte, Schluss), die Inhaltspunkte folgen der Handlung: Punkt 1 (der gewöhnliche Abend) steht in der Introduction, Punkt 2 (wer kommt und was die Person will) in Body 1 und Body 2, Punkt 3 (wie der Besuch den Abend verändert) in Body 3 und in der Conclusion. Die lange Fassung macht Body 1 länger, sie fügt keinen Absatz hinzu. Fokus: Markiert sind alle Verben, die direkte oder indirekte Rede einleiten, in der indirekten Rede mit dem folgenden Wort (explained that, asked if, told them to). Nach Body 2 lohnt eine Minute an der Tafel: dieselbe Aussage einmal direkt, einmal indirekt („Could I borrow yours?“ → She asked if she could borrow their teapot). Alle Personen sind erfunden, alle Besuche sind harmlos und freundlich; Linz ist nur der Schauplatz. Kurz ansprechen: In der Geschichte ist Mum zu Hause, im echten Leben öffnet man Fremden nicht allein die Tür. Für die Namenslücke einen erfundenen Katzennamen verwenden, keine Namen von Mitschüler:innen oder Lehrer:innen. Differenzierung: Schnelle schreiben im Gerüst-Modus eine zusätzliche Zeile direkte Rede mit einem neuen Verb (admitted, promised, suggested). Hausübung: zweite Fassung mit einer anderen Besuchsperson."
+  }
+}

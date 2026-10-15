@@ -1,0 +1,522 @@
+{
+  "id": "g11-essay-adult-at-18",
+  "title": "Adult at 18?",
+  "titleDe": "Erwachsen mit 18?",
+  "grade": 11,
+  "level": "B1+/B2",
+  "theme": "Ich & meine Welt",
+  "textType": "essay",
+  "modes": [
+    "full",
+    "frame"
+  ],
+  "lengths": {
+    "long": {
+      "label": "around 400 words",
+      "min": 360,
+      "max": 440
+    }
+  },
+  "minutes": {
+    "full": {
+      "long": 100
+    },
+    "frame": {
+      "long": 100
+    }
+  },
+  "task": {
+    "situation": "The online youth magazine ‘Crossroads’ is holding an essay competition. This year’s question is: ‘Is a young person an adult at 18?’ The best essays will be published on the magazine’s website. You decide to take part.",
+    "instruction": "In your essay you should:",
+    "points": [
+      "discuss the role of legal age limits, such as voting at 16 and coming of age at 18",
+      "explain which responsibilities young people take on as they grow up",
+      "evaluate how important independence from parents is for becoming an adult"
+    ],
+    "words": {
+      "long": "Give your essay a title. Write around 400 words."
+    },
+    "de": "Essay für den Wettbewerb eines Online-Jugendmagazins: Ist man mit 18 erwachsen? Drei Inhaltspunkte: Altersgrenzen, Verantwortung, Unabhängigkeit von den Eltern. Zuerst wählt ihr eure Position, der Titel kommt ganz zum Schluss."
+  },
+  "meta": {
+    "publication": "Essay competition · ‘Crossroads’ online youth magazine"
+  },
+  "focus": {
+    "label": "linking words for an argument",
+    "labelDe": "Linking words für die Argumentation",
+    "min": {
+      "long": 9
+    },
+    "note": "Marked: linking words that build an argument: concession and contrast (admittedly, whereas, nevertheless, even so), cause and result (since, therefore, as a result), examples, rephrasing and summary (for instance, in other words, to sum up). ‘And’, ‘but’, ‘because’, ‘also’ and time words such as ‘when’, ‘before’ or ‘until’ are not marked."
+  },
+  "topicWords": [
+    "young",
+    "people",
+    "person",
+    "adult",
+    "adults",
+    "adulthood",
+    "age",
+    "18",
+    "16",
+    "18th",
+    "birthday",
+    "parents",
+    "teenagers",
+    "legal",
+    "law"
+  ],
+  "gaps": [
+    {
+      "id": "DUTY",
+      "step": "duties",
+      "q": "Which other responsibility do teenagers take on? Give a phrase that starts with a verb, e.g. ‘coach children at a football club’. Use ‘their’, not ‘my’.",
+      "qDe": "Ruft eine weitere Pflicht von Jugendlichen als englische Wendung, die mit einem Verb beginnt, z. B. „coach children at a football club“ oder „pay their own phone bill“.",
+      "type": "text",
+      "default": "coach children at a football club",
+      "max": 50,
+      "cap": false,
+      "verbPhrase": true
+    }
+  ],
+  "steps": [
+    {
+      "id": "position",
+      "part": "Position",
+      "q": "‘Is a young person an adult at 18?’ What is our position?",
+      "de": "Zuerst entscheidet ihr euch für eine Position, nach der sich das ganze Essay richtet.",
+      "options": [
+        {
+          "l": "A",
+          "id": "yes",
+          "label": "Yes, at 18",
+          "teaser": "At 18, the law treats young people as adults, and full rights and duties begin on the same day."
+        },
+        {
+          "l": "B",
+          "id": "no",
+          "label": "No, it is a process",
+          "teaser": "A birthday does not make anyone an adult. Responsibility and independence matter far more than a date."
+        },
+        {
+          "l": "C",
+          "id": "partly",
+          "label": "Partly",
+          "teaser": "18 is a sensible legal line, but real adulthood develops gradually over several years."
+        }
+      ]
+    },
+    {
+      "id": "intro",
+      "slot": "intro",
+      "part": "Introduction",
+      "q": "How do we introduce the topic and state our thesis?",
+      "de": "Die Einleitung führt in die Frage des Essays ein. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then finish the introduction in your own words and end with a clear thesis statement.",
+      "ownDe": "Gerüst abschreiben, dann die Einleitung mit eigenen Worten fertigschreiben. Am Ende steht eure These (Thesis Statement).",
+      "options": [
+        {
+          "l": "A",
+          "id": "contrast",
+          "label": "Start with a contrast",
+          "why": "A short contrast shows that the question is not as simple as it seems, then the thesis follows.",
+          "text": {
+            "by": "position",
+            "map": {
+              "yes": "{{At first sight, the answer seems obvious:}} in Austria, a person comes of age at 18. {{[[Admittedly,]]}} some teenagers are more mature than many adults. {{This essay will argue that}} 18 is the right place to draw the line, [[as]] full rights, real duties and personal freedom all begin then.",
+              "no": "{{At first sight, the answer seems obvious:}} in Austria, a person comes of age at 18. {{[[In reality,]]}} some 17-year-olds already earn their own money, [[whereas]] some 25-year-olds still depend on their parents. {{This essay will argue that}} adulthood is a process rather than a date, shaped by responsibility and independence.",
+              "partly": "{{At first sight, the answer seems obvious:}} in Austria, a person comes of age at 18. {{[[In reality,]]}} maturity does not arrive overnight. {{This essay will argue that}} 18 is a sensible legal line, [[although]] real adulthood develops gradually as young people take on responsibility and become independent."
+            }
+          }
+        },
+        {
+          "l": "B",
+          "id": "issues",
+          "label": "Name the issues",
+          "why": "Names the three aspects of the task first, so the reader knows exactly what the essay will discuss.",
+          "text": {
+            "by": "position",
+            "map": {
+              "yes": "{{Adulthood can be discussed from several angles:}} it may be seen as a legal status, a set of duties or the freedom to run one’s own life. {{This essay will argue that}} all three come together at 18, which makes this age the true start of adulthood.",
+              "no": "{{Adulthood can be discussed from several angles:}} it may be seen as a legal status, a set of duties or the freedom to run one’s own life. {{This essay will argue that}} the legal status matters least, [[whereas]] responsibility and independence are what really turn a young person into an adult.",
+              "partly": "{{Adulthood can be discussed from several angles:}} it may be seen as a legal status, a set of duties or the freedom to run one’s own life. {{This essay will argue that}} the legal status begins at 18, [[whereas]] the other two develop gradually over several years."
+            }
+          }
+        },
+        {
+          "l": "C",
+          "id": "trap",
+          "label": "Start with the law",
+          "trap": true,
+          "crit": "TA",
+          "text": "In Austria, young people may vote at 16, but they cannot sign a contract alone until they are 18. Many teenagers find these rules confusing. This essay will therefore explain the most important age limits in Austrian law and describe what young people are allowed to do at each age.",
+          "reject": "Off target: the question is whether a young person is an adult at 18, but this thesis only promises a description of age limits. The introduction must end with a thesis that answers the question.",
+          "rejectDe": "Am Thema vorbei: Gefragt ist, ob man mit 18 erwachsen ist, doch diese These kündigt nur eine Beschreibung der Altersgrenzen an. Die Einleitung endet mit einer These, die die Frage beantwortet."
+        }
+      ]
+    },
+    {
+      "id": "law",
+      "slot": "law",
+      "part": "Body paragraph 1",
+      "q": "Body paragraph 1: what role do legal age limits play?",
+      "de": "Erster Inhaltspunkt: Altersgrenzen. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then support the topic sentence with one fact about age limits and explain what it shows. Use a fact from the options we read (the teacher writes it on the board).",
+      "ownDe": "Gerüst abschreiben, dann den Topic Sentence mit einem Fakt zu Altersgrenzen stützen (die Fakten stehen an der Tafel) und erklären, was er zeigt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "rules",
+          "label": "Why age limits exist",
+          "why": "The topic sentence picks up the legal side from the introduction and gives the reason for age limits.",
+          "text": {
+            "by": "position",
+            "map": {
+              "yes": "{{The legal side of adulthood is the easiest to define: every society needs clear rules.}} {{[[Since]]}} the maturity of each teenager cannot be tested individually, one date has to be fixed. At 18, young Austrians may sign contracts alone and even stand for parliament. {{[[In short,]] the law treats them as adults}} in all important areas.",
+              "no": "{{The legal side of adulthood is the easiest to define: every society needs clear rules.}} {{[[Since]]}} the maturity of each teenager cannot be tested individually, one date has to be fixed. {{[[However,]] a date chosen for practical reasons}} says little about a person’s actual maturity. Nobody becomes wiser overnight on their 18th birthday.",
+              "partly": "{{The legal side of adulthood is the easiest to define: every society needs clear rules.}} {{[[Since]]}} the maturity of each teenager cannot be tested individually, one date has to be fixed. {{From this point of view, 18 makes good sense.}} {{[[Nevertheless,]]}} such a line is a practical tool and cannot measure maturity precisely."
+            }
+          }
+        },
+        {
+          "l": "B",
+          "id": "trap",
+          "label": "Three age limits",
+          "trap": true,
+          "crit": "LSR",
+          "text": "Young people get a lot of rights at different ages. At 15 they can start an apprenticeship, and at 16 they can vote. At 18 they get a lot of other rights, and they can do a lot of things without their parents. So the age limits are good for young people because they get more rights.",
+          "reject": "Correct, but very basic: ‘get’, ‘can’ and ‘a lot of’ three times each, and no precise words for the rights. Use a range of vocabulary: ‘grant’, ‘be allowed to’, ‘sign contracts’.",
+          "rejectDe": "Richtig, aber sehr einfach: get, can und a lot of je dreimal, keine genauen Begriffe. Präziser Wortschatz ist gefragt (grant, be allowed to, sign contracts)."
+        },
+        {
+          "l": "C",
+          "id": "steps",
+          "label": "Rights step by step",
+          "why": "‘Legally’ links to the introduction; concrete Austrian age limits follow, and the last sentence draws a conclusion.",
+          "text": {
+            "by": "position",
+            "map": {
+              "yes": "{{Legally, young Austrians gain their rights step by step.}} At 15, they may start an apprenticeship, and at 16 they are allowed to vote. {{[[Yet]] only at 18 do they gain}} full legal capacity, which means that they can sign contracts without their parents’ consent. {{The final step is [[therefore]]}} the one that really counts.",
+              "no": "{{Legally, young Austrians gain their rights step by step.}} At 15, they may start an apprenticeship, at 16 they may vote, and at 18 they can sign contracts alone. {{[[In other words,]] even the law does not see}} adulthood as a single moment, [[since]] it accepts that maturity grows over several years.",
+              "partly": "{{Legally, young Austrians gain their rights step by step.}} At 15, they may start an apprenticeship, at 16 they may vote, and at 18 they can sign contracts alone. {{Such a gradual approach is sensible:}} it lets teenagers grow into their rights. {{The age of 18 is [[therefore]]}} one stage in a longer development, not a turning point."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "law2",
+      "slot": "law2",
+      "part": "Body paragraph 1",
+      "q": "Which example develops the point about age limits?",
+      "de": "Der Absatz geht weiter: ein Beispiel, das den ersten Inhaltspunkt vertieft. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then give the facts of our example in your own words (the teacher writes them on the board) and add one sentence on what they show about adulthood.",
+      "ownDe": "Gerüst abschreiben, dann die Fakten unseres Beispiels (sie stehen an der Tafel) mit eigenen Worten nennen und in einem Satz sagen, was sie über das Erwachsensein zeigen.",
+      "options": [
+        {
+          "l": "A",
+          "id": "vote",
+          "label": "Voting at 16",
+          "why": "A real Austrian example with a date makes the argument concrete and convincing.",
+          "text": {
+            "by": "position",
+            "map": {
+              "yes": "{{The voting age deserves a closer look. When Austria lowered it to 16 in 2007,}} it became the first country in the European Union to do so for national elections. This shows that young people are trusted with important decisions before they come of age. {{Voting, [[however,]] carries no personal risk,}} {{[[whereas]]}} a contract signed at 18 can bring debts that last for years.",
+              "no": "{{The voting age deserves a closer look. When Austria lowered it to 16 in 2007,}} it became the first country in the European Union to do so for national elections. Critics feared that 16-year-olds would not take this right seriously. {{[[In fact,]]}} research suggests that most of them vote just as carefully and responsibly as older voters. {{This example clearly shows that}} maturity can be present well before the 18th birthday.",
+              "partly": "{{The voting age deserves a closer look. When Austria lowered it to 16 in 2007,}} it became the first country in the European Union to do so for national elections. Critics feared that 16-year-olds would not take this right seriously. Supporters, [[in contrast,]] wanted young people to have a say in decisions about their future. {{The experience has been largely positive.}} {{[[Even so,]]}} voting is only one part of being an adult."
+            }
+          }
+        },
+        {
+          "l": "B",
+          "id": "abroad",
+          "label": "A look at other countries",
+          "why": "A comparison with other countries shows that the age line is a decision, not a law of nature.",
+          "text": {
+            "by": "position",
+            "map": {
+              "yes": "{{A look at other countries makes it clear that}} the age of adulthood is not fixed by nature. {{In 2001, Austria lowered it}} from 19 to 18, and in 2022 Japan made a similar change, from 20 to 18. {{[[Nevertheless,]] the fact that}} most countries around the world have settled on 18 shows broad agreement that this is when people are ready to take charge of their own lives.",
+              "no": "{{A look at other countries makes it clear that}} the age of adulthood is not fixed by nature. {{In 2001, Austria lowered it}} from 19 to 18, and in 2022 Japan made a similar change, from 20 to 18. {{If a line can be moved so easily,}} it can hardly mark a natural turning point in a person’s life. {{[[Instead,]]}} it tells us more about a country’s history than about its young people.",
+              "partly": "{{A look at other countries makes it clear that}} the age of adulthood is not fixed by nature. {{In 2001, Austria lowered it}} from 19 to 18, and in 2022 Japan made a similar change, from 20 to 18. {{These changes show that}} the legal age is a political choice. {{[[Even so,]]}} it is a useful one: a clear line protects young people and tells them what is expected of them."
+            }
+          }
+        }
+      ],
+      "join": true
+    },
+    {
+      "id": "duties",
+      "slot": "duties",
+      "part": "Body paragraph 2",
+      "q": "Body paragraph 2: which responsibilities do young people take on?",
+      "de": "Zweiter Inhaltspunkt: Verantwortung, die junge Menschen übernehmen. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then give two examples of responsibilities that teenagers take on (not the ones from the board) and say what they show.",
+      "ownDe": "Gerüst abschreiben, dann zwei Beispiele für Pflichten von Jugendlichen nennen (nicht die vom Beamer) und sagen, was sie zeigen.",
+      "options": [
+        {
+          "l": "A",
+          "id": "trap",
+          "label": "Busy teenage lives",
+          "trap": true,
+          "crit": "CC",
+          "text": "Secondly, many teenagers have a part-time job, help at home or look after younger brothers and sisters. Some of them also have to make big decisions about school and their future career at a young age. This is not always easy, and they need a lot of time and energy for it, especially during the busy school year.",
+          "reject": "There is no topic sentence: the paragraph starts with examples, so the reader does not know its main idea. And ‘Secondly’ needs a ‘First’ before it, which our essay does not have.",
+          "rejectDe": "Kein Topic Sentence: Der Absatz beginnt gleich mit Beispielen. Und „Secondly“ ohne vorheriges „First“ passt nicht."
+        },
+        {
+          "l": "B",
+          "id": "duties",
+          "label": "Everyday duties",
+          "why": "‘Apart from rights’ links back to the legal side; everyday examples follow, and the class adds one of its own.",
+          "text": {
+            "by": "position",
+            "map": {
+              "yes": "{{Apart from rights, growing up brings a range of new responsibilities.}} Many teenagers take on summer jobs, look after younger siblings or {DUTY}. {{In most families, [[though,]] these duties are shared}} with parents, who step in when something goes wrong. It is not until 18 that young people become legally responsible for themselves.",
+              "no": "{{Apart from rights, growing up brings a range of new responsibilities,}} many of them long before 18. Sixteen-year-old apprentices work full days, and many pupils look after younger siblings or {DUTY}. {{Taking on such duties}} teaches reliability better than any legal date. {{[[Therefore,]] responsibility, not age,}} is the better measure of adulthood.",
+              "partly": "{{Apart from rights, growing up brings a range of new responsibilities,}} which increase during the teenage years. A 14-year-old may look after a sibling, [[whereas]] a 17-year-old might have a summer job and {DUTY}. {{By the age of 18, most young people}} have had years of practice before the law makes them fully responsible."
+            }
+          }
+        },
+        {
+          "l": "C",
+          "id": "choices",
+          "label": "Decisions about the future",
+          "why": "The topic sentence turns from rights to responsibility; school and career choices are typical for Austrian teenagers.",
+          "text": {
+            "by": "position",
+            "map": {
+              "yes": "{{Rights are only one side of adulthood: responsibility for one’s own future is just as central.}} Austrian teenagers make important choices early, [[such as]] whether to stay at school after the age of 15. {{These choices, [[though,]] are made}} with their parents’ support and signature. At 18, they decide and sign alone, which is the real test of responsibility.",
+              "no": "{{Rights are only one side of adulthood: responsibility for one’s own future is just as central,}} and Austrian teenagers take it on remarkably early. At around 14, they choose between an academic school, a vocational college and an apprenticeship. {{Choices like these shape a whole life,}} {{[[yet]]}} they are made years before the law calls anyone an adult.",
+              "partly": "{{Rights are only one side of adulthood: responsibility for one’s own future is just as central and grows with age.}} At around 14, Austrian teenagers choose their next school with their parents’ help, [[whereas]] at 17 many plan their studies or career alone. {{The decisions become bigger}} as the support becomes smaller, until the law hands over full responsibility at 18."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "indep",
+      "slot": "indep",
+      "part": "Body paragraph 3",
+      "q": "Body paragraph 3: how important is independence from parents?",
+      "de": "Dritter Inhaltspunkt: Unabhängigkeit von den Eltern. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then evaluate independence in your own words: how important is it, and why?",
+      "ownDe": "Gerüst abschreiben, dann mit eigenen Worten bewerten: Wie wichtig ist Unabhängigkeit, und warum?",
+      "options": [
+        {
+          "l": "A",
+          "id": "money",
+          "label": "Money and a home of one’s own",
+          "why": "‘Beyond responsibility’ links back; it starts with the most common view and then evaluates it, as the task asks.",
+          "text": {
+            "by": "position",
+            "map": {
+              "yes": "{{Beyond responsibility, financial independence is often seen as the clearest sign of adulthood.}} Many young Austrians live with their parents until their mid-twenties, [[for example]] while studying. {{[[Nevertheless,]] once they turn 18, they}} are legally free to decide where to live and how to spend their money. {{[[In other words,]] living at home is}} a practical choice rather than a sign of childhood.",
+              "no": "{{Beyond responsibility, financial independence is often seen as the clearest sign of adulthood.}} Many young Austrians live with their parents until their mid-twenties, [[for example]] while they are at university. {{[[Although]] they are legally adults,}} they continue to rely on their families for housing and food. {{[[As a result,]]}} many only feel fully grown up once they can pay their own way.",
+              "partly": "{{Beyond responsibility, financial independence is often seen as the clearest sign of adulthood,}} {{[[yet]]}} it rarely arrives at 18. Many young Austrians live with their parents until their mid-twenties, [[for example]] while they are at university. {{This does not make them children,}} but it shows that independence develops in stages, often long after the legal line has been crossed."
+            }
+          }
+        },
+        {
+          "l": "B",
+          "id": "decisions",
+          "label": "Standing on one’s own feet",
+          "why": "The topic sentence links responsibility and independence, then looks beyond money, which makes the evaluation deeper.",
+          "text": {
+            "by": "position",
+            "map": {
+              "yes": "{{Responsibility goes hand in hand with independence, a matter of attitude as much as of money.}} Adults solve their own problems, form their own opinions and accept the results of their decisions. {{[[Although]] teenagers practise these skills for years,}} the law only expects them to manage without their parents at 18. {{This moment of legal independence [[therefore]]}} marks the point where adult life begins.",
+              "no": "{{Responsibility goes hand in hand with independence, a matter of attitude as much as of money.}} Adults solve their own problems, form their own opinions and accept the results of their decisions. {{Many teenagers show this kind of maturity}} long before they come of age, [[for instance]] when they sort out a conflict on their own. {{[[Consequently,]] independence}} cannot be tied to a fixed age.",
+              "partly": "{{Responsibility goes hand in hand with independence, a matter of attitude as much as of money.}} Adults solve their own problems, form their own opinions and accept the results of their decisions. {{Independence from parents develops slowly,}} {{[[since]]}} it is learnt through years of experience. {{[[As a result,]]}} the law merely marks the point where this learning should be well advanced."
+            }
+          }
+        },
+        {
+          "l": "C",
+          "id": "trap",
+          "label": "Living at home",
+          "trap": true,
+          "crit": "LSA",
+          "text": "Independence from parents is also very important. Many young people live by their parents until they are 25 because the money from their job is too less. A flat in the city is expensive, and they also have to pay for food and clothes. Only when they have their own flat and pay their own bills, they are real adults.",
+          "reject": "Three typical mistakes: ‘live by their parents’ (→ live with), ‘too less’ (→ too little) and ‘Only when …, they are’ (→ Only when … are they, with no comma).",
+          "rejectDe": "Drei typische Fehler: live by → live with, too less → too little, und nach „Only when …“ folgt die Inversion: are they."
+        }
+      ]
+    },
+    {
+      "id": "counter",
+      "slot": "counter",
+      "part": "Body paragraph 3",
+      "q": "How do we deal with the other side on independence?",
+      "de": "Der Absatz geht weiter: ein Gegenargument zur Unabhängigkeit und unsere Antwort darauf. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then answer the counter-argument about independence in your own words.",
+      "ownDe": "Gerüst abschreiben, dann das Gegenargument zur Unabhängigkeit mit eigenen Worten entkräften.",
+      "options": [
+        {
+          "l": "A",
+          "id": "objection",
+          "label": "Answer an objection",
+          "why": "‘It could be argued that …’ presents the other side politely before it is answered.",
+          "text": {
+            "by": "position",
+            "map": {
+              "yes": "{{It could be argued that}} young people are not ready for full independence at 18: brain research shows that the human brain continues to develop well into a person’s twenties. {{[[Even so,]] a legal line has to be drawn somewhere,}} and waiting until 25 would deny young people rights they are clearly able to use. {{[[Moreover,]]}} it is often the experience of being independent that helps people to mature.",
+              "no": "{{It could be argued that}} turning 18 does bring independence: banks, landlords and employers suddenly deal with young people directly instead of with their parents. {{This is certainly true in legal terms.}} {{[[Still,]] being treated as an adult}} is not the same as being one. Respect from others may encourage maturity, but it cannot replace the experience that responsibility brings.",
+              "partly": "{{It could be argued that}} independence is either there or not, so a gradual view simply avoids a clear answer. {{[[In fact,]] independence has several sides:}} a young person may manage their own money long before they can run a household or deal with officials alone. {{Each of these skills develops at its own speed,}} so a single date can never capture them all."
+            }
+          }
+        },
+        {
+          "l": "B",
+          "id": "opponents",
+          "label": "What opponents say",
+          "why": "Names a concrete argument of the other side on independence and shows why it is weaker than it looks.",
+          "text": {
+            "by": "position",
+            "map": {
+              "yes": "{{Opponents of this view point out that}} independence comes from experience, not from a birthday: an 18-year-old who has never paid a bill or dealt with an official is hardly independent. {{Such skills, [[however,]] are}} learnt quickly once young people are allowed to make their own decisions. {{[[For this reason,]] the legal age}} matters so much: at 18, the law gives them exactly this chance.",
+              "no": "{{Opponents of this view point out that}} at 18 young people are free to leave home, rent a flat or open a bank account without anyone’s permission. {{Such freedom, [[though,]] is}} only an opportunity. {{[[In short,]] a young person who}} still needs help with every decision has gained a right, but not yet the ability to use it.",
+              "partly": "{{Opponents of a balanced view would argue that}} young people need one clear message about when they must stand on their own feet. Mixed signals, they claim, may cause confusion about rights and duties. {{[[Nevertheless,]] young people are perfectly able}} to understand that legal independence and personal independence are two different things. Recognising this difference may even help them to set their own goals for growing up."
+            }
+          }
+        }
+      ],
+      "join": true
+    },
+    {
+      "id": "concl",
+      "slot": "concl",
+      "part": "Conclusion",
+      "q": "Conclusion: how do we end the essay?",
+      "de": "Der Schluss rundet das Essay ab. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then sum up our position in one or two sentences of your own.",
+      "ownDe": "Gerüst abschreiben, dann unsere Position in ein bis zwei eigenen Sätzen zusammenfassen.",
+      "options": [
+        {
+          "l": "A",
+          "id": "sumup",
+          "label": "Sum up the position",
+          "why": "‘To sum up’ plus an impersonal phrase restates the thesis without ‘I think’.",
+          "text": {
+            "by": "position",
+            "map": {
+              "yes": "{{[[To sum up,]] it seems clear that}} 18 is the age at which a young person becomes an adult. {{[[Even though]]}} responsibilities grow earlier and financial independence often comes later, only this birthday brings full rights and full responsibility together.",
+              "no": "{{[[To sum up,]] it seems clear that}} adulthood cannot be reduced to a single date. The law needs a fixed age, [[whereas]] real adulthood grows out of the responsibilities young people accept and the independence they gain over time.",
+              "partly": "{{[[To sum up,]] it seems clear that}} the law needs a fixed age, and 18 is a reasonable choice. {{[[Still,]]}} it marks just one milestone in a long process, [[as]] responsibility and independence take years to grow."
+            }
+          }
+        },
+        {
+          "l": "B",
+          "id": "outlook",
+          "label": "Look back on the essay",
+          "why": "Refers back to rights, responsibility and independence and ends with a clear final statement.",
+          "text": {
+            "by": "position",
+            "map": {
+              "yes": "{{[[In conclusion,]] this essay has shown that}} the 18th birthday is more than a symbolic date. {{It is the moment when}} young people gain full rights, full responsibility and legal independence, which makes it the real beginning of adult life.",
+              "no": "{{[[In conclusion,]] this essay has shown that}} the 18th birthday is mainly a legal milestone. {{Young people become adults when}} they are ready to take responsibility and to manage without their parents, and this happens at a different age for everyone.",
+              "partly": "{{[[In conclusion,]] this essay has shown that}} the 18th birthday is an important legal milestone. {{[[At the same time,]]}} becoming an adult is a gradual process: responsibility and independence grow over many years, before and after the law draws its line."
+            }
+          }
+        },
+        {
+          "l": "C",
+          "id": "trap",
+          "label": "Add one more point",
+          "trap": true,
+          "crit": "TA",
+          "text": "In conclusion, the question is more difficult than it seems. A further point is that young people today grow up faster than their grandparents did, as they have access to the internet from an early age. Schools should therefore teach adult skills much earlier.",
+          "reject": "A conclusion sums up the position on the basis of the arguments already given. This one brings in a new argument (the internet) and a new demand, and our position disappears.",
+          "rejectDe": "Im Schluss kommen keine neuen Argumente oder Forderungen. Hier taucht plötzlich das Internet auf, und unsere Position verschwindet."
+        }
+      ]
+    },
+    {
+      "id": "title",
+      "slot": "title",
+      "part": "Title",
+      "q": "Now that the essay is finished, which title do we choose?",
+      "de": "Zuletzt wählen wir den Titel für unser Essay.",
+      "own": "Factual and to the point: the title names the topic and fits our position.",
+      "ownDe": "Sachlich: Der Titel nennt das Thema und passt zu unserer Position.",
+      "options": [
+        {
+          "l": "A",
+          "id": "statement",
+          "label": "State the position",
+          "why": "A short statement title tells the reader the topic and the position at once.",
+          "text": {
+            "by": "position",
+            "map": {
+              "yes": "Eighteen: the age at which adulthood begins",
+              "no": "Adulthood: a process, not a date",
+              "partly": "Adulthood: a legal line and a gradual process"
+            }
+          }
+        },
+        {
+          "l": "B",
+          "id": "why",
+          "label": "Explain the position",
+          "why": "Factual and clear, and it already hints at the argument of the essay.",
+          "text": {
+            "by": "position",
+            "map": {
+              "yes": "Why adulthood begins at 18",
+              "no": "Why adulthood cannot be measured in years",
+              "partly": "Coming of age: legal status and personal maturity"
+            }
+          }
+        },
+        {
+          "l": "C",
+          "id": "topic",
+          "label": "Name the topic",
+          "why": "Neutral and factual: it names the topic without giving away the answer.",
+          "text": "Becoming an adult in Austria"
+        }
+      ]
+    }
+  ],
+  "order": [
+    "title",
+    "intro",
+    "law",
+    "law2",
+    "duties",
+    "indep",
+    "counter",
+    "concl"
+  ],
+  "checks": [
+    {
+      "en": "A factual title that states the topic"
+    },
+    {
+      "en": "The introduction ends with a thesis statement that shows our position"
+    },
+    {
+      "en": "All three content points: legal age limits, responsibilities, independence"
+    },
+    {
+      "en": "Every body paragraph starts with a topic sentence"
+    },
+    {
+      "en": "Each body paragraph links back to what came before"
+    },
+    {
+      "en": "Formal register: no contractions, no ‘you’, no personal stories"
+    },
+    {
+      "en": "The conclusion sums up our position without new arguments"
+    }
+  ],
+  "teacher": {
+    "aim": "Die Klasse baut gemeinsam ein Essay nach SRDP-Standard auf B1+/B2-Niveau: sachlicher Titel, Einleitung mit Thesis Statement, drei Body Paragraphs mit Topic Sentences, Schluss ohne neue Argumente. Fokus: Linking words für Argumentation und Gegensatz über and, but und because hinaus.",
+    "prep": "A/B/C/D-Karten austeilen (ohne Karten: 1–4 Finger, die Tasten 1–4 wählen wie A–D), Beamer im Vollbild. Die Aufgabe am Beamer enthält alles Nötige. Im Gerüst-Modus den eingebauten Timer nutzen: 5 min pro Absatz.",
+    "heft": "Neue Seite: Datum (rechts), „Essay“ als Überschrift, darunter 2 Zeilen für den Titel frei lassen (der Titel kommt zuletzt). Jeder Absatz beginnt nach einer Leerzeile, am Rand stehen Intro, Body 1, Body 2, Body 3, Conclusion. Linking words grün unterstreichen.",
+    "flow": "Volltext (Doppelstunde, 100 min): 5 min Aufgabe lesen und Position wählen, 8 weitere Entscheidungen à ca. 2 min, Abschreiben ca. 45 min, 5 min Checkliste. Body 1 (Beispiel zu den Altersgrenzen) und Body 3 (Gegenargument zur Unabhängigkeit) bestehen aus je zwei Entscheidungen; die zweite wird im selben Absatz weitergeschrieben. Gerüst (Doppelstunde, 100 min): 3 min Aufgabe und Position, pro Entscheidung 1 min, dann 5–6 min eigenes Schreiben und 1 min Vergleich mit dem Modell; am Ende 3 min Titel und 5 min Checkliste. Wird die Zeit knapp, Schluss und Titel als Hausübung. Bei Body 1 und seiner Fortsetzung nach der Abstimmung die Fakten der gewählten Option kurz an die Tafel schreiben (z. B. 15/16/18, 2007/EU bzw. 2001/2022), weil die Optionen danach verschwinden.",
+    "traps": "Introduction C (TA): Die These beantwortet die Frage nicht, sie kündigt nur eine Beschreibung der Altersgrenzen an. Body 1 B (LSR): Basiswortschatz, get, can und a lot of je dreimal. Body 2 A (CC): kein Topic Sentence, „Secondly“ ohne „First“. Body 3 C (LSA): live by, too less statt too little, fehlende Inversion nach „Only when …“. Conclusion C (TA): Die Position verschwindet (darum TA), dazu kommen ein neues Argument und eine neue Forderung. Kürzel: TA = Erfüllung der Aufgabenstellung, CC = Kohärenz und Kohäsion, LSR = Spektrum sprachlicher Mittel, LSA = Sprachrichtigkeit.",
+    "notes": "Das Essay hat fünf Absätze (Einleitung, drei Body Paragraphs mit je einem Inhaltspunkt, Schluss) und wie bei der SRDP eine Länge: ca. 400 Wörter. Body 1 und Body 3 bestehen aus je zwei Entscheidungen im selben Absatz. Keine persönlichen Erfahrungen mit Konflikten im Elternhaus einfordern. Die erste Entscheidung (Position yes / no / partly) bestimmt Thesis, Topic Sentences und Schluss in allen Absätzen: Gut eignet sich eine kurze Abstimmung mit Begründung. Fakten im Text: Wählen ab 16 (seit 2007, erstes EU-Land), Volljährigkeit ab 18 (seit 2001, davor 19), Japan 2022 von 20 auf 18. Zur Hirnforschung (Fortsetzung von Body 3): Das Gehirn entwickelt sich bis weit in die Zwanziger; die oft genannte feste Grenze „25“ ist ein Mythos. Wählt die Klasse in Body 2 Option B, ruft sie eine weitere Pflicht von Jugendlichen als englische Wendung mit Verb am Anfang und mit „their“ (z. B. „pay their own phone bill“). Mit der Taste P werden Linking words grün markiert, hier vor allem solche für Argumentation und Gegensatz (Einräumen, Gegensatz, Grund und Folge); „since“ ist nur dort markiert, wo es „weil“ bedeutet, nicht „seit“. Differenzierung: Schnelle schreiben im Gerüst-Modus einen zusätzlichen Beispielsatz pro Absatz. Hausübung: zweite Fassung mit einer anderen Position."
+  }
+}

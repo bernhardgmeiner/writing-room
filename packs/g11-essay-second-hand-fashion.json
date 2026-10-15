@@ -1,0 +1,487 @@
+{
+  "id": "g11-essay-second-hand-fashion",
+  "title": "Second-hand vs fast fashion",
+  "titleDe": "Secondhand gegen Fast Fashion",
+  "grade": 11,
+  "level": "B1+/B2",
+  "theme": "Umwelt & Nachhaltigkeit",
+  "textType": "essay",
+  "modes": [
+    "full",
+    "frame"
+  ],
+  "lengths": {
+    "long": {
+      "label": "around 400 words",
+      "min": 360,
+      "max": 440
+    }
+  },
+  "minutes": {
+    "full": {
+      "long": 100
+    },
+    "frame": {
+      "long": 100
+    }
+  },
+  "task": {
+    "situation": "‘Earthwise Youth’, an online magazine for young people who care about the environment, is holding an essay competition. This year’s question is: ‘Is second-hand the answer to fast fashion?’ The winning essays will appear on the magazine’s website, and you have decided to take part.",
+    "instruction": "In your essay you should:",
+    "points": [
+      "explain why second-hand clothes have become popular with young people",
+      "discuss the limits of second-hand shopping",
+      "evaluate other ways in which consumers can reduce the impact of fast fashion"
+    ],
+    "words": {
+      "long": "Give your essay a title. Write around 400 words."
+    },
+    "de": "Ein Essay für den Wettbewerb eines Umweltmagazins für Jugendliche: Ist Secondhand die Antwort auf Fast Fashion? Drei Inhaltspunkte: warum Secondhand bei Jugendlichen beliebt ist, wo seine Grenzen liegen, welche anderen Möglichkeiten Konsument:innen haben. Zuerst wählt ihr eure Position, der Titel kommt ganz zum Schluss."
+  },
+  "meta": {
+    "publication": "Essay competition · ‘Earthwise Youth’ online magazine"
+  },
+  "focus": {
+    "label": "impersonal phrases",
+    "labelDe": "Unpersönliche Formulierungen",
+    "min": {
+      "long": 7
+    },
+    "note": "Marked: impersonal phrases that replace ‘I think’ or ‘we should’: openers with It or There (It could be argued that …, There is a real danger that …) and passive forms with a modal verb (… cannot be expected, … should be encouraged)."
+  },
+  "topicWords": [
+    "fashion",
+    "fast",
+    "clothes",
+    "clothing",
+    "garment",
+    "garments",
+    "second",
+    "hand",
+    "shopping",
+    "consumers",
+    "new",
+    "buying",
+    "used"
+  ],
+  "steps": [
+    {
+      "id": "position",
+      "part": "Position",
+      "q": "‘Is second-hand the answer to fast fashion?’ What is our position?",
+      "de": "Zuerst entscheidet ihr euch für eine Position, nach der sich das ganze Essay richtet.",
+      "options": [
+        {
+          "l": "A",
+          "id": "yes",
+          "label": "Yes",
+          "teaser": "Buying second-hand is the most effective thing consumers can do against fast fashion."
+        },
+        {
+          "l": "B",
+          "id": "no",
+          "label": "No",
+          "teaser": "Second-hand helps, but as long as so many new clothes are made, it cannot solve the problem."
+        },
+        {
+          "l": "C",
+          "id": "partly",
+          "label": "Partly",
+          "teaser": "Second-hand is an important part of the answer, but only together with buying less and other new habits."
+        }
+      ]
+    },
+    {
+      "id": "intro",
+      "slot": "intro",
+      "part": "Introduction",
+      "q": "How do we introduce the topic and state our thesis?",
+      "de": "Die Einleitung führt in die Frage des Essays ein. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then finish the introduction in your own words and end with a clear thesis statement.",
+      "ownDe": "Gerüst abschreiben, dann die Einleitung mit eigenen Worten fertigschreiben. Am Ende steht eure These (Thesis Statement).",
+      "options": [
+        {
+          "l": "A",
+          "id": "problem",
+          "label": "Start with the problem",
+          "why": "Describes the problem and the trend in three short sentences, then the thesis names our position.",
+          "text": {
+            "by": "position",
+            "map": {
+              "yes": "{{Fast fashion has changed the way people buy clothes.}} New collections arrive constantly at low prices, and [[it is hardly surprising that]] many garments are worn only a few times. At the same time, second-hand shops are attracting young customers. {{This essay will argue that}} buying used clothes is the most effective step consumers can take against this culture of constant buying.",
+              "no": "{{Fast fashion has changed the way people buy clothes.}} New collections arrive constantly at low prices, and [[it is hardly surprising that]] many garments are worn only a few times. At the same time, second-hand shops are attracting young customers. {{This essay will argue that}} this trend, welcome as it is, [[cannot be expected]] to solve the problem on its own.",
+              "partly": "{{Fast fashion has changed the way people buy clothes.}} New collections arrive constantly at low prices, and [[it is hardly surprising that]] many garments are worn only a few times. At the same time, second-hand shops are attracting young customers. {{This essay will argue that}} this trend is part of the answer but [[must be combined]] with other changes in buying habits."
+            }
+          }
+        },
+        {
+          "l": "B",
+          "id": "contrast",
+          "label": "Start with a contrast",
+          "why": "Two opposite trends make the question interesting before the thesis gives the answer.",
+          "text": {
+            "by": "position",
+            "map": {
+              "yes": "{{Never before have clothes been so cheap and so easy to replace.}} Yet second-hand shops are attracting more and more young customers. {{This essay will argue that}} this trend deserves support, as [[it is clear that]] buying used clothes is the most effective way for consumers to reduce the damage done by fast fashion.",
+              "no": "{{Never before have clothes been so cheap and so easy to replace.}} Yet second-hand shops are attracting more and more young customers, and [[it is often claimed that]] this trend will solve the problem. {{This essay will argue that}} it cannot, since new clothes keep flooding the market at the same time.",
+              "partly": "{{Never before have clothes been so cheap and so easy to replace.}} Yet second-hand shops are attracting more and more young customers. {{This essay will argue that}} this trend is a real step forward, although [[it is clear that]] it can only succeed if consumers also change other habits, such as how often they shop."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "popular",
+      "slot": "popular",
+      "part": "Body paragraph 1",
+      "q": "Body paragraph 1 (content point 1): why has second-hand become popular with young people?",
+      "de": "Der erste Hauptteil knüpft an den Trend aus der Einleitung an und nennt Gründe. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then add one more reason why young people buy second-hand, and explain it.",
+      "ownDe": "Gerüst abschreiben, dann einen weiteren Grund ergänzen, warum Jugendliche Secondhand kaufen, und ihn erklären.",
+      "options": [
+        {
+          "l": "A",
+          "id": "price",
+          "label": "Price and style",
+          "why": "The impersonal topic sentence picks up the trend from the introduction; price and style follow with examples.",
+          "text": "{{[[There are several reasons why]] second-hand clothing has won over so many young people.}} The most obvious one is price: a flea-market jacket often costs less than a cinema ticket. Just as important is style: used clothes allow people to wear something nobody else owns. {{[[It is no coincidence that]]}} pieces from earlier decades are fashionable again."
+        },
+        {
+          "l": "B",
+          "id": "values",
+          "label": "Apps and values",
+          "why": "‘The second-hand trend’ links back to the introduction; two newer reasons, technology and values, follow.",
+          "text": "{{Two recent developments help to explain the second-hand trend.}} Resale apps allow clothes to be bought and sold in a few minutes, without a trip to a shop. {{Many young people, moreover, care about the planet,}} and [[it is widely accepted that]] reusing clothes saves the water, energy and raw materials needed to make new ones."
+        },
+        {
+          "l": "C",
+          "id": "trap",
+          "label": "Prices, apps and the planet",
+          "trap": true,
+          "crit": "LSA",
+          "text": "Second-hand clothes are popular with young people because they are much cheaper as new ones. On apps, old clothes can be sold in a few minutes, what makes shopping very easy. Many teenagers also worry about the environment because far too many clothes land in the rubbish every year, often after being worn only once or twice.",
+          "reject": "Three typical mistakes: ‘cheaper as’ (→ cheaper than), ‘what makes shopping very easy’ (→ which makes) and ‘land in the rubbish’ (→ end up in the rubbish).",
+          "rejectDe": "Drei typische Fehler: cheaper as → cheaper than, what → which, land in (landen) → end up in."
+        }
+      ]
+    },
+    {
+      "id": "limits",
+      "slot": "limits",
+      "part": "Body paragraph 2",
+      "q": "Body paragraph 2 (content point 2): where are the limits of second-hand shopping?",
+      "de": "Der zweite Hauptteil wendet sich von den Gründen zu den Grenzen von Secondhand. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then explain one more limit of second-hand shopping in your own words.",
+      "ownDe": "Gerüst abschreiben, dann eine weitere Grenze von Secondhand mit eigenen Worten erklären.",
+      "options": [
+        {
+          "l": "A",
+          "id": "trap",
+          "label": "Quality and exports",
+          "trap": true,
+          "crit": "CC",
+          "text": "Many donated clothes are in poor condition. Nevertheless, cheap fast-fashion items often look worn after a few washes. Hence, second-hand shops are especially popular with students. In addition, large amounts of used clothing are shipped abroad, and some people even sell their old clothes online just to buy new ones.",
+          "reject": "There is no topic sentence, and the linking words do not fit the logic: ‘Nevertheless’ introduces no contrast, and the popularity of the shops is not a result of poor quality, so ‘Hence’ is wrong.",
+          "rejectDe": "Kein Topic Sentence, und die Linking words passen nicht zur Logik: Nevertheless ohne Gegensatz, Hence ohne Ursache."
+        },
+        {
+          "l": "B",
+          "id": "quality",
+          "label": "Too many, too poor",
+          "why": "‘It must be admitted’ turns from the reasons to the limits, then two concrete problems follow.",
+          "text": {
+            "by": "position",
+            "map": {
+              "yes": "{{Second-hand shopping, [[it must be admitted]], has its limits.}} Many fast-fashion items wear out so quickly that they are hardly worth reselling, and large amounts of donated clothing are shipped abroad, where much of it is simply thrown away. {{These problems are real but [[can be reduced]]}} if durable clothes are bought and resold locally.",
+              "no": "{{Second-hand shopping, [[it must be admitted]], has its limits.}} Many fast-fashion items wear out so quickly that they are hardly worth reselling, and large amounts of donated clothing are shipped abroad, where much of it is simply thrown away. {{[[It follows that]]}} an ever-growing mountain of cheap clothes [[cannot be absorbed]] by second-hand trade alone.",
+              "partly": "{{Second-hand shopping, [[it must be admitted]], has its limits.}} Many fast-fashion items wear out so quickly that they are hardly worth reselling, and large amounts of donated clothing are shipped abroad, where much of it is simply thrown away. {{[[It follows that]]}} second-hand only works well when clothes are made to last in the first place."
+            }
+          }
+        },
+        {
+          "l": "C",
+          "id": "habits",
+          "label": "Buying more, not less",
+          "why": "‘Yet this popularity’ links back to Body paragraph 1 and points out a less obvious limit.",
+          "text": {
+            "by": "position",
+            "map": {
+              "yes": "{{Yet this popularity has a less obvious downside: its effect on shopping habits.}} Bargains tempt some people to buy more, and selling old outfits online can even become a way to pay for new ones. {{[[It should be remembered that]]}} such cases are the exception: for most buyers, a used jacket simply replaces a new one.",
+              "no": "{{Yet this popularity has a less obvious downside: its effect on shopping habits.}} Bargains tempt some people to buy more, and selling old outfits online can even become a way to pay for new ones. {{[[There is a real danger that]]}} second-hand turns into just another form of fast fashion, with clothes changing owners faster and faster.",
+              "partly": "{{Yet this popularity has a less obvious downside: its effect on shopping habits.}} Bargains tempt some people to buy more, and selling old outfits online can even become a way to pay for new ones. {{[[It is therefore essential that]]}} second-hand bargains do not become an excuse to shop more often."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "counter",
+      "slot": "counter",
+      "part": "Body paragraph 2",
+      "q": "How do we deal with the other side?",
+      "de": "Der Absatz geht weiter: ein Argument der Gegenseite und unsere Antwort darauf. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then answer the counter-argument in your own words.",
+      "ownDe": "Gerüst abschreiben, dann das Gegenargument mit eigenen Worten entkräften.",
+      "options": [
+        {
+          "l": "A",
+          "id": "objection",
+          "label": "Answer an objection",
+          "why": "An impersonal phrase brings in the other side within the paragraph on limits, and the answer follows at once.",
+          "text": {
+            "by": "position",
+            "map": {
+              "yes": "{{[[It could even be argued that]]}} second-hand shopping only moves the problem around, as fast-fashion labels continue to produce as much as before. {{This objection [[should be taken]] seriously.}} {{Labels, after all, only produce what they can sell,}} and if demand for new clothes falls, production [[will be cut]] sooner or later. In other words, consumers are far from powerless, even if their influence takes time.",
+              "no": "{{[[It could be argued that]]}} shoppers can influence what shops sell, since companies only produce what people are willing to buy. {{This argument [[cannot be dismissed]] completely.}} {{In reality, individual shoppers know little}} about how and where their clothes are made, and second-hand shops cannot supply everything, from underwear to sports kit. Second-hand alone therefore leaves too many gaps.",
+              "partly": "{{[[It could be argued that]]}} such limits make second-hand shopping pointless, since fast-fashion labels continue to produce as much as before. {{This view [[cannot be accepted]] completely.}} {{Every used garment that replaces a new one}} reduces demand a little, and small changes add up when millions of shoppers make them. Second-hand deserves support for this reason, even if it cannot do the job alone."
+            }
+          }
+        },
+        {
+          "l": "B",
+          "id": "critics",
+          "label": "What critics say",
+          "why": "Names a concrete argument of the other side, admits what is true about it and then answers it.",
+          "text": {
+            "by": "position",
+            "map": {
+              "yes": "{{Critics of second-hand shopping also point out that}} used clothes are not always fashionable or available in the right size. {{[[It is true that]]}} finding the right item can take time. {{This seems a small price to pay, though,}} for protecting the environment, and search filters in resale apps have made the process much easier than it was a few years ago.",
+              "no": "{{Optimists point out that}} individual choices add up: if millions of people stopped buying new clothes, the industry would have to change. {{[[It is true that]] this works in theory.}} {{In practice, such a change [[could only be brought about]]}} if almost everyone took part, which seems unrealistic as long as new clothes cost so little.",
+              "partly": "{{Critics of a balanced view would argue that}} half-hearted solutions change nothing and that only a complete boycott of fast fashion would help. {{[[It is true that]]}} small steps can seem frustrating. {{In reality, a boycott [[could hardly be organised]]}} on a large scale, whereas second-hand shopping is something that many people already do every day, at little cost and with little effort."
+            }
+          }
+        }
+      ],
+      "join": true
+    },
+    {
+      "id": "options",
+      "slot": "options",
+      "part": "Body paragraph 3",
+      "q": "Body paragraph 3 (content point 3): what else can consumers do, and how useful is it?",
+      "de": "Der dritte Hauptteil geht über Secondhand hinaus und bewertet andere Möglichkeiten der Konsument:innen. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then evaluate the options in your own words: which one works best, and why?",
+      "ownDe": "Gerüst abschreiben, dann die Möglichkeiten mit eigenen Worten bewerten: Was funktioniert am besten, und warum?",
+      "options": [
+        {
+          "l": "A",
+          "id": "compare",
+          "label": "Compare the options",
+          "why": "‘Several other ways’ moves on from second-hand; the options are named and then evaluated, as ‘evaluate’ asks.",
+          "text": {
+            "by": "position",
+            "map": {
+              "yes": "{{Consumers have several other ways to reduce the effects of fast fashion.}} Swapping works well among friends, repairing keeps favourite pieces in use, and borrowing is ideal for special occasions such as a school-leavers’ ball. {{[[It is evident, however, that]]}} none of these is as practical for everyday clothing as buying second-hand.",
+              "no": "{{Consumers have several other ways to reduce the effects of fast fashion.}} Swapping works well among friends, repairing keeps favourite pieces in use, and borrowing is ideal for special occasions such as a school-leavers’ ball. {{[[It must be remembered, however, that]]}} all of these options only deal with clothes that have already been produced.",
+              "partly": "{{Consumers have several other ways to reduce the effects of fast fashion.}} Swapping works well among friends, repairing keeps favourite pieces in use, and borrowing is ideal for special occasions such as a school-leavers’ ball. {{[[It is often forgotten, however, that]]}} the most effective option is simply to buy fewer clothes and wear them for longer."
+            }
+          }
+        },
+        {
+          "l": "B",
+          "id": "trap",
+          "label": "Swap, repair, borrow",
+          "trap": true,
+          "crit": "LSR",
+          "text": "Consumers have other options too. Swapping is a good thing because it is cheap and easy. Repairing is also a good thing because you can learn something. Borrowing clothes is a good thing too because it is good for the environment and good for the wallet.",
+          "reject": "Correct, but very basic: ‘good thing’ and ‘good’ again and again, and the options are never really compared or weighed up.",
+          "rejectDe": "Richtig, aber sehr einfach: „good thing“ und „good“ ständig, und die Möglichkeiten werden nie wirklich verglichen oder bewertet."
+        },
+        {
+          "l": "C",
+          "id": "care",
+          "label": "Make clothes last",
+          "why": "Focuses on one option that is often overlooked and weighs it against second-hand shopping.",
+          "text": {
+            "by": "position",
+            "map": {
+              "yes": "{{Beyond second-hand shopping, one option is often overlooked: caring for clothes.}} Washing at lower temperatures and mending small holes can make a garment last much longer. {{[[It cannot be denied that]]}} this takes time and some skill, but combined with second-hand shopping, it keeps clothes in use for many years.",
+              "no": "{{Beyond second-hand shopping, one option is often overlooked: caring for clothes.}} Washing at lower temperatures and mending small holes can make a garment last much longer. {{[[There is much to be said for]]}} this habit, as a jacket that is worn for ten years does not need replacing, whether it was bought new or used.",
+              "partly": "{{Beyond second-hand shopping, one option is often overlooked: caring for clothes.}} Washing at lower temperatures and mending small holes can make a garment last much longer. {{[[It seems reasonable to conclude that]]}} caring for clothes and buying second-hand work best together, as both keep garments out of the bin for longer."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "options2",
+      "slot": "options2",
+      "part": "Body paragraph 3",
+      "q": "Who else can help, and how?",
+      "de": "Der Absatz geht weiter: Wer außer den Konsument:innen kann etwas tun? Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then add one example or one argument of your own about who else can help.",
+      "ownDe": "Gerüst abschreiben, dann ein eigenes Beispiel oder Argument ergänzen, wer sonst noch helfen kann.",
+      "options": [
+        {
+          "l": "A",
+          "id": "local",
+          "label": "Swaps and markets nearby",
+          "why": "A local example makes the argument concrete and relevant for readers in Austria.",
+          "text": {
+            "by": "position",
+            "map": {
+              "yes": "{{Local communities have an important part to play here.}} Clothes swaps at schools and monthly flea markets in town halls show how quickly used clothing can find new owners, often within a single afternoon. {{Initiatives like these [[should be supported]] by schools, youth centres and local councils:}} habits formed at a young age, like looking for used clothes first, often last a lifetime.",
+              "no": "{{Local communities have an important part to play here.}} Clothes swaps at schools and monthly flea markets in town halls show how quickly used clothing can find new owners, often within a single afternoon. {{[[It is easy to overlook the fact that]]}} these markets depend on a steady supply of used clothing. A busy flea market [[should not be mistaken]] for a sign that fewer new clothes are being made.",
+              "partly": "{{Local communities have an important part to play here.}} Clothes swaps at schools and monthly flea markets in town halls show how quickly used clothing can find new owners, often within a single afternoon. {{Initiatives like these [[should be extended]],}} for example with repair cafés in more towns and villages. {{[[It seems unlikely, though, that]]}} volunteers can keep them going without support from local councils."
+            }
+          }
+        },
+        {
+          "l": "B",
+          "id": "producers",
+          "label": "Rules for producers",
+          "why": "Looks beyond the shoppers and shows that consumers and lawmakers work on the same problem.",
+          "text": {
+            "by": "position",
+            "map": {
+              "yes": "{{Of course, consumers are not the only ones who can act.}} Producers [[can be required]] to take back old clothes or to report how much unsold stock they throw away, and the European Union has recently introduced rules of this kind. {{[[It seems likely that]]}} such rules [[would be tightened]] faster if more shoppers showed, by buying second-hand, that they want change.",
+              "no": "{{Of course, consumers are not the only ones who can act.}} Producers [[can be required]] to take back old clothes or to report how much unsold stock they throw away, and the European Union has recently introduced rules of this kind. {{This is where real change [[must be made]]:}} a single rule for producers affects millions of garments at once, far more than any shopping decision.",
+              "partly": "{{Of course, consumers are not the only ones who can act.}} Producers [[can be required]] to take back old clothes or to report how much unsold stock they throw away, and the European Union has recently introduced rules of this kind. {{[[It is likely that]]}} such rules and second-hand shopping will support each other: one reduces production, the other keeps existing clothes in use."
+            }
+          }
+        }
+      ],
+      "join": true
+    },
+    {
+      "id": "concl",
+      "slot": "concl",
+      "part": "Conclusion",
+      "q": "How do we end the essay?",
+      "de": "Der Schluss greift These und Hauptteile auf und rundet das Essay ab. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then sum up our position in one or two sentences of your own.",
+      "ownDe": "Gerüst abschreiben, dann unsere Position in ein bis zwei eigenen Sätzen zusammenfassen.",
+      "options": [
+        {
+          "l": "A",
+          "id": "sumup",
+          "label": "Sum up the position",
+          "why": "Picks up the thesis and the three body paragraphs in two sentences, without ‘I think’.",
+          "text": {
+            "by": "position",
+            "map": {
+              "yes": "{{In conclusion, [[it is fair to say that]]}} second-hand shopping is the best answer consumers have to fast fashion. It is popular for good reasons, its limits are smaller than its benefits, and it works even better alongside other good habits.",
+              "no": "{{In conclusion, [[it is fair to say that]]}} second-hand shopping is a popular and welcome trend. Even so, neither second-hand nor other shopping habits can stop the flood of cheap clothing; this [[can only be achieved]] by making far fewer new garments.",
+              "partly": "{{In conclusion, [[it is fair to say that]]}} second-hand shopping is popular for good reasons and makes a real contribution against fast fashion. Given its limits, it [[cannot be relied on]] alone and needs the support of other habits."
+            }
+          }
+        },
+        {
+          "l": "B",
+          "id": "balance",
+          "label": "Weigh up the arguments",
+          "why": "‘On balance’ shows that the conclusion grows out of the reasons, limits and alternatives discussed.",
+          "text": {
+            "by": "position",
+            "map": {
+              "yes": "{{On balance, [[it would appear that]]}} the most sustainable garment is one that already exists. Second-hand shopping, popular for good reasons, turns this idea into everyday practice. {{Despite its limits, it [[should therefore be encouraged]],}} ideally together with other good habits.",
+              "no": "{{On balance, [[it would appear that]]}} the solution lies in producing less, not in the second-hand shop. {{Buying used clothes and other consumer choices help, but}} real change [[will only be achieved]] when the industry changes course.",
+              "partly": "{{On balance, [[it would appear that]]}} second-hand shopping is a popular, valuable part of the solution, but only one part. {{Its limits show that clothes [[should also be bought]]}} less often and passed on when no longer needed."
+            }
+          }
+        },
+        {
+          "l": "C",
+          "id": "trap",
+          "label": "Give a final verdict",
+          "trap": true,
+          "crit": "CC",
+          "text": {
+            "by": "position",
+            "map": {
+              "yes": "In conclusion, second-hand shopping is a pleasant trend, but in the end it changes very little. Fast fashion can only be stopped by the industry itself, never by the choices of individual consumers.",
+              "no": "In conclusion, second-hand shopping is clearly the best answer to fast fashion. If enough young people buy used clothes instead of new ones, nothing else needs to change, and the problem will solve itself.",
+              "partly": "In conclusion, second-hand shopping is clearly the best answer to fast fashion. If enough young people buy used clothes instead of new ones, nothing else needs to change, and the problem will solve itself."
+            }
+          },
+          "reject": "This conclusion argues the opposite of our thesis. A conclusion sums up the position the essay has defended; a sudden change of mind makes the whole essay unconvincing.",
+          "rejectDe": "Der Schluss vertritt plötzlich die Gegenposition zu unserer These. Das macht das ganze Essay unglaubwürdig."
+        }
+      ]
+    },
+    {
+      "id": "title",
+      "slot": "title",
+      "part": "Title",
+      "q": "Now that the essay is finished, which title do we choose?",
+      "de": "Zuletzt wählen wir den Titel für unser Essay.",
+      "own": "Factual and to the point: the title names the topic and fits our position.",
+      "ownDe": "Sachlich: Der Titel nennt das Thema und passt zu unserer Position.",
+      "options": [
+        {
+          "l": "A",
+          "id": "statement",
+          "label": "State the position",
+          "why": "A short statement title tells the reader the topic and the position at once.",
+          "text": {
+            "by": "position",
+            "map": {
+              "yes": "Second-hand clothing: the best answer to fast fashion",
+              "no": "Why second-hand shopping cannot stop fast fashion",
+              "partly": "Second-hand shopping: part of the answer to fast fashion"
+            }
+          }
+        },
+        {
+          "l": "B",
+          "id": "age",
+          "label": "Name the background",
+          "why": "Factual and serious: it names the topic and the problem behind the essay question.",
+          "text": "Second-hand clothing in a fast-fashion age"
+        },
+        {
+          "l": "C",
+          "id": "topic",
+          "label": "Topic and angle",
+          "why": "Names the topic first and then the angle of the essay.",
+          "text": {
+            "by": "position",
+            "map": {
+              "yes": "Fast fashion and the case for second-hand",
+              "no": "Fast fashion: a problem consumers cannot solve alone",
+              "partly": "Fast fashion and the limits of second-hand shopping"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "order": [
+    "title",
+    "intro",
+    "popular",
+    "limits",
+    "counter",
+    "options",
+    "options2",
+    "concl"
+  ],
+  "checks": [
+    {
+      "en": "A factual title that states the topic"
+    },
+    {
+      "en": "The introduction ends with a thesis statement that shows our position"
+    },
+    {
+      "en": "All three content points: why second-hand is popular, its limits, other options for consumers"
+    },
+    {
+      "en": "Five paragraphs; each body paragraph opens with a topic sentence linking back to what came before"
+    },
+    {
+      "en": "Impersonal style (our focus): passive and ‘It is …’ instead of ‘I think’; no ‘you’, no contractions"
+    },
+    {
+      "en": "The conclusion picks up the thesis and all three body paragraphs, without new arguments"
+    }
+  ],
+  "teacher": {
+    "aim": "Die Klasse baut gemeinsam ein Essay nach SRDP-Standard zur Frage, ob Secondhand die Antwort auf Fast Fashion ist. Fokus: unpersönliche Formulierungen statt I/you, also It- und There-Einleitungen (It could be argued that …, There is a real danger that …) und Passiv mit Modalverb (… should be encouraged).",
+    "prep": "A/B/C/D-Karten austeilen, eine Garnitur pro Person (ohne Karten: 1–4 Finger, die Tasten 1–4 wählen wie A–D). Beamer im Vollbild. Die Aufgabe am Beamer enthält alles Nötige. Im Gerüst-Modus den eingebauten Timer nutzen: 5–6 min pro Absatz.",
+    "heft": "Neue Seite: Datum (rechts), „Essay“ als Überschrift, darunter 2 Zeilen für den Titel frei lassen (der Titel kommt zuletzt). Fünf Absätze, jeder beginnt nach einer Leerzeile; am Rand steht Intro, Body 1, Body 2, Body 3, Conclusion. Bei den Fortsetzungen von Body 2 und Body 3 wird ohne neue Zeile im selben Absatz weitergeschrieben. Unpersönliche Formulierungen grün unterstreichen.",
+    "flow": "Volltext (Doppelstunde, 100 min): 5 min Aufgabe lesen und Position wählen, 8 weitere Entscheidungen à ca. 2 min, Abschreiben ca. 45 min, 5 min Checkliste. Body 2 (Gegenargument) und Body 3 (wer sonst helfen kann) bestehen aus je zwei Entscheidungen; die zweite wird im selben Absatz weitergeschrieben. Gerüst (Doppelstunde, 100 min): 3 min Aufgabe und Position, pro Entscheidung 1 min, dann 5–6 min eigenes Schreiben und 1 min Vergleich mit dem Modell; am Ende 2 min Titel und 4 min Checkliste. Wird die Zeit knapp, Schluss und Titel als Hausübung.",
+    "traps": "Body 1 C (LSA): cheaper as statt than, what statt which, land in statt end up in. Body 2 A (CC): kein Topic Sentence, Nevertheless ohne Gegensatz und Hence ohne Ursache. Body 3 B (LSR): „good thing“ und „good“ in Dauerschleife, keine Bewertung. Conclusion C (CC): Der Schluss vertritt plötzlich die Gegenposition zur eigenen These. Kürzel: TA = Erfüllung der Aufgabenstellung, CC = Kohärenz und Kohäsion, LSR = Spektrum sprachlicher Mittel, LSA = Sprachrichtigkeit.",
+    "notes": "Das Essay hat fünf Absätze (Einleitung, drei Hauptteile, Schluss) und wie bei der SRDP eine Länge: ca. 400 Wörter. Body 2 und Body 3 bestehen aus je zwei Entscheidungen im selben Absatz. Keine Marken nennen und niemanden für den Kauf billiger Kleidung beschämen; nicht thematisieren, wer sich was leisten kann. Die erste Entscheidung (Position yes / no / partly) bestimmt Thesis, Bewertungen und Schluss. Das Essay kommt ohne Statistiken aus: Die Argumente beruhen auf allgemein bekannten Zusammenhängen (Export gebrauchter Kleidung, kurze Lebensdauer billiger Ware). Wer Zahlen ergänzen will, recherchiert sie mit Quelle. Zur Fortsetzung von Body 3: Die EU verbietet großen Unternehmen seit Juli 2026, unverkaufte Kleidung und Schuhe zu vernichten, und verpflichtet die Mitgliedstaaten zu Herstellerverantwortung für Textilien. Differenzierung: Schnelle formen im Gerüst-Modus einen eigenen „I think“-Satz in eine unpersönliche Formulierung um. Hausübung: zweite Fassung mit einer anderen Position."
+  }
+}

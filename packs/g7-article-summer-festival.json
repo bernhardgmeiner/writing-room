@@ -1,0 +1,346 @@
+{
+  "id": "g7-article-summer-festival",
+  "title": "Our summer festival",
+  "titleDe": "Rückblick auf das Schulfest",
+  "grade": 7,
+  "level": "A2",
+  "theme": "Feste & Feiern",
+  "textType": "article",
+  "modes": [
+    "full"
+  ],
+  "lengths": {
+    "short": {
+      "label": "around 120 words",
+      "min": 105,
+      "max": 135
+    }
+  },
+  "minutes": {
+    "full": {
+      "short": 50
+    }
+  },
+  "task": {
+    "situation": "Last Friday, your school had its summer festival in the schoolyard. All the money from the festival goes to a children’s hospital. The school website wants an article that looks back on the day.",
+    "instruction": "Write an article for the school website. Write about:",
+    "points": [
+      "how you prepared for the festival",
+      "what was on the programme",
+      "the highlight of the day",
+      "how much money you raised and who gets it"
+    ],
+    "words": {
+      "short": "Write around 120 words."
+    },
+    "de": "Ein Artikel für die Schulwebsite, der auf das Sommerfest zurückblickt: Vorbereitung, Programm, Höhepunkt und das Geld für ein Kinderkrankenhaus. Der Titel kommt zuletzt."
+  },
+  "meta": {
+    "publication": "School News Online"
+  },
+  "focus": {
+    "label": "past simple and present perfect",
+    "labelDe": "Past simple und Present perfect",
+    "min": {
+      "short": 10
+    },
+    "note": "Marked: every verb form in the past simple (also was / were) and in the present perfect (have / has + past participle). Not marked: present simple, will, can’t."
+  },
+  "topicWords": [
+    "festival",
+    "summer",
+    "school",
+    "schoolyard",
+    "stall",
+    "stalls"
+  ],
+  "gaps": [
+    {
+      "id": "BAND",
+      "step": "highlight",
+      "q": "What is the name of the teachers’ band? Shout a fun name.",
+      "qDe": "Erfindet einen lustigen Namen für die Band der Lehrer:innen. Keine Namen von Mitschüler:innen oder Lehrer:innen.",
+      "type": "text",
+      "default": "The Chalk Stars",
+      "max": 30
+    },
+    {
+      "id": "MONEY",
+      "step": "money",
+      "q": "How much money did the festival raise? Shout a number of euros.",
+      "qDe": "Wie viel Geld hat das Fest eingebracht? Ruft eine Zahl zwischen 300 und 3000 (Euro).",
+      "type": "number",
+      "default": 1250,
+      "min": 300,
+      "max": 3000
+    }
+  ],
+  "steps": [
+    {
+      "id": "intro",
+      "slot": "intro",
+      "part": "Introduction",
+      "q": "How do we start our article?",
+      "de": "Die Einleitung sagt, worum es im Artikel geht und wann es war. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "scene",
+          "label": "Start with a scene",
+          "text": "The tents [[have gone]], and the music [[has stopped]]. Last Friday, our summer festival [[took]] place in the schoolyard.",
+          "why": "The present perfect shows how things are now, and the past simple says when the festival was."
+        },
+        {
+          "l": "B",
+          "id": "ready",
+          "label": "Start with a question",
+          "trap": true,
+          "crit": "TA",
+          "text": "Are you ready for our summer festival? It starts next Friday at 2 pm. There will be music, games and food for everyone!",
+          "reject": "This is an invitation, but the festival is over. Our article looks back on it.",
+          "rejectDe": "Das ist eine Einladung, aber das Fest ist schon vorbei. Unser Artikel blickt darauf zurück."
+        },
+        {
+          "l": "C",
+          "id": "numbers",
+          "label": "Start with numbers",
+          "text": "More than 400 guests and fifteen stalls: last Friday, we [[celebrated]] the end of the school year with our summer festival.",
+          "why": "Numbers catch the reader’s eye and show how big the festival was."
+        }
+      ]
+    },
+    {
+      "id": "prep",
+      "slot": "prep",
+      "part": "Preparation",
+      "q": "How did we prepare for the festival?",
+      "de": "Erster Inhaltspunkt: wie wir das Fest vorbereitet haben. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "may",
+          "label": "Weeks of work",
+          "text": "Preparations [[started]] in May. Every class [[planned]] a stall, and on Thursday, parents [[helped]] us to put up the tents.",
+          "why": "It shows that the whole school worked together."
+        },
+        {
+          "l": "B",
+          "id": "cakes",
+          "label": "The busy last day",
+          "text": "On the day before the festival, everybody [[was]] busy: we [[baked]] more than fifty cakes, and younger students [[decorated]] the schoolyard with flags.",
+          "why": "Concrete details help readers see the busy day."
+        },
+        {
+          "l": "C",
+          "id": "team",
+          "label": "A student team",
+          "text": "For six weeks, a team of twelve students [[met]] every Tuesday. They [[wrote]] the programme and [[collected]] prizes for a raffle.",
+          "why": "It shows who did the planning and how long it took."
+        }
+      ]
+    },
+    {
+      "id": "programme",
+      "slot": "programme",
+      "part": "Programme",
+      "q": "What was on the programme?",
+      "de": "Zweiter Inhaltspunkt: das Programm des Festes. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "choir",
+          "label": "From the start",
+          "text": "At 2 pm, the school choir [[opened]] the festival. After that, guests [[played]] games and [[tried]] food from many countries.",
+          "why": "We tell the programme in the right order, with times and linking words."
+        },
+        {
+          "l": "B",
+          "id": "stalls",
+          "label": "Stalls and games",
+          "text": "There [[were]] stalls with cakes, homemade lemonade and old books, and little brothers and sisters [[enjoyed]] the face painting.",
+          "why": "A list of stalls shows that there was something for everyone."
+        },
+        {
+          "l": "C",
+          "id": "songs",
+          "label": "Songs and sunshine",
+          "trap": true,
+          "crit": "LSA",
+          "text": "At 2 pm, the choir opened the festival. Luckily, the rain didn’t came, and the guests didn’t wanted to leave.",
+          "reject": "Two mistakes: after ‘didn’t’, use the infinitive: didn’t come, didn’t want.",
+          "rejectDe": "Zwei Fehler: Nach „didn’t“ steht die Grundform: didn’t come, didn’t want."
+        }
+      ]
+    },
+    {
+      "id": "highlight",
+      "slot": "highlight",
+      "part": "Highlight",
+      "q": "What was the highlight of the day?",
+      "de": "Dritter Inhaltspunkt: der Höhepunkt des Tages. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "band",
+          "label": "The teachers’ band",
+          "text": "The highlight [[was]] the teachers’ band, “{BAND}”. Nobody [[knew]] that our maths teacher [[played]] the drums so well!",
+          "why": "A surprise makes the highlight fun to read."
+        },
+        {
+          "l": "B",
+          "id": "match",
+          "label": "The football match",
+          "text": "The best moment for most of us [[was]] the football match between students and teachers. The students [[won]] 3–2!",
+          "why": "A short, exciting result at the end makes readers smile."
+        },
+        {
+          "l": "C",
+          "id": "sponges",
+          "label": "Wet sponges",
+          "text": "The funniest moment? For one euro, you [[got]] three wet sponges to throw at our head teacher, Ms Wieser. She [[loved]] it!",
+          "why": "The question makes readers curious before we tell them."
+        },
+        {
+          "l": "D",
+          "id": "talent",
+          "label": "The talent show",
+          "trap": true,
+          "crit": "CC",
+          "text": "The highlight was the talent show in the gym. First, Sofia sang a song from a musical. After, everybody clapped and cheered for minutes.",
+          "reject": "‘After’ can’t stand alone here. Say ‘After that, everybody clapped’ or ‘Afterwards, everybody clapped’.",
+          "rejectDe": "„After“ allein geht hier nicht: Schreibt „After that“ oder „Afterwards“ (danach)."
+        }
+      ]
+    },
+    {
+      "id": "money",
+      "slot": "money",
+      "part": "The money",
+      "q": "What do we write about the money?",
+      "de": "Vierter Inhaltspunkt: wie viel Geld das Fest eingebracht hat und wer es bekommt. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "result",
+          "label": "The result first",
+          "text": "So far, the festival [[has raised]] {MONEY} euros for a children’s hospital. The cake stall alone [[made]] almost a third of that!",
+          "why": "The present perfect gives the result, and the past simple adds a detail from the day."
+        },
+        {
+          "l": "B",
+          "id": "counted",
+          "label": "At the end of the day",
+          "trap": true,
+          "crit": "TA",
+          "text": "At the end of the day, we counted {MONEY} euros. Everybody helped to clean the schoolyard, and the last guests went home happy.",
+          "reject": "We say how much money we raised, but not who gets it. The task asks for both.",
+          "rejectDe": "Wir sagen, wie viel Geld wir eingenommen haben, aber nicht, wer es bekommt. Die Aufgabe verlangt beides."
+        },
+        {
+          "l": "C",
+          "id": "cause",
+          "label": "A good cause",
+          "text": "All the fun [[was]] for a good cause. Together, we [[have raised]] {MONEY} euros for new toys and books at a children’s hospital.",
+          "why": "It tells readers why the festival was important, then gives the result."
+        }
+      ]
+    },
+    {
+      "id": "end",
+      "slot": "end",
+      "part": "Conclusion",
+      "q": "How do we end our article?",
+      "de": "Der Schluss rundet den Artikel ab. Lest jede Karte genau, bevor ihr abstimmt.",
+      "options": [
+        {
+          "l": "A",
+          "id": "thanks",
+          "label": "Say thank you",
+          "text": "A big thank you to everyone who [[baked]], [[helped]] or simply [[came]]. See you at next year’s festival!",
+          "why": "We thank everybody and look ahead to next year."
+        },
+        {
+          "l": "B",
+          "id": "best",
+          "label": "The best ever",
+          "text": "Everybody agrees: it [[was]] the best summer festival we [[have ever had]]. We can’t wait for next year!",
+          "why": "‘The best … we have ever had’ is a strong way to end."
+        },
+        {
+          "l": "C",
+          "id": "join",
+          "label": "Ask readers to join",
+          "text": "Our planning team [[has started]] work on next year’s festival. Do you want to help? Then join us!",
+          "why": "A question at the end speaks to readers directly."
+        }
+      ]
+    },
+    {
+      "id": "title",
+      "slot": "title",
+      "part": "Title",
+      "q": "Our article is finished. Which title do we choose?",
+      "de": "Zum Schluss wählen wir den Titel unseres Artikels.",
+      "options": [
+        {
+          "l": "A",
+          "id": "remember",
+          "label": "A day to remember",
+          "text": "A summer festival to remember",
+          "why": "It tells readers what the article is about."
+        },
+        {
+          "l": "B",
+          "id": "cause",
+          "label": "The day and the cause",
+          "text": "A good day for a good cause",
+          "why": "Short, and it names both parts of the day."
+        },
+        {
+          "l": "C",
+          "id": "number",
+          "label": "A number",
+          "text": "{MONEY} euros and lots of smiles",
+          "why": "The number makes readers curious."
+        }
+      ]
+    }
+  ],
+  "order": [
+    "title",
+    "intro",
+    "prep",
+    "programme",
+    "highlight",
+    "money",
+    "end"
+  ],
+  "checks": [
+    {
+      "en": "The title fits the whole article"
+    },
+    {
+      "en": "The introduction says what happened and when"
+    },
+    {
+      "en": "Preparation, programme, highlight and money are all in the article"
+    },
+    {
+      "en": "Finished events with a time (last Friday, at 2 pm) are in the past simple"
+    },
+    {
+      "en": "Results that matter now are in the present perfect: we have raised …"
+    },
+    {
+      "en": "The article says how much money we raised and who gets it"
+    }
+  ],
+  "teacher": {
+    "aim": "Die Klasse schreibt gemeinsam einen Artikel für die Schulwebsite, der auf ein Schulfest zurückblickt, und übt dabei den Unterschied zwischen Past simple (abgeschlossenes Ereignis mit Zeitangabe) und Present perfect (Ergebnis zählt jetzt, ever).",
+    "prep": "A/B/C/D-Karten austeilen, Hefte bereitlegen, Beamer im Vollbild. Einsatz ab: Past simple (auch unregelmäßige Verben und Verneinung mit didn’t + Grundform) und Present perfect mit Signalwörtern wie ever, never, already, so far. Bei Bedarf Wörter an die Tafel: stall (Stand), raffle (Tombola), prizes (Preise), choir (Chor), face painting (Kinderschminken), sponge (Schwamm), head teacher (Schulleiter:in), raise money (Geld einnehmen, sammeln), good cause (guter Zweck), planning team (Planungsteam).",
+    "heft": "Neue Seite: Datum rechts oben, darunter „Article“ als Überschrift (wie am Beamer). Dann 2 Zeilen für den Titel frei lassen, der Titel kommt zuletzt. Jeder Absatz beginnt nach einer Leerzeile, am Rand steht der Name des Teils wie am Beamer: Introduction, Preparation, Programme, Highlight, The money, Conclusion. Am Ende die Verben im Past simple blau und im Present perfect grün unterstreichen.",
+    "flow": "Volltext (50 min): 3 min Aufgabe lesen · 6 Entscheidungen zum Text à ca. 2–3 min, zusammen ca. 15 min · Abschreiben nach jeder Entscheidung, zusammen ca. 20 min · Titel 2 min · 5 min Checkliste und Unterstreichen · 5 min Puffer. Wenn die Zeit knapp wird: Unterstreichen als Hausübung.",
+    "traps": "Introduction B (TA, Erfüllung der Aufgabenstellung): Einladung zu einem kommenden Fest statt Rückblick auf das vergangene. Programme C (LSA, Sprachrichtigkeit): „didn’t came“ und „didn’t wanted“, nach didn’t steht die Grundform (didn’t come, didn’t want). Highlight D (CC, Kohärenz und Kohäsion): „After,“ allein als Satzanfang (wie „Danach“), richtig ist „After that,“ oder „Afterwards,“. The money B (TA, Erfüllung der Aufgabenstellung): Der Betrag steht da, aber nicht, wer das Geld bekommt.",
+    "notes": "Schule, Personen, Band und Kinderkrankenhaus sind erfunden, es wird keine echte Hilfsorganisation genannt. Markiert sind alle Verbformen im Past simple (auch was / were) und im Present perfect; Present simple und will sind nicht markiert. Die Falle im Programm prüft verneinte Past-simple-Formen (didn’t + Grundform); die Wahl zwischen Past simple und Present perfect üben die gültigen Karten und die Checkliste. Gute Gesprächsanlässe: „The tents have gone“ (Zustand jetzt) gegenüber „Last Friday … took place“ (Zeitpunkt in der Vergangenheit) und „the best … we have ever had“ (Present perfect mit ever nach einem Superlativ). Beim Bandnamen gilt: keine echten Bands und keine Namen von Lehrer:innen. Differenzierung: Schnelle schreiben zwei Sätze über einen weiteren Stand, einen im Past simple und einen im Present perfect. Passt gut zum Paket „Dankes-E-Mail an die Gastfamilie“ (7. Schulstufe, gleicher Grammatikschwerpunkt, andere Textsorte). Hausübung: ein kurzer Artikel (ca. 80 Wörter) über ein anderes Schulereignis (Sportfest, Konzert, Lesenacht) mit mindestens drei Verben im Past simple und zwei im Present perfect."
+  }
+}
