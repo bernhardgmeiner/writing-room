@@ -13,6 +13,8 @@ Autor: Bernhard Gmeiner (bernhardgmeiner.com). Lizenz: CC BY-NC-SA 4.0 (https://
 
 `dist/writing-room.html` (nach dem Bauen) ist die fertige Datei: doppelklicken, im Browser öffnen, Vollbild. Sie braucht keine Internetverbindung und überträgt keine Daten. Gespeicherte Stunden bleiben nur im Browser dieses Geräts.
 
+Am Ende jedes Pakets der 9. bis 12. Schulstufe stehen ein Link und ein QR-Code zur passenden Seite des Matura-Guides „Don’t Panic, It’s Just the Matura“ (https://matura.bernhardgmeiner.com), damit Schüler:innen zuhause weiterüben können. Der QR-Code ist in die Datei eingebettet; erst wer den Link öffnet, geht ins Internet.
+
 ## Aufbau
 
 - `packs/*.json` – 72 Schreibpakete (Inhalt, Fallen, Lehrkraft-Hinweise)
@@ -20,6 +22,7 @@ Autor: Bernhard Gmeiner (bernhardgmeiner.com). Lizenz: CC BY-NC-SA 4.0 (https://
 - `tools/validate.js` – prüft ein Paket über alle möglichen Wege: `node tools/validate.js packs/<id>.json --samples 2`
 - `tools/build.js` – baut `dist/writing-room.html`: `node tools/build.js` (Node.js 18+, Python 3 mit reportlab für die Kartenvorlage)
 - `tools/dump.js`, `tools/gradecheck.py` – lesbare Ausgabe eines Pakets, Abgleich innerhalb einer Schulstufe
+- `tools/guide-qr.js` – schreibt die QR-Codes für die Links zum Matura-Guide in die Engine (`npm install qrcode`, dann `node tools/guide-qr.js`)
 - `AUTHORING.md` – Regeln für neue Pakete (Englisch)
 
 ## Entstehung und KI
