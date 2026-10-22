@@ -162,7 +162,7 @@ The final screen renders the text in the right layout; copy screens show the mar
   }
   ```
   Older letter packs without `meta.to` (and with the name in `meta.from`) still work (no header, name and town under the sign-off); the validator warns in grades 9–12.
-- `essay`: title + paragraphs (formal, no "you", no contractions, no anecdotes). Rhetorical questions only in the Introduction (and the title): a question in a body paragraph or the conclusion is a weak point, state the point instead.
+- `essay`: title + paragraphs (formal, no "you", no contractions, no anecdotes). Rhetorical questions only in the Introduction: a question in a body paragraph or the conclusion is a weak point, state the point instead. The title is a factual statement that names the topic and may hint at the position, never a question (a question title sounds like an article; it may appear only as a trap, `crit` TA).
 - `report`: `meta.to`, `meta.from`, `meta.date` ("{TODAY}"); header To, From, Date, Subject; `subject` step; body blocks begin with `### Section heading` lines; recommendations at the end. Formal, impersonal.
 - `story`: title + paragraphs. `description`: title + paragraphs.
 - `postcard`: greeting, short paragraphs, sign-off; `meta.to` = address lines separated by `\n` (invented address).
@@ -280,7 +280,7 @@ Concrete and short. `flow` names the minutes per phase for full/frame and short/
 - **The long version never adds a paragraph.** It makes paragraphs longer: a long-only step continues a paragraph (`"join": true`, below). The length targets of §7 stay as they are. Grades 11–12: an e-mail or a letter has only the short version (around 250 words), an essay only the long one (around 400 words, five paragraphs of about 70–90 words, built with continuation steps where a paragraph needs two decisions).
 - The three content points of the task are spread over the three body paragraphs; the conclusion is its own paragraph (it never only repeats one body paragraph).
 - **Letter to the editor:** the first sentence of the Introduction names the article (title in “…”), the publication and the date; then the writer's position. The header (To, From, Date, Subject) and the subject line are not paragraphs.
-- **Essays:** rhetorical questions only in the Introduction (and the title); the body paragraphs and the conclusion state their points.
+- **Essays:** rhetorical questions only in the Introduction; the body paragraphs and the conclusion state their points. The title is a statement, never a question (a question title sounds like an article).
 - **Emails and letters** may place a content point that is the reason for writing (e.g. who we are and our dates in an enquiry) in the Introduction and spread another point over two body paragraphs, as long as every point is fully covered and each body paragraph has one clear topic; the `teacher` notes say where each point is.
 - **Stories** may let the content points follow the plot instead: e.g. point 1 (how it starts, who and where) in the Introduction, point 3 (how it ends, what the character learns) in the Conclusion, and the body paragraphs carry the events in between. The five paragraphs and their labels stay the same; the `teacher` notes say where each point is.
 

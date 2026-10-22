@@ -480,9 +480,9 @@
         {
           "l": "B",
           "id": "months",
-          "label": "A question",
-          "text": "Twelve months for the common good?",
-          "why": "A factual question that names the topic without giving away the answer."
+          "label": "Name the plan",
+          "text": "A compulsory year of service for young people",
+          "why": "Neutral and factual: it names the plan the essay discusses without giving away the answer."
         },
         {
           "l": "C",
@@ -507,7 +507,7 @@
   ],
   "checks": [
     {
-      "en": "A factual title that names the topic"
+      "en": "A factual title that names the topic (a statement, not a question)"
     },
     {
       "en": "The introduction ends with a thesis statement that shows our position"

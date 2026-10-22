@@ -380,11 +380,14 @@ if (UPPER) for (const L of lengths) {
 // ---------- text-type conventions of the Matura writing guide (AUTHORING §6, §11) ----------
 const plainT = t => strip(fillGaps(t)).replace(/^###.*$/gm, " ").trim();
 const sameBranch = (va, vb) => !(va.cond && vb.cond && va.cond[0] === vb.cond[0] && va.cond[1] !== vb.cond[1]);
-// (a) essays: rhetorical questions only in the Introduction (and the title)
+// (a) essays: rhetorical questions only in the Introduction; the title is a statement, never a question
 if (P.textType === "essay") steps.forEach(st => {
-  if (!st.slot || st.slot === "title" || st.part === "Introduction") return;
+  if (st.slot === "title") { st.options.filter(o => !o.trap).forEach(o => variants(o, st).forEach(v => {
+    if (/\?/.test(plainT(v.text))) E(`essay: ${st.id}/${o.id}${v.cond ? "[" + v.cond[1] + "]" : ""}: question as an essay title – an essay title is a factual statement (a question title sounds like an article); allowed only as a trap (crit TA)`);
+  })); return; }
+  if (!st.slot || st.part === "Introduction") return;
   st.options.filter(o => !o.trap).forEach(o => variants(o, st).forEach(v => {
-    if (/\?(?=[”’)]*(\s|$))/.test(plainT(v.text))) W(`essay: ${st.id}/${o.id}${v.cond ? "[" + v.cond[1] + "]" : ""}: question outside the Introduction and the title – an essay asks rhetorical questions only there; state the point instead`);
+    if (/\?(?=[”’)]*(\s|$))/.test(plainT(v.text))) W(`essay: ${st.id}/${o.id}${v.cond ? "[" + v.cond[1] + "]" : ""}: question outside the Introduction – an essay asks rhetorical questions only there; state the point instead`);
   }));
 });
 // (b) greeting and sign-off (grades 9–12): Dear Sir or Madam / Dear Editor → Yours faithfully; Dear Mr/Ms <Name> → Yours sincerely;

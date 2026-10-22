@@ -412,10 +412,10 @@
         },
         {
           "l": "B",
-          "id": "question",
-          "label": "Ask a question",
-          "text": "Four days of school, three days off?",
-          "why": "A question names the topic and makes readers curious about the answer."
+          "id": "topic",
+          "label": "Name the topic",
+          "text": "The four-day school week: benefits and drawbacks",
+          "why": "Neutral and factual: it names the topic and both sides of the debate."
         },
         {
           "l": "C",
@@ -445,7 +445,7 @@
   ],
   "checks": [
     {
-      "en": "A clear title that fits our opinion"
+      "en": "A clear title that fits our opinion (a statement, not a question)"
     },
     {
       "en": "The introduction leads to the topic and says what the essay will argue"

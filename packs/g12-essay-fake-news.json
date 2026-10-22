@@ -452,8 +452,11 @@
           "l": "B",
           "id": "question",
           "label": "Ask the central question",
+          "trap": true,
+          "crit": "TA",
           "text": "Who should stop the spread of fake news?",
-          "why": "Neutral and factual: it names the topic without giving away the answer."
+          "reject": "Wrong style for an essay: a question as the title sounds like a magazine article that wants to make readers curious. An essay title is factual: it names the topic in a statement and can hint at our position.",
+          "rejectDe": "Falscher Stil für ein Essay: Eine Frage als Titel klingt nach einem Zeitschriftenartikel, der neugierig machen will. Ein Essay-Titel ist sachlich: Er nennt das Thema als Aussage und darf unsere Position andeuten."
         },
         {
           "l": "C",
@@ -483,7 +486,7 @@
   ],
   "checks": [
     {
-      "en": "A factual title that states the topic"
+      "en": "A factual title that states the topic (a statement, not a question)"
     },
     {
       "en": "The introduction ends with a thesis statement that shows our position"
@@ -506,7 +509,7 @@
     "prep": "A/B/C/D-Karten austeilen, eine Garnitur pro Person (ohne Karten: 1–4 Finger, die Tasten 1–4 wählen wie A–D). Beamer im Vollbild. Die Aufgabe am Beamer enthält alles Nötige. Im Gerüst-Modus den eingebauten Timer nutzen: 5–6 min pro Absatz.",
     "heft": "Neue Seite: Datum (rechts), „Essay“ als Überschrift, darunter 2 Zeilen für den Titel frei lassen (der Titel kommt zuletzt). Jeder Absatz beginnt nach einer Leerzeile, am Rand Intro, Body 1, Body 2, Body 3, Conclusion. Fortsetzungen (Body 1 und Body 3) ohne neue Zeile im selben Absatz weiterschreiben. Passive Reporting Structures grün unterstreichen.",
     "flow": "Volltext (100 min, Doppelstunde): 4 min Aufgabe lesen und Position wählen, 8 weitere Entscheidungen à ca. 2 min (Body 1 wird um ein Beispiel fortgesetzt, Body 3 um die Antwort auf ein Gegenargument), Abschreiben ca. 45 min, 5 min Checkliste, der Rest für die Besprechung der Fallen. Gerüst (100 min): 3 min Aufgabe und Position, pro Absatz 1 min Entscheidung, 5–6 min eigenes Schreiben, 1 min Vergleich mit dem Modell; die beiden Fortsetzungen mit je 1 min Entscheidung und 4–5 min eigenem Schreiben; am Ende 2 min Titel und 4 min Checkliste. Bei Body 1 und Body 2 nach der Abstimmung die Fakten der gewählten Option kurz an die Tafel schreiben (EU-Regeln für große Plattformen bzw. Pflichtfach seit 2022), weil die Optionen danach verschwinden.",
-    "traps": "Intro A (TA): Die These beantwortet eine andere Frage (warum Fake News schaden statt wer sie stoppen soll). Body 1 C (LSA): are said that they spread statt are said to spread, Beistrich vor that, the news are statt the news is. Body 2 B (CC): kein Topic Sentence, „Consequently“ ohne Folge, „In contrast“ ohne Gegensatz. Body 3 A (LSR): korrekt, aber viermal „It is important that“ und dreimal „things“, kein Spektrum an Strukturen. Conclusion C (CC): neues Thema (Kurzvideos, Zeitungsabos) im Schluss. Kürzel: TA = Erfüllung der Aufgabenstellung, CC = Kohärenz und Kohäsion, LSR = Spektrum sprachlicher Mittel, LSA = Sprachrichtigkeit.",
+    "traps": "Intro A (TA): Die These beantwortet eine andere Frage (warum Fake News schaden statt wer sie stoppen soll). Body 1 C (LSA): are said that they spread statt are said to spread, Beistrich vor that, the news are statt the news is. Body 2 B (CC): kein Topic Sentence, „Consequently“ ohne Folge, „In contrast“ ohne Gegensatz. Body 3 A (LSR): korrekt, aber viermal „It is important that“ und dreimal „things“, kein Spektrum an Strukturen. Conclusion C (CC): neues Thema (Kurzvideos, Zeitungsabos) im Schluss. Titel B (TA): Frage als Titel; das klingt nach einem Zeitschriftenartikel, ein Essay-Titel nennt das Thema sachlich als Aussage. Kürzel: TA = Erfüllung der Aufgabenstellung, CC = Kohärenz und Kohäsion, LSR = Spektrum sprachlicher Mittel, LSA = Sprachrichtigkeit.",
     "notes": "Das Essay hat fünf Absätze (Einleitung, drei Body-Absätze zu den drei Inhaltspunkten, Schluss); Body 1 und Body 3 entstehen aus je zwei Entscheidungen, die Fortsetzung bleibt im selben Absatz. Keine echten Plattformen, Politiker:innen oder konkreten Falschmeldungen nennen; Beispiele bleiben allgemein. Die erste Entscheidung (Plattformen und Gesetze zuerst / Bildung zuerst) bestimmt These, Bewertungen und Schluss. Fakten im Text: In der EU müssen sehr große Plattformen nach dem Gesetz über digitale Dienste Risiken wie Desinformation bewerten und ihre Empfehlungssysteme offenlegen. Seit dem Schuljahr 2022/23 ist Digitale Grundbildung Pflichtfach in der Sekundarstufe I. Studien zeigen, dass sich Falschmeldungen in sozialen Netzwerken schneller verbreiten als korrekte Meldungen und dass Richtigstellungen weniger Menschen erreichen. Nach der europäischen KI-Verordnung müssen Deepfakes als künstlich erzeugt gekennzeichnet werden. Wählt die Klasse in Body 2 Option A, ruft sie ein weiteres Schulfach auf Englisch (z. B. ethics, English, biology). Mit der Taste P werden die Passive Reporting Structures grün markiert; andere Passivformen sind nicht markiert. Differenzierung: Schnelle formen im Gerüst-Modus zwei eigene Sätze mit „be said to“ und „It is believed that“ um. Länge wie bei der SRDP: ca. 400 Wörter (360–440). Hausübung: zweite Fassung mit der anderen Position."
   }
 }
