@@ -129,13 +129,6 @@
         },
         {
           "l": "B",
-          "id": "hey",
-          "label": "Hey",
-          "text": "{{Hey Ravi,}}",
-          "why": "Very informal and relaxed, fine for a good friend."
-        },
-        {
-          "l": "C",
           "id": "dear",
           "label": "Dear",
           "text": "{{Dear Ravi,}}",
@@ -192,23 +185,28 @@
           "id": "sorry",
           "label": "Show sympathy",
           "text": "{{First of all, I can imagine how}} terrible you feel. Forgetting a party can happen to anyone, and you didn’t do it on purpose. {{You [[shouldn’t]] be too hard on yourself.}} It was a mistake, and you can still fix it.",
-          "why": "It shows sympathy and gives Ravi hope before the advice starts."
+          "why": "It shows sympathy and gives Ravi hope before the advice starts.",
+          "textLong": "{{First of all, I can imagine how}} terrible you feel. Forgetting a party can happen to anyone, and you didn’t do it on purpose. I’m sure you were excited about the match with your uncle, and the date simply slipped your mind. {{You [[shouldn’t]] be too hard on yourself.}} One mistake doesn’t make you a bad friend, and you can still fix it."
         },
         {
           "l": "B",
           "id": "sides",
           "label": "See both sides",
-          "text": "{{I understand why you feel so bad, but}} I understand Chloe, too. She was probably looking forward to seeing you, so she must be really disappointed. {{Still, you [[shouldn’t]] give up on}} your friendship. It’s worth saving.",
-          "why": "Understanding for Ravi and for Chloe prepares honest advice."
+          "text": "{{I understand why you feel so bad, but}} I can see Chloe’s side, too. She was probably looking forward to seeing you, and now she must be really disappointed. {{Still, you [[shouldn’t]] give up on}} your friendship. It’s worth saving.",
+          "why": "Understanding for Ravi and for Chloe prepares honest advice.",
+          "textLong": "{{I understand why you feel so bad, but}} I can see Chloe’s side, too. She was probably looking forward to seeing you, and now she must be really disappointed. Maybe she even waited for you before she cut the cake. {{Still, you [[shouldn’t]] give up on}} your friendship. You and Chloe have been best friends for a long time, and that’s worth saving."
         },
         {
           "l": "C",
           "id": "cousin",
           "label": "A similar story",
           "text": "{{Believe me, I know exactly how you feel.}} Last year I forgot my cousin’s birthday, and she didn’t speak to me for a week. I felt awful, but we’re close again now. {{That’s why you [[shouldn’t]] lose hope:}} this can be fixed.",
-          "why": "A short story of our own shows Ravi that he is not alone and that things can get better."
+          "why": "A short story of our own shows Ravi that he is not alone and that things can get better.",
+          "textLong": "{{Believe me, I know exactly how you feel.}} Last year I forgot my cousin’s birthday, and she didn’t speak to me for a week. I felt awful and kept checking my phone for a message from her. After a long talk we were close again, and today we can laugh about it. {{That’s why you [[shouldn’t]] lose hope:}} this can be fixed."
         }
-      ]
+      ],
+      "ownLong": "Copy the frame. Then add three sentences of your own that show you understand Ravi.",
+      "ownLongDe": "Gerüst abschreiben, dann drei eigene Sätze ergänzen, die Verständnis für Ravi zeigen."
     },
     {
       "id": "apology",
@@ -224,14 +222,16 @@
           "id": "face",
           "label": "Talk face to face",
           "text": "{{So how [[should]] you say sorry? [[If I were you, I’d]] talk to Chloe face to face}} instead of sending another message. Tell her honestly what happened, and don’t make excuses. {{You [[shouldn’t]] blame}} the football match or your uncle because that will only make her angrier.",
-          "why": "A question leads to the advice, ‘If I were you, I’d …’ gives it, and ‘shouldn’t’ warns Ravi what not to do."
+          "why": "A question leads to the advice, ‘If I were you, I’d …’ gives it, and ‘shouldn’t’ warns Ravi what not to do.",
+          "textLong": "{{So how [[should]] you say sorry? [[If I were you, I’d]] talk to Chloe face to face}} instead of sending another message. Tell her honestly what happened, and don’t make excuses. {{You [[shouldn’t]] blame}} the football match or your uncle because that will only make her angrier. Then be patient: she may need a few days to forgive you."
         },
         {
           "l": "B",
           "id": "letter",
           "label": "Write a letter",
           "text": "{{To put things right, the first thing you [[should]] do is apologise properly.}} Chloe isn’t answering your messages, so you [[could]] write her a real letter by hand. {{In the letter, explain}} what happened and tell her how much your friendship means to you.",
-          "why": "‘Should’ for the most important advice, ‘could’ for a softer suggestion."
+          "why": "‘Should’ for the most important advice, ‘could’ for a softer suggestion with a clear plan.",
+          "textLong": "{{To put things right, the first thing you [[should]] do is apologise properly.}} Chloe isn’t answering your messages, so you [[could]] write her a real letter by hand. {{In the letter, explain}} what happened and tell her how much your friendship means to you. Put it through her letterbox. That way, she can read it alone and in peace."
         },
         {
           "l": "C",
@@ -241,36 +241,12 @@
           "crit": "LSA",
           "text": "If I would be you, I would go to her house and explain her what happened. Don’t send another message because she is still angry. You should also make her a small present, for example a card with a nice photo of you two from the summer.",
           "reject": "Three typical mistakes: ‘If I would be you’ (→ If I were you), ‘explain her’ (→ explain to her) and ‘make her a present’ (→ give her a present).",
-          "rejectDe": "Drei typische Fehler: If I would be you → If I were you, explain her → explain to her, make a present (Geschenk machen) → give a present."
-        }
-      ]
-    },
-    {
-      "id": "patience",
-      "slot": "patience",
-      "part": "Body paragraph 2",
-      "len": "long",
-      "q": "What else should Ravi keep in mind when he says sorry?",
-      "de": "Der Absatz geht weiter: ein weiterer Rat zur Entschuldigung. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
-      "own": "Copy the frame. Then add one more piece of advice in your own words.",
-      "ownDe": "Gerüst abschreiben, dann einen weiteren Rat mit eigenen Worten ergänzen.",
-      "options": [
-        {
-          "l": "A",
-          "id": "time",
-          "label": "Give her time",
-          "text": "{{Try to be patient. Chloe may need}} a few days before she is ready to forgive you, {{so you [[shouldn’t]] call her}} every hour or ask other people to talk to her for you. That might feel like pressure, and it won’t help.",
-          "why": "A short imperative adds a new tip, and ‘shouldn’t’ explains what Ravi must avoid and why."
-        },
-        {
-          "l": "B",
-          "id": "friend",
-          "label": "Ask a friend",
-          "text": "{{It [[could]] also help to talk to}} one of Chloe’s close friends first. They probably know how she feels and when it is a good moment to speak to her. {{Just don’t ask them}} to apologise for you. Only you can do that.",
-          "why": "Another idea with ‘could’, plus a clear limit: the apology is Ravi’s job."
+          "rejectDe": "Drei typische Fehler: If I would be you → If I were you, explain her → explain to her, make a present (Geschenk machen) → give a present.",
+          "textLong": "If I would be you, I would go to her house and explain her what happened. Don’t send another message because she is still angry. You should also make her a small present, for example a card with a nice photo of you two from the summer. Hand it to her at the door and give her time to think."
         }
       ],
-      "join": true
+      "ownLong": "Copy the frame. Then give Ravi two pieces of advice in your own words and add a reason for one of them.",
+      "ownLongDe": "Gerüst abschreiben, dann Ravi zwei eigene Ratschläge geben und einen davon begründen."
     },
     {
       "id": "makeup",
@@ -287,25 +263,30 @@
           "label": "A picnic and a cake",
           "trap": true,
           "crit": "LSR",
-          "text": "After the apology, you could have a picnic with her. The picnic is in the park. Chloe likes the park. You bring a cake. There is ‘Sorry!’ on the cake. Chloe sees the cake. She is happy. You are friends again.",
-          "reject": "The idea is good, but the sentences are very short and simple, and ‘the park’, ‘the cake’ and ‘Chloe’ come again and again. Join your ideas: a picnic in the park that Chloe loves, with a cake that says ‘Sorry!’ …",
-          "rejectDe": "Gute Idee, aber nur sehr kurze, einfache Sätze mit vielen Wiederholungen. Gedanken verbinden, z. B. mit Relativsätzen (that, which) und Linking words."
+          "text": "After the apology, you could have a picnic with her. Choose her favourite park. Bake a cake. Write ‘Sorry!’ on it in big letters. Take some music, too. She will see that you care. She will smile. Then your friendship will be fine again.",
+          "reject": "The idea is good, but there are only very short, simple sentences, one after the other. Join your ideas: a picnic in her favourite park, with a cake that says ‘Sorry!’ …",
+          "rejectDe": "Gute Idee, aber nur sehr kurze, einfache Sätze hintereinander: Gedanken verbinden, z. B. mit Relativsätzen (that, which) und Linking words.",
+          "textLong": "After the apology, you could have a picnic with her. Choose her favourite park. Bring a blanket. Pack some sandwiches and drinks. Bake a chocolate cake. Write ‘Sorry!’ on it in big letters. Take some music, too. She will see that you care. She will smile. Then your friendship will be fine again."
         },
         {
           "l": "B",
           "id": "surprise",
           "label": "A late birthday surprise",
           "text": "{{After your apology, you [[could]] organise}} a small late birthday surprise for her. What about a picnic in her favourite park, or a cake with ‘Sorry!’ on it? {{But you [[shouldn’t]] make it too big,}} or it might look like you are trying to buy her forgiveness.",
-          "why": "‘Could’ and ‘What about …?’ make suggestions, and ‘shouldn’t’ adds a sensible warning."
+          "why": "‘Could’ and ‘What about …?’ make suggestions, and ‘shouldn’t’ adds a sensible warning.",
+          "textLong": "{{After your apology, you [[could]] organise}} a small late birthday surprise for her. What about a picnic in her favourite park, or a cake with ‘Sorry!’ on it? You [[could]] even ask one of her friends what she would like best. {{But you [[shouldn’t]] make it too big,}} or it might look like you are trying to buy her forgiveness."
         },
         {
           "l": "C",
           "id": "together",
           "label": "Spend time together",
           "text": "{{When you’ve said sorry, you [[could]] invite her}} to something she loves, like a concert, the ice rink or a day at the lake. {{The most important thing is}} that you spend time together. Maybe you [[should]] let her choose the plan this time.",
-          "why": "A concrete suggestion with examples, then the reason behind it."
+          "why": "A concrete suggestion with examples, then the reason behind it.",
+          "textLong": "{{When you’ve said sorry, you [[could]] invite her}} to something she loves, like a concert, the ice rink or a day at the lake. {{The most important thing is}} that you spend time together, just the two of you and without phones. Maybe you [[should]] let her choose the plan this time, and you [[could]] promise to be there on time!"
         }
-      ]
+      ],
+      "ownLong": "Copy the frame. Then suggest two ideas of your own and say why they would help.",
+      "ownLongDe": "Gerüst abschreiben, dann zwei eigene Ideen vorschlagen und sagen, warum sie helfen würden."
     },
     {
       "id": "closing",
@@ -328,7 +309,7 @@
           "id": "news",
           "label": "A little news from us",
           "text": "{{Well, I hope my ideas help.}} An honest apology and a little time together can fix a lot. Things are fine here, although I’ve got two tests next week. {{Let me know}} what happens, and keep your chin up!",
-          "why": "It picks up the advice, adds a little own news and keeps Ravi’s problem the main topic."
+          "why": "It picks up the advice, adds a little news of our own and keeps Ravi’s problem the main topic."
         },
         {
           "l": "C",
@@ -360,13 +341,6 @@
         },
         {
           "l": "B",
-          "id": "speak",
-          "label": "Speak soon",
-          "text": "{{Speak soon,}}\n{NAME}",
-          "why": "Informal, and it shows that we want to hear from Ravi again."
-        },
-        {
-          "l": "C",
           "id": "wishes",
           "label": "Best wishes",
           "text": "{{Best wishes,}}\n{NAME}",
@@ -381,7 +355,6 @@
     "opening",
     "feel",
     "apology",
-    "patience",
     "makeup",
     "closing",
     "signoff"
@@ -416,8 +389,8 @@
     "aim": "Die Klasse baut gemeinsam eine informelle Antwort-E-Mail (A2+/B1) an einen Freund, der den Geburtstag seiner besten Freundin vergessen hat, und übt dabei Ratschläge und Vorschläge mit should / shouldn’t, could und If I were you, I’d … sowie die Konventionen der informellen E-Mail.",
     "prep": "A/B/C/D-Karten austeilen (eine Garnitur pro Person), Hefte bereitlegen. Beamer im Vollbild. Im Gerüst-Modus den eingebauten Timer nutzen: 5 min pro Absatz, bei Bedarf +1. Die Aufgabe am Beamer enthält alles Nötige.",
     "heft": "Neue Seite: Datum rechts oben, darunter „Email“ als Überschrift (wie am Beamer). Darunter der E-Mail-Kopf mit vier Zeilen (To, From, Date, Subject) wie am Beamer; der Betreff kommt nach der ersten Entscheidung in die Subject-Zeile, der Name erst unter die Grußformel. Anrede in einer eigenen Zeile, dann eine Zeile frei. Fünf Absätze, jeder nach einer Leerzeile, am Rand die Randwörter Intro, Body 1, Body 2, Body 3, Conclusion. Vor der Grußformel eine Zeile frei, dann Grußformel und Name in zwei eigenen Zeilen. Ratschlag-Wendungen grün unterstreichen.",
-    "flow": "Volltext kurz (50 min): 5 min Aufgabe lesen, 8 Entscheidungen (Betreff, Anrede und Grußformel je ca. 1 min, die fünf Absätze je ca. 2 min), Abschreiben ca. 20 min, 5 min Checkliste. Volltext lang (ca. 60 min): wie kurz, dazu eine Fortsetzung von Body 2 (Geduld oder Hilfe einer Freundin bzw. eines Freundes); das sind eine Entscheidung und rund 45 Wörter Abschreiben mehr. In einer Doppelstunde die restliche Zeit für die Besprechung der Fallen nutzen und die Hausübung zu zweit beginnen. Gerüst kurz (realistisch ca. 60 min): 5 min Aufgabe; Betreff, Anrede und Grußformel je ca. 1 min; pro Absatz 1 min Entscheidung, 5–6 min eigenes Schreiben, 1 min Vergleich mit dem Modell; am Ende 5 min Checkliste. In einer 50-Minuten-Stunde bei der Conclusion nur abstimmen und das Gerüst abschreiben lassen, den eigenen Satz als Hausübung. Gerüst lang (ca. 70 min): gleicher Rhythmus wie kurz, dazu die Fortsetzung von Body 2 mit ca. 7 min (Entscheidung, eigenes Schreiben, Vergleich). In einer Doppelstunde danach eine Vergleichsrunde zu zweit.",
-    "traps": "Introduction B (TA): erzählt fast nur vom eigenen Wochenende und nimmt Ravis Problem nicht ernst. Body 2 C (LSA): If I would be you (→ If I were you), explain her (→ explain to her), make her a present (→ give her a present). Body 3 A (LSR): nur sehr kurze, einfache Sätze, dieselben Wörter immer wieder (the park, the cake, Chloe). Conclusion C (CC): Nevertheless vor einem Grund, Otherwise im Sinn von „sonst noch“. Kürzel: TA = Erfüllung der Aufgabenstellung, CC = Kohärenz und Kohäsion, LSR = Spektrum sprachlicher Mittel, LSA = Sprachrichtigkeit.",
-    "notes": "Aufbau: Jede E-Mail hat fünf Absätze (Einleitung, drei Hauptabsätze mit je einem Inhaltspunkt, Schluss); die lange Fassung macht Body 2 länger, sie fügt keinen Absatz hinzu. Thema Freundschaft: Es geht um einen alltäglichen Fehler (vergessene Party, gebrochenes Versprechen), nicht um Mobbing. Im Gerüst-Modus nicht nach eigenen Streitigkeiten fragen; die Ratschläge beziehen sich auf Ravi und Chloe. Ravi, Chloe und die Adressen sind erfunden; für die Namenslücke nur erfundene Vornamen verwenden, keine Namen von Mitschüler:innen oder Lehrer:innen. Fokus: Nach Body 2 an der Tafel sammeln: If I were you, I’d … (nie „If I would be“), You should / shouldn’t …, You could …, What about …?, Why don’t you …? Differenzierung: Schnelle ergänzen im Gerüst-Modus einen Satz mit „Why don’t you …?“. Hausübung: Ravis Antwort (ca. 80 Wörter): Was hat er gemacht, und wie hat Chloe reagiert?"
+    "flow": "Volltext kurz (50 min): 5 min Aufgabe lesen, 8 Entscheidungen (Betreff, Anrede und Grußformel je ca. 1 min, die fünf Absätze je ca. 2 min), Abschreiben ca. 20 min, 5 min Checkliste. Volltext lang (ca. 60 min): dieselben 8 Entscheidungen; die drei Hauptabsätze sind je rund 15 Wörter länger, das Abschreiben dauert daher ca. 30 min. In einer Doppelstunde die restliche Zeit für die Besprechung der Fallen nutzen und die Hausübung zu zweit beginnen. Gerüst kurz (realistisch ca. 60 min): 5 min Aufgabe; Betreff, Anrede und Grußformel je ca. 1 min; pro Absatz 1 min Entscheidung, 5–6 min eigenes Schreiben, 1 min Vergleich mit dem Modell; am Ende 5 min Checkliste. In einer 50-Minuten-Stunde bei der Conclusion nur abstimmen und das Gerüst abschreiben lassen, den eigenen Satz als Hausübung. Gerüst lang (ca. 70 min): dieselben 8 Entscheidungen im gleichen Rhythmus, bei den drei Hauptabsätzen je ca. 3 min mehr eigenes Schreiben (ein Satz bzw. ein Rat mehr). In einer Doppelstunde danach eine Vergleichsrunde zu zweit.",
+    "traps": "Introduction B (TA): erzählt fast nur vom eigenen Wochenende und nimmt Ravis Problem nicht ernst. Body 2 C (LSA): If I would be you (→ If I were you), explain her (→ explain to her), make her a present (→ give her a present). Body 3 A (LSR): nur sehr kurze, einfache Sätze hintereinander, nichts ist verbunden (besser: a picnic in her favourite park, with a cake that says ‘Sorry!’). Conclusion C (CC): Nevertheless vor einem Grund, Otherwise im Sinn von „sonst noch“. Kürzel: TA = Erfüllung der Aufgabenstellung, CC = Kohärenz und Kohäsion, LSR = Spektrum sprachlicher Mittel, LSA = Sprachrichtigkeit.",
+    "notes": "Aufbau: Jede E-Mail hat fünf Absätze (Einleitung, drei Hauptabsätze mit je einem Inhaltspunkt, Schluss); die lange Fassung hat dieselben Entscheidungen, nur die drei Hauptabsätze sind länger; sie fügt keinen Absatz hinzu. Thema Freundschaft: Es geht um einen alltäglichen Fehler (vergessene Party, gebrochenes Versprechen), nicht um Mobbing. Im Gerüst-Modus nicht nach eigenen Streitigkeiten fragen; die Ratschläge beziehen sich auf Ravi und Chloe. Ravi, Chloe und die Adressen sind erfunden; für die Namenslücke nur erfundene Vornamen verwenden, keine Namen von Mitschüler:innen oder Lehrer:innen. Fokus: Nach Body 2 an der Tafel sammeln: If I were you, I’d … (nie „If I would be“), You should / shouldn’t …, You could …, What about …?, Why don’t you …? Differenzierung: Schnelle ergänzen im Gerüst-Modus einen Satz mit „Why don’t you …?“. Hausübung: Ravis Antwort (ca. 80 Wörter): Was hat er gemacht, und wie hat Chloe reagiert?"
   }
 }

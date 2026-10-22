@@ -44,7 +44,7 @@
       "short": "Give your blog post a title. Write around 250 words.",
       "long": "Give your blog post a title. Write around 400 words."
     },
-    "de": "Blogbeitrag für eine Website für Schulabgänger:innen über den ersten Monat in einer WG nach der Matura: Titel, Username, Datum, Einstieg mit Hook, klare Absätze, Schluss mit Aufruf zum Kommentieren. Drei Inhaltspunkte: Wohnung und Mitbewohner:innen beschreiben; erklären, wie es mit Geld und Haushalt klappt; Tipps für alle geben, die nach der Matura ausziehen wollen. Wir schreiben aus der Sicht einer erfundenen Person."
+    "de": "Blogbeitrag für eine Website für Schulabgänger:innen über den ersten Monat in einer WG nach der Matura: Titel, Username, Datum und Uhrzeit, Einstieg mit Hook, klare Absätze, Schluss mit Aufruf zum Kommentieren. Drei Inhaltspunkte: Wohnung und Mitbewohner:innen beschreiben; erklären, wie es mit Geld und Haushalt klappt; Tipps für alle geben, die nach der Matura ausziehen wollen. Wir schreiben aus der Sicht einer erfundenen Person."
   },
   "meta": {
     "user": "first_flat_files"
@@ -108,8 +108,9 @@
           "l": "A",
           "id": "scene",
           "label": "Start with a scene",
-          "text": "{{It’s Sunday evening, and I’m sitting on a beanbag}} in a room that still smells of fresh paint. A month ago, I [[moved out]] of home to start studying {SUBJECT}. {{So, how’s it going? Honestly,}} better than I expected, most of the time.",
-          "why": "A scene with a small detail puts readers into the room, and the question leads into the post."
+          "text": "{{I’m writing this on a beanbag}} in a room that still smells of fresh paint. A month ago, I [[moved out]] of home to start studying {SUBJECT}. {{So, how’s it going? Honestly,}} better than I expected, most of the time.",
+          "why": "A scene with a small detail puts readers into the room, and the question leads into the post.",
+          "textLong": "{{I’m writing this on a beanbag}} in a room that still smells of fresh paint. There are boxes I haven’t unpacked yet and a plant that is already dying. A month ago, I [[moved out]] of home to start studying {SUBJECT}. {{So, how’s it going? Honestly,}} better than I expected, most of the time."
         },
         {
           "l": "B",
@@ -119,16 +120,20 @@
           "crit": "LSR",
           "text": "Dear readers, I would like to inform you that I have recently relocated to a shared apartment in order to commence my studies of {SUBJECT}. In the following text, I shall describe my accommodation and explain how I am managing my finances.",
           "reject": "Far too formal for a blog post: ‘I would like to inform you’, ‘relocated’, ‘commence’, ‘I shall’. A blog sounds personal and relaxed, like talking to a friend.",
-          "rejectDe": "Viel zu förmlich für einen Blog: I would like to inform you, relocated, commence, I shall. Ein Blog klingt persönlich und locker."
+          "rejectDe": "Viel zu förmlich für einen Blog: I would like to inform you, relocated, commence, I shall. Ein Blog klingt persönlich und locker.",
+          "textLong": "Dear readers, I would like to inform you that I have recently relocated to a shared apartment in order to commence my studies of {SUBJECT}. In the following text, I shall describe my accommodation and my fellow residents, and I shall explain how I am managing my finances and my domestic duties. Finally, I shall offer some recommendations."
         },
         {
           "l": "C",
           "id": "question",
           "label": "Ask the readers a question",
           "text": "{{Ever wondered what life after the Matura looks like?}} A month ago, I [[packed up]] my life into a borrowed van and [[moved in]] with two people I’d met online. {{So here’s how my first month of}} studying {SUBJECT} has gone.",
-          "why": "The question speaks to future school leavers, and the last sentence tells them what is coming."
+          "why": "The question speaks to future school leavers, and the last sentence tells them what is coming.",
+          "textLong": "{{Ever wondered what life after the Matura looks like?}} A month ago, I [[packed up]] my life into a borrowed van and [[moved in]] with two people I’d met online. My parents waved goodbye as if I were [[setting off]] for the moon. {{So here’s how my first month of}} studying {SUBJECT} has gone."
         }
-      ]
+      ],
+      "ownLong": "Copy the frame. Then add a detail about the move and finish the introduction: how does the first month feel for our blogger?",
+      "ownLongDe": "Gerüst abschreiben, dann ein Detail zum Umzug ergänzen und den Einstieg fertigschreiben: Wie fühlt sich der erste Monat an?"
     },
     {
       "id": "flat",
@@ -143,149 +148,72 @@
           "l": "A",
           "id": "building",
           "label": "Start with the flat",
-          "text": "{{Our flat is on the fourth floor,}} with no lift and a balcony big enough for two chairs. {{I share it with Defne, an architecture student,}} and Kwame, who studies sports science and [[gets up]] at six to go running. Luckily, the walls are thick.",
-          "why": "From the building to the people: a clear order, and the last sentence adds a joke."
+          "text": "{{Our flat is on the fourth floor,}} with no lift and a balcony big enough for two chairs. {{I share it with Defne, an architecture student,}} and Kwame, who studies sports science and [[gets up]] at six to go running. On moving day, he [[took my bed apart]] to get it into my room, and we’ve been friends ever since.",
+          "why": "From the building to the people: a clear order, and a funny moving-day moment brings the flatmates to life.",
+          "textLong": "{{Our flat is on the fourth floor,}} with a balcony big enough for two chairs but no lift, so moving day was a comedy of errors. My sister and I carried eleven boxes up the stairs, {{only to find that}} my bed wouldn’t fit through the bedroom door. {{That’s how I got to know my flatmates.}} Kwame, who studies sports science and [[gets up]] at six to go running, [[took the bed apart]] in ten minutes, and Defne, an architecture student, [[worked out]] where everything should go. We’ve been friends ever since."
         },
         {
           "l": "B",
           "id": "people",
           "label": "Start with the people",
-          "text": "{{I was nervous about living with two strangers,}} but Defne and Kwame have [[turned out]] to be great flatmates. {{Defne, an architecture student,}} fills the kitchen with paper models, while Kwame, a sports science student, can’t live without his blender. {{The flat itself is}} small but bright.",
-          "why": "Starting with feelings about the flatmates is personal, and ‘while’ contrasts the two of them."
-        }
-      ]
-    },
-    {
-      "id": "movein",
-      "slot": "movein",
-      "part": "Body paragraph 1",
-      "len": "long",
-      "q": "What do we tell readers about the first days?",
-      "de": "Der Absatz geht weiter: der Einzug und die ersten Tage. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
-      "own": "Copy the frame. Then tell the rest of the story in your own words and give it a funny or happy ending.",
-      "ownDe": "Gerüst abschreiben, dann die Geschichte mit eigenen Worten zu Ende erzählen, mit einem lustigen oder guten Ende.",
-      "options": [
-        {
-          "l": "A",
-          "id": "bed",
-          "label": "Moving day",
-          "text": "{{Moving day was a comedy of errors.}} My big sister and I carried eleven boxes up the stairs, only to discover that my bed wouldn’t fit through the bedroom door. {{In the end, Kwame [[took it apart]]}} and [[put it back together]] inside, and that’s how the three of us became friends.",
-          "why": "A short, funny story about moving day shows how the flatmates got to know each other."
+          "text": "{{I was nervous about living with two strangers,}} but Defne and Kwame have [[turned out]] to be great flatmates. {{Defne, an architecture student,}} fills the kitchen with paper models, while Kwame, a sports science student, can’t live without his blender. {{The flat itself is}} small but bright, with a balcony just big enough for two chairs.",
+          "why": "Starting with feelings about the flatmates is personal, and ‘while’ contrasts the two of them.",
+          "textLong": "{{I was nervous about living with two strangers,}} but Defne and Kwame have [[turned out]] to be great flatmates. {{Defne, an architecture student,}} fills the kitchen with paper models, while Kwame, a sports science student, can’t live without his blender. {{The flat itself is}} small but bright, with a balcony just big enough for two chairs. {{My first night there was stranger than I’d imagined:}} the fridge was humming, a tram rattled past, and nobody was going to [[wake me up]] except my own alarm. {{After a few nights,}} those sounds had [[turned into]] the soundtrack of my new life."
         },
         {
-          "l": "B",
-          "id": "night",
-          "label": "The first night",
-          "text": "{{The first night was stranger than I’d imagined.}} The fridge was humming, a tram rattled along the street, and for the first time ever, nobody was going to [[wake me up]] except my own alarm. {{By the end of the week, though,}} those sounds had [[turned into]] the background music of my new life.",
-          "why": "Small sounds make the strange feeling easy to imagine, and the last sentence shows a change."
+          "l": "C",
+          "id": "trap",
+          "label": "The kitchen and the flatmates",
+          "trap": true,
+          "crit": "CC",
+          "text": "Our flat is on the third floor of an old building near the station. The kitchen is the only room with a big window. Even so, it is where the three of us spend most of our time. Defne, an architecture student, is quiet and spends the evenings drawing. Likewise, Kwame is loud and sings along to his music while he cooks.",
+          "textLong": "Our flat is on the third floor of an old building near the station, and there is no lift. The kitchen is the only room with a big window and a view of the river. Even so, it is where the three of us spend most of our time. My own room is tiny, but I have put up some posters and fairy lights, and it already feels like home. Defne, an architecture student, is quiet and spends the evenings drawing. Likewise, Kwame is loud and sings along to his music while he cooks.",
+          "reject": "Two linkers don’t fit: ‘Even so’ signals a contrast, but a bright kitchen is a reason to spend time there (→ That’s why). ‘Likewise’ compares similar things, but quiet Defne and loud Kwame are opposites (→ By contrast).",
+          "rejectDe": "Zwei Linking words passen nicht: Even so kündigt einen Gegensatz an, gemeint ist ein Grund (→ That’s why); Likewise vergleicht Ähnliches, Defne und Kwame sind aber Gegensätze (→ By contrast)."
         }
       ],
-      "join": true
+      "ownLong": "Copy the frame. Then describe the flat, the two flatmates and one moment from the first days in your own words. Invent the details.",
+      "ownLongDe": "Gerüst abschreiben, dann Wohnung, Mitbewohner:innen und einen Moment aus den ersten Tagen mit eigenen Worten beschreiben. Die Details erfindet ihr."
     },
     {
       "id": "money",
       "slot": "money",
       "part": "Body paragraph 2",
-      "q": "Body paragraph 2: how is our blogger coping with money?",
-      "de": "Zweiter Inhaltspunkt, erster Teil: wie die Person mit dem Geld zurechtkommt. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
-      "own": "Copy the frame. Then explain in your own words how the blogger manages money. Give one example.",
-      "ownDe": "Gerüst abschreiben, dann mit eigenen Worten erklären, wie die Person mit dem Geld auskommt. Ein Beispiel nennen.",
+      "q": "Body paragraph 2: how is our blogger coping with money and household chores?",
+      "de": "Zweiter Inhaltspunkt in einem Absatz: wie die Person mit Geld und Hausarbeit zurechtkommt. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then explain in your own words how the blogger manages money and chores. Give one example of each.",
+      "ownDe": "Gerüst abschreiben, dann mit eigenen Worten erklären, wie die Person mit Geld und Hausarbeit zurechtkommt. Je ein Beispiel nennen.",
       "options": [
         {
           "l": "A",
           "id": "budget",
-          "label": "Every cent counts",
-          "text": "{{Living here is great, but money is the hardest part.}} My rent is {RENT} euros a month, and within a week I’d already [[run out of]] coffee, washing-up liquid and patience. {{Now I [[write down]] everything I spend}} and [[stock up on]] pasta whenever it’s on offer.",
-          "why": "A clear topic sentence, a funny list and a practical solution."
+          "label": "A budget and a rota",
+          "text": "{{Living here is great, but money is the hardest part.}} My rent is {RENT} euros a month, and within a week I’d already [[run out of]] coffee, washing-up liquid and patience. {{Now I [[write down]] everything I spend}} and [[stock up on]] pasta whenever it’s on offer. {{Chores were a battle too,}} until one pan spent five days in the sink and we [[drew up]] a cleaning rota.",
+          "why": "A clear topic sentence, a funny list and a practical solution for money and for chores.",
+          "textLong": "{{Living here is great, but money is the hardest part.}} My rent is {RENT} euros a month, and within a week I’d already [[run out of]] coffee, washing-up liquid and patience. {{Now I [[write down]] everything I spend}} and [[stock up on]] pasta whenever it’s on offer. {{Chores were a battle too,}} until one pan spent five days in the sink. {{That evening, we [[sat down]] and [[drew up]] a cleaning rota:}} Kwame does the bathroom, Defne [[takes out]] the rubbish and I hoover on Saturdays. Cooking together twice a week helps as well because it saves money and [[cuts down on]] washing-up."
         },
         {
           "l": "B",
           "id": "job",
-          "label": "A part-time job",
-          "text": "{{All this comes at a price, and money disappears fast.}} My room costs {RENT} euros a month, and bills [[eat up]] most of what’s left, so I’ve [[taken on]] weekend shifts at a bakery. {{It’s tiring, but at least I}} no longer call home for money.",
-          "why": "An honest confession, then cause and effect: high costs lead to a weekend job."
+          "label": "A weekend job and first laundry",
+          "text": "{{All this comes at a price, and money disappears fast.}} My room costs {RENT} euros a month, and bills [[eat up]] most of what’s left, so I’ve [[taken on]] weekend shifts at a bakery. {{As for chores, nobody warned me how much work a flat needs.}} At home, clean towels just [[turned up]]; here, if I don’t wash them, nobody will.",
+          "why": "An honest confession: high costs lead to a weekend job, and the towels show what chores really mean.",
+          "textLong": "{{All this comes at a price, and money disappears fast.}} My room costs {RENT} euros a month, and bills [[eat up]] most of what’s left, so I’ve [[taken on]] weekend shifts at a bakery. {{It’s tiring, but at least I}} no longer call home for money. {{As for chores, nobody warned me how much work a flat needs.}} At home, clean towels just [[turned up]]; here, if I don’t wash them, nobody will. {{It took me two weeks and one ruined T-shirt}} to [[figure out]] how the washing machine works, and that T-shirt is now our favourite cleaning rag."
         },
         {
           "l": "C",
-          "id": "jar",
-          "label": "Sharing costs",
-          "text": "{{The good news is that sharing a flat saves money.}} We each pay {RENT} euros a month in rent, and we’ve [[set up]] a money jar for basics like toilet paper. {{Every Sunday, we also plan the week’s meals,}} so nothing [[goes off]] in the fridge.",
-          "why": "A positive angle: two concrete ideas show how flatmates can save money together."
-        },
-        {
-          "l": "D",
           "id": "trap",
-          "label": "Watching the budget",
+          "label": "Saving money, sharing jobs",
           "trap": true,
           "crit": "LSA",
-          "text": "Money has been a big problem since I moved out. My rent is {RENT} euros in the month, and I spend a lot of money for food because I don’t know yet where the cheap shops are. Now I try to safe money, so I write down everything I buy.",
+          "text": "Money has been a big problem since I moved out. My rent is {RENT} euros in the month, and I spend a lot of money for food because I don’t know yet where the cheap shops are. Now I try to safe money, so I write down everything I buy. The housework is easier: we have a cleaning rota, and everyone does one job each week.",
           "reject": "Three mistakes: ‘in the month’ (→ a month), ‘spend money for food’ (→ spend money on food) and ‘safe money’ (→ save money: ‘safe’ means ‘not in danger’).",
-          "rejectDe": "Drei Fehler: in the month → a month, spend money for → spend money on, safe money → save money (safe heißt sicher)."
-        }
-      ]
-    },
-    {
-      "id": "chores",
-      "slot": "chores",
-      "part": "Body paragraph 2",
-      "q": "How is our blogger coping with household chores?",
-      "de": "Der Absatz geht weiter: Putzen, Waschen, Aufräumen. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
-      "own": "Copy the frame. Then explain in your own words how the chores work in the flat.",
-      "ownDe": "Gerüst abschreiben, dann mit eigenen Worten erklären, wie die Hausarbeit in der WG funktioniert.",
-      "options": [
-        {
-          "l": "A",
-          "id": "trap",
-          "label": "Cleaning the flat",
-          "trap": true,
-          "crit": "CC",
-          "text": "Then there was the housework. Defne once left a pan in the sink for five days. Even so, we sat down and drew up a cleaning rota. Kwame does the bathroom, Defne takes out the rubbish and I hoover on Saturdays. Likewise, the flat has never been so clean.",
-          "reject": "Two linkers don’t fit: ‘Even so’ signals a contrast, but the rota is a result of the dirty pan (→ So). ‘Likewise’ compares, but the clean flat is a result of the rota (→ As a result).",
-          "rejectDe": "Zwei Linking words passen nicht: Even so kündigt einen Gegensatz an, Likewise einen Vergleich, gemeint ist aber jeweils eine Folge (So, As a result)."
-        },
-        {
-          "l": "B",
-          "id": "rota",
-          "label": "A cleaning rota",
-          "text": "{{Then there was the housework.}} After one pan spent five days in the sink, we [[sat down]] and [[drew up]] a cleaning rota. {{Everyone has fixed jobs:}} Kwame does the bathroom, Defne [[takes out]] the rubbish and I hoover on Saturdays.",
-          "why": "A small problem leads to a solution, and the colon introduces who does what."
-        },
-        {
-          "l": "C",
-          "id": "laundry",
-          "label": "Learning the hard way",
-          "text": "{{As for chores, nobody warned me how much work a flat needs.}} At home, clean towels just [[turned up]]; here, if I don’t wash them, nobody will. {{It took me two weeks and one ruined T-shirt}} to [[figure out]] how the washing machine works.",
-          "why": "Comparing home and flat makes the point clear, and the T-shirt adds a funny detail."
+          "rejectDe": "Drei Fehler: in the month → a month, spend money for → spend money on, safe money → save money (safe heißt sicher).",
+          "textLong": "Money has been a big problem since I moved out. My rent is {RENT} euros in the month, and I spend a lot of money for food because I don’t know yet where the cheap shops are. Now I try to safe money, so I write down everything I buy and take a packed lunch to university. The housework is easier: we have a cleaning rota on the fridge, and everyone does one job each week. On Sundays we cook a big pot of soup together, which lasts until Tuesday and means fewer dirty pans."
         }
       ],
-      "join": true
-    },
-    {
-      "id": "flatlife",
-      "slot": "flatlife",
-      "part": "Body paragraph 2",
-      "len": "long",
-      "q": "What is everyday life with the flatmates like?",
-      "de": "Der Absatz geht weiter: das Zusammenleben in der WG. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
-      "own": "Copy the frame. Then add an example of the blogger’s life in the flat in your own words.",
-      "ownDe": "Gerüst abschreiben, dann mit eigenen Worten ein Beispiel aus dem WG-Leben der Bloggerin oder des Bloggers ergänzen.",
-      "options": [
-        {
-          "l": "A",
-          "id": "dinners",
-          "label": "Evenings together",
-          "text": "{{Flat life isn’t all work: the evenings are the best part.}} Twice a week we cook together, which saves money and [[cuts down on]] washing-up. {{Kwame’s chilli has already made him}} famous, and friends from our courses often [[drop by]] when it’s on the menu.",
-          "why": "Concrete moments show the fun side of sharing a flat and link it back to money and chores."
-        },
-        {
-          "l": "B",
-          "id": "rules",
-          "label": "Small arguments",
-          "text": "{{Sharing a home isn’t always easy, of course.}} Defne likes loud music late at night, and I’m apparently the worst at closing cupboard doors. {{Instead of letting things [[build up]], we}} usually [[talk them through]] over a cup of tea, and so far we’re all on speaking terms.",
-          "why": "An honest look at problems makes the blog believable, and it shows a good way to solve them."
-        }
-      ],
-      "join": true
+      "ownLong": "Copy the frame. Then explain in your own words how the blogger manages money and chores, with two examples of each.",
+      "ownLongDe": "Gerüst abschreiben, dann mit eigenen Worten erklären, wie die Person mit Geld und Hausarbeit zurechtkommt, mit je zwei Beispielen."
     },
     {
       "id": "advice",
@@ -299,16 +227,18 @@
         {
           "l": "A",
           "id": "tips",
-          "label": "Three quick tips",
-          "text": "{{Thinking of [[moving out]] after the Matura? Learn from my mistakes. Firstly,}} before you sign anything, [[work out]] a budget. {{Secondly, learn to cook}} five cheap meals because takeaway pizza gets expensive. {{Thirdly,}} agree on house rules before small things [[pile up]].",
-          "why": "Clear signposts (Firstly, Secondly, Thirdly) guide readers through three practical tips."
+          "label": "Quick tips in order",
+          "text": "{{If you’re thinking of [[moving out]] after the Matura, learn from my mistakes. Firstly,}} before you sign anything, [[work out]] a realistic budget that includes the bills. {{Secondly, learn to cook}} five cheap meals because takeaway pizza gets expensive. {{Thirdly,}} agree on house rules with your flatmates before small annoyances [[pile up]].",
+          "why": "Clear signposts (Firstly, Secondly, Thirdly) guide readers through practical tips, each with a reason.",
+          "textLong": "{{If you’re thinking of [[moving out]] after the Matura, learn from my mistakes. Firstly,}} before you sign anything, [[work out]] a realistic budget that includes the bills. {{Secondly, learn to cook}} five cheap meals because takeaway pizza gets expensive. {{Thirdly,}} agree on house rules with your flatmates before small annoyances [[pile up]]. {{Finally, don’t expect freedom to feel the way you imagine.}} In theory, I could eat cereal for dinner and [[stay up]] until three every night, but it [[turns out]] that freedom is a lot less exciting when you have a lecture at eight."
         },
         {
           "l": "B",
           "id": "flat",
           "label": "Choose carefully",
-          "text": "{{What would I tell other school leavers? Don’t [[rush into]] the first flat you see.}} Visit a few, meet the people and ask what the bills [[add up to]]. {{Once you’ve [[moved in]],}} learn a few recipes because [[eating out]] empties your account fast.",
-          "why": "A question links the blogger’s experience to the readers, then one main tip and a second tip with a clear reason."
+          "text": "{{What would I tell other school leavers? Don’t [[rush into]] the first flat you see.}} Visit a few, meet the people who live there and ask what the bills [[add up to]] each month. {{Once you’ve [[moved in]],}} learn a few recipes because [[eating out]] empties your account faster than you think.",
+          "why": "A question links the blogger’s experience to the readers, then clear tips, each with a reason.",
+          "textLong": "{{What would I tell other school leavers? Don’t [[rush into]] the first flat you see.}} Visit a few, meet the people who live there and ask what the bills [[add up to]] each month. {{Once you’ve [[moved in]],}} learn a few recipes because [[eating out]] empties your account faster than you think. {{Finally, appreciate home while you can.}} When I [[went back]] for a weekend, my old room suddenly looked tiny, {{and I realised how much my family}} used to do without a word, from [[topping up]] my bus pass to paying the internet bill."
         },
         {
           "l": "C",
@@ -317,37 +247,13 @@
           "trap": true,
           "crit": "LSR",
           "text": "Moving out is not easy. You need a lot of money. Make a budget. Food is expensive. Learn to cook some cheap meals. Flatmates can be difficult. Talk to them about the cleaning. Don’t buy too many things. Your room is small. Call your family. They can help.",
-          "reject": "Eleven short, simple sentences in a row: correct, but far below B2. Combine the ideas with ‘because’, ‘if’ or ‘before’ and vary the structures.",
-          "rejectDe": "Elf kurze, einfache Sätze hintereinander: richtig, aber weit unter B2. Gedanken mit because, if oder before verbinden und Satzmuster abwechseln."
-        }
-      ]
-    },
-    {
-      "id": "freedom",
-      "slot": "freedom",
-      "part": "Body paragraph 3",
-      "len": "long",
-      "q": "Which last piece of advice do we add?",
-      "de": "Der Absatz geht weiter: ein letzter Tipp aus eigener Erfahrung. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
-      "own": "Copy the frame. Then explain in your own words what the blogger has learnt and why it matters for future school leavers.",
-      "ownDe": "Gerüst abschreiben, dann mit eigenen Worten erklären, was die Person gelernt hat und warum das für künftige Schulabgänger:innen wichtig ist.",
-      "options": [
-        {
-          "l": "A",
-          "id": "free",
-          "label": "Freedom feels different",
-          "text": "{{One more thing: don’t expect freedom to feel the way you imagine.}} In theory, I could eat cereal for dinner and [[stay up]] until three every night. {{Funnily enough, since nobody stops me,}} I hardly ever do. Freedom, it [[turns out]], is a lot less exciting when you have a lecture at eight.",
-          "why": "A last tip with a surprising twist and a touch of humour shows that the blogger has grown up a bit."
-        },
-        {
-          "l": "B",
-          "id": "home",
-          "label": "Appreciate home",
-          "text": "{{Finally, appreciate home while you can.}} When I [[went back]] for a weekend, my old room suddenly looked tiny, {{and I realised how much my family}} used to do without a word, from [[topping up]] my bus pass to paying the internet bill.",
-          "why": "A last tip that looks back at home from a new angle and shows what the blogger has learnt."
+          "reject": "Only short, simple sentences in a row: correct, but far below B2. Combine the ideas with ‘because’, ‘if’ or ‘before’ and vary the structures.",
+          "rejectDe": "Nur kurze, einfache Sätze hintereinander: richtig, aber weit unter B2. Gedanken mit because, if oder before verbinden und Satzmuster abwechseln.",
+          "textLong": "Moving out is not easy. You need a lot of money. Make a budget. Food is expensive. Learn to cook some cheap meals. Flatmates can be difficult. Talk to them about the cleaning. Make a cleaning plan. Don’t buy too many things. Your room is small. Bills are a problem. Ask about the bills first. Visit the flat first. Freedom is nice. It is also tiring. You will miss your family. Call them often. They can help. Go home sometimes. It is good for you."
         }
       ],
-      "join": true
+      "ownLong": "Copy the frame. Then add your own tips for future school leavers, each with a reason, and one thing the blogger has learnt about life away from home.",
+      "ownLongDe": "Gerüst abschreiben, dann eigene Tipps für künftige Schulabgänger:innen ergänzen, jeweils mit Begründung, und eine Erfahrung der Person mit dem Leben außer Haus."
     },
     {
       "id": "concl",
@@ -363,7 +269,8 @@
           "id": "swap",
           "label": "Would I swap?",
           "text": "{{Would I swap}} my flatmates, the bills and the chores {{for life at home again?}} Not a chance, even if I do miss a full fridge. {{What about you? Are you about to leave home,}} or staying put for a while? Let me know in the comments!",
-          "why": "A question and a clear answer sum up the post, and the ending invites comments."
+          "why": "A question and a clear answer sum up the post, and the ending invites comments.",
+          "textLong": "{{Would I swap}} my flatmates, the bills and the chores {{for life at home again?}} Not a chance, even if I do miss a full fridge and a home-cooked Sunday lunch. In just one month, I’ve learnt more about myself than I expected. {{What about you? Are you about to leave home,}} or staying put for a while? Let me know in the comments!"
         },
         {
           "l": "B",
@@ -372,17 +279,21 @@
           "trap": true,
           "crit": "LSR",
           "text": "So yeah, that’s my first month lol. Moving out is soooo worth it tbh, even if ur always broke and the kitchen is a mess. Gonna post more soon, so follow me and drop a comment if u wanna know more!!!",
-          "reject": "This is text-message language: ‘lol’, ‘tbh’, ‘ur’, ‘u’, ‘gonna’, ‘wanna’ and ‘!!!’. A blog post can be informal, but it is still written in correct, standard English.",
-          "rejectDe": "Das ist Chat-Sprache (lol, tbh, ur, gonna, wanna, !!!). Ein Blog darf locker sein, aber er bleibt korrektes Englisch."
+          "reject": "This is text-message language (‘lol’, ‘tbh’, ‘ur’, ‘u’, ‘gonna’, ‘wanna’, ‘!!!’). A blog post can be informal, but it is still written in correct, standard English.",
+          "rejectDe": "Das ist Chat-Sprache (lol, tbh, ur, gonna, wanna, !!!). Ein Blog darf locker sein, aber er bleibt korrektes Englisch.",
+          "textLong": "So yeah, that’s my first month lol. Moving out is soooo worth it tbh, even if ur always broke and the kitchen is a mess. My flatmates r the best, even when the fridge is empty and nobody wants to clean. Gonna post more soon, so follow me and drop a comment if u wanna know more!!!"
         },
         {
           "l": "C",
           "id": "down",
           "label": "One month down",
           "text": "{{One month down, many more to go.}} Between bills, chores and two flatmates, I’ve [[messed up]] more than once, but I’ve learnt things no classroom could teach. {{If you’ve left home, what surprised you most?}} Still at home? What worries you most? Tell me in the comments!",
-          "why": "A short summary and two questions for different readers invite everyone to comment."
+          "why": "A short summary and two questions for different readers invite everyone to comment.",
+          "textLong": "{{One month down, many more to go.}} Between bills, chores and two flatmates, I’ve [[messed up]] more than once, but I’ve learnt things no classroom could teach, from reading the small print on a bill to [[sorting out]] an argument without slamming doors. {{If you’ve left home, what surprised you most?}} Still at home? What worries you most? Tell me in the comments!"
         }
-      ]
+      ],
+      "ownLong": "Copy the frame. Then sum up the first month in a sentence or two and finish with your own question to the readers.",
+      "ownLongDe": "Gerüst abschreiben, dann den ersten Monat in ein, zwei Sätzen zusammenfassen und mit einer eigenen Frage an die Leser:innen schließen."
     },
     {
       "id": "title",
@@ -421,17 +332,13 @@
     "title",
     "intro",
     "flat",
-    "movein",
     "money",
-    "chores",
-    "flatlife",
     "advice",
-    "freedom",
     "concl"
   ],
   "checks": [
     {
-      "en": "A title that makes readers curious, with user name and date under it"
+      "en": "A title that makes readers curious, with user name, date and time under it"
     },
     {
       "en": "An introduction with a hook (a scene or a question)"
@@ -455,9 +362,9 @@
   "teacher": {
     "aim": "Die Klasse baut gemeinsam einen Blogbeitrag auf B2-Niveau (Reifeprüfungsformat) mit drei Inhaltspunkten über den ersten Monat in einer WG nach der Matura. Schwerpunkt: Phrasal Verbs und ein lockeres, aber korrektes Blog-Register zwischen zu förmlich (Falle Introduction B) und Chat-Sprache (Falle Conclusion B).",
     "prep": "A/B/C/D-Karten austeilen (ohne Karten: 1–4 Finger, die Tasten 1–4 wählen wie A–D), Hefte bereit, Beamer im Vollbild. Im Gerüst-Modus den eingebauten Timer nutzen: 5–6 min pro Absatz. Die Aufgabe am Beamer enthält alles Nötige; die Person, die bloggt, und die Mitbewohner:innen Defne und Kwame sind erfunden.",
-    "heft": "Neue Seite: Datum rechts oben, als Überschrift „Blog post“ (wie am Beamer). Darunter 2 Zeilen für den Titel frei lassen (der Titel kommt zuletzt), darunter Username · Datum. Jeder Absatz beginnt nach einer Leerzeile, am Rand stehen die Randwörter Intro, Body 1, Body 2, Body 3 und Conclusion. Phrasal Verbs grün unterstreichen.",
-    "flow": "Volltext kurz (50 min): 5 min Aufgabe und Blog-Merkmale, 7 Text-Entscheidungen à ca. 2 min, Abschreiben ca. 25 min, 5 min Checkliste. Volltext lang (100 min): dazu drei Fortsetzungen ohne neuen Absatz: Einzug (Body 1), WG-Leben (Body 2) und ein letzter Tipp (Body 3). Gerüst kurz (ca. 60 min): 3 min Aufgabe, pro Absatz (und für die Fortsetzung zur Hausarbeit in Body 2) 1 min Entscheidung, 5–6 min eigenes Schreiben, 1 min Vergleich mit dem Modell; am Ende 3 min Titel und 5 min Checkliste. In einer 50-Minuten-Stunde Schluss und Checkliste als Hausübung. Gerüst: Die Namen Defne und Kwame und die Miete aus der Lücke an die Tafel schreiben. Gerüst lang (100 min): fünf Absätze, die Fortsetzung zur Hausarbeit und drei weitere Fortsetzungen à ca. 6 min (4 min Schreiben im selben Absatz), plus Titel.",
-    "traps": "Introduction B (LSR): viel zu förmlich für einen Blog (I would like to inform you, relocated, commence, I shall). Body 2 D (LSA): in the month, spend money for, safe statt save. Body 2, Fortsetzung zur Hausarbeit A (CC): Even so und Likewise statt einer Folge (So, As a result). Body 3 C (LSR): elf kurze Hauptsätze ohne Verbindung, weit unter B2. Conclusion B (LSR): Chat-Sprache (lol, tbh, ur, gonna, !!!). Kürzel: TA = Erfüllung der Aufgabenstellung, CC = Kohärenz und Kohäsion, LSR = Spektrum sprachlicher Mittel, LSA = Sprachrichtigkeit.",
-    "notes": "Der Blogbeitrag hat in beiden Längen fünf Absätze (Intro, drei Hauptteile, Schluss); Geld und Hausarbeit (Inhaltspunkt 2) stehen gemeinsam in Body 2, die lange Fassung macht Body 1, 2 und 3 mit Fortsetzungen länger, ohne neue Absätze. Markiert sind Phrasal Verbs in allen Formen (auch topping up, took it apart, wake me up), nicht markiert sind präpositionale Verben wie pay for. Gut zum Besprechen: Phrasal Verbs machen den Text locker, ohne ihn falsch zu machen; die beiden Register-Fallen (Introduction B, Conclusion B) zeigen die Grenzen nach oben und nach unten. Im Gerüst-Modus schreiben alle aus der Sicht der erfundenen Person, nie über die eigene Wohnsituation oder Familie. Differenzierung: Schnelle ersetzen in ihrem Text drei neutrale Verben durch passende Phrasal Verbs. Hausübung: ein Blog-Kommentar (ca. 120 Wörter) von Defne oder Kwame auf unseren Beitrag, mit mindestens vier Phrasal Verbs."
+    "heft": "Neue Seite: Datum rechts oben, als Überschrift „Blog post“ (wie am Beamer). Darunter 2 Zeilen für den Titel frei lassen (der Titel kommt zuletzt), darunter Username · Datum, Uhrzeit. Jeder Absatz beginnt nach einer Leerzeile, am Rand stehen die Randwörter Intro, Body 1, Body 2, Body 3 und Conclusion. Phrasal Verbs grün unterstreichen.",
+    "flow": "Volltext kurz (50 min): 5 min Aufgabe und Blog-Merkmale, 6 Entscheidungen (fünf Absätze und zuletzt der Titel) à ca. 2 min, Abschreiben ca. 25 min, 5 min Checkliste. Volltext lang (100 min): dieselben 6 Entscheidungen mit längeren Absätzen, ca. 3 min pro Entscheidung, Abschreiben ca. 40 min, 5 min Checkliste. Gerüst kurz (ca. 60 min): 3 min Aufgabe, pro Absatz 1 min Entscheidung, 5–6 min eigenes Schreiben, 1 min Vergleich mit dem Modell; am Ende 3 min Titel und 5 min Checkliste. In einer 50-Minuten-Stunde Schluss und Checkliste als Hausübung. Gerüst lang (100 min): dieselben Phasen mit ca. 2 min Entscheidung, 9–10 min eigenem Schreiben und 2 min Vergleich pro Absatz, plus Titel und Checkliste. Im Gerüst-Modus die Namen Defne und Kwame und die Miete aus der Lücke an die Tafel schreiben.",
+    "traps": "Introduction B (LSR): viel zu förmlich für einen Blog (I would like to inform you, relocated, commence, I shall). Body 1 C (CC): Even so und Likewise passen nicht (gemeint sind ein Grund und ein Gegensatz: That’s why, By contrast). Body 2 C (LSA): in the month, spend money for, safe statt save. Body 3 C (LSR): nur kurze Hauptsätze ohne Verbindung, weit unter B2. Conclusion B (LSR): Chat-Sprache (lol, tbh, ur, gonna, !!!). Kürzel: TA = Erfüllung der Aufgabenstellung, CC = Kohärenz und Kohäsion, LSR = Spektrum sprachlicher Mittel, LSA = Sprachrichtigkeit.",
+    "notes": "Der Blogbeitrag hat in beiden Längen dieselben Entscheidungen und fünf Absätze (Intro, Body 1–3, Schluss); in der langen Fassung ist jeder Absatz länger. Geld und Hausarbeit (Inhaltspunkt 2) stehen gemeinsam in einem Absatz, Body 2. Markiert sind Phrasal Verbs in allen Formen (auch topping up, took the bed apart, wake me up), nicht markiert sind präpositionale Verben wie pay for. Gut zum Besprechen: Phrasal Verbs machen den Text locker, ohne ihn falsch zu machen; die beiden Register-Fallen (Introduction B, Conclusion B) zeigen die Grenzen nach oben und nach unten. Im Gerüst-Modus schreiben alle aus der Sicht der erfundenen Person, nie über die eigene Wohnsituation oder Familie. Differenzierung: Schnelle ersetzen in ihrem Text drei neutrale Verben durch passende Phrasal Verbs. Hausübung: ein Blog-Kommentar (ca. 120 Wörter) von Defne oder Kwame auf unseren Beitrag, mit mindestens vier Phrasal Verbs."
   }
 }

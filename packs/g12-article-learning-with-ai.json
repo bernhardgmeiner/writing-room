@@ -78,7 +78,7 @@
   "gaps": [
     {
       "id": "NAME",
-      "step": "use2",
+      "step": "uses",
       "q": "Who do we quote? Give the student a first name.",
       "qDe": "Ruft einen Vornamen für die Person, die wir zitieren. Keine Namen von Mitschüler:innen oder Lehrer:innen.",
       "type": "text",
@@ -127,7 +127,14 @@
               "shortcut": "{{It is late on a Sunday evening,}} and tomorrow’s chemistry test is getting closer. {{Instead of texting a friend, many students}} now ask an AI chatbot to explain the topic. Is this a clever shortcut or a bad habit? {{Convenient as it is, this kind of help [[may]]}} cost more than it saves."
             }
           },
-          "why": "A short scene that many readers know from their own lives leads straight to the question."
+          "why": "A short scene that many readers know from their own lives leads straight to the question.",
+          "textLong": {
+            "by": "angle",
+            "map": {
+              "partner": "{{It is late on a Sunday evening,}} and tomorrow’s chemistry test is getting closer. The notes suddenly make no sense, and it is far too late to call anyone. {{Instead of texting a friend, many students}} now ask an AI chatbot to explain the topic. Is this a clever shortcut or a bad habit? {{Used wisely, the chatbot [[may]] be}} a better study partner than many people think.",
+              "shortcut": "{{It is late on a Sunday evening,}} and tomorrow’s chemistry test is getting closer. The notes suddenly make no sense, and it is far too late to call anyone. {{Instead of texting a friend, many students}} now ask an AI chatbot to explain the topic. Is this a clever shortcut or a bad habit? {{Convenient as it is, this kind of help [[may]]}} cost more than it saves."
+            }
+          }
         },
         {
           "l": "B",
@@ -140,7 +147,14 @@
               "shortcut": "{{Be honest: when did you last ask an AI tool for homework help?}} If the answer is ‘yesterday’, you are in good company, as chatbots are now part of everyday school life. {{The real question is whether}} they [[might]] be doing far too much of our thinking for us."
             }
           },
-          "why": "A direct question involves the readers, and the last sentence names the issue of the article."
+          "why": "A direct question involves the readers, and the last sentence names the issue of the article.",
+          "textLong": {
+            "by": "angle",
+            "map": {
+              "partner": "{{Be honest: when did you last ask an AI tool for homework help?}} If the answer is ‘yesterday’, you are in good company, as chatbots are now part of everyday school life. Some students use them every day, others only in an emergency. {{The real question is how we use them:}} as a shortcut that skips learning or as a partner that [[might]] make it easier.",
+              "shortcut": "{{Be honest: when did you last ask an AI tool for homework help?}} If the answer is ‘yesterday’, you are in good company, as chatbots are now part of everyday school life. Some students use them every day, others only in an emergency. {{The real question is whether}} they [[might]] be doing far too much of our thinking for us."
+            }
+          }
         },
         {
           "l": "C",
@@ -150,9 +164,12 @@
           "crit": "LSR",
           "text": "In this article I want to describe how AI tools can help students with their learning. I also want to explain the risks of relying on AI for schoolwork, and at the end I want to suggest rules for using AI in a way that supports learning.",
           "reject": "This copies the task word for word and uses ‘want to’ three times. Use your own words and a hook that makes people read on.",
-          "rejectDe": "Die Inhaltspunkte sind wörtlich aus der Aufgabe übernommen, dazu dreimal „want to“. Eigene Worte und ein Hook sind gefragt."
+          "rejectDe": "Die Inhaltspunkte sind wörtlich aus der Aufgabe übernommen, dazu dreimal „want to“. Eigene Worte und ein Hook sind gefragt.",
+          "textLong": "Chatbots are a big topic in schools at the moment, so this question is important for all students. In this article I want to describe how AI tools can help students with their learning. I also want to explain the risks of relying on AI for schoolwork, and at the end I want to suggest rules for using AI in a way that supports learning."
         }
-      ]
+      ],
+      "ownLong": "Copy the frame. Then describe the situation in a little more detail and make clear which view the article takes.",
+      "ownLongDe": "Gerüst abschreiben, dann die Situation etwas genauer beschreiben; die Grundhaltung soll erkennbar sein."
     },
     {
       "id": "uses",
@@ -160,8 +177,8 @@
       "part": "Body paragraph 1",
       "q": "Body paragraph 1: how can AI tools help students with their learning?",
       "de": "Erster Inhaltspunkt: wie KI-Werkzeuge beim Lernen helfen können. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
-      "own": "Copy the frame. Then describe one way AI can help with learning and give an example of your own.",
-      "ownDe": "Gerüst abschreiben, dann eine Möglichkeit beschreiben, wie KI beim Lernen hilft, mit einem eigenen Beispiel.",
+      "own": "Copy the frame. Then describe how AI can help with learning and give an example of your own.",
+      "ownDe": "Gerüst abschreiben, dann beschreiben, wie KI beim Lernen hilft, mit einem eigenen Beispiel.",
       "options": [
         {
           "l": "A",
@@ -174,7 +191,14 @@
               "shortcut": "{{Admittedly, the clearest benefit of these tools is [[probably]]}} that explanations are available at any time. A chatbot does not get tired of the same question, and students who missed a point can ask for simpler words, a new example or a step-by-step solution. {{For shy learners, this [[may]] be}} the first time they dare to ask."
             }
           },
-          "why": "The topic sentence names the benefit, and the examples show what it looks like in practice."
+          "why": "The topic sentence names the benefit, and the examples show what it looks like in practice.",
+          "textLong": {
+            "by": "angle",
+            "map": {
+              "partner": "{{The clearest benefit of these tools is [[probably]]}} that explanations are available at any time. A chatbot does not get tired of the same question, and students who missed a point can ask for simpler words or a new example. {{For shy learners, this [[may]] be}} the first time they dare to ask. {{When we asked around how students use chatbots,}} {NAME}, 17, gave a typical answer: “I ask it to explain things and to quiz me, not to write for me. If the first explanation doesn’t work, it simply tries another one.”",
+              "shortcut": "{{Admittedly, the clearest benefit of these tools is [[probably]]}} that explanations are available at any time. A chatbot does not get tired of the same question, and students who missed a point can ask for simpler words or a new example. {{For shy learners, this [[may]] be}} the first time they dare to ask. {{When we asked around how students use chatbots,}} {NAME}, 17, gave a typical answer: “I ask it to explain things and to quiz me, not to write for me. If the first explanation doesn’t work, it simply tries another one.”"
+            }
+          }
         },
         {
           "l": "B",
@@ -184,43 +208,20 @@
           "crit": "LSA",
           "text": "Many students use AI as a kind of private teacher. When I do not understand a topic, the chatbot can explain me the grammar or the maths again in simple words. It also gives useful informations for projects and controls my answers before a test, so I can see where I still have problems.",
           "reject": "Three typical mistakes: ‘explain me’ (→ explain … to me), ‘informations’ (→ information, no plural) and ‘controls my answers’ (→ checks my answers).",
-          "rejectDe": "Drei typische Fehler: explain me → explain … to me, informations → information (kein Plural), controls → checks (false friend: „kontrollieren“)."
+          "rejectDe": "Drei typische Fehler: explain me → explain … to me, informations → information (kein Plural), controls → checks (false friend: „kontrollieren“).",
+          "textLong": "Many students use AI as a kind of private teacher. When I do not understand a topic, the chatbot can explain me the grammar or the maths again in simple words. It also gives useful informations for projects and controls my answers before a test, so I can see where I still have problems. This is especially helpful late in the evening, when there is nobody else to ask. A friend of mine, {NAME}, even uses it to practise for oral exams, as it has time for one more question at any hour of the day."
         },
         {
           "l": "C",
           "id": "practice",
           "label": "Practice and feedback",
           "text": "{{AI tools can certainly help with practice and feedback.}} Before a test, some students ask for quiz questions and then for extra ones on whatever they got wrong. Others paste in a draft and get comments on structure and grammar within seconds. {{Such quick feedback [[tends to]] be most useful}} when students correct the mistakes themselves.",
-          "why": "Two concrete uses, and the last sentence adds a careful comment on how to get the most out of them."
-        }
-      ]
-    },
-    {
-      "id": "use2",
-      "slot": "use2",
-      "part": "Body paragraph 1",
-      "len": "long",
-      "q": "Which example do we add?",
-      "de": "Der Absatz geht weiter: ein Beispiel. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
-      "own": "Copy the frame. Then add an example of your own: how could a student use AI to practise?",
-      "ownDe": "Gerüst abschreiben, dann ein eigenes Beispiel ergänzen: Wie könnte jemand mit KI üben?",
-      "options": [
-        {
-          "l": "A",
-          "id": "voice",
-          "label": "A student’s voice",
-          "text": "{{When we asked around at school how students use chatbots,}} {NAME}, 17, gave a typical answer: “I ask the chatbot to quiz me, not to write for me. When it just hands me the solution, I forget it by the next day.” {{Experiences like this suggest that}} the way AI is used [[may]] matter more than the tool itself.",
-          "why": "A quote makes the article lively, and the last sentence draws a careful conclusion from it."
-        },
-        {
-          "l": "B",
-          "id": "speaking",
-          "label": "Speaking practice",
-          "text": "{{Language learning is a good example of this.}} A student preparing for an oral exam can hold a whole conversation in English with a chatbot, ask it to play an interviewer and get corrections afterwards. {{Unlike a classmate, a chatbot never laughs at mistakes,}} which [[seems to]] make many learners more willing to speak.",
-          "why": "A concrete situation from school life that shows a use many readers have not thought of."
+          "why": "Concrete examples of practice and feedback that readers can try out themselves, described with careful claims.",
+          "textLong": "{{AI tools can certainly help with practice and feedback.}} Before a test, some students ask for quiz questions and then for extra ones on whatever they got wrong. Others paste in a draft and get comments on structure and grammar within seconds. {{Such quick feedback [[tends to]] be most useful}} when students correct the mistakes themselves. {{Language learners [[may]] gain the most:}} a student preparing for an oral exam can hold a conversation in English with a chatbot and get corrections afterwards. {{Unlike a classmate, a chatbot never laughs at mistakes,}} which [[seems to]] make many learners more willing to speak."
         }
       ],
-      "join": true
+      "ownLong": "Copy the frame. Then describe how AI can help with learning and give two examples, or finish the quote in your own words.",
+      "ownLongDe": "Gerüst abschreiben, dann beschreiben, wie KI beim Lernen hilft: zwei Beispiele oder das Zitat mit eigenen Worten fertigschreiben."
     },
     {
       "id": "risks",
@@ -236,53 +237,31 @@
           "id": "copying",
           "label": "The temptation to copy",
           "text": "{{Yet the biggest risk [[may well]] be copying.}} A summary of a novel or a finished essay is only a click away, and anyone who hands it in skips exactly the thinking that homework is meant to train. {{Such students [[are likely to]] struggle}} when no help is available: in a test or at the Matura.",
-          "why": "The topic sentence names the risk, and the paragraph shows where it leads, using careful language."
+          "why": "The topic sentence names the main risk, and the paragraph shows where it leads, using careful language.",
+          "textLong": "{{Yet the biggest risk [[may well]] be copying.}} A summary of a novel or a finished essay is only a click away, and anyone who hands it in skips exactly the thinking that homework is meant to train. {{Even students who never copy can}} skip the thinking without noticing it. Memory research has long suggested that we remember best what we work out ourselves, so when an app removes every difficulty, the knowledge [[might]] never stick. {{Either way, students [[are likely to]] struggle}} when no help is available: in a test or at the Matura."
         },
         {
           "l": "B",
           "id": "wrong",
-          "label": "Confident but wrong",
+          "label": "Too much trust",
           "text": "{{There is a catch, though: chatbots sound just as confident when they are wrong.}} They produce text by predicting which words come next, not by checking facts, so they [[may]] mix up dates, get a calculation wrong or invent a source. {{Students who trust every answer [[are likely to]]}} learn mistakes as if they were facts.",
-          "why": "It explains why chatbots make mistakes, which makes the warning convincing."
+          "why": "It explains why trusting chatbots blindly is risky, which makes the warning convincing.",
+          "textLong": "{{There is a catch, though: chatbots sound just as confident when they are wrong.}} They produce text by predicting which words come next, not by checking facts, so they [[may]] mix up dates, get a calculation wrong or invent a source. Such errors are hard to spot because the wrong answer comes in the same polished sentences as the right one. A history project that quotes a book which does not exist is [[probably]] not worth the hour it saved. {{Students who trust every answer [[are likely to]]}} learn mistakes as if they were facts."
         },
         {
           "l": "C",
           "id": "trap",
-          "label": "A clear warning",
+          "label": "Warn the readers",
           "trap": true,
           "crit": "TA",
           "text": "AI is the end of real learning. Every student who uses a chatbot is cheating, and the answers are always wrong anyway. Teachers can never find out what has been copied, so homework is now completely useless. Anyone who uses these tools will forget how to think for themselves.",
-          "reject": "These are sweeping claims (every, always, never) that are simply not true. An honest article weighs the risks and uses careful language such as may, tend to or is likely to.",
-          "rejectDe": "Pauschale Behauptungen (every, always, never) stimmen so nicht. Ein ehrlicher Artikel wägt ab und formuliert vorsichtig (may, tend to, is likely to)."
-        }
-      ]
-    },
-    {
-      "id": "risk2",
-      "slot": "risk2",
-      "part": "Body paragraph 2",
-      "len": "long",
-      "q": "Which other risk do we add?",
-      "de": "Der Absatz geht weiter: ein weiteres Risiko. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
-      "own": "Copy the frame. Then explain this risk in your own words and give a reason.",
-      "ownDe": "Gerüst abschreiben, dann das Risiko mit eigenen Worten erklären und begründen.",
-      "options": [
-        {
-          "l": "A",
-          "id": "effort",
-          "label": "Learning without effort",
-          "text": "{{A second, quieter risk is learning without effort.}} Memory research has long suggested that we remember things better when we have to work them out ourselves. {{When an app removes every difficulty,}} the knowledge [[might]] never stick, even if nobody has cheated.",
-          "why": "It names a risk that has nothing to do with cheating, which makes the article more thoughtful."
-        },
-        {
-          "l": "B",
-          "id": "privacy",
-          "label": "Privacy",
-          "text": "{{Privacy is another point to keep in mind.}} Many tools store what users type, and some use it to improve future versions. {{Personal details, photos of friends or}} other people’s work [[probably]] do not belong in a chatbot at all, however convenient it [[might]] seem.",
-          "why": "It adds a practical risk that readers can avoid at once."
+          "reject": "These are sweeping claims (every, always, never, completely) that are simply not true. An honest article weighs the risks and uses careful language such as may, tend to or is likely to.",
+          "rejectDe": "Pauschale Behauptungen (every, always, never, completely) stimmen so nicht. Ein ehrlicher Artikel wägt ab und formuliert vorsichtig (may, tend to, is likely to).",
+          "textLong": "AI is the end of real learning. Every student who uses a chatbot is cheating, and the answers are always wrong anyway. Teachers can never find out what has been copied, so homework is now completely useless. Anyone who uses these tools will forget how to think for themselves. The same is true of privacy: every chatbot sells everything you type, and nothing can ever be deleted again. In a few years, nobody at all will be able to write a proper text without a machine."
         }
       ],
-      "join": true
+      "ownLong": "Copy the frame. Then explain the risk with an example in your own words and say what it can lead to.",
+      "ownLongDe": "Gerüst abschreiben, dann das Risiko mit einem Beispiel erklären und sagen, wohin es führen kann."
     },
     {
       "id": "rules",
@@ -299,52 +278,30 @@
           "label": "Rules for good use",
           "trap": true,
           "crit": "CC",
-          "text": "There are some simple rules for using AI well. Students should ask AI only for hints and explanations, not for complete answers. On the contrary, they should check important facts in a second source. Hence, it is a good idea to tell teachers when AI has helped with a piece of work, for example in a short note.",
-          "reject": "The rules are good, but two linkers are wrong: ‘On the contrary’ does not add a second rule (→ In addition), and ‘Hence’ makes honesty sound like a result of checking facts (→ Finally).",
-          "rejectDe": "Gute Regeln, falsche Linking words: On the contrary fügt nichts hinzu (→ In addition), Hence behauptet eine Folge, die es nicht gibt (→ Finally)."
+          "text": "There are some simple rules for using AI well. At first, students should ask AI only for hints and explanations, not for complete answers. They should also check important facts in a second source. In conclusion, it is a good idea to tell teachers when AI has helped with a piece of work, for example in a short note.",
+          "reject": "The rules are good, but two linkers are wrong: ‘At first’ means ‘in the beginning’ (before something changed), not the first point of a list (→ First), and ‘In conclusion’ sums up a whole text instead of introducing the last rule (→ Finally).",
+          "rejectDe": "Gute Regeln, falsche Linking words: At first heißt „anfangs“, nicht „erstens“ (→ First), und In conclusion fasst einen ganzen Text zusammen, statt die letzte Regel einzuleiten (→ Finally).",
+          "textLong": "There are some simple rules for using AI well. At first, students should ask AI only for hints and explanations, not for complete answers. They should also check important facts in a second source, such as a textbook or a reliable website. In conclusion, it is a good idea to tell teachers when AI has helped with a piece of work, for example in a short note. A class can write down such rules together at the start of the year, so that everybody knows what is allowed in homework and what is not."
         },
         {
           "l": "B",
           "id": "three",
           "label": "Three simple rules",
           "text": "{{Fortunately, a few simple rules can keep these problems in check.}} {{First, ask for}} explanations, hints and practice questions rather than finished answers. {{Second, check}} every important fact in a second source. {{Finally, be open about using a chatbot:}} a short note on how AI helped [[is likely to]] earn more trust than a suspiciously perfect text.",
-          "why": "Clear order with First, Second and Finally, and the last rule is explained."
+          "why": "Clear order with First, Second and Finally, and the last rule is explained.",
+          "textLong": "{{Fortunately, a few simple rules can keep these problems in check,}} especially if a class agrees on them together at the start of the year: students who have helped to set rules [[seem to]] take them more seriously. {{First, ask for}} explanations, hints and practice questions rather than finished answers. {{Second, check}} every important fact in a second source. {{Finally, be open about using a chatbot:}} a short note on how AI helped [[is likely to]] earn more trust than a suspiciously perfect text."
         },
         {
           "l": "C",
           "id": "tutor",
           "label": "Treat it like a tutor",
-          "text": "{{The best protection is to treat the chatbot like a tutor, not a ghostwriter.}} A good tutor asks questions and gives hints instead of solutions, and the chatbot can be told to do the same. {{It is equally wise to}} double-check facts and be open about using AI, as teachers [[tend to]] prefer honesty to excuses.",
-          "why": "One clear picture (tutor, not ghostwriter) that readers will remember, plus honesty as a rule."
-        }
-      ]
-    },
-    {
-      "id": "rules2",
-      "slot": "rules2",
-      "part": "Body paragraph 3",
-      "len": "long",
-      "q": "What else helps?",
-      "de": "Der Absatz geht weiter: ein weiterer Vorschlag. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
-      "own": "Copy the frame. Then explain the idea in your own words and say why it works.",
-      "ownDe": "Gerüst abschreiben, dann die Idee mit eigenen Worten erklären und sagen, warum sie funktioniert.",
-      "options": [
-        {
-          "l": "A",
-          "id": "agreement",
-          "label": "A class agreement",
-          "text": "{{Such rules work best when a whole class agrees on them.}} Some classes write their own AI agreement at the start of the year, stating what is allowed in homework, what is not and how help should be noted. {{Students who have helped to set such rules [[seem to]]}} take them more seriously, and teachers know what to expect.",
-          "why": "It shows how rules can be agreed together, which makes them easier to follow."
-        },
-        {
-          "l": "B",
-          "id": "offline",
-          "label": "Time without the tool",
-          "text": "{{Rules aside, nothing replaces regular practice without any help.}} Writing a paragraph by hand, solving a problem on paper or summarising a chapter from memory shows what has really been learnt. {{After all, exams [[are unlikely to]]}} reward skills that were always left to a machine.",
-          "why": "A practical tip with a convincing reason: exams test what we can do ourselves."
+          "text": "{{Against these risks, the best protection is to treat the chatbot like a tutor, not a ghostwriter.}} A good tutor gives hints instead of solutions, and the chatbot can be told to do the same. {{It is equally wise to}} double-check facts and be open about using AI, as teachers [[tend to]] prefer honesty to excuses.",
+          "why": "One clear picture (tutor, not ghostwriter) that readers will remember, plus checking facts and honesty as rules.",
+          "textLong": "{{Against these risks, the best protection is to treat the chatbot like a tutor, not a ghostwriter.}} A good tutor asks questions and gives hints instead of solutions, and the chatbot can be told to do the same. {{It is equally wise to}} double-check facts and be open about using AI, as teachers [[tend to]] prefer honesty to excuses. Even the best tutor, however, cannot replace practice without any help. Writing a paragraph by hand or summarising a chapter from memory shows what has really been learnt, and that is the only knowledge a student [[is likely to]] have in an exam."
         }
       ],
-      "join": true
+      "ownLong": "Copy the frame. Then suggest your own rules, say why they help and how a class could make them work.",
+      "ownLongDe": "Gerüst abschreiben, dann eigene Regeln vorschlagen, begründen und sagen, wie eine Klasse sie umsetzen kann."
     },
     {
       "id": "concl",
@@ -366,7 +323,14 @@
               "shortcut": "{{All in all, AI is neither a miracle nor a monster.}} It can help, but the temptation to let it think for us is real, and most of us [[might]] give in more often than we admit. So follow clear rules and keep the hard work for yourself."
             }
           },
-          "why": "A balanced first sentence, then a short look back at help, risks and rules that fits our view."
+          "why": "A balanced first sentence, then a short look back at help, risks and rules that fits our view.",
+          "textLong": {
+            "by": "angle",
+            "map": {
+              "partner": "{{All in all, AI is neither a miracle nor a monster.}} Its help is real, and so are its risks. Whether it makes us smarter or lazier depends less on the tool than on the way we use it. {{With a few clear rules,}} it [[may]] well become the best study partner our generation has had.",
+              "shortcut": "{{All in all, AI is neither a miracle nor a monster.}} It can explain and correct at any hour, but the temptation to let it think for us is real, and most of us [[might]] give in more often than we admit. {{So follow clear rules,}} use the chatbot as a helper and not as a crutch, and keep the hard work for yourself."
+            }
+          }
         },
         {
           "l": "B",
@@ -379,9 +343,18 @@
               "shortcut": "{{So next time you open a chatbot, ask yourself one question:}} am I using it to learn or to avoid learning? {{If the honest answer is ‘to avoid it’,}} no rule will help, and closing the app [[might]] be the smartest decision of the day."
             }
           },
-          "why": "It speaks to the readers directly, sums up the article in one question and leaves them with something to think about."
+          "why": "It speaks to the readers directly, sums up the article in one question and leaves them with something to think about.",
+          "textLong": {
+            "by": "angle",
+            "map": {
+              "partner": "A chatbot can give explanations and check your work, but it cannot do the remembering for you. {{So next time you open one, ask yourself one question:}} am I using it to learn or to avoid learning? {{If the honest answer is ‘to learn’}} and you keep to the rules, you [[may]] have found the best study partner there is.",
+              "shortcut": "A chatbot can give explanations and check your work, but it cannot do the remembering for you. {{So next time you open one, ask yourself one question:}} am I using it to learn or to avoid learning? {{If the honest answer is ‘to avoid it’,}} no rule will help, and closing the app [[might]] be the smartest decision of the day."
+            }
+          }
         }
-      ]
+      ],
+      "ownLong": "Copy the frame. Then sum up the article’s view in two or three sentences of your own.",
+      "ownLongDe": "Gerüst abschreiben, dann die Sicht des Artikels in zwei bis drei eigenen Sätzen zusammenfassen."
     },
     {
       "id": "title",
@@ -426,11 +399,8 @@
     "title",
     "intro",
     "uses",
-    "use2",
     "risks",
-    "risk2",
     "rules",
-    "rules2",
     "concl"
   ],
   "checks": [
@@ -460,8 +430,8 @@
     "aim": "Die Klasse baut gemeinsam einen Artikel nach SRDP-Standard über KI beim Lernen: ehrlich über den Nutzen (Erklärungen, Übung, Feedback) und die Risiken (Abschreiben, falsche Antworten), mit Regeln und dem Gedanken, die eigene KI-Nutzung offenzulegen. Fokus: Hedging – vorsichtige Aussagen mit may, might, tend to, be likely to, seem to und probably.",
     "prep": "A/B/C/D-Karten austeilen, eine Garnitur pro Person (ohne Karten: 1–4 Finger, die Tasten 1–4 wählen wie A–D). Beamer im Vollbild. Die Aufgabe am Beamer enthält alles Nötige. Im Gerüst-Modus den eingebauten Timer nutzen: 5–6 min pro Absatz.",
     "heft": "Neue Seite: Datum (rechts), „Article“ als Überschrift, darunter 2 Zeilen für den Titel frei lassen (der Titel kommt zuletzt). Jeder Absatz beginnt nach einer Leerzeile, am Rand stehen die Randwörter Intro, Body 1, Body 2, Body 3 und Conclusion. Hedging-Ausdrücke grün unterstreichen.",
-    "flow": "Volltext kurz (50 min): 3 min Aufgabe lesen und Grundhaltung wählen, 6 weitere Entscheidungen à ca. 2 min, Abschreiben ca. 25 min, 5 min Checkliste. Volltext lang (100 min): zusätzlich drei Fortsetzungen, die Body 1, 2 und 3 verlängern (kein neuer Absatz), Abschreiben ca. 40 min, am Ende Wortzahl und Hedging-Ausdrücke zählen. Gerüst kurz (60 min): 3 min Aufgabe und Grundhaltung, pro Absatz 1 min Entscheidung, 5–6 min eigenes Schreiben, 1 min Vergleich mit dem Modell; am Ende 2 min Titel und 4 min Checkliste. In 50 Minuten: Schluss und Titel als Hausübung. Gerüst lang (100 min): dieselben Phasen für die fünf Absätze, dazu drei Fortsetzungen à ca. 6 min (1 min Entscheidung, 4 min Schreiben im selben Absatz, 1 min Vergleich).",
-    "traps": "Introduction C (LSR): Inhaltspunkte wörtlich aus der Aufgabe, dreimal „I want to“. Body 1 B (LSA): explain me, informations, controls my answers (statt checks). Body 2 C (TA): Pauschalurteile mit every, always, never statt ehrlicher Abwägung – genau das Gegenteil von Hedging. Body 3 A (CC): On the contrary statt In addition, Hence ohne Ursache. Kürzel: TA = Erfüllung der Aufgabenstellung, CC = Kohärenz und Kohäsion, LSR = Spektrum sprachlicher Mittel, LSA = Sprachrichtigkeit.",
-    "notes": "Der Artikel hat in beiden Längen fünf Absätze (Intro, drei Hauptteile, Schluss); die lange Fassung macht Body 1, 2 und 3 mit je einer Fortsetzung länger, ohne neue Absätze. Keine Produkt- oder Firmennamen verwenden; es geht um KI-Werkzeuge allgemein. Die Grundhaltung im ersten Schritt steuert Einstieg, Schluss und Titel B; beide Haltungen sind ausgewogen, Nutzen und Risiken kommen in jeder Fassung vor. Sachinfo: Chatbots erzeugen Text, indem sie wahrscheinliche Fortsetzungen berechnen, nicht indem sie Fakten prüfen; daher sind falsche Daten, Rechenfehler und erfundene Quellen möglich. Die Gedächtnisforschung zeigt seit Langem, dass selbst Erarbeitetes besser behalten wird. Gesprächsanlass: Wie wird an eurer Schule KI-Hilfe offengelegt? Die Schüler:innen nicht nach eigenen Regelverstößen fragen. Für die Namenslücke (Fortsetzung von Body 1, Option A) nur erfundene Vornamen, keine Namen von Mitschüler:innen oder Lehrer:innen. Differenzierung: Schnelle ergänzen im Gerüst-Modus pro Absatz einen Satz mit einem weiteren Hedging-Ausdruck (appear to, perhaps). Hausübung: zweite Fassung mit der anderen Grundhaltung."
+    "flow": "Volltext kurz (50 min): 3 min Aufgabe lesen und Grundhaltung wählen, 6 weitere Entscheidungen (fünf Absätze und zuletzt der Titel) à ca. 2 min, Abschreiben ca. 25 min, 5 min Checkliste. Volltext lang (100 min): dieselben 7 Entscheidungen mit längeren Absätzen, ca. 3 min pro Entscheidung, Abschreiben ca. 40 min, am Ende Wortzahl und Hedging-Ausdrücke zählen. Gerüst kurz (60 min): 3 min Aufgabe und Grundhaltung, pro Absatz 1 min Entscheidung, 5–6 min eigenes Schreiben, 1 min Vergleich mit dem Modell; am Ende 2 min Titel und 4 min Checkliste. In 50 Minuten: Schluss und Titel als Hausübung. Gerüst lang (100 min): dieselben Phasen mit ca. 2 min Entscheidung, 9–10 min eigenem Schreiben und 2 min Vergleich pro Absatz.",
+    "traps": "Introduction C (LSR): Inhaltspunkte wörtlich aus der Aufgabe, dreimal „I want to“. Body 1 B (LSA): explain me, informations, controls my answers (statt checks). Body 2 C (TA): Pauschalurteile mit every, always, never, completely statt ehrlicher Abwägung, genau das Gegenteil von Hedging. Body 3 A (CC): At first („anfangs“) statt First, In conclusion statt Finally vor der letzten Regel. Kürzel: TA = Erfüllung der Aufgabenstellung, CC = Kohärenz und Kohäsion, LSR = Spektrum sprachlicher Mittel, LSA = Sprachrichtigkeit.",
+    "notes": "Der Artikel hat in beiden Längen dieselben Entscheidungen und fünf Absätze (Intro, Body 1–3, Schluss); in der langen Fassung ist jeder Absatz länger. Keine Produkt- oder Firmennamen verwenden; es geht um KI-Werkzeuge allgemein. Die Grundhaltung im ersten Schritt steuert Einstieg, Schluss und Titel B; beide Haltungen sind ausgewogen, Nutzen und Risiken kommen in jeder Fassung vor. Sachinfo: Chatbots erzeugen Text, indem sie berechnen, welche Wörter wahrscheinlich als Nächstes kommen, nicht indem sie Fakten prüfen; daher sind falsche Daten, Rechenfehler und erfundene Quellen möglich. Die Gedächtnisforschung zeigt seit Langem, dass selbst Erarbeitetes besser behalten wird. Gesprächsanlass: Wie wird an eurer Schule KI-Hilfe offengelegt? Die Schüler:innen nicht nach eigenen Regelverstößen fragen. Die Namenslücke gibt es nur in der langen Fassung (Body 1, Option A): nur erfundene Vornamen, keine Namen von Mitschüler:innen oder Lehrer:innen. Differenzierung: Schnelle ergänzen im Gerüst-Modus pro Absatz einen Satz mit einem weiteren Hedging-Ausdruck (appear to, perhaps). Hausübung: zweite Fassung mit der anderen Grundhaltung."
   }
 }

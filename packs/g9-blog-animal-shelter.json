@@ -44,7 +44,7 @@
       "short": "Give your blog post a title. Write around 200 words.",
       "long": "Give your blog post a title. Write around 250 words."
     },
-    "de": "Blogbeitrag über eine Schnupperwoche im Tierheim (Titel, Username, Datum, persönlicher und lockerer Ton, Kurzformen erlaubt, Leser:innen ansprechen, zum Kommentieren einladen). Drei Inhaltspunkte: Aufgaben beschreiben, ein besonderes Tier, was ich gelernt habe. Den Titel wählen wir ganz zum Schluss."
+    "de": "Blogbeitrag über eine Schnupperwoche im Tierheim (Titel, Username, Datum und Uhrzeit, persönlicher und lockerer Ton, Kurzformen erlaubt, Leser:innen ansprechen, zum Kommentieren einladen). Drei Inhaltspunkte: Aufgaben beschreiben, ein besonderes Tier, was ich gelernt habe. Den Titel wählen wir ganz zum Schluss."
   },
   "meta": {
     "user": "muddy_boots"
@@ -90,19 +90,23 @@
       "de": "Der erste Absatz eröffnet den Blogbeitrag. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
       "own": "Copy the frame. Then finish the introduction in your own words: say where the blogger spent the week.",
       "ownDe": "Gerüst abschreiben, dann mit eigenen Worten fertigschreiben, wo die Person, die den Blog schreibt, die Woche verbracht hat.",
+      "ownLong": "Copy the frame. Then finish the introduction in your own words: say where the blogger spent the week and how it felt.",
+      "ownLongDe": "Gerüst abschreiben, dann mit eigenen Worten fertigschreiben, wo die Person, die den Blog schreibt, die Woche verbracht hat und wie es war.",
       "options": [
         {
           "l": "A",
           "id": "greet",
-          "label": "Greet the readers",
-          "text": "{{Hi everyone! [[I’ve just finished]]}} a week of work experience, and guess where I spent it? At an animal shelter! {{It was tiring and messy,}} but it was also one of the best weeks ever.",
-          "why": "A greeting and a question speak to readers like friends. ‘I’ve just finished’ shows that the week has only just ended."
+          "label": "Start with the first morning",
+          "text": "{{Last week, at 7.30 on Monday morning,}} I stood in huge rubber boots while ten dogs barked at me. {{[[I’ve just finished]] a week of work experience}} at an animal shelter, and it was messy but wonderful.",
+          "textLong": "{{Last week, at 7.30 on Monday morning,}} I stood in huge rubber boots while ten dogs barked at me. {{[[I’ve just finished]] a week of work experience}} at an animal shelter, and it was messy but wonderful. Here’s what it was really like.",
+          "why": "A short scene puts readers into the first morning. ‘I’ve just finished’ shows that the week has only just ended."
         },
         {
           "l": "B",
           "id": "question",
           "label": "Start with a question",
           "text": "{{What really happens}} behind the doors of an animal shelter? {{Last week I found out.}} I spent five days of work experience there, and I already miss the animals.",
+          "textLong": "{{What really happens}} behind the doors of an animal shelter? {{Last week I found out.}} I spent five days of work experience there, and [[I’ve missed]] the animals every day since. Here’s my report from behind those doors.",
           "why": "A question makes readers curious, and ‘Last week I found out’ answers it in a short, punchy sentence."
         },
         {
@@ -112,6 +116,7 @@
           "trap": true,
           "crit": "LSR",
           "text": "This blog post is a report on the work-experience placement which was completed at an animal shelter from Monday to Friday. The tasks that were carried out and the knowledge that was gained are described below.",
+          "textLong": "This blog post is a report on the work-experience placement which was completed at an animal shelter from Monday to Friday. The tasks that were carried out and the knowledge that was gained are described below. Information about one animal is also included.",
           "reject": "Far too formal for a blog post: no ‘I’, mostly passive verbs (‘which was completed’, ‘were carried out’) and stiff phrases such as ‘the knowledge that was gained’. A blog post sounds personal and talks to its readers.",
           "rejectDe": "Viel zu förmlich für einen Blog: kein „I“, fast nur Passiv und steife Wendungen. Ein Blog klingt persönlich und spricht die Leser:innen an."
         }
@@ -125,12 +130,15 @@
       "de": "Erster Inhaltspunkt: unsere Aufgaben im Tierheim. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
       "own": "Copy the frame. Then describe the tasks in your own words. Use the past simple for finished times.",
       "ownDe": "Gerüst abschreiben, dann die Aufgaben mit eigenen Worten beschreiben. Für abgeschlossene Zeitpunkte das Past simple verwenden.",
+      "ownLong": "Copy the frame. Then describe the tasks and one more detail from the week in your own words. Use the past simple for finished times.",
+      "ownLongDe": "Gerüst abschreiben, dann die Aufgaben und ein weiteres Detail aus der Woche mit eigenen Worten beschreiben. Für abgeschlossene Zeitpunkte das Past simple verwenden.",
       "options": [
         {
           "l": "A",
           "id": "days",
           "label": "Day by day",
-          "text": "{{So what did I do all week? On my first morning,}} the staff showed me around and gave me rubber boots. {{From then on,}} I cleaned kennels, filled water bowls and walked the dogs. {{By Friday,}} I knew the names of all twenty-three dogs!",
+          "text": "{{So what did I do all week? On my first morning,}} the staff showed me around and explained the safety rules. {{From then on,}} I cleaned kennels, filled water bowls and walked the dogs. {{By Friday,}} I knew the names of all twenty-three dogs!",
+          "textLong": "{{So what did I do all week? On my first morning,}} the staff showed me around and explained the safety rules. {{From then on,}} I cleaned kennels, filled water bowls and walked the dogs, usually with a volunteer who [[has worked]] there for twenty years. {{By Friday,}} I knew the names of all twenty-three dogs!",
           "why": "A question picks up the introduction, then time phrases lead readers through the week. Finished times go with the past simple."
         },
         {
@@ -139,45 +147,20 @@
           "label": "From Monday on",
           "trap": true,
           "crit": "LSA",
-          "text": "On Monday I have cleaned all the kennels, and the chef of the shelter showed me how to prepare the food. I never saw so many dogs in my whole life! In the afternoons I took them for walks and brushed the cats.",
-          "reject": "Three typical mistakes: ‘On Monday I have cleaned’ (→ On Monday I cleaned), ‘the chef’ (→ the manager) and ‘I never saw … in my whole life’ (→ I’ve never seen … in my whole life).",
-          "rejectDe": "Drei typische Fehler: On Monday + Present perfect → On Monday I cleaned, chef (= Koch, Köchin) → manager, I never saw … in my whole life → I’ve never seen … (Erfahrung bis jetzt)."
+          "text": "On Monday I have cleaned all the kennels, and the chef of the shelter showed me how to prepare the food. I have never seen so much dogs in my whole life! In the afternoons I took them for walks and brushed the cats.",
+          "textLong": "On Monday I have cleaned all the kennels, and the chef of the shelter showed me how to prepare the food. I have never seen so much dogs in my whole life! In the afternoons I took them for walks and brushed the cats. On Friday I helped to wash two very muddy dogs.",
+          "reject": "Three typical mistakes: ‘On Monday I have cleaned’ (→ On Monday I cleaned), ‘the chef’ (→ the manager) and ‘so much dogs’ (→ so many dogs).",
+          "rejectDe": "Drei typische Fehler: On Monday + Present perfect → On Monday I cleaned, chef (= Koch, Köchin) → manager, so much dogs → so many dogs (dogs kann man zählen)."
         },
         {
           "l": "C",
           "id": "hard",
           "label": "Hard work",
           "text": "{{Shelter work is no holiday: [[I’ve never worked]] so hard in my life!}} {{Every morning I}} cleaned cages, washed food bowls and carried heavy bags of dog food. {{In the afternoons, I}} walked the dogs and brushed the cats, the best part of the day.",
+          "textLong": "{{Shelter work is no holiday: [[I’ve never worked]] so hard in my life!}} {{Every morning I}} cleaned cages, washed food bowls and carried heavy bags of dog food. {{In the afternoons, I}} walked the dogs and brushed the cats, the best part of the day. On Thursday, I even saw a young dog leave with its new family.",
           "why": "A strong personal statement leads from the introduction into the week, then details in the past simple."
         }
       ]
-    },
-    {
-      "id": "people",
-      "slot": "people",
-      "part": "Body paragraph 1",
-      "len": "long",
-      "q": "Who or what else impressed us during the week?",
-      "de": "Der Absatz geht weiter: Menschen im Tierheim oder ein besonderer Tag. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
-      "own": "Copy the frame. Then add your own details about the people at the shelter or the special day.",
-      "ownDe": "Gerüst abschreiben, dann eigene Details zu den Menschen im Tierheim oder zum besonderen Tag ergänzen.",
-      "options": [
-        {
-          "l": "A",
-          "id": "volunteers",
-          "label": "The volunteers",
-          "text": "{{The shelter could not work without its people.}} {{Most of them are volunteers}} who come after work or at weekends, whatever the weather. {{One woman [[has helped]] there for}} more than twenty years, and the dogs run to the fence when she arrives.",
-          "why": "Turns from the animals to the people who look after them. ‘Has helped … for more than twenty years’ is still true today."
-        },
-        {
-          "l": "B",
-          "id": "adoption",
-          "label": "A happy day",
-          "text": "{{The happiest moment of the week came on Thursday.}} A family took home a young dog after three visits, as the staff want to be sure that every animal finds the right home. {{Since that day, the family [[has sent]]}} the shelter two photos of a very happy dog.",
-          "why": "Adds one special moment to our week. Past simple for Thursday, present perfect with ‘since that day’ up to now."
-        }
-      ],
-      "join": true
     },
     {
       "id": "pet",
@@ -207,6 +190,8 @@
       "de": "Zweiter Inhaltspunkt: das Tier, das uns in dieser Woche besonders berührt hat. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
       "own": "Copy the frame. Then describe the animal and one moment with it in your own words.",
       "ownDe": "Gerüst abschreiben, dann das Tier und einen Moment mit ihm mit eigenen Worten beschreiben.",
+      "ownLong": "Copy the frame. Then describe the animal, how it behaved and one moment with it in your own words.",
+      "ownLongDe": "Gerüst abschreiben, dann das Tier, sein Verhalten und einen Moment mit ihm mit eigenen Worten beschreiben.",
       "options": [
         {
           "l": "A",
@@ -219,6 +204,13 @@
             "map": {
               "old": "My favourite was {ANIMAL}, an old dog that most visitors walk straight past. Finally, on my very first morning, I said hello through the fence. After that, we went for a slow walk together every afternoon. At first, on my last day, I almost cried when I said goodbye.",
               "shy": "My favourite was {ANIMAL}, a shy black cat that hid from everybody. Finally, on my very first morning, I said hello through the cage door. After that, I sat next to the cage with a book every afternoon. At first, on my last day, I almost cried when I said goodbye."
+            }
+          },
+          "textLong": {
+            "by": "pet",
+            "map": {
+              "old": "My favourite was {ANIMAL}, an old dog that most visitors walk straight past. Finally, on my very first morning, I said hello through the fence. After that, we went for a slow walk together every afternoon, and the dog stopped to sniff every tree. At first, on my last day, I almost cried when I said goodbye.",
+              "shy": "My favourite was {ANIMAL}, a shy black cat that hid from everybody. Finally, on my very first morning, I said hello through the cage door. After that, I sat next to the cage with a book every afternoon and read quietly. At first, on my last day, I almost cried when I said goodbye."
             }
           },
           "reject": "The time words are mixed up: ‘Finally’ introduces the first morning, and ‘At first’ introduces the last day. Readers can’t follow the order of events.",
@@ -235,6 +227,13 @@
               "shy": "{{Of all the animals, the one I’ll never forget is}} {ANIMAL}, a black cat that hid under a blanket all day. {{Sadly, this cat [[has lived]] at the shelter for}} almost a year because shy cats are rarely adopted. Every day I sat by the blanket and talked softly."
             }
           },
+          "textLong": {
+            "by": "pet",
+            "map": {
+              "old": "{{Of all the animals, the one I’ll never forget is}} {ANIMAL}, a twelve-year-old dog with a grey nose and kind brown eyes. {{Sadly, this dog [[has lived]] at the shelter for}} more than a year because most visitors want puppies. Every afternoon we walked slowly around the block, and the old dog stopped to sniff every single tree.",
+              "shy": "{{Of all the animals, the one I’ll never forget is}} {ANIMAL}, a black cat that hid under a blanket all day. {{Sadly, this cat [[has lived]] at the shelter for}} almost a year because shy cats are rarely adopted. Every day I sat by the blanket and talked softly, and by Friday two green eyes were watching me."
+            }
+          },
           "why": "‘Of all the animals’ leads from the whole week to one animal. ‘Has lived … for more than a year’ is still true today."
         },
         {
@@ -246,6 +245,13 @@
             "map": {
               "old": "{{One animal, though, stole my heart:}} {ANIMAL}, an old dog that most visitors walk straight past. On Wednesday, I sat down in the kennel with a book, and after a while a grey head landed on my knee. {{Nobody [[has ever trusted]] me like that.}}",
               "shy": "{{One animal, though, stole my heart:}} {ANIMAL}, a shy black cat that hid from everybody. On Wednesday, I sat quietly next to the cage with a book, and after an hour a little black paw touched my hand. {{Nobody [[has ever trusted]] me like that.}}"
+            }
+          },
+          "textLong": {
+            "by": "pet",
+            "map": {
+              "old": "{{One animal, though, stole my heart:}} {ANIMAL}, an old dog that most visitors walk straight past. For two days, the dog just watched me from a corner. {{On Wednesday,}} I sat down in the kennel with a book, and after a while a grey head landed on my knee. {{Nobody [[has ever trusted]] me like that.}}",
+              "shy": "{{One animal, though, stole my heart:}} {ANIMAL}, a shy black cat that hid from everybody. For two days, the cat just watched me from the back of the cage. {{On Wednesday,}} I sat quietly next to the cage with a book, and after an hour a little black paw touched my hand. {{Nobody [[has ever trusted]] me like that.}}"
             }
           },
           "why": "‘One animal, though’ turns from all the work to one animal and zooms in on one moment. The last sentence sums up a life experience."
@@ -260,12 +266,15 @@
       "de": "Dritter Inhaltspunkt: was wir aus der Woche mitnehmen. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
       "own": "Copy the frame. Then explain in your own words what the blogger has learnt.",
       "ownDe": "Gerüst abschreiben, dann mit eigenen Worten erklären, was die Person, die den Blog schreibt, gelernt hat.",
+      "ownLong": "Copy the frame. Then explain in your own words what the blogger has learnt and add one more sentence: an example from the shelter or a plan for the future.",
+      "ownLongDe": "Gerüst abschreiben, dann mit eigenen Worten erklären, was die Person, die den Blog schreibt, gelernt hat, und einen weiteren Satz ergänzen: ein Beispiel aus dem Tierheim oder einen Plan für die Zukunft.",
       "options": [
         {
           "l": "A",
           "id": "animals",
           "label": "Lessons about animals",
           "text": "{{Animals such as {ANIMAL} [[have taught]] me a lot.}} They need fixed routines and people who stay calm, even on busy days. {{[[I’ve also realised]] that}} a pet is a promise for ten or fifteen years, not a quick birthday present.",
+          "textLong": "{{Animals such as {ANIMAL} [[have taught]] me a lot.}} They need fixed routines and people who stay calm, even on busy days. {{[[I’ve also realised]] that}} a pet is a promise for ten or fifteen years, not a quick birthday present. Many of the dogs at the shelter were once exactly that kind of present.",
           "why": "The first sentence links the animal of the last paragraph to the lessons. The present perfect shows that they still matter now."
         },
         {
@@ -273,17 +282,19 @@
           "id": "myself",
           "label": "Lessons about myself",
           "text": "{{Looking back, [[I’ve learnt]] a lot about myself.}} I used to think I was too impatient for quiet work. {{Now I know that}} I can stay calm when a frightened animal needs time, and [[I’ve started]] to think about a job with animals.",
+          "textLong": "{{Looking back, [[I’ve learnt]] a lot about myself.}} I used to think I was too impatient for quiet work. {{Now I know that}} I can stay calm when a frightened animal needs time, and [[I’ve started]] to think about a job with animals. Next summer, I might even ask the shelter if I can help in the holidays.",
           "why": "‘Looking back’ turns to the whole week. Compares the past (‘I used to think’) with now: very personal, which suits a blog."
         },
         {
           "l": "C",
           "id": "list",
-          "label": "What I learnt",
+          "label": "What the week taught me",
           "trap": true,
-          "crit": "LSR",
-          "text": "I learnt a lot at the shelter. I learnt that animals need fixed routines. I learnt that a pet is a promise for many years. I learnt that I can be patient. I learnt that I want a job with animals.",
-          "reject": "The ideas are good, but every sentence starts with ‘I learnt’. Vary your sentences: Now I know that …, I’ve also realised that …, The week has taught me …",
-          "rejectDe": "Gute Ideen, aber jeder Satz beginnt mit „I learnt“. Abwechslungsreiche Satzanfänge verwenden."
+          "crit": "LSA",
+          "text": "The week at the shelter has taught me so much. The staff gave me a lot of useful informations about pets: animals need fixed routines, and a pet is a promise for many years, not a quick birthday present. Now I can imagine to work with animals one day.",
+          "textLong": "The week at the shelter has taught me so much. The staff gave me a lot of useful informations about pets: animals need fixed routines, and a pet is a promise for many years, not a quick birthday present. Patience is the most important thing: a frightened animal needs time before it trusts you. Now I can imagine to work with animals one day.",
+          "reject": "Two typical mistakes: ‘informations’ (→ information: it has no plural) and ‘can imagine to work’ (→ can imagine working).",
+          "rejectDe": "Zwei typische Fehler: informations → information (kein Plural im Englischen), can imagine to work → can imagine working."
         }
       ]
     },
@@ -295,19 +306,23 @@
       "de": "Der letzte Absatz greift die ganze Woche kurz auf und lädt zum Kommentieren ein. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
       "own": "Copy the frame. Then sum up the blogger’s week in one sentence and finish with your own question or invitation to the readers.",
       "ownDe": "Gerüst abschreiben, dann die Woche der Person, die den Blog schreibt, in einem Satz zusammenfassen und mit einer eigenen Frage oder Einladung an die Leser:innen enden.",
+      "ownLong": "Copy the frame. Then sum up the blogger’s week in one or two sentences and finish with your own question or invitation to the readers.",
+      "ownLongDe": "Gerüst abschreiben, dann die Woche der Person, die den Blog schreibt, in ein bis zwei Sätzen zusammenfassen und mit einer eigenen Frage oder Einladung an die Leser:innen enden.",
       "options": [
         {
           "l": "A",
           "id": "adopt",
-          "label": "Sum up, then ask the readers",
-          "text": "{{All in all, the week [[has given]] me dirty boots, lots of new ideas and}} a friend called {ANIMAL}. {{So, what about you? [[Have you ever adopted]]}} a pet from a shelter? Let me know in the comments below!",
-          "why": "Sums up the week in one sentence, then a question with ‘Have you ever …?’ invites comments."
+          "label": "Look back, then ask the readers",
+          "text": "{{All in all, these five days [[have given]] me}} dirty boots, lots of new ideas and a friend called {ANIMAL}. {{So, what about you? Would you spend}} a week at a shelter? Let me know below!",
+          "textLong": "{{All in all, these five days [[have given]] me}} dirty boots, lots of new ideas and a friend called {ANIMAL}. I really hope my new friend finds a loving home soon. {{So, what about you? Would you spend}} a week at a shelter? Let me know below!",
+          "why": "Sums up the week in one sentence, then asks readers if they would like to try it too."
         },
         {
           "l": "B",
           "id": "recommend",
           "label": "Recommend the experience",
           "text": "{{My tip: if you’re still looking for work experience,}} try an animal shelter. You’ll get dirty, but you’ll learn a lot and maybe find a friend like {ANIMAL}. {{[[Have you ever done]] work experience}} somewhere unusual? Tell me in the comments!",
+          "textLong": "{{My tip: if you’re still looking for work experience,}} try an animal shelter. You’ll get dirty and tired, but you’ll learn a lot about animals and about yourself, and maybe you’ll find a friend like {ANIMAL}. {{[[Have you ever done]] work experience}} somewhere unusual? Tell me in the comments!",
           "why": "Turns the whole week into a tip for readers and ends with a question they can answer in the comments."
         }
       ]
@@ -355,14 +370,13 @@
     "title",
     "intro",
     "tasks",
-    "people",
     "animal",
     "learnt",
     "concl"
   ],
   "checks": [
     {
-      "en": "A title that makes readers curious, with user name and date under it"
+      "en": "A title that makes readers curious, with user name, date and time under it"
     },
     {
       "en": "Each content point has its own body paragraph, in the order of the task"
@@ -389,9 +403,9 @@
   "teacher": {
     "aim": "Die Klasse baut gemeinsam einen Blogbeitrag (A2+/B1) über eine Schnupperwoche im Tierheim und übt dabei den Unterschied zwischen Past simple (abgeschlossene Zeitpunkte) und Present perfect (Erfahrungen, Ergebnisse, Zeiträume bis jetzt) sowie Blog-Konventionen.",
     "prep": "A/B/C/D-Karten austeilen (eine Garnitur pro Person), Hefte bereitlegen. Beamer im Vollbild. Im Gerüst-Modus den eingebauten Timer nutzen: 5 min pro Absatz, bei Bedarf +1. Die Aufgabe am Beamer enthält alles Nötige.",
-    "heft": "Neue Seite: Datum rechts oben, darunter „Blog post“ als Überschrift (wie am Beamer). Dann 2 Zeilen für den Titel frei lassen (der Titel kommt zuletzt), darunter Username und Datum in einer Zeile (wie am Beamer). Fünf Absätze, jeder nach einer Leerzeile, am Rand Intro, Body 1, Body 2, Body 3, Conclusion. In der langen Fassung geht Body 1 ohne neue Zeile weiter. Present-perfect-Formen grün unterstreichen.",
-    "flow": "Volltext kurz (50 min): 5 min Aufgabe und Kopf, 7 Entscheidungen (inklusive Wahl des Tiers) à ca. 2 min, Abschreiben ca. 20 min, 5 min Checkliste. Volltext lang (ca. 60 min): wie kurz, dazu eine Fortsetzung von Body 1 (Freiwillige oder ein besonderer Tag); das sind eine Entscheidung und rund 45 Wörter Abschreiben mehr. In einer Doppelstunde die restliche Zeit für die Besprechung der Fallen nutzen und die Hausübung zu zweit beginnen. Gerüst kurz (realistisch ca. 60 min): 5 min Aufgabe und Kopf; pro Absatz 1 min Entscheidung, 5–6 min eigenes Schreiben, 1 min Vergleich mit dem Modell; am Ende 5 min Checkliste. In einer 50-Minuten-Stunde den Schluss noch abstimmen und das Gerüst abschreiben lassen; Schluss fertigschreiben und eigenen Titel finden als Hausübung. Gerüst lang (ca. 70 min): gleicher Rhythmus wie kurz, dazu die Fortsetzung von Body 1 mit ca. 5 min Schreiben. In einer Doppelstunde danach eine Vergleichsrunde zu zweit.",
-    "traps": "Intro C (LSR): viel zu förmlich für einen Blog (kein „I“, fast nur Passiv, steife Wendungen). Body 1 B (LSA): On Monday I have cleaned, chef statt manager, I never saw … in my whole life statt I’ve never seen. Body 2 A (CC): Finally und At first vertauscht, Reihenfolge unklar. Body 3 C (LSR): jeder Satz beginnt mit „I learnt“. Kürzel: TA = Erfüllung der Aufgabenstellung, CC = Kohärenz und Kohäsion, LSR = Spektrum sprachlicher Mittel, LSA = Sprachrichtigkeit.",
-    "notes": "Aufbau: Jeder Text hat fünf Absätze (Einleitung, drei Hauptabsätze, Schluss); die lange Fassung macht Body 1 länger, sie fügt keinen Absatz hinzu. Fokus: markiert sind nur Present-perfect-Formen; nach Body 1 lohnt eine Minute an der Tafel: Signalwörter für das Past simple (on Monday, last week, every afternoon) und für das Present perfect (ever, never, just, since, for … bis jetzt). Kohäsion: Die Klasse achtet darauf, wie jeder Hauptabsatz an den vorigen anschließt (So what did I do …?, One animal, though, …, Animals such as …) und wie der Schluss die ganze Woche aufgreift. Das Tierheim und alle Personen sind erfunden; Schnuppertage im Tierheim sind je nach Einrichtung und Alter unterschiedlich geregelt. Für die Namenslücke einen erfundenen Tiernamen verwenden, keine Namen von Mitschüler:innen oder Lehrer:innen. Differenzierung: Schnelle ergänzen im Gerüst-Modus einen Satz mit „Have you ever …?“ an die Leser:innen. Hausübung: Blog-Kommentar (ca. 80 Wörter) als Antwort auf den Beitrag, mit einer Frage an die Person, die den Blog schreibt, und einem eigenen Tipp für eine Schnupperwoche."
+    "heft": "Neue Seite: Datum rechts oben, darunter „Blog post“ als Überschrift (wie am Beamer). Dann 2 Zeilen für den Titel frei lassen (der Titel kommt zuletzt), darunter Username, Datum und Uhrzeit in einer Zeile (wie am Beamer). Fünf Absätze, jeder nach einer Leerzeile, am Rand Intro, Body 1, Body 2, Body 3, Conclusion. Present-perfect-Formen grün unterstreichen.",
+    "flow": "Volltext kurz (50 min): 5 min Aufgabe und Kopf, 7 Entscheidungen (fünf Absätze, die Wahl des Tiers und zum Schluss der Titel) à ca. 2 min, Abschreiben ca. 20 min, 5 min Checkliste. Volltext lang (ca. 60 min): dieselben 7 Entscheidungen, jeder Absatz ist etwas länger, Abschreiben ca. 25 min. In einer Doppelstunde die restliche Zeit für die Besprechung der Fallen nutzen und die Hausübung zu zweit beginnen. Gerüst kurz (realistisch ca. 60 min): 5 min Aufgabe und Kopf; pro Absatz 1 min Entscheidung, 5–6 min eigenes Schreiben, 1 min Vergleich mit dem Modell; am Ende 5 min Checkliste. In einer 50-Minuten-Stunde den Schluss noch abstimmen und das Gerüst abschreiben lassen; Schluss fertigschreiben und eigenen Titel finden als Hausübung. Gerüst lang (ca. 70 min): gleicher Ablauf, pro Absatz 1–2 min mehr für das längere eigene Schreiben. In einer Doppelstunde danach eine Vergleichsrunde zu zweit.",
+    "traps": "Intro C (LSR): viel zu förmlich für einen Blog (kein „I“, fast nur Passiv, steife Wendungen). Body 1 B (LSA): On Monday I have cleaned, chef statt manager, so much dogs statt so many dogs. Body 2 A (CC): Finally und At first vertauscht, Reihenfolge unklar. Body 3 C (LSA): informations (kein Plural), can imagine to work statt can imagine working. Kürzel: TA = Erfüllung der Aufgabenstellung, CC = Kohärenz und Kohäsion, LSR = Spektrum sprachlicher Mittel, LSA = Sprachrichtigkeit.",
+    "notes": "Aufbau: Jeder Text hat fünf Absätze (Einleitung, drei Hauptabsätze, Schluss), und jede Entscheidung ist ein ganzer Absatz. Die lange Fassung hat dieselben Entscheidungen, nur sind die Absätze länger. Fokus: markiert sind nur Present-perfect-Formen; nach Body 1 lohnt eine Minute an der Tafel: Signalwörter für das Past simple (last week, on Monday, on my first morning, two days ago) und für das Present perfect (ever, never, just, since, for … bis jetzt). Kohäsion: Die Klasse achtet darauf, wie jeder Hauptabsatz an den vorigen anschließt (So what did I do …?, One animal, though, …, Animals such as …) und wie der Schluss die ganze Woche aufgreift. Das Tierheim und alle Personen sind erfunden; Schnuppertage im Tierheim sind je nach Einrichtung und Alter unterschiedlich geregelt. Für die Namenslücke einen erfundenen Tiernamen verwenden, keine Namen von Mitschüler:innen oder Lehrer:innen. Differenzierung: Schnelle ergänzen im Gerüst-Modus einen Satz mit „Have you ever …?“ an die Leser:innen. Hausübung: Blog-Kommentar (ca. 80 Wörter) als Antwort auf den Beitrag, mit einer Frage an die Person, die den Blog schreibt, und einem eigenen Tipp für eine Schnupperwoche."
   }
 }

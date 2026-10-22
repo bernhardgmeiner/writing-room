@@ -48,7 +48,7 @@
   },
   "meta": {
     "to": "The School Management and the Parents’ Association",
-    "from": "Our class",
+    "from": "Student survey group",
     "date": "{TODAY}",
     "subjectSlot": "subject"
   },
@@ -89,8 +89,8 @@
     {
       "id": "GUIDE",
       "step": "recs",
-      "q": "Our advice project for working students needs a short English name. What do we call it?",
-      "qDe": "Unser Beratungsprojekt für Schüler:innen mit Nebenjob braucht einen kurzen englischen Namen, z. B. „Work Smart“. Keine Namen von Mitschüler:innen oder Lehrer:innen.",
+      "q": "Our project for working students needs a short English name. What do we call it?",
+      "qDe": "Unser Projekt für Schüler:innen mit Nebenjob braucht einen kurzen englischen Namen, z. B. „Work Smart“. Keine Namen von Mitschüler:innen oder Lehrer:innen.",
       "type": "text",
       "default": "Work Smart",
       "max": 30
@@ -134,25 +134,29 @@
       "slot": "intro",
       "part": "Introduction",
       "q": "Introduction: how do we open the report?",
-      "de": "Die Einleitung eröffnet den Report. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "de": "Die Einleitung nennt Zweck und Datenquelle des Reports. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
       "own": "Copy the frame. Then complete the introduction: who took part in the survey and what does the report do?",
       "ownDe": "Gerüst abschreiben, dann die Einleitung fertigschreiben: Wer wurde befragt, und was leistet der Report?",
+      "ownLong": "Copy the frame. Then complete the introduction: who took part in the survey, what the report does and, if you like, one limit of the survey.",
+      "ownLongDe": "Gerüst abschreiben, dann die Einleitung fertigschreiben: wer befragt wurde, was der Report leistet und, wenn ihr wollt, eine Grenze der Umfrage.",
       "options": [
         {
           "l": "A",
           "id": "letter",
           "label": "Address the readers",
-          "text": "### Introduction\nDear Sir or Madam,\nI am writing to tell you about our survey on part-time jobs, in which 300 students aged 15 to 18 took part. I would be very grateful if you could read the results below, and I look forward to hearing from you.",
           "trap": true,
           "crit": "TA",
           "reject": "This is the opening of a formal letter, not a report. A report has no greeting and no ‘I look forward to hearing from you’; its introduction states the purpose and the data source.",
-          "rejectDe": "Das ist ein Briefanfang, kein Report: Ein Report hat keine Anrede und kein „I look forward to hearing from you“, sondern nennt Zweck und Datenquelle."
+          "rejectDe": "Das ist ein Briefanfang, kein Report: Ein Report hat keine Anrede und kein „I look forward to hearing from you“, sondern nennt Zweck und Datenquelle.",
+          "text": "### Introduction\nDear Sir or Madam,\nI am writing to tell you about our survey on part-time jobs, in which 300 students aged 15 to 18 took part. I would be very grateful if you could read the results below, and I look forward to hearing from you.",
+          "textLong": "### Introduction\nDear Sir or Madam,\nI am writing to tell you about our survey on part-time jobs, in which 300 students aged 15 to 18 took part. We asked them where they work, for how long and why, and how their jobs affect school. I would be very grateful if you could read the results below, and I look forward to hearing from you."
         },
         {
           "l": "B",
           "id": "purpose",
           "label": "State the purpose",
           "text": "### Introduction\n{{This report presents the findings of}} a survey on part-time jobs {{carried out among}} 300 students aged 15 to 18. {{Its aim is to show}} who works and why, how jobs affect schoolwork {{and what}} the school could do.",
+          "textLong": "### Introduction\n{{This report presents the findings of}} a survey on part-time jobs {{carried out among}} 300 students aged 15 to 18. {{Its aim is to show}} who works and why, how jobs affect schoolwork {{and what}} the school could do. As the survey took place at one school only, its results cannot be applied to all teenagers, but they give a clear picture of the situation here.",
           "why": "Purpose, data source and the structure of the report in two clear sentences."
         },
         {
@@ -160,6 +164,7 @@
           "id": "background",
           "label": "Background first",
           "text": "### Introduction\n{{Many teenagers combine school with}} a part-time job, {{but little is known about}} how this affects their schoolwork. {{To find out more, our class surveyed}} 300 students aged 15 to 18. {{This report presents}} the results and makes recommendations.",
+          "textLong": "### Introduction\n{{Many teenagers combine school with}} a part-time job, {{but little is known about}} how this affects their schoolwork. {{To find out more, our class surveyed}} 300 students aged 15 to 18 about their jobs, their working hours and their reasons for working. {{This report presents}} the results, assesses the effects on schoolwork {{and makes recommendations}} to the school and to families.",
           "why": "Explains why the survey was needed before stating what the report does."
         }
       ]
@@ -168,116 +173,41 @@
       "id": "findings",
       "slot": "findings",
       "part": "Body paragraph 1",
-      "q": "Body paragraph 1: who has a part-time job?",
-      "de": "Erster Inhaltspunkt, erster Teil: wer einen Nebenjob hat, mit genau verglichenen Zahlen. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
-      "own": "Copy the frame. Then add the missing figures from the survey and compare them in your own words.",
-      "ownDe": "Gerüst abschreiben, dann die fehlenden Zahlen aus der Umfrage ergänzen und mit eigenen Worten vergleichen.",
+      "q": "Body paragraph 1: who has a part-time job, and why?",
+      "de": "Erster Inhaltspunkt: wer einen Nebenjob hat und warum, mit genau verglichenen Zahlen. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then add the missing figures on who works and why, and compare them in your own words.",
+      "ownDe": "Gerüst abschreiben, dann die fehlenden Zahlen dazu, wer arbeitet und warum, ergänzen und mit eigenen Worten vergleichen.",
+      "ownLong": "Copy the frame. Then add the missing figures on who works, where, for how long and why, and compare them in your own words.",
+      "ownLongDe": "Gerüst abschreiben, dann die fehlenden Zahlen dazu, wer wo, wie lange und warum arbeitet, ergänzen und mit eigenen Worten vergleichen.",
       "options": [
         {
           "l": "A",
           "id": "overall",
           "label": "Overall figure first",
-          "text": "### Who works and why?\n{{[[Around a third]] of respondents (33 per cent)}} have a regular job during term time. {{Age makes a clear difference:}} 44 per cent of 17- and 18-year-olds work, {{[[compared with]] 22 per cent of}} 15- and 16-year-olds. Older students are thus {{[[twice as likely]] to}} have a job.",
-          "why": "Starts with the overall figure, then compares the age groups and sums up the comparison."
+          "text": "### Who works and why?\n{{[[Around a third]] of respondents (33 per cent)}} have a regular job during term time. {{Age makes a clear difference:}} 44 per cent of 17- and 18-year-olds work, {{[[compared with]] 22 per cent of}} 15- and 16-year-olds. {{As for the reasons, saving for a specific goal is [[by far the most frequent]]}} (47 per cent). Independence from parents [[comes second]] (26 per cent), {{[[while]] [[the smallest group]]}} (9 per cent) helps with family costs.",
+          "textLong": "### Who works and why?\n{{[[Around a third]] of respondents (33 per cent)}} have a regular job during term time. {{Age makes a clear difference:}} 44 per cent of 17- and 18-year-olds work, {{[[compared with]] 22 per cent of}} 15- and 16-year-olds. {{[[The most common]] workplaces are}} shops and supermarkets (32 per cent), [[followed by]] cafés and restaurants (26 per cent). {{On average, working students spend}} six hours a week at their jobs, {{but [[one in six]] works}} more than ten. {{As for the reasons, saving for a specific goal is [[by far the most frequent]]}} (47 per cent), [[well ahead of]] independence from parents (26 per cent).",
+          "why": "Starts with the overall figure, compares the age groups and then ranks the reasons."
         },
         {
           "l": "B",
           "id": "agegap",
           "label": "Start with the age gap",
-          "text": "### Who works and why?\n{{[[Whereas]] only 22 per cent of 15- and 16-year-olds}} have a regular job during the school year, {{the proportion among 17- and 18-year-olds is}} 44 per cent, [[twice as high]]. {{Overall, [[a third]] of respondents}} (33 per cent) have a paid job alongside school.",
-          "why": "Opens with the most striking contrast and then gives the overall picture."
+          "text": "### Who works and why?\n{{[[Whereas]] only 22 per cent of 15- and 16-year-olds}} have a regular job during the school year, {{the proportion among 17- and 18-year-olds is}} 44 per cent, [[twice as high]]. {{Overall, [[a third]] of respondents}} (33 per cent) work alongside school. {{The main motive is money: [[almost half]] save for}} a driving licence or a trip (47 per cent). {{Work experience, [[by contrast]], is the main reason for}} only 18 per cent, [[fewer than one in five]].",
+          "textLong": "### Who works and why?\n{{[[Whereas]] only 22 per cent of 15- and 16-year-olds}} have a regular job during the school year, {{the proportion among 17- and 18-year-olds is}} 44 per cent, [[twice as high]]. {{Overall, [[a third]] of respondents}} work alongside school, on average for six hours a week, {{although [[one in six]] works}} more than ten. {{Shops and supermarkets employ [[more students than]] any other workplace}} (32 per cent), [[ahead of]] cafés and restaurants (26 per cent). {{The main motive is money: [[almost half]] save for}} a driving licence or a trip (47 per cent). {{Work experience, [[by contrast]], is the main reason for}} only 18 per cent.",
+          "why": "Opens with the most striking contrast, gives the overall picture and then compares the reasons."
         },
         {
           "l": "C",
           "id": "numbers",
           "label": "Report the numbers",
-          "text": "### Who works and why?\nOverall, 33 per cent of respondents have a regular job during the school year. Among older students the number is much more higher: twice as much 17- and 18-year-olds work as 15- and 16-year-olds, with 44 per cent compared with 22 per cent.",
           "trap": true,
           "crit": "LSA",
           "reject": "Two typical mistakes: ‘much more higher’ (→ much higher) and ‘twice as much 17- and 18-year-olds’ (→ twice as many, because people can be counted; with percentages, ‘twice as likely to work’ is even more exact).",
-          "rejectDe": "Zwei typische Fehler: much more higher → much higher, twice as much → twice as many (Personen sind zählbar; bei Prozentzahlen ist „twice as likely“ noch genauer)."
+          "rejectDe": "Zwei typische Fehler: much more higher → much higher, twice as much → twice as many (Personen sind zählbar; bei Prozentzahlen ist „twice as likely“ noch genauer).",
+          "text": "### Who works and why?\nOverall, 33 per cent of respondents have a regular job during the school year. Among older students the number is much more higher: twice as much 17- and 18-year-olds work as 15- and 16-year-olds, with 44 per cent compared with 22 per cent. As for the reasons, saving for a specific goal is by far the most frequent (47 per cent), while 26 per cent want to be independent of their parents.",
+          "textLong": "### Who works and why?\nOverall, 33 per cent of respondents have a regular job during the school year. Among older students the number is much more higher: twice as much 17- and 18-year-olds work as 15- and 16-year-olds, with 44 per cent compared with 22 per cent. On average, working students spend six hours a week at their jobs, but one in six works more than ten. Shops and supermarkets are the most common workplaces (32 per cent). As for the reasons, saving for a specific goal is by far the most frequent (47 per cent), while 26 per cent want to be independent of their parents."
         }
       ]
-    },
-    {
-      "id": "jobs",
-      "slot": "jobs",
-      "part": "Body paragraph 1",
-      "len": "long",
-      "q": "Where do working students work, and for how long?",
-      "de": "Der Abschnitt geht weiter: Arbeitsplätze und Arbeitsstunden im Vergleich. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
-      "own": "Copy the frame. Then add the figures for jobs and working hours in your own words.",
-      "ownDe": "Gerüst abschreiben, dann die Zahlen zu Arbeitsplätzen und Arbeitszeit mit eigenen Worten ergänzen.",
-      "options": [
-        {
-          "l": "A",
-          "id": "workplaces",
-          "label": "Workplaces first",
-          "text": "{{[[The most common]] workplaces are}} shops and supermarkets (32 per cent), [[followed by]] cafés and restaurants (26 per cent). {{Tutoring and babysitting [[are not far behind]]}} with 21 per cent. {{On average, working students spend}} six hours a week at their jobs, {{but [[one in six]] works}} more than ten hours.",
-          "why": "Ranks the workplaces clearly and ends with the figure that matters most for school."
-        },
-        {
-          "l": "B",
-          "id": "lots",
-          "label": "Describe the jobs",
-          "text": "A lot of students work in shops and supermarkets. A lot of students also work in cafés and restaurants, and a lot of students work as tutors or babysitters. A lot of students work about six hours a week, but some students work a lot more.",
-          "trap": true,
-          "crit": "LSR",
-          "reject": "Correct, but very basic: ‘a lot’ five times and only one figure. A report compares data precisely (‘32 per cent’, ‘followed by’, ‘one in six’).",
-          "rejectDe": "Richtig, aber sehr einfach: fünfmal „a lot“ und nur eine einzige Zahl. Ein Report vergleicht Daten genau."
-        },
-        {
-          "l": "C",
-          "id": "hours",
-          "label": "Hours first",
-          "text": "{{On average, working students keep their hours low,}} at six hours a week, {{although [[one in six]] works}} more than ten. {{Shops and supermarkets employ [[more students than]] any other workplace}} (32 per cent), [[ahead of]] cafés and restaurants (26 per cent) and tutoring or babysitting (21 per cent).",
-          "why": "Starts with the hours, which matter most for school, and then ranks the workplaces."
-        }
-      ],
-      "join": true
-    },
-    {
-      "id": "reasons",
-      "slot": "reasons",
-      "part": "Body paragraph 1",
-      "q": "Why do students work?",
-      "de": "Der Abschnitt geht weiter: die Gründe für den Nebenjob im Vergleich. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
-      "own": "Copy the frame. Then compare the reasons from the survey in your own words.",
-      "ownDe": "Gerüst abschreiben, dann die Gründe aus der Umfrage mit eigenen Worten vergleichen.",
-      "options": [
-        {
-          "l": "A",
-          "id": "rank",
-          "label": "Rank the reasons",
-          "text": "{{As for the reasons, saving for a specific goal is [[by far the most frequent]]}} (47 per cent). Independence from parents [[comes second]] (26 per cent) and work experience [[third]] (18 per cent), {{[[while]] [[the smallest group]]}} (9 per cent) helps with family costs.",
-          "why": "Ranks all four reasons and compares the smallest group with the others."
-        },
-        {
-          "l": "B",
-          "id": "money",
-          "label": "Money versus experience",
-          "text": "{{The main motive is money: [[almost half]] save for}} a driving licence or a trip (47 per cent), {{and 26 per cent want}} independence from their parents. {{Work experience, [[by contrast]], matters to}} only 18 per cent, [[fewer than one in five]].",
-          "why": "A topic sentence gives the main point, and the contrast shows what matters less."
-        },
-        {
-          "l": "C",
-          "id": "outweighs",
-          "label": "One reason stands out",
-          "text": "{{Among the reasons, saving for a goal [[stands well ahead of]] the rest:}} 47 per cent name it, {{[[almost twice as many as]]}} those who mainly want independence (26 per cent). {{Work experience [[matters less]]}} (18 per cent), and 9 per cent help with family costs.",
-          "why": "Puts one precise comparison at the centre: almost twice as many."
-        },
-        {
-          "l": "D",
-          "id": "moreover",
-          "label": "Reason by reason",
-          "text": "Money comes first for most working students. Nearly half (47 per cent) save for a driving licence, and 26 per cent want to be independent of their parents, whereas they also want more freedom. Moreover, only 18 per cent work to gain experience.",
-          "trap": true,
-          "crit": "CC",
-          "reject": "Two linkers do not fit: ‘whereas’ signals a contrast, but independence and freedom are the same idea (→ and), and ‘Moreover’ adds a similar point, but work experience is a contrast to money (→ By contrast).",
-          "rejectDe": "Zwei Linking words passen nicht: „whereas“ zeigt einen Gegensatz, wo keiner ist, und „Moreover“ fügt Gleiches hinzu, wo ein Gegensatz gemeint ist."
-        }
-      ],
-      "join": true
     },
     {
       "id": "effects",
@@ -287,118 +217,77 @@
       "de": "Zweiter Inhaltspunkt: Auswirkungen auf die Schule, mit Zahlen verglichen. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
       "own": "Copy the frame. Then add the remaining figures and compare them in your own words.",
       "ownDe": "Gerüst abschreiben, dann die übrigen Zahlen ergänzen und mit eigenen Worten vergleichen.",
+      "ownLong": "Copy the frame. Then add the remaining figures, compare them and explain in your own words what holiday jobs mean for schoolwork.",
+      "ownLongDe": "Gerüst abschreiben, dann die übrigen Zahlen ergänzen, vergleichen und mit eigenen Worten erklären, was Ferialjobs für die Schule bedeuten.",
       "options": [
         {
           "l": "A",
           "id": "time",
           "label": "Problems first",
           "text": "### Effects on schoolwork\n{{Whatever the reason, jobs compete with school for time.}} {{[[More than half]] of working students}} (52 per cent) have less time for homework, {{but [[a much smaller share]]}} (15 per cent) report worse marks. {{On the positive side,}} 64 per cent feel more confident or better organised.",
-          "why": "Moves from the most common problem to a smaller one and ends with the benefit."
+          "why": "Moves from the most common problem to a smaller one and then to the benefit.",
+          "textLong": "### Effects on schoolwork\n{{Whatever the reason, jobs compete with school for time.}} {{[[More than half]] of working students}} (52 per cent) have less time for homework, {{but [[a much smaller share]]}} (15 per cent) report worse marks. {{On the positive side,}} 64 per cent feel more confident or better organised. {{These effects, however, concern jobs during term only.}} Holiday jobs do not clash with lessons or tests, and they are [[far more widespread]]: last summer, 61 per cent of respondents had one, [[nearly double]] the proportion who work during the school year."
         },
         {
           "l": "B",
           "id": "spending",
           "label": "Money and freedom",
-          "text": "### Effects on schoolwork\nWorking students have more money for clothes, concerts and going out, and many of them are proud that they no longer need to ask their parents for pocket money. Some even save enough for a holiday with friends, which shows that a job can be a real advantage for teenagers.",
           "trap": true,
           "crit": "TA",
           "reject": "Off the point: this section should be about schoolwork, but it only describes how students spend their money. The figures on homework, marks and confidence are missing.",
-          "rejectDe": "Am Thema vorbei: Es geht um die Schule, hier steht nur, wofür das Geld ausgegeben wird. Die Zahlen zu Hausübungen, Noten und Selbstvertrauen fehlen."
+          "rejectDe": "Am Thema vorbei: Es geht um die Schule, hier steht nur, wofür das Geld ausgegeben wird. Die Zahlen zu Hausübungen, Noten und Selbstvertrauen fehlen.",
+          "text": "### Effects on schoolwork\nWorking students have more money for clothes, concerts and going out, and many of them are proud that they no longer need to ask their parents for pocket money. Some even save enough for a holiday with friends, which shows that a job can be a real advantage for teenagers.",
+          "textLong": "### Effects on schoolwork\nWorking students have more money for clothes, concerts and going out, and many of them are proud that they no longer need to ask their parents for pocket money. Some even save enough for a holiday with friends, which shows that a job can be a real advantage for teenagers. Last summer, 61 per cent of respondents had a holiday job, and many of them spent their wages on travel, festivals or a new phone. For a lot of young people, earning their own money is simply the first step towards an independent life."
         },
         {
           "l": "C",
           "id": "mixed",
           "label": "Weigh both sides",
           "text": "### Effects on schoolwork\n{{These jobs have mixed effects.}} {{On the one hand, [[more than half]] of working students}} (52 per cent) have less time for homework. {{On the other hand,}} 64 per cent feel more confident or better organised, [[more than four times as many as]] report worse marks (15 per cent).",
-          "why": "Balances problems and benefits and makes the contrast exact with ‘four times as many’."
+          "why": "Balances problems and benefits and makes the contrast exact with ‘four times as many’.",
+          "textLong": "### Effects on schoolwork\n{{These jobs have mixed effects.}} {{On the one hand, [[more than half]] of working students}} (52 per cent) have less time for homework. {{On the other hand,}} 64 per cent feel more confident or better organised, [[more than four times as many as]] report worse marks (15 per cent). {{Holiday jobs avoid these problems and are [[far more common]]:}} 61 per cent of respondents had a holiday job last summer, {{[[compared with]] [[a third]] who}} work during the school year. {{For many, a summer job is a way to}} earn money and gain experience without losing study time."
         }
       ]
-    },
-    {
-      "id": "holiday",
-      "slot": "holiday",
-      "part": "Body paragraph 2",
-      "len": "long",
-      "q": "How do holiday jobs compare with jobs during term?",
-      "de": "Der Abschnitt geht weiter: Ferialjobs im Vergleich zu Jobs während des Schuljahres. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
-      "own": "Copy the frame. Then compare the two figures and explain what this means for schoolwork.",
-      "ownDe": "Gerüst abschreiben, dann die beiden Zahlen vergleichen und erklären, was das für die Schule bedeutet.",
-      "options": [
-        {
-          "l": "A",
-          "id": "compare",
-          "label": "Compare the figures",
-          "text": "{{Holiday jobs are [[far more widespread than]] jobs during term.}} Last summer, 61 per cent of respondents had a holiday job, {{[[nearly double]] the proportion who}} work during the school year (33 per cent). {{Since they do not clash with}} lessons or tests, these jobs avoid the problems described above.",
-          "why": "A clear comparison first, then a conclusion that links back to schoolwork."
-        },
-        {
-          "l": "B",
-          "id": "summer",
-          "label": "The summer picture",
-          "text": "{{In the summer holidays, the picture changes:}} 61 per cent of respondents had a holiday job last summer, {{[[compared with]] [[a third]] who}} work during the school year. {{For many, a summer job is a way to}} earn money and gain experience without losing study time.",
-          "why": "Contrasts the two periods and explains why summer jobs are popular."
-        }
-      ],
-      "join": true
     },
     {
       "id": "recs",
       "slot": "recs",
       "part": "Body paragraph 3",
-      "q": "Body paragraph 3: what do we recommend to the school?",
-      "de": "Dritter Inhaltspunkt: konkrete Empfehlungen an die Schule. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
-      "own": "Copy the frame. Then complete the recommendation with your own ideas for the school.",
-      "ownDe": "Gerüst abschreiben, dann die Empfehlung mit eigenen Ideen für die Schule fertigschreiben.",
+      "q": "Body paragraph 3: what do we recommend?",
+      "de": "Dritter Inhaltspunkt: konkrete Empfehlungen an die Schule, passend zu den Ergebnissen. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then complete the recommendations with your own ideas for the school.",
+      "ownDe": "Gerüst abschreiben, dann die Empfehlungen mit eigenen Ideen für die Schule fertigschreiben.",
+      "ownLong": "Copy the frame. Then complete the recommendations for the school and add one piece of advice for parents in your own words.",
+      "ownLongDe": "Gerüst abschreiben, dann die Empfehlungen für die Schule fertigschreiben und einen Rat für Eltern mit eigenen Worten ergänzen.",
       "options": [
         {
           "l": "A",
-          "id": "guide",
-          "label": "A guide for working students",
-          "text": "### Recommendations\n{{Given these effects, it is recommended that the school publish a short guide called ‘{GUIDE}’}} with tips on working hours and planning homework around shifts. {{In addition,}} students who work more than ten hours a week could be offered a talk with a trusted teacher.",
-          "why": "Gives practical help to all working students and extra support to those who work most."
-        },
-        {
-          "l": "B",
           "id": "deadlines",
           "label": "Plan tests in advance",
-          "text": "### Recommendations\n{{With homework time in mind, it is recommended that}} tests and project deadlines be announced two weeks in advance {{so that working students can}} plan their shifts around them. {{An information evening called ‘{GUIDE}’ could also}} help parents and students to agree on sensible working hours.",
+          "text": "### Recommendations\n{{With homework time in mind, it is recommended that}} tests and project deadlines be announced two weeks in advance {{so that working students can}} plan their shifts around them. {{An information evening called ‘{GUIDE}’ could also}} help parents and students to agree on sensible working hours, especially for those who work more than ten hours a week.",
+          "textLong": "### Recommendations\n{{With homework time in mind, it is recommended that}} tests and project deadlines be announced two weeks in advance {{so that working students can}} plan their shifts around them. A shared online calendar would make this easy for teachers. {{An information evening called ‘{GUIDE}’ could also}} help parents and students to agree on sensible working hours, especially for those who work more than ten hours a week. {{At home, parents could}} check the test calendar with their children before new shifts are agreed.",
           "why": "Answers the homework problem directly and involves the parents’ association."
         },
         {
-          "l": "C",
+          "l": "B",
           "id": "summerjobs",
           "label": "Promote holiday jobs",
-          "text": "### Recommendations\n{{As term-time jobs cost study time, it is recommended that the school hold a jobs day called ‘{GUIDE}’ in spring,}} at which local businesses present holiday jobs. {{This would allow more students to}} do their paid work in the holidays rather than during term.",
+          "text": "### Recommendations\n{{As term-time jobs cost study time, it is recommended that the school hold a jobs day called ‘{GUIDE}’ in spring,}} at which local businesses present holiday jobs. {{This would allow more students to}} do their paid work in the holidays rather than during term, when homework and tests have priority.",
+          "textLong": "### Recommendations\n{{As term-time jobs cost study time, it is recommended that the school hold a jobs day called ‘{GUIDE}’ in spring,}} at which local businesses present holiday jobs. {{This would allow more students to}} do their paid work in the holidays rather than during term, when homework and tests have priority. Older students who already have holiday jobs could share their experience at the event. {{Parents are advised to}} support the idea of working mainly in the summer and to keep an eye on their children’s workload during term.",
           "why": "Moves paid work to the holidays, when it does not affect schoolwork."
-        }
-      ]
-    },
-    {
-      "id": "families",
-      "slot": "families",
-      "part": "Body paragraph 3",
-      "len": "long",
-      "q": "What do we advise parents?",
-      "de": "Der Abschnitt geht weiter: ein Rat an die Familien. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
-      "own": "Copy the frame. Then add one more piece of advice for parents in your own words.",
-      "ownDe": "Gerüst abschreiben, dann einen weiteren Rat für Eltern mit eigenen Worten ergänzen.",
-      "options": [
-        {
-          "l": "A",
-          "id": "limits",
-          "label": "Keep an eye on the workload",
-          "text": "{{Parents are advised to keep}} an eye on their children’s workload, especially in weeks with several tests. {{Regular conversations about}} marks and free time can show early on whether the balance is still right.",
-          "why": "Practical advice: regular checks on the workload instead of a ban."
         },
         {
-          "l": "B",
-          "id": "skills",
-          "label": "See the benefits",
-          "text": "{{Families, for their part, could}} see part-time jobs not as a risk but as an opportunity. {{Talking at home about}} what young people learn at work, such as dealing with customers or managing money, {{can help them}} to use these skills at school as well.",
-          "why": "Builds on the positive figure and shows how families can make use of it."
+          "l": "C",
+          "id": "linkers",
+          "label": "A guide and holiday jobs",
+          "trap": true,
+          "crit": "CC",
+          "reject": "Two linkers do not fit: ‘whereas’ signals a contrast, but explaining the rules is simply a second task of the guide (→ and), and ‘Moreover’ adds a similar point, but holiday jobs are the opposite of term-time jobs that cost study time (→ By contrast).",
+          "rejectDe": "Zwei Linking words passen nicht: „whereas“ zeigt einen Gegensatz, wo nur etwas ergänzt wird, und „Moreover“ fügt Gleiches hinzu, wo ein Gegensatz gemeint ist (→ By contrast).",
+          "text": "### Recommendations\nIn view of these effects, it is recommended that the school publish a short guide called ‘{GUIDE}’ with tips on planning homework around shifts, whereas it should also explain the rules on working hours for young people under 18. Term-time jobs often cost study time. Moreover, holiday jobs do not clash with lessons at all, so the school could advertise them in spring.",
+          "textLong": "### Recommendations\nIn view of these effects, it is recommended that the school publish a short guide called ‘{GUIDE}’ with tips on planning homework around shifts, whereas it should also explain the rules on working hours for young people under 18. Students who work more than ten hours a week could be offered a talk with a trusted teacher, and parents could hear about the guide at a parents’ evening. Term-time jobs often cost study time. Moreover, holiday jobs do not clash with lessons at all, so the school could advertise them in spring."
         }
-      ],
-      "join": true
+      ]
     },
     {
       "id": "concl",
@@ -408,12 +297,15 @@
       "de": "Der Schluss greift die Ergebnisse aller drei Abschnitte auf und rundet den Report ab. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
       "own": "Copy the frame. Then complete the sentences in your own words.",
       "ownDe": "Gerüst abschreiben, dann die Sätze mit eigenen Worten fertigschreiben.",
+      "ownLong": "Copy the frame. Then sum up who works, the effects on schoolwork and the purpose of the measures in your own words.",
+      "ownLongDe": "Gerüst abschreiben, dann mit eigenen Worten zusammenfassen, wer arbeitet, wie sich das auf die Schule auswirkt und wozu die Maßnahmen dienen.",
       "options": [
         {
           "l": "A",
           "id": "sum",
           "label": "Sum up the findings",
           "text": "### Conclusion\n{{To sum up, part-time jobs are}} common among older students and mostly a way to save money. {{They take time away from homework, but [[only a minority]]}} see their marks suffer, {{and the measures above could help}} to keep it that way.",
+          "textLong": "### Conclusion\n{{To sum up, part-time jobs are}} common among older students and mostly a way to save money, and holiday jobs are [[even more widespread]]. {{They take time away from homework, but [[only a minority]]}} see their marks suffer, and [[almost two thirds]] report personal benefits. {{The measures above could help}} working students to keep it that way.",
           "why": "Sums up who works, why and with what effects in two sentences."
         },
         {
@@ -421,6 +313,7 @@
           "id": "balance",
           "label": "The right balance",
           "text": "### Conclusion\n{{Overall, the survey suggests that}} the key question is not whether students work, or why, but how much. {{As long as working hours stay moderate,}} a job and good marks can go together, {{which the measures above}} are meant to support.",
+          "textLong": "### Conclusion\n{{Overall, the survey suggests that}} the key question is not whether students work, or why, but how much. {{As long as working hours stay moderate,}} a job and good marks can go together. Holiday jobs, which do not compete with lessons, appear to be the safest option. {{The measures above}} are meant to help students, parents and the school to find this balance together.",
           "why": "Turns the findings into one clear message and links it to the recommendations."
         }
       ]
@@ -430,12 +323,8 @@
     "subject",
     "intro",
     "findings",
-    "jobs",
-    "reasons",
     "effects",
-    "holiday",
     "recs",
-    "families",
     "concl"
   ],
   "checks": [
@@ -463,10 +352,10 @@
   ],
   "teacher": {
     "aim": "Die Klasse baut gemeinsam einen Report auf B2-Niveau (SRDP) zu einer erfundenen Umfrage über Nebenjobs und übt dabei, Zahlen nicht nur aufzuzählen, sondern präzise zu vergleichen (whereas, compared with, twice as many), Auswirkungen abzuwägen und Empfehlungen formell zu formulieren.",
-    "prep": "A/B/C/D-Karten austeilen (ohne Karten: 1–4 Finger, die Tasten 1–4 wählen wie A–D), Beamer im Vollbild. Die Umfrageergebnisse aus der Aufgabe zusätzlich an die Tafel schreiben oder als Balkendiagramm austeilen, sie werden in den eigenen Sätzen gebraucht. Vorab kurz klären: respondents, shift, tutoring, holiday job, twice as many / twice as much.",
-    "heft": "Neue Seite: Datum (rechts), „Report“ als Überschrift. Darunter der Kopf wie am Beamer: To, From, Date, Subject (die Betreffzeile wird im ersten Schritt gewählt). Fünf Abschnitte (Introduction, Who works and why?, Effects on schoolwork, Recommendations, Conclusion): jeder beginnt nach einer Leerzeile mit seiner Zwischenüberschrift auf einer eigenen Zeile (unterstrichen), darunter der Absatz; am Rand steht nichts. Fortsetzungen werden ohne neue Zeile im selben Absatz weitergeschrieben. Wendungen zum Vergleichen von Daten grün unterstreichen.",
-    "flow": "Volltext kurz (50 min): 5 min Aufgabe und Ergebnisse lesen, 7 Entscheidungen à 2 min (der Abschnitt Who works and why? besteht aus zwei Entscheidungen), ca. 25 min Abschreiben, 5 min Checkliste. Volltext lang (100 min): 10 Entscheidungen, zusätzlich je eine Fortsetzung in Who works and why? (Arbeitsplätze und Stunden), Effects on schoolwork (Ferialjobs) und Recommendations (Rat an die Familien), ca. 45 min Abschreiben. Gerüst kurz (ca. 60 min): 4 min Aufgabe, pro Entscheidung 1 min, 5–6 min eigenes Schreiben pro Abschnitt (bei der Fortsetzung mit den Gründen 3–4 min), 1 min Vergleich mit dem Modell; in einer 50-Minuten-Stunde den Schluss als Hausübung und die Checkliste am Beginn der nächsten Stunde. Die Zahlen bleiben die ganze Stunde an der Tafel. Gerüst lang (100 min): gleicher Ablauf, pro zusätzlicher Fortsetzung 1 min Entscheidung, 3–4 min eigenes Schreiben und 1 min Vergleich.",
-    "traps": "Introduction A (TA): Briefkonventionen (Anrede, „I look forward to hearing from you“) statt Report-Einleitung. Who works and why? C (LSA): much more higher, twice as much statt twice as many. Who works and why?, Fortsetzung Arbeitsplätze B (LSR, nur lang): fünfmal „a lot“, keine Zahlen. Who works and why?, Fortsetzung Gründe D (CC): „whereas“ ohne Gegensatz, „Moreover“ statt „By contrast“. Effects on schoolwork B (TA): am Thema vorbei, nur Geldausgaben statt Auswirkungen auf die Schule. Kürzel: TA = Erfüllung der Aufgabenstellung, CC = Kohärenz und Kohäsion, LSR = Spektrum sprachlicher Mittel, LSA = Sprachrichtigkeit.",
-    "notes": "Aufbau: Der Report hat in beiden Fassungen genau fünf Abschnitte mit Zwischenüberschrift (Einleitung, drei Hauptabschnitte, Schluss); die lange Fassung macht die Abschnitte länger, statt neue hinzuzufügen. Die Umfrage ist erfunden (vereinfachtes Beispiel, keine offizielle Statistik); das Muster ist aber realistisch: Ferialjobs im Sommer sind in Österreich deutlich verbreiteter als Jobs während des Schuljahres, und Nachhilfe geben ist ein typischer Schüler:innenjob. Für Beschäftigte unter 18 gelten besondere Schutzbestimmungen (Kinder- und Jugendlichen-Beschäftigungsgesetz); konkrete Regeln bei Bedarf aktuell nachschlagen, z. B. bei der Arbeiterkammer. Niemand muss erzählen, ob und warum er oder sie arbeitet; der Punkt „helping with family costs“ wird nur als Zahl behandelt, nicht persönlich. Sprachfokus: Bei Prozentzahlen ist „twice as likely“ oder „twice as high“ genauer als „twice as many“, weil die Altersgruppen unterschiedlich groß sein können; das eignet sich gut für eine kurze Nachbesprechung. Differenzierung: Schnelle ergänzen im Gerüst-Modus einen zusätzlichen Vergleich mit „whereas“ oder „compared with“. Hausübung: den Report mit anderen Entscheidungen neu schreiben oder dieselbe Aufgabe mit einer erfundenen Umfrage zu Freizeit und Ehrenamt bearbeiten."
+    "prep": "A/B/C/D-Karten austeilen (ohne Karten: 1–4 Finger, die Tasten 1–4 wählen wie A–D), Beamer im Vollbild. Die Umfrageergebnisse aus der Aufgabe zusätzlich an die Tafel schreiben oder als Balkendiagramm austeilen, sie werden in den eigenen Sätzen gebraucht. Vorab kurz klären: respondents, shift, tutoring, holiday job.",
+    "heft": "Neue Seite: Datum (rechts), „Report“ als Überschrift. Darunter der Kopf wie am Beamer: To, From, Date, Subject (die Betreffzeile wird im ersten Schritt gewählt). Fünf Abschnitte (Introduction, Who works and why?, Effects on schoolwork, Recommendations, Conclusion): jeder beginnt nach einer Leerzeile mit seiner Zwischenüberschrift auf einer eigenen Zeile (unterstrichen), darunter der Absatz; am Rand steht nichts. Wendungen zum Vergleichen von Daten grün unterstreichen.",
+    "flow": "6 Entscheidungen in beiden Längen: Betreff und fünf Abschnitte (jede Entscheidung ein ganzer Abschnitt). Volltext kurz (50 min): 5 min Aufgabe und Ergebnisse lesen, 6 Entscheidungen à ca. 2 min, ca. 22 min Abschreiben, 5 min Checkliste, der Rest für die Fallen. Volltext lang (100 min): dieselben Entscheidungen mit längeren Abschnitten (Who works and why? auch mit Arbeitsplätzen und Stunden, Effects on schoolwork mit den Ferialjobs, Recommendations mit einem Rat an die Eltern), ca. 35–40 min Abschreiben und mehr Zeit für die Besprechung der Fallen. Gerüst kurz (ca. 60 min): 4 min Aufgabe, pro Entscheidung 1 min, 5–6 min eigenes Schreiben pro Abschnitt (bei Who works and why? 7–8 min), 1 min Vergleich mit dem Modell; in einer 50-Minuten-Stunde den Schluss als Hausübung und die Checkliste am Beginn der nächsten Stunde. Gerüst lang (100 min): gleicher Ablauf, aber 8–10 min eigenes Schreiben pro Hauptabschnitt (ca. 95 Wörter) und ca. 6 min für Einleitung und Schluss. Die Zahlen bleiben die ganze Stunde an der Tafel.",
+    "traps": "Introduction A (TA): Briefkonventionen (Anrede, „I look forward to hearing from you“) statt Report-Einleitung. Who works and why? C (LSA): much more higher, twice as much statt twice as many. Effects on schoolwork B (TA): am Thema vorbei, nur Geldausgaben statt Auswirkungen auf die Schule. Recommendations C (CC): „whereas“ ohne Gegensatz (→ and), „Moreover“ statt „By contrast“ beim Gegensatz zwischen Jobs im Schuljahr und Ferialjobs. Kürzel: TA = Erfüllung der Aufgabenstellung, CC = Kohärenz und Kohäsion, LSR = Spektrum sprachlicher Mittel, LSA = Sprachrichtigkeit.",
+    "notes": "Aufbau: Der Report hat in beiden Fassungen genau fünf Abschnitte mit Zwischenüberschrift (Einleitung, drei Hauptabschnitte, Schluss); die lange Fassung hat dieselben Entscheidungen mit längeren Abschnitten, statt neue hinzuzufügen. Die Umfrage ist erfunden (vereinfachtes Beispiel, keine offizielle Statistik); das Muster ist aber realistisch: Ferialjobs im Sommer sind in Österreich deutlich verbreiteter als Jobs während des Schuljahres, und Nachhilfe geben ist ein typischer Schüler:innenjob. Für Beschäftigte unter 18 gelten besondere Schutzbestimmungen (Kinder- und Jugendlichen-Beschäftigungsgesetz); konkrete Regeln bei Bedarf aktuell nachschlagen, z. B. bei der Arbeiterkammer. Niemand muss erzählen, ob und warum er oder sie arbeitet; der Punkt „helping with family costs“ wird nur als Zahl behandelt, nicht persönlich. Sprachfokus: Bei Prozentzahlen ist „twice as likely“ oder „twice as high“ genauer als „twice as many“, weil die Altersgruppen unterschiedlich groß sein können; das eignet sich gut für eine kurze Nachbesprechung. Differenzierung: Schnelle ergänzen im Gerüst-Modus einen zusätzlichen Vergleich mit „whereas“ oder „compared with“. Hausübung: den Report mit anderen Entscheidungen neu schreiben oder dieselbe Aufgabe mit einer erfundenen Umfrage zu Freizeit und Ehrenamt bearbeiten."
   }
 }

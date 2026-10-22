@@ -130,7 +130,7 @@
           "label": "Start with the dangers",
           "trap": true,
           "crit": "TA",
-          "text": "Fake news is one of the greatest dangers of our time. False stories have damaged the reputations of innocent people, influenced elections and even put lives at risk during health crises. This essay will therefore explain why fake news is so harmful and how readers can recognise it before it is too late.",
+          "text": "Fake news is one of the greatest dangers of our time. False stories have damaged the reputations of innocent people, influenced elections and even put lives at risk during health crises. Many of them look exactly like real news, with professional headlines and invented quotes. This essay will therefore explain why fake news is so harmful and how readers can recognise it before it is too late.",
           "reject": "Off target: the question is WHO should stop fake news, but this thesis announces an essay on why fake news is harmful and how to recognise it. The thesis must answer the question in the title.",
           "rejectDe": "Am Thema vorbei: Gefragt ist, wer Fake News stoppen soll, nicht warum sie schaden. Die These muss die Frage der Aufgabe beantworten."
         },
@@ -141,8 +141,8 @@
           "text": {
             "by": "position",
             "map": {
-              "rules": "{{Fake news, [[it is often claimed]], is simply the price of free speech online.}} In reality, false stories can now reach millions within hours and even influence elections. {{Someone has to stop them, but who?}} {{This essay will argue that}} the main responsibility lies with platforms and with the governments that regulate them.",
-              "people": "{{Fake news, [[it is often claimed]], is simply the price of free speech online.}} In reality, false stories can now reach millions within hours and even influence elections. {{Someone has to stop them, but who?}} {{This essay will argue that}} rules help, but users who have learnt at school to check sources are the strongest defence."
+              "rules": "{{Fake news, [[it is often claimed]], is simply the price of free speech online.}} In reality, false stories can now reach millions of people within hours, ruin reputations and even influence elections. {{Someone has to stop them, but who?}} {{This essay will argue that}} the main responsibility lies with platforms and with the governments that regulate them.",
+              "people": "{{Fake news, [[it is often claimed]], is simply the price of free speech online.}} In reality, false stories can now reach millions of people within hours, ruin reputations and even influence elections. {{Someone has to stop them, but who?}} {{This essay will argue that}} rules help, but users who have learnt at school to check sources are the strongest defence."
             }
           },
           "why": "Starts with a claim many readers have heard, then questions it and states the thesis."
@@ -154,8 +154,8 @@
           "text": {
             "by": "position",
             "map": {
-              "rules": "{{Never has it been so easy to spread a lie around the world.}} A single invented post can be shared thousands of times before anyone checks it. {{Responsibility for stopping such posts [[is usually thought to]] lie with}} platforms, governments, schools and users. {{This essay will argue that}} platforms and governments must take the lead.",
-              "people": "{{Never has it been so easy to spread a lie around the world.}} A single invented post can be shared thousands of times before anyone checks it. {{Responsibility for stopping such posts [[is usually thought to]] lie with}} platforms, governments, schools and users. {{This essay will argue that}} schools and users, rather than laws, hold the key."
+              "rules": "{{Never has it been so easy to spread a lie around the world.}} A single invented post can be shared thousands of times before anyone checks whether it is true. {{Responsibility for stopping such posts [[is usually thought to]] lie with}} platforms, governments, schools and users. {{This essay will argue that}} platforms and governments must take the lead.",
+              "people": "{{Never has it been so easy to spread a lie around the world.}} A single invented post can be shared thousands of times before anyone checks whether it is true. {{Responsibility for stopping such posts [[is usually thought to]] lie with}} platforms, governments, schools and users. {{This essay will argue that}} schools and users, rather than laws, hold the key."
             }
           },
           "why": "The inversion ‘Never has it been …’ makes a strong opening, and all four groups are named before the thesis."
@@ -167,9 +167,9 @@
       "slot": "platforms",
       "part": "Body paragraph 1",
       "q": "Body paragraph 1: what responsibility do platforms and governments have?",
-      "de": "Erster Inhaltspunkt: die Verantwortung von Plattformen und Staat. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
-      "own": "Copy the frame. Then support the topic sentence with one example and say what it shows about responsibility.",
-      "ownDe": "Gerüst abschreiben, dann den Topic Sentence mit einem Beispiel stützen und sagen, was es über die Verantwortung zeigt.",
+      "de": "Erster Inhaltspunkt: die Verantwortung von Plattformen und Staat, mit einem Beispiel und einer Bewertung. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then explain the problem in your own words, describe one measure against it and say how far it helps.",
+      "ownDe": "Gerüst abschreiben, dann das Problem mit eigenen Worten erklären, eine Maßnahme dagegen beschreiben und sagen, wie viel sie bringt.",
       "options": [
         {
           "l": "A",
@@ -178,11 +178,11 @@
           "text": {
             "by": "position",
             "map": {
-              "rules": "{{Online platforms [[are widely considered to be]] the first line of defence against such stories,}} since their algorithms decide what users see. False stories [[have been shown to]] spread faster than accurate ones, partly because sensational content keeps people scrolling. {{It is therefore reasonable to expect}} platforms to label misleading posts, and governments must ensure that they do so.",
-              "people": "{{Online platforms [[are widely considered to be]] the first line of defence against such stories,}} since their algorithms decide what users see. False stories [[have been shown to]] spread faster than accurate ones, partly because sensational content keeps people scrolling. {{It is therefore reasonable to expect}} platforms to label misleading posts. Laws can help, but no law can check every post."
+              "rules": "{{Online platforms [[are widely considered to be]] the first line of defence against such stories,}} since their algorithms decide what users see. False stories [[have been shown to]] spread faster than accurate ones, partly because sensational content keeps people scrolling. {{Some platforms already work with independent fact-checkers,}} who add warnings to misleading posts, but a careful check takes days, while a rumour spreads in minutes. Corrections [[are also known to]] reach far fewer people than the original story. {{It is therefore reasonable to expect}} platforms to stop suspicious posts before they go viral, and governments must set clear deadlines and fine platforms that miss them.",
+              "people": "{{Online platforms [[are widely considered to be]] the first line of defence against such stories,}} since their algorithms decide what users see. False stories [[have been shown to]] spread faster than accurate ones, partly because sensational content keeps people scrolling. {{Some platforms already work with independent fact-checkers,}} who add warnings to misleading posts, but a careful check takes days, while a rumour spreads in minutes. Corrections [[are also known to]] reach far fewer people than the original story. {{Laws can push platforms to act faster,}} but no filter can check every post, so readers must learn to do some of this checking themselves."
             }
           },
-          "why": "Explains why platforms carry responsibility and brings in governments at the end."
+          "why": "It explains why platforms carry responsibility, tests one measure and evaluates it in line with our position."
         },
         {
           "l": "B",
@@ -191,11 +191,11 @@
           "text": {
             "by": "position",
             "map": {
-              "rules": "{{Governments, first of all, [[are expected to]] set clear rules for online platforms.}} In the European Union, large platforms have to assess the risks their services create, including the spread of disinformation, and explain how their recommendation systems work. {{Such laws matter because}} companies rarely change a profitable business model unless they are forced to.",
-              "people": "{{Governments, first of all, [[are expected to]] set clear rules for online platforms.}} In the European Union, large platforms have to assess the risks their services create, including the spread of disinformation. {{Such laws are necessary,}} but they hand someone the power to decide what is false, and a state that bans ‘lies’ too eagerly may end up silencing its critics."
+              "rules": "{{Governments, first of all, [[are expected to]] set clear rules for online platforms.}} In the European Union, very large platforms have to assess the risks their services create, including the spread of disinformation. {{Such laws matter because}} companies rarely change a profitable business model unless they are forced to. {{The problem [[is predicted to]] grow with artificial intelligence,}} which can produce fake photos, videos and even voices in minutes. {{Recent European rules require}} such content to be clearly marked as artificial. Without obligations of this kind, even careful users would soon be unable to tell what is real.",
+              "people": "{{Governments, first of all, [[are expected to]] set clear rules for online platforms.}} In the European Union, very large platforms have to assess the risks their services create, including the spread of disinformation. {{Such laws are necessary,}} but a state that bans ‘lies’ too eagerly may end up silencing its critics. {{The problem [[is predicted to]] grow with artificial intelligence,}} which can produce fake photos, videos and even voices in minutes. {{Recent European rules require}} such content to be marked as artificial. Such labels help, but technology changes so fast that users will always need the skills to question what they see."
             }
           },
-          "why": "A real example of regulation, followed by an evaluation that fits our position."
+          "why": "Real European rules as examples, followed by an evaluation that fits our position."
         },
         {
           "l": "C",
@@ -203,47 +203,9 @@
           "label": "Rules for platforms",
           "trap": true,
           "crit": "LSA",
-          "text": "Online platforms are said that they spread fake news faster than true stories because their algorithms prefer exciting posts. It is often claimed, that they earn money from every click, even when the news are false. For this reason, governments should pass strict laws and punish platforms that do not delete such posts quickly.",
+          "text": "Online platforms are said that they spread fake news faster than true stories because their algorithms prefer exciting posts. It is often claimed, that they earn money from every click, even when the news are false. For this reason, governments should set strict rules and fine platforms that do not remove such posts quickly. In the European Union, very large platforms already have to assess the risk of disinformation on their services. Fake photos and videos made with artificial intelligence must be marked as artificial as well. Rules like these are a first step, but they cannot solve the problem on their own.",
           "reject": "Three typical mistakes: ‘are said that they spread’ (→ are said to spread), the comma before ‘that’ (→ It is often claimed that …, no comma) and ‘the news are’ (news is singular → the news is).",
           "rejectDe": "Drei typische Fehler: „are said that they spread“ → „are said to spread“, kein Beistrich vor that, und news steht im Singular (the news is)."
-        }
-      ]
-    },
-    {
-      "id": "platforms2",
-      "slot": "platforms2",
-      "part": "Body paragraph 1",
-      "join": true,
-      "q": "Which example develops the first point?",
-      "de": "Der Absatz geht weiter: ein Beispiel, das den ersten Inhaltspunkt vertieft. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
-      "own": "Copy the frame. Then explain the example in your own words and say what it shows.",
-      "ownDe": "Gerüst abschreiben, dann das Beispiel mit eigenen Worten erklären und sagen, was es zeigt.",
-      "options": [
-        {
-          "l": "A",
-          "id": "factcheck",
-          "label": "Fact-checkers",
-          "text": {
-            "by": "position",
-            "map": {
-              "rules": "{{Some large platforms already work with independent fact-checkers,}} who add warnings or corrections to misleading posts. {{This cooperation [[is generally regarded as]] useful,}} yet it has a clear weakness: a careful check takes hours or days, while a rumour spreads in minutes. Corrections [[are also known to]] reach far fewer people than the original story. {{For this reason,}} platforms need to act before a post goes viral, not afterwards.",
-              "people": "{{Some large platforms already work with independent fact-checkers,}} who add warnings or corrections to misleading posts. {{This cooperation [[is generally regarded as]] useful,}} yet it has a clear weakness: a careful check takes hours or days, while a rumour spreads in minutes. Corrections [[are also known to]] reach far fewer people than the original story. {{For this reason,}} readers must learn to do some of this checking themselves."
-            }
-          },
-          "why": "A concrete measure is described and then evaluated, which is what B2 essays need."
-        },
-        {
-          "l": "B",
-          "id": "ai",
-          "label": "Fakes made by AI",
-          "text": {
-            "by": "position",
-            "map": {
-              "rules": "{{The problem [[is predicted to]] grow with artificial intelligence.}} Fake photos, videos and even voices can be produced in minutes, and many of them are almost impossible to detect. {{Recent European rules require}} content of this kind to be clearly marked as artificial. {{Without such obligations,}} even the most careful user would soon be unable to tell what is real.",
-              "people": "{{The problem [[is predicted to]] grow with artificial intelligence.}} Fake photos, videos and even voices can be produced in minutes, and many of them are almost impossible to detect. {{Recent European rules require}} content of this kind to be clearly marked as artificial. {{Labels will certainly help,}} but technology changes so fast that users will always need the skills to question what they see."
-            }
-          },
-          "why": "A current development that shows why the question is becoming more urgent."
         }
       ]
     },
@@ -253,8 +215,8 @@
       "part": "Body paragraph 2",
       "q": "Body paragraph 2: what role can schools play?",
       "de": "Zweiter Inhaltspunkt: die Rolle der Schule beim Thema Medienkompetenz, mit Bewertung. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
-      "own": "Copy the frame. Then evaluate the role of schools in your own words: what can lessons achieve, and where are their limits?",
-      "ownDe": "Gerüst abschreiben, dann die Rolle der Schule mit eigenen Worten bewerten: Was kann Unterricht leisten, wo liegen die Grenzen?",
+      "own": "Copy the frame. Then evaluate the role of schools in your own words: what can lessons achieve, and how much can they do against fake news?",
+      "ownDe": "Gerüst abschreiben, dann die Rolle der Schule mit eigenen Worten bewerten: Was kann Unterricht leisten, und wie viel kann er gegen Fake News ausrichten?",
       "options": [
         {
           "l": "A",
@@ -263,11 +225,11 @@
           "text": {
             "by": "position",
             "map": {
-              "rules": "{{Beyond platforms and governments, schools [[are commonly thought to]] play a key role}} in teaching media literacy. Students can learn to check who is behind a website, compare sources and recognise manipulated images, for example in history or {SUBJECT} lessons. {{Valuable as such lessons are,}} their effect only shows years later, when today’s students have become voters.",
-              "people": "{{Beyond platforms and governments, schools [[are commonly thought to]] play a key role}} in teaching media literacy. Students can learn to check who is behind a website, compare sources and recognise manipulated images, for example in history or {SUBJECT} lessons. {{Such lessons are worth every minute,}} as critical thinking protects people long after school."
+              "rules": "{{Beyond platforms and governments, schools [[are commonly thought to]] play a key role}} in teaching media literacy. Students can learn to check who is behind a website, compare sources and recognise manipulated images, for example in history or {SUBJECT} lessons. Analysing a viral post together in class shows them how headlines, photos and numbers are used to stir up emotions. {{Valuable as such lessons are,}} their effect only shows years later, when today’s students have become voters. In the meantime, the false stories that circulate now have to be stopped by those who control the platforms.",
+              "people": "{{Beyond platforms and governments, schools [[are commonly thought to]] play a key role}} in teaching media literacy. Students can learn to check who is behind a website, compare sources and recognise manipulated images, for example in history or {SUBJECT} lessons. Analysing a viral post together in class shows them how headlines, photos and numbers are used to stir up emotions. {{Such lessons are worth every minute,}} as critical thinking protects people long after they have left school. Students who have once taken a manipulated post apart are far less likely to be taken in by the next one."
             }
           },
-          "why": "Names concrete skills and subjects, then evaluates them as the task asks."
+          "why": "It names concrete skills and subjects, then evaluates what lessons can achieve, as the task asks."
         },
         {
           "l": "B",
@@ -275,9 +237,9 @@
           "label": "Lessons and their limits",
           "trap": true,
           "crit": "CC",
-          "text": "Teachers could show students how to check sources, for example in {SUBJECT} lessons. Consequently, many adults have never learnt these skills at school. In contrast, students could also analyse viral posts in class and discuss why they spread so quickly. It is widely believed that such lessons work best when they start early.",
-          "reject": "No topic sentence: the paragraph starts with an example. Two linkers do not fit either: adults who never learnt these skills are not a result of the lessons (‘Consequently’), and analysing posts adds to checking sources instead of contrasting with it (‘In contrast’ → In addition).",
-          "rejectDe": "Kein Topic Sentence, und zwei Linking words passen nicht: „Consequently“ zeigt keine echte Folge, und „In contrast“ leitet keinen Gegensatz ein."
+          "text": "Teachers could show students how to check sources, for example in {SUBJECT} lessons. In other words, many adults have never learnt these skills at school. In contrast, students could also analyse viral posts in class and discuss why they spread so quickly. They could compare how different news sites report the same event and find out who is behind a website. It is widely believed that such lessons work best when they start early, and older students need regular practice because new tricks appear all the time.",
+          "reject": "No topic sentence: the paragraph starts with an example. Two linkers do not fit either: ‘In other words’ restates the same idea, but adults who never learnt these skills are a new point, and analysing posts adds to checking sources instead of contrasting with it (‘In contrast’ → In addition).",
+          "rejectDe": "Kein Topic Sentence, und zwei Linking words passen nicht: „In other words“ kündigt dieselbe Aussage in anderen Worten an, obwohl ein neuer Punkt folgt, und „In contrast“ steht, obwohl kein Gegensatz folgt."
         },
         {
           "l": "C",
@@ -286,11 +248,11 @@
           "text": {
             "by": "position",
             "map": {
-              "rules": "{{Turning to schools, Austria has taken a first step:}} since 2022, lower secondary students have had a compulsory subject on digital skills, which includes checking sources. Older students, [[it is often argued]], need further practice, for instance by analysing viral posts. {{Even the best lessons, however,}} cannot reach adults who left school long ago.",
-              "people": "{{Turning to schools, Austria has taken a first step:}} since 2022, lower secondary students have had a compulsory subject on digital skills, which includes checking sources. Older students, [[it is often argued]], need further practice, for instance by analysing viral posts. {{This early start is the right approach,}} as habits formed at school often last a lifetime."
+              "rules": "{{As for schools, Austria has taken a first step:}} since 2022, lower secondary students have had a compulsory subject on digital skills, which includes checking sources. Older students, [[it is often argued]], need further practice, for instance by analysing viral posts or comparing how different media report the same event. Such lessons give young people tools for life. {{Even the best lessons, however,}} cannot reach adults who left school long ago, and they work far too slowly to stop a rumour that is spreading today.",
+              "people": "{{As for schools, Austria has taken a first step:}} since 2022, lower secondary students have had a compulsory subject on digital skills, which includes checking sources. Older students, [[it is often argued]], need further practice, for instance by analysing viral posts or comparing how different media report the same event. {{This early start is the right approach,}} as habits formed at school often last a lifetime. Students who learn to question a shocking headline at fourteen are unlikely to believe every post they see at forty."
             }
           },
-          "why": "It moves on to schools, and a real Austrian example makes the evaluation concrete."
+          "why": "A real Austrian example makes the evaluation concrete and shows what lessons can and cannot do."
         }
       ]
     },
@@ -298,20 +260,20 @@
       "id": "users",
       "slot": "users",
       "part": "Body paragraph 3",
-      "q": "Body paragraph 3: what can individual users do?",
-      "de": "Dritter Inhaltspunkt: was einzelne Nutzer:innen tun können. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
-      "own": "Copy the frame. Then explain two things users can do in your own words.",
-      "ownDe": "Gerüst abschreiben, dann zwei Dinge, die Nutzer:innen tun können, mit eigenen Worten erklären.",
+      "q": "Body paragraph 3: what can individual users do, and how far does it help?",
+      "de": "Dritter Inhaltspunkt: was einzelne Nutzer:innen tun können, mit einem Argument der Gegenseite und unserer Antwort. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then explain what users can do, and answer the argument of the other side in your own words.",
+      "ownDe": "Gerüst abschreiben, dann erklären, was Nutzer:innen tun können, und das Argument der Gegenseite mit eigenen Worten beantworten.",
       "options": [
         {
           "l": "A",
           "id": "share",
           "label": "Think before sharing",
           "trap": true,
-          "crit": "LSR",
-          "text": "There are many things that individual users can do against fake news. It is important that they check things before they share them. It is also important that they look at who wrote a post. It is important that they do not believe everything they read, and it is important that they tell their friends about these things too.",
-          "reject": "Correct, but very basic: ‘It is (also) important that’ four times and ‘things’ three times. A B2 essay needs a range of structures (‘A short pause before sharing can …’, ‘Readers would do well to …’) and precise words.",
-          "rejectDe": "Korrekt, aber sehr einfach: viermal „It is (also) important that“ und dreimal „things“. Gefragt sind abwechslungsreiche Strukturen und präzise Wörter."
+          "crit": "CC",
+          "text": "Individual users also have a part to play. Many false stories are shared by people who have read only the headline. How, then, is a single reader supposed to know which stories are true? Why should ordinary people do the work that platforms are paid to do? A short pause before sharing can slow a rumour down, and checking whether reliable news sites carry the story takes only a minute. Is that really too much to ask? Some argue that one user cannot change anything, yet millions of careful users together certainly can.",
+          "reject": "Rhetorical questions belong in the introduction only. In a body paragraph they replace the argument: state the point instead.",
+          "rejectDe": "Rhetorische Fragen gehören nur in die Einleitung. Im Hauptteil ersetzen sie das Argument: Formuliert den Punkt als Aussage."
         },
         {
           "l": "B",
@@ -320,11 +282,11 @@
           "text": {
             "by": "position",
             "map": {
-              "rules": "{{Individual users, too, are not powerless.}} Many false stories [[are believed to]] spread because people share them after reading only the headline. {{A short pause before sharing}} or a quick search for the original source can slow a rumour down. {{Such habits help, but}} without rules for platforms they remain a drop in the ocean.",
-              "people": "{{Individual users, too, are not powerless.}} Many false stories [[are believed to]] spread because people share them after reading only the headline. {{A short pause before sharing}} or a quick search for the original source can slow a rumour down. {{Such habits may seem small, but}} multiplied by millions of users, they achieve more than any filter."
+              "rules": "{{Individual users, too, are not powerless.}} Many false stories [[are believed to]] spread because people share them after reading only the headline. {{A short pause before sharing}} or a quick search for the original source can slow a rumour down. {{[[It could be argued that]]}} such habits would make strict rules for platforms unnecessary. {{This hope is unrealistic.}} Users would have to stay alert every single day, whereas one algorithm decides the news feeds of millions. Individual caution is a useful addition to clear rules, but it can never replace them.",
+              "people": "{{Individual users, too, are not powerless.}} Many false stories [[are believed to]] spread because people share them after reading only the headline. {{A short pause before sharing}} or a quick search for the original source can slow a rumour down, and multiplied by millions of users, such habits achieve more than any filter. {{[[It could be argued that]]}} few adults will ever learn them, as many of those who share false stories left school long ago. {{This objection is only partly justified.}} Libraries and public broadcasters can reach older generations, and young people often pass their skills on to their parents and grandparents."
             }
           },
-          "why": "Two concrete habits in one sentence, followed by an evaluation that fits our position."
+          "why": "Two concrete habits, then an objection that is answered in line with our position."
         },
         {
           "l": "C",
@@ -333,49 +295,11 @@
           "text": {
             "by": "position",
             "map": {
-              "rules": "{{Every user also carries a share of the responsibility.}} Before trusting a shocking story, readers can check whether reliable news sites report it too, a method that fact-checkers [[are known to]] use themselves. {{Emotional posts deserve particular caution,}} since anger and fear make people share quickly. Still, individual care cannot replace firm rules for platforms.",
-              "people": "{{Every user also carries a share of the responsibility.}} Before trusting a shocking story, readers can check whether reliable news sites report it too, a method that fact-checkers [[are known to]] use themselves. {{Emotional posts deserve particular caution,}} since anger and fear make people share quickly. Those who check protect their followers as well as themselves."
+              "rules": "{{Every user also carries a share of the responsibility.}} Before trusting a shocking story, readers can check whether reliable news sites carry it too, a method that fact-checkers [[are known to]] use themselves, and they can report posts that turn out to be false. {{Platforms, [[it is sometimes claimed]], are mere messengers,}} so the whole blame lies with the people who post and share. {{This image is misleading.}} A postman delivers letters without reading them, whereas a platform decides which posts to show, to whom and how often. {{A company that profits from attention}} cannot claim to be neutral about the content that attracts it.",
+              "people": "{{Every user also carries a share of the responsibility.}} Before trusting a shocking story, readers can check whether reliable news sites carry it too, a method that fact-checkers [[are known to]] use themselves, and they can report posts that turn out to be false. {{Supporters of strict regulation insist that}} only laws can change the behaviour of large companies. {{There is some truth in this:}} fines [[are reported to have]] pushed platforms to remove illegal content faster. {{Yet laws are slow and end at national borders,}} whereas a critical reader is protected on every app, in every country and at no cost."
             }
           },
-          "why": "A practical method that anyone can use, with a reason why it matters."
-        }
-      ]
-    },
-    {
-      "id": "counter",
-      "slot": "counter",
-      "part": "Body paragraph 3",
-      "join": true,
-      "q": "How do we deal with the other side?",
-      "de": "Der Absatz geht weiter: Wir greifen ein Argument der Gegenseite auf und antworten darauf. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
-      "own": "Copy the frame. Then answer the counter-argument in your own words.",
-      "ownDe": "Gerüst abschreiben, dann das Gegenargument mit eigenen Worten entkräften.",
-      "options": [
-        {
-          "l": "A",
-          "id": "objection",
-          "label": "Answer an objection",
-          "text": {
-            "by": "position",
-            "map": {
-              "rules": "{{[[It could be argued that]]}} such rules threaten freedom of speech, as someone has to decide what counts as false. {{This concern deserves to be taken seriously.}} {{Yet the aim is not to delete opinions}} but to label clear falsehoods and to stop algorithms from rewarding them. {{Transparent rules,}} checked by courts and independent bodies, protect free speech better than the secret decisions of private companies.",
-              "people": "{{[[It could be argued that]]}} few adults will ever learn such habits, as many of the people who share false stories left school long ago. {{This objection is partly justified.}} {{Yet media literacy is not only taught in classrooms:}} libraries, adult education centres and public broadcasters can reach older generations. Young people, moreover, often help their parents and grandparents with new technology and can pass on their critical skills in the same way."
-            }
-          },
-          "why": "‘It could be argued that …’ presents the other side politely before it is answered."
-        },
-        {
-          "l": "B",
-          "id": "critics",
-          "label": "What the other side says",
-          "text": {
-            "by": "position",
-            "map": {
-              "rules": "{{Platforms themselves, [[it is sometimes claimed]], are mere messengers}} and cannot be blamed for what their users post. {{This image is misleading.}} A postman delivers letters without reading them, whereas a platform decides which posts to show, to whom and how often. {{A company that profits from attention}} cannot claim to be neutral about the content that attracts it, and careful users alone cannot change that.",
-              "people": "{{Supporters of strict regulation insist that}} only laws can change the behaviour of large companies. {{There is some truth in this:}} fines [[are reported to have]] pushed platforms to remove illegal content faster. {{Yet laws are slow and end at national borders,}} whereas a critical reader is protected on every app, in every country and at no cost."
-            }
-          },
-          "why": "Names a concrete argument of the other side and shows why it is weaker than it looks."
+          "why": "A practical method that anyone can use, then the other side’s view of users, answered in line with our position."
         }
       ]
     },
@@ -384,9 +308,9 @@
       "slot": "concl",
       "part": "Conclusion",
       "q": "Conclusion: how do we end the essay?",
-      "de": "Der Schluss rundet das Essay ab. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
-      "own": "Copy the frame. Then sum up our position in one or two sentences of your own.",
-      "ownDe": "Gerüst abschreiben, dann unsere Position in ein bis zwei eigenen Sätzen zusammenfassen.",
+      "de": "Der Schluss greift die Frage der Einleitung und die drei Body-Absätze auf und rundet das Essay ab. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then sum up what the three body paragraphs showed and restate our position in your own words.",
+      "ownDe": "Gerüst abschreiben, dann zusammenfassen, was die drei Body-Absätze gezeigt haben, und unsere Position mit eigenen Worten wiederholen.",
       "options": [
         {
           "l": "A",
@@ -395,11 +319,11 @@
           "text": {
             "by": "position",
             "map": {
-              "rules": "{{In conclusion, fake news [[is rightly said to be]] everyone’s problem.}} Those with the most power, though, {{carry the most responsibility:}} platforms must act, governments must hold them to account, and schools and users can then play their part.",
-              "people": "{{In conclusion, fake news [[is rightly said to be]] everyone’s problem.}} Laws and filters are useful, {{but in the end}} the most reliable protection is a public trained at school to check what it reads."
+              "rules": "{{In conclusion, fake news [[is rightly said to be]] everyone’s problem,}} although not everyone has the same power to stop it. Lessons at school prepare future voters, and careful users can check a story before sharing it, but neither can control what millions of people see. {{Those with the most power carry the most responsibility:}} platforms must act before false stories spread, and governments must hold them to account.",
+              "people": "{{In conclusion, fake news [[is rightly said to be]] everyone’s problem.}} Platforms can label misleading posts and governments can pass laws, but filters can be tricked and laws take years to change. {{In the end, the most reliable protection is}} a public that has learnt at school to check what it reads and that thinks twice before sharing a post."
             }
           },
-          "why": "It restates the thesis in new words and gives every group from the body paragraphs its place."
+          "why": "It restates the thesis in new words and gives platforms, governments, schools and users their place."
         },
         {
           "l": "B",
@@ -408,8 +332,8 @@
           "text": {
             "by": "position",
             "map": {
-              "rules": "{{All things considered, the answer seems clear.}} Users and teachers can do a great deal, but they cannot keep up with a system that, [[it is widely agreed]], rewards whatever attracts attention. {{Only when governments hold platforms to account}} will false stories lose their reach.",
-              "people": "{{All things considered, the answer seems clear.}} Platforms and governments must play their part, but no rule [[can be expected to]] foresee every new trick. {{Only when users are taught to think critically}} will false stories lose their power."
+              "rules": "{{All things considered, the answer seems clear.}} Schools can teach young people to question what they read, and users can check a story before they share it. Yet they cannot keep up with a system that, [[it is widely agreed]], rewards whatever attracts attention. Responsibility has to start where the power lies. {{Only when governments hold platforms to account}} will false stories lose their reach.",
+              "people": "{{All things considered, the answer seems clear.}} Platforms and governments must play their part, but no rule [[can be expected to]] foresee every new trick that appears online. Lessons at school and the habits of careful users, by contrast, adapt to whatever comes next. {{Only when users are taught to think critically}} will false stories lose their power."
             }
           },
           "why": "The inversion ‘Only when … will …’ gives the essay a strong final sentence."
@@ -420,7 +344,7 @@
           "label": "Look ahead",
           "trap": true,
           "crit": "CC",
-          "text": "To sum up, platforms, governments, schools and users all have a part to play in the fight against fake news. Another serious problem is that many young people now get their news from short videos instead of newspapers. Newspapers should therefore offer free subscriptions to everyone under 25.",
+          "text": "To sum up, platforms, governments, schools and users all have a part to play in the fight against fake news. Another serious problem, however, is that many young people now get their news from short videos instead of newspapers. Such videos rarely explain the background of a story. Newspapers should therefore offer free subscriptions to everyone under 25, so that young readers can get used to reliable journalism.",
           "reject": "A conclusion sums up; it does not open a new topic. Short videos and free newspaper subscriptions have not been discussed anywhere in the essay.",
           "rejectDe": "Ein Schluss fasst zusammen und bringt keine neuen Themen. Kurzvideos und Gratis-Abos kamen im Essay nicht vor."
         }
@@ -478,10 +402,8 @@
     "title",
     "intro",
     "platforms",
-    "platforms2",
     "schools",
     "users",
-    "counter",
     "concl"
   ],
   "checks": [
@@ -507,9 +429,9 @@
   "teacher": {
     "aim": "Die Klasse baut gemeinsam ein Essay nach SRDP-Standard zur Frage, wer für das Stoppen von Fake News verantwortlich ist: Plattformen, Staat, Schule oder einzelne Nutzer:innen. Fokus: Passive Reporting Structures (It is often claimed that …, X is said to …, X has been shown to …).",
     "prep": "A/B/C/D-Karten austeilen, eine Garnitur pro Person (ohne Karten: 1–4 Finger, die Tasten 1–4 wählen wie A–D). Beamer im Vollbild. Die Aufgabe am Beamer enthält alles Nötige. Im Gerüst-Modus den eingebauten Timer nutzen: 5–6 min pro Absatz.",
-    "heft": "Neue Seite: Datum (rechts), „Essay“ als Überschrift, darunter 2 Zeilen für den Titel frei lassen (der Titel kommt zuletzt). Jeder Absatz beginnt nach einer Leerzeile, am Rand Intro, Body 1, Body 2, Body 3, Conclusion. Fortsetzungen (Body 1 und Body 3) ohne neue Zeile im selben Absatz weiterschreiben. Passive Reporting Structures grün unterstreichen.",
-    "flow": "Volltext (100 min, Doppelstunde): 4 min Aufgabe lesen und Position wählen, 8 weitere Entscheidungen à ca. 2 min (Body 1 wird um ein Beispiel fortgesetzt, Body 3 um die Antwort auf ein Gegenargument), Abschreiben ca. 45 min, 5 min Checkliste, der Rest für die Besprechung der Fallen. Gerüst (100 min): 3 min Aufgabe und Position, pro Absatz 1 min Entscheidung, 5–6 min eigenes Schreiben, 1 min Vergleich mit dem Modell; die beiden Fortsetzungen mit je 1 min Entscheidung und 4–5 min eigenem Schreiben; am Ende 2 min Titel und 4 min Checkliste. Bei Body 1 und Body 2 nach der Abstimmung die Fakten der gewählten Option kurz an die Tafel schreiben (EU-Regeln für große Plattformen bzw. Pflichtfach seit 2022), weil die Optionen danach verschwinden.",
-    "traps": "Intro A (TA): Die These beantwortet eine andere Frage (warum Fake News schaden statt wer sie stoppen soll). Body 1 C (LSA): are said that they spread statt are said to spread, Beistrich vor that, the news are statt the news is. Body 2 B (CC): kein Topic Sentence, „Consequently“ ohne Folge, „In contrast“ ohne Gegensatz. Body 3 A (LSR): korrekt, aber viermal „It is important that“ und dreimal „things“, kein Spektrum an Strukturen. Conclusion C (CC): neues Thema (Kurzvideos, Zeitungsabos) im Schluss. Titel B (TA): Frage als Titel; das klingt nach einem Zeitschriftenartikel, ein Essay-Titel nennt das Thema sachlich als Aussage. Kürzel: TA = Erfüllung der Aufgabenstellung, CC = Kohärenz und Kohäsion, LSR = Spektrum sprachlicher Mittel, LSA = Sprachrichtigkeit.",
-    "notes": "Das Essay hat fünf Absätze (Einleitung, drei Body-Absätze zu den drei Inhaltspunkten, Schluss); Body 1 und Body 3 entstehen aus je zwei Entscheidungen, die Fortsetzung bleibt im selben Absatz. Keine echten Plattformen, Politiker:innen oder konkreten Falschmeldungen nennen; Beispiele bleiben allgemein. Die erste Entscheidung (Plattformen und Gesetze zuerst / Bildung zuerst) bestimmt These, Bewertungen und Schluss. Fakten im Text: In der EU müssen sehr große Plattformen nach dem Gesetz über digitale Dienste Risiken wie Desinformation bewerten und ihre Empfehlungssysteme offenlegen. Seit dem Schuljahr 2022/23 ist Digitale Grundbildung Pflichtfach in der Sekundarstufe I. Studien zeigen, dass sich Falschmeldungen in sozialen Netzwerken schneller verbreiten als korrekte Meldungen und dass Richtigstellungen weniger Menschen erreichen. Nach der europäischen KI-Verordnung müssen Deepfakes als künstlich erzeugt gekennzeichnet werden. Wählt die Klasse in Body 2 Option A, ruft sie ein weiteres Schulfach auf Englisch (z. B. ethics, English, biology). Mit der Taste P werden die Passive Reporting Structures grün markiert; andere Passivformen sind nicht markiert. Differenzierung: Schnelle formen im Gerüst-Modus zwei eigene Sätze mit „be said to“ und „It is believed that“ um. Länge wie bei der SRDP: ca. 400 Wörter (360–440). Hausübung: zweite Fassung mit der anderen Position."
+    "heft": "Neue Seite: Datum (rechts), „Essay“ als Überschrift, darunter 2 Zeilen für den Titel frei lassen (der Titel kommt zuletzt). Jeder Absatz beginnt nach einer Leerzeile, am Rand Intro, Body 1, Body 2, Body 3, Conclusion. Passive Reporting Structures grün unterstreichen.",
+    "flow": "7 Entscheidungen: Position, fünf Absätze (jede Entscheidung ein ganzer Absatz), Titel. Volltext (100 min, Doppelstunde): 4 min Aufgabe lesen und Position wählen, pro Absatz 2–3 min Abstimmung (mit Falle länger), Abschreiben insgesamt ca. 40 min, 2 min Titel, 5 min Checkliste, der Rest für die Besprechung der Fallen. Gerüst (100 min): 3 min Aufgabe und Position; pro Absatz 1–2 min Entscheidung, dann Gerüst abschreiben und eigenes Schreiben (Einleitung und Schluss je ca. 6 min, Body-Absätze je 8–10 min, weil sie ca. 95 Wörter lang sind), 1–2 min Vergleich mit dem Modell; am Ende 2 min Titel und 4 min Checkliste. Nach der Abstimmung die Fakten der gewählten Option kurz an die Tafel schreiben (nur bei Body 1 B: EU-Regeln für große Plattformen und KI-Inhalte; bei Body 2 C: Pflichtfach seit 2022/23), weil die Optionen danach verschwinden.",
+    "traps": "Intro A (TA): Die These beantwortet eine andere Frage (warum Fake News schaden statt wer sie stoppen soll). Body 1 C (LSA): are said that they spread statt are said to spread, Beistrich vor that, the news are statt the news is. Body 2 B (CC): kein Topic Sentence, „In other words“ ohne Umformulierung (es folgt ein neuer Punkt), „In contrast“ ohne Gegensatz. Body 3 A (CC): rhetorische Fragen im Hauptteil; sie ersetzen das Argument, statt den Punkt als Aussage zu formulieren (rhetorische Fragen nur in der Einleitung). Conclusion C (CC): neues Thema (Kurzvideos, Zeitungsabos) im Schluss. Titel B (TA): Frage als Titel; das klingt nach einem Zeitschriftenartikel, ein Essay-Titel nennt das Thema sachlich als Aussage. Kürzel: TA = Erfüllung der Aufgabenstellung, CC = Kohärenz und Kohäsion, LSR = Spektrum sprachlicher Mittel, LSA = Sprachrichtigkeit.",
+    "notes": "Das Essay hat fünf Absätze (Einleitung, drei Body-Absätze zu den drei Inhaltspunkten, Schluss). Jede Entscheidung ist ein ganzer Absatz: Einleitung und Schluss haben ca. 55–70 Wörter, die Body-Absätze ca. 85–105. Body 3 greift in den gültigen Optionen ein Argument der Gegenseite auf und beantwortet es. Keine echten Plattformen, Politiker:innen oder konkreten Falschmeldungen nennen; Beispiele bleiben allgemein. Die erste Entscheidung (Plattformen und Gesetze zuerst / Bildung zuerst) bestimmt These, Bewertungen und Schluss. Fakten im Text: In der EU müssen sehr große Plattformen nach dem Gesetz über digitale Dienste Risiken wie Desinformation bewerten. Seit dem Schuljahr 2022/23 ist Digitale Grundbildung Pflichtfach in der Sekundarstufe I. Studien zeigen, dass sich Falschmeldungen in sozialen Netzwerken schneller verbreiten als korrekte Meldungen und dass Richtigstellungen weniger Menschen erreichen. Nach der europäischen KI-Verordnung müssen Deepfakes als künstlich erzeugt gekennzeichnet werden. Wählt die Klasse in Body 2 Option A, ruft sie ein weiteres Schulfach auf Englisch (z. B. ethics, English, biology). Mit der Taste P werden die Passive Reporting Structures grün markiert; andere Passivformen sind nicht markiert. Differenzierung: Schnelle formen im Gerüst-Modus zwei eigene Sätze mit „be said to“ und „It is believed that“ um. Länge wie bei der SRDP: ca. 400 Wörter (360–440). Hausübung: zweite Fassung mit der anderen Position."
   }
 }

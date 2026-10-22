@@ -33,7 +33,7 @@
     }
   },
   "task": {
-    "situation": "The parents’ association is preparing a meeting with the school management about young people and online advertising. It has asked your class to write a report on a survey you carried out among 200 students aged 14 to 18 at your school (the figures are invented for this task as a simplified example). The questionnaire also had a comment box. Survey results:\n• average number of adverts counted during 30 minutes of scrolling on social media: 27\n• students who follow at least one influencer who posts sponsored content: 82%\n• students who can always or usually tell when a post is sponsored: 38%\n• students who bought a product after seeing it in an online advert or sponsored post (last three months): 57%\n• students who bought something because an influencer recommended it: 31%\n• students who believe that online advertising does not influence them: 71%",
+    "situation": "The parents’ association is preparing a meeting with the school management about young people and online advertising. It has asked your class to write a report on a survey you carried out among 200 students aged 14 to 18 at your school (the figures are invented for this task as a simplified example). The questionnaire also had a comment box. Survey results:\n• average number of adverts counted during 30 minutes of scrolling on social media: 27\n• students who follow at least one influencer who posts sponsored content: 82%\n• students who can always or usually tell when a post is sponsored: 38%\n• students who bought a product after seeing it in an online advert or sponsored post (last three months): 57%\n• students who bought something because an influencer recommended it (last three months): 31%\n• students who believe that online advertising does not influence them: 71%",
     "instruction": "Write a report for the parents’ association and the school management in which you:",
     "points": [
       "present the main findings of the survey",
@@ -138,7 +138,8 @@
           "id": "purpose",
           "label": "State the purpose",
           "text": "### Introduction\n{{The purpose of this report is to present}} the results of a survey on online advertising {{carried out among}} 200 students aged 14 to 18. {{It also assesses}} the effects on young people and makes recommendations.",
-          "why": "Purpose, data source and structure in two clear sentences: a classic report opening."
+          "why": "Purpose, data source and structure in clear sentences: a classic report opening.",
+          "textLong": "### Introduction\n{{The purpose of this report is to present}} the results of a survey on online advertising {{carried out among}} 200 students aged 14 to 18. {{It also assesses}} the effects on young people and makes recommendations. {{The questionnaire asked}} about the adverts students see and the products they buy, and it ended with a box for personal comments."
         },
         {
           "l": "B",
@@ -146,25 +147,29 @@
           "label": "Start with the problem",
           "trap": true,
           "crit": "LSR",
-          "text": "### Introduction\nWe all know that influencers only want our money and that online ads are getting more and more annoying. That’s why our class did a survey, and honestly, the results were even worse than we expected.",
-          "reject": "Too chatty and emotional for a report: ‘We all know’, ‘annoying’, ‘honestly’ and the contraction ‘That’s’. A report states its purpose and its data source in a neutral, formal tone.",
-          "rejectDe": "Zu umgangssprachlich und emotional für einen Report (We all know, annoying, honestly, That’s): Zweck und Datenquelle sachlich und formell nennen."
+          "text": "### Introduction\nIn our opinion, online advertising has a strong influence on students, and we think that this is a problem. We feel that parents and the school should know about it, so our class asked 200 students about the adverts they see.",
+          "reject": "‘In our opinion’, ‘we think’ and ‘we feel’ turn the introduction into a comment. A report is impersonal: it states purpose and data source, not the writers’ opinions.",
+          "rejectDe": "„In our opinion“, „we think“, „we feel“: Ein Report ist unpersönlich und nennt Zweck und Datenquelle, nicht die Meinung der Schreibenden.",
+          "textLong": "### Introduction\nIn our opinion, online advertising has a strong influence on students, and we think that this is a problem. We feel that parents and the school should know about it, so our class asked 200 students aged 14 to 18 about the adverts they see and the products they buy. We are sure that many parents will be surprised by the results."
         },
         {
           "l": "C",
           "id": "request",
           "label": "Refer to the request",
           "text": "### Introduction\n{{At the request of the parents’ association, this report}} summarises the findings of our survey on online advertising, {{in which}} 200 students aged 14 to 18 answered questions about the adverts they see and the products they buy.",
-          "why": "Names who asked for the report and describes the survey precisely."
+          "why": "Names who asked for the report and describes the survey precisely.",
+          "textLong": "### Introduction\n{{At the request of the parents’ association, this report}} summarises the findings of our survey on online advertising, {{in which}} 200 students aged 14 to 18 answered questions about the adverts they see and the products they buy. {{Only one school took part,}} so the results cannot be generalised, but they give a clear picture of how much advertising students here come across every day."
         }
-      ]
+      ],
+      "ownLong": "Copy the frame. Then complete the introduction: who took part, how the data was collected and what the report does.",
+      "ownLongDe": "Gerüst abschreiben, dann die Einleitung fertigschreiben: wer befragt wurde, wie die Daten gesammelt wurden und wozu der Report dient."
     },
     {
       "id": "findings",
       "slot": "findings",
       "part": "Body paragraph 1",
-      "q": "Body paragraph 1 (content point 1): how much advertising do students see?",
-      "de": "Der erste Hauptteil präsentiert die Zahlen zur Werbung in den Feeds. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "q": "Body paragraph 1 (content point 1): what are the main findings of the survey?",
+      "de": "Der erste Hauptteil präsentiert die wichtigsten Zahlen der Umfrage. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
       "own": "Copy the frame. Then add the missing figures from the survey in your own words.",
       "ownDe": "Gerüst abschreiben, dann die fehlenden Zahlen aus der Umfrage mit eigenen Worten ergänzen.",
       "options": [
@@ -172,15 +177,17 @@
           "l": "A",
           "id": "figures",
           "label": "Figure by figure",
-          "text": "### Main findings\n{{[[According to the survey]], students [[counted an average of]]}} 27 adverts in 30 minutes of scrolling, [[almost one a minute]]. {{[[More than four out of five]] respondents}} (82 per cent) follow an influencer who posts sponsored content. {{However, [[fewer than two in five]] (38 per cent)}} can always or usually recognise a sponsored post.",
-          "why": "Every figure comes with a phrase that makes it easy to imagine: almost one a minute, four out of five."
+          "text": "### Main findings\n{{[[According to the survey]], students [[counted an average of]]}} 27 adverts in 30 minutes, [[almost one a minute]]. {{[[More than four out of five]]}} follow an influencer who posts sponsored content, {{but [[fewer than two in five]]}} can usually recognise a sponsored post. {{In the last three months, [[more than half]]}} (57 per cent) have bought a product after seeing it advertised online. {{[[Surprisingly]], [[seven in ten]]}} believe that advertising does not influence them.",
+          "why": "Every figure comes with a phrase that makes it easy to imagine: almost one a minute, four out of five.",
+          "textLong": "### Main findings\n{{[[According to the survey]], students [[counted an average of]]}} 27 adverts in 30 minutes of scrolling, [[almost one a minute]]. {{[[More than four out of five]]}} follow an influencer who posts sponsored content, {{but [[fewer than two in five]]}} can usually recognise a sponsored post. {{In the last three months, [[more than half]]}} (57 per cent) have bought a product after seeing it advertised online, and [[almost a third]] on an influencer’s recommendation. {{[[Surprisingly]], [[seven in ten]]}} believe that advertising does not influence them. {{One comment sums up the feeling of many:}} “The adverts always know what I searched for yesterday.”"
         },
         {
           "l": "B",
           "id": "routine",
           "label": "Start with the main finding",
-          "text": "### Main findings\n{{[[According to the results]], adverts are}} part of students’ daily lives. {{[[On average]], respondents counted}} 27 adverts in 30 minutes of scrolling, and 82 per cent follow an influencer who posts sponsored content. {{[[It is striking that]] [[only a minority]]}} (38 per cent) can always or usually tell when a post is paid for.",
-          "why": "A topic sentence sums up the findings first, then the figures prove it."
+          "text": "### Main findings\n{{[[According to the results]], adverts are}} part of students’ daily lives: respondents counted 27 [[on average]] in 30 minutes, and 82 per cent follow an influencer who posts sponsored content. {{[[It is striking that]] [[only a minority]]}} (38 per cent) can usually tell when a post is paid for. {{[[Perhaps the most surprising result]] is that [[seven in ten]]}} feel uninfluenced by adverts, even though [[more than half]] have recently bought an advertised product.",
+          "why": "A topic sentence sums up the findings first, then the figures prove it, ending with the most surprising result.",
+          "textLong": "### Main findings\n{{[[According to the results]], adverts are}} part of students’ daily lives: respondents counted 27 [[on average]] in 30 minutes, and 82 per cent follow an influencer who posts sponsored content. {{[[It is striking that]] [[only a minority]]}} (38 per cent) can usually tell when a post is paid for. {{[[Perhaps the most surprising result]] is that [[seven in ten]]}} feel uninfluenced by adverts, even though [[more than half]] have recently bought an advertised product and [[almost a third]] something an influencer recommended. {{Two concerns came up repeatedly in the comments:}} adverts that interrupt videos and games, and adverts based on students’ search history."
         },
         {
           "l": "C",
@@ -188,64 +195,14 @@
           "label": "Report the figures",
           "trap": true,
           "crit": "LSA",
-          "text": "### Main findings\nThe survey shows, that students see in average 27 adverts in 30 minutes of scrolling, which is almost one advert every minute. Most students follows influencers who post sponsored content (82 per cent). However, only 38 per cent can always or usually recognise a sponsored post when it appears in their feed.",
+          "text": "### Main findings\nThe survey shows, that students see in average 27 adverts in 30 minutes of scrolling, which is almost one advert every minute. Most students follows influencers who post sponsored content (82 per cent). However, only 38 per cent can always or usually recognise a sponsored post. More than half (57 per cent) have bought a product after seeing an online advert, and 31 per cent have bought something because an influencer recommended it. Still, 71 per cent think that advertising does not influence them.",
           "reject": "Three typical mistakes: ‘shows, that’ (→ shows that: no comma before ‘that’), ‘in average’ (→ on average) and ‘follows’ (→ follow, because ‘students’ is plural).",
-          "rejectDe": "Drei typische Fehler: kein Beistrich vor that (shows that), in average → on average, follows → follow (Plural)."
-        }
-      ]
-    },
-    {
-      "id": "findings2",
-      "slot": "findings2",
-      "part": "Body paragraph 1",
-      "q": "What do the buying figures show?",
-      "de": "Der Abschnitt geht weiter: die Zahlen zum Kaufverhalten. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
-      "own": "Copy the frame. Then complete the figures and say, in a formal way, what is surprising about them.",
-      "ownDe": "Gerüst abschreiben, dann die Zahlen ergänzen und sachlich sagen, was daran überrascht.",
-      "options": [
-        {
-          "l": "A",
-          "id": "effective",
-          "label": "Adverts are effective",
-          "text": "{{Moreover, the survey [[shows that]] adverts are effective: [[more than half]]}} (57 per cent) have bought a product after seeing it advertised online in the last three months. {{[[Almost a third]] (31 per cent)}} have bought something on an influencer’s recommendation. {{[[Surprisingly]], [[seven in ten]] (71 per cent)}} believe that advertising does not influence them.",
-          "why": "Moves from the general figure to the influencer figure and ends with the surprise."
-        },
-        {
-          "l": "B",
-          "id": "contradiction",
-          "label": "Start with the surprise",
-          "text": "{{[[Perhaps the most surprising result]] concerns}} students’ view of themselves. {{Although [[seven in ten]] (71 per cent)}} believe that adverts do not influence them, [[more than half]] (57 per cent) have bought a product after seeing it advertised online in the last three months. {{[[Almost a third]] (31 per cent) have even}} bought something on an influencer’s recommendation.",
-          "why": "Opens with the contrast, which makes the reader curious about the figures."
+          "rejectDe": "Drei typische Fehler: kein Beistrich vor that (shows that), in average → on average, follows → follow (Plural).",
+          "textLong": "### Main findings\nThe survey shows, that students see in average 27 adverts in 30 minutes of scrolling, which is almost one advert every minute. Most students follows influencers who post sponsored content (82 per cent). However, only 38 per cent can always or usually recognise a sponsored post. More than half (57 per cent) have bought a product after seeing an online advert, and 31 per cent have bought something because an influencer recommended it. Still, 71 per cent think that advertising does not influence them. In the comment box, several students wrote that the adverts they see are based on their search history."
         }
       ],
-      "join": true
-    },
-    {
-      "id": "comments",
-      "slot": "comments",
-      "part": "Body paragraph 1",
-      "len": "long",
-      "q": "What did students write in the comment box?",
-      "de": "Der Abschnitt geht weiter: Kommentare aus der Umfrage. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
-      "own": "Copy the frame. Then add a comment that a student at the school might have written (invent it).",
-      "ownDe": "Gerüst abschreiben, dann einen erfundenen Kommentar ergänzen, den jemand an der Schule geschrieben haben könnte.",
-      "options": [
-        {
-          "l": "A",
-          "id": "quotes",
-          "label": "Quote two students",
-          "text": "{{The comment box adds a personal side to these figures.}} One student wrote: “The adverts always seem to know what I searched for the day before.” {{A second student complained:}} “Sometimes I have to watch three adverts before a two-minute video.” {{Comments like these [[make it clear that]]}} many students find online advertising intrusive.",
-          "why": "Two short quotes give the figures a human voice; the last sentence interprets them."
-        },
-        {
-          "l": "B",
-          "id": "themes",
-          "label": "Sum up the comments",
-          "text": "{{Two concerns came up again and again in the comment box.}} Several students wrote that adverts constantly interrupt their videos and games. {{Others felt uneasy that}} the adverts they see seem to be based on their search history, {{which [[indicates that]]}} they are aware of targeted advertising.",
-          "why": "Groups the comments into two themes, which is typical of a report."
-        }
-      ],
-      "join": true
+      "ownLong": "Copy the frame. Then add the missing figures in your own words and a comment that a student might have written (invent it).",
+      "ownLongDe": "Gerüst abschreiben, dann die fehlenden Zahlen mit eigenen Worten ergänzen und einen erfundenen Kommentar, den jemand an der Schule geschrieben haben könnte."
     },
     {
       "id": "effects",
@@ -262,52 +219,30 @@
           "label": "Effects in everyday life",
           "trap": true,
           "crit": "CC",
-          "text": "### Effects on young people\nInstead, young people see a lot of adverts every day. Influencers are very popular on social media, for example in gaming or fashion. Because of this they buy things, but on the other hand some adverts are funny. So the effects are different for every person.",
-          "reject": "No topic sentence: the block starts with ‘Instead’, although nothing is replaced, and ‘on the other hand’ does not fit the logic (funny adverts are no contrast to buying things). The reader never learns what the main effect is.",
-          "rejectDe": "Kein Topic Sentence, ein „Instead“ ohne etwas, das ersetzt wird, und ein unpassendes „on the other hand“. Der Hauptgedanke fehlt."
+          "text": "### Effects on young people\nThis has a clear effect on them. Since they see them so often, they start to trust them, even when they have been paid for it. They then buy what they recommend, and it can add up quickly. As most of them do not notice this, it is hard for them to resist it.",
+          "reject": "Who are ‘they’ and ‘them’, and what are ‘it’ and ‘this’? The reference words point back to nothing clear, so the reader cannot follow. Name the noun first.",
+          "rejectDe": "Wer ist „they“/„them“, was ist „it“/„this“? Die Verweiswörter beziehen sich auf nichts Klares. Zuerst das Nomen nennen.",
+          "textLong": "### Effects on young people\nThis has a clear effect on them. Since they see them so often, they start to trust them, even when they have been paid for it. They then buy what they recommend, and it can add up quickly. Some of them even feel that they have to own it to belong, which can make them unhappy when they cannot afford it. This happens every day, so it shapes what they want and how they spend it. As most of them do not notice this, it is hard for them to resist it."
         },
         {
           "l": "B",
           "id": "trust",
           "label": "Hard to tell apart",
-          "text": "### Effects on young people\n{{For many students, [[the figures suggest,]] the line between}} advertising and honest opinion is becoming blurred. {{Since [[the majority]] cannot reliably recognise sponsored posts,}} they may trust a recommendation that has been paid for. {{This is problematic because}} influencers often seem like friends rather than salespeople.",
-          "why": "Draws a clear conclusion from the 38 per cent figure and explains why it matters."
+          "text": "### Effects on young people\n{{For many students, [[the figures suggest,]] the line between}} advertising and honest opinion is becoming blurred. {{Since [[the majority]] cannot reliably recognise sponsored posts,}} they may trust a recommendation that has been paid for. {{This is problematic because}} influencers often seem like friends rather than salespeople, and their advice feels personal.",
+          "why": "Draws a clear conclusion from the 38 per cent figure and explains why it matters.",
+          "textLong": "### Effects on young people\n{{For many students, [[the figures suggest,]] the line between}} advertising and honest opinion is becoming blurred. {{Since [[the majority]] cannot reliably recognise sponsored posts,}} they may trust a recommendation that has been paid for. {{This is problematic because}} influencers often seem like friends rather than salespeople. {{The danger is greatest for}} the [[more than two thirds]] {{who believe that adverts do not affect them,}} as they are less likely to question what they see, which makes them easier targets for clever marketing. {{In other words,}} the feeling of being in control may itself be part of the problem."
         },
         {
           "l": "C",
           "id": "spending",
           "label": "Spending money",
-          "text": "### Effects on young people\n{{One clear effect, [[as the buying figures show]], is that}} adverts succeed in turning many young people into customers. {{Since one click is enough to order a product,}} pocket money can disappear within minutes, sometimes on items that soon end up unused in a drawer.",
-          "why": "Links the effect to the figures and explains how online shopping makes it worse."
-        }
-      ]
-    },
-    {
-      "id": "effects2",
-      "slot": "effects2",
-      "part": "Body paragraph 2",
-      "len": "long",
-      "q": "Which further effect do we assess?",
-      "de": "Der Abschnitt geht weiter: eine weitere Auswirkung. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
-      "own": "Copy the frame. Then explain the effect and say why it matters.",
-      "ownDe": "Gerüst abschreiben, dann die Auswirkung erklären und sagen, warum sie wichtig ist.",
-      "options": [
-        {
-          "l": "A",
-          "id": "immune",
-          "label": "Feeling safe",
-          "text": "{{A further risk lies in}} students’ confidence. {{Those who believe that adverts do not affect them}} are less likely to question what they see, which makes them easier targets for clever marketing. {{In other words,}} the feeling of being in control may itself be part of the problem.",
-          "why": "Interprets the surprising 71 per cent figure and shows critical thinking."
-        },
-        {
-          "l": "B",
-          "id": "pressure",
-          "label": "Keeping up",
-          "text": "{{Another effect is the pressure to}} own the same products as everyone else. {{When an influencer presents new trainers or headphones as a must-have,}} young people may feel they have to buy them to belong. {{This can lead to}} frustration and a feeling of being left out.",
-          "why": "Shows a social effect, not only a financial one, with a concrete example."
+          "text": "### Effects on young people\n{{One clear effect, [[as the buying figures show]], is that}} adverts succeed in turning many young people into customers. {{Since one click is enough to order a product,}} pocket money can disappear within minutes, sometimes on items that soon end up unused in a drawer. {{Over a school year,}} such small purchases can add up to a large sum.",
+          "why": "Links the effect to the buying figures and explains how one-click shopping makes spending easy.",
+          "textLong": "### Effects on young people\n{{One clear effect, [[as the buying figures show]], is that}} adverts succeed in turning many young people into customers. {{Since one click is enough to order a product,}} pocket money can disappear within minutes, sometimes on items that soon end up unused in a drawer. {{Influencers add social pressure to spend:}} when they present new trainers or headphones as a must-have, {{young people may feel that}} they have to buy them to belong. {{Over a school year,}} such purchases can add up to a large sum, {{which can lead to}} frustration when the money is gone."
         }
       ],
-      "join": true
+      "ownLong": "Copy the frame. Then explain the effects in your own words, give an example and say why they matter.",
+      "ownLongDe": "Gerüst abschreiben, dann die Auswirkungen mit eigenen Worten erklären, ein Beispiel geben und sagen, warum sie wichtig sind."
     },
     {
       "id": "recs",
@@ -322,71 +257,32 @@
           "l": "A",
           "id": "lessons",
           "label": "Media literacy lessons",
-          "text": "### Recommendations\n{{Given these effects, it is recommended that}} media literacy become part of lessons for 14- and 15-year-olds, with a focus on recognising sponsored content. {{These lessons could end with a poster campaign called ‘{PROJECT}’,}} in which students show others how to identify hidden adverts.",
-          "why": "Links back to the effects; a long-term measure in lessons, plus a visible campaign at the end."
+          "text": "### Recommendations\n{{Given these effects, it is recommended that}} media literacy become part of lessons for 14- and 15-year-olds, with a focus on recognising sponsored content and understanding how targeted adverts work. {{These lessons could end with a poster campaign called ‘{PROJECT}’,}} in which students show others how to identify hidden adverts.",
+          "why": "Links back to the effects; a long-term measure in lessons and a visible campaign.",
+          "textLong": "### Recommendations\n{{Given these effects, it is recommended that}} media literacy become part of lessons for 14- and 15-year-olds, with a focus on recognising sponsored content and understanding how targeted adverts work. {{These lessons could end with a poster campaign called ‘{PROJECT}’,}} in which students show others how to identify hidden adverts. {{Parents could support this work at home,}} for example by looking at a sponsored post together with their children and discussing who paid for it and why, or by agreeing on spending limits for app stores and online shops."
         },
         {
           "l": "B",
-          "id": "workshop",
-          "label": "A workshop day",
-          "text": "### Recommendations\n{{In view of these findings, it is recommended that}} the school organise {{a workshop day called ‘{PROJECT}’, at which}} experts explain how influencer marketing and targeted advertising work. {{Students could then}} analyse real sponsored posts and discuss why some of them are so convincing.",
-          "why": "Links back to the findings; experts bring know-how, and students practise with real examples."
+          "id": "peer",
+          "label": "Students teach students",
+          "text": "### Recommendations\n{{With these risks in mind, it is recommended that}} older students run {{a peer project called ‘{PROJECT}’, in which they show younger students how to}} recognise paid posts. {{Given that}} young people often listen to peers more than to adults, this approach should work, and the older students would learn a lot themselves.",
+          "why": "Links back to the effects and uses the fact that teenagers listen to each other.",
+          "textLong": "### Recommendations\n{{With these risks in mind, it is recommended that}} older students run {{a peer project called ‘{PROJECT}’, in which they show younger students how to}} recognise paid posts. {{Given that}} young people often listen to peers more than to adults, this approach should work, and the older students would learn a lot themselves. {{Parents could take part as well:}} at a parents’ evening, the peer team might show them how sponsored posts are marked and suggest questions they could ask their children about the adverts in their feeds."
         },
         {
           "l": "C",
-          "id": "peer",
-          "label": "Students teach students",
-          "text": "### Recommendations\n{{With these risks in mind, it is recommended that}} older students run {{a peer project called ‘{PROJECT}’, in which they show younger students how to}} recognise paid posts. {{Given that}} young people often listen to peers more than to adults, this approach should work.",
-          "why": "Links back to the effects and uses the fact that teenagers listen to each other."
-        },
-        {
-          "l": "D",
           "id": "trap",
           "label": "A project for everyone",
           "trap": true,
           "crit": "TA",
-          "text": "### Recommendations\nIt is recommended that the school do something about online advertising, as the survey shows that it is a real problem. A project called ‘{PROJECT}’ could deal with the topic in some way, and everybody should try to be more careful online in future.",
-          "reject": "This sounds like a recommendation, but it names no real measure: ‘do something’ and ‘in some way’ tell the school nothing. Content point 3 needs concrete steps: who does what, for whom and how.",
-          "rejectDe": "Klingt nach Empfehlung, nennt aber keine konkrete Maßnahme („do something“, „in some way“): Inhaltspunkt 3 nicht erfüllt."
-        }
-      ]
-    },
-    {
-      "id": "recs2",
-      "slot": "recs2",
-      "part": "Body paragraph 3",
-      "len": "long",
-      "q": "What do we recommend to parents?",
-      "de": "Der Abschnitt geht weiter: Empfehlungen an die Eltern. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
-      "own": "Copy the frame. Then add one more tip for parents in your own words.",
-      "ownDe": "Gerüst abschreiben, dann einen weiteren Tipp für Eltern mit eigenen Worten ergänzen.",
-      "options": [
-        {
-          "l": "A",
-          "id": "talk",
-          "label": "Talk at home",
-          "text": "{{At home, parents are advised to}} talk openly with their children about online adverts instead of simply banning apps. {{For example, families could look at}} a sponsored post together and discuss who paid for it and why. {{In addition, parents might set}} spending limits for app stores and online shops.",
-          "why": "Practical advice for families: conversation instead of bans, plus one clear safety step."
-        },
-        {
-          "l": "B",
-          "id": "evening",
-          "label": "An information evening",
-          "text": "{{Parents can play a part as well: as many of them are unfamiliar with influencer marketing,}} the parents’ association could hold an information evening on the topic. {{Our class could present}} the survey results there {{so that}} parents and young people can learn from each other.",
-          "why": "Turns from the school to the parents and involves students as experts."
-        },
-        {
-          "l": "C",
-          "id": "trap",
-          "label": "Three tips for parents",
-          "trap": true,
-          "crit": "LSR",
-          "text": "Parents should talk with their children about adverts. Parents should also look at the adverts on social media with their children. Parents should also make rules for buying things online. This is good because parents are important for their children.",
-          "reject": "Correct, but very basic: ‘Parents should’ three times, ‘also’ twice and an empty last sentence. Vary the structures: ‘Parents are advised to …’, ‘It is recommended that …’.",
-          "rejectDe": "Richtig, aber sehr einfach: dreimal „Parents should“, zweimal „also“ und ein inhaltsleerer Schlusssatz."
+          "text": "### Recommendations\nIt is recommended that the school do something about online advertising, as the survey shows that it is a real problem. A project called ‘{PROJECT}’ could deal with the topic in some way, and everybody should try to be more careful online in future. Teachers could also mention the topic in their lessons at some point.",
+          "reject": "This sounds like a recommendation, but it names no real measure: ‘do something’, ‘in some way’ and ‘at some point’ tell the school nothing. Content point 3 needs concrete steps: who does what, for whom and how.",
+          "rejectDe": "Klingt nach Empfehlung, nennt aber keine echte Maßnahme: „do something“, „in some way“, „at some point“. Gefragt sind konkrete Schritte: wer, was, für wen, wie.",
+          "textLong": "### Recommendations\nIt is recommended that the school do something about online advertising, as the survey shows that it is a real problem. A project called ‘{PROJECT}’ could deal with the topic in some way, and everybody should try to be more careful online in future. Teachers could also mention the topic in their lessons at some point, and parents should play their part as well. If everyone works together, the situation will certainly improve, and students will be better prepared for the future."
         }
       ],
-      "join": true
+      "ownLong": "Copy the frame. Then complete the recommendations with your own ideas for the school and for parents.",
+      "ownLongDe": "Gerüst abschreiben, dann die Empfehlungen mit eigenen Ideen für die Schule und für Eltern ergänzen."
     },
     {
       "id": "concl",
@@ -401,29 +297,29 @@
           "l": "A",
           "id": "sum",
           "label": "Sum up the main finding",
-          "text": "### Conclusion\n{{To sum up, [[the findings demonstrate that]]}} online advertising influences students more than they realise. {{If these recommendations are put into practice,}} young people can become more critical consumers.",
-          "why": "Repeats the key finding in one sentence and links it to the recommendations."
+          "text": "### Conclusion\n{{To sum up, [[the findings demonstrate that]]}} online advertising influences students more than they realise: many buy advertised products, but only 38 per cent can spot a sponsored post. {{If these recommendations are put into practice,}} young people can become more critical consumers.",
+          "why": "Repeats the key finding, picks up the effects and links them to the recommendations.",
+          "textLong": "### Conclusion\n{{To sum up, [[the findings demonstrate that]]}} online advertising influences students more than they realise. Adverts fill their feeds, many respondents buy advertised products, and only 38 per cent can spot a sponsored post. {{This leaves them open to}} persuasion that they hardly notice. {{If these recommendations are put into practice,}} young people can become more critical consumers who make their own choices."
         },
         {
           "l": "B",
           "id": "skill",
           "label": "A skill to learn",
-          "text": "### Conclusion\n{{Overall, [[the results show that]]}} recognising advertising is a skill that many students still lack. {{With the measures recommended above,}} our school could help students make their own decisions online.",
-          "why": "Turns the findings into a clear message and ends with the purpose of the report."
+          "text": "### Conclusion\n{{Overall, [[the results show that]]}} recognising advertising is a skill that many students still lack, even though adverts fill their feeds every day. {{With the measures recommended above,}} our school could help students make their own decisions online.",
+          "why": "Turns the findings into a clear message and ends with the purpose of the report.",
+          "textLong": "### Conclusion\n{{Overall, [[the results show that]]}} recognising advertising is a skill that many students still lack, even though adverts appear in their feeds almost every minute and often lead to purchases. {{Like any other skill, it can be learnt.}} {{With the measures recommended above,}} the school and parents could help students make their own decisions online and spend their money more carefully."
         }
-      ]
+      ],
+      "ownLong": "Copy the frame. Then sum up the findings, the effects and the recommendations in your own words.",
+      "ownLongDe": "Gerüst abschreiben, dann Ergebnisse, Auswirkungen und Empfehlungen mit eigenen Worten zusammenfassen."
     }
   ],
   "order": [
     "subject",
     "intro",
     "findings",
-    "findings2",
-    "comments",
     "effects",
-    "effects2",
     "recs",
-    "recs2",
     "concl"
   ],
   "checks": [
@@ -451,10 +347,10 @@
   ],
   "teacher": {
     "aim": "Die Klasse baut gemeinsam einen Report auf B1+/B2-Niveau nach SRDP-Muster zu einer Umfrage über Online-Werbung und übt dabei, Umfrageergebnisse präzise zu beschreiben, Auswirkungen zu beurteilen und Maßnahmen formell zu empfehlen.",
-    "prep": "A/B/C/D-Karten austeilen, Beamer im Vollbild. Die Aufgabe am Beamer enthält alles Nötige. Die Umfrageergebnisse aus der Aufgabe zusätzlich an die Tafel schreiben oder als Balkendiagramm austeilen. Vorab den Wortschatz klären: sponsored content, influencer, targeted, to raise awareness. Im Gerüst-Modus den eingebauten Timer nutzen: 5 min pro Abschnitt.",
-    "heft": "Neue Seite: rechts oben das Datum, als Überschrift „Report“ (wie am Beamer). Darunter der Kopf wie am Beamer: To, From, Date, Subject (die Betreffzeile wird im ersten Schritt gewählt). Fünf Abschnitte (Introduction, Main findings, Effects on young people, Recommendations, Conclusion): jeder beginnt mit seiner Zwischenüberschrift auf einer eigenen Zeile (unterstrichen), am Rand steht nichts; darunter der Absatz, zwischen den Abschnitten eine Zeile frei. Fortsetzungen werden ohne neue Zeile im selben Absatz weitergeschrieben. Wendungen für Daten (Data phrases) grün unterstreichen.",
-    "flow": "Volltext kurz (50 min): 5 min Aufgabe und Ergebnisse lesen, 7 Entscheidungen à 2 min, ca. 25 min Abschreiben, 5 min Checkliste. Volltext lang (100 min): zusätzlich drei Fortsetzungen: Kommentare aus der Umfrage (Main findings), eine weitere Auswirkung (Effects on young people) und Empfehlungen für Eltern (Recommendations). Gerüst kurz (realistisch ca. 60 min): 4 min Aufgabe, pro Entscheidung 1 min, 5–6 min eigenes Schreiben, 1 min Vergleich mit dem Modell; in einer 50-Minuten-Stunde den Schluss als Hausübung und die Checkliste am Beginn der nächsten Stunde. Die Umfrageergebnisse bleiben an der Tafel, weil die Zahlen in den eigenen Sätzen gebraucht werden. Gerüst lang (100 min): gleicher Ablauf mit den drei Fortsetzungen.",
-    "traps": "Introduction B (LSR): Plauderton und Gefühle statt sachlichem Ton (We all know, annoying, honestly), dazu die Kurzform That’s. Main findings C (LSA): Beistrich vor that, in average, follows. Effects on young people A (CC): kein Topic Sentence, „Instead“ ohne etwas, das ersetzt wird, und ein unpassendes „on the other hand“. Recommendations D (TA): keine konkrete Maßnahme („do something“, „in some way“). Recommendations, Fortsetzung C (LSR, nur lang): dreimal „Parents should“, leerer Schlusssatz. Kürzel: TA = Erfüllung der Aufgabenstellung, CC = Kohärenz und Kohäsion, LSR = Spektrum sprachlicher Mittel, LSA = Sprachrichtigkeit.",
-    "notes": "Der Report hat immer fünf Abschnitte (Einleitung, drei Hauptteile, Schluss); die lange Fassung verlängert Abschnitte, statt neue anzufügen. Keine echten Influencer:innen bewerten, keine Körperbild-Themen, keine Kaufentscheidungen einzelner Schüler:innen besprechen. Die Umfrageergebnisse sind für die Aufgabe erfunden; als Einstieg kann die Lehrkraft 30 Sekunden durch einen neutralen Beispiel-Feed scrollen, die Klasse zählt die Werbung mit. Wer Zeit hat, ergänzt bei Effects on young people einen Satz mit „This is worrying because …“. Differenzierung: Schnelle ergänzen im Gerüst-Modus einen weiteren Vergleich (z. B. „more than half“, „almost a third“). Hausübung: den Report mit anderen Entscheidungen neu schreiben oder eine anonyme Mini-Umfrage in der Klasse auswerten."
+    "prep": "A/B/C/D-Karten austeilen, Beamer im Vollbild. Die Aufgabe am Beamer enthält alles Nötige. Die Umfrageergebnisse aus der Aufgabe zusätzlich an die Tafel schreiben oder als Balkendiagramm austeilen. Vorab den Wortschatz klären: sponsored content, influencer, targeted, media literacy. Im Gerüst-Modus den eingebauten Timer nutzen: 5 min pro Abschnitt, in der langen Fassung 8–9 min.",
+    "heft": "Neue Seite: rechts oben das Datum, als Überschrift „Report“ (wie am Beamer). Darunter der Kopf wie am Beamer: To, From, Date, Subject (die Betreffzeile wird im ersten Schritt gewählt). Fünf Abschnitte (Introduction, Main findings, Effects on young people, Recommendations, Conclusion): jeder beginnt mit seiner Zwischenüberschrift auf einer eigenen Zeile (unterstrichen), am Rand steht nichts; darunter der Absatz, zwischen den Abschnitten eine Zeile frei. Wendungen für Daten (Data phrases) grün unterstreichen.",
+    "flow": "6 Entscheidungen: Betreffzeile und fünf Abschnitte. Volltext kurz (50 min): 5 min Aufgabe und Ergebnisse lesen, 6 Entscheidungen à 2 min, ca. 25 min Abschreiben, 5 min Checkliste. Volltext lang (100 min): dieselben Entscheidungen mit längeren Abschnitten (u. a. Kommentare aus der Umfrage, eine weitere Auswirkung, Empfehlungen auch für Eltern), ca. 45 min Abschreiben. Gerüst kurz (realistisch ca. 60 min): 4 min Aufgabe, pro Abschnitt 1 min Abstimmung, 5–6 min eigenes Schreiben, 1 min Vergleich mit dem Modell; in einer 50-Minuten-Stunde den Schluss als Hausübung und die Checkliste am Beginn der nächsten Stunde. Gerüst lang (100 min): gleicher Ablauf, pro Abschnitt 8–9 min eigenes Schreiben. Die Umfrageergebnisse bleiben an der Tafel, weil die Zahlen in den eigenen Sätzen gebraucht werden.",
+    "traps": "Introduction B (LSR): persönliche Meinung (In our opinion, we think, we feel) statt unpersönlichem Report-Stil, der Zweck und Datenquelle sachlich nennt. Main findings C (LSA): Beistrich vor that, in average, follows. Effects on young people A (CC): unklare Verweiswörter (they, them, it, this), die sich auf kein genanntes Nomen beziehen. Recommendations C (TA): keine konkrete Maßnahme („do something“, „in some way“, „at some point“). Kürzel: TA = Erfüllung der Aufgabenstellung, CC = Kohärenz und Kohäsion, LSR = Spektrum sprachlicher Mittel, LSA = Sprachrichtigkeit.",
+    "notes": "Der Report hat immer fünf Abschnitte (Einleitung, drei Hauptteile, Schluss). Die lange Fassung hat dieselben Entscheidungen mit längeren Abschnitten: Kommentare aus der Umfrage, eine weitere Auswirkung und Empfehlungen auch für Eltern. Keine echten Influencer:innen bewerten, keine Körperbild-Themen, keine Kaufentscheidungen einzelner Schüler:innen besprechen. Die Umfrageergebnisse sind für die Aufgabe erfunden; als Einstieg kann die Lehrkraft 30 Sekunden durch einen neutralen Beispiel-Feed scrollen, die Klasse zählt die Werbung mit. Wer Zeit hat, ergänzt bei Effects on young people einen Satz mit „This is worrying because …“. Differenzierung: Schnelle ergänzen im Gerüst-Modus einen weiteren Vergleich (z. B. „more than half“, „almost a third“). Hausübung: den Report mit anderen Entscheidungen neu schreiben oder eine anonyme Mini-Umfrage in der Klasse auswerten."
   }
 }

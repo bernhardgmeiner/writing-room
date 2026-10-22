@@ -181,12 +181,25 @@ details.tn dd{margin:0 0 4px; font-size:1rem;}
 .part-tag{display:inline-block; font-weight:800; font-size:.85rem; letter-spacing:.12em; text-transform:uppercase; padding:2px 10px; border-radius:6px; background:var(--ink); color:#fff; margin-bottom:4px;}
 /* grades 9–12: the five paragraphs (Introduction, Body paragraph 1–3, Conclusion) are the frame of every text: the label is big on the board */
 .upper .part-tag{font-family:var(--f-display); font-size:1.18rem; letter-spacing:.04em; padding:3px 12px;}
-.part-tag .cont{font-weight:700; color:#E6EAF0;}
 .vote{display:flex; gap:6px; align-items:center; font-weight:800; font-size:1.3rem; color:var(--ink);}
 .vote.again{color:var(--no);}
 .vote .vt{display:inline-grid; place-items:center; width:1.9rem; height:1.9rem; border-radius:6px; color:#fff; font-family:var(--f-display); font-weight:800; box-shadow:inset 0 0 0 3px rgba(0,0,0,.18);}
 .opts{display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px; margin-top:8px;}
 .opts.three{grid-template-columns:repeat(3,minmax(0,1fr));}
+/* dense decide screen (whole paragraphs of the long version): a compact head and cards whose text uses the full card width,
+   so three paragraphs of about 100 words stay on a 1024×768 board without scrolling (fitDecide switches it on when it helps) */
+main.dense .part-tag{display:inline-block; margin:0 10px 2px 0; vertical-align:.15em;}
+main.dense .upper .part-tag{font-size:1rem; padding:2px 10px;}
+main.dense h1.q{display:inline; font-size:clamp(1.12rem, 1.55vw, 1.42rem); line-height:1.18;}
+main.dense .decide-head .de{font-size:.95rem; margin-top:2px;}
+main.dense .vote{font-size:1.05rem;}
+main.dense .vote .vt{width:1.6rem; height:1.6rem;}
+main.dense .opts{gap:8px; margin-top:4px;}
+main.dense .opt{display:grid; grid-template-columns:auto minmax(0,1fr); column-gap:8px; align-items:center; align-content:start; padding:6px 10px 1.9rem;}
+main.dense .opt .L{width:2rem; height:2rem; font-size:1.3rem;}
+main.dense .opt .body{display:contents;}
+main.dense .opt .lbl{margin:0;}
+main.dense .opt .txt{grid-column:1 / -1; margin-top:4px;}
 .opts.two{grid-template-columns:repeat(2,minmax(0,1fr));}
 .optw{position:relative; display:flex; min-width:0;}
 .opt{flex:1 1 auto; width:100%; display:flex; gap:10px; align-items:flex-start; text-align:left; background:var(--surface); border:3px solid var(--line-soft); border-radius:14px; padding:10px 12px 2.25rem; cursor:pointer; min-width:0;}
@@ -257,10 +270,6 @@ details.tn dd{margin:0 0 4px; font-size:1rem;}
 /* the block to copy must not sit at the bottom edge of the board (heads, teacher, whiteboard tray) */
 .blk.new{background:var(--hl); border-color:var(--hl-edge); box-shadow:inset 8px 0 0 var(--ink);}
 .blk.new .tag{color:var(--ink); border-right-color:var(--ink);}
-/* continuation block (join): the same paragraph as the row above, so no gap and no margin word; the margin line runs on */
-.blk.join{margin-top:-10px;}
-.blk.join .tag::before{content:"↳" / ""; display:block; text-align:right; font-size:1.2rem; line-height:1; color:var(--line);}
-.blk.join.new .tag::before{color:var(--ink);}
 .blk.s-title .t, .blk.s-subject .t{font-weight:700;}
 .blk.s-title.new .t{font-size:calc(2rem * var(--zoom)); line-height:1.2;}
 .blk.empty .t{font-family:var(--f-body); font-size:1.02rem; color:var(--ink-soft); border:3px dashed var(--line); border-radius:10px; padding:6px 12px; font-weight:400;}
@@ -282,6 +291,12 @@ details.tn dd{margin:0 0 4px; font-size:1rem;}
 .side{display:flex; flex-direction:column; gap:10px; min-width:0;}
 /* sticky only while the whole panel fits on the board (placeCopy sets .stick), otherwise its heading would be pushed off the top */
 .side.stick{position:sticky; top:10px;}
+/* a long writing prompt next to a whole paragraph (long version, frame mode, 720p): a tighter panel, so it can still stick
+   and its end (the trap check) stays on the board */
+.side.compact{gap:6px;}
+.side.compact .copynow, .side.compact .note, .side.compact .trapnote{padding-block:6px;}
+.side.compact .copynow strong{font-size:1.22rem;}
+.side.compact .copynow p, .side.compact .note{font-size:calc(.98rem * var(--pz)); line-height:1.32;}
 .side > .kbd{margin-top:-6px;}
 /* white box: the only big yellow thing on a copy screen is the block to copy */
 .copynow{background:var(--surface); border:2px solid var(--line-soft); border-left:10px solid var(--hl-edge); border-radius:14px; padding:12px 16px; overflow-wrap:anywhere;}
@@ -533,8 +548,13 @@ const $ = id => document.getElementById(id);
 const esc = s => String(s == null ? "" : s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const cap = s => s ? s[0].toUpperCase() + s.slice(1) : s;
 const fmtDate = t => new Date(t).toLocaleDateString("en-GB",{day:"numeric",month:"long",year:"numeric"});
+// blog posts show the time of posting next to the date (as on matura.bernhardgmeiner.com: “22 March 2026, 19:34”): the lesson's start time
+const fmtTime = t => new Date(t).toLocaleTimeString("en-GB",{hour:"2-digit",minute:"2-digit",hour12:false});
 // the lesson's date is stored in the run: a text written on Monday still says Monday when it is shown again on Thursday
 const today = () => R && R.date ? R.date : fmtDate(Date.now());
+const nowTime = () => R && R.time ? R.time : fmtTime(Date.now());
+// blog by-line: user name · date, time
+const blogStamp = p => { const m = p.meta || {}; return `${m.date ? metaFinal(m.date) : today()}, ${nowTime()}`; };
 
 /* ===================== STATE ===================== */
 // One save slot per pack: {packId: run}, at most MAX_RUNS. Runs carry `updated` (ms, last real change) and `date` (lesson day).
@@ -550,7 +570,7 @@ prefs.zoom = +prefs.zoom; if(!(prefs.zoom >= 0.7 && prefs.zoom <= 1.6)) prefs.zo
 for(const k of ["grade","type","theme","mode"]) prefs[k] = String(prefs[k] == null ? "all" : prefs[k]);
 prefs.q = "";   // the search text is not remembered: the next lesson starts with the full list (grade and filters stay)
 function savePrefs(){ try{ localStorage.setItem(PREF_KEY, JSON.stringify(prefs)); }catch(e){} }
-const freshRun = (packId, mode, len) => ({ packId, mode, len, date:fmtDate(Date.now()), phase:"task", si:0, picks:{}, rejected:{}, gaps:{}, last:null, revealed:false, focus:true, ticks:[], updated:Date.now(), history:[] });
+const freshRun = (packId, mode, len) => ({ packId, mode, len, date:fmtDate(Date.now()), time:fmtTime(Date.now()), phase:"task", si:0, picks:{}, rejected:{}, gaps:{}, last:null, revealed:false, focus:true, ticks:[], updated:Date.now(), history:[] });
 let view = "library";          // library | setup | run
 let setupSel = null;           // {packId, mode, len}
 let R = null;                  // current run (also stored in runs[R.packId])
@@ -576,6 +596,7 @@ function validRun(r){
     if(!Array.isArray(r.ticks) || r.ticks.some(x => typeof x !== "number")) return false;
     if(r.last != null && typeof r.last !== "string") return false;
     if(r.date != null && (typeof r.date !== "string" || r.date.length > 40 || /[<>&"]/.test(r.date))) return false;
+    if(r.time != null && (typeof r.time !== "string" || !/^\d{2}:\d{2}$/.test(r.time))) return false;
     for(const [k, v] of Object.entries(r.picks)){ const s = p.steps.find(x => x.id === k); if(!s || !s.options.some(o => o.id === v && !o.trap)) return false; }
     for(let i = 0; i < r.si; i++) if(!r.picks[st[i].id]) return false;
     if((r.phase === "copy" || r.phase === "final") && !r.picks[st[r.si].id]) return false;
@@ -586,7 +607,7 @@ function validRun(r){
 // Runs saved before dates were stored get date null here; resumeRun() gives them today's date.
 function cleanRun(raw){
   if(!isObj(raw)) return null;
-  const norm = x => Object.assign(freshRun(raw.packId, raw.mode, raw.len), {date:null}, x, {history:[]});
+  const norm = x => Object.assign(freshRun(raw.packId, raw.mode, raw.len), {date:null, time:null}, x, {history:[]});
   const hist = (Array.isArray(raw.history) ? raw.history : []).filter(h => isObj(h) && h.packId === raw.packId && h.mode === raw.mode && h.len === raw.len).map(norm).filter(validRun);
   const c = norm(raw); c.history = hist; c.updated = Number.isFinite(+raw.updated) && +raw.updated > 0 ? +raw.updated : Date.now();
   if(validRun(c)) return c;
@@ -668,7 +689,11 @@ window.addEventListener("storage", e => { if(e.key !== RUNS_KEY && e.key !== nul
 function P(){ return packById(R.packId); }
 function curSteps(){ return activeSteps(P(), R.len); }
 function cur(){ return curSteps()[R.si]; }
-function optText(o){ const t = o.text; if(t == null) return null; if(typeof t === "string") return t; if(t.by && t.map) return t.map[R.picks[t.by]] ?? null; return null; }
+// the long version of a lesson uses the long text of an option (textLong: the same paragraph, longer); else its text
+function optText(o){ const t = R && R.len === "long" && o.textLong != null ? o.textLong : o.text; if(t == null) return null; if(typeof t === "string") return t; if(t.by && t.map) return t.map[R.picks[t.by]] ?? null; return null; }
+// frame mode: the writing prompt of a step (its long form when the paragraph is longer in the long version)
+function stOwn(st){ return (R && R.len === "long" && st.ownLong) || st.own || ""; }
+function stOwnDe(st){ return (R && R.len === "long" && st.ownLongDe) || st.ownDe || ""; }
 function slotStep(slot){ return P().steps.find(s => s.slot === slot) || null; }
 function slotText(slot){ const st = slotStep(slot); if(!st || !curSteps().includes(st)) return null; const id = R.picks[st.id]; if(!id) return null; const o = st.options.find(x => x.id === id); return o ? optText(o) : null; }
 function pickedText(st){ const o = st.options.find(x => x.id === R.picks[st.id]); return o ? optText(o) || "" : ""; }
@@ -789,27 +814,18 @@ function revealed_text(t){ const {head, rest} = splitHead(t); return headHTML(he
 function ownWordCount(t){ return segs(splitHead(t).rest).filter(p => p.own).reduce((a, p) => a + plainWords(p.s.replace(GAP_RE, "")), 0); }
 function plainText(t){ return t.replace(/\{\{|\}\}|\[\[|\]\]/g, "").replace(/^###\s*/gm, "").replace(GAP_RE, (m, k) => gapOrDefault(k) ?? ""); }
 function plainWords(t){ return plainText(t).replace(/[“”"–…]/g, " ").split(/\s+/).filter(x => /[A-Za-z0-9]/.test(x)).length; }
-// a join block (continuation, AUTHORING §15) is part of its paragraph: counted with it, so the totals are the same as per block
 function countWords(){ let n = 0; P().order.forEach(s => { if(NOCOUNT.has(s)) return; const t = slotText(s); if(t) n += plainWords(t.replace(/^###.*$/gm, "")); }); return n; }
 function countFocus(){ let n = 0; P().order.forEach(s => { const t = slotText(s); if(t) n += (t.match(/\[\[/g) || []).length; }); return n; }
-/* ----- paragraphs and continuation blocks ("join": true) -----
-   A join step's block continues the nearest earlier non-join block in `order` on the current path: same paragraph, separated
-   by one space, no new line, no own margin word, one <p> on the final screen, one paragraph in the copy text. */
-const isJoin = st => !!(st && st.join && st.slot);
+/* ----- paragraphs -----
+   Every decision is one whole paragraph (22.10.2026: no continuation blocks any more; the long version of a lesson uses the
+   long text of each option). A group is one slot: [[slot], [slot], …] (the shape keeps the callers simple). */
 const NOPARA = new Set(["title", "subject", "greeting", "signoff"]);
-// the slots of `order` (only those of the current path that have a text when `filled`), grouped into paragraphs: [[slot, joined slot, …], …]
+// the slots of `order` (only those of the current path that have a text when `filled`), one group per paragraph
 function slotGroups(slots, filled){
-  const groups = [];
-  for(const s of slots){
-    const st = slotStep(s); if(!st || !curSteps().includes(st) || (filled && !slotText(s))) continue;
-    if(isJoin(st) && groups.length) groups[groups.length - 1].push(s); else groups.push([s]);
-  }
-  return groups;
+  return slots.filter(s => { const st = slotStep(s); return st && curSteps().includes(st) && !(filled && !slotText(s)); }).map(s => [s]);
 }
-// the text of a paragraph so far: its blocks with one space between them
+// the text of a paragraph
 function groupText(g){ return g.map(slotText).filter(Boolean).join(" "); }
-// the paragraph a slot belongs to (all its blocks on the current path, chosen or not)
-function groupOf(slot){ return slotGroups(P().order, false).find(g => g.includes(slot)) || [slot]; }
 // paragraphs of the body text (no title, subject, greeting or sign-off) on the current path
 function bodyParas(filled){ return slotGroups(P().order, filled).filter(g => !NOPARA.has(g[0])); }
 // Grades 9–12: the margin word in the exercise book is a short form of the five paragraph labels (the board shows the full label)
@@ -891,8 +907,9 @@ function resumeRun(id){
   if(!runs[id]){ render(); return; }
   try{
     R = runs[id]; redo = []; disarm();
-    if(!R.date){   // saved before lesson dates were stored: the lesson day becomes today (not a change of the run, so `updated` stays)
-      R.date = fmtDate(Date.now()); R.history.forEach(h => { if(!h.date) h.date = R.date; });
+    if(!R.date || !R.time){   // saved before lesson dates (or times) were stored: today / now (not a change of the run, so `updated` stays)
+      if(!R.date) R.date = fmtDate(Date.now()); if(!R.time) R.time = fmtTime(Date.now());
+      R.history.forEach(h => { if(!h.date) h.date = R.date; if(!h.time) h.time = R.time; });
       savedSig[id] = runSig(R); writeEntry(id, R);
     }
     fs(); view = "run"; closeOverlay(); render(); window.scrollTo(0, 0);
@@ -956,7 +973,7 @@ function renderTop(){
     const c = ph === "final" ? steps.length : (ph === "task" || ph === "layout" ? -1 : R.si);
     sc.innerHTML = steps.map((st, i) => {
       const cls = (ph === "final" || i < c) ? "done" : (i === c ? "now" : "");
-      let name = st.part + (isJoin(st) ? " · continued" : ""); if(!st.slot && R.picks[st.id]){ const o = st.options.find(x => x.id === R.picks[st.id]); if(o) name = o.label; }
+      let name = st.part; if(!st.slot && R.picks[st.id]){ const o = st.options.find(x => x.id === R.picks[st.id]); if(o) name = o.label; }
       return `<span class="chip ${cls}" ${cls === "now" ? 'aria-current="step"' : ""} title="${esc(name)}"><span aria-hidden="true">${i + 1}<span class="nm"> ${esc(name)}</span></span><span class="sr">Step ${i + 1} of ${steps.length}: ${esc(name)}${cls === "done" ? " (done)" : cls === "now" ? " (current)" : ""}</span></span>`;
     }).join("");
     sc.hidden = false;
@@ -1036,7 +1053,7 @@ function relTime(t){
   const diff = Math.round((day(now) - day(d)) / 86400000);
   return diff === 0 ? "heute " + hm : diff === 1 ? "gestern " + hm : d.toLocaleDateString("de-AT", {day:"numeric", month:"numeric"}) + " " + hm;
 }
-function phaseLabel(r){ const p = packById(r.packId); if(!p) return ""; if(r.phase === "final") return "fertig"; if(r.phase === "task" || r.phase === "layout") return "Aufgabe"; const st = activeSteps(p, r.len)[r.si]; return st ? `Schritt ${r.si + 1} von ${activeSteps(p, r.len).length}: ${st.part}${isJoin(st) ? " · continued" : ""}` : ""; }
+function phaseLabel(r){ const p = packById(r.packId); if(!p) return ""; if(r.phase === "final") return "fertig"; if(r.phase === "task" || r.phase === "layout") return "Aufgabe"; const st = activeSteps(p, r.len)[r.si]; return st ? `Schritt ${r.si + 1} von ${activeSteps(p, r.len).length}: ${st.part}` : ""; }
 // the lesson that Enter / PageDown in the library resumes: the most recent unfinished one
 function resumeTarget(){ return recentRuns().find(r => r.phase !== "final") || null; }
 // search: lower case, without accents; every word of the query must occur in title, titleDe, situation, theme, type, focus, level, Schulstufe,
@@ -1100,7 +1117,7 @@ function renderLibrary(){
       <li><b>Paket wählen</b> (nach Schulstufe, Textsorte, Themenbereich oder mit der Suche, auch nach Grammatik-Schwerpunkt), dann Modus und Länge festlegen. Beamer: ab 1024 × 768, am besten im Vollbild (F).</li>
       <li><b>Abstimmen:</b> Alle haben vier Karten A, B, C, D (Kartenvorlage: vier A4-Seiten, eine pro Buchstabe mit je vier Karten; ein Ausdruck reicht für vier Schüler:innen; oder vier große Zettel). Ohne Karten: <span class="nowrap">1–4</span> Finger.</li>
       <li><b>Klicken oder Taste A–D (oder 1–4)</b> für die Gewinnerkarte. Fallen lehnt die „Redaktion“ ab, dann stimmt die Klasse neu ab. Wurde die Falle nicht gewählt, steht beim Abschreiben „Trap check“ am Rand: ein Klick oder die Taste X zeigt sie groß, mit der Begründung.</li>
-      <li><b>Heft:</b> Im Volltext-Modus schreiben alle den gelben Baustein ab. Im Gerüst-Modus (ab der 9. Schulstufe) schreiben alle nur die blauen Wendungen ab und ergänzen eigene Sätze. Ab der 9. Schulstufe hat jeder Text fünf Absätze (Intro, Body 1–3, Conclusion); die lange Fassung macht die Absätze länger: Ein Baustein mit „· continued“ wird im selben Absatz ohne neue Zeile weitergeschrieben.</li>
+      <li><b>Heft:</b> Im Volltext-Modus schreiben alle den gelben Baustein ab. Im Gerüst-Modus (ab der 9. Schulstufe) schreiben alle nur die blauen Wendungen ab und ergänzen eigene Sätze. Ab der 9. Schulstufe hat jeder Text fünf Absätze (Intro, Body 1–3, Conclusion); jede Entscheidung gilt einem ganzen Absatz. Die lange Fassung hat dieselben Entscheidungen, die Absätze sind länger.</li>
       <li>Am Ende steht der fertige Text im passenden Layout, mit Checkliste. ${STORE_OK ? `Jede Stunde bleibt in diesem Browser gespeichert (eine pro Paket, höchstens ${MAX_RUNS}), auch nach dem Schließen.` : "In diesem Browser kann die Stunde nicht gespeichert werden."}</li>
     </ol>${cards || printBtn ? `<div class="cardsrow">${cards}${printBtn}</div>` : ""}</details>
     <nav class="grades" aria-label="Schulstufe">
@@ -1245,7 +1262,7 @@ function heftLines(p){
   else if(p.textType === "diary") L.push("→ under the heading: the date of the entry, on the right" + (m.dear ? `. Then “${plainText(m.dear)}” on its own line.` : ""));
   else if(p.textType === "invitation") L.push("→ draw a frame on a new page; write the invitation inside it" + (hasLayout(p) ? ", starting with the To line" : ""));
   if(p.order.includes("title") && stepIndexOfSlot("title") >= 0) L.push(titleLater() ? `→ leave 2 lines free for the ${tw.toUpperCase()} (we choose it at the end)` : `→ the ${tw} comes first`);
-  if(p.textType === "blog") L.push("→ under the title: user name · date");
+  if(p.textType === "blog") L.push("→ under the title: user name · date, time");
   if(p.textType === "review" && hasLayout(p)){ const n = reviewRating(p), by = reviewBy(p);
     L.push("→ under the title: " + [n ? `draw the stars ${starsText(n)}` : "", by ? `write “${metaFinal(by)}”` : ""].filter(Boolean).join(", then ")); }
   if(p.textType === "letter"){
@@ -1256,8 +1273,6 @@ function heftLines(p){
 }
 function renderTask(){
   const p = P();
-  // a text with continuation blocks (· continued): one short sentence inside the existing list item (no extra row on a 1024×768 board)
-  const contNote = curSteps().some(isJoin) ? " <b>continued</b> = the same paragraph goes on: no new line." : "";
   $("main").innerHTML = `
   <h1 class="sr">Your task</h1>
   <div class="setup runtask${isLow(p) ? " low" : ""}">
@@ -1272,7 +1287,7 @@ function renderTask(){
         <ol style="margin:0;padding-left:1.4em;font-size:1.05rem;display:flex;flex-direction:column;gap:4px">
           <li>Read the options on the board.</li>
           <li>Vote: hold up your card <b>A, B, C or D</b>.</li>
-          ${R.mode === "full" ? `<li>Copy the <b style="background:var(--hl);padding:0 4px">yellow part</b> into your exercise book.${contNote}</li>` : `<li>Copy the <b style="color:var(--sc)">blue words</b>, then finish the paragraph in your own words.${contNote}</li><li>Compare with the model and improve your text.</li>`}
+          ${R.mode === "full" ? `<li>Copy the <b style="background:var(--hl);padding:0 4px">yellow part</b> into your exercise book.</li>` : `<li>Copy the <b style="color:var(--sc)">blue words</b>, then finish the paragraph in your own words.</li><li>Compare with the model and improve your text.</li>`}
         </ol>
         <div class="cards-demo" style="margin-top:8px"><span class="c" style="background:var(--A)" aria-hidden="true">A</span><span class="c" style="background:var(--B)" aria-hidden="true">B</span><span class="c" style="background:var(--C)" aria-hidden="true">C</span><span class="c" style="background:var(--D)" aria-hidden="true">D</span><span class="kbd">No cards? Show 1–4 fingers.</span></div>
         <p class="de" lang="de" style="margin-top:6px">Achtung: Manche Optionen sind Fallen. Die Redaktion lehnt sie ab, dann stimmt ihr neu ab.</p>
@@ -1323,7 +1338,7 @@ function metaRows(p, withSubject){
   const date = m.date ? metaLine(m.date) : esc(today());
   if(hasMailHead(p)){ rows.push(...mailHead(p, metaLine)); if(hasSubj) rows.push(["Subject", subj()]); }
   else if(p.textType === "report"){ if(m.to) rows.push(["To", metaLine(m.to)]); if(m.from) rows.push(["From", metaLine(m.from)]); rows.push(["Date", date]); if(hasSubj) rows.push(["Subject", subj()]); }
-  else if(p.textType === "blog") rows.push(["", `${metaLine(m.user || "our class")} · ${date}`]);
+  else if(p.textType === "blog") rows.push(["", `${metaLine(m.user || "our class")} · ${esc(blogStamp(p))}`]);
   else if(p.textType === "postcard") addrLines(p).forEach(l => rows.push(["", metaLine(l)]));
   else if(p.textType === "message"){ if(m.to) rows.push(["To", metaLine(m.to)]); if(m.from) rows.push(["From", metaLine(m.from)]); }
   else if(p.textType === "diary"){ rows.push(["", date]); if(m.dear) rows.push(["", metaLine(m.dear)]); }
@@ -1336,7 +1351,7 @@ function metaTag(p){ return {blog:"Under the title", review:"Under the title", p
 function renderLayout(){
   const p = P(); const tt = p.textType; const blog = underTitle(p); const m = p.meta || {};
   let msg, head = "Copy the header now.";
-  if(tt === "blog"){ head = "Your page layout"; msg = titleLater() ? "Leave 2 lines free for the title. Under them, write the user name and the date." : "The title comes first. Under it, write the user name and the date."; }
+  if(tt === "blog"){ head = "Your page layout"; msg = titleLater() ? "Leave 2 lines free for the title. Under them, write the user name, the date and the time." : "The title comes first. Under it, write the user name, the date and the time."; }
   else if(tt === "review"){ const n = reviewRating(p), by = reviewBy(p); head = "Your page layout";
     const under = [n ? `draw the stars (${n} of 5)` : "", by ? `write “${metaFinal(by)}”` : ""].filter(Boolean).join(". Then ");
     msg = (titleLater() ? "Leave 2 lines free for the title. Under them, " : "The title comes first. Under it, ") + under + "."; }
@@ -1366,14 +1381,7 @@ function contextHTML(st){
     const first = bodyParas(true)[0];
     return first ? `<div class="context"><b>Our text begins</b>${headText(groupText(first), 28)}</div>` : "";
   }
-  // a continuation block: the paragraph so far (all its blocks chosen until now), which the new block continues on the same line
-  if(isJoin(st)){
-    const g = groupOf(st.slot), before = g.slice(0, g.indexOf(st.slot)).filter(slotText);
-    // reports: the exercise book has the section heading, so the context names it too ("Body paragraph 1 · Findings")
-    const h = splitHead(slotText(g[0]) || "").head;
-    if(before.length) return `<div class="context keep"><b>This paragraph so far (${esc(slotStep(g[0]).part)}${h ? " · " + esc(plainText(h).trim()) : ""})</b>${tailText(groupText(before), 40)}</div>`;
-  }
-  // else the paragraph before this one, with its continuation blocks
+  // the paragraph before this one
   const groups = slotGroups(p.order.slice(0, p.order.indexOf(st.slot)), true).filter(g => !NOCOUNT.has(g[0]));
   const g = groups[groups.length - 1];
   return g ? `<div class="context"><b>Before (${esc(slotStep(g[0]).part)})</b>${tailText(groupText(g), 28)}</div>` : "";
@@ -1395,7 +1403,7 @@ function renderDecide(){
   const n = st.options.length;
   const tiles = st.options.filter(o => !rej.includes(o.id)).map(o => `<span class="vt" style="background:var(--${o.l})">${o.l}</span>`).join("");
   $("main").innerHTML = `
-    <div class="decide-head${P().grade >= 9 ? " upper" : ""}"><div><span class="part-tag">${esc(st.part)}${isJoin(st) ? `<span class="cont"> · continued</span>` : ""}</span><h1 class="q">${esc(st.q)}</h1><p class="de" lang="de">${esc(st.de)}</p></div>
+    <div class="decide-head${P().grade >= 9 ? " upper" : ""}"><div><span class="part-tag">${esc(st.part)}</span><h1 class="q">${esc(st.q)}</h1><p class="de" lang="de">${esc(st.de)}</p></div>
       <div class="vote ${rej.length ? "again" : ""}">${rej.length ? "Vote again:" : "Cards up!"} ${tiles}</div></div>
     ${contextHTML(st)}
     <div class="opts ${n === 3 ? "three" : n === 2 ? "two" : ""}">${cards}</div>`;
@@ -1419,16 +1427,30 @@ function fitDecide0(){
   const bottom = () => Math.max(...opts.map(o => o.getBoundingClientRect().bottom)) + window.scrollY;
   const wordsFit = () => txts.every(t => t.scrollWidth <= t.clientWidth + 1);
   const limit = window.innerHeight - 8;
-  const top = +(1.8 * prefs.zoom).toFixed(2), floor = window.innerHeight < LOW_H ? 0.66 : 0.8;
+  const top = +(1.8 * prefs.zoom).toFixed(2); let floor = window.innerHeight < LOW_H ? 0.66 : 0.8;
   const fits = f => { m.style.setProperty("--fit", f.toFixed(3)); return bottom() <= limit && wordsFit(); };
   const run = () => { if(fits(top)) return top; let lo = floor, hi = top; for(let i = 0; i < 9; i++){ const mid = (lo + hi) / 2; if(fits(mid)) lo = mid; else hi = mid; } fits(lo); return lo; };
-  // below 0.92 the "Before (…)" line goes (never the "This paragraph so far" box of a continuation), but only if that really gives the cards more room (not when a long word is the limit)
+  // below 0.92 the "Before (…)" line goes, but only if that really gives the cards more room (not when a long word is the limit)
   const place = () => {
-    if(ctx) ctx.hidden = false; const f = run(); if(!(f < 0.92 && ctx) || ctx.classList.contains("keep")) return;   // a continuation never loses its paragraph
+    if(ctx) ctx.hidden = false; const f = run(); if(!(f < 0.92 && ctx)) return;
     const okWith = bottom() <= limit; ctx.hidden = true;
     if(run() <= f + 0.005 && okWith){ ctx.hidden = false; run(); }   // hiding it gains nothing and the cards fit with it
   };
+  m.classList.remove("dense");
   place();
+  // long cards (whole paragraphs): the dense layout (compact head, text over the full card width) if the text gets bigger with it
+  // or only fits with it; if neither layout fits, the one that runs less far off the board
+  const tryDense = () => {
+    if(!(txts.length && (bottom() > limit || +m.style.getPropertyValue("--fit") < 0.9))) return;
+    const f0 = +m.style.getPropertyValue("--fit"), b0 = bottom(), ok0 = b0 <= limit;
+    m.classList.add("dense"); place();
+    const f1 = +m.style.getPropertyValue("--fit"), b1 = bottom(), ok1 = b1 <= limit;
+    const keep = (ok1 && !ok0) || (ok1 && ok0 && f1 > f0 + 0.02) || (!ok1 && !ok0 && b1 < b0);
+    if(!keep){ m.classList.remove("dense"); place(); }
+  };
+  tryDense();
+  // three whole paragraphs on a tall board: rather a smaller text than cards that run off the board
+  if(bottom() > limit && floor > 0.66){ floor = 0.66; m.classList.remove("dense"); place(); tryDense(); }
   if(!wordsFit() && box){ box.classList.add("wrapany"); place(); }   // safety net: a word longer than its card at the floor size
 }
 function optPx(){ const t = document.querySelector(".opt:not(.out) .txt"); return t ? parseFloat(getComputedStyle(t).fontSize) : 0; }
@@ -1615,7 +1637,6 @@ function showHelp(){
     <b>?</b><span>show / hide this help</span>
     <b>P</b><span>${esc(P().focus.label)} on / off</span>
     <b>X</b><span>trap check on the copy screen: the trap the class did not choose, with the editor’s reason</span>
-    ${curSteps().some(isJoin) ? `<b>· continued / ↳</b><span>the block continues the same paragraph: no new line, no margin word</span>` : ""}
     <b>2 · 3 · 5 · 8 / 0</b><span>writing timer in minutes (frame mode) / stop it</span>
     <b>PageDown / PageUp / Space</b><span>scroll the finished text</span>
     <b>F</b><span>full screen</span><b>+ / −</b><span>text size</span></div>
@@ -1652,13 +1673,9 @@ function pageHTML(){
         if(isFrame && !R.revealed) html = frame_text(t);
         else if(isFrame && R.revealed) html = revealed_text(t);
         else html = render_text(t, "final");
-        // a block with its own heading needs no margin word; a continuation block (join) keeps the margin word of its paragraph
-        const join = isJoin(st);
-        const tag = splitHead(t).head || join ? "" : esc(marginWord(st));
-        // a continuation block copied earlier is shown inside its paragraph (no new line); only the new one has a row of its own
-        const last = rows[rows.length - 1];
-        if(join && !isNew && last && typeof last === "object" && !last.isNew) last.html += " " + html;
-        else rows.push({cls:`blk s-${esc(slot)} ${join ? "join" : ""} ${isNew ? "new" : "old"} ${isFrame ? "frame" : ""} ${isFrame && R.revealed ? "revealed" : ""}`, tag, html, isNew});
+        // a block with its own heading needs no margin word
+        const tag = splitHead(t).head ? "" : esc(marginWord(st));
+        rows.push({cls:`blk s-${esc(slot)} ${isNew ? "new" : "old"} ${isFrame ? "frame" : ""} ${isFrame && R.revealed ? "revealed" : ""}`, tag, html, isNew});
       }
     }
     if(!metaDone && slot === "title"){ rows.push(metaRow); metaDone = true; }   // blog by-line, review stars go under the title
@@ -1684,13 +1701,13 @@ function renderCopy(){
   const ownChoice = !frame && R.mode === "frame" && (st.slot === "title" || st.slot === "subject");
   let side;
   if(frame && !R.revealed){
-    side = `<div class="copynow fr"><strong>Copy the blue words. Then write your own.</strong>${isJoin(st) ? `<p class="where-join"><b>${esc(whereText(st))}</b></p>` : ""}<p>${esc(checkText(st.own || ""))}</p><p class="muted small" lang="de">${esc(st.ownDe || "")}</p>${isJoin(st) ? "" : `<p class="small">${esc(whereText(st))}</p>`}</div>
+    side = `<div class="copynow fr"><strong>Copy the blue words. Then write your own.</strong><p>${esc(checkText(stOwn(st)))}</p><p class="muted small" lang="de">${esc(stOwnDe(st))}</p><p class="small">${esc(whereText(st))}</p></div>
       <button class="primary" id="reveal">Show the model →</button><span class="kbd">Enter when everybody has written</span>
       <div class="note"><b>Writing time</b><div class="timer"><span class="clock idle" id="clock">0:00</span>${[2,3,5,8,10].map(m => `<button class="tbtn" data-min="${m}" aria-pressed="false">${m} min</button>`).join("")}<button class="tbtn" id="tplus">+1</button><button class="tbtn" id="tstop">Stop</button></div><span class="tkeys" lang="de">(Tasten 2 · 3 · 5 · 8)</span></div>
       <div class="note legend"><span><i class="sw" style="background:var(--sc-soft);border:2px solid var(--sc)"></i>copy these words</span><span><i class="sw" style="border-bottom:4px dashed var(--own)"></i>your own words (~ = how many in the model)</span>${/\{[A-Z][A-Z0-9_]*\}/.test(t) ? `<span><i class="sw" style="background:var(--hl)"></i>our class’s choice</span>` : ""}</div>`;
   } else {
     let head, text;
-    if(frame){ head = "Compare with the model."; text = `<p>Blue = the words you copied. <i style="color:var(--own)">Brown</i> = the model’s own words.</p>${st.own ? `<p><b>Check:</b> ${esc(checkText(st.own))}</p>` : ""}${st.slot === "signoff" || st.slot === "greeting" ? "" : "<p>Then improve one sentence of your text with an idea from the model.</p>"}`; }
+    if(frame){ head = "Compare with the model."; text = `<p>Blue = the words you copied. <i style="color:var(--own)">Brown</i> = the model’s own words.</p>${stOwn(st) ? `<p><b>Check:</b> ${esc(checkText(stOwn(st)))}</p>` : ""}${st.slot === "signoff" || st.slot === "greeting" ? "" : "<p>Then improve one sentence of your text with an idea from the model.</p>"}`; }
     else if(ownChoice){ const what = st.slot === "subject" ? "subject line" : titleWord(p); head = "Copy it, or write your own."; text = `<p>${esc(whereText(st))}</p><p>Or write a better ${what} of your own.</p>`; }
     else { head = "Copy the yellow part now."; text = `<p>${esc(whereText(st))}</p>`; }
     side = `<div class="copynow"><strong>${head}</strong>${text}</div>
@@ -1718,15 +1735,11 @@ function placeCopy(){
   const nw = document.querySelector(".blk.new"), side = document.querySelector(".copy-grid .side"); if(!nw || !side) return;
   const H = window.innerHeight, wide = window.innerWidth > 1000, y0 = window.scrollY;
   side.style.marginTop = "";
+  side.classList.remove("compact");
+  if(wide && side.offsetHeight > H - 20) side.classList.add("compact");
   side.classList.toggle("stick", wide && side.offsetHeight <= H - 20);
-  // (a continuation block: scrolling only as far as needed keeps as much of its paragraph above it in view as possible)
   const r = nw.getBoundingClientRect(), top = r.top + y0, bottom = r.bottom + y0;
   let y = bottom > 0.8 * H ? Math.max(0, Math.min(bottom - 0.8 * H, top - 70)) : 0;
-  // compare screen of a continuation block: show its whole paragraph from the start if it fits on the board
-  if(R.revealed && isJoin(cur())){
-    const f = document.querySelector(".blk.s-" + CSS.escape(groupOf(cur().slot)[0]));
-    if(f){ const fTop = f.getBoundingClientRect().top + y0; y = bottom - fTop <= H - 16 ? Math.max(0, bottom - H + 8, Math.min(y, fTop - 8)) : Math.max(0, Math.min(y, bottom - H + 8)); }   // too tall: as much of the paragraph as possible, the new block ends at the bottom of the board
-  }
   // a sticking side panel starts below the top bar until the page scrolls: scroll a little further, so that its end
   // (the trap check) is on the board too, as long as the top of the block to copy stays below 70 px
   if(wide && side.classList.contains("stick")){
@@ -1754,13 +1767,11 @@ function whereText(st){
     // Frame mode with the name as own words (a dashed line, no name gap): everybody signs with their own name and town,
     // unless the step's prompt (own) names the model writer ("the writer’s full name: …"): then the model's town too.
     const m = p.meta || {};
-    const own = isFrameText(t) && !(senderName(p) && String(st.own || "").includes(metaFinal(senderName(p))));
+    const own = isFrameText(t) && !(senderName(p) && String(stOwn(st)).includes(metaFinal(senderName(p))));
     const sender = tt === "letter" ? (own ? (m.town ? "your own town or village" : "") : senderLine(p)) : "";
     return `${tt === "postcard" || tt === "message" || tt === "invitation" ? "" : "Skip one line. "}Write “${first}” on its own line and ${own ? "your own" : "the"} name on the next line.` + (fromGap ? " Then add the name in the From line, too." : "") + (sender ? (own ? ` Under it, write ${sender}.` : ` Under it, write “${sender}”.`) : "");
   }
-  // continuation block: the same paragraph goes on, on the same line (frame mode: after the student's own last sentence)
-  if(isJoin(st)) return isFrameText(t) ? "Continue the same paragraph after your own last sentence: no new line." : "Continue the same paragraph: no new line.";
-  const bodySteps = curSteps().filter(s => s.slot && !NOCOUNT.has(s.slot) && s.slot !== "greeting" && s.slot !== "signoff" && !isJoin(s));
+  const bodySteps = curSteps().filter(s => s.slot && !NOCOUNT.has(s.slot) && s.slot !== "greeting" && s.slot !== "signoff");
   const firstBody = bodySteps.indexOf(st) === 0;
   // short texts without margin words: the postcard message (left half), the message and the invitation (inside the frame)
   if(tt === "postcard") return firstBody ? "Start the message on the left half" + (stepIndexOfSlot("greeting") >= 0 ? ", under the greeting." : ".") : "Keep writing on the left half. Start a new line.";
@@ -1781,7 +1792,7 @@ function nextFromCopy(){ if(view !== "run" || R.phase !== "copy") return; snapsh
 /* ===================== FINAL ===================== */
 function docHTML(){
   const p = P(); const tt = p.textType; const m = p.meta || {};
-  // one <p> per paragraph: a continuation block (join) follows its paragraph after one space
+  // one <p> per paragraph
   const body = slotGroups(p.order, true).filter(g => !NOCOUNT.has(g[0]));
   const para = g => `<p>${g.map(s => render_text(slotText(s), "final")).join(" ")}</p>`;
   const title = slotText("title"), subject = slotText("subject");
@@ -1790,7 +1801,7 @@ function docHTML(){
   if(tt === "email") return `<article class="doc email" lang="en-GB">${mailhead}${body.map(para).join("")}</article>`;
   if(tt === "report") return `<article class="doc report" lang="en-GB"><div class="rhead">${m.to ? `<b>To:</b><span>${esc(metaFinal(m.to))}</span>` : ""}${m.from ? `<b>From:</b><span>${esc(metaFinal(m.from))}</span>` : ""}<b>Date:</b><span>${esc(date)}</span>${subject ? `<b>Subject:</b><span><b>${render_text(subject, "final")}</b></span>` : ""}</div>${title ? `<h2>${render_text(title, "final")}</h2>` : ""}${body.map(para).join("")}</article>`;
   if(tt === "blog"){ const user = metaFinal(m.user || "our class");
-    return `<article class="doc blog" lang="en-GB">${title ? `<h2>${render_text(title, "final")}</h2>` : ""}<div class="by"><span class="avatar" aria-hidden="true">${esc((user[0] || "?").toUpperCase())}</span>${esc(user)} · ${esc(date)}</div>${body.map(para).join("")}<div class="comments">Comments (0) · Leave a comment</div></article>`; }
+    return `<article class="doc blog" lang="en-GB">${title ? `<h2>${render_text(title, "final")}</h2>` : ""}<div class="by"><span class="avatar" aria-hidden="true">${esc((user[0] || "?").toUpperCase())}</span>${esc(user)} · ${esc(blogStamp(p))}</div>${body.map(para).join("")}<div class="comments">Comments (0) · Leave a comment</div></article>`; }
   const h2 = title ? `<h2>${render_text(title, "final")}</h2>` : "";
   if(tt === "postcard"){
     const addr = addrLines(p);
@@ -1817,7 +1828,7 @@ function renderFinal(){
        ["info", `${esc(cap(p.focus.label))} in the model: <span class="num">${foc}</span>.${fmin ? ` Use at least ${esc(fmin)}.` : ""}`]]
     : [[words >= L.min - 3 && words <= L.max + 3 ? "ok" : "bad", `Words: <span class="num">${words}</span> (${esc(L.label)})`],
        [foc >= fmin ? "ok" : "bad", `${esc(cap(p.focus.label))}: <span class="num">${foc}</span>`]];
-  // grades 9–12: every text has five paragraphs (continuation blocks belong to their paragraph)
+  // grades 9–12: every text has five paragraphs (one decision each)
   if(p.grade >= 9){ const n = bodyParas(true).length, what = "Introduction, three body paragraphs, Conclusion";
     auto.push(frame ? ["info", `Paragraphs in the model: <span class="num">${n}</span> (${what}). Yours: the same.`] : [n === 5 ? "ok" : "bad", `Paragraphs: <span class="num">${n}</span> (${what})`]); }
   const ticks = R.ticks || [];
@@ -1869,7 +1880,7 @@ function finalPlain(){
   if(head.length) out.push(head.join("\n"));
   if(title) out.push(plainText(title));
   if(p.textType === "newspaper") out.push("By " + (metaFinal(m.byline) || "our class"));
-  if(p.textType === "blog") out.push(`${metaFinal(m.user || "our class")} · ${date}`);
+  if(p.textType === "blog") out.push(`${metaFinal(m.user || "our class")} · ${blogStamp(p)}`);
   if(p.textType === "review"){ const n = reviewRating(p), by = reviewBy(p); const r = [n ? `Rating: ${n}/5` : "", by ? metaFinal(by) : ""].filter(Boolean); if(r.length) out.push(r.join("\n")); }
   slotGroups(p.order, true).filter(g => !NOCOUNT.has(g[0])).forEach(g => out.push(g.map(s => plainText(slotText(s))).join(" ")));
   if(p.textType === "letter" && senderLine(p)) out[out.length - 1] += "\n" + senderLine(p);

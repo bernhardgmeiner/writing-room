@@ -177,50 +177,28 @@
           "crit": "CC",
           "text": "### Free time\nSeven in ten students use screens for more than two hours a day. As a result, half of all students meet friends outside at least twice a week. In short, only six go to a youth centre.",
           "reject": "The linking words don’t fit: meeting friends is not a result of screen time (‘As a result’), and ‘In short’ should sum up what came before, but the last sentence adds a new detail.",
-          "rejectDe": "Die Linking words passen nicht: Freund:innen treffen ist keine Folge der Bildschirmzeit (As a result), und In short fasst nichts zusammen, sondern bringt ein neues Detail."
+          "rejectDe": "Die Linking words passen nicht: Freund:innen treffen ist keine Folge der Bildschirmzeit (As a result), und In short fasst nichts zusammen, sondern bringt ein neues Detail.",
+          "textLong": "### Free time\nSeven in ten students use screens for more than two hours a day. As a result, half of all students meet friends outside at least twice a week, and a third do sport in a club. In short, only six students go to a youth centre at least once a week."
         },
         {
           "l": "B",
           "id": "screens",
           "label": "Screens first",
           "text": "### Free time\n{{The survey shows that [[seven in ten]] students use}} screens for more than two hours a day. {{Even so, [[half of]] all students}} meet friends outside at least twice a week, and [[a third]] do sport in a club.",
-          "why": "Starts with the biggest number. ‘Even so’ shows that screens are not the whole story."
+          "why": "Starts with the biggest number. ‘Even so’ shows that screens are not the whole story.",
+          "textLong": "### Free time\n{{The survey shows that [[seven in ten]] students use}} screens for more than two hours a day. {{Even so, [[half of]] all students}} meet friends outside at least twice a week, and [[a third]] do sport in a club. {{Youth centres, on the other hand, play a smaller role:}} six students, or [[one in ten]], go to one at least once a week."
         },
         {
           "l": "C",
           "id": "friends",
           "label": "Friends and sport first",
           "text": "### Free time\n{{Friends and sport are important: [[half of]] the students}} meet up outside at least twice a week, and [[a third]] do sport in a club. {{[[Seven in ten]], however, use}} screens for more than two hours a day.",
-          "why": "Starts with the active side and then adds the screen figure as a second picture."
+          "why": "Starts with the active side and then adds the screen figure as a contrast.",
+          "textLong": "### Free time\n{{Friends and sport are important: [[half of]] the students}} meet up outside at least twice a week, and [[a third]] do sport in a club. {{[[Seven in ten]], however, use}} screens for more than two hours a day. {{Youth centres matter much less: [[very few]] students}} (6) go to one at least once a week."
         }
-      ]
-    },
-    {
-      "id": "youth",
-      "slot": "youth",
-      "part": "Body paragraph 1",
-      "join": true,
-      "len": "long",
-      "q": "What about the youth centre?",
-      "de": "Der Abschnitt geht weiter: eine weitere Zahl aus der Umfrage, mit passender Mengenangabe. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
-      "own": "Copy the frame. Then complete the sentence with the figure for the youth centre.",
-      "ownDe": "Gerüst abschreiben, dann den Satz mit der Zahl zum Jugendzentrum fertigschreiben.",
-      "options": [
-        {
-          "l": "A",
-          "id": "role",
-          "label": "A small role",
-          "text": "{{Youth centres, on the other hand, play a smaller role:}} six students, or [[one in ten]], go to one at least once a week.",
-          "why": "‘On the other hand’ contrasts the youth centre with the bigger groups before it."
-        },
-        {
-          "l": "B",
-          "id": "compare",
-          "label": "A comparison",
-          "text": "{{By comparison, [[very few]] students}} go to a youth centre: six of the 60 visit one at least once a week.",
-          "why": "A comparison with the figures before it and the exact number in brackets."
-        }
-      ]
+      ],
+      "ownLong": "Copy the frame. Then complete the sentences with the figures from the survey, including the youth centre.",
+      "ownLongDe": "Gerüst abschreiben, dann die Sätze mit den Zahlen aus der Umfrage fertigschreiben, auch mit der Zahl zum Jugendzentrum."
     },
     {
       "id": "clubs",
@@ -235,8 +213,9 @@
           "l": "A",
           "id": "choice",
           "label": "The choice of clubs",
-          "text": "### The afternoon clubs\n{{The school’s clubs attract far fewer students:}} only 2 of the 60 go there. {{The main reason is that [[well over half of]]}} the others (35) are not interested in chess or drama. {{[[About a quarter]]}} (15) would miss their bus, and eight find 4 p.m. too late.",
-          "why": "‘Far fewer’ compares the clubs with the free-time figures before. The main reason comes first, supported by the figures."
+          "text": "### The afternoon clubs\n{{The school’s clubs attract far fewer students:}} only two of the 60 attend them. {{The main reason is that [[well over half of]]}} the others (35) are not interested in chess or drama. {{[[About a quarter]]}} (15) would miss their bus, and eight find 4 p.m. too late.",
+          "why": "‘Far fewer’ compares the clubs with the free-time figures before. The main reason comes first, supported by the figures.",
+          "textLong": "### The afternoon clubs\n{{The school’s clubs attract far fewer students:}} only two of the 60 attend them, so they reach [[hardly anyone]]. {{The main reason is that [[well over half of]]}} the others (35) are not interested in chess or drama. {{[[About a quarter]]}} (15) would miss their bus, and eight find 4 p.m. too late. {{In other words,}} the clubs offer the wrong activities at the wrong time."
         },
         {
           "l": "B",
@@ -244,106 +223,62 @@
           "label": "Numbers and reasons",
           "trap": true,
           "crit": "LSA",
-          "text": "### The afternoon clubs\nOnly 2 of the 60 students go to the clubs, so hardly nobody uses them. Most of the others are not interested for chess or drama, and eight say the clubs start at 4 p.m., what is too late.",
+          "text": "### The afternoon clubs\nOnly two of the 60 students go to the clubs, so hardly nobody uses them. Most of the others are not interested for chess or drama. About a quarter (15) would miss their bus, and eight say the clubs start at 4 p.m., what is too late.",
           "reject": "Three typical mistakes: ‘hardly nobody’ (→ hardly anyone), ‘interested for’ (→ interested in) and ‘what is too late’ (→ which is too late).",
-          "rejectDe": "Drei typische Fehler: hardly nobody → hardly anyone, interested for → interested in, what is too late → which is too late."
+          "rejectDe": "Drei typische Fehler: hardly nobody → hardly anyone, interested for → interested in, what is too late → which is too late.",
+          "textLong": "### The afternoon clubs\nOnly two of the 60 students go to the clubs, so hardly nobody uses them. Most of the others are not interested for chess or drama. About a quarter (15) would miss their bus, and eight say the clubs start at 4 p.m., what is too late. So the real problem is the choice of clubs and their times, not the students."
         },
         {
           "l": "C",
           "id": "asked",
           "label": "What students told us",
-          "text": "### The afternoon clubs\n{{Next to these figures, the school clubs look almost empty:}} only 2 students go. {{When asked why, [[most of]] the others}} said chess and drama did not interest them. {{[[About a quarter]] (15)}} would miss their bus, and [[only a few]] (8) find the 4 p.m. start too late.",
-          "why": "The first sentence links the clubs to the free-time figures, then the reasons follow from the biggest group to the smallest."
-        }
-      ]
-    },
-    {
-      "id": "wishes",
-      "slot": "wishes",
-      "part": "Body paragraph 2",
-      "q": "What would students like instead?",
-      "de": "Der Abschnitt geht weiter: wie viele bei einem neuen Club mitmachen würden und welche Clubs gewünscht sind. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
-      "own": "Copy the frame. Then add the wishes and the figures from the survey.",
-      "ownDe": "Gerüst abschreiben, dann die Wünsche und die Zahlen aus der Umfrage ergänzen.",
-      "options": [
-        {
-          "l": "A",
-          "id": "news",
-          "label": "The good news first",
-          "text": "{{Encouragingly, [[three quarters of]] the students}} (45) would join a new club. {{Climbing is the top choice}} with 18 votes, {{followed by}} cooking (15) and film-making (12).",
-          "why": "‘Encouragingly’ turns from the problem to the good news, then the wishes follow from the top down."
-        },
-        {
-          "l": "B",
-          "id": "details",
-          "label": "From the total to the details",
-          "text": "{{Still, [[three out of four]] students (45) would join}} a new club: {{[[two in five]] of them}} (18) would choose climbing, [[a third]] (15) cooking and 12 film-making.",
-          "why": "‘Still’ contrasts the empty clubs with the wish for new ones. Fractions of the 45 make the figures easy to compare."
+          "text": "### The afternoon clubs\n{{Compared with these figures, the school clubs look almost empty:}} only two students go. {{When asked why, [[most of]] the others}} said chess and drama did not interest them. {{[[About a quarter]] (15)}} would miss their bus, and [[only a few]] (8) found the 4 p.m. start too late.",
+          "why": "The first sentence links the clubs to the free-time figures, then the reasons follow from the biggest group to the smallest.",
+          "textLong": "### The afternoon clubs\n{{Compared with these figures, the school clubs look almost empty:}} only two students go. {{When asked why, [[most of]] the others}} said chess and drama did not interest them. {{[[About a quarter]] (15)}} would miss their bus, and [[only a few]] (8) found the 4 p.m. start too late. {{This means that}} students are not against clubs in general: the problem is what the clubs offer and when."
         }
       ],
-      "join": true
+      "ownLong": "Copy the frame. Then give the reasons from the survey in your own words and say what they show.",
+      "ownLongDe": "Gerüst abschreiben, dann die Gründe aus der Umfrage mit eigenen Worten ergänzen und sagen, was sie zeigen."
     },
     {
       "id": "recs",
       "slot": "recs",
       "part": "Body paragraph 3",
-      "q": "Body paragraph 3: what should the school do to make its clubs more popular?",
-      "de": "Dritter Inhaltspunkt: unsere Empfehlungen. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
-      "own": "Copy the frame. Then complete the recommendations and give a reason.",
-      "ownDe": "Gerüst abschreiben, dann die Empfehlungen fertigschreiben und begründen.",
+      "q": "Body paragraph 3: what would students like, and what should the school do?",
+      "de": "Dritter Inhaltspunkt: die Wünsche aus der Umfrage und unsere Empfehlungen an die Schule. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then complete the recommendations with the wishes from the survey and give a reason.",
+      "ownDe": "Gerüst abschreiben, dann die Empfehlungen mit den Wünschen aus der Umfrage fertigschreiben und begründen.",
       "options": [
         {
           "l": "A",
           "id": "two",
           "label": "Two new clubs",
-          "text": "### Recommendations\n{{Based on these results, the school should start}} a climbing club and a cooking club. {{They should take place on}} {DAY} afternoons straight after the last lesson, not at four o’clock.",
-          "why": "Picks the two top wishes and solves the problem of the late start."
+          "text": "### Recommendations\n{{Encouragingly, [[three quarters of]] the students}} (45) would join a new club. {{Based on this, the school should start}} the two most popular ones, climbing (18 votes) and cooking (15). {{They should take place on}} {DAY} afternoons straight after the last lesson, not at four o’clock.",
+          "why": "Starts with the good news, picks the two top wishes and solves the problem of the late start.",
+          "textLong": "### Recommendations\n{{Encouragingly, [[three quarters of]] the students}} (45) would join a new club. {{Based on this, the school should start}} the two most popular ones, climbing (18 votes) and cooking (15). {{They should take place on}} {DAY} afternoons straight after the last lesson, not at four o’clock. Older students could help the teachers to run them, which would keep the costs low."
         },
         {
           "l": "B",
           "id": "three",
           "label": "Three clubs, one afternoon",
-          "text": "### Recommendations\n{{We recommend}} three new clubs that match students’ wishes: climbing, cooking and film-making. {{They should run on}} {DAY} afternoons {{and begin right after lessons,}} as a late start puts students off.",
-          "why": "Offers every wish from the survey and gives a reason for the timing."
+          "text": "### Recommendations\n{{Fortunately, [[three out of four]] students}} (45) would join a new club. {{We recommend}} three clubs that match their wishes: climbing (18 votes), cooking (15) and film-making (12). {{They should run on}} {DAY} afternoons {{and begin right after lessons,}} as a late start puts students off.",
+          "why": "Offers every wish from the survey and gives a reason for the timing.",
+          "textLong": "### Recommendations\n{{Fortunately, [[three out of four]] students}} (45) would join a new club. {{We recommend}} three clubs that match their wishes: climbing (18 votes), cooking (15) and film-making (12). {{They should run on}} {DAY} afternoons {{and begin right after lessons,}} as a late start puts students off. A free taster afternoon in September would let students try the clubs before they sign up."
         },
         {
           "l": "C",
           "id": "trap",
-          "label": "Healthy habits",
+          "label": "Start from the screen figures",
           "trap": true,
           "crit": "TA",
-          "text": "### Recommendations\nSince seven in ten students use screens for over two hours a day, everyone should use their phones less. Parents could set time limits, and on {DAY} afternoons students should go outside instead of gaming.",
+          "text": "### Recommendations\nThree quarters of the students (45) say they would join a new club. Since seven in ten use screens for over two hours a day, everyone should use their phones less. Parents could set time limits, and on {DAY} afternoons students should go outside instead of gaming.",
           "reject": "These are tips for students and parents, not recommendations for the school. The task asks what the school could do to make its clubs more popular, so content point 3 is missed.",
-          "rejectDe": "Das sind Tipps für Schüler:innen und Eltern, keine Empfehlungen an die Schule. Gefragt ist, was die Schule tun kann: Inhaltspunkt 3 fehlt."
-        }
-      ]
-    },
-    {
-      "id": "organise",
-      "slot": "organise",
-      "part": "Body paragraph 3",
-      "len": "long",
-      "q": "How could the new clubs work in practice?",
-      "de": "Der Abschnitt geht weiter: ein praktischer Vorschlag, wie die neuen Clubs gut starten. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
-      "own": "Copy the frame. Then add one practical idea of your own.",
-      "ownDe": "Gerüst abschreiben, dann eine eigene praktische Idee ergänzen.",
-      "options": [
-        {
-          "l": "A",
-          "id": "costs",
-          "label": "People and costs",
-          "text": "{{To keep costs low, teachers could run the clubs together with}} older students, and the school could ask a local climbing centre for a group price.",
-          "why": "Answers two practical questions: who runs the clubs and how to keep them cheap."
-        },
-        {
-          "l": "B",
-          "id": "word",
-          "label": "Spread the word",
-          "text": "{{To make the clubs well known,}} class representatives could present them in September. {{A free taster afternoon would}} let students try a club before they sign up.",
-          "why": "Makes sure that students hear about the clubs and can try them first."
+          "rejectDe": "Das sind Tipps für Schüler:innen und Eltern, keine Empfehlungen an die Schule. Gefragt ist, was die Schule tun kann: Inhaltspunkt 3 fehlt.",
+          "textLong": "### Recommendations\nThree quarters of the students (45) say they would join a new club. Since seven in ten use screens for over two hours a day, everyone should use their phones less. Parents could set time limits, and on {DAY} afternoons students should go outside instead of gaming. Families could plan one evening a week without screens, for example with board games or a walk."
         }
       ],
-      "join": true
+      "ownLong": "Copy the frame. Then complete the recommendations with the wishes from the survey, give a reason and add one practical idea.",
+      "ownLongDe": "Gerüst abschreiben, dann die Empfehlungen mit den Wünschen aus der Umfrage fertigschreiben, begründen und eine praktische Idee ergänzen."
     },
     {
       "id": "concl",
@@ -365,8 +300,8 @@
           "l": "B",
           "id": "message",
           "label": "A clear message",
-          "text": "### Conclusion\n{{All in all, the message is clear:}} students want afternoon clubs, just not the current ones. {{If the school follows our recommendations,}} next year’s clubs could be full.",
-          "why": "Turns the results into one clear message and links back to the students’ wishes and the recommendations."
+          "text": "### Conclusion\n{{All in all, the message is clear:}} students already have busy afternoons, but [[most of]] them would still join a club, just not the current ones. {{If the school follows our recommendations,}} next year’s clubs could be full.",
+          "why": "Turns the results into one clear message that links free time, the old clubs and the recommendations."
         }
       ]
     }
@@ -375,11 +310,8 @@
     "subject",
     "intro",
     "free",
-    "youth",
     "clubs",
-    "wishes",
     "recs",
-    "organise",
     "concl"
   ],
   "checks": [
@@ -408,9 +340,9 @@
   "teacher": {
     "aim": "Die Klasse baut gemeinsam einen Report (A2+/B1) an die Schulleitung über eine erfundene Freizeit-Umfrage im eigenen Jahrgang, mit Empfehlungen für neue Nachmittagsclubs. Schwerpunkt sind Mengenangaben, die Zahlen in Worte fassen (most of, half of, a third, hardly anyone, seven in ten).",
     "prep": "A/B/C/D-Karten austeilen, Hefte bereitlegen, Beamer im Vollbild. Die Umfrageergebnisse aus der Aufgabe an die Tafel schreiben, damit alle beim Abstimmen nachrechnen können. Daneben eine kleine Übersetzungshilfe Zahl → Wort: 42 von 60 = seven in ten, 30 von 60 = half, 20 von 60 = a third, 45 von 60 = three quarters, 6 von 60 = one in ten, 2 von 60 = hardly anyone. Im Gerüst-Modus den eingebauten Timer nutzen: 5 min pro Abschnitt.",
-    "heft": "Neue Seite: Datum rechts oben, darunter „Report“ als Überschrift (wie am Beamer). Darunter To / From / Date / Subject untereinander wie am Beamer. Fünf Abschnitte (Introduction, Free time, The afternoon clubs, Recommendations, Conclusion); jeder beginnt nach einer Leerzeile mit seiner Zwischenüberschrift auf einer eigenen Zeile (unterstrichen), am Rand steht nichts. Eine Fortsetzung wird ohne neue Zeile im selben Abschnitt weitergeschrieben. Mengenangaben (most of, half of, a third, hardly anyone …) grün unterstreichen.",
-    "flow": "Volltext kurz (50 min): 5 min Aufgabe und Zahlen lesen, 2 min Kopf und Betreff, 6 weitere Entscheidungen à ca. 2 min (der Abschnitt zu den Clubs hat zwei: Gründe, dann Wünsche als Fortsetzung), Abschreiben ca. 22 min, 5 min Checkliste. Volltext lang (ca. 60 min): wie kurz, dazu je eine Fortsetzung in „Free time“ (Jugendzentrum) und „Recommendations“ (Umsetzung); das sind zwei Entscheidungen und rund 50 Wörter Abschreiben mehr. In einer Doppelstunde die restliche Zeit für die Besprechung der Fallen nutzen und die Hausübung zu zweit beginnen. Gerüst kurz (geplant 60 min): 5 min Aufgabe, 2 min Kopf und Betreff; pro Abschnitt 1 min Entscheidung, 5–6 min eigenes Schreiben, 1 min Vergleich mit dem Modell; die Fortsetzung mit den Wünschen braucht ca. 4 min. In einer 50-Minuten-Stunde beim Schluss nur abstimmen und das Gerüst abschreiben, Schluss und Checkliste als Hausübung. Die Zahlen bleiben die ganze Stunde an der Tafel stehen. Gerüst lang (ca. 75 min): gleicher Rhythmus wie kurz, dazu die zwei Fortsetzungen, je ca. 4–5 min. In einer Doppelstunde danach eine Vergleichsrunde zu zweit.",
+    "heft": "Neue Seite: Datum rechts oben, darunter „Report“ als Überschrift (wie am Beamer). Darunter To / From / Date / Subject untereinander wie am Beamer. Fünf Abschnitte (Introduction, Free time, The afternoon clubs, Recommendations, Conclusion); jeder beginnt nach einer Leerzeile mit seiner Zwischenüberschrift auf einer eigenen Zeile (unterstrichen), am Rand steht nichts. Mengenangaben (most of, half of, a third, hardly anyone …) grün unterstreichen.",
+    "flow": "Volltext kurz (50 min): 5 min Aufgabe und Zahlen lesen, 2 min Kopf und Betreff, 5 Entscheidungen für die Abschnitte à ca. 2 min (insgesamt 6 Entscheidungen), Abschreiben ca. 22 min, 5 min Checkliste. Volltext lang (ca. 60 min): dieselben 6 Entscheidungen; die drei Hauptabschnitte sind je rund 15–20 Wörter länger, das Abschreiben dauert daher ca. 30 min. In einer Doppelstunde die restliche Zeit für die Besprechung der Fallen nutzen und die Hausübung zu zweit beginnen. Gerüst kurz (geplant 60 min): 5 min Aufgabe, 2 min Kopf und Betreff; pro Abschnitt 1 min Entscheidung, 5–6 min eigenes Schreiben, 1 min Vergleich mit dem Modell. In einer 50-Minuten-Stunde beim Schluss nur abstimmen und das Gerüst abschreiben, Schluss und Checkliste als Hausübung. Die Zahlen bleiben die ganze Stunde an der Tafel stehen. Gerüst lang (ca. 75 min): dieselben 6 Entscheidungen im gleichen Rhythmus, bei den drei Hauptabschnitten je ca. 3 min mehr eigenes Schreiben (ein Satz mehr: Jugendzentrum, was die Gründe zeigen, eine praktische Idee). In einer Doppelstunde danach eine Vergleichsrunde zu zweit.",
     "traps": "Introduction C (TA): Vorurteil statt sachlichem Zweck (Everyone knows …, To prove this), passt nicht einmal zu den Ergebnissen. Free time A (CC): As a result ohne Ursache-Wirkung, In short ohne Zusammenfassung. The afternoon clubs B (LSA): hardly nobody, interested for, what is too late. Recommendations C (TA): Tipps für Schüler:innen und Eltern statt Empfehlungen an die Schule, Inhaltspunkt 3 fehlt. Kürzel: TA = Erfüllung der Aufgabenstellung, CC = Kohärenz und Kohäsion, LSR = Spektrum sprachlicher Mittel, LSA = Sprachrichtigkeit.",
-    "notes": "Aufbau: Jeder Report hat genau fünf Abschnitte mit Zwischenüberschrift (Einleitung, drei Hauptteil-Abschnitte, Schluss); die Wünsche der Schüler:innen gehören zum Abschnitt über die Clubs, und die lange Fassung macht Abschnitte länger, sie fügt keinen hinzu. Alle Zahlen sind ein vereinfachtes, erfundenes Beispiel. Bei jeder Mengenangabe kurz nachrechnen lassen: 35 von 58 = well over half bzw. most of the others, 15 von 58 = about a quarter, 8 von 58 = only a few, 6 von 60 = one in ten, 18 von 45 = two in five, 15 von 45 = a third. Markiert sind nur Mengenangaben zur Umfragegruppe; reine Zahlen bleiben unmarkiert. Nach der Falle in „The afternoon clubs“ lohnt eine Minute an der Tafel: hardly anyone / almost nobody (nie zwei Verneinungen). Differenzierung: Schnelle schreiben im Gerüst-Modus einen zusätzlichen Satz mit einer anderen Mengenangabe (z. B. well under half). Hausübung: Mini-Umfrage in Familie oder Freundeskreis (8–10 Personen) zu einer Freizeitfrage und drei Sätze mit Mengenangaben."
+    "notes": "Aufbau: Jeder Report hat genau fünf Abschnitte mit Zwischenüberschrift (Einleitung, drei Hauptteil-Abschnitte, Schluss). Die Wünsche der Schüler:innen stehen am Anfang der Empfehlungen, weil sie die Empfehlungen begründen. Die lange Fassung hat dieselben Entscheidungen mit längeren Abschnitten, sie fügt keinen Abschnitt hinzu. Alle Zahlen sind ein vereinfachtes, erfundenes Beispiel. Bei jeder Mengenangabe kurz nachrechnen lassen: 35 von 58 = well over half bzw. most of the others, 15 von 58 = about a quarter, 8 von 58 = only a few, 6 von 60 = one in ten bzw. very few, 2 von 60 = hardly anyone, 45 von 60 = three quarters bzw. three out of four. Markiert sind nur Mengenangaben zur Umfragegruppe; reine Zahlen bleiben unmarkiert. Nach der Falle in „The afternoon clubs“ lohnt eine Minute an der Tafel: hardly anyone / almost nobody (nie zwei Verneinungen). Differenzierung: Schnelle schreiben im Gerüst-Modus einen zusätzlichen Satz mit einer anderen Mengenangabe (z. B. well under half). Hausübung: Mini-Umfrage in Familie oder Freundeskreis (8–10 Personen) zu einer Freizeitfrage und drei Sätze mit Mengenangaben."
   }
 }

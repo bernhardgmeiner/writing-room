@@ -123,24 +123,26 @@
       "id": "food",
       "slot": "food",
       "part": "Body paragraph 1",
-      "q": "Body paragraph 1: what is the food like?",
-      "de": "Erster Inhaltspunkt, erster Teil: das Essen, genau bewertet. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
-      "own": "Copy the frame. Then describe one dish with an adjective and a degree adverb (really, a bit, surprisingly …).",
-      "ownDe": "Gerüst abschreiben, dann ein Gericht mit Adjektiv und Gradadverb beschreiben (really, a bit, surprisingly …).",
+      "q": "Body paragraph 1: what are the food and the prices like?",
+      "de": "Erster Inhaltspunkt: das Essen, genau bewertet, und ob die Preise fair sind. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then describe one dish with a degree adverb and an adjective and say if the prices are fair.",
+      "ownDe": "Gerüst abschreiben, dann ein Gericht mit Gradadverb und Adjektiv beschreiben und sagen, ob die Preise fair sind.",
       "options": [
         {
           "l": "A",
           "id": "bagels",
           "label": "The bagels",
-          "text": "{{The food alone is almost worth the wait.}} My avocado and feta bagel was [[really delicious]], and my friend’s cheese bagel was [[very tasty]], too.",
-          "why": "The topic sentence links the food to the wait in the introduction. Two dishes with precise adjectives follow."
+          "text": "{{The food alone is almost worth the wait.}} My avocado and feta bagel was [[really delicious]], and my friend’s cheese bagel was [[very tasty]], too. {{The prices are [[pleasantly low]] for the city centre:}} a bagel costs €5.50 to €6.90 and a muffin €2.90. {{Students also get}} 10% off with a school ID.",
+          "why": "The topic sentence links the food to the wait in the introduction. Precise adjectives and fair prices follow.",
+          "textLong": "{{The food alone is almost worth the wait.}} My avocado and feta bagel was [[really delicious]], and my friend’s cheese bagel was [[very tasty]], too. Our hot chocolate was [[perfectly creamy]] and came with a tiny biscuit. {{The prices are [[pleasantly low]] for the city centre:}} a bagel costs €5.50 to €6.90 and a muffin €2.90. {{Students also get}} 10% off with a school ID."
         },
         {
           "l": "B",
           "id": "sweet",
           "label": "The sweet things",
-          "text": "{{After the long wait, we started with}} the pumpkin-seed muffins, which are [[beautifully soft]] and [[not too sweet]]. {{Only the fruit cups are [[a bit boring]]:}} just apple and banana.",
-          "why": "Links back to the queue, gives praise first and then one weak point. ‘A bit boring’ is gentle criticism."
+          "text": "{{After the long wait, we started with}} the pumpkin-seed muffins, which are [[beautifully soft]] and [[not too sweet]]. {{Only the fruit cups are [[a bit boring]]:}} just apple and banana. {{Café Hazel is [[not exactly cheap]]:}} even with 10% off for students, a bagel with hot chocolate costs over €8, which is [[fairly expensive]] for pocket money.",
+          "why": "Links back to the queue, gives praise first and then weak points. ‘A bit boring’ is gentle criticism.",
+          "textLong": "{{After the long wait, we started with}} the pumpkin-seed muffins, which are [[beautifully soft]] and [[not too sweet]]. To go with them, we tried the home-made lemonade, which is [[wonderfully refreshing]]. {{Only the fruit cups are [[a bit boring]]:}} just apple and banana. {{Café Hazel is [[not exactly cheap]]:}} even with 10% off for students, a bagel with hot chocolate costs over €8, which is [[fairly expensive]] for pocket money."
         },
         {
           "l": "C",
@@ -148,125 +150,54 @@
           "label": "The main dishes",
           "trap": true,
           "crit": "LSA",
-          "text": "My avocado bagel tasted wonderfully, and my friend’s cheese bagel was even more tastier. The portions are enough big, so one bagel is plenty for lunch.",
+          "text": "My avocado bagel tasted wonderfully, and my friend’s cheese bagel was even more tastier. The portions are enough big, so one bagel is plenty for lunch. Café Hazel is not exactly cheap: even with 10% off for students, a bagel with hot chocolate costs over €8, which is fairly expensive for pocket money.",
           "reject": "Three typical mistakes: ‘tasted wonderfully’ (→ tasted wonderful: after ‘taste’ we use an adjective), ‘even more tastier’ (→ even tastier) and ‘enough big’ (→ big enough).",
-          "rejectDe": "Drei typische Fehler: tasted wonderfully → tasted wonderful (nach taste steht ein Adjektiv), more tastier → tastier, enough big → big enough."
-        }
-      ]
-    },
-    {
-      "id": "drinks",
-      "slot": "drinks",
-      "part": "Body paragraph 1",
-      "len": "long",
-      "q": "What about the drinks?",
-      "de": "Der Absatz geht weiter: ein Getränk, genau bewertet. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
-      "own": "Copy the frame. Then describe the drink in your own words.",
-      "ownDe": "Gerüst abschreiben, dann das Getränk mit eigenen Worten beschreiben.",
-      "options": [
-        {
-          "l": "A",
-          "id": "chocolate",
-          "label": "Hot chocolate",
-          "text": "{{To go with our food, we ordered}} hot chocolate, which was [[perfectly creamy]] and came with a tiny biscuit on the side.",
-          "why": "Continues the paragraph about food and drink with one precise adjective and a nice detail."
-        },
-        {
-          "l": "B",
-          "id": "lemonade",
-          "label": "Home-made lemonade",
-          "text": "{{To drink, we chose}} the home-made lemonade with fresh mint and lemon. {{It was [[deliciously fresh]],}} the perfect drink for a sunny afternoon.",
-          "why": "A second taste for readers, described with a precise adjective."
+          "rejectDe": "Drei typische Fehler: tasted wonderfully → tasted wonderful (nach taste steht ein Adjektiv), more tastier → tastier, enough big → big enough.",
+          "textLong": "My avocado bagel tasted wonderfully, and my friend’s cheese bagel was even more tastier. The portions are enough big, so one bagel is plenty for lunch. The hot chocolate was rich and creamy, a perfect drink for a cold day. Café Hazel is not exactly cheap: even with 10% off for students, a bagel with hot chocolate costs over €8, which is fairly expensive for pocket money."
         }
       ],
-      "join": true
-    },
-    {
-      "id": "prices",
-      "slot": "prices",
-      "part": "Body paragraph 1",
-      "q": "Are the prices fair?",
-      "de": "Der Absatz geht weiter, zweiter Teil des Inhaltspunkts: die Preise und ob sie fair sind. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
-      "own": "Copy the frame. Then add two prices from the notes and say if they are fair for students.",
-      "ownDe": "Gerüst abschreiben, dann zwei Preise aus den Notizen ergänzen und sagen, ob sie für Schüler:innen fair sind.",
-      "options": [
-        {
-          "l": "A",
-          "id": "value",
-          "label": "Good value",
-          "text": "{{The prices are [[pleasantly low]] for the city centre:}} a bagel costs €5.50 to €6.90 and a muffin €2.90. {{Students also get}} 10% off with a school ID.",
-          "why": "Judges the prices by comparing them with other places in the centre and adds the student discount."
-        },
-        {
-          "l": "B",
-          "id": "pocket",
-          "label": "Pocket-money check",
-          "text": "{{Café Hazel is [[not exactly cheap]]:}} even with 10% off for students, a bagel with hot chocolate costs over €8, which is [[fairly expensive]] for pocket money.",
-          "why": "Looks at the prices from a teenager’s point of view and checks the maths: (€5.50 + €3.80) minus 10% = €8.37."
-        }
-      ],
-      "join": true
+      "ownLong": "Copy the frame. Then describe one dish and one drink with a degree adverb and an adjective and say if the prices are fair.",
+      "ownLongDe": "Gerüst abschreiben, dann ein Gericht und ein Getränk mit Gradadverb und Adjektiv beschreiben und sagen, ob die Preise fair sind."
     },
     {
       "id": "place",
       "slot": "place",
       "part": "Body paragraph 2",
-      "q": "Body paragraph 2: what is the atmosphere like?",
-      "de": "Zweiter Inhaltspunkt, erster Teil: Raum und Stimmung im Café. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
-      "own": "Copy the frame. Then describe the room and say how it feels to sit there.",
-      "ownDe": "Gerüst abschreiben, dann den Raum beschreiben und sagen, wie es sich dort anfühlt.",
-      "options": [
-        {
-          "l": "A",
-          "id": "cosy",
-          "label": "Small but cosy",
-          "text": "{{As for the atmosphere,}} the café is [[rather small]] but [[very cosy]], with plants and about 30 seats. {{Board games on every table}} make the wait for your order feel shorter.",
-          "why": "‘As for’ moves from the food to the room, and a small size becomes a strength."
-        },
-        {
-          "l": "B",
-          "id": "hangout",
-          "label": "A place to hang out",
-          "text": "{{When it comes to atmosphere,}} the bright room with its plants and board games is ideal for a long chat. {{Sadly, the music is [[a little too loud]]}} when every seat is taken.",
-          "why": "Moves on to the room, says who it is good for and names one weak point honestly."
-        }
-      ]
-    },
-    {
-      "id": "service",
-      "slot": "service",
-      "part": "Body paragraph 2",
-      "q": "How good is the service?",
-      "de": "Der Absatz geht weiter, zweiter Teil des Inhaltspunkts: die Bedienung, mit Stärke und Schwäche. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
-      "own": "Copy the frame. Then add one good and one weak point about the service.",
-      "ownDe": "Gerüst abschreiben, dann eine Stärke und eine Schwäche der Bedienung ergänzen.",
+      "q": "Body paragraph 2: what are the atmosphere and the service like?",
+      "de": "Zweiter Inhaltspunkt: Raum und Stimmung im Café und die Bedienung. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then describe the room and the service, with one good and one weak point.",
+      "ownDe": "Gerüst abschreiben, dann Raum und Bedienung beschreiben, mit einer Stärke und einer Schwäche.",
       "options": [
         {
           "l": "A",
           "id": "trap",
-          "label": "Staff and waiting times",
+          "label": "Room and staff",
           "trap": true,
           "crit": "CC",
-          "text": "The two waiters are really friendly. Despite this, they explain every bagel with a smile. What is more, the service is slow when the café is busy: our drinks took twenty minutes.",
-          "reject": "The linking words don’t fit: ‘Despite this’ needs a contrast, but a smile is what we expect from friendly staff, and ‘What is more’ adds a point in the same direction, but here a weak point follows (→ However).",
-          "rejectDe": "Die Linking words passen nicht: Despite this ohne Gegensatz, und What is more leitet hier eine Schwäche ein (richtig wäre However)."
+          "text": "There are about 30 seats and lots of plants. The two young waiters are friendly, but they are slow on busy days. The room is small but cosy. Our drinks took twenty minutes. There are board games on the tables, and the music gets loud when the café is full. One waiter even remembered our names.",
+          "textLong": "There are about 30 seats and lots of plants. The two young waiters are friendly, but they are slow on busy days. The room is small but cosy. Our drinks took twenty minutes. There are board games on the tables, and the music gets loud when the café is full. One waiter even remembered our names. The room is bright, even on a grey day. The waiters were happy to explain the menu.",
+          "reject": "There is no topic sentence that moves on from the food, and the ideas jump back and forth between the room and the staff. Group them: first the atmosphere, then the service.",
+          "rejectDe": "Es fehlt ein Themensatz, der vom Essen zum Café überleitet, und die Gedanken springen zwischen Raum und Bedienung hin und her."
         },
         {
           "l": "B",
-          "id": "slow",
-          "label": "Friendly but slow",
-          "text": "{{The staff are [[incredibly friendly]]}} and happy to explain the menu. {{At busy times, however,}} the service gets [[quite slow]]: our drinks took twenty minutes.",
-          "why": "‘However’ turns from the strength to the weakness, and the example makes it concrete."
+          "id": "cosy",
+          "label": "Small but cosy",
+          "text": "{{As for the atmosphere,}} the café is [[rather small]] but [[very cosy]], with plants and about 30 seats. {{Board games on every table}} make the wait for your order feel shorter. {{The staff are [[incredibly friendly]]}} and happy to explain the menu. {{At busy times, however,}} the service gets [[quite slow]]: our drinks took twenty minutes.",
+          "why": "‘As for’ moves from the food to the room. Praise for the room and the staff comes first, then the slow service.",
+          "textLong": "{{As for the atmosphere,}} the café is [[rather small]] but [[very cosy]], with plants and about 30 seats. Even on a grey day, the room feels [[surprisingly bright]]. {{Board games on every table}} make the wait for your order feel shorter. {{The staff are [[incredibly friendly]]}} and happy to explain the menu. {{At busy times, however,}} the service gets [[quite slow]]: our drinks took twenty minutes."
         },
         {
           "l": "C",
-          "id": "smile",
-          "label": "Service with a smile",
-          "text": "{{Service with a smile is}} what you get here. The two young waiters are [[extremely helpful]] and even remembered our names. {{On busy afternoons, though,}} you need patience.",
-          "why": "Starts with a well-known phrase and adds a personal detail before the weak point."
+          "id": "hangout",
+          "label": "A place to hang out",
+          "text": "{{When it comes to atmosphere,}} the bright room with its plants and board games is ideal for a long chat. {{Sadly, the music is [[a little too loud]]}} when every seat is taken. {{The staff make up for it:}} the two young waiters are [[extremely helpful]] and even remembered our names. {{On busy afternoons, though,}} you need patience.",
+          "why": "Moves on to the room, names one weak point honestly and shows how the friendly staff make up for it.",
+          "textLong": "{{When it comes to atmosphere,}} the bright room with its plants and board games is ideal for a long chat. {{Sadly, the music is [[a little too loud]]}} when every seat is taken, and we had to lean across the table to hear each other. {{The staff make up for it:}} the two young waiters are [[extremely helpful]] and even remembered our names. {{On busy afternoons, though,}} you need patience, as two waiters cannot serve 30 guests at once."
         }
       ],
-      "join": true
+      "ownLong": "Copy the frame. Then describe the room and the service, with two good points and one weak point.",
+      "ownLongDe": "Gerüst abschreiben, dann Raum und Bedienung beschreiben, mit zwei Stärken und einer Schwäche."
     },
     {
       "id": "whofor",
@@ -281,44 +212,21 @@
           "l": "A",
           "id": "friends",
           "label": "Friends with time",
-          "text": "{{Who is Café Hazel for, then?}} It is [[absolutely perfect]] for groups of friends with time to spare. {{People in a hurry, on the other hand,}} will not like the queue.",
-          "why": "The question sums up the review so far, and ‘on the other hand’ names who will not enjoy it."
+          "text": "{{Who is Café Hazel for, then?}} It is [[absolutely perfect]] for groups of friends with time to spare, for example on a free afternoon after school. {{People in a hurry, on the other hand,}} will not like the queue.",
+          "why": "The question moves on to the last point, and ‘on the other hand’ names who will not enjoy it.",
+          "textLong": "{{Who is Café Hazel for, then?}} It is [[absolutely perfect]] for groups of friends with time to spare, for example on a free afternoon after school. {{People in a hurry, on the other hand,}} will not like the queue, especially on a Saturday. A waiter told us that on weekdays before four, you can usually walk straight in."
         },
         {
           "l": "B",
           "id": "students",
           "label": "Students after school",
-          "text": "{{With all this in mind, Café Hazel is [[just right]] for}} students who want good food and a place to chat. If you only want a quick snack, the wait may be [[rather long]].",
-          "why": "‘With all this in mind’ picks up the food, the room and the staff, then one group is named that may not enjoy it."
-        }
-      ]
-    },
-    {
-      "id": "tip",
-      "slot": "tip",
-      "part": "Body paragraph 3",
-      "len": "long",
-      "q": "What tip do we give our readers?",
-      "de": "Der Absatz geht weiter: ein praktischer Tipp für die Leser:innen. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
-      "own": "Copy the frame. Then finish the tip in your own words.",
-      "ownDe": "Gerüst abschreiben, dann den Tipp mit eigenen Worten fertigschreiben.",
-      "options": [
-        {
-          "l": "A",
-          "id": "time",
-          "label": "Choose the right time",
-          "text": "{{Our tip: avoid Saturday afternoons.}} A waiter told us there is no queue on weekdays before four, {{so you will not have to}} wait {WAIT} minutes as we did.",
-          "why": "A useful tip for people with less time that links back to our wait in the introduction."
-        },
-        {
-          "l": "B",
-          "id": "takeaway",
-          "label": "Take it away",
-          "text": "{{Hate queues? Just use}} the takeaway counter by the door. {{In a few minutes, you can}} get a bagel to go instead of queuing for {WAIT} minutes.",
-          "why": "A quick solution for people in a hurry, with a short question that speaks to readers directly."
+          "text": "{{With all this in mind, Café Hazel is [[just right]] for}} students who want good food and a place to chat. If you only want a quick snack, the wait may be [[rather long]], especially on a Saturday.",
+          "why": "‘With all this in mind’ picks up the food, the room and the staff, then names a group that may not enjoy it.",
+          "textLong": "{{With all this in mind, Café Hazel is [[just right]] for}} students who want good food and a place to chat. If you only want a quick snack, the wait may be [[rather long]], especially on a Saturday. {{In that case, just use}} the takeaway counter by the door: you will have your bagel in a few minutes."
         }
       ],
-      "join": true
+      "ownLong": "Copy the frame. Then say who should go there and who should not, and give readers a tip.",
+      "ownLongDe": "Gerüst abschreiben, dann sagen, für wen sich das Café lohnt und für wen nicht, und einen Tipp geben."
     },
     {
       "id": "verdict",
@@ -334,7 +242,7 @@
           "id": "stars",
           "label": "Stars and the queue",
           "text": "{{All in all, Café Hazel deserves four stars}} for its [[really good]] food and [[very friendly]] staff. {{The long waits cost it}} the fifth star. For a relaxed afternoon, it is worth the queue.",
-          "why": "Gives the stars with the main reasons, names the main weak point and answers the question of the introduction."
+          "why": "Gives the stars with the main reasons, names the main weak point and answers the big question: is it worth the queue?"
         },
         {
           "l": "B",
@@ -350,8 +258,8 @@
           "l": "C",
           "id": "answer",
           "label": "Answer the question",
-          "text": "{{So, is it worth the queue?}} For an afternoon with friends, yes. {{We give Café Hazel four stars}}: the food and the staff are [[really good]], but the queues are [[a bit too long]].",
-          "why": "Answers the question of the introduction and sums up the good and weak points with the stars."
+          "text": "{{Is Café Hazel worth the queue?}} For an afternoon with friends, yes. {{We give it four stars}}: the food and the staff are [[really good]], but the queues are [[a bit too long]].",
+          "why": "Answers the big question: is it worth the queue? Then it sums up the good and weak points with the stars."
         }
       ]
     },
@@ -392,12 +300,8 @@
     "title",
     "intro",
     "food",
-    "drinks",
-    "prices",
     "place",
-    "service",
     "whofor",
-    "tip",
     "verdict"
   ],
   "checks": [
@@ -429,9 +333,9 @@
   "teacher": {
     "aim": "Die Klasse schreibt gemeinsam eine Kritik (A2+/B1) zu einem erfundenen, neu eröffneten Café für eine Jugend-Website und übt bewertende Adjektive mit Gradadverbien (really tasty, a bit boring, absolutely perfect), um Lob und Kritik genau abzustufen.",
     "prep": "A/B/C/D-Karten austeilen, Hefte bereitlegen, Beamer im Vollbild. Die Notizen vom Café-Besuch (Preise, Raum, Bedienung) an die Tafel schreiben oder austeilen. Daneben eine Skala: a bit / slightly – fairly / quite / rather – very / really – incredibly / extremely, dazu der Hinweis: Starke Adjektive (delicious, perfect) gehen mit absolutely oder really, nicht mit very. Im Gerüst-Modus den eingebauten Timer nutzen: 5 min pro Absatz.",
-    "heft": "Neue Seite: Datum rechts oben, darunter „Review“ als Überschrift (wie am Beamer). Zwei Zeilen für den Titel frei lassen, der Titel kommt zuletzt; darunter vier von fünf Sternen zeichnen. Fünf Absätze, jeder beginnt nach einer Leerzeile; am Rand stehen die Randwörter Intro, Body 1, Body 2, Body 3, Conclusion. Eine Fortsetzung wird ohne neue Zeile im selben Absatz weitergeschrieben. Gradadverb und Adjektiv gemeinsam grün unterstreichen.",
-    "flow": "Volltext kurz (50 min): 5 min Aufgabe und Notizen lesen, 8 Entscheidungen à ca. 2 min (Body 1 und Body 2 haben je zwei: Essen und Preise, Raum und Bedienung), Abschreiben ca. 20 min, 5 min Checkliste und Unterstreichen. Die Wartezeit ruft die Klasse gleich bei der Introduction. Volltext lang (ca. 60 min): wie kurz, dazu je eine Fortsetzung in Body 1 (Getränke) und Body 3 (Tipp); das sind zwei Entscheidungen und rund 50 Wörter Abschreiben mehr. In einer Doppelstunde die restliche Zeit für die Besprechung der Fallen nutzen und die Hausübung zu zweit beginnen. Gerüst kurz (geplant 60 min): 5 min Aufgabe; pro Absatz 1 min Entscheidung, 5–6 min eigenes Schreiben, 1 min Vergleich mit dem Modell; jede Fortsetzung braucht ca. 4 min. In einer 50-Minuten-Stunde beim Schluss nur abstimmen und das Gerüst abschreiben; Schluss und eigener Titel als Hausübung. Die Notizen bleiben die ganze Stunde an der Tafel stehen. Gerüst lang (ca. 75 min): gleicher Rhythmus wie kurz, dazu die zwei Fortsetzungen, je ca. 4–5 min. In einer Doppelstunde danach eine Vergleichsrunde zu zweit.",
-    "traps": "Introduction B (TA): klingt wie Werbung des Cafés (try our …, Don’t miss it!), keine eigene Meinung. Body 1 C (LSA): tasted wonderfully statt wonderful, even more tastier statt even tastier, enough big statt big enough. Body 2, Fortsetzung A (CC): Despite this ohne Gegensatz, What is more vor einer Schwäche. Conclusion B (TA): Urteil und zwei Sterne widersprechen der Kritik und den vier Sternen. Kürzel: TA = Erfüllung der Aufgabenstellung, CC = Kohärenz und Kohäsion, LSR = Spektrum sprachlicher Mittel, LSA = Sprachrichtigkeit.",
-    "notes": "Aufbau: Jede Kritik hat genau fünf Absätze (Einleitung, drei Hauptteil-Absätze zu den drei Inhaltspunkten, Schluss mit Sternen); die lange Fassung macht Body 1 und Body 3 länger, sie fügt keinen Absatz hinzu. Café, Website und alle Details sind frei erfunden; Graz ist nur der Schauplatz. Merkregel an die Tafel: Nach taste, look, smell, sound und feel steht ein Adjektiv (it tastes wonderful). Bei den Gradadverbien kurz die Stärke besprechen: a bit boring ist milde Kritik, extremely helpful starkes Lob. Alle gültigen Schlussabsätze passen zu vier Sternen; kurz diskutieren, was den fünften Stern kostet (Wartezeit, laute Musik, langsame Bedienung). Differenzierung: Schnelle schreiben einen Satz zu einem weiteren Gericht aus den Notizen mit einem neuen Gradadverb (slightly, extremely). Hausübung: Kurzkritik (ca. 100 Wörter) zu einem Lokal, Imbiss oder Buffet nach Wahl, mit Sternen und mindestens vier markierten Wendungen."
+    "heft": "Neue Seite: Datum rechts oben, darunter „Review“ als Überschrift (wie am Beamer). Zwei Zeilen für den Titel frei lassen, der Titel kommt zuletzt; darunter vier von fünf Sternen zeichnen. Fünf Absätze, jeder beginnt nach einer Leerzeile; am Rand stehen die Randwörter Intro, Body 1, Body 2, Body 3, Conclusion. Gradadverb und Adjektiv gemeinsam grün unterstreichen.",
+    "flow": "Volltext kurz (50 min): 5 min Aufgabe und Notizen lesen, 6 Entscheidungen (die fünf Absätze je ca. 2–3 min, der Titel zum Schluss ca. 1 min), Abschreiben ca. 22 min, 5 min Checkliste und Unterstreichen. Die Wartezeit ruft die Klasse gleich bei der Introduction. Volltext lang (ca. 60 min): dieselben 6 Entscheidungen; die drei Hauptabsätze sind je rund 10–20 Wörter länger (ein Getränk, mehr zum Raum, ein Tipp für die Leser:innen), das Abschreiben dauert daher ca. 30 min. In einer Doppelstunde die restliche Zeit für die Besprechung der Fallen nutzen und die Hausübung zu zweit beginnen. Gerüst kurz (geplant 60 min): 5 min Aufgabe; pro Absatz 1 min Entscheidung, 5–6 min eigenes Schreiben, 1 min Vergleich mit dem Modell; Titel ca. 2 min. In einer 50-Minuten-Stunde beim Schluss nur abstimmen und das Gerüst abschreiben; Schluss und eigener Titel als Hausübung. Die Notizen bleiben die ganze Stunde an der Tafel stehen. Gerüst lang (ca. 75 min): dieselben 6 Entscheidungen im gleichen Rhythmus, bei den drei Hauptabsätzen je ca. 3–4 min mehr eigenes Schreiben. In einer Doppelstunde danach eine Vergleichsrunde zu zweit.",
+    "traps": "Introduction B (TA): klingt wie Werbung des Cafés (try our …, Don’t miss it!), keine eigene Meinung. Body 1 C (LSA): tasted wonderfully statt wonderful, even more tastier statt even tastier, enough big statt big enough. Body 2 A (CC): kein Themensatz, der vom Essen überleitet, und die Sätze springen zwischen Raum und Bedienung hin und her. Conclusion B (TA): Urteil und zwei Sterne widersprechen der Kritik und den vier Sternen. Kürzel: TA = Erfüllung der Aufgabenstellung, CC = Kohärenz und Kohäsion, LSR = Spektrum sprachlicher Mittel, LSA = Sprachrichtigkeit.",
+    "notes": "Aufbau: Jede Kritik hat genau fünf Absätze (Einleitung, drei Hauptteil-Absätze zu den drei Inhaltspunkten, Schluss mit Sternen); die lange Fassung hat dieselben Entscheidungen, die drei Hauptabsätze sind länger; sie fügt keinen Absatz hinzu. Nach der Falle in Body 2 an der Tafel zeigen, wie ein Absatz ordnet: Themensatz, zuerst der Raum, dann die Bedienung. Café, Website und alle Details sind frei erfunden; Graz ist nur der Schauplatz. Merkregel an die Tafel: Nach taste, look, smell, sound und feel steht ein Adjektiv (it tastes wonderful). Bei den Gradadverbien kurz die Stärke besprechen: a bit boring ist milde Kritik, extremely helpful starkes Lob. Alle gültigen Schlussabsätze passen zu vier Sternen; kurz diskutieren, was den fünften Stern kostet (Wartezeit, laute Musik, langsame Bedienung). Differenzierung: Schnelle schreiben einen Satz zu einem weiteren Gericht aus den Notizen mit einem neuen Gradadverb (slightly, extremely). Hausübung: Kurzkritik (ca. 100 Wörter) zu einem Lokal, Imbiss oder Buffet nach Wahl, mit Sternen und mindestens vier markierten Wendungen."
   }
 }

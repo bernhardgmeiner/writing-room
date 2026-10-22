@@ -132,6 +132,7 @@
           "id": "question",
           "label": "Speak to the readers",
           "text": "{{The Matura is over, and suddenly}} everyone is asking what comes next. Some of your classmates have already signed up for courses or training. {{[[While]] a year off sounds tempting,}} many school-leavers worry about falling behind. So is a gap year a smart move, or just a wasted year?",
+          "textLong": "{{The Matura is over, and suddenly}} everyone is asking what comes next. Some of your classmates have already signed up for courses or training, and your parents keep sending you links to university websites. {{[[While]] a year off sounds tempting,}} many school-leavers worry about falling behind. {{So is a gap year a smart move,}} or just a wasted year?",
           "why": "Speaks to readers in their own situation and ends with the key question of the article."
         },
         {
@@ -139,6 +140,7 @@
           "id": "scene",
           "label": "Start with a scene",
           "text": "{{Picture this:}} it is a Monday morning in October. Your former classmates are hurrying to their first lectures, and you are surfing your first wave on a beach in Portugal. {{[[Although]] this sounds like a dream,}} not everyone is convinced. {{Is a gap year really}} a smart move, or just a wasted year?",
+          "textLong": "{{Picture this:}} it is a Monday morning in October. Your former classmates are hurrying to their first lectures, and you are surfing your first wave on a beach in Portugal. In the evening, you will watch the sunset with new friends from three continents. {{[[Although]] this sounds like a dream, not everyone is convinced.}} {{Is a gap year really}} a smart move, or just a wasted year?",
           "why": "A short scene puts readers right into the dream. The question at the end opens the debate."
         },
         {
@@ -146,9 +148,12 @@
           "id": "statement",
           "label": "Make a bold statement",
           "text": "{{Twelve months without timetables, tests or deadlines:}} for many school-leavers, a gap year is the perfect reward for years of hard work. {{[[Although]] critics call it a waste of time,}} the idea has lost none of its appeal. So who is right?",
+          "textLong": "{{Twelve months without timetables, tests or deadlines:}} for many school-leavers, a gap year is the perfect reward for years of hard work. Social media is full of sunsets in Bali and new friends from all over the world. {{[[Although]] critics call it a waste of time,}} the idea has lost none of its appeal. So who is right: the dreamers or the critics?",
           "why": "A strong statement and an opposite view create tension. The short question makes readers want an answer."
         }
-      ]
+      ],
+      "ownLong": "Copy the frame. Then finish the introduction in your own words: add one detail that makes the situation real and end with a question to the readers.",
+      "ownLongDe": "Gerüst abschreiben, dann den Einstieg mit eigenen Worten fertigschreiben: ein Detail ergänzen, das die Situation greifbar macht, und mit einer Frage an die Leser:innen enden."
     },
     {
       "id": "benefits",
@@ -164,6 +169,7 @@
           "id": "energy",
           "label": "Fresh energy",
           "text": "{{Above all, a year off gives young people}} something they rarely get: a real break. After twelve years of school, many feel tired of learning. {{[[Even though]] the year may look like lost time,}} it often brings back the curiosity that exams have pushed aside. They then go back to learning with fresh motivation.",
+          "textLong": "{{Above all, a year off gives young people}} something they rarely get: a real break. After twelve years of school, many feel tired of learning. {{[[Even though]] the year may look like lost time,}} it often brings back the curiosity that exams have pushed aside. Some recharge on a working holiday in Australia or Canada, where they pay their way with jobs in hotels or on farms. {{[[Even if]] the jobs turn out to be tiring,}} they are a complete change from sitting at a desk. Most of them go back to learning with fresh motivation.",
           "why": "Clear topic sentence, a reason everyone knows from school and a result that matters for the future."
         },
         {
@@ -172,7 +178,8 @@
           "label": "Travel and experience",
           "trap": true,
           "crit": "LSA",
-          "text": "Many young people make a gap year after the Matura because they want to see the world before they start studying. Some of them even work abroad for a few months. During this year they learn new people from many different countries and become a lot of experience, which helps them later in their job and in their private life.",
+          "text": "Many young people make a gap year after the Matura because they want to see the world before they start studying. Some of them even work abroad for a few months. During this year they learn new people from many different countries and become a lot of experience, which helps them later in their job and in their personal life.",
+          "textLong": "Many young people make a gap year after the Matura because they want to see the world before they start studying. Some of them work abroad for a few months, for example on a farm in New Zealand or in a hostel in Spain. During this year they learn new people from many different countries and become a lot of experience. They find out how to manage their own money, cook for themselves and solve problems without help from their parents. All this helps them later in their job and in their personal life.",
           "reject": "Three typical mistakes: ‘make a gap year’ (→ take a gap year), ‘learn new people’ (→ meet new people) and ‘become a lot of experience’ (→ gain a lot of experience).",
           "rejectDe": "Drei typische Fehler: make a gap year → take, learn new people → meet, become experience → gain experience (become heißt werden, nicht bekommen!)."
         },
@@ -181,36 +188,12 @@
           "id": "skills",
           "label": "A personal example",
           "text": "{{[[Despite]] its reputation as a long holiday, a year off can be}} a time to learn skills that no school subject covers. {{“Nobody gave me marks, and I still learnt more than ever,” says}} {NAME}, {AGE}, who spent ten months working in a bakery in Salzburg and learning Japanese in the evenings.",
+          "textLong": "{{[[Despite]] its reputation as a long holiday, a year off can be}} a time to learn skills that no school subject covers. {{“Nobody gave me marks, and I still learnt more than ever,” says}} {NAME}, {AGE}, who spent ten months working in a bakery in Salzburg and learning Japanese in the evenings. Others use the year to help people: in Austria, school-leavers can do a voluntary social year in a care home or a youth centre. {{[[Even if]] they never board a plane,}} they learn to take responsibility for other people.",
           "why": "A quote from a real-sounding person shows a gain that no school report can measure."
         }
-      ]
-    },
-    {
-      "id": "ideas",
-      "slot": "ideas",
-      "part": "Body paragraph 1",
-      "join": true,
-      "len": "long",
-      "q": "What can you actually do in a gap year?",
-      "de": "Der Absatz geht weiter: Beispiele dafür, was man in einem Gap Year machen kann. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
-      "own": "Copy the frame. Then describe one more gap-year idea and what young people can gain from it.",
-      "ownDe": "Gerüst abschreiben, dann eine weitere Gap-Year-Idee beschreiben und sagen, was junge Leute davon haben.",
-      "options": [
-        {
-          "l": "A",
-          "id": "abroad",
-          "label": "A working holiday abroad",
-          "text": "{{One popular way to spend such a year is}} a working holiday in Australia or Canada, where young people pay their way with jobs in hotels or on farms. {{[[Even if]] the work is hard,}} they practise their English every day without ever opening a grammar book.",
-          "why": "A popular example with a clear gain: readers see what they would take home."
-        },
-        {
-          "l": "B",
-          "id": "home",
-          "label": "Stay in Austria",
-          "text": "{{Many school-leavers use the year to help others.}} In Austria, for instance, they can spend a voluntary social year in a kindergarten, a care home or a youth centre. Others do an internship to find out whether a job suits them. {{[[Even if]] there is no plane ticket involved,}} the experience counts.",
-          "why": "Shows a realistic option close to home, so the article speaks to all readers."
-        }
-      ]
+      ],
+      "ownLong": "Copy the frame. Then explain one gain in your own words, describe how young people can spend the year (you can invent it) and say what they take home from it.",
+      "ownLongDe": "Gerüst abschreiben, dann einen Gewinn mit eigenen Worten erklären, beschreiben, wie man das Jahr verbringen kann (gern erfunden), und sagen, was man davon mitnimmt."
     },
     {
       "id": "compare",
@@ -227,9 +210,10 @@
           "label": "Routine and friends",
           "trap": true,
           "crit": "CC",
-          "text": "Students who start a course straight after school still know how to study, although they often begin together with friends from their class. As a result, apprenticeships usually start in late summer. A gap year means starting a year later than your classmates. Some people also find it hard to get back into a routine after twelve months away.",
-          "reject": "Facts in a row without a topic sentence, and two linkers do not fit: ‘although’ joins two advantages, so there is nothing to admit, and ‘as a result’ introduces a fact that follows from nothing.",
-          "rejectDe": "Fakten ohne Topic Sentence, und zwei Linking words passen nicht: although verbindet zwei Vorteile (kein Gegensatz), as a result folgt aus nichts."
+          "text": "Both paths have their advantages. Students who start a course straight after school still know how to study, although they often begin together with friends from their class. In other words, apprenticeships usually start in late summer. A gap year means starting a year later than your classmates. Some people also find it hard to get back into a routine after twelve months away.",
+          "textLong": "Both paths have their advantages. Students who start a course straight after school still know how to study, although they often begin together with friends from their class. In other words, apprenticeships usually start in late summer. A gap year means starting a year later than your classmates. Some people also find it hard to get back into a routine after twelve months away. Flights, insurance and accommodation abroad cost a lot of money, and a voluntary year pays little more than pocket money. Most gap-year travellers work for several months before they leave.",
+          "reject": "Two linkers do not fit: ‘although’ joins two advantages, so there is nothing to admit, and ‘in other words’ introduces a new fact instead of saying the last one again.",
+          "rejectDe": "Zwei Linking words passen nicht: although verbindet zwei Vorteile (kein Gegensatz), in other words bringt eine neue Tatsache statt einer Umformulierung."
         },
         {
           "l": "B",
@@ -241,6 +225,14 @@
               "pro": "{{Going straight on certainly has its advantages too.}} Students who start a course right after school are used to deadlines and revision. {{[[Although]] this routine helps at first,}} it does not guarantee the right choice: some people pick a course in a hurry and give up after one semester. A year of real experience can prevent such false starts.",
               "straight": "{{Going straight on certainly has its advantages too.}} Students who start a course or training right after school are used to deadlines and revision. {{[[Although]] a gap year can bring fresh ideas,}} the habit of regular work is easily lost in twelve months of freedom. Keeping the rhythm of school makes the first months of a new course much easier.",
               "depends": "{{Going straight on certainly has its advantages too.}} Students who start a course right after school are used to deadlines and revision. {{[[Although]] this routine helps at first,}} it does not guarantee the right choice: some people pick a course in a hurry and give up after one semester. For anyone who is unsure, a year of real experience can prevent such false starts."
+            }
+          },
+          "textLong": {
+            "by": "angle",
+            "map": {
+              "pro": "{{Going straight on certainly has its advantages too.}} Students who start a course right after school are used to deadlines and revision. {{[[Although]] this routine helps at first,}} it does not guarantee the right choice: some people pick a course in a hurry and give up after one semester. A year off has its own risk, of course. Without a clear goal, the months can turn into late mornings and endless scrolling. {{[[While]] that danger is real,}} a gap year with a clear plan can prevent false starts and save time in the long run.",
+              "straight": "{{Going straight on certainly has its advantages too.}} Students who start a course or training right after school are used to deadlines and revision. {{[[Although]] a gap year can bring fresh ideas,}} the habit of regular work is easily lost in twelve months of freedom. Without a clear goal, the months can turn into late mornings and endless scrolling. {{[[Though]] some people return full of energy,}} many find it hard to sit through a two-hour lecture again. Keeping the rhythm of school makes the first months of a new course much easier.",
+              "depends": "{{Going straight on certainly has its advantages too.}} Students who start a course right after school are used to deadlines and revision. {{[[Although]] this routine helps at first,}} it does not guarantee the right choice: some people pick a course in a hurry and give up after one semester. A year off carries a different risk. Without a clear goal, the months can turn into late mornings and endless scrolling. {{[[While]] a gap year is not for everyone,}} those who are unsure can avoid a false start with a year of real experience."
             }
           },
           "why": "Admits a point of the other side with ‘although’, then makes our point: a fair comparison."
@@ -257,36 +249,19 @@
               "depends": "{{Going straight on has one big advantage over a year off:}} you start together with your friends. You can share a flat and help each other through the first exams. {{[[Though]] this feels safe,}} it can also keep you in the same old circle. A gap year means starting a year later, but among new people and with stories of your own."
             }
           },
+          "textLong": {
+            "by": "angle",
+            "map": {
+              "pro": "{{Going straight on has one big advantage over a year off:}} you start together with your friends. You can share a flat and help each other through the first exams. {{[[Though]] this feels safe,}} it can also keep you in the same old circle. A gap year means starting a year later, but among new people and with stories of your own. {{[[While]] your old classmates may be a step ahead,}} you will find it easier to make new friends once you have lived away from home and coped on your own.",
+              "straight": "{{Going straight on has one big advantage over a year off:}} you start together with your friends. You can share a flat and help each other through the first exams. {{[[Though]] a gap year promises adventure,}} it often means starting a year behind your friends. {{[[While]] you may come back with great stories,}} you will still be finding your way around the campus and looking for someone to study with, just when your old classmates are choosing their first specialised courses. For many students, the support of old friends makes the difference between giving up and getting through the first year.",
+              "depends": "{{Going straight on has one big advantage over a year off:}} you start together with your friends. You can share a flat and help each other through the first exams. {{[[Though]] this feels safe,}} it can also keep you in the same old circle. A gap year means starting a year later, but among new people and with stories of your own. {{[[While]] your old classmates may be a step ahead,}} you will find it easier to make new friends once you have lived away from home and coped on your own."
+            }
+          },
           "why": "Compares the two paths with an everyday example that every reader knows."
         }
-      ]
-    },
-    {
-      "id": "doubts",
-      "slot": "doubts",
-      "part": "Body paragraph 2",
-      "join": true,
-      "len": "long",
-      "q": "What are the risks of a year off?",
-      "de": "Der Absatz geht weiter: die Risiken eines Jahres Pause. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
-      "own": "Copy the frame. Then describe one or two risks in your own words and say what can go wrong.",
-      "ownDe": "Gerüst abschreiben, dann ein oder zwei Risiken mit eigenen Worten beschreiben und sagen, was schiefgehen kann.",
-      "options": [
-        {
-          "l": "A",
-          "id": "drift",
-          "label": "The danger of drifting",
-          "text": "{{Of course, a year off is not without risks.}} Without a clear goal, the months can turn into late mornings and endless scrolling. {{[[While]] most people plan a single year,}} some keep putting off their next step, and one year can quickly become two or three.",
-          "why": "Honest about a real danger, with an everyday picture that readers recognise."
-        },
-        {
-          "l": "B",
-          "id": "money",
-          "label": "The cost of a year off",
-          "text": "{{A year off does not come cheap:}} flights, insurance and accommodation abroad cost a lot of money. Most gap-year travellers therefore work for several months before they leave. {{[[While]] staying in Austria is cheaper,}} you will need some income, and a voluntary year pays little more than pocket money.",
-          "why": "A practical risk that readers may not think of, with concrete examples."
-        }
-      ]
+      ],
+      "ownLong": "Copy the frame. Then compare the two paths in your own words, with one example for each, and finish the concession sentences with the point our article makes.",
+      "ownLongDe": "Gerüst abschreiben, dann beide Wege mit je einem Beispiel vergleichen und die Sätze mit although, though oder while mit dem Standpunkt unseres Artikels beenden."
     },
     {
       "id": "rec",
@@ -309,17 +284,26 @@
               "depends": "{{My advice depends on how sure you are.}} If you already know what you want to do, start now. If you still feel lost, a planned gap year beats a course you choose just to keep busy. {{[[Even if]] others move on without you,}} there is no prize for being the youngest graduate."
             }
           },
+          "textLong": {
+            "by": "angle",
+            "map": {
+              "pro": "{{My advice is simple: take the year, but treat it like a project.}} Set yourself a goal, work out what it will cost and decide what you will do afterwards. {{[[Even if]] this means some hard work,}} a plan turns your time off into an investment rather than twelve months of waiting. {{[[Despite]] fears about a gap in the CV,}} most employers care more about what you did with the time than about when you started. Organising a trip abroad or helping to run a summer camp makes a good story in any job interview.",
+              "straight": "{{My advice is to go straight on}} because a year is a long time to put your plans on hold, {{and a gap year on its own}} will not impress future employers. {{[[Despite]] the exciting travel stories,}} most companies care more about what you have achieved than about where you have been: a finished apprenticeship or a first year at university tells them far more. {{[[Even if]] adventure matters to you,}} it fits easily into the holidays, for example as a few weeks of volunteering abroad or a summer language course. That way, you get the best of both worlds.",
+              "depends": "{{My advice depends on how sure you are.}} If you already know what you want to do, start now. If you still feel lost, a planned gap year beats a course you choose just to keep busy. {{[[Even if]] others move on without you,}} there is no prize for being the youngest graduate. {{[[Despite]] what many people fear,}} a gap in your CV will not put employers off if you can explain how you used the time. Working in a hostel or at a summer camp makes a good story in any job interview."
+            }
+          },
           "why": "Our advice comes first, followed by practical details and a reason."
         },
         {
           "l": "B",
           "id": "trap",
-          "label": "A fair, open answer",
+          "label": "Practical advice",
           "trap": true,
           "crit": "TA",
-          "text": "In the end, everybody has to decide for themselves. University, an apprenticeship and a gap year all have their fans. There are good and bad sides to every choice, and nobody can say what is right or wrong for another person. All three paths are fine, so readers should simply do what feels right.",
-          "reject": "The task asks for a recommendation, but this paragraph sits on the fence. ‘Do what feels right’ gives readers no advice, so content point 3 is missed.",
-          "rejectDe": "Gefragt ist eine Empfehlung, aber dieser Absatz legt sich nicht fest: Inhaltspunkt 3 verfehlt."
+          "text": "My advice for anyone who travels is to prepare well. Pack light: a backpack of ten kilos is enough for most trips. Buy travel insurance that covers doctors and hospitals abroad, and keep a copy of your passport on your phone. A local SIM card and a bank card without fees abroad can also save you a lot of money.",
+          "textLong": "My advice for anyone who travels is to prepare well. Pack light: a backpack of ten kilos is enough for most trips, and you can wash your clothes on the way. Buy travel insurance that covers doctors and hospitals abroad, and keep a copy of your passport on your phone. A local SIM card and a bank card without fees abroad can also save you a lot of money. Book a bed for your first two nights before you arrive, and send your family a short message every few days so that nobody at home worries.",
+          "reject": "Useful tips, but off the point: content point 3 asks whether readers should take a gap year at all, and this paragraph only talks about packing, insurance and money. Our recommendation is missing.",
+          "rejectDe": "Nützliche Tipps, aber am Thema vorbei: Gefragt ist eine Empfehlung für oder gegen ein Gap Year, hier geht es nur ums Packen, Versichern und Geld. Inhaltspunkt 3 verfehlt."
         },
         {
           "l": "C",
@@ -333,50 +317,19 @@
               "depends": "{{Before you decide, ask yourself one honest question:}} do I know what I want to do next? If the answer is yes, start your course or apprenticeship this autumn. {{If you hesitate, however,}} I would recommend a gap year, [[in spite of]] the pressure to keep up with others."
             }
           },
+          "textLong": {
+            "by": "angle",
+            "map": {
+              "pro": "{{Before you book anything, ask yourself three questions.}} What do I want to learn? How will I pay for it? What will I do afterwards? {{If you can answer all three,}} I would definitely recommend a gap year, [[in spite of]] the doubts you may hear from others. A year off will not hurt your chances of a university place: most degree courses in Austria do not ask what you did after school. {{[[Even if]] a course has an entrance test or an early deadline,}} you only need to plan your year around the dates.",
+              "straight": "{{Before you decide, ask yourself three questions.}} Do I know what I want to do? Am I motivated to keep learning? Could the holidays give me enough adventure? {{If all three answers are yes,}} go straight on, [[in spite of]] the travel photos your friends may post. A year abroad would not improve your chances of a university place anyway: most degree courses in Austria do not ask what you did after school. {{[[Even if]] you only plan a summer trip,}} register for your course before you leave because entrance tests and early deadlines are easy to miss from abroad.",
+              "depends": "{{Before you decide, ask yourself one honest question:}} do I know what I want to do next? If the answer is yes, start your course or apprenticeship this autumn. {{If you hesitate, however,}} I would recommend a gap year, [[in spite of]] the pressure to keep up with others. A year off will not hurt your chances of a university place: most degree courses in Austria do not ask what you did after school. {{[[Even if]] a course has an entrance test or an early deadline,}} you only need to plan your year around the dates."
+            }
+          },
           "why": "Speaks to readers directly and turns the recommendation into a simple test."
         }
-      ]
-    },
-    {
-      "id": "cv",
-      "slot": "cv",
-      "part": "Body paragraph 3",
-      "join": true,
-      "len": "long",
-      "q": "What about jobs and university places later?",
-      "de": "Der Absatz geht weiter: eine typische Sorge der Leser:innen und unsere Antwort darauf. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
-      "own": "Copy the frame. Then give our article’s answer in your own words.",
-      "ownDe": "Gerüst abschreiben, dann die Antwort unseres Artikels mit eigenen Worten formulieren.",
-      "options": [
-        {
-          "l": "A",
-          "id": "employers",
-          "label": "The view of employers",
-          "text": {
-            "by": "angle",
-            "map": {
-              "pro": "{{A common worry is that}} a gap in your CV will put employers off. {{[[Despite]] these fears,}} most companies care more about what you did with the time than about your age. {{Someone who has organised a trip abroad or}} helped to run a summer camp has a good story to tell in any job interview.",
-              "straight": "{{Some readers may hope that}} a gap year will impress future employers. {{[[Despite]] these hopes,}} most companies care more about what you have achieved than about where you have travelled. {{Someone who has finished an apprenticeship or}} a first year at university has just as good a story to tell in any job interview.",
-              "depends": "{{A common worry is that}} a gap in your CV will put employers off. {{[[Despite]] these fears,}} most companies care more about what you did with the time than about your age. {{Someone who has organised a trip abroad or}} helped to run a summer camp has a good story to tell in any job interview."
-            }
-          },
-          "why": "Answers a question readers often ask with a concrete example."
-        },
-        {
-          "l": "B",
-          "id": "places",
-          "label": "University places",
-          "text": {
-            "by": "angle",
-            "map": {
-              "pro": "{{What about your chances of a university place? [[Despite]] what many people fear,}} a year off will not hurt them. Most degree courses in Austria do not ask what you did after school. The only real danger is the calendar: some courses have entrance tests or early deadlines, so it is wise to check the dates before you leave.",
-              "straight": "{{What about your chances of a university place? [[Despite]] what many people hope,}} a year off will not improve them. Most degree courses in Austria do not ask what you did after school. The real danger is the calendar: some courses have entrance tests or early deadlines, which are easy to miss when you are far away from home.",
-              "depends": "{{What about your chances of a university place? [[Despite]] what many people fear,}} a year off will not hurt them. Most degree courses in Austria do not ask what you did after school. The only real danger is the calendar: some courses have entrance tests or early deadlines, so it is wise to check the dates before you leave."
-            }
-          },
-          "why": "A rhetorical question followed by a short answer: a typical article technique."
-        }
-      ]
+      ],
+      "ownLong": "Copy the frame. Then complete the paragraph in your own words: what do we recommend, and why? Also answer one question readers may have about jobs or university places.",
+      "ownLongDe": "Gerüst abschreiben, dann den Absatz fertigschreiben: Was empfehlen wir, und warum? Dazu eine Frage der Leser:innen zu Job oder Studienplatz beantworten."
     },
     {
       "id": "concl",
@@ -394,9 +347,17 @@
           "text": {
             "by": "angle",
             "map": {
-              "pro": "{{To sum up, a gap year is only a wasted year}} if you spend it without a plan. {{[[Even though]] it will not solve every problem,}} it can give you new skills, fresh energy and a better idea of where you are going. {{So why not make}} the next year count?",
+              "pro": "{{To sum up, a gap year is only a wasted year}} if you spend it without a plan. {{[[Though]] it will not solve every problem,}} it can give you new skills, fresh energy and a better idea of where you are going. {{So why not make}} the next year count?",
               "straight": "{{To sum up, a gap year can be valuable,}} but it is not the only way to grow up. {{[[Even though]] travelling is tempting,}} it can wait until the summer; a good start to your studies or training cannot. {{So why wait?}}",
               "depends": "{{To sum up, a gap year is right for some, but not for all.}} {{[[Even though]] it can be}} the best year of your life, without a plan it can turn into a long, empty wait. So be honest with yourself."
+            }
+          },
+          "textLong": {
+            "by": "angle",
+            "map": {
+              "pro": "{{To sum up, a gap year is only a wasted year}} if you spend it without a plan. {{[[Though]] it will not solve every problem,}} it can give you new skills, fresh energy and a better idea of where you are going. Starting at once may feel safer, but a well-planned year is never time lost. {{So why not make}} the next year count?",
+              "straight": "{{To sum up, a gap year can be valuable,}} but it is not the only way to grow up. Starting at once keeps your momentum, and that is worth a lot in the first year of any course or apprenticeship. {{[[Even though]] travelling is tempting,}} it can wait until the summer; a good start to your studies or training cannot. {{So why wait?}}",
+              "depends": "{{To sum up, a gap year is right for some, but not for all.}} If you know your goal, starting straight away is the better choice. If you are still searching, a well-planned year off can show you the way. {{[[Even though]] it can be}} the best year of your life, without a plan it can turn into a long, empty wait. So be honest with yourself."
             }
           },
           "why": "Sums up our position in one sentence and ends with a short appeal to the readers."
@@ -413,9 +374,19 @@
               "depends": "{{One thing is certain: [[though]] friends and family will have opinions,}} only you know if you need a break to recharge and learn something new. {{Whether you enrol straight away}} or pack your backpack first, make the decision for your own reasons."
             }
           },
+          "textLong": {
+            "by": "angle",
+            "map": {
+              "pro": "{{One thing is certain: [[though]] lectures and jobs will still be there in a year’s time,}} the chance to explore the world, learn new skills and recharge with so few responsibilities may never come again. A year off is not a step backwards: used well, it is a step towards the person you want to be. {{So go on, make your plan}} and enjoy every minute of it.",
+              "straight": "{{One thing is certain: [[though]] a year abroad sounds exciting,}} a smooth start to your studies or training opens far more doors and teaches new skills too. Right now, your routine and your motivation are on your side, so make the most of them. {{So go on, make your plan}} for this autumn and keep the adventures for the summer.",
+              "depends": "{{One thing is certain: [[though]] friends and family will have opinions,}} only you know if you need a break to recharge and learn something new. Some people are ready to move on at once; others need a year to find out what they really want. {{Whether you enrol straight away}} or pack your backpack first, make the decision for your own reasons."
+            }
+          },
           "why": "Picks up the gains and the comparison, then ends with a strong thought that speaks to readers directly."
         }
-      ]
+      ],
+      "ownLong": "Copy the frame. Then sum up our view in three or four sentences of your own: pick up the gains, the comparison and our advice.",
+      "ownLongDe": "Gerüst abschreiben, dann unsere Sicht in drei bis vier eigenen Sätzen zusammenfassen: Gewinn, Vergleich und Empfehlung aufgreifen."
     },
     {
       "id": "title",
@@ -471,11 +442,8 @@
     "title",
     "intro",
     "benefits",
-    "ideas",
     "compare",
-    "doubts",
     "rec",
-    "cv",
     "concl"
   ],
   "checks": [
@@ -505,8 +473,8 @@
     "aim": "Die Klasse baut gemeinsam einen Artikel nach SRDP-Standard mit drei Inhaltspunkten und entscheidet dabei begründet über Einstieg, Topic Sentences, Vergleich und Empfehlung. Fokus: Concession – mit although, even though, though, even if, while, despite und in spite of einen Punkt der Gegenseite einräumen, bevor der eigene Punkt kommt.",
     "prep": "A/B/C/D-Karten austeilen, eine Garnitur pro Person (ohne Karten: 1–4 Finger, die Tasten 1–4 wählen wie A–D). Beamer im Vollbild. Die Aufgabe am Beamer enthält alles Nötige. Im Gerüst-Modus den eingebauten Timer nutzen: 5–6 min pro Absatz.",
     "heft": "Neue Seite: Datum (rechts), „Article“ als Überschrift, darunter 2 Zeilen für den Titel frei lassen (der Titel kommt zuletzt). Fünf Absätze, jeder beginnt nach einer Leerzeile; am Rand stehen Intro, Body 1, Body 2, Body 3 und Conclusion. Concession-Wörter grün unterstreichen.",
-    "flow": "Volltext kurz (50 min): 3 min Aufgabe lesen, Position wählen, 6 weitere Entscheidungen à ca. 2 min, Abschreiben ca. 25 min, 5 min Checkliste. Volltext lang (100 min): zusätzlich je eine Fortsetzung für Body 1, Body 2 und Body 3 (gleicher Absatz, keine neue Zeile), Abschreiben ca. 40 min, am Ende Wortzahl und Concession-Wörter zählen. Gerüst kurz (60 min): 3 min Aufgabe und Position, pro Absatz 1 min Entscheidung, 5–6 min eigenes Schreiben, 1 min Vergleich mit dem Modell; am Ende 2 min Titel und 4 min Checkliste. In 50 Minuten: Schluss und Titel als Hausübung. Gerüst lang (100 min): dieselben fünf Absätze, bei Body 1–3 nach der Fortsetzungs-Entscheidung noch 3–4 min Schreiben im selben Absatz. Bei den drei langen Karten der Introduction 2 min Lesezeit geben, erst dann Karten hoch.",
-    "traps": "Body 1 B (LSA): make a gap year, learn new people, become experience. Body 2 A (CC): Fakten ohne Topic Sentence, although ohne Gegensatz und as a result ohne Ursache. Body 3 B (TA): keine Empfehlung, Inhaltspunkt 3 verfehlt. Title D (TA): Aufsatztitel statt Artikeltitel. Kürzel: TA = Erfüllung der Aufgabenstellung, CC = Kohärenz und Kohäsion, LSR = Spektrum sprachlicher Mittel, LSA = Sprachrichtigkeit.",
-    "notes": "Sensibel: Die Kosten (Body 2, Fortsetzung B) sachlich besprechen, ohne zu thematisieren, wer sich ein Gap Year leisten kann; Lehre und Studium gleichwertig behandeln. Für den Namen in Body 1 (Option C) nur erfundene Namen, keine Namen von Mitschüler:innen oder Lehrer:innen. Der Artikel hat in beiden Längen genau fünf Absätze (Einleitung, drei Hauptteile, Schluss); die lange Fassung macht Body 1, Body 2 und Body 3 mit Fortsetzungsblöcken länger, statt neue Absätze anzuhängen. Die Position im ersten Schritt steuert Vergleich, Empfehlung, Schluss und einen der Titel, in der langen Fassung auch die Fortsetzung von Body 3. Inhaltspunkt 1 bleibt für alle gleich. Die Falle in Body 2 zeigt genau den Fokus der Einheit: although braucht einen echten Gegensatz. Differenzierung: Schnelle ergänzen im Gerüst-Modus pro Absatz einen weiteren Satz mit despite + Nomen (despite the cost, despite the risks). Hausübung: zweite Fassung mit einer anderen Position (z. B. „Go straight on“ statt „Smart move“)."
+    "flow": "7 Entscheidungen (Position, Einleitung, Body 1–3, Schluss, Titel). Volltext kurz (50 min): 3 min Aufgabe lesen und Position wählen, 6 weitere Entscheidungen à ca. 2 min, Abschreiben ca. 25 min, 5 min Checkliste. Volltext lang (100 min): dieselben 7 Entscheidungen, aber längere Absätze: vor jeder Abstimmung 2 min Lesezeit für die langen Karten, Abschreiben ca. 40 min, am Ende 10 min Wortzahl, Concession-Wörter und Checkliste. Gerüst kurz (60 min): 3 min Aufgabe und Position, pro Absatz 1 min Entscheidung, 5–6 min eigenes Schreiben, 1 min Vergleich mit dem Modell; am Ende 2 min Titel und 4 min Checkliste. In 50 Minuten: Schluss und Titel als Hausübung. Gerüst lang (100 min): dieselben Entscheidungen, pro Absatz 2 min Lesen und Abstimmen, eigenes Schreiben 7–8 min bei Einleitung und Schluss, 11–12 min bei Body 1–3, je 2 min Vergleich; am Ende 2 min Titel und 4 min Checkliste.",
+    "traps": "Body 1 B (LSA): make a gap year, learn new people, become experience. Body 2 A (CC): although ohne Gegensatz und in other words, das keine Umformulierung, sondern eine neue Tatsache einleitet. Body 3 B (TA): Tipps zu Packen, Versicherung und Geld statt einer Empfehlung, am Thema vorbei, Inhaltspunkt 3 verfehlt. Title D (TA): Aufsatztitel statt Artikeltitel. Die Fallen haben in beiden Längen denselben Fehler. Kürzel: TA = Erfüllung der Aufgabenstellung, CC = Kohärenz und Kohäsion, LSR = Spektrum sprachlicher Mittel, LSA = Sprachrichtigkeit.",
+    "notes": "Sensibel: Die Kosten eines Gap Years (Body 3) sachlich besprechen, ohne zu thematisieren, wer sich ein Gap Year leisten kann; Lehre und Studium gleichwertig behandeln. Für den Namen in Body 1 (Option C) nur erfundene Namen, keine Namen von Mitschüler:innen oder Lehrer:innen. Der Artikel hat in beiden Längen genau fünf Absätze. Die lange Fassung hat dieselben Entscheidungen; jede Karte ist derselbe Absatz, nur ausführlicher (Einleitung und Schluss ca. 60–70 Wörter, Body 1–3 ca. 90–100). Die Position im ersten Schritt steuert Vergleich, Empfehlung, Schluss und einen der Titel. Inhaltspunkt 1 bleibt für alle gleich. Die Falle in Body 2 zeigt genau den Fokus der Einheit: although braucht einen echten Gegensatz. Differenzierung: Schnelle ergänzen im Gerüst-Modus pro Absatz einen weiteren Satz mit despite + Nomen (despite the cost, despite the risks). Hausübung: zweite Fassung mit einer anderen Position (z. B. „Go straight on“ statt „Smart move“)."
   }
 }

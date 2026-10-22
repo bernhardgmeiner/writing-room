@@ -3,7 +3,9 @@
 "use strict";
 const fs = require("fs");
 const args = process.argv.slice(2);
-const file = args.find(a => !a.startsWith("--"));
+// internal: "--as-length L" = check one length of a pack whose texts are already resolved for L (textLong → text, ownLong → own)
+const asIdx = args.indexOf("--as-length"); const AS = asIdx >= 0 ? args[asIdx + 1] : null;
+const file = args.find((a, i) => !a.startsWith("--") && args[i - 1] !== "--samples" && args[i - 1] !== "--as-length");
 const sIdx = args.indexOf("--samples");
 const SAMPLES = sIdx >= 0 ? parseInt(args[sIdx + 1] || "3", 10) : 0;
 const QUIET = args.includes("--quiet");
@@ -13,6 +15,73 @@ const errors = [], warns = [];
 const E = m => errors.push(m), W = m => warns.push(m);
 let P;
 try { P = JSON.parse(fs.readFileSync(file, "utf8")); } catch (e) { console.log("ERROR: JSON parse: " + e.message); process.exit(1); }
+
+// ---------- one decision per paragraph (22.10.2026) ----------
+// A paragraph is always decided in ONE step: there are no continuation steps ("join") and no long-only steps ("len") any more.
+// Packs with a short and a long version give every option of a paragraph step that grows in the long version a second text,
+// `textLong` (the whole paragraph in its long form; same `by` map shape as `text` allowed); frame mode then needs `ownLong`/`ownLongDe`.
+// The pack is checked once per length with the texts of that length (child runs with --as-length), the findings are merged.
+if (!AS) {
+  const pre = [], preW = [];
+  const NOPARA0 = new Set(["title", "subject", "greeting", "signoff"]);
+  const L0 = Object.keys(P.lengths || {}); const both = L0.includes("short") && L0.includes("long"); const fr = (P.modes || []).includes("frame");
+  const wds = t => (typeof t === "string" ? [t] : Object.values((t && t.map) || {})).map(x => x.replace(/\{\{|\}\}|\[\[|\]\]/g, "").replace(/^###.*$/gm, " ").replace(/[“”"–…]/g, " ").split(/\s+/).filter(y => /[A-Za-z0-9]/.test(y)).length);
+  (P.steps || []).forEach(st => {
+    const w = `step ${st.id}`;
+    if (st.join != null) pre.push(`${w}: "join" is not allowed: a paragraph is decided in one step (the long version uses textLong)`);
+    if (st.len != null) pre.push(`${w}: "len" is not allowed: every step is used in both lengths (the long version uses textLong)`);
+    const withL = (st.options || []).filter(o => o.textLong != null);
+    if (withL.length) {
+      if (!both) pre.push(`${w}: textLong only in packs with a short and a long version`);
+      if (!st.slot || NOPARA0.has(st.slot)) pre.push(`${w}: textLong only in paragraph steps (not title, subject, greeting, sign-off or branching steps)`);
+      if (withL.length !== st.options.length) pre.push(`${w}: textLong on ${withL.length} of ${st.options.length} options – all options of a step (traps too) have a long text or none`);
+      withL.forEach(o => {
+        const t = o.text, tl = o.textLong;
+        if (typeof tl !== "string" && !(tl && tl.by && tl.map)) { pre.push(`${w}/${o.id}: textLong must be a string or {by,map}`); return; }
+        if ((typeof t === "string") !== (typeof tl === "string") || (typeof t !== "string" && t.by !== tl.by)) pre.push(`${w}/${o.id}: textLong must have the same shape as text (string, or a map with the same by)`);
+        if (JSON.stringify(t) === JSON.stringify(tl)) pre.push(`${w}/${o.id}: textLong is the same as text`);
+        const a = wds(t), b = wds(tl); if (a.length === b.length && b.some((n, i) => n <= a[i])) pre.push(`${w}/${o.id}: textLong (${b.join("/")} words) must be longer than text (${a.join("/")})`);
+      });
+      if (fr && st.slot && !(st.ownLong && st.ownLongDe)) pre.push(`${w}: ownLong/ownLongDe needed (frame mode, the paragraph is longer in the long version)`);
+    } else if (st.ownLong != null || st.ownLongDe != null) pre.push(`${w}: ownLong/ownLongDe without textLong`);
+  });
+  const os = require("os"), path = require("path"), cp = require("child_process");
+  const outs = {};
+  for (const L of L0.length ? L0 : ["short"]) {
+    const Q = JSON.parse(JSON.stringify(P));
+    (Q.steps || []).forEach(st => {
+      if (L === "long" && st.ownLong != null) { st.own = st.ownLong; st.ownDe = st.ownLongDe; }
+      delete st.ownLong; delete st.ownLongDe;
+      (st.options || []).forEach(o => { if (L === "long" && o.textLong != null) o.text = o.textLong; delete o.textLong; });
+    });
+    const tmp = path.join(os.tmpdir(), `wr-validate-${process.pid}-${L}.json`);
+    fs.writeFileSync(tmp, JSON.stringify(Q));
+    const r = cp.spawnSync(process.execPath, [__filename, tmp, "--as-length", L, ...(SAMPLES ? ["--samples", String(SAMPLES)] : []), ...(QUIET ? ["--quiet"] : [])], { encoding: "utf8", cwd: process.cwd() });
+    fs.unlinkSync(tmp);
+    outs[L] = (r.stdout || "") + (r.stderr ? "\nERROR: child: " + r.stderr : "");
+  }
+  const Ls = Object.keys(outs), lines = L => outs[L].split("\n");
+  const msgs = (L, kind) => lines(L).filter(l => l.startsWith(kind + ": ")).map(l => l.slice(kind.length + 2));
+  const merged = { WARN: [], ERROR: [] };
+  for (const kind of ["WARN", "ERROR"]) {
+    const seen = new Map();
+    for (const L of Ls) for (const m of msgs(L, kind)) { if (!seen.has(m)) seen.set(m, new Set()); seen.get(m).add(L); }
+    for (const [m, set] of seen) {
+      const um = /^UNUSED-GAP (\S+)$/.exec(m);
+      if (um) { if (set.size === Ls.length) merged.ERROR.push(`gap ${um[1]} declared but never used`); continue; }
+      merged[kind].push(set.size === Ls.length || /^\[(short|long)\]/.test(m) ? m : `[${[...set][0]}] ${m}`);
+    }
+  }
+  merged.ERROR.unshift(...pre); merged.WARN.unshift(...preW);
+  const info = [];
+  Ls.forEach((L, i) => lines(L).forEach(l => { if (/^Pack /.test(l)) { if (!i) info.push(l); } else if (/^  \[/.test(l) || /^note:/.test(l) && !i) info.push(l); }));
+  if (!QUIET) info.forEach(l => console.log(l));
+  merged.WARN.forEach(w => console.log("WARN: " + w));
+  merged.ERROR.forEach(e => console.log("ERROR: " + e));
+  if (SAMPLES) for (const L of Ls) { const o = outs[L]; const k = o.indexOf("\n--- sample "); if (k >= 0) console.log(o.slice(k + 1).split("\n").filter(l => !/^(OK|FAIL)\b/.test(l)).join("\n").trimEnd()); }
+  console.log(merged.ERROR.length ? `FAIL (${merged.ERROR.length} errors, ${merged.WARN.length} warnings)` : (merged.WARN.length ? `OK with ${merged.WARN.length} warnings` : "OK"));
+  process.exit(merged.ERROR.length ? 1 : 0);
+}
 
 // Version 2: packs hang on Schulstufe (grade), never on textbooks or classes
 const GRADES = { 5: "A1", 6: "A1+/A2", 7: "A2", 8: "A2+", 9: "A2+/B1", 10: "B1", 11: "B1+/B2", 12: "B2" };
@@ -103,26 +172,27 @@ if (P.textType === "postcard" && !META.to) W("postcard: meta.to missing (the add
 const modes = P.modes || [];
 if (!modes.length || modes.some(m => !["full", "frame"].includes(m))) E("modes must be subset of full,frame");
 const frame = modes.includes("frame");
-const lengths = Object.keys(P.lengths || {});
-if (!lengths.length || lengths.some(l => !["short", "long"].includes(l))) E("lengths keys must be short/long");
+const allLengths = Object.keys(P.lengths || {});
+const lengths = AS ? [AS] : allLengths;   // the analysis below runs for the length of this child run
+if (!allLengths.length || allLengths.some(l => !["short", "long"].includes(l))) E("lengths keys must be short/long");
 if (LENGTHS[G]) { const WL = wantLengths(G, P.textType), want = Object.keys(WL);
   const matura = G >= 11 && MATURA_LEN[P.textType] ? ` (Matura format: ${{ essay: "an essay", email: "an e-mail", letter: "a letter" }[P.textType]} is only “around ${WL[want[0]][0]} words”)` : "";
-  if (want.join() !== lengths.join()) E(`grade ${G} ${P.textType} needs lengths: ${want.join(", ")}${matura}`);
+  if (want.join() !== allLengths.join()) E(`grade ${G} ${P.textType} needs lengths: ${want.join(", ")}${matura}`);
   for (const l of want) { const L = (P.lengths || {})[l]; const [n, mn, mx] = WL[l]; if (L && (L.label !== `around ${n} words` || L.min !== mn || L.max !== mx)) E(`lengths.${l} for grade ${G} must be {label:"around ${n} words", min:${mn}, max:${mx}}`); } }
 // per-length fields for a length the pack does not have (e.g. minutes.full.short in an essay with only "long")
-{ const extra = (o, w) => Object.keys(o || {}).filter(k => !lengths.includes(k)).forEach(k => W(`${w}.${k}: the pack has no length “${k}” (lengths: ${lengths.join(", ")})`));
+{ const extra = (o, w) => Object.keys(o || {}).filter(k => !allLengths.includes(k)).forEach(k => W(`${w}.${k}: the pack has no length “${k}” (lengths: ${allLengths.join(", ")})`));
   for (const m of Object.keys(P.minutes || {})) extra(P.minutes[m], `minutes.${m}`);
   if (P.task) extra(P.task.words, "task.words"); if (P.focus) extra(P.focus.min, "focus.min"); }
 if (!modes.includes("full")) E("modes must include full");
 if (frame && !UPPER) E("frame mode only for grades 9–12");
 if (!frame && UPPER) W("grades 9–12 usually offer frame mode too");
-for (const l of lengths) { const L = P.lengths[l]; if (!(L.min > 0 && L.max > L.min && L.label)) E(`lengths.${l} needs label,min,max`); }
-for (const m of modes) for (const l of lengths) if (!(P.minutes && P.minutes[m] && P.minutes[m][l])) E(`minutes.${m}.${l} missing`);
+for (const l of allLengths) { const L = P.lengths[l]; if (!(L.min > 0 && L.max > L.min && L.label)) E(`lengths.${l} needs label,min,max`); }
+for (const m of modes) for (const l of allLengths) if (!(P.minutes && P.minutes[m] && P.minutes[m][l])) E(`minutes.${m}.${l} missing`);
 if (P.task) {
   for (const k of ["situation", "instruction", "de"]) if (!P.task[k]) E(`task.${k} missing`);
   if (UPPER && !(Array.isArray(P.task.points) && P.task.points.length === 3)) E("grades 9–12: task.points must have exactly 3 content points");
   if (!UPPER && P.task.points && !(P.task.points.length >= 2 && P.task.points.length <= 4)) E("grades 5–8: task.points 2–4 if given");
-  if (!P.task.words) E("task.words missing"); else for (const l of lengths) if (!P.task.words[l]) E(`task.words.${l} missing`);
+  if (!P.task.words) E("task.words missing"); else for (const l of allLengths) if (!P.task.words[l]) E(`task.words.${l} missing`);
   styleCheck(P.task.situation + " " + (P.task.points || []).join(" ") + " " + P.task.instruction, "task", true);
   styleCheck(P.task.de, "task.de", false);
 }
@@ -141,7 +211,7 @@ else E("focus missing");
 const dup = arr => arr.filter((x, i) => arr.indexOf(x) !== i);
 if (dup(P.order || []).length) E("order has duplicate slots: " + dup(P.order).join(","));
 if (dup((P.gaps || []).map(g => g.id)).length) E("duplicate gap ids");
-if (P.focus && P.focus.min) for (const l of lengths) if (P.focus.min[l] == null) E(`focus.min.${l} missing`);
+if (P.focus && P.focus.min) for (const l of allLengths) if (P.focus.min[l] == null) E(`focus.min.${l} missing`);
 if (false) for (const l of lengths) { const L = P.lengths[l]; const m = /(\d+)/.exec(L.label || ""); if (m) { const n = +m[1]; if (L.min < Math.floor(n * 0.9) - 1 || L.max > Math.ceil(n * 1.1) + 1) E(`lengths.${l}: min/max ${L.min}–${L.max} must stay within ±10% of ${n} (${Math.floor(n * 0.9)}–${Math.ceil(n * 1.1)})`); } }
 const REF = /(?<!(?:Body|Step|Teil|Absatz|Option) )\b[1-8][A-G]\b|\bS\. ?\d|\bSeite \d|\bp\. ?\d|\bpp\. ?\d|\bUnit \d+\b|\bLehrwerk|\bSchulbuch/;
 const studentFields = [];
@@ -206,9 +276,16 @@ steps.forEach((st, si) => {
     if (tw > 1.35 * avg && avg >= 8) W(`${w}: trap is much longer (${tw.toFixed(0)}) than the valid options (avg ${avg.toFixed(0)})`);
   } }
   if (opts.filter(o => !o.trap).length < 2 && st.slot) W(`${w}: only one valid option`);
+  // one decision = one whole paragraph: the cards must stay readable on a 1024×768 board (three cards side by side)
+  if (st.slot) opts.forEach(o => { const t = o.text; (typeof t === "string" ? [t] : Object.values((t && t.map) || {})).forEach(x => { const n = words(x);
+    if (n > 115) E(`${w}/${o.id}: ${n} words on one card (max 105, never above 115): shorten the paragraph or move words to the introduction/conclusion`);
+    else if (n > 105) W(`${w}/${o.id}: ${n} words on one card (max 105)`); }); });
+  // four cards stand in two rows: only short cards fit (the long cards of a paragraph step: at most three options)
+  if (st.slot && opts.length === 4) { const mx = Math.max(...opts.map(o => { const t = o.text; return Math.max(0, ...(typeof t === "string" ? [t] : Object.values((t && t.map) || {})).map(words)); }));
+    if (mx > 70) E(`${w}: four options with cards of up to ${mx} words – a step with cards over 70 words has at most three options (three cards side by side; four would run off the board)`); }
 });
 if (!UPPER) { if (trapCount < 2 || trapCount > 4) W(`grades 5–8: ${trapCount} traps (aim 3–4; grade 5: 2–3)`); }
-else if (trapCount < 3 || trapCount > 6) W(`${trapCount} traps (aim 3–5)`);
+else if (trapCount < 4 || trapCount > 6) W(`${trapCount} traps (grades 9–12: 4–5, at most 6)`);
 if (trapLetters.length >= 3 && new Set(trapLetters).size === 1) W("all traps on the same letter");
 (P.order || []).forEach(s => { if (!slots[s]) E(`order: slot ${s} has no step`); });
 Object.keys(slots).forEach(s => { if (!(P.order || []).includes(s)) E(`slot ${s} missing in order`); });
@@ -262,7 +339,7 @@ for (const L of lengths) {
   });
   if (UPPER) {
     const parts = paras.map(g => g.st.part);
-    if (paras.length !== 5) E(`[${L}] grades 9–12: exactly 5 paragraphs (Introduction, Body paragraph 1–3, Conclusion) on every path, found ${paras.length} (${paras.map(g => g.st.id).join(", ")}). A long version makes paragraphs longer with join steps; it never adds paragraphs.`);
+    if (paras.length !== 5) E(`[${L}] grades 9–12: exactly 5 paragraphs (Introduction, Body paragraph 1–3, Conclusion) on every path, found ${paras.length} (${paras.map(g => g.st.id).join(", ")}). A long version makes paragraphs longer (textLong); it never adds paragraphs.`);
     else if (parts.join("|") !== PARTS5.join("|")) E(`[${L}] grades 9–12: the parts of the 5 paragraphs must be ${PARTS5.map(x => "“" + x + "”").join(", ")} – found ${parts.map(x => "“" + x + "”").join(", ")}`);
   }
 }
@@ -293,6 +370,8 @@ steps.forEach(st => { if (!st.slot) return; st.options.forEach(o => {
     const w = `${st.id}/${o.id}${v.cond ? "[" + v.cond[1] + "]" : ""}`;
     styleCheck(v.text, w, true);
     checkMarkers(v.text, w, frame, !!o.trap);
+    // AUTHORING §11: no comma before "because" in model texts (traps may contain it only if their reject names it)
+    if (!o.trap && /(?<!\bthough),\s*(\[\[|\{\{)*because\b/.test(v.text.replace(/\]\]|\}\}/g, ""))) W(`${w}: comma before “because” (no comma before because in model texts)`);
     const gapsUsed = (v.text.match(/\{([A-Z][A-Z0-9_]*)\}/g) || []).map(x => x.slice(1, -1));
     for (const g of gapsUsed) { if (!gapDefs[g]) E(`${w}: gap {${g}} not declared`); else if (stepIdx[gapDefs[g].step] > stepIdx[st.id]) E(`${w}: gap {${g}} used before its step ${gapDefs[g].step}`); }
     if (frame && !o.trap) {
@@ -313,7 +392,8 @@ steps.forEach(st => { if (!st.slot) return; st.options.forEach(o => {
 }); });
 if (notOnly > 1) W(`"not only" used ${notOnly} times (max 1)`);
 // gaps used somewhere
-Object.keys(gapDefs).forEach(g => { const used = steps.some(st => st.slot && st.options.some(o => variants(o, st).some(v => v.text.includes("{" + g + "}")))); if (!used) E(`gap ${g} declared but never used`); });
+// a gap may be used in one length only (e.g. only in the long texts): the merged report makes this an error only if no length uses it
+Object.keys(gapDefs).forEach(g => { const used = steps.some(st => st.slot && st.options.some(o => variants(o, st).some(v => v.text.includes("{" + g + "}")))); if (!used) E(`UNUSED-GAP ${g}`); });
 
 // ---------- path analysis per length ----------
 const branchSteps = steps.filter(s => !s.slot);
@@ -374,7 +454,7 @@ if (UPPER) for (const L of lengths) {
       const r = a.hi / b.lo; if (r > BALANCE && (!worst[a.part] || r > worst[a.part].r)) worst[a.part] = { r, a, b, combo };
     }));
   }
-  for (const w of Object.values(worst)) W(`[${L}] paragraph balance: ${w.a.part} can have ${w.a.hi} words while ${w.b.part} has ${w.b.lo} (${w.r.toFixed(1)}×, max ${BALANCE}×)${Object.keys(w.combo).length ? " " + JSON.stringify(w.combo) : ""} – lengthen the short paragraph (a continuation step) or shorten the long one`);
+  for (const w of Object.values(worst)) W(`[${L}] paragraph balance: ${w.a.part} can have ${w.a.hi} words while ${w.b.part} has ${w.b.lo} (${w.r.toFixed(1)}×, max ${BALANCE}×)${Object.keys(w.combo).length ? " " + JSON.stringify(w.combo) : ""} – lengthen the short paragraph (textLong) or shorten the long one`);
 }
 
 // ---------- text-type conventions of the Matura writing guide (AUTHORING §6, §11) ----------

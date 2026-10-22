@@ -163,12 +163,15 @@
       "de": "Erster Inhaltspunkt: Anlass der E-Mail, unsere Gruppe und die Reisedaten. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
       "own": "Copy the frame. Then complete the sentences in your own words: who is in the group and when does it want to come?",
       "ownDe": "Gerüst abschreiben, dann mit eigenen Worten ergänzen: Wer fährt mit, und wann möchte die Gruppe kommen?",
+      "ownLong": "Copy the frame. Then complete the sentences in your own words: who is in the group, when does it want to come and what do we ask about our arrival?",
+      "ownLongDe": "Gerüst abschreiben, dann mit eigenen Worten ergänzen: Wer fährt mit, wann möchte die Gruppe kommen, und was fragen wir zur Anreise?",
       "options": [
         {
           "l": "A",
           "id": "purpose",
           "label": "The purpose first",
           "text": "{{I am writing on behalf of my class}} from Klagenfurt, Austria, {{[[to ask whether]]}} you have space for us during our trip to North Wales. {{The group consists of}} {NUM} students and two teachers, and we would like to stay from 10 to 14 May.",
+          "textLong": "{{I am writing on behalf of my class}} from Klagenfurt, Austria, {{[[to ask whether]]}} you have space for us during our trip to North Wales. {{The group consists of}} {NUM} students and two teachers, and we would like to stay from 10 to 14 May. As we are coming by train, {{[[could you please explain how]]}} we can get from Bangor station to your hostel?",
           "why": "The first sentence says who is writing and why. Then come the facts the hostel needs."
         },
         {
@@ -176,36 +179,10 @@
           "id": "found",
           "label": "Who I am, then the group",
           "text": "{{I am a student from Klagenfurt, Austria, and I am writing to ask}} about a stay for my class at your hostel. {{We are a group of}} {NUM} students aged fourteen and fifteen, and two teachers will travel with us. We plan to arrive on 10 May and leave on 14 May.",
+          "textLong": "{{I am a student from Klagenfurt, Austria, and I am writing to ask}} about a stay for my class at your hostel. {{We are a group of}} {NUM} students aged fourteen and fifteen, and two teachers will travel with us. We plan to arrive in Bangor on 10 May and leave on 14 May. {{[[Please let us know whether]]}} we can check in at about five.",
           "why": "The first sentence says who is writing and why. Then we give the ages of the students and the exact dates."
         }
       ]
-    },
-    {
-      "id": "travel",
-      "slot": "travel",
-      "part": "Introduction",
-      "len": "long",
-      "q": "What do we ask about our arrival?",
-      "de": "Der Absatz geht weiter: eine Frage zur Anreise vom Bahnhof zur Jugendherberge. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
-      "own": "Copy the frame. Then finish the question about the group’s arrival in your own words.",
-      "ownDe": "Gerüst abschreiben, dann die Frage zur Anreise der Gruppe mit eigenen Worten fertigschreiben.",
-      "options": [
-        {
-          "l": "A",
-          "id": "station",
-          "label": "From the station",
-          "text": "{{We will travel to Bangor by train. [[Could you please explain how]]}} we can get from the station to your hostel? If there is no bus, we would be happy to pay for a minibus.",
-          "why": "Adds how we travel to the dates we have just given, then asks a clear indirect question."
-        },
-        {
-          "l": "B",
-          "id": "checkin",
-          "label": "Arrival time",
-          "text": "{{Our train should reach Bangor}} at about four o’clock in the afternoon. {{[[Could you tell us whether]]}} we can check in at around five and whether there is a bus from the station to the hostel?",
-          "why": "Adds the time of arrival to our dates. ‘Could you tell us whether …?’ is a polite request with an indirect question inside."
-        }
-      ],
-      "join": true
     },
     {
       "id": "rooms",
@@ -215,12 +192,15 @@
       "de": "Zweiter Inhaltspunkt, erster Teil: unsere Fragen zu den Zimmern. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
       "own": "Copy the frame. Then finish the questions in your own words. Keep the word order of a statement.",
       "ownDe": "Gerüst abschreiben, dann die Fragen mit eigenen Worten fertigschreiben. Nach dem Fragewort die Wortstellung eines Aussagesatzes verwenden.",
+      "ownLong": "Copy the frame. Then finish the questions and add one wish about the rooms in your own words. Keep the word order of a statement.",
+      "ownLongDe": "Gerüst abschreiben, dann die Fragen fertigschreiben und einen Wunsch zu den Zimmern mit eigenen Worten ergänzen. Nach dem Fragewort die Wortstellung eines Aussagesatzes verwenden.",
       "options": [
         {
           "l": "A",
           "id": "beds",
           "label": "Beds and bed linen",
           "text": "{{Regarding the rooms, [[could you tell me how many]]}} beds there are in each room? We need separate rooms for girls and boys and two single rooms for our teachers. {{[[May I also ask whether]]}} bed linen and towels are included?",
+          "textLong": "{{Regarding the rooms, [[could you tell me how many]]}} beds there are in each room? We need separate rooms for girls and boys and two single rooms for our teachers. Ideally, the teachers’ rooms would be close to the students’ rooms. {{[[May I also ask whether]]}} bed linen and towels are included?",
           "why": "‘Regarding the rooms’ names the topic of the paragraph. After ‘how many’ and ‘whether’, the word order is the same as in a statement."
         },
         {
@@ -229,15 +209,17 @@
           "label": "Rooms and bathrooms",
           "trap": true,
           "crit": "LSA",
-          "text": "With regard to the rooms, I would like to know how many beds has each room. We need separate rooms for girls and boys, and the both teachers would like single rooms. Could you also tell me whether every room has an own bathroom?",
-          "reject": "Three typical mistakes: ‘how many beds has each room’ (→ how many beds each room has), ‘the both teachers’ (→ both teachers) and ‘an own bathroom’ (→ its own bathroom).",
-          "rejectDe": "Drei typische Fehler: how many beds has each room → how many beds each room has (Wortstellung), the both → both, an own bathroom → its own bathroom."
+          "text": "With regard to the rooms, I would like to know how many beds has each room. We need separated rooms for girls and boys, and both teachers would like single rooms. Could you also tell me whether every room has an own bathroom?",
+          "textLong": "With regard to the rooms, I would like to know how many beds has each room. We need separated rooms for girls and boys, and both teachers would like single rooms, if possible on the same floor as the students. Could you also tell me whether every room has an own bathroom?",
+          "reject": "Three typical mistakes: ‘how many beds has each room’ (→ how many beds each room has), ‘separated rooms’ (→ separate rooms) and ‘an own bathroom’ (→ its own bathroom).",
+          "rejectDe": "Drei typische Fehler: how many beds has each room → how many beds each room has (Wortstellung), separated rooms → separate rooms (getrennte Zimmer), an own bathroom → its own bathroom."
         },
         {
           "l": "C",
           "id": "bathrooms",
           "label": "Room sizes and bathrooms",
           "text": "{{As for the rooms, [[we would like to know whether]]}} you have rooms for four to six people. Girls and boys need separate rooms. {{[[Could you also tell me if]]}} the rooms have their own bathrooms?",
+          "textLong": "{{As for the rooms, [[we would like to know whether]]}} you have rooms for four to six people. Girls and boys need separate rooms, and our two teachers would each like a single room. {{[[Could you also tell me if]]}} the rooms have their own bathrooms?",
           "why": "‘As for the rooms’ names the topic of the paragraph. ‘Whether’ and ‘if’ both introduce yes/no questions politely."
         }
       ]
@@ -250,12 +232,15 @@
       "de": "Zweiter Inhaltspunkt, zweiter Teil: Essen, Allergie und vegetarische Kost. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
       "own": "Copy the frame. Then explain what the group needs and finish the question in your own words.",
       "ownDe": "Gerüst abschreiben, dann erklären, was die Gruppe braucht, und die Frage mit eigenen Worten fertigschreiben.",
+      "ownLong": "Copy the frame. Then explain what the group needs, finish the question and add one more detail in your own words.",
+      "ownLongDe": "Gerüst abschreiben, dann erklären, was die Gruppe braucht, die Frage fertigschreiben und ein weiteres Detail mit eigenen Worten ergänzen.",
       "options": [
         {
           "l": "A",
           "id": "plan",
           "label": "Meals first, then allergies",
-          "text": "{{Concerning meals, we would like}} breakfast and dinner at the hostel and packed lunches for our day trips. One student has a nut allergy, and two students are vegetarian. {{[[I wonder whether]]}} your kitchen can prepare special meals for them.",
+          "text": "{{Concerning meals, we would like}} breakfast and dinner at the hostel and packed lunches for our day trips. One of our students is allergic to nuts, and two do not eat meat. {{[[I wonder whether]]}} your kitchen can prepare special meals for them.",
+          "textLong": "{{Concerning meals, we would like}} breakfast and dinner at the hostel and packed lunches for our day trips. One of our students is allergic to nuts, and two do not eat meat. {{[[I wonder whether]]}} your kitchen can prepare special meals for them. {{We can also send you}} a doctor’s letter about the allergy.",
           "why": "‘Concerning meals’ moves on to a new topic. ‘I wonder whether …’ is a polite indirect question that ends with a full stop."
         },
         {
@@ -263,6 +248,7 @@
           "id": "allergy",
           "label": "Allergies first",
           "text": "{{Food is another important point. Please note that}} one student has a nut allergy and two are vegetarian. {{[[I would be grateful if you could let me know whether]]}} your kitchen can cater for them. Full board with packed lunches would suit us best.",
+          "textLong": "{{Food is another important point. Please note that}} one student has a nut allergy and two are vegetarian. {{[[I would be grateful if you could let me know whether]]}} your kitchen can cater for them. Full board with packed lunches would suit us best, as we will be out on day trips most days.",
           "why": "‘Another important point’ links the food to the rooms. The most important information comes first, and the indirect question is very polite."
         },
         {
@@ -272,6 +258,7 @@
           "trap": true,
           "crit": "CC",
           "text": "We would like to have breakfast and dinner at the hostel every day. On the contrary, we would need packed lunches for our day trips. One student has a nut allergy. In other words, two students are vegetarian. Could you tell me whether your kitchen can prepare special meals for them?",
+          "textLong": "We would like to have breakfast and dinner at the hostel every day. On the contrary, we would need packed lunches for our day trips. One student has a nut allergy. In other words, two students are vegetarian. Could you tell me whether your kitchen can prepare special meals for them? We can send you more information about the allergy.",
           "reject": "The linking words don’t fit: ‘On the contrary’ says that something before is wrong, but packed lunches are just one more wish (→ We would also need). ‘In other words’ repeats an idea, but the vegetarians are new information (→ In addition).",
           "rejectDe": "Die Linking words passen nicht: On the contrary widerspricht dem Satz davor, die Lunchpakete sind aber nur ein weiterer Wunsch. In other words wiederholt etwas, die Vegetarier:innen sind aber neu (→ In addition)."
         }
@@ -285,6 +272,8 @@
       "de": "Dritter Inhaltspunkt: unsere Fragen zu Aktivitäten und Preisen. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
       "own": "Copy the frame. Then finish the questions about activities and prices in your own words.",
       "ownDe": "Gerüst abschreiben, dann die Fragen zu Aktivitäten und Preisen mit eigenen Worten fertigschreiben.",
+      "ownLong": "Copy the frame. Then finish the questions about activities and prices and add one more wish in your own words.",
+      "ownLongDe": "Gerüst abschreiben, dann die Fragen zu Aktivitäten und Preisen fertigschreiben und einen weiteren Wunsch mit eigenen Worten ergänzen.",
       "options": [
         {
           "l": "A",
@@ -293,6 +282,7 @@
           "trap": true,
           "crit": "LSR",
           "text": "We have some more questions. Can we go hiking near the hostel? Can we go kayaking? Can we visit a castle? How much is it for one night? How much is it for the teachers? Is it cheaper for groups?",
+          "textLong": "We have some more questions. Can we go hiking near the hostel? Can we go kayaking? Can we visit a castle? How much is it for one night? How much is it for the teachers? Is it cheaper for groups? Is there a shop near the hostel where we can buy snacks?",
           "reject": "Only short direct questions, and ‘Can we …?’ and ‘How much is it …?’ again and again. Use polite indirect questions with different openings: Could you give me an idea of …, I was also wondering whether …",
           "rejectDe": "Nur kurze direkte Fragen, immer wieder „Can we …?“ und „How much is it …?“. Höfliche indirekte Fragen mit verschiedenen Einleitungen verwenden."
         },
@@ -301,13 +291,15 @@
           "id": "activities",
           "label": "Activities, then prices",
           "text": "{{Finally, [[I would like to ask what kind of]]}} activities you offer for school groups. We are especially interested in hiking and kayaking. {{[[Could you give me an idea of how much]]}} the whole stay would cost per person, including meals?",
+          "textLong": "{{Finally, [[I would like to ask what kind of]]}} activities you offer for school groups. We are especially interested in hiking and kayaking, but a rainy-day idea would also be useful. {{[[Could you give me an idea of how much]]}} the whole stay would cost per person, including meals?",
           "why": "‘Finally’ signals the last point. Two different polite openings for the two questions."
         },
         {
           "l": "C",
           "id": "prices",
           "label": "Prices, then a day trip",
-          "text": "{{Our last questions are about prices and free time. [[It would be helpful to know how much]]}} one night with full board costs per person. {{[[I was also wondering whether]]}} you can organise a guided walk or a trip to Caernarfon Castle.",
+          "text": "{{Our last questions are about}} prices and free time. {{[[It would be helpful to know how much]]}} one night with full board costs per person. {{[[I was also wondering whether]]}} you can organise a guided walk or a trip to Caernarfon Castle.",
+          "textLong": "{{Our last questions are about}} prices and free time. {{[[It would be helpful to know how much]]}} one night with full board costs per person. {{[[I was also wondering whether]]}} you can organise a guided walk or a trip to Caernarfon Castle. Our class would love to visit it.",
           "why": "A clear topic sentence, then two indirect questions that end with a full stop."
         }
       ]
@@ -320,12 +312,15 @@
       "de": "Der Schluss greift unsere Fragen kurz auf, bedankt sich und bittet um eine Antwort. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
       "own": "Copy the frame. Then add your own words: what the group is asking about and why it needs an answer soon, or what the class is looking forward to.",
       "ownDe": "Gerüst abschreiben, dann mit eigenen Worten ergänzen: worum die Gruppe bittet und warum sie bald eine Antwort braucht oder worauf sich die Klasse freut.",
+      "ownLong": "Copy the frame. Then add two or three sentences of your own: what the group is asking about, why an answer helps and one more polite sentence (an offer or how the class feels about the trip).",
+      "ownLongDe": "Gerüst abschreiben, dann zwei bis drei eigene Sätze ergänzen: worum die Gruppe bittet, wobei die Antwort hilft und ein weiterer höflicher Satz (ein Angebot oder wie sich die Klasse auf die Reise freut).",
       "options": [
         {
           "l": "A",
           "id": "deadline",
           "label": "Thanks and a deadline",
           "text": "{{Many thanks for your help.}} Once we know about the rooms, meals and prices, we can book our train tickets, {{so we would appreciate}} a reply within two weeks.",
+          "textLong": "{{Many thanks for your help.}} Once we know about the rooms, meals and prices, we can book our train tickets, {{so we would appreciate}} a reply within two weeks. I will gladly send you any further details about our group.",
           "why": "Picks up our questions, thanks the reader and gives a good reason for a quick reply."
         },
         {
@@ -333,6 +328,7 @@
           "id": "forward",
           "label": "Thanks and a classic last line",
           "text": "{{Thank you in advance}} for answering our questions about rooms, food and activities. My whole class is excited about the trip, {{and I look forward to hearing from you}} soon.",
+          "textLong": "{{Thank you in advance}} for answering our questions about rooms, food and activities. Your answers will help us to plan the trip. My whole class is already very excited, {{and I look forward to hearing from you}} soon.",
           "why": "Picks up our questions. ‘I look forward to hearing from you’ is the classic last sentence of a polite email."
         }
       ]
@@ -370,7 +366,6 @@
     "subject",
     "greeting",
     "opening",
-    "travel",
     "rooms",
     "meals",
     "activities",
@@ -406,9 +401,9 @@
   "teacher": {
     "aim": "Die Klasse baut gemeinsam eine formelle Anfrage-E-Mail (A2+/B1) an eine Jugendherberge in Nordwales für eine Klassenreise und übt dabei indirekte Fragen (Einleitung + Fragewort + Wortstellung des Aussagesatzes) sowie die Konventionen einer formellen Anfrage (erster Satz: wer schreibt und warum; Anrede und Grußformel als Paar).",
     "prep": "A/B/C/D-Karten austeilen (eine Garnitur pro Person), Hefte bereitlegen. Beamer im Vollbild. An der Tafel vorbereiten: „How many beds are there? → Could you tell me how many beds there are?“ Im Gerüst-Modus den eingebauten Timer nutzen: 5 min pro Absatz, bei Bedarf +1. Die Aufgabe am Beamer enthält alles Nötige.",
-    "heft": "Neue Seite: Datum rechts oben, darunter „Email“ als Überschrift (wie am Beamer). Darunter der E-Mail-Kopf mit vier Zeilen (To, From, Date, Subject) wie am Beamer; der Betreff kommt nach der ersten Entscheidung in die Subject-Zeile, der Name erst unter die Grußformel. Anrede in einer eigenen Zeile, dann eine Zeile frei. Fünf Absätze, jeder nach einer Leerzeile, am Rand Intro, Body 1, Body 2, Body 3, Conclusion; in der langen Fassung geht die Einleitung ohne neue Zeile weiter. Vor der Grußformel eine Zeile frei, dann Grußformel und Name in zwei eigenen Zeilen. Einleitungen indirekter Fragen grün unterstreichen.",
-    "flow": "Volltext kurz (50 min): 5 min Aufgabe lesen, 8 Entscheidungen (Betreff, Anrede und Grußformel ca. 1 min, Absätze ca. 2 min), Abschreiben ca. 20 min, 5 min Checkliste. Volltext lang (ca. 60 min): wie kurz, dazu eine Fortsetzung der Einleitung (Anreise vom Bahnhof Bangor); das sind eine Entscheidung und rund 40 Wörter Abschreiben mehr. In einer Doppelstunde die restliche Zeit für die Besprechung der Fallen nutzen und Ms Morgans Antwort (siehe Hausübung) zu zweit beginnen. Gerüst kurz (realistisch ca. 60 min): 5 min Aufgabe; Betreff, Anrede und Grußformel je ca. 1 min; pro Absatz 1 min Entscheidung, 5–6 min eigenes Schreiben, 1 min Vergleich mit dem Modell. Die Fakten aus der Aufgabe (10. bis 14. Mai, zwei Lehrer:innen, eine Nussallergie, zwei Vegetarier:innen) an die Tafel schreiben. In einer 50-Minuten-Stunde beim Schluss nur abstimmen und das Gerüst abschreiben lassen, den eigenen Satz und die Checkliste als Hausübung. Gerüst lang (ca. 70 min): gleicher Rhythmus wie kurz, dazu die Fortsetzung der Einleitung mit ca. 5 min Schreiben. In einer Doppelstunde danach eine Vergleichsrunde zu zweit.",
-    "traps": "Greeting B (TA): „Hi Gwen,“ ist die falsche Anrede für eine formelle E-Mail an eine unbekannte Person. Body 1 B (LSA): how many beds has each room (Wortstellung in der indirekten Frage), the both teachers, an own bathroom. Body 2 C (CC): On the contrary ohne Widerspruch, In other words vor einer neuen Information. Body 3 A (LSR): nur kurze direkte Fragen, immer wieder „Can we …?“ und „How much is it …?“. Sign-off A (TA): „Yours faithfully,“ passt nicht zu „Dear Ms Morgan,“. Kürzel: TA = Erfüllung der Aufgabenstellung, CC = Kohärenz und Kohäsion, LSR = Spektrum sprachlicher Mittel, LSA = Sprachrichtigkeit.",
-    "notes": "Aufbau: Jede E-Mail hat fünf Absätze. Die Inhaltspunkte stehen so: Punkt 1 (Gruppe vorstellen und Reisedaten nennen) ist der Anlass der Anfrage und steht deshalb in der Introduction, Punkt 2 (Zimmer und Essen) ist auf Body 1 (Zimmer) und Body 2 (Essen) verteilt, Punkt 3 (Aktivitäten und Preise) steht in Body 3; die Conclusion greift die Fragen auf und bedankt sich. Die lange Fassung macht die Einleitung länger (Anreise vom Bahnhof Bangor), sie fügt keinen Absatz hinzu. Jeder Hauptabsatz nennt gleich am Anfang sein Thema (Regarding the rooms, Concerning meals, Finally …), der Schluss greift die Fragen kurz auf. Die Jugendherberge, Ms Gwen Morgan und die Adressen sind erfunden. Real sind der Nationalpark Eryri (englisch Snowdonia), der Bahnhof Bangor und Caernarfon Castle. Formell heißt hier: höflich, keine Kurzformen, Fragen als indirekte Fragen. Der erste Satz sagt, wer schreibt und warum. Anrede und Grußformel bilden ein Paar: Name bekannt → „Dear Ms Morgan,“ und „Yours sincerely,“; Name unbekannt → „Dear Sir or Madam,“ und „Yours faithfully,“. „Hello Ms Morgan,“, „Kind regards,“ und „Best regards,“ passen nicht zu einer formellen E-Mail. Fokus: Nach Body 1 an der Tafel direkte und indirekte Fragen gegenüberstellen (How much does it cost? → Could you tell me how much it costs?). Für die Namenslücke nur erfundene Namen, keine Namen von Mitschüler:innen oder Lehrer:innen. Differenzierung: Schnelle formulieren eine zusätzliche indirekte Frage, z. B. zu WLAN oder Fahrradverleih. Hausübung: Ms Morgans Antwort (ca. 100 Wörter) mit Antworten auf zwei der Fragen."
+    "heft": "Neue Seite: Datum rechts oben, darunter „Email“ als Überschrift (wie am Beamer). Darunter der E-Mail-Kopf mit vier Zeilen (To, From, Date, Subject) wie am Beamer; der Betreff kommt nach der ersten Entscheidung in die Subject-Zeile, der Name erst unter die Grußformel. Anrede in einer eigenen Zeile, dann eine Zeile frei. Fünf Absätze, jeder nach einer Leerzeile, am Rand Intro, Body 1, Body 2, Body 3, Conclusion. Vor der Grußformel eine Zeile frei, dann Grußformel und Name in zwei eigenen Zeilen. Einleitungen indirekter Fragen grün unterstreichen.",
+    "flow": "Volltext kurz (50 min): 5 min Aufgabe lesen, 8 Entscheidungen (Betreff, Anrede und Grußformel ca. 1 min, die fünf Absätze ca. 2 min), Abschreiben ca. 20 min, 5 min Checkliste. Volltext lang (ca. 60 min): dieselben 8 Entscheidungen, jeder Absatz ist etwas länger (in der Einleitung kommt eine Frage zur Anreise dazu: Weg vom Bahnhof Bangor oder Check-in-Zeit), Abschreiben ca. 25 min. In einer Doppelstunde die restliche Zeit für die Besprechung der Fallen nutzen und Ms Morgans Antwort (siehe Hausübung) zu zweit beginnen. Gerüst kurz (realistisch ca. 60 min): 5 min Aufgabe; Betreff, Anrede und Grußformel je ca. 1 min; pro Absatz 1 min Entscheidung, 5–6 min eigenes Schreiben, 1 min Vergleich mit dem Modell. Die Fakten aus der Aufgabe (10. bis 14. Mai, zwei Lehrer:innen, eine Nussallergie, zwei Vegetarier:innen) an die Tafel schreiben. In einer 50-Minuten-Stunde beim Schluss nur abstimmen und das Gerüst abschreiben lassen, den eigenen Satz und die Checkliste als Hausübung. Gerüst lang (ca. 70 min): gleicher Ablauf, pro Absatz 1–2 min mehr für das längere eigene Schreiben. In einer Doppelstunde danach eine Vergleichsrunde zu zweit.",
+    "traps": "Greeting B (TA): „Hi Gwen,“ ist die falsche Anrede für eine formelle E-Mail an eine unbekannte Person. Body 1 B (LSA): how many beds has each room (Wortstellung in der indirekten Frage), separated rooms statt separate rooms, an own bathroom. Body 2 C (CC): On the contrary ohne Widerspruch, In other words vor einer neuen Information. Body 3 A (LSR): nur kurze direkte Fragen, immer wieder „Can we …?“ und „How much is it …?“. Sign-off A (TA): „Yours faithfully,“ passt nicht zu „Dear Ms Morgan,“. Kürzel: TA = Erfüllung der Aufgabenstellung, CC = Kohärenz und Kohäsion, LSR = Spektrum sprachlicher Mittel, LSA = Sprachrichtigkeit.",
+    "notes": "Aufbau: Jede E-Mail hat fünf Absätze. Die Inhaltspunkte stehen so: Punkt 1 (Gruppe vorstellen und Reisedaten nennen) ist der Anlass der Anfrage und steht deshalb in der Introduction, Punkt 2 (Zimmer und Essen) ist auf Body 1 (Zimmer) und Body 2 (Essen) verteilt, Punkt 3 (Aktivitäten und Preise) steht in Body 3; die Conclusion greift die Fragen auf und bedankt sich. Jede Entscheidung ist ein ganzer Absatz. Die lange Fassung hat dieselben Entscheidungen, nur sind die Absätze länger; in der Einleitung kommt eine Frage zur Anreise dazu (Weg vom Bahnhof Bangor oder Check-in-Zeit). Jeder Hauptabsatz nennt gleich am Anfang sein Thema (Regarding the rooms, Concerning meals, Finally …), der Schluss greift die Fragen kurz auf. Die Jugendherberge, Ms Gwen Morgan und die Adressen sind erfunden. Real sind der Nationalpark Eryri (englisch Snowdonia), der Bahnhof Bangor und Caernarfon Castle. Formell heißt hier: höflich, keine Kurzformen, Fragen als indirekte Fragen. Der erste Satz sagt, wer schreibt und warum. Anrede und Grußformel bilden ein Paar: Name bekannt → „Dear Ms Morgan,“ und „Yours sincerely,“; Name unbekannt → „Dear Sir or Madam,“ und „Yours faithfully,“. „Hello Ms Morgan,“, „Kind regards,“ und „Best regards,“ passen nicht zu einer formellen E-Mail. Fokus: Nach Body 1 an der Tafel direkte und indirekte Fragen gegenüberstellen (How much does it cost? → Could you tell me how much it costs?). Für die Namenslücke nur erfundene Namen, keine Namen von Mitschüler:innen oder Lehrer:innen. Differenzierung: Schnelle formulieren eine zusätzliche indirekte Frage, z. B. zu WLAN oder Fahrradverleih. Hausübung: Ms Morgans Antwort (ca. 100 Wörter) mit Antworten auf zwei der Fragen."
   }
 }

@@ -226,8 +226,8 @@
           "text": {
             "by": "kind",
             "map": {
-              "lake": "During the day, it hides deep under the water. At night, it can play with the ducks for hours.",
-              "mountain": "During the day, it hides from the climbers. At night, it can build [[the biggest]] snowmen in the Alps.",
+              "lake": "During the day, it sleeps deep under the water. At night, it can play with the ducks for hours.",
+              "mountain": "During the day, it sleeps in the snow. At night, it can build [[the biggest]] snowmen in the Alps.",
               "river": "During the day, it hides in the mud. At night, it can ride the Giant Ferris Wheel in the Prater."
             }
           }
@@ -237,21 +237,21 @@
     {
       "id": "food",
       "slot": "food",
-      "part": "Food",
-      "q": "What does it eat?",
-      "de": "Hier geht es darum, was unser Monster isst. Lest jede Karte genau, bevor ihr abstimmt.",
+      "part": "Why it is special",
+      "q": "What does it eat, and why is it special?",
+      "de": "Dieser Absatz sagt, was unser Monster isst und warum es besonders ist. Lest jede Karte genau, bevor ihr abstimmt.",
       "options": [
         {
           "l": "A",
-          "id": "food",
-          "label": "Its favourite food",
-          "why": "Funny food makes a monster description fun to read.",
+          "id": "share",
+          "label": "It shares its food",
+          "why": "Food and character go together: sharing its favourite dessert shows why it is the friendliest monster.",
           "text": {
             "by": "kind",
             "map": {
-              "lake": "For breakfast, it eats fish and water plants. Its favourite food is Kaiserschmarrn, [[the most delicious]] dessert in Austria!",
-              "mountain": "For breakfast, it eats snow and berries. Its favourite food is Kaiserschmarrn, [[the most delicious]] dessert in Austria!",
-              "river": "For breakfast, it eats fish and old shoes. Its favourite food is Kaiserschmarrn, [[the most delicious]] dessert in Austria!"
+              "lake": "It eats fish and water plants, but its favourite food is Kaiserschmarrn, [[the most delicious]] dessert in Austria. It always shares its Kaiserschmarrn with the ducks. That is why {NAME} is [[the friendliest]] monster of all!",
+              "mountain": "It eats snow and berries, but its favourite food is Kaiserschmarrn, [[the most delicious]] dessert in Austria. It always shares its Kaiserschmarrn with the birds. That is why {NAME} is [[the friendliest]] monster of all!",
+              "river": "It eats fish and old shoes, but its favourite food is Kaiserschmarrn, [[the most delicious]] dessert in Austria. It always shares its Kaiserschmarrn with the ducks. That is why {NAME} is [[the friendliest]] monster of all!"
             }
           }
         },
@@ -259,50 +259,27 @@
           "l": "B",
           "id": "home",
           "label": "Its home and its food",
-          "why": "Readers can see its home, and they find out what it eats.",
+          "why": "Readers see its home, and its strange food shows why our monster is special.",
           "text": {
             "by": "kind",
             "map": {
-              "lake": "At the bottom of the lake, it has got a cave [[darker than]] a cellar. It eats fish and lost sunglasses.",
-              "mountain": "High up on the mountain, it has got an ice cave [[colder than]] a freezer. It eats snow, berries and lost sandwiches.",
-              "river": "Under the water, its bedroom is an old boat, [[darker than]] a cellar. It eats fish and lost mobile phones."
+              "lake": "At the bottom of the lake, its cave is [[darker than]] a cellar. It eats fish and lost sunglasses there. No other monster eats sunglasses! That makes {NAME} [[the most unusual]] creature in Austria.",
+              "mountain": "High on the mountain, its ice cave is [[colder than]] a freezer. It eats snow, berries and lost ski gloves there. No other monster eats gloves! That makes {NAME} [[the most unusual]] creature in Austria.",
+              "river": "Under the water, its bedroom is an old boat, [[darker than]] a cellar. It eats fish and lost mobile phones there. No other monster eats phones! That makes {NAME} [[the most unusual]] creature in Austria."
             }
           }
-        }
-      ]
-    },
-    {
-      "id": "special",
-      "slot": "special",
-      "part": "Why it is special",
-      "q": "Why is our monster special?",
-      "de": "Dieser Absatz sagt, warum unser Monster besonders ist. Lest jede Karte genau, bevor ihr abstimmt.",
-      "options": [
-        {
-          "l": "A",
-          "id": "famous",
-          "label": "More colourful, but …",
-          "why": "Two forms in one sentence: ‘more colourful’ and ‘the friendliest’.",
-          "text": "Other monsters are [[more colourful]], but {NAME} is [[the friendliest]] monster in the world!"
-        },
-        {
-          "l": "B",
-          "id": "rare",
-          "label": "The only one",
-          "why": "Short and strong: there is only one, so it is the rarest.",
-          "text": "There is only one {NAME}. That makes it [[the rarest]] creature in the world!"
         },
         {
           "l": "C",
           "id": "helper",
           "label": "It helps people",
-          "why": "Shows that our monster is not dangerous. It helps people.",
+          "why": "A small surprise: a question, then the answer. Our monster is not dangerous: it helps people.",
           "text": {
             "by": "kind",
             "map": {
-              "lake": "[[The best]] thing about it? When swimmers get tired, it carries them back to the beach!",
-              "mountain": "[[The best]] thing about it? When climbers get lost in the fog, it shows them the way!",
-              "river": "[[The best]] thing about it? When children’s balls land in the river, it throws them back!"
+              "lake": "Usually, it eats fish, but swimmers sometimes bring it apple strudel. Why? When they get tired, {NAME} carries them back to the beach. That is [[the best]] thing about our monster: it helps people!",
+              "mountain": "Usually, it eats snow and berries, but climbers sometimes leave apple strudel outside their huts for it. Why? When they get lost, {NAME} shows them the way. That is [[the best]] thing about our monster: it helps people!",
+              "river": "Usually, it eats fish, but children sometimes bring it apple strudel. Why? When their balls land in the river, {NAME} throws the balls back. That is [[the best]] thing about our monster: it helps people!"
             }
           }
         },
@@ -312,9 +289,9 @@
           "label": "Colour, food and feet",
           "trap": true,
           "crit": "CC",
-          "reject": "Everything is mixed up: colour, food, winter, feet … This paragraph should only say why our monster is special.",
-          "rejectDe": "Hier ist alles durcheinander. In diesen Absatz gehört nur, warum unser Monster besonders ist.",
-          "text": "It is green. It likes pizza. In winter, it sleeps a lot. It has got big feet."
+          "reject": "Everything is mixed up: food, feet, winter, colour … This paragraph should only say what our monster eats and why it is special.",
+          "rejectDe": "Hier ist alles durcheinander. In diesen Absatz gehört nur, was unser Monster isst und warum es besonders ist.",
+          "text": "{NAME} likes pizza and chips, and in winter, it sleeps a lot. It has got big feet and a long tail. Its best friend is a cat, and it eats cheese too. {NAME} is very special!"
         }
       ]
     },
@@ -406,7 +383,6 @@
     "looks",
     "habits",
     "food",
-    "special",
     "ending"
   ],
   "checks": [
@@ -426,14 +402,14 @@
       "en": "At least four comparatives or superlatives (bigger than, the biggest, more famous …)"
     },
     {
-      "en": "One idea per paragraph, in a clear order"
+      "en": "One topic per paragraph, in a clear order"
     }
   ],
   "teacher": {
     "aim": "Die Klasse beschreibt gemeinsam ein selbst erfundenes österreichisches Monster für die Schulzeitung und verwendet dabei Steigerungsformen mit than und the (bigger than, the biggest, more famous).",
-    "prep": "A/B/C/D-Karten austeilen. Beamer im Vollbild. Optional: eine Österreich-Karte (Attersee, Großglockner, Donau in Wien, Klagenfurt). Einsatz ab: Steigerung von Adjektiven (-er/-est, more/most, good – better – the best), dazu has got und can. Bei Bedarf Wörter an die Tafel: speedboat (Rennboot), freezer (Tiefkühltruhe), snowstorm (Schneesturm), creature (Wesen), blanket (Decke).",
-    "heft": "Neue Seite: Datum (rechts) und „Description“ als Überschrift (wie am Beamer), darunter 2 Zeilen für den Titel frei lassen. Jeder Absatz beginnt nach einer Leerzeile, am Rand steht der Name des Teils wie am Beamer: Introduction, Looks, What it does, Food, Why it is special, Ending. Steigerungsformen am Ende grün unterstreichen.",
-    "flow": "Volltext (50 min): 3 min Aufgabe und Wohnort wählen · 7 weitere Entscheidungen à ca. 2 min, zusammen ca. 15 min · Abschreiben nach jeder Entscheidung, zusammen ca. 20 min · 5 min Checkliste und Steigerungsformen zählen · 7 min Puffer.",
+    "prep": "A/B/C/D-Karten austeilen. Beamer im Vollbild. Optional: eine Österreich-Karte (Attersee, Großglockner, Donau in Wien, Klagenfurt). Einsatz ab: Steigerung von Adjektiven (-er/-est, more/most, good – better – the best), dazu has got und can. Bei Bedarf Wörter an die Tafel: speedboat (Rennboot), freezer (Tiefkühltruhe), snowstorm (Schneesturm), creature (Wesen), blanket (Decke), unusual (ungewöhnlich), share (teilen), cellar (Keller), scales (Schuppen), lorry (Lkw).",
+    "heft": "Neue Seite: Datum (rechts) und „Description“ als Überschrift (wie am Beamer), darunter 2 Zeilen für den Titel frei lassen. Jeder Absatz beginnt nach einer Leerzeile, am Rand steht der Name des Teils wie am Beamer: Introduction, Looks, What it does, Why it is special, Ending. Steigerungsformen am Ende grün unterstreichen.",
+    "flow": "Volltext (50 min): 3 min Aufgabe und Wohnort wählen · 6 weitere Entscheidungen à ca. 2 min, zusammen ca. 13 min (der Absatz zu Essen und Besonderheit braucht etwas länger) · Abschreiben nach jeder Entscheidung, zusammen ca. 20 min · 5 min Checkliste und Steigerungsformen zählen · 9 min Puffer.",
     "traps": "Looks C (LSA, Sprachrichtigkeit): more big, then statt than, the most long. What it does B (TA, Erfüllung der Aufgabenstellung): Geschichte in der Vergangenheit statt Beschreibung. Why it is special D (CC, Kohärenz und Kohäsion): alles durcheinander, kein roter Faden.",
     "notes": "Der Lindwurm ist der Drache aus der Klagenfurter Sage (Lindwurmbrunnen am Neuen Platz). Über das Monster schreiben wir immer „it“, daher passt jeder Name. Der Name soll erfunden sein, keine Namen von Mitschüler:innen oder Lehrer:innen. Than/then bei der Falle kurz an der Tafel gegenüberstellen. Differenzierung: Schnelle schreiben einen Satz mit einer eigenen Steigerungsform dazu (z. B. „It is smellier than …“). Hausübung: eine zweite Fassung mit einem anderen Wohnort oder ein Monster-Rätsel mit drei Steigerungsformen."
   }

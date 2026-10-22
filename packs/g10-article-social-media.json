@@ -70,7 +70,7 @@
     },
     {
       "id": "SNAME",
-      "step": "voice",
+      "step": "use",
       "q": "Which student do we quote? First name only.",
       "qDe": "Ruft einen Vornamen für die Person, die wir zitieren. Keine Namen von Mitschüler:innen oder Lehrer:innen.",
       "type": "text",
@@ -90,20 +90,6 @@
       "options": [
         {
           "l": "A",
-          "id": "question",
-          "label": "Ask the readers a question",
-          "text": "{{How many times have you checked your phone today?}} If you are like most teenagers, the answer is probably ‘too often to count’. {{Social media is part of our everyday lives, [[so]] it is fair to ask:}} is it a good friend or a bad habit?",
-          "why": "A rhetorical question speaks to readers directly and makes them think about their own habits."
-        },
-        {
-          "l": "B",
-          "id": "scene",
-          "label": "Start with a scene",
-          "text": "{{It is seven o’clock in the morning,}} and the alarm has just gone off. Before getting out of bed, {NAME} checks three group chats and watches two funny videos, [[so]] breakfast has to be quick. {{Sounds familiar? For many young people,}} this is how every single day starts.",
-          "why": "A short scene puts readers right into the topic. Many of them will recognise themselves."
-        },
-        {
-          "l": "C",
           "id": "trap",
           "label": "Start with a definition",
           "trap": true,
@@ -111,6 +97,20 @@
           "text": "Social media means websites and apps that allow users to create and share content or to take part in social networking. In this article I will write about social media and whether it is good or bad for teenagers like us.",
           "reject": "This is a dictionary entry, not a hook. ‘In this article I will write about …’ tells readers nothing new. An article must make people want to read on.",
           "rejectDe": "Eine Definition ist kein Einstieg, und „In this article I will write about …“ langweilt. Ein Artikel muss neugierig machen."
+        },
+        {
+          "l": "B",
+          "id": "question",
+          "label": "Ask the readers a question",
+          "text": "{{How many times have you checked your phone today?}} If you are like most teenagers, the answer is probably ‘too often to count’. {{Social media is part of our everyday lives, [[so]] it is fair to ask:}} is it a good friend or a bad habit?",
+          "why": "A rhetorical question speaks to readers directly and makes them think about their own habits."
+        },
+        {
+          "l": "C",
+          "id": "scene",
+          "label": "Start with a scene",
+          "text": "{{It is seven o’clock in the morning,}} and the alarm has just gone off. Before getting out of bed, {NAME} checks three group chats and watches two funny videos, [[so]] breakfast has to be quick. {{Sounds familiar? For many young people,}} this is how every single day starts.",
+          "why": "A short scene puts readers right into the topic. Many of them will recognise themselves."
         }
       ]
     },
@@ -128,43 +128,20 @@
           "id": "apps",
           "label": "One phone, many jobs",
           "text": "{{To begin with, social media is not just one thing.}} Most teenagers use messaging apps to keep in touch with friends, video platforms to learn or relax, and photo apps to share pictures and short clips. {{[[That is why]] the phone has become}} our message board, our TV and our photo album at the same time.",
-          "why": "Clear topic sentence, then concrete examples, then a sentence that shows the effect."
+          "why": "Clear topic sentence, then concrete examples, then a sentence that shows the effect.",
+          "textLong": "{{To begin with, social media is not just one thing.}} Most teenagers use messaging apps to keep in touch with friends, video platforms to learn or relax, and photo apps to share pictures and short clips. {{[[That is why]] the phone has become}} our message board, our TV and our photo album at the same time. {{For many of us, the photo album matters most:}} {{“I love sharing photos,” said}} {SNAME}, 16, “and my grandparents love seeing them even more.”"
         },
         {
           "l": "B",
           "id": "school",
           "label": "More than chatting",
           "text": "{{To begin with, young people use social media for much more than chatting.}} {{For example,}} they help each other with homework in class groups, follow their favourite athletes and musicians, and find tutorials for almost any hobby, from skateboarding to baking. {{[[This means that]] for many of us,}} it is the first place we go for information.",
-          "why": "Shows uses readers might not think of. ‘This means that’ leads from the examples to the result."
-        }
-      ]
-    },
-    {
-      "id": "voice",
-      "slot": "voice",
-      "part": "Body paragraph 1",
-      "len": "long",
-      "q": "What do students at our school say?",
-      "de": "Der Absatz geht weiter, eine Person von unserer Schule kommt mit einem Zitat zu Wort. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
-      "own": "Copy the frame. Then finish the quote in your own words: what might the student say about social media?",
-      "ownDe": "Gerüst abschreiben, dann das Zitat mit eigenen Worten fertigschreiben: Was könnte die befragte Person über Social Media sagen?",
-      "options": [
-        {
-          "l": "A",
-          "id": "survey",
-          "label": "A class survey",
-          "text": "{{When we asked students at our school about their habits,}} almost everyone said they use social media every day, and most of them clearly enjoy it. {{“I love sharing photos,” said}} {SNAME}, 16, “and my grandparents love seeing them even more.”",
-          "why": "A small survey plus a real-sounding quote makes the article lively and believable."
-        },
-        {
-          "l": "B",
-          "id": "portrait",
-          "label": "One student’s story",
-          "text": "{{Of course, every user is different.}} {SNAME}, a student at our school, mainly watches cooking videos and has learnt to make fresh pasta from scratch. {{“For me, social media is}} like a free cookbook,” {SNAME} explains, “and my family loves the results.”",
-          "why": "A short portrait shows a positive, unusual use. The quote adds a personal voice."
+          "why": "Shows uses readers might not think of. ‘This means that’ leads from the examples to the result.",
+          "textLong": "{{To begin with, young people use social media for much more than chatting.}} {{For example,}} they help each other with homework in class groups, follow their favourite athletes and musicians, and find tutorials for almost any hobby, from skateboarding to baking. {{[[This means that]] for many of us,}} it is the first place we go for information, and sometimes even for new skills. {SNAME}, a student at our school, has learnt to make fresh pasta from cooking videos. “{{For me, social media is}} like a free cookbook,” {SNAME} explains, “and my family loves the results.”"
         }
       ],
-      "join": true
+      "ownLong": "Copy the blue words. Then add examples of how young people use social media, not the ones from the board, and write what the student we quote says.",
+      "ownLongDe": "Gerüst abschreiben, dann eigene Beispiele ergänzen, wie Jugendliche Social Media nutzen (nicht die vom Beamer), und schreiben, was die zitierte Person sagt."
     },
     {
       "id": "risk",
@@ -183,23 +160,28 @@
           "crit": "LSA",
           "text": "Experts warn that social media can be bad for teenagers’ well-being. The most young people make photos of everything they do and post them online. When they get not enough likes, they often feel worse about themselves because they compare their own lives with the perfect pictures of others.",
           "reject": "Three typical mistakes: ‘The most young people’ (→ Most young people), ‘make photos’ (→ take photos) and ‘get not enough likes’ (→ don’t get enough likes).",
-          "rejectDe": "Drei typische Fehler: the most young people → most young people, make photos → take photos, get not enough → don’t get enough."
+          "rejectDe": "Drei typische Fehler: the most young people → most young people, make photos → take photos, get not enough → don’t get enough.",
+          "textLong": "Experts warn that social media can be bad for teenagers’ well-being. The most young people make photos of everything they do and post them online. When they get not enough likes, they often feel worse about themselves because they compare their own lives with the perfect pictures of others. Photo filters make this even harder, as they smooth skin and change faces. Some users even delete a picture after an hour if it has only a few likes. Many people forget that the people in those perfect pictures have boring Mondays like everyone else."
         },
         {
           "l": "B",
           "id": "pressure",
           "label": "Focus on pressure",
           "text": "{{However, experts are worried about}} the pressure to present a perfect life online. Most posts only show holidays, parties and new trainers, never the ordinary days. {{[[As a result,]] real life can seem}} boring in comparison. Some young people even start to doubt themselves [[because]] they keep comparing their everyday lives with other people’s highlights.",
-          "why": "Explains where the pressure comes from: ‘as a result’ and ‘because’ link other people’s highlights to how young people feel."
+          "why": "Explains where the pressure comes from: ‘as a result’ and ‘because’ link other people’s highlights to how young people feel.",
+          "textLong": "{{However, experts are worried about}} the pressure to present a perfect life online. Most posts only show holidays, parties and new trainers, never the ordinary days. {{[[As a result,]] real life can seem}} boring in comparison. Some young people even start to doubt themselves [[because]] they keep comparing their everyday lives with other people’s highlights. {{Photo filters make this even harder.}} They smooth skin and change faces, [[so]] even friends can look like models in their pictures. {{What many users forget is that}} the people in those photos have boring Mondays like everyone else."
         },
         {
           "l": "C",
           "id": "time",
           "label": "Focus on time",
           "text": "{{Some experts, however, see a risk in}} how much time we spend online. Many apps are designed to keep us scrolling, [[which means that]] an hour can disappear before we even notice it. {{[[As a result,]] there is less time for}} sleep, sport and meeting friends face to face.",
-          "why": "Cause and effect: ‘which means that’ and ‘as a result’ show how one thing leads to another."
+          "why": "Cause and effect: ‘which means that’ and ‘as a result’ show how one thing leads to another.",
+          "textLong": "{{Some experts, however, see a risk in}} how much time we spend online. Many apps are designed to keep us scrolling, [[which means that]] an hour can disappear before we even notice it. {{[[As a result,]] there is less time for}} sleep, sport and meeting friends face to face. {{Sleep is a particular worry.}} Many teenagers check their phones in bed, and late-night chats or videos keep their brains busy, [[so]] it takes them longer to get to sleep. The next morning, they sit in class and can hardly keep their eyes open."
         }
-      ]
+      ],
+      "ownLong": "Copy the frame. Then explain the risk in your own words, show the effect it has on young people and give one more example.",
+      "ownLongDe": "Gerüst abschreiben, dann das Risiko mit eigenen Worten erklären, die Folgen für Jugendliche zeigen und ein weiteres Beispiel geben."
     },
     {
       "id": "healthy",
@@ -212,66 +194,34 @@
       "options": [
         {
           "l": "A",
+          "id": "tips",
+          "label": "Three clear tips",
+          "text": "{{Luckily, there are simple ways to protect ourselves.}} {{First of all, it helps to}} switch off notifications, [[since]] the phone should not decide when we look at it. {{Secondly, we can follow}} accounts that make us laugh or learn something new instead of accounts that make us feel bad. {{Finally,}} a phone-free hour before bed is a small change with a big effect.",
+          "why": "Clear order with ‘first of all’, ‘secondly’ and ‘finally’, and the first tip comes with a reason (‘since’).",
+          "textLong": "{{Luckily, there are simple ways to protect ourselves.}} {{First of all, it helps to}} switch off notifications, [[since]] the phone should not decide when we look at it. {{Secondly, we can follow}} accounts that make us laugh or learn something new instead of accounts that make us feel bad. A feed full of jokes and good ideas simply puts us in a better mood. {{Finally,}} a phone-free hour before bed is a small change with a big effect [[because]] it gives the mind time to slow down."
+        },
+        {
+          "l": "B",
+          "id": "together",
+          "label": "Do it together",
+          "text": "{{The good news is that healthy online habits are easier to learn than}} many people think. Friends can agree on phone-free times, for instance during meals or when they meet up. {{Another good idea is to}} check your screen time once a week, [[as]] the numbers are often surprising.",
+          "why": "Practical tips that friends can try together. ‘As’ gives the reason for the second tip.",
+          "textLong": "{{The good news is that healthy online habits are easier to learn than}} many people think. Friends can agree on phone-free times, for instance during meals or when they meet up. {{Another good idea is to}} check your screen time once a week, [[as]] the numbers are often surprising. Some friends even compare their numbers and set a goal together for the next week. {{Group chats work best}} when we use them to plan real meetings, not to replace them. After all, the best moments with friends usually happen offline."
+        },
+        {
+          "l": "C",
           "id": "trap",
           "label": "Rules at home and at school",
           "trap": true,
           "crit": "TA",
           "text": "Parents should check their children’s phones every evening and delete apps that are dangerous. Schools should also ban phones completely because then nobody can use social media in the wrong way. In addition, the government should pass a law that allows social media only for adults. Teachers could also give lessons about online safety.",
           "reject": "The task asks how YOUNG PEOPLE can use social media in a healthy way. This paragraph only tells parents, schools and the government what to do. The content point is missed.",
-          "rejectDe": "Gefragt ist, was JUGENDLICHE selbst tun können. Hier geht es nur um Eltern, Schule und Staat: Inhaltspunkt verfehlt."
-        },
-        {
-          "l": "B",
-          "id": "tips",
-          "label": "Three clear tips",
-          "text": "{{Luckily, there are simple ways to protect ourselves.}} {{First of all, it helps to}} switch off notifications, [[since]] the phone should not decide when we look at it. {{Secondly, we can follow}} accounts that make us laugh or learn something new instead of accounts that make us feel bad. {{Finally,}} a phone-free hour before bed is a small change with a big effect.",
-          "why": "Clear order with ‘first of all’, ‘secondly’ and ‘finally’, and the first tip comes with a reason (‘since’)."
-        },
-        {
-          "l": "C",
-          "id": "together",
-          "label": "Do it together",
-          "text": "{{The good news is that healthy online habits are easier to learn than}} many people think. Friends can agree on phone-free times, for instance during meals or when they meet up. {{Another good idea is to}} check your screen time once a week, [[as]] the numbers are often surprising.",
-          "why": "Practical tips that friends can try together. ‘As’ gives the reason for the second tip."
-        }
-      ]
-    },
-    {
-      "id": "helping",
-      "slot": "helping",
-      "part": "Body paragraph 3",
-      "len": "long",
-      "q": "What can social media offer when we use it well?",
-      "de": "Der Absatz geht weiter und zeigt, was Social Media bei gutem Umgang bringen kann. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
-      "own": "Copy the frame. Then describe one more example of what social media can offer when we use it well.",
-      "ownDe": "Gerüst abschreiben, dann ein weiteres Beispiel beschreiben, was Social Media bei gutem Umgang bieten kann.",
-      "options": [
-        {
-          "l": "A",
-          "id": "chances",
-          "label": "New opportunities",
-          "text": "{{With habits like these, social media can even open doors.}} Some teenagers have found a volunteering project [[because]] a local animal shelter posted that it needed helpers. {{Others have discovered}} a sports club or a summer job through a friend’s post. {{This shows that}} a single post can lead to real opportunities.",
-          "why": "Concrete examples show what social media can offer when we use it well."
-        },
-        {
-          "l": "B",
-          "id": "trap",
-          "label": "Help with school and charity",
-          "trap": true,
-          "crit": "CC",
-          "text": "Social media can also help young people in useful ways. Many students find some topics in class hard to understand. Despite this, they look for explanations online. Luckily, short videos often explain things clearly. Thus, many teenagers now use social media to raise money for charity, and some online groups even organise clean-ups in local parks.",
-          "reject": "The ideas fit the topic, but the linking words don’t: looking for help online is a result of finding topics hard, not a contrast (‘Despite this’), and ‘Thus’ suggests that teenagers raise money for charity because videos explain things clearly.",
-          "rejectDe": "Die Ideen passen, die Linking words nicht: Despite this vor einer Folge, Thus ohne Ursache."
-        },
-        {
-          "l": "C",
-          "id": "community",
-          "label": "Online communities",
-          "text": "{{Used wisely, social media can bring people closer together.}} Many teenagers go online to organise clean-ups, raise money for charity or find others who share an unusual hobby. {{For someone who feels alone,}} an online community can be a real support [[because]] it shows them that they are not the only one.",
-          "why": "Shows what social media can do for young people and explains why it matters."
+          "rejectDe": "Gefragt ist, was JUGENDLICHE selbst tun können. Hier geht es nur um Eltern, Schule und Staat: Inhaltspunkt verfehlt.",
+          "textLong": "Parents should check their children’s phones every evening and delete apps that are dangerous. Schools should also ban phones completely because then nobody can use social media in the wrong way. In addition, the government should pass a law that allows social media only for adults. Teachers could give lessons about online safety, and every school could invite a police officer once a year to talk about online dangers. Phone companies should do more, too, and sell special phones for children with only a few safe apps."
         }
       ],
-      "join": true
+      "ownLong": "Copy the frame. Then add your own tips and explain why each of them helps.",
+      "ownLongDe": "Gerüst abschreiben, dann eigene Tipps ergänzen und bei jedem begründen, warum er hilft."
     },
     {
       "id": "concl",
@@ -286,7 +236,7 @@
           "l": "A",
           "id": "balance",
           "label": "A balanced ending",
-          "text": "{{All in all, social media is neither good nor bad.}} What matters is how we use it. {{If we stay in control,}} it can make our lives richer rather than run them. {{[[So]] let’s enjoy}} the good side and keep an eye on the risks.",
+          "text": "{{All in all, social media is neither good nor bad.}} What matters is how we use it. {{If we stay in control,}} it can make our lives richer rather than run them. {{Let’s enjoy}} the good side and keep an eye on the risks.",
           "why": "Sums up the article in a balanced way and repeats the key idea."
         },
         {
@@ -345,10 +295,8 @@
     "title",
     "intro",
     "use",
-    "voice",
     "risk",
     "healthy",
-    "helping",
     "concl"
   ],
   "checks": [
@@ -377,10 +325,10 @@
   "teacher": {
     "aim": "Die Klasse baut gemeinsam einen B1-Artikel über Social Media im Alltag Jugendlicher mit drei Inhaltspunkten und übt dabei Einstieg, Topic Sentences und vor allem Linking words für Ursache und Wirkung (because, so, as a result, this means that, that is why). Aufbau (Titel, Hook, Topic Sentences, Schluss mit Ansprache) explizit besprechen.",
     "prep": "A/B/C/D-Karten austeilen (eine Garnitur pro Person). Beamer im Vollbild. Die Aufgabe am Beamer enthält alles Nötige. Im Gerüst-Modus den eingebauten Timer nutzen: 5 min pro Absatz, bei Bedarf +1.",
-    "heft": "Neue Seite: Datum rechts oben, darunter „Article“ als Überschrift (wie am Beamer). Dann 2 Zeilen für den Titel frei lassen, der Titel kommt zuletzt. Jeder der fünf Absätze beginnt nach einer Leerzeile, am Rand steht das Kurzwort: Intro, Body 1, Body 2, Body 3, Conclusion. Fortsetzungen (nur lang) gehören ohne neue Zeile zum selben Absatz. Linking words für Ursache und Wirkung grün unterstreichen.",
-    "flow": "Volltext kurz (50 min): 5 min Aufgabe lesen, 6 Entscheidungen à 2 min, Abschreiben ca. 20 min, 5 min Checkliste. Volltext lang (Doppelstunde): wie kurz, dazu zwei Fortsetzungen: Body 1 wird um ein Zitat länger, Body 3 um eine positive Seite von Social Media bei gutem Umgang. Das gemeinsame Schreiben dauert ca. 65 min; die restliche Zeit für die Besprechung der Fallen und den Beginn der Hausübung nutzen. Gerüst kurz (realistisch ca. 60 min): 5 min Aufgabe; pro Absatz 1 min Entscheidung, 5–6 min eigenes Schreiben, 1 min Vergleich mit dem Modell; am Ende 5 min Checkliste. In einer 50-Minuten-Stunde den Titel als Hausübung wählen lassen. Nach der Abstimmung in Body 2 die Ursache und die Folge der gewählten Option kurz an die Tafel schreiben. Gerüst lang: Doppelstunde (100 min), gleicher Rhythmus, dazwischen Zeit für eine Vergleichsrunde zu zweit.",
-    "traps": "Introduction C (TA): Definition statt Einstieg. Body 2 A (LSA): the most young people, make photos, get not enough likes. Body 3 A (TA): Inhaltspunkt verfehlt, nur Eltern, Schule und Staat bestimmen. Body 3, Fortsetzung B (CC, nur lang): Linking words passen nicht zur Logik (Despite this vor einer Folge, Thus ohne Ursache). Title B (TA): Clickbait, der Titel verspricht eine Sensation, die der Artikel nicht hält. Kürzel: TA = Erfüllung der Aufgabenstellung, CC = Kohärenz und Kohäsion, LSR = Spektrum sprachlicher Mittel, LSA = Sprachrichtigkeit.",
-    "notes": "Der Artikel hat in beiden Längen genau fünf Absätze (Intro, drei Body paragraphs mit je einem Inhaltspunkt, Conclusion); die lange Fassung macht Body 1 und Body 3 länger, statt neue Absätze anzuhängen. Sensibles Thema: keine persönlichen Erfahrungen mit psychischer Belastung einfordern, beim allgemeinen „young people“ bleiben; bei Bedarf auf Schulpsychologie und Rat auf Draht (147) hinweisen. Die Texte nennen keine echten Apps oder Plattformen. Die kurze Fassung hat nur sechs Entscheidungen; die gewonnene Zeit für die Besprechung der Fallen nutzen. Für die Namenslücken nur erfundene Vornamen verwenden, keine Namen von Mitschüler:innen oder Lehrer:innen. Differenzierung: Schnelle schreiben im Gerüst-Modus pro Absatz einen zusätzlichen Satz mit as a result oder this means that. Hausübung: zweite Fassung mit zwei anderen Entscheidungen."
+    "heft": "Neue Seite: Datum rechts oben, darunter „Article“ als Überschrift (wie am Beamer). Dann 2 Zeilen für den Titel frei lassen, der Titel kommt zuletzt. Jeder der fünf Absätze beginnt nach einer Leerzeile, am Rand steht das Kurzwort: Intro, Body 1, Body 2, Body 3, Conclusion. Linking words für Ursache und Wirkung grün unterstreichen.",
+    "flow": "6 Entscheidungen: fünf Absätze (jede Entscheidung ist ein ganzer Absatz) und der Titel. Volltext kurz (50 min): 5 min Aufgabe lesen, 6 Entscheidungen à ca. 2 min, Abschreiben ca. 20 min, 5 min Checkliste. Volltext lang (Doppelstunde): dieselben 6 Entscheidungen, aber die drei Body paragraphs sind länger, daher ca. 30–35 min Abschreiben; die restliche Zeit für die Besprechung der Fallen und den Beginn der Hausübung nutzen. Gerüst kurz (realistisch ca. 60 min): 5 min Aufgabe; pro Absatz 1 min Entscheidung, 5–6 min eigenes Schreiben, 1 min Vergleich mit dem Modell; am Ende 5 min Checkliste. In einer 50-Minuten-Stunde den Titel als Hausübung wählen lassen. Nach der Abstimmung in Body 2 die Ursache und die Folge der gewählten Option kurz an die Tafel schreiben. Gerüst lang: Doppelstunde (100 min), gleicher Rhythmus, für jeden Body paragraph 7–8 min eigenes Schreiben, dazwischen eine Vergleichsrunde zu zweit.",
+    "traps": "Introduction A (TA): Definition statt Einstieg, „In this article I will write about …“. Body 2 A (LSA): the most young people, make photos, get not enough likes. Body 3 C (TA): Inhaltspunkt verfehlt, nur Eltern, Schule und Staat (in der langen Fassung auch Firmen) sollen etwas tun, nicht die Jugendlichen selbst. Title B (TA): Clickbait, der Titel verspricht eine Sensation, die der Artikel nicht hält. Kürzel: TA = Erfüllung der Aufgabenstellung, CC = Kohärenz und Kohäsion, LSR = Spektrum sprachlicher Mittel, LSA = Sprachrichtigkeit.",
+    "notes": "Der Artikel hat in beiden Längen genau fünf Absätze (Intro, drei Body paragraphs mit je einem Inhaltspunkt, Conclusion). Die lange Fassung hat dieselben Entscheidungen; die drei Body paragraphs sind länger (ein Zitat aus der Schule, ein weiteres Beispiel für das Risiko, Begründungen für die Tipps), Einleitung und Schluss bleiben gleich. Sensibles Thema: keine persönlichen Erfahrungen mit psychischer Belastung einfordern, beim allgemeinen „young people“ bleiben; bei Bedarf auf Schulpsychologie und Rat auf Draht (147) hinweisen. Die Texte nennen keine echten Apps oder Plattformen. Für die Namenslücken nur erfundene Vornamen verwenden, keine Namen von Mitschüler:innen oder Lehrer:innen. Differenzierung: Schnelle schreiben im Gerüst-Modus pro Absatz einen zusätzlichen Satz mit as a result oder this means that. Hausübung: zweite Fassung mit zwei anderen Entscheidungen."
   },
   "topicWords": [
     "social",

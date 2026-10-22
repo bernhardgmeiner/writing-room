@@ -44,7 +44,7 @@
       "short": "Give your blog post a title. Write around 250 words.",
       "long": "Give your blog post a title. Write around 350 words."
     },
-    "de": "Blogbeitrag für den Englisch-Blog der Schule (Titel, Username, Datum, lockerer und persönlicher Ton, Kurzformen erlaubt, Leser:innen ansprechen, zum Kommentieren einladen). Drei Inhaltspunkte: beschreiben, was die Klasse oder Wohngegend der erfundenen Bloggerin bzw. des erfundenen Bloggers multikulturell macht; Vorteile UND Herausforderungen erklären; vorschlagen, wie Jugendliche voneinander lernen können. Positiv, respektvoll, ohne Klischees. Den Titel wählen wir zum Schluss."
+    "de": "Blogbeitrag für den Englisch-Blog der Schule (Titel, Username, Datum und Uhrzeit, lockerer und persönlicher Ton, Kurzformen erlaubt, Leser:innen ansprechen, zum Kommentieren einladen). Drei Inhaltspunkte: beschreiben, was die Klasse oder Wohngegend der erfundenen Bloggerin bzw. des erfundenen Bloggers multikulturell macht; Vorteile UND Herausforderungen erklären; vorschlagen, wie Jugendliche voneinander lernen können. Positiv, respektvoll, ohne Klischees. Den Titel wählen wir zum Schluss."
   },
   "meta": {
     "user": "many_voices_one_class"
@@ -80,7 +80,7 @@
     },
     {
       "id": "FRIEND",
-      "step": "friend",
+      "step": "describe",
       "q": "Our blogger’s best friend needs a first name. What is it?",
       "qDe": "Ruft einen Vornamen für die beste Freundin oder den besten Freund. Keine Namen von Mitschüler:innen oder Lehrer:innen.",
       "type": "text",
@@ -137,125 +137,72 @@
           "l": "A",
           "id": "class",
           "label": "Our class",
-          "text": "{{In my class, there are}} 26 of us, {{and together our families speak}} {N} different languages. Our class group chat is full of words that no translation app understands. {{[[No joke!]] It’s like a mini United Nations,}} just with more homework.",
-          "why": "Concrete details and a funny comparison make the class come alive."
+          "text": "{{In my class, there are}} 26 of us, {{and together our families speak}} {N} different languages. Our class group chat is full of words that no translation app understands, and on birthdays we sing ‘Happy Birthday’ in several languages. {{[[No joke!]] It’s like a mini United Nations,}} just with more homework.",
+          "why": "Concrete details and a funny comparison make the class come alive.",
+          "textLong": "{{In my class, there are}} 26 of us, {{and together our families speak}} {N} different languages. Our class group chat is full of words that no translation app understands, and on birthdays we sing ‘Happy Birthday’ in several languages. {{My best friend}} {FRIEND} {{speaks three languages}} and switches between them faster than I can unlock my phone. {{I’ve picked up [[a whole bunch of]]}} new words from {FRIEND}, and in return I’ve taught my friend a few words of my grandparents’ dialect. {{[[No joke!]] It’s like a mini United Nations,}} just with more homework."
         },
         {
           "l": "B",
           "id": "district",
           "label": "Our neighbourhood",
-          "text": "{{My neighbourhood is just as international.}} Every morning, I walk past bakeries and restaurants from all over the world. {{At our weekly market,}} you can buy food from ten countries. {{[[Basically,]]}} it’s a trip around the world without a plane ticket.",
-          "why": "A walk through the neighbourhood gives readers pictures they can see, smell and taste."
-        }
-      ]
-    },
-    {
-      "id": "friend",
-      "slot": "friend",
-      "part": "Body paragraph 1",
-      "len": "long",
-      "q": "Which personal example do we add?",
-      "de": "Der Absatz geht weiter mit einem persönlichen Beispiel, einer Freundin oder einem Freund. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
-      "own": "Copy the frame. Then write about the blogger’s friend and one thing the two have learnt from each other. You can invent the details.",
-      "ownDe": "Gerüst abschreiben, dann über die Freundin oder den Freund aus dem Blog schreiben und eine Sache, die die beiden voneinander gelernt haben. Details dürfen erfunden sein.",
-      "options": [
-        {
-          "l": "A",
-          "id": "languages",
-          "label": "A friend who speaks three languages",
-          "text": "{{Then there’s my best friend}} {FRIEND}, {{who speaks three languages}} and switches between them faster than I can unlock my phone. {{Over the years, {FRIEND} has taught me [[a whole bunch of]]}} useful words, and I’ve taught {FRIEND} some typical Austrian expressions in return.",
-          "why": "A real person as an example makes the description personal and believable."
-        },
-        {
-          "l": "B",
-          "id": "trap",
-          "label": "My friend",
-          "trap": true,
-          "crit": "LSR",
-          "text": "My friend is very nice. My friend is from another country. My friend is really funny. My friend speaks other languages and my friend is very good at languages. I like my friend very much and we do many things together. It is very nice.",
-          "reject": "Very repetitive: ‘my friend’ six times, ‘very nice’ twice and only simple sentences. Use a name, pronouns or other words, and give one concrete detail.",
-          "rejectDe": "Sehr eintönig: sechsmal „my friend“, zweimal „very nice“, nur einfache Sätze. Lieber ein konkretes Detail erzählen."
+          "text": "{{You can see the same mix in my neighbourhood.}} Every morning, I walk past bakeries and restaurants from all over the world, and the shop signs use at least three different alphabets. {{At our weekly market,}} you can buy food from ten countries. {{[[Basically,]]}} it’s a trip around the world without a plane ticket.",
+          "why": "A walk through the neighbourhood gives readers pictures they can see, smell and taste.",
+          "textLong": "{{You can see the same mix in my neighbourhood.}} Every morning, I walk past bakeries and restaurants from all over the world, and the shop signs use at least three different alphabets. {{At our weekly market,}} you can buy food from ten countries. {{A few weeks ago, my best friend}} {FRIEND} {{invited me to}} a big family party round the corner. I didn’t know the dances, but my friend’s cousins showed me the steps, and soon I was dancing [[like a pro]]. {{[[Well, sort of]].}} {{[[Basically,]]}} living here is a trip around the world without a plane ticket."
         },
         {
           "l": "C",
-          "id": "party",
-          "label": "A celebration to remember",
-          "text": "{{One of my best memories is}} a family celebration that my best friend {FRIEND} invited me to. There were over a hundred guests and a live band. I didn’t know the dances, but {FRIEND}’s cousins showed me the steps. {{Two hours later,}} I was dancing [[like a pro]]. {{[[Well, sort of]].}}",
-          "why": "A short, funny story shows what it means to share someone else’s traditions."
+          "id": "trap",
+          "label": "Class and neighbourhood",
+          "trap": true,
+          "crit": "CC",
+          "text": "In my class, there are 26 of us, and together our families speak {N} different languages. However, our class group chat is full of words that no translation app understands. My neighbourhood is just as international, with restaurants and shops from all over the world. Instead, it’s a trip around the world without a plane ticket.",
+          "reject": "The linking words don’t fit: a chat full of other languages is a result of all the languages at home, not a contrast (‘However’ → So), and ‘Instead’ replaces nothing: the last sentence sums up the neighbourhood (→ Basically).",
+          "rejectDe": "Die Linking words passen nicht: However (Gegensatz) steht vor einer Folge, und Instead ersetzt nichts, der letzte Satz fasst nur zusammen.",
+          "textLong": "In my class, there are 26 of us, and together our families speak {N} different languages. However, our class group chat is full of words that no translation app understands. My best friend {FRIEND} speaks three languages and switches between them faster than I can unlock my phone. My neighbourhood is just as international, with bakeries and restaurants from all over the world and a weekly market with food from ten countries. Instead, it’s a trip around the world without a plane ticket, and I love every minute of it."
         }
       ],
-      "join": true
+      "ownLong": "Copy the frame. Then describe the blogger’s class or neighbourhood with two details and add something about the blogger’s best friend. You can invent the details.",
+      "ownLongDe": "Gerüst abschreiben, dann die Klasse oder Wohngegend aus dem Blog mit zwei Details beschreiben und etwas über die beste Freundin oder den besten Freund ergänzen. Details dürfen erfunden sein."
     },
     {
       "id": "advantages",
       "slot": "advantages",
       "part": "Body paragraph 2",
-      "q": "Content point 2: what are the advantages?",
-      "de": "Zweiter Inhaltspunkt, zuerst die Vorteile. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
-      "own": "Copy the frame. Then explain one advantage in your own words and give an example.",
-      "ownDe": "Gerüst abschreiben, dann einen Vorteil mit eigenen Worten erklären und ein Beispiel geben.",
+      "q": "Content point 2: what are the advantages and the challenges?",
+      "de": "Zweiter Inhaltspunkt: Vorteile und Herausforderungen in einem Absatz. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then explain one advantage and one challenge in your own words. Stay fair and respectful.",
+      "ownDe": "Gerüst abschreiben, dann einen Vorteil und eine Herausforderung mit eigenen Worten erklären. Fair und respektvoll bleiben.",
       "options": [
         {
           "l": "A",
           "id": "trap",
-          "label": "What I get out of it",
+          "label": "What I get out of it, and what is hard",
           "trap": true,
           "crit": "LSA",
-          "text": "The biggest advantage is that you learn very much about other cultures and traditions. Since I am in this class, I can already say ‘thank you’ in ten languages, and I become invited to lots of birthday parties with delicious food from other countries.",
+          "text": "Living in such a mixed class has big advantages, but it has its challenges as well. You learn very much about other cultures, and since I am in this class, I can say ‘thank you’ in ten languages. I also become invited to lots of birthday parties with delicious food from all over the world. The hardest part is for newcomers: if they don’t speak much German yet, lessons are hard to follow, and that can be really frustrating at first.",
           "reject": "Three typical mistakes: ‘learn very much’ (→ learn a lot), ‘since I am in this class’ (→ since I have been in this class) and ‘I become invited’ (→ I get invited).",
-          "rejectDe": "Drei typische Fehler: learn very much → learn a lot, since I am → since I have been, become invited → get invited (eingeladen werden = get invited, nicht become)."
+          "rejectDe": "Drei typische Fehler: learn very much → learn a lot, since I am → since I have been, become invited → get invited (eingeladen werden = get invited, nicht become).",
+          "textLong": "Living in such a mixed class has big advantages, but it has its challenges as well. You learn very much about other cultures, and since I am in this class, I can say ‘thank you’ in ten languages. I also become invited to lots of birthday parties with delicious food from all over the world. The hardest part is for newcomers: if they don’t speak much German yet, lessons are hard to follow, and that can be really frustrating at first. At break time, small groups sometimes form around one language, so others can feel left out."
         },
         {
           "l": "B",
           "id": "eyes",
-          "label": "A new way of seeing things",
-          "text": "{{The biggest advantage of all this is that}} you learn to see the world through other people’s eyes. What’s ‘normal’ for me is [[totally]] new for someone else, and the other way round. {{As a result, you stop thinking}} there’s only one ‘right’ way to live.",
-          "why": "Explains a deeper advantage and shows the result with ‘as a result’."
+          "label": "New eyes, and some misunderstandings",
+          "text": "{{My favourite part of living like this, and sometimes the trickiest, is that}} you learn to see the world through other people’s eyes. What’s ‘normal’ for me is [[totally]] new for someone else, and the other way round. {{As a result, you stop thinking}} there’s only one ‘right’ way to live. {{Of course, it’s not always easy.}} A joke that’s funny in one language can sound rude in another. {{[[The good news?]]}} We usually end up laughing about it.",
+          "why": "Explains a deeper advantage, then turns fairly to a challenge. ‘As a result’ shows the effect.",
+          "textLong": "{{My favourite part of living like this, and sometimes the trickiest, is that}} you learn to see the world through other people’s eyes. What’s ‘normal’ for me is [[totally]] new for someone else, and the other way round. Some of my classmates celebrate New Year twice, for example. {{As a result, you stop thinking}} there’s only one ‘right’ way to live. {{Of course, it’s not always easy.}} A joke that’s funny in one language can sound rude in another, and people have different ideas about what’s polite. {{[[The good news?]]}} We usually end up laughing about our mistakes."
         },
         {
           "l": "C",
           "id": "fun",
-          "label": "Languages, music and friends",
-          "text": "{{Growing up like this has [[loads of]] advantages.}} You pick up words in languages you’ve never studied, and you discover music and films you’d never find on your own. {{[[On top of that,]] you make friends with people who}} see things differently.",
-          "why": "Several concrete advantages, from new languages to new friendships."
-        }
-      ]
-    },
-    {
-      "id": "challenges",
-      "slot": "challenges",
-      "part": "Body paragraph 2",
-      "q": "What are the challenges?",
-      "de": "Der Absatz geht weiter mit dem zweiten Teil des Inhaltspunkts: den Herausforderungen. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
-      "own": "Copy the frame. Then explain one challenge in your own words. Stay fair and respectful.",
-      "ownDe": "Gerüst abschreiben, dann eine Herausforderung mit eigenen Worten erklären. Fair und respektvoll bleiben.",
-      "options": [
-        {
-          "l": "A",
-          "id": "misunderstand",
-          "label": "Misunderstandings",
-          "text": "{{Of course, it’s not always easy.}} A joke that’s funny in one language can sound rude in another, and people have different ideas about what’s polite. {{From time to time, this leads to}} some tension. {{[[The good news?]]}} We usually end up laughing about it.",
-          "why": "Turns from the advantages to a real challenge, honestly but in a fair, positive way."
-        },
-        {
-          "l": "B",
-          "id": "newcomer",
-          "label": "Being the newcomer",
-          "text": "{{Newcomers, though, can find it tough at first.}} If you don’t speak much German yet, it’s hard to follow lessons, and it can take months to find your feet. {{[[And let’s be honest,]]}} groups sometimes form around one language, which can make others feel left out.",
-          "why": "Turns to the challenge from the newcomer’s point of view, with useful phrases such as ‘find your feet’ and ‘feel left out’."
-        },
-        {
-          "l": "C",
-          "id": "trap",
-          "label": "Problems in a nutshell",
-          "trap": true,
-          "crit": "CC",
-          "text": "There are also some challenges. New students often don’t speak much German yet. Meanwhile, lessons can be hard to follow for them. Most of the time, everybody in our class gets on well. Likewise, groups sometimes form around one language, which can make others feel left out.",
-          "reject": "The ideas are fine, but the linking words don’t fit: lessons are hard to follow BECAUSE of the language, not at the same time (‘Meanwhile’ → so), and groups that leave others out are the opposite of getting on well, not something similar (‘Likewise’ → however).",
-          "rejectDe": "Die Ideen passen, die Linking words nicht: Meanwhile (Zeit) statt einer Folge, Likewise (Ähnlichkeit) vor einem Gegensatz."
+          "label": "Languages and friends, but a tough start",
+          "text": "{{Growing up like this has [[loads of]] advantages and a few challenges.}} You pick up words in languages you’ve never studied, and you discover music and films you’d never find on your own. {{[[On top of that,]] you make friends with people who}} see things differently. {{For newcomers, though, the start can be tough.}} If you don’t speak much German yet, it’s hard to follow lessons, and it can take months to find your feet.",
+          "why": "Names concrete advantages first, then one honest challenge, so the paragraph stays fair.",
+          "textLong": "{{Growing up like this has [[loads of]] advantages and a few challenges.}} You pick up words in languages you’ve never studied, and you discover music and films you’d never find on your own. {{[[On top of that,]] you make friends with people who}} see things differently. {{For newcomers, though, the start can be tough.}} If you don’t speak much German yet, it’s hard to follow lessons, and it can take months to find your feet. {{[[And let’s be honest,]]}} groups sometimes form around one language, which can make others feel left out."
         }
       ],
-      "join": true
+      "ownLong": "Copy the frame. Then explain the advantages and the challenges in your own words and give an example. Stay fair and respectful.",
+      "ownLongDe": "Gerüst abschreiben, dann Vorteile und Herausforderungen mit eigenen Worten erklären und ein Beispiel geben. Fair und respektvoll bleiben."
     },
     {
       "id": "suggest",
@@ -270,54 +217,32 @@
           "l": "A",
           "id": "ideas",
           "label": "Easy ideas for every class",
-          "text": "{{Luckily, there are [[lots of]] ways to learn from each other.}} {{[[For starters,]]}} why not swap ten words a week with a tandem partner? {{Another idea is}} a ‘culture corner’ where everyone brings a song from home. {{[[Trust me,]]}} people love sharing what matters to them.",
-          "why": "Concrete, easy ideas that any class can try tomorrow."
+          "text": "{{Luckily, there are [[lots of]] ways to learn from each other.}} {{[[For starters,]]}} why not swap ten words a week with a tandem partner? {{Another idea is}} a monthly ‘culture corner’ where everyone can bring a song or a recipe from home. {{[[Trust me,]]}} people love sharing what matters to them.",
+          "why": "Concrete, easy ideas that any class can try tomorrow.",
+          "textLong": "{{Luckily, there are [[lots of]] ways to learn from each other.}} {{[[For starters,]]}} why not swap ten words a week with a tandem partner? {{Another idea is}} a monthly ‘culture corner’ where everyone can bring a song or a recipe from home. {{Ideas like these help [[the new kid]] most.}} When my family moved from a village in Tyrol to the city, nobody understood my dialect, and it took me [[ages]] to feel at home. {{[[Trust me,]]}} people love sharing what matters to them, and nobody stays [[the new kid]] for long."
         },
         {
           "l": "B",
           "id": "trap",
-          "label": "Discover other cultures",
+          "label": "Clear recommendations",
           "trap": true,
-          "crit": "TA",
-          "text": "In my opinion, young people should travel as much as possible. If you spend a summer in another country, you learn a new language and get to know a different culture. Watching films in other languages is also a good idea, and books by authors from other countries can help, too.",
-          "reject": "The task asks how young people can learn FROM EACH OTHER, here at home. Travel, films and books from other countries miss the content point.",
-          "rejectDe": "Gefragt ist, wie Jugendliche VONEINANDER lernen, hier bei uns. Reisen, Filme und Bücher aus anderen Ländern verfehlen den Inhaltspunkt."
+          "crit": "LSR",
+          "text": "It is strongly recommended that young people from different cultural backgrounds participate in organised exchange activities, such as language tandems. Furthermore, it is advisable to establish regular intercultural workshops in which participants present the customs of their families. It is essential that all participants demonstrate respect at all times. Such measures will undoubtedly contribute to mutual understanding.",
+          "reject": "Far too formal and stiff for a blog post: ‘It is strongly recommended’, ‘Furthermore’, ‘it is advisable’ and ‘undoubtedly’ sound like an official report. A blog talks to its readers in a friendly, personal way.",
+          "rejectDe": "Viel zu förmlich und steif für einen Blog („It is strongly recommended“, „Furthermore“, „it is advisable“, „undoubtedly“): Das klingt wie ein offizieller Bericht. Ein Blog spricht die Leser:innen freundlich und persönlich an.",
+          "textLong": "It is strongly recommended that young people from different cultural backgrounds participate in organised exchange activities, such as language tandems. Furthermore, it is advisable to establish regular intercultural workshops in which participants present the customs of their families. It is essential that all participants demonstrate respect at all times. In addition, newly arrived pupils should be assigned a peer mentor for their first weeks. It is also advisable to hold an annual cultural festival at which students present the traditions of their families. Such measures will undoubtedly contribute to mutual understanding."
         },
         {
           "l": "C",
           "id": "together",
           "label": "Do things together",
-          "text": "{{The best way to get past these problems is to}} do things together. Why not organise a games afternoon where everyone teaches the others a game from their childhood? {{[[Honestly,]] you learn more about someone}} in one afternoon of games than in a year of sitting next to them.",
-          "why": "Answers the challenges with one clear idea: shared activities connect people."
-        }
-      ]
-    },
-    {
-      "id": "outsider",
-      "slot": "outsider",
-      "part": "Body paragraph 3",
-      "len": "long",
-      "q": "Which example shows why these ideas matter?",
-      "de": "Der Absatz geht weiter mit einem Beispiel dafür, wie es sich anfühlt, neu zu sein. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
-      "own": "Copy the frame. Then describe how the blogger felt as the new kid and what helped. You can invent the details.",
-      "ownDe": "Gerüst abschreiben, dann beschreiben, wie es der Bloggerin oder dem Blogger als Neue:r ging und was geholfen hat. Details dürfen erfunden sein.",
-      "options": [
-        {
-          "l": "A",
-          "id": "tyrol",
-          "label": "Moving to the city",
-          "text": "{{Ideas like these help [[the new kid]] most, and I know what that’s like.}} When my family moved from a village in Tyrol to the city, nobody understood my dialect, and I felt like a real outsider. It took me [[ages]] to feel at home. {{Since then, I’ve always tried to}} be the first to talk to new students.",
-          "why": "A personal story makes the challenge easy to understand and shows what the writer learnt."
-        },
-        {
-          "l": "B",
-          "id": "england",
-          "label": "A language course abroad",
-          "text": "{{Being included means the most to [[the new kid]], as I found out last summer.}} On a language course in England, I felt a bit lost on the first day. Then a girl from Spain asked me to join her group. {{That small gesture showed me}} how much a little kindness can do.",
-          "why": "Shows the other side: on a course abroad, the writer is the foreigner, and a small gesture makes the difference."
+          "text": "{{The best way to make all this work is to}} do things together. Why not organise a games afternoon where everyone teaches the others a game from their childhood? {{[[Honestly,]] you learn more about someone}} in one afternoon of games than in a year of sitting next to them.",
+          "why": "Answers the challenges with one clear idea: shared activities connect people.",
+          "textLong": "{{The best way to make all this work is to}} do things together. Why not organise a games afternoon where everyone teaches the others a game from their childhood? {{Just asking someone to join in}} can make a huge difference. When I joined a new volleyball club last year, I felt [[a bit lost]] until a girl from my team taught me a card game from her grandmother’s village in Bosnia. Within a week, we were swapping playlists. {{[[Honestly,]] you learn more about someone}} in one afternoon of games than in a year of sitting next to them."
         }
       ],
-      "join": true
+      "ownLong": "Copy the frame. Then add your own ideas, explain why they work and tell how the blogger once felt as the new kid. You can invent the details.",
+      "ownLongDe": "Gerüst abschreiben, dann eigene Ideen ergänzen, begründen und erzählen, wie es der Bloggerin oder dem Blogger einmal als Neue:r ging. Details dürfen erfunden sein."
     },
     {
       "id": "concl",
@@ -381,16 +306,13 @@
     "title",
     "intro",
     "describe",
-    "friend",
     "advantages",
-    "challenges",
     "suggest",
-    "outsider",
     "concl"
   ],
   "checks": [
     {
-      "en": "A title that makes readers curious, with user name and date under it"
+      "en": "A title that makes readers curious, with user name, date and time under it"
     },
     {
       "en": "A friendly opening that speaks to readers directly"
@@ -416,10 +338,10 @@
   ],
   "teacher": {
     "aim": "Die Klasse baut gemeinsam einen Blogbeitrag (B1) über das Aufwachsen in einer Klasse mit vielen Sprachen und Kulturen und übt dabei Blog-Konventionen und informelle, gesprächsnahe Wendungen, ohne dass der Text fehlerhaft oder respektlos wird. Mehrsprachigkeit erscheint als Stärke.",
-    "prep": "A/B/C/D-Karten austeilen, Hefte bereitlegen. Beamer im Vollbild. Im Gerüst-Modus den eingebauten Timer nutzen: 5 min pro Absatz, bei Bedarf +1. Die Zahl der Familiensprachen wird nur geschätzt, nicht per Handzeichen erhoben. Die Aufgabe am Beamer enthält alles Nötige.",
-    "heft": "Neue Seite: Datum rechts oben, darunter „Blog post“ als Überschrift (wie am Beamer). Dann 2 Zeilen für den Titel frei lassen (der Titel kommt zuletzt), darunter Username und Datum in einer Zeile (wie am Beamer). Jeder der fünf Absätze beginnt nach einer Leerzeile, am Rand steht das Kurzwort: Intro, Body 1, Body 2, Body 3, Conclusion. Fortsetzungen gehören ohne neue Zeile zum selben Absatz. Informelle Wendungen grün unterstreichen.",
-    "flow": "Volltext kurz (50 min): 5 min Aufgabe und Kopf, 7 Entscheidungen à ca. 2 min, Abschreiben ca. 20 min, 5 min Checkliste. Body 2 hat in beiden Längen zwei Entscheidungen: zuerst die Vorteile, dann die Herausforderungen als Fortsetzung im selben Absatz. Volltext lang (Doppelstunde): wie kurz, dazu zwei Fortsetzungen: Body 1 wird um ein Beispiel mit Freund:in länger, Body 3 um eine Erfahrung als Neue:r. Das gemeinsame Schreiben dauert ca. 65 min; die restliche Zeit für die Besprechung der Fallen und den Beginn der Hausübung nutzen. Gerüst kurz (realistisch ca. 60 min): 5 min Aufgabe und Kopf; pro Absatz 1 min Entscheidung, 5–6 min eigenes Schreiben, 1 min Vergleich mit dem Modell; am Ende 5 min Checkliste. In einer 50-Minuten-Stunde den Schluss noch abstimmen und das Gerüst abschreiben lassen; Schluss fertigschreiben und eigenen Titel finden als Hausübung. Gerüst lang: Doppelstunde (100 min), gleicher Rhythmus, dazwischen Zeit für eine Vergleichsrunde zu zweit.",
-    "traps": "Introduction C (CC): falsche Reihenfolge, die Vorteile stehen vor der Begrüßung. Body 1, Fortsetzung B (LSR, nur lang): „my friend“ und „very nice“ in Dauerschleife. Body 2 A (LSA): learn very much, since I am, become invited. Body 2, Fortsetzung C (CC): Linking words passen nicht zur Logik (Meanwhile statt einer Folge, Likewise vor einem Gegensatz). Body 3 B (TA): Reisen statt voneinander lernen, Inhaltspunkt verfehlt. Kürzel: TA = Erfüllung der Aufgabenstellung, CC = Kohärenz und Kohäsion, LSR = Spektrum sprachlicher Mittel, LSA = Sprachrichtigkeit.",
-    "notes": "Der Blogbeitrag hat in beiden Längen genau fünf Absätze (Intro, Body 1 Beschreibung, Body 2 Vorteile und Herausforderungen, Body 3 Vorschläge, Conclusion); die lange Fassung macht Body 1 und Body 3 länger, statt neue Absätze anzuhängen. Sensibles Thema (Herkunft, Identität): Niemand muss Herkunft, Religion, Aufenthaltsstatus oder die eigenen Familiensprachen offenlegen, keine Einzelperson spricht „für“ eine Gruppe. Die Zahl der Sprachen ist nur eine Schätzung für eine erfundene Klasse mit 26 Schüler:innen. Im Gerüst-Modus dürfen alle Details erfunden sein; niemand schreibt über eigene private Erfahrungen. Für die Namenslücke nur erfundene Vornamen verwenden, keine Namen von Mitschüler:innen oder Lehrer:innen. Stadt und Wohngegend bleiben ohne Namen. Die Fortsetzung von Body 3 (nur lang) zeigt das Neu-Sein ohne Migrationsgeschichte (Umzug aus einem Dorf in Tirol oder Sprachkurs in England). Mehrsprachigkeit wird als Stärke gezeigt; Klischees über Nationalitäten sofort ansprechen. Falls Erfahrungen mit Ausgrenzung zur Sprache kommen, auf Schulpsychologie oder Rat auf Draht (147) hinweisen. Differenzierung: Schnelle ergänzen im Gerüst-Modus einen eigenen Vorschlag. Hausübung: Blog-Kommentar (ca. 150 Wörter) auf den Blogbeitrag mit einer eigenen Idee, wie Jugendliche voneinander lernen können."
+    "prep": "A/B/C/D-Karten austeilen, Hefte bereitlegen. Beamer im Vollbild. Im Gerüst-Modus den eingebauten Timer nutzen: 5 min pro Absatz (Body 2: 7 min), bei Bedarf +1. Die Zahl der Familiensprachen wird nur geschätzt, nicht per Handzeichen erhoben. Die Aufgabe am Beamer enthält alles Nötige.",
+    "heft": "Neue Seite: Datum rechts oben, darunter „Blog post“ als Überschrift (wie am Beamer). Dann 2 Zeilen für den Titel frei lassen (der Titel kommt zuletzt), darunter Username, Datum und Uhrzeit in einer Zeile (wie am Beamer). Jeder der fünf Absätze beginnt nach einer Leerzeile, am Rand steht das Kurzwort: Intro, Body 1, Body 2, Body 3, Conclusion. Informelle Wendungen grün unterstreichen.",
+    "flow": "6 Entscheidungen: fünf Absätze (jede Entscheidung ist ein ganzer Absatz) und der Titel. Body 2 behandelt Vorteile und Herausforderungen in einem Absatz. Volltext kurz (50 min): 5 min Aufgabe und Kopf, 6 Entscheidungen à ca. 2 min, Abschreiben ca. 20 min, 5 min Checkliste. Volltext lang (Doppelstunde): dieselben 6 Entscheidungen, aber die drei Body paragraphs sind länger, daher ca. 30–35 min Abschreiben; die restliche Zeit für die Besprechung der Fallen und den Beginn der Hausübung nutzen. Gerüst kurz (realistisch ca. 60 min): 5 min Aufgabe und Kopf; pro Absatz 1 min Entscheidung, 5–6 min eigenes Schreiben (Body 2: 7 min, weil Vorteil und Herausforderung hineingehören), 1 min Vergleich mit dem Modell; am Ende 5 min Checkliste. In einer 50-Minuten-Stunde den Schluss noch abstimmen und das Gerüst abschreiben lassen; Schluss fertigschreiben und eigenen Titel finden als Hausübung. Gerüst lang: Doppelstunde (100 min), gleicher Rhythmus, für jeden Body paragraph 7–8 min eigenes Schreiben, dazwischen eine Vergleichsrunde zu zweit.",
+    "traps": "Introduction C (CC): falsche Reihenfolge, die Vorteile stehen vor der Begrüßung. Body 1 C (CC): Linking words passen nicht zur Logik (However vor einer Folge, Instead ersetzt nichts). Body 2 A (LSA): learn very much, since I am, become invited. Body 3 B (LSR): viel zu förmlich und steif für einen Blog (It is strongly recommended, Furthermore, it is advisable, undoubtedly), klingt wie ein offizieller Bericht. Kürzel: TA = Erfüllung der Aufgabenstellung, CC = Kohärenz und Kohäsion, LSR = Spektrum sprachlicher Mittel, LSA = Sprachrichtigkeit.",
+    "notes": "Der Blogbeitrag hat in beiden Längen genau fünf Absätze (Intro, Body 1 Beschreibung, Body 2 Vorteile und Herausforderungen, Body 3 Vorschläge, Conclusion). Die lange Fassung hat dieselben Entscheidungen; die drei Body paragraphs sind länger, Einleitung und Schluss bleiben gleich. In der langen Fassung kommt in Body 1 die beste Freundin oder der beste Freund dazu, und Body 3 erzählt vom Neu-Sein ohne Migrationsgeschichte (Umzug aus einem Dorf in Tirol oder neu in einem Volleyballverein). Sensibles Thema (Herkunft, Identität): Niemand muss Herkunft, Religion, Aufenthaltsstatus oder die eigenen Familiensprachen offenlegen, keine Einzelperson spricht „für“ eine Gruppe. Die Zahl der Sprachen ist nur eine Schätzung für eine erfundene Klasse mit 26 Schüler:innen. Im Gerüst-Modus dürfen alle Details erfunden sein; niemand schreibt über eigene private Erfahrungen. Für die Namenslücke nur erfundene Vornamen verwenden, keine Namen von Mitschüler:innen oder Lehrer:innen. Stadt und Wohngegend bleiben ohne Namen. Mehrsprachigkeit wird als Stärke gezeigt; Klischees über Nationalitäten sofort ansprechen. Falls Erfahrungen mit Ausgrenzung zur Sprache kommen, auf Schulpsychologie oder Rat auf Draht (147) hinweisen. Differenzierung: Schnelle ergänzen im Gerüst-Modus einen eigenen Vorschlag. Hausübung: Blog-Kommentar (ca. 150 Wörter) auf den Blogbeitrag mit einer eigenen Idee, wie Jugendliche voneinander lernen können."
   }
 }

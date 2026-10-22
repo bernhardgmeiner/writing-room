@@ -78,7 +78,8 @@
       "qDe": "Erfindet einen lustigen Namen für das Floß, zum Beispiel Pancake oder Flying Duck, ohne „The“. Keine Namen von Mitschüler:innen oder Lehrer:innen.",
       "type": "text",
       "default": "Pancake",
-      "max": 20
+      "max": 20,
+      "maxWords": 2
     }
   ],
   "steps": [
@@ -134,50 +135,28 @@
           "crit": "CC",
           "text": "Just after lunch, Oskar appeared, out of breath. Although his cousin had missed the train, his team for the summer raft race was one paddler short. Similarly, the race started at three. Would Elif join them on the {RAFT}?",
           "reject": "The linking words don’t fit: the team was short BECAUSE the cousin had missed the train, not ‘although’. And ‘Similarly’ compares two things that are alike, but the start time is not like anything before.",
-          "rejectDe": "Die Linking words passen nicht: Although statt because (ein Grund, kein Gegensatz), und Similarly kündigt etwas Ähnliches an, die Startzeit ist aber mit nichts vergleichbar."
+          "rejectDe": "Die Linking words passen nicht: Although statt because (ein Grund, kein Gegensatz), und Similarly kündigt etwas Ähnliches an, die Startzeit ist aber mit nichts vergleichbar.",
+          "textLong": "Just after lunch, Oskar appeared, out of breath. Although his cousin had missed the train, his team for the summer raft race was one paddler short. Similarly, the race started at three. Would Elif join them on the {RAFT}? She didn’t need to think twice. Down at the beach, the others were still fixing the raft with tape when Oskar handed her a life jacket."
         },
         {
           "l": "B",
           "id": "visit",
           "label": "A visit from Oskar",
-          "text": "{{Just after lunch, Oskar appeared,}} completely out of breath. His cousin [[had missed]] the train, {{so his team for the summer raft race}} was one paddler short. Would Elif join them on the {RAFT}?",
-          "why": "‘Had missed’ tells us what happened before Oskar arrived, and ‘so’ shows the result."
+          "text": "{{Just after lunch, Oskar appeared,}} completely out of breath. His cousin [[had missed]] the train, {{so his team for the summer raft race}} was one paddler short. Would Elif join them on the {RAFT}? {{She didn’t need to think twice.}}",
+          "why": "‘Had missed’ tells us what happened before Oskar arrived, and ‘so’ shows the result.",
+          "textLong": "{{Just after lunch, Oskar appeared,}} completely out of breath. His cousin [[had missed]] the train, {{so his team for the summer raft race}} was one paddler short. Would Elif join them on the {RAFT}? {{She didn’t need to think twice.}} Down at the beach, the others [[were still fixing]] the raft with tape when Oskar handed her a life jacket."
         },
         {
           "l": "C",
           "id": "message",
           "label": "A message",
-          "text": "{{At two o’clock, Elif’s phone finally buzzed.}} It was Oskar. His sister [[had caught]] a cold, and the raft race started at three. {{“Could you take her place on the {RAFT}?” he wrote.}}",
-          "why": "A short message brings Oskar into the story, and the past perfect explains his problem."
-        }
-      ]
-    },
-    {
-      "id": "ready",
-      "slot": "ready",
-      "part": "Body paragraph 1",
-      "len": "long",
-      "q": "How do they get ready for the race?",
-      "de": "Der Absatz geht weiter: Elif sagt zu, und das Team bereitet sich vor. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
-      "own": "Copy the frame. Then add your own details about the raft or the team.",
-      "ownDe": "Gerüst abschreiben, dann eigene Details zum Floß oder zum Team ergänzen.",
-      "options": [
-        {
-          "l": "A",
-          "id": "fixing",
-          "label": "The raft",
-          "text": "{{Elif didn’t need to think twice. Down at the beach,}} the team [[was still fixing]] the raft with tape and string, and somebody [[had painted]] a huge smile on the front. {{She put on a life jacket}} and tried hard not to look nervous.",
-          "why": "Elif’s quick ‘yes’ links back to the question, the past progressive shows work in progress, and ‘had painted’ looks back."
-        },
-        {
-          "l": "B",
-          "id": "lesson",
-          "label": "A quick lesson",
-          "text": "{{Of course she agreed.}} On the way to the start, Oskar gave her a quick lesson. She [[had swum]] in the lake all her life, but a raft was something new. {{“Just copy me,” he said,}} and showed her how to hold the paddle.",
-          "why": "The first sentence answers Oskar’s question, and the past perfect tells us about Elif’s experience before the race."
+          "text": "{{At two o’clock, Elif’s phone finally buzzed.}} It was Oskar. His sister [[had caught]] a cold, and the raft race started at three. {{“Could you take her place on the {RAFT}?” he wrote.}} Minutes later, Elif [[was running]] to the beach.",
+          "why": "A short message brings Oskar into the story, the past perfect explains his problem, and Elif reacts at once.",
+          "textLong": "{{At two o’clock, Elif’s phone finally buzzed.}} It was Oskar. His sister [[had caught]] a cold, and the raft race started at three. {{“Could you take her place on the {RAFT}?” he wrote.}} Minutes later, Elif [[was running]] to the beach. Oskar quickly showed her how to hold the paddle: “Just copy me!”"
         }
       ],
-      "join": true
+      "ownLong": "Copy the frame. Then explain in your own words why Oskar needed Elif and how she got ready for the race.",
+      "ownLongDe": "Gerüst abschreiben, dann mit eigenen Worten erklären, warum Oskar Elif brauchte und wie sie sich auf das Rennen vorbereitete."
     },
     {
       "id": "start",
@@ -192,47 +171,54 @@
           "l": "A",
           "id": "kneeling",
           "label": "On the raft",
-          "text": "{{Shortly before three, Elif [[was kneeling]] on the {RAFT},}} a wobbly raft made of old barrels. She [[had never been]] in a race before, {{but when the whistle blew,}} she paddled like mad.",
-          "why": "‘Was kneeling’ puts us on the raft, and ‘had never been’ adds Elif’s background."
+          "text": "{{Shortly before three, Elif [[was kneeling]] on the {RAFT},}} a wobbly raft made of old barrels. She [[had never been]] in a race before, {{but when the whistle blew,}} she paddled like mad and soon forgot to be nervous.",
+          "why": "‘Was kneeling’ puts us on the raft, and ‘had never been’ adds Elif’s background.",
+          "textLong": "{{Shortly before three, Elif [[was kneeling]] on the {RAFT},}} a wobbly raft made of old barrels. Her hands [[were shaking]] a little. She [[had never been]] in a race before, {{but when the whistle blew,}} she paddled like mad and soon forgot to be nervous. Next to her, Oskar [[was counting]] loudly to keep everyone in time."
         },
         {
           "l": "B",
           "id": "rafts",
           "label": "The other teams",
-          "text": "{{By three o’clock, eight rafts [[were waiting]] at the start.}} Some teams [[had trained]] for weeks, but Elif’s team only wanted to have fun. {{When the whistle blew,}} the {RAFT} wobbled away from the shore.",
-          "why": "A wider view of the start: the past progressive sets the scene, and the past perfect looks back."
+          "text": "{{By three o’clock, eight rafts [[were waiting]] at the start.}} Some teams [[had trained]] for weeks, but Elif’s team only wanted to have fun. {{When the whistle blew,}} the {RAFT} wobbled away from the shore, and Elif’s heart [[was racing]].",
+          "why": "A wider view of the start: the past progressive sets the scene, and the past perfect looks back.",
+          "textLong": "{{By three o’clock, eight rafts [[were waiting]] at the start.}} One looked like a pirate ship, and another had a sail made from a bedsheet. Some teams [[had trained]] for weeks, but Elif’s team only wanted to have fun. {{When the whistle blew,}} the {RAFT} wobbled away from the shore, and Elif’s heart [[was racing]]."
         }
-      ]
+      ],
+      "ownLong": "Copy the frame. Then describe the start of the race and how Elif felt in your own words.",
+      "ownLongDe": "Gerüst abschreiben, dann den Start des Rennens und Elifs Gefühle mit eigenen Worten beschreiben."
     },
     {
       "id": "problem",
       "slot": "problem",
       "part": "Body paragraph 3",
-      "q": "Body paragraph 3: what goes wrong during the race?",
-      "de": "Mitten im Rennen gibt es ein Problem. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
-      "own": "Copy the frame. Then tell in your own words how Elif saved the situation.",
-      "ownDe": "Gerüst abschreiben, dann mit eigenen Worten erzählen, wie Elif die Lage rettete.",
+      "q": "Body paragraph 3: what goes wrong during the race, and how does the race end?",
+      "de": "Mitten im Rennen gibt es ein Problem, und das Floß erreicht das Ziel. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then tell in your own words how Elif saved the situation and how the race ended.",
+      "ownDe": "Gerüst abschreiben, dann mit eigenen Worten erzählen, wie Elif die Lage rettete und wie das Rennen ausging.",
       "options": [
         {
           "l": "A",
           "id": "barrel",
           "label": "A loose barrel",
-          "text": "{{Halfway across the lake,}} the team [[was catching up]] with the leaders when a barrel came loose. {{While the others [[were shouting]],}} Elif grabbed a rope and tied it back on.",
-          "why": "‘Was catching up’ is interrupted by a short action in the past simple: ‘a barrel came loose’."
+          "text": "{{Halfway across the lake,}} the team [[was catching up]] with the leaders when one of the raft’s barrels came loose. {{While the others [[were shouting]],}} Elif grabbed a rope and tied it back on. {{In the end, the {RAFT} finished second,}} and Oskar hugged Elif so hard that they nearly fell into the water.",
+          "why": "‘Was catching up’ is interrupted by a short action in the past simple: ‘one of the barrels came loose’.",
+          "textLong": "{{Halfway across the lake,}} the team [[was catching up]] with the leaders when one of the raft’s barrels came loose. {{While the others [[were shouting]],}} Elif grabbed a rope and tied it back on with a strong knot. {{In the end, the {RAFT} crossed the finishing line in second place.}} People on the shore [[were cheering]], and Oskar hugged Elif so hard that they nearly fell into the water."
         },
         {
           "l": "B",
           "id": "swan",
           "label": "An angry swan",
-          "text": "{{Suddenly, an angry swan shot out of the reeds.}} The {RAFT} [[had come]] too close to its young ones. {{While Oskar [[was screaming]],}} Elif calmly paddled backwards until the swan lost interest.",
-          "why": "The past perfect explains why the swan attacked, and ‘while’ with the past progressive builds tension."
+          "text": "{{Suddenly, an angry swan shot out of the reeds.}} The {RAFT} [[had come]] too close to its young ones. {{While Oskar [[was screaming]],}} Elif calmly paddled backwards until the swan lost interest. {{By the time they reached the finish,}} the winners [[had already climbed]] out, but Elif’s team still won a prize for the bravest crew.",
+          "why": "The past perfect explains why the swan attacked, and ‘while’ with the past progressive builds tension.",
+          "textLong": "{{Suddenly, an angry swan shot out of the reeds.}} The {RAFT} [[had come]] too close to its young ones. {{While Oskar [[was screaming]],}} Elif calmly paddled backwards until the swan lost interest. {{By the time they reached the finish,}} the winners [[had already climbed]] out. However, everyone on the shore [[had watched]] the swan attack, so the team won a prize for the bravest crew: a huge chocolate cake."
         },
         {
           "l": "C",
           "id": "lost",
           "label": "A lost paddle",
-          "text": "{{Near the last buoy,}} Oskar’s paddle slipped out of his hands. It [[was floating]] away fast, {{but Elif leaned out over the water}} and grabbed it just in time.",
-          "why": "The past progressive ‘was floating’ shows the paddle moving away, so readers feel the danger."
+          "text": "{{Near the last buoy,}} Oskar’s paddle slipped out of his hands. It [[was floating]] away fast, {{but Elif leaned out over the water}} and grabbed it just in time. {{In the end, the {RAFT} finished second,}} and Oskar hugged Elif so hard that they nearly fell into the water.",
+          "why": "The past progressive ‘was floating’ shows the paddle moving away, so readers feel the danger.",
+          "textLong": "{{Near the last buoy,}} Oskar’s paddle slipped out of his hands. It [[was floating]] away fast, and for a moment nobody moved. {{Then Elif leaned out over the water}} and grabbed it just in time. {{In the end, the {RAFT} crossed the finishing line in second place.}} People on the shore [[were cheering]], and Oskar hugged Elif so hard that they nearly fell into the water."
         },
         {
           "l": "D",
@@ -240,37 +226,14 @@
           "label": "Halfway across",
           "trap": true,
           "crit": "LSA",
-          "text": "Halfway across the lake, the sun shined and they were catching up with the leaders. Then a barrel came loose. Elif was not knowing what to do, but then she tied it back on with a rope.",
+          "text": "Halfway across the lake, the sun shined and they were catching up with the leaders. Then a barrel came loose. Elif was not knowing what to do, but she tied it back on with a rope. In the end, the {RAFT} crossed the finishing line in second place, and Oskar hugged Elif so hard that they nearly fell into the water.",
           "reject": "Two typical mistakes: ‘the sun shined’ (→ the sun shone) and ‘Elif was not knowing’ (→ Elif didn’t know: ‘know’ is not used in the progressive).",
-          "rejectDe": "Zwei typische Fehler: shined → shone (unregelmäßiges Verb) und was not knowing → didn’t know (know steht nicht in der -ing-Form)."
-        }
-      ]
-    },
-    {
-      "id": "finish",
-      "slot": "finish",
-      "part": "Body paragraph 3",
-      "q": "How does the race end?",
-      "de": "Der Absatz geht weiter: So geht das Rennen aus. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
-      "own": "Copy the frame. Then describe the finish in your own words.",
-      "ownDe": "Gerüst abschreiben, dann die Zieleinfahrt mit eigenen Worten beschreiben.",
-      "options": [
-        {
-          "l": "A",
-          "id": "second",
-          "label": "Second place",
-          "text": "{{In the end, the {RAFT} crossed the finishing line in second place.}} People on the shore [[were cheering]], and Oskar hugged Elif so hard that they nearly fell into the water.",
-          "why": "A happy, lively moment: ‘were cheering’ describes the background to Oskar’s hug."
-        },
-        {
-          "l": "B",
-          "id": "prize",
-          "label": "A special prize",
-          "text": "{{They didn’t win.}} {{By the time the {RAFT} reached the finish,}} the winners [[had already climbed]] out of the water. But the judges gave Elif’s team a prize for the bravest crew: a huge chocolate cake.",
-          "why": "‘By the time’ with the past perfect shows that the winners had finished first."
+          "rejectDe": "Zwei typische Fehler: shined → shone (unregelmäßiges Verb) und was not knowing → didn’t know (know steht nicht in der -ing-Form).",
+          "textLong": "Halfway across the lake, the sun shined and they were catching up with the leaders. Then a barrel came loose. Elif was not knowing what to do, but she tied it back on with a rope. In the end, the {RAFT} crossed the finishing line in second place. People on the shore were cheering, and Oskar hugged Elif so hard that they nearly fell into the water."
         }
       ],
-      "join": true
+      "ownLong": "Copy the frame. Then tell in your own words how Elif saved the situation, how the race ended and how people reacted.",
+      "ownLongDe": "Gerüst abschreiben, dann mit eigenen Worten erzählen, wie Elif die Lage rettete, wie das Rennen ausging und wie die Leute reagierten."
     },
     {
       "id": "ending",
@@ -344,10 +307,8 @@
     "title",
     "beginning",
     "chance",
-    "ready",
     "start",
     "problem",
-    "finish",
     "ending"
   ],
   "checks": [
@@ -380,8 +341,8 @@
     "aim": "Die Klasse schreibt gemeinsam eine Wettbewerbsgeschichte (A2+/B1) mit vorgegebenem ersten Satz und übt dabei die Erzählzeiten: Past simple für die Handlung, Past progressive für Hintergrund und unterbrochene Handlungen, Past perfect für Vorzeitigkeit.",
     "prep": "A/B/C/D-Karten austeilen (eine Garnitur pro Person), Hefte bereitlegen. Beamer im Vollbild. Im Gerüst-Modus den eingebauten Timer nutzen: 5 min pro Absatz, bei Bedarf +1. Wörter bei Bedarf erklären: jetty (Steg), raft (Floß), barrel (Fass), paddler (Paddler:in), reeds (Schilf), buoy (Boje), crew (Mannschaft).",
     "heft": "Neue Seite: Datum rechts oben, darunter „Story“ als Überschrift (wie am Beamer). Dann 2 Zeilen für den Titel frei lassen, der Titel kommt zuletzt. Fünf Absätze, jeder nach einer Leerzeile, am Rand die Randwörter Intro, Body 1, Body 2, Body 3, Conclusion. Am Ende Past-progressive- und Past-perfect-Formen grün unterstreichen.",
-    "flow": "Volltext kurz (50 min): 5 min Aufgabe lesen und den vorgegebenen ersten Satz gemeinsam laut lesen; 7 Entscheidungen à ca. 2 min (Body 3 besteht aus zwei Entscheidungen: Problem und Zieleinfahrt), Abschreiben ca. 20 min, 5 min Checkliste. Volltext lang (ca. 60 min): wie kurz, dazu eine Fortsetzung von Body 1 (Zusage und Vorbereitung vor dem Start); das sind eine Entscheidung und rund 40 Wörter Abschreiben mehr. In einer Doppelstunde die restliche Zeit für die Besprechung der Fallen nutzen und die Hausübung zu zweit beginnen. Gerüst kurz (realistisch ca. 60 min): 5 min Aufgabe; pro Entscheidung 1 min Abstimmung, 5–6 min eigenes Schreiben, 1 min Vergleich mit dem Modell; am Ende 5 min Checkliste. In einer 50-Minuten-Stunde die Conclusion noch abstimmen und das Gerüst abschreiben lassen; den Schluss fertigschreiben und einen eigenen Titel finden als Hausübung. Gerüst lang (ca. 70 min): gleicher Rhythmus wie kurz, dazu die Fortsetzung von Body 1 mit ca. 7 min. In einer Doppelstunde danach eine Vergleichsrunde zu zweit. Nach der Abstimmung in Body 1 den Namen des Floßes und den Grund für Oskars Besuch an die Tafel schreiben.",
+    "flow": "Volltext kurz (50 min): 5 min Aufgabe lesen und den vorgegebenen ersten Satz gemeinsam laut lesen; 6 Entscheidungen (die fünf Absätze je ca. 2–3 min, der Titel zum Schluss ca. 1 min), Abschreiben ca. 20 min, 5 min Checkliste. Volltext lang (ca. 60 min): dieselben 6 Entscheidungen; die drei Absätze in der Mitte sind je rund 10–20 Wörter länger, das Abschreiben dauert daher ca. 28 min. In einer Doppelstunde die restliche Zeit für die Besprechung der Fallen nutzen und die Hausübung zu zweit beginnen. Gerüst kurz (realistisch ca. 60 min): 5 min Aufgabe; pro Absatz 1 min Abstimmung, 5–6 min eigenes Schreiben, 1 min Vergleich mit dem Modell; am Ende 5 min Checkliste. In einer 50-Minuten-Stunde die Conclusion noch abstimmen und das Gerüst abschreiben lassen; den Schluss fertigschreiben und einen eigenen Titel finden als Hausübung. Gerüst lang (ca. 70 min): dieselben 6 Entscheidungen im gleichen Rhythmus, bei Body 1 bis Body 3 je ca. 3 min mehr eigenes Schreiben. In einer Doppelstunde danach eine Vergleichsrunde zu zweit. Nach der Abstimmung in Body 1 den Namen des Floßes und den Grund für Oskars Besuch an die Tafel schreiben.",
     "traps": "Introduction C (TA): Der vorgegebene Satz ist verändert (last week statt last day). Body 1 A (CC): Although statt because, Similarly ohne Vergleich. Body 3 D (LSA): the sun shined statt shone, was not knowing statt didn’t know. Conclusion B (TA): „Alles nur ein Traum“, der dritte Inhaltspunkt fehlt. Kürzel: TA = Erfüllung der Aufgabenstellung, CC = Kohärenz und Kohäsion, LSR = Spektrum sprachlicher Mittel, LSA = Sprachrichtigkeit.",
-    "notes": "Aufbau: Die Geschichte hat fünf Absätze (Anfang, drei Absätze in der Mitte, Schluss), die Inhaltspunkte folgen der Handlung: Punkt 1 (wie der Tag für Elif beginnt) steht in der Introduction, Punkt 2 (das unerwartete Ereignis: Oskars Bitte und das Floßrennen) in Body 1 bis Body 3, Punkt 3 (wie der Tag endet und was er Elif bedeutet) in der Conclusion. Die lange Fassung macht Body 1 länger, sie fügt keinen Absatz hinzu. Fokus: Markiert sind Past progressive und Past perfect; das Past simple trägt die Handlung und bleibt unmarkiert. Nach Body 2 lohnt eine Minute an der Tafel: ein Zeitstrahl mit „had never been“ (vorher), „was kneeling“ (Hintergrund) und „blew“ (Ereignis). Wettbewerbsregel besprechen: Ein vorgegebener erster Satz wird wörtlich übernommen. Floßrennen gibt es an vielen Seen und Flüssen; Ort, Personen und Rennen sind erfunden. Für die Namenslücke nur einen erfundenen Floßnamen verwenden, keine Namen von Mitschüler:innen oder Lehrer:innen. Differenzierung: Schnelle ergänzen im Gerüst-Modus einen Satz mit „By the time …, … had already …“. Hausübung: zweite Fassung mit anderen Entscheidungen oder eine eigene Geschichte mit dem ersten Satz „When the phone rang, Elif had just fallen asleep.“"
+    "notes": "Aufbau: Die Geschichte hat fünf Absätze (Anfang, drei Absätze in der Mitte, Schluss), die Inhaltspunkte folgen der Handlung: Punkt 1 (wie der Tag für Elif beginnt) steht in der Introduction, Punkt 2 (das unerwartete Ereignis: Oskars Bitte und das Floßrennen) in Body 1 bis Body 3, Punkt 3 (wie der Tag endet und was er Elif bedeutet) in der Conclusion. Die lange Fassung hat dieselben Entscheidungen, die drei Absätze in der Mitte sind länger; sie fügt keinen Absatz hinzu. Fokus: Markiert sind Past progressive und Past perfect; das Past simple trägt die Handlung und bleibt unmarkiert. Nach Body 2 lohnt eine Minute an der Tafel: ein Zeitstrahl mit „had never been“ (vorher), „was kneeling“ (Hintergrund) und „blew“ (Ereignis). Wettbewerbsregel besprechen: Ein vorgegebener erster Satz wird wörtlich übernommen. Floßrennen gibt es an vielen Seen und Flüssen; Ort, Personen und Rennen sind erfunden. Für die Namenslücke nur einen erfundenen Floßnamen verwenden, keine Namen von Mitschüler:innen oder Lehrer:innen. Differenzierung: Schnelle ergänzen im Gerüst-Modus einen Satz mit „By the time …, … had already …“. Hausübung: zweite Fassung mit anderen Entscheidungen oder eine eigene Geschichte mit dem ersten Satz „When the phone rang, Elif had just fallen asleep.“"
   }
 }

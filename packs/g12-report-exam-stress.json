@@ -87,7 +87,7 @@
   "gaps": [
     {
       "id": "SCHEME",
-      "step": "support",
+      "step": "recs",
       "q": "Our support project needs a short English name. What do we call it?",
       "qDe": "Unser Unterstützungsprojekt braucht einen kurzen englischen Namen, z. B. „Here to Help“. Keine Namen von Mitschüler:innen oder Lehrer:innen.",
       "type": "text",
@@ -133,62 +133,40 @@
       "slot": "intro",
       "part": "Introduction",
       "q": "Introduction: how do we open the report?",
-      "de": "Die Einleitung eröffnet den Report. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "de": "Die Einleitung nennt Zweck und Datenquelle des Reports. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
       "own": "Copy the frame. Then complete the introduction: who took part in the survey and what does the report do?",
       "ownDe": "Gerüst abschreiben, dann die Einleitung fertigschreiben: Wer hat an der Umfrage teilgenommen, und was leistet der Report?",
+      "ownLong": "Copy the frame. Then complete the introduction: who took part, what the report does and why the figures should be read with care.",
+      "ownLongDe": "Gerüst abschreiben, dann die Einleitung fertigschreiben: wer teilgenommen hat, was der Report leistet und warum man die Zahlen vorsichtig lesen muss.",
       "options": [
         {
           "l": "A",
           "id": "aim",
           "label": "State the aim",
           "text": "### Introduction\n{{The aim of this report is to}} present the findings of an online survey on exam stress {{in which}} 240 students aged 15 to 18 took part. {{It also outlines}} the main causes and recommends ways the school could help.",
-          "why": "Purpose, data source and structure in two sentences: a classic report opening."
+          "textLong": "### Introduction\n{{The aim of this report is to}} present the findings of an online survey on exam stress {{in which}} 240 students aged 15 to 18 took part. {{It also outlines}} the main causes and recommends ways the school could help. {{All figures should be read with some caution:}} taking part was voluntary, {{so students who feel strongly about the topic [[may]] have been}} more likely to answer.",
+          "why": "Purpose, data source and structure in a few sentences: a classic report opening."
         },
         {
           "l": "B",
           "id": "request",
           "label": "Refer to the request",
           "text": "### Introduction\n{{Following a request from the school management,}} the student council carried out an online survey on exam stress among 240 students aged 15 to 18. {{This report summarises the findings,}} outlines the main causes {{and makes recommendations}} for the school.",
+          "textLong": "### Introduction\n{{Following a request from the school management,}} the student council carried out an online survey on exam stress among 240 students aged 15 to 18. {{This report summarises the findings,}} outlines the main causes {{and makes recommendations}} for the school. {{One limitation should be kept in mind:}} the survey reflects only one point in the school year, {{so the figures [[might]] look}} different in a quieter period.",
           "why": "Names who asked for the report and what it covers, in a neutral tone."
         },
         {
           "l": "C",
           "id": "personal",
           "label": "Start with a reaction",
-          "text": "### Introduction\nAs a member of the student council, I must say that I was really shocked by the results of our survey with 240 students. I personally think that the school puts far too much pressure on us, and I hope that this report will finally change something.",
           "trap": true,
           "crit": "LSR",
           "reject": "Too personal and emotional for a report: ‘I must say’, ‘I was really shocked’, ‘I personally think’ and ‘far too much pressure’. A report states its purpose and its data source in a neutral, impersonal tone.",
-          "rejectDe": "Zu persönlich und emotional für einen Report („I was really shocked“, „I personally think“): Zweck und Datenquelle sachlich und unpersönlich nennen."
+          "rejectDe": "Zu persönlich und emotional für einen Report („I was really shocked“, „I personally think“): Zweck und Datenquelle sachlich und unpersönlich nennen.",
+          "text": "### Introduction\nAs a member of the student council, I must say that I was really shocked by the results of our survey of 240 students. I personally think that the school puts far too much pressure on us, and I hope that this report will finally change something.",
+          "textLong": "### Introduction\nAs a member of the student council, I must say that I was really shocked by the results of our survey of 240 students. I personally think that the school puts far too much pressure on us, and I hope that this report will finally change something. The survey was voluntary, so the figures are perhaps not perfect, but they show how most of us really feel before a test."
         }
       ]
-    },
-    {
-      "id": "limits",
-      "slot": "limits",
-      "part": "Introduction",
-      "len": "long",
-      "q": "What should readers keep in mind about the data?",
-      "de": "Der Abschnitt geht weiter: die Grenzen der Umfrage. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
-      "own": "Copy the frame. Then explain in your own words why the figures should be read with care.",
-      "ownDe": "Gerüst abschreiben, dann mit eigenen Worten erklären, warum man die Zahlen vorsichtig lesen muss.",
-      "options": [
-        {
-          "l": "A",
-          "id": "voluntary",
-          "label": "A voluntary survey",
-          "text": "{{All figures should be read with some caution.}} Taking part was voluntary, {{so students who feel strongly about the topic [[may]] have been}} more likely to answer. {{Moreover, the figures describe}} how students see their own situation, which is not always the same as an outside view.",
-          "why": "Shows critical thinking: it explains why the figures could be higher than in reality."
-        },
-        {
-          "l": "B",
-          "id": "snapshot",
-          "label": "Only a snapshot",
-          "text": "{{One limitation should be kept in mind:}} the survey reflects only one school at one point in the school year. Results from a period with fewer tests {{[[might]] look}} different, {{so [[it would seem]] wise to treat the figures as}} a starting point for discussion.",
-          "why": "Puts the data into perspective and suggests how readers should use it."
-        }
-      ],
-      "join": true
     },
     {
       "id": "findings",
@@ -198,6 +176,8 @@
       "de": "Erster Inhaltspunkt: die wichtigsten Ergebnisse der Umfrage. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
       "own": "Copy the frame. Then add the missing figures from the survey in your own words.",
       "ownDe": "Gerüst abschreiben, dann die fehlenden Zahlen aus der Umfrage mit eigenen Worten ergänzen.",
+      "ownLong": "Copy the frame. Then add the missing figures, compare the two age groups and give one possible reason for the difference.",
+      "ownLongDe": "Gerüst abschreiben, dann die fehlenden Zahlen ergänzen, die beiden Altersgruppen vergleichen und einen möglichen Grund für den Unterschied nennen.",
       "options": [
         {
           "l": "A",
@@ -207,60 +187,26 @@
           "trap": true,
           "crit": "LSA",
           "reject": "Two typical mistakes: ‘feel stressful’ (→ feel stressed: a test is stressful, a person is stressed) and ‘become help’ (→ get help; ‘become’ means ‘werden’).",
-          "rejectDe": "Zwei typische Fehler: feel stressful → feel stressed, become help → get help („become“ heißt „werden“)."
+          "rejectDe": "Zwei typische Fehler: feel stressful → feel stressed, become help → get help („become“ heißt „werden“).",
+          "textLong": "### Key findings\nThe survey shows that 62 per cent of respondents often or always feel stressful before tests. Almost half (48 per cent) had three or more tests in one week last term. However, only 35 per cent know where they can become help at school when the pressure gets too much. Of the two age groups, older students seem to feel the pressure more. While just over half of 15- and 16-year-olds (53 per cent) are regularly affected, the figure for 17- and 18-year-olds is 71 per cent. This may be explained by the extra workload before the school-leaving exams."
         },
         {
           "l": "B",
           "id": "figures",
           "label": "Figure by figure",
           "text": "### Key findings\n{{[[According to the survey]], over three in five respondents}} (62 per cent) often or always feel under pressure before tests, and 48 per cent had three or more tests in one week last term. {{Information about support, [[it would seem]], is lacking,}} as only 35 per cent know whom to talk to at school.",
-          "why": "Each figure comes with a phrase that reports it neutrally, and the last point is carefully hedged."
+          "why": "Each figure comes with a phrase that reports it neutrally, and the last point is carefully hedged.",
+          "textLong": "### Key findings\n{{[[According to the survey]], over three in five respondents}} (62 per cent) often or always feel under pressure before tests, and 48 per cent had three or more tests in one week last term. {{Information about support, [[it would seem]], is lacking,}} as only 35 per cent know whom to talk to at school. {{When it comes to exam pressure, age [[appears to]] make a clear difference.}} Among 15- and 16-year-olds, 53 per cent report frequent pressure before tests, {{compared with 71 per cent of}} 17- and 18-year-olds. {{This gap [[may]] be due to}} the approaching school-leaving exams and a heavier workload."
         },
         {
           "l": "C",
           "id": "main",
           "label": "Main finding first",
           "text": "### Key findings\n{{The results [[suggest that]] exam stress is}} common among students. {{[[It was found that]] 62 per cent of respondents}} often or always feel under pressure before tests, and 48 per cent had three or more tests in one week last term. {{However, only 35 per cent}} know whom to talk to at school.",
-          "why": "A topic sentence sums up the results first, then the figures support it."
+          "why": "A topic sentence sums up the results first, then the figures support it.",
+          "textLong": "### Key findings\n{{The results [[suggest that]] exam stress is}} common among students. {{[[It was found that]] 62 per cent of respondents}} often or always feel under pressure before tests, and 48 per cent had three or more tests in one week last term. {{However, only 35 per cent}} know whom to talk to at school. {{Of the two age groups, older students [[seem to]] feel the pressure more.}} {{While just over half of 15- and 16-year-olds}} (53 per cent) are regularly affected, the figure for 17- and 18-year-olds is 71 per cent. {{This [[may]] be explained by}} the extra workload before the school-leaving exams."
         }
       ]
-    },
-    {
-      "id": "agegroups",
-      "slot": "agegroups",
-      "part": "Body paragraph 1",
-      "len": "long",
-      "q": "How do the age groups compare?",
-      "de": "Der Abschnitt geht weiter: die Unterschiede zwischen jüngeren und älteren Befragten. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
-      "own": "Copy the frame. Then add the figures for both age groups and one possible reason for the difference.",
-      "ownDe": "Gerüst abschreiben, dann die Zahlen beider Altersgruppen und einen möglichen Grund für den Unterschied ergänzen.",
-      "options": [
-        {
-          "l": "A",
-          "id": "compare",
-          "label": "Compare the age groups",
-          "text": "{{When it comes to exam pressure, age [[appears to]] make a clear difference.}} Among 15- and 16-year-olds, 53 per cent report frequent pressure before tests, {{compared with 71 per cent of}} 17- and 18-year-olds. {{This gap [[may]] be due to}} the approaching school-leaving exams and a heavier workload.",
-          "why": "Compares the two figures directly and offers a careful explanation."
-        },
-        {
-          "l": "B",
-          "id": "maybe",
-          "label": "Explain the gap carefully",
-          "text": "Maybe older students feel more pressure than younger ones, as the figures are 71 and 53 per cent. Maybe this is because of the school-leaving exams. Maybe they also have more work in the final years, and maybe their marks matter more to them.",
-          "trap": true,
-          "crit": "LSR",
-          "reject": "Correct, but ‘maybe’ four times is very basic. A B2 report hedges with a range of forms: ‘appears to’, ‘may be due to’, ‘one possible explanation is’.",
-          "rejectDe": "Richtig, aber viermal „maybe“ ist sehr einfach. Ein Report auf B2-Niveau formuliert vorsichtig mit verschiedenen Mitteln."
-        },
-        {
-          "l": "C",
-          "id": "older",
-          "label": "Older students first",
-          "text": "{{Among the age groups, older students [[seem to]] feel the pressure more.}} {{While just over half of 15- and 16-year-olds}} (53 per cent) are regularly affected, the figure for 17- and 18-year-olds is 71 per cent. {{This [[may]] be explained by}} the extra workload before the school-leaving exams.",
-          "why": "Opens with the main point, contrasts the figures and suggests a reason without claiming too much."
-        }
-      ],
-      "join": true
     },
     {
       "id": "causes",
@@ -270,134 +216,77 @@
       "de": "Zweiter Inhaltspunkt: die Ursachen, die in der Umfrage genannt wurden. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
       "own": "Copy the frame. Then explain the causes from the survey in a neutral, general way.",
       "ownDe": "Gerüst abschreiben, dann die Ursachen aus der Umfrage sachlich und allgemein erklären.",
+      "ownLong": "Copy the frame. Then explain the causes from the survey and what may lie behind them, in a neutral, general way, without examples of individual people.",
+      "ownLongDe": "Gerüst abschreiben, dann die Ursachen aus der Umfrage und ihre möglichen Hintergründe sachlich und allgemein erklären, ohne Beispiele einzelner Personen.",
       "options": [
         {
           "l": "A",
           "id": "rank",
           "label": "Rank the causes",
           "text": "### Causes of exam stress\n{{Asked what causes this pressure, 41 per cent named}} too many tests at the same time, followed by too little time to study (27 per cent). {{Pressure to get good marks [[appears to]] matter less}} (20 per cent), {{and only 12 per cent}} mentioned not knowing how to study effectively.",
-          "why": "Goes through the causes from the most to the least frequent and hedges the interpretation."
+          "why": "Goes through the causes from the most to the least frequent and hedges the interpretation.",
+          "textLong": "### Causes of exam stress\n{{Asked what causes this pressure, 41 per cent named}} too many tests at the same time, followed by too little time to study (27 per cent). {{Pressure to get good marks [[appears to]] matter less}} (20 per cent), although it [[may]] have several sources: marks can decide whether students move up to the next year, and expectations at home [[seem to]] play a part. {{Only 12 per cent}} mentioned not knowing how to study effectively, {{which [[suggests that]]}} most students see the problem in the organisation of tests rather than in their own methods."
         },
         {
           "l": "B",
           "id": "timing",
           "label": "Explain the main cause",
           "text": "### Causes of exam stress\n{{Timing [[appears to be]] the main reason for this pressure.}} For 41 per cent, it is too many tests at once, {{and a further 27 per cent}} named too little time to study. {{This [[may]] be because}} afternoon lessons, sport and part-time jobs leave few free evenings.",
-          "why": "Focuses on the two biggest causes and offers a possible explanation."
+          "why": "Focuses on timing, the main cause, and offers possible explanations.",
+          "textLong": "### Causes of exam stress\n{{Timing [[appears to be]] the main reason for this pressure.}} For 41 per cent, it is too many tests at once, {{and a further 27 per cent}} named too little time to study. {{This [[may]] be because}} afternoon lessons, sport and part-time jobs leave few free evenings. {{Study habits [[might]] also play a part,}} even though few students see them as a cause: many [[may]] never have learnt how to plan their revision. {{Those who leave everything until the last few days [[tend to]] feel}} more pressure, {{which [[suggests that]]}} study skills and stress are closely connected."
         },
         {
           "l": "C",
-          "id": "groups",
-          "label": "Group the causes",
-          "text": "### Causes of exam stress\n{{[[It would appear that]] most explanations for this pressure point to}} problems of organisation. Too many tests at the same time (41 per cent) and too little time to study (27 per cent) {{together account for}} 68 per cent. {{By contrast, one in five}} named pressure to get good marks.",
-          "why": "Groups the figures into two types of cause, which makes the pattern clear."
-        },
-        {
-          "l": "D",
           "id": "chain",
           "label": "Cause by cause",
-          "text": "### Causes of exam stress\nThe answers point to several causes. The most frequent was too many tests at the same time (41 per cent). Therefore, 27 per cent named too little time to study. Otherwise, 20 per cent mentioned pressure to get good marks, and 12 per cent named not knowing how to study effectively.",
+          "text": "### Causes of exam stress\nThe answers point to several causes. The most frequent was too many tests at the same time (41 per cent). For example, 27 per cent named too little time to study. Otherwise, 20 per cent mentioned pressure to get good marks, and 12 per cent named not knowing how to study effectively.",
           "trap": true,
           "crit": "CC",
-          "reject": "Two linkers do not fit: ‘Therefore’ suggests that one figure is the result of the other (→ In second place), and ‘Otherwise’ means ‘if not’, not ‘also’ (→ In addition).",
-          "rejectDe": "Zwei Linking words passen nicht: „Therefore“ behauptet eine Folge, die es nicht gibt, und „Otherwise“ heißt „sonst, andernfalls“, nicht „außerdem“."
+          "reject": "Two linkers do not fit: ‘For example’ introduces an example of the cause before, but too little time to study is a separate cause (→ In second place), and ‘Otherwise’ means ‘if not’, not ‘also’ (→ In addition).",
+          "rejectDe": "Zwei Linking words passen nicht: „For example“ kündigt ein Beispiel an, aber zu wenig Lernzeit ist eine eigene Ursache, und „Otherwise“ heißt „sonst, andernfalls“, nicht „außerdem“.",
+          "textLong": "### Causes of exam stress\nThe answers point to several causes. The most frequent was too many tests at the same time (41 per cent), as several subjects often hold their tests in the same few weeks before the holidays. For example, 27 per cent named too little time to study. Otherwise, 20 per cent mentioned pressure to get good marks, which may be linked to the fact that marks decide whether students move up to the next year. Only 12 per cent named not knowing how to study effectively, so most students seem to look for the problem in the organisation of tests."
         }
       ]
-    },
-    {
-      "id": "background",
-      "slot": "background",
-      "part": "Body paragraph 2",
-      "len": "long",
-      "q": "Which further factor do we add?",
-      "de": "Der Abschnitt geht weiter: ein weiterer Faktor, allgemein und vorsichtig formuliert. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
-      "own": "Copy the frame. Then explain the factor in general terms, without examples of individual people.",
-      "ownDe": "Gerüst abschreiben, dann den Faktor allgemein erklären, ohne Beispiele einzelner Personen.",
-      "options": [
-        {
-          "l": "A",
-          "id": "marks",
-          "label": "Expectations and marks",
-          "text": "{{Where marks are the main worry, several factors [[may]] be at work.}} Marks can decide whether students move up to the next year, {{and some [[might]] compare}} their results with those of classmates. {{Expectations at home [[seem to]] play a part too,}} even when parents simply want the best for their children.",
-          "why": "Explains a cause in general terms and stays careful with every claim."
-        },
-        {
-          "l": "B",
-          "id": "habits",
-          "label": "Study habits",
-          "text": "{{Study habits [[may]] also play a part,}} even though few students see them as a cause: many have never learnt how to plan their revision. {{Those who leave everything until the last few days [[tend to]] feel}} more pressure, {{which [[suggests that]]}} study skills and stress are closely connected.",
-          "why": "Links stress to a skill that can be learnt, which prepares the recommendations."
-        }
-      ],
-      "join": true
     },
     {
       "id": "recs",
       "slot": "recs",
       "part": "Body paragraph 3",
-      "q": "Body paragraph 3: what do we recommend about tests and study time?",
-      "de": "Dritter Inhaltspunkt, erster Teil der Empfehlungen: Prüfungsplanung und Lernzeit. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
-      "own": "Copy the frame. Then complete the recommendation with a concrete measure for the school.",
-      "ownDe": "Gerüst abschreiben, dann die Empfehlung mit einer konkreten Maßnahme für die Schule fertigschreiben.",
+      "q": "Body paragraph 3: what do we recommend?",
+      "de": "Dritter Inhaltspunkt: Maßnahmen, die die Schule setzen könnte, passend zu den Ursachen aus der Umfrage. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then complete the recommendations with concrete measures for the school.",
+      "ownDe": "Gerüst abschreiben, dann die Empfehlungen mit konkreten Maßnahmen für die Schule fertigschreiben.",
+      "ownLong": "Copy the frame. Then complete the recommendations and explain in your own words how each measure would work at school.",
+      "ownLongDe": "Gerüst abschreiben, dann die Empfehlungen fertigschreiben und mit eigenen Worten erklären, wie jede Maßnahme an der Schule funktionieren würde.",
       "options": [
         {
           "l": "A",
           "id": "students",
-          "label": "Responsibility for planning",
-          "text": "### Recommendations\nIn the end, some stress before tests is simply part of school life, and students who plan well do not need extra help. Students should therefore start studying earlier, go to bed on time and use their free periods better, since good marks are their own responsibility.",
+          "label": "Remove the causes",
           "trap": true,
           "crit": "TA",
-          "reject": "This gives advice to students instead of recommending what the school could do, and it ignores the survey, in which most respondents named organisational causes such as too many tests at once.",
-          "rejectDe": "Ratschläge an Schüler:innen statt Maßnahmen der Schule, obwohl die meisten Befragten organisatorische Ursachen genannt haben."
+          "reject": "These measures are not realistic: a school cannot simply abolish tests, marks and the school-leaving exams. They are not based on the survey either, which points to too many tests at the same time, not to tests as such.",
+          "rejectDe": "Nicht realistisch und nicht aus der Umfrage abgeleitet: Die Schule kann Tests, Noten und Reifeprüfung nicht abschaffen, und die Befragten klagen über zu viele Tests auf einmal, nicht über Tests an sich.",
+          "text": "### Recommendations\nIn view of these results, it is recommended that the school abolish tests and marks altogether, so that students can learn without any pressure. Homework should no longer be set either, and the school-leaving exams could be replaced by a project of each student’s own choice. The time saved could be used for a weekly relaxation afternoon called ‘{SCHEME}’ with sport and music.",
+          "textLong": "### Recommendations\nIn view of these results, it is recommended that the school abolish tests and marks altogether, so that students can learn without any pressure. Homework should no longer be set either, and the school-leaving exams could be replaced by a project of each student’s own choice. The time saved could be used for a weekly relaxation afternoon called ‘{SCHEME}’ with sport and music. Without marks, students would no longer compare themselves with their classmates, and teachers would have more time for interesting lessons instead of correcting tests. In this way, exam stress would disappear from the school completely."
         },
         {
           "l": "B",
           "id": "calendar",
-          "label": "A shared test calendar",
-          "text": "### Recommendations\n{{With these causes in mind, [[it is recommended that]] the school}} introduce a shared online test calendar {{so that}} no class has more than two tests in the same week. {{Teachers could then}} plan their tests together, and students would know early when busy weeks are coming.",
-          "why": "Tackles the most frequently named cause with a simple, practical tool."
+          "label": "A test calendar and mentors",
+          "text": "### Recommendations\n{{With these causes in mind, [[it is recommended that]] the school}} introduce a shared online test calendar {{so that}} no class has more than two tests in the same week. {{Furthermore, a peer mentoring scheme called ‘{SCHEME}’ could be set up,}} as 58 per cent of respondents would take part. Older students could share study tips, and since students [[tend to]] talk openly to their peers, asking for help [[might]] become easier.",
+          "textLong": "### Recommendations\n{{With these causes in mind, [[it is recommended that]] the school}} introduce a shared online test calendar {{so that}} no class has more than two tests in the same week. {{Teachers could then}} plan their tests together, and students would know early when busy weeks are coming. {{Furthermore, a peer mentoring scheme called ‘{SCHEME}’ could be set up,}} as 58 per cent of respondents would take part. Older students could share study tips and show younger ones where to find the student advisers. Since students [[tend to]] talk openly to their peers, asking for help [[might]] become easier.",
+          "why": "Tackles the most frequently named cause with a simple tool and uses the strong interest in peer mentoring."
         },
         {
           "l": "C",
           "id": "studyroom",
           "label": "Time and space to study",
-          "text": "### Recommendations\n{{Given these causes, [[it is suggested that]] the school}} open a quiet study room in the afternoons during busy test weeks. {{In addition, a short workshop on}} revision methods early in the school year {{[[is likely to]] help}} students who are unsure how to learn effectively.",
-          "why": "Answers two causes at once: too little time and uncertainty about how to study."
+          "text": "### Recommendations\n{{Given these causes, [[it is suggested that]] the school}} open a quiet study room in the afternoons during busy test weeks and spread test dates more evenly across the term. {{In addition, a short workshop on}} revision methods early in the school year {{[[is likely to]] help}} students who are unsure how to learn effectively. {{Finally, a support campaign called ‘{SCHEME}’}} could use posters to show students where to find help when tests pile up.",
+          "textLong": "### Recommendations\n{{Given these causes, [[it is suggested that]] the school}} open a quiet study room during busy test weeks and spread test dates more evenly across the term. {{In addition, a short workshop on}} revision methods early in the school year {{[[is likely to]] help}} students who are unsure how to learn effectively. {{Beyond these measures, support staff should be more visible,}} as only about a third of respondents know where to turn. The student advisers and the school psychology service could visit every class, {{and a support campaign called ‘{SCHEME}’,}} with posters listing their office hours, [[might]] make them easier to find.",
+          "why": "Answers several causes at once: too little time, uncertain study methods and support that students do not know about."
         }
       ]
-    },
-    {
-      "id": "support",
-      "slot": "support",
-      "part": "Body paragraph 3",
-      "q": "How can students find support?",
-      "de": "Der Abschnitt geht weiter: wie Schüler:innen Unterstützung finden. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
-      "own": "Copy the frame. Then explain in your own words how the measure would work at school.",
-      "ownDe": "Gerüst abschreiben, dann mit eigenen Worten erklären, wie die Maßnahme an der Schule funktionieren würde.",
-      "options": [
-        {
-          "l": "A",
-          "id": "mentoring",
-          "label": "Peer mentoring",
-          "text": "{{Furthermore, a peer mentoring scheme called ‘{SCHEME}’ could be set up,}} as 58 per cent of respondents would take part. Older students would share study tips, and since students {{[[tend to]]}} talk openly to their peers, asking for help [[might]] become easier.",
-          "why": "Uses the 58 per cent figure to justify the idea and explains why it could work."
-        },
-        {
-          "l": "B",
-          "id": "contacts",
-          "label": "Make help visible",
-          "text": "{{Beyond these measures, staff who can help should be more visible.}} The student advisers and, where possible, the school psychology service could introduce themselves in every class, {{and a poster headed ‘{SCHEME}’}} listing their office hours [[might]] make them easier to find.",
-          "why": "Answers the finding that many students do not know whom to talk to."
-        },
-        {
-          "l": "C",
-          "id": "week",
-          "label": "A support week",
-          "text": "{{A support week called ‘{SCHEME}’ [[might]] also be held}} before the first test period. {{During this week,}} older students could run study groups, {{and the student advisers could explain}} where and when students can find someone to talk to at school.",
-          "why": "Combines peer support and information about contact persons in one event."
-        }
-      ],
-      "join": true
     },
     {
       "id": "concl",
@@ -407,12 +296,15 @@
       "de": "Der Schluss greift Ergebnisse, Ursachen und Empfehlungen auf und schaut nach vorn. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
       "own": "Copy the frame. Then complete both sentences in your own words.",
       "ownDe": "Gerüst abschreiben, dann beide Sätze mit eigenen Worten fertigschreiben.",
+      "ownLong": "Copy the frame. Then sum up the findings and causes in your own words and say what should happen next.",
+      "ownLongDe": "Gerüst abschreiben, dann Ergebnisse und Ursachen mit eigenen Worten zusammenfassen und sagen, wie es weitergehen soll.",
       "options": [
         {
           "l": "A",
           "id": "sum",
           "label": "Sum up the main finding",
           "text": "### Conclusion\n{{To sum up, the survey [[indicates that]]}} exam stress is widespread and mostly has organisational causes. {{If the measures above are taken,}} exam periods [[are likely to]] become more manageable.",
+          "textLong": "### Conclusion\n{{To sum up, the survey [[indicates that]]}} exam stress is widespread, especially among older students, and that it mostly has organisational causes. Although the figures should be read with care, they point the school in a clear direction. {{If the measures above are taken,}} exam periods [[are likely to]] become more manageable for everyone.",
           "why": "Repeats the key finding in one hedged sentence and links it to the recommendations."
         },
         {
@@ -420,6 +312,7 @@
           "id": "ahead",
           "label": "Look ahead",
           "text": "### Conclusion\n{{Overall, [[it would appear that]]}} test pressure is common and that students would welcome more structure and support. {{The student council would be glad to}} help put these recommendations into practice and repeat the survey next year.",
+          "textLong": "### Conclusion\n{{Overall, [[it would appear that]]}} test pressure is common, particularly in the final years, and that students would welcome more structure and support. {{The student council would be glad to}} help put these recommendations into practice. Repeating the survey in the same term next year would also show whether the measures have made a difference.",
           "why": "Ends with an offer and a clear next step, which suits a student council report."
         }
       ]
@@ -428,13 +321,9 @@
   "order": [
     "subject",
     "intro",
-    "limits",
     "findings",
-    "agegroups",
     "causes",
-    "background",
     "recs",
-    "support",
     "concl"
   ],
   "checks": [
@@ -463,9 +352,9 @@
   "teacher": {
     "aim": "Die Klasse baut gemeinsam einen Report auf B2-Niveau (SRDP) zu einer erfundenen Umfrage über Prüfungsstress und übt dabei, Ergebnisse unpersönlich zu berichten, Aussagen vorsichtig abzusichern (hedging) und Maßnahmen formell zu empfehlen.",
     "prep": "A/B/C/D-Karten austeilen (ohne Karten: 1–4 Finger, die Tasten 1–4 wählen wie A–D), Beamer im Vollbild. Die Umfrageergebnisse aus der Aufgabe zusätzlich an die Tafel schreiben, sie werden in den eigenen Sätzen gebraucht. Vorab kurz klären: under pressure, respondents, peer mentoring, student advisers (Schüler:innenberater:innen), school psychology service (Schulpsychologie). Thema vorher ankündigen und Hilfsangebote bereithalten (siehe Hinweise).",
-    "heft": "Neue Seite: Datum (rechts), „Report“ als Überschrift. Darunter der Kopf wie am Beamer: To, From, Date, Subject (die Betreffzeile wird im ersten Schritt gewählt). Fünf Abschnitte (Introduction, Key findings, Causes of exam stress, Recommendations, Conclusion): jeder beginnt nach einer Leerzeile mit seiner Zwischenüberschrift auf einer eigenen Zeile (unterstrichen), darunter der Absatz; am Rand steht nichts. Fortsetzungen werden ohne neue Zeile im selben Absatz weitergeschrieben. Wendungen für unpersönliches Berichten und vorsichtiges Formulieren grün unterstreichen.",
-    "flow": "Volltext kurz (50 min): 5 min Aufgabe und Ergebnisse lesen, 7 Entscheidungen à 2 min (die Empfehlungen bestehen aus zwei Entscheidungen im selben Abschnitt), ca. 25 min Abschreiben, 5 min Checkliste. Volltext lang (100 min): 10 Entscheidungen, zusätzlich je eine Fortsetzung in Introduction (Grenzen der Umfrage), Key findings (Altersgruppen) und Causes of exam stress (weiterer Faktor), ca. 45 min Abschreiben. Gerüst kurz (ca. 60 min): 4 min Aufgabe, pro Entscheidung 1 min, 5–6 min eigenes Schreiben pro Abschnitt (bei der Fortsetzung der Empfehlungen 3–4 min), 1 min Vergleich mit dem Modell; in einer 50-Minuten-Stunde den Schluss als Hausübung und die Checkliste am Beginn der nächsten Stunde. Die Zahlen bleiben die ganze Stunde an der Tafel. Gerüst lang (100 min): gleicher Ablauf, pro zusätzlicher Fortsetzung 1 min Entscheidung, 3–4 min eigenes Schreiben und 1 min Vergleich.",
-    "traps": "Introduction C (LSR): persönlicher, emotionaler Ton („I was really shocked“, „I personally think“) statt sachlicher Einleitung. Key findings A (LSA): feel stressful statt feel stressed, become help statt get help (false friend). Key findings, Fortsetzung B (LSR, nur lang): viermal „maybe“ statt einer Bandbreite an Hedging-Formen. Causes of exam stress D (CC): „Therefore“ ohne Folge, „Otherwise“ im Sinn von „außerdem“ (false friend zu „sonst“). Recommendations A (TA): Ratschläge an Schüler:innen statt Maßnahmen der Schule. Kürzel: TA = Erfüllung der Aufgabenstellung, CC = Kohärenz und Kohäsion, LSR = Spektrum sprachlicher Mittel, LSA = Sprachrichtigkeit.",
-    "notes": "Aufbau: Der Report hat in beiden Fassungen genau fünf Abschnitte mit Zwischenüberschrift (Einleitung, drei Hauptabschnitte, Schluss); die lange Fassung macht die Abschnitte länger, statt neue hinzuzufügen. Sensibles Thema: vorher ankündigen, dass es um Prüfungsstress geht, und sachlich bleiben. Die Umfrage ist erfunden; keine eigenen Erfahrungen abfragen, keine Einzelfälle besprechen, niemand muss etwas über sich erzählen. Auch die Gerüst-Aufträge verlangen nur allgemeine Erklärungen. Am Ende kurz zeigen, wo es echte Unterstützung gibt: Schüler:innenberater:innen und Vertrauenslehrer:innen an der Schule, die Schulpsychologie der Bildungsdirektion und Rat auf Draht (Telefon 147, rund um die Uhr, anonym und kostenlos). Hedging-Hinweis: Weil eine freiwillige Online-Umfrage nichts beweist, sind Formulierungen wie „appears to“ oder „may“ hier inhaltlich begründet und kein bloßer Stil. Differenzierung: Schnelle formulieren im Gerüst-Modus die vier „maybe“-Sätze aus der Falle in der Fortsetzung von Key findings (B) mit verschiedenen Hedging-Formen um (appears to, is likely to, may be due to, tend to). Hausübung: den Report mit anderen Entscheidungen neu schreiben oder dieselbe Aufgabe für eine erfundene Umfrage zum Thema Schlaf bearbeiten."
+    "heft": "Neue Seite: Datum (rechts), „Report“ als Überschrift. Darunter der Kopf wie am Beamer: To, From, Date, Subject (die Betreffzeile wird im ersten Schritt gewählt). Fünf Abschnitte (Introduction, Key findings, Causes of exam stress, Recommendations, Conclusion): jeder beginnt nach einer Leerzeile mit seiner Zwischenüberschrift auf einer eigenen Zeile (unterstrichen), darunter der Absatz; am Rand steht nichts. Wendungen für unpersönliches Berichten und vorsichtiges Formulieren grün unterstreichen.",
+    "flow": "6 Entscheidungen in beiden Längen: Betreff und fünf Abschnitte (jede Entscheidung ein ganzer Abschnitt). Volltext kurz (50 min): 5 min Aufgabe und Ergebnisse lesen, 6 Entscheidungen à ca. 2 min, ca. 22 min Abschreiben, 5 min Checkliste, der Rest für die Fallen. Volltext lang (100 min): dieselben Entscheidungen, die Abschnitte sind länger, daher ca. 35–40 min Abschreiben und mehr Zeit für die Besprechung der Fallen. Gerüst kurz (ca. 60 min): 4 min Aufgabe, pro Entscheidung 1 min, 5–6 min eigenes Schreiben pro Abschnitt, 1 min Vergleich mit dem Modell; in einer 50-Minuten-Stunde den Schluss als Hausübung und die Checkliste am Beginn der nächsten Stunde. Gerüst lang (100 min): gleicher Ablauf, aber 8–10 min eigenes Schreiben pro Hauptabschnitt (ca. 100 Wörter) und ca. 6 min für Einleitung und Schluss. Die Zahlen bleiben die ganze Stunde an der Tafel.",
+    "traps": "Introduction C (LSR): persönlicher, emotionaler Ton („I must say“, „I was really shocked“, „I personally think“, „far too much pressure“) statt sachlicher Einleitung. Key findings A (LSA): feel stressful statt feel stressed, become help statt get help (false friend). Causes of exam stress C (CC): „For example“, obwohl zu wenig Lernzeit eine eigene Ursache und kein Beispiel ist (→ In second place), „Otherwise“ im Sinn von „außerdem“ (false friend zu „sonst“). Recommendations A (TA): unrealistische Forderungen (Tests, Noten und Reifeprüfung abschaffen), die die Schule nicht umsetzen kann und die nicht aus der Umfrage folgen. Kürzel: TA = Erfüllung der Aufgabenstellung, CC = Kohärenz und Kohäsion, LSR = Spektrum sprachlicher Mittel, LSA = Sprachrichtigkeit.",
+    "notes": "Aufbau: Der Report hat in beiden Fassungen genau fünf Abschnitte mit Zwischenüberschrift (Einleitung, drei Hauptabschnitte, Schluss); die lange Fassung hat dieselben Entscheidungen mit längeren Abschnitten (Grenzen der Umfrage in der Einleitung, Vergleich der Altersgruppen bei den Ergebnissen, mögliche Hintergründe der Ursachen, genauere Empfehlungen und ein ausführlicherer Schluss). Sensibles Thema: vorher ankündigen, dass es um Prüfungsstress geht, und sachlich bleiben. Die Umfrage ist erfunden; keine eigenen Erfahrungen abfragen, keine Einzelfälle besprechen, niemand muss etwas über sich erzählen. Auch die Gerüst-Aufträge verlangen nur allgemeine Erklärungen. Am Ende kurz zeigen, wo es echte Unterstützung gibt: Schüler:innenberater:innen und Vertrauenslehrer:innen an der Schule, die Schulpsychologie der Bildungsdirektion und Rat auf Draht (Telefon 147, rund um die Uhr, anonym und kostenlos). Hedging-Hinweis: Weil eine freiwillige Online-Umfrage nichts beweist, sind Formulierungen wie „appears to“ oder „may“ hier inhaltlich begründet und kein bloßer Stil. Differenzierung: Schnelle schreiben im Gerüst-Modus vier Sätze mit „maybe“ über den Unterschied zwischen den Altersgruppen und formulieren sie dann mit verschiedenen Hedging-Formen um (appears to, is likely to, may be due to, tend to). Hausübung: den Report mit anderen Entscheidungen neu schreiben oder dieselbe Aufgabe für eine erfundene Umfrage zum Thema Schlaf bearbeiten."
   }
 }

@@ -138,21 +138,8 @@
       "options": [
         {
           "l": "A",
-          "id": "dear",
-          "label": "Greeting A",
-          "text": {
-            "by": "addressee",
-            "map": {
-              "name": "{{Dear Mr Walsh,}}",
-              "team": "{{Dear Sir or Madam,}}"
-            }
-          },
-          "why": "Polite and formal, and it matches the reader we have chosen."
-        },
-        {
-          "l": "B",
           "id": "trap",
-          "label": "Greeting B",
+          "label": "Greeting A",
           "trap": true,
           "crit": "TA",
           "text": {
@@ -164,6 +151,19 @@
           },
           "reject": "This greeting is not right for a job application. With a name, use the title and the family name only: ‘Dear Mr Walsh,’ (not ‘Dear Mr Ciarán Walsh’); without a name, write ‘Dear Sir or Madam,’ (‘Dear Sirs’ is old-fashioned and leaves out women).",
           "rejectDe": "Passt nicht zur Bewerbung: mit Namen nur Titel und Nachname („Dear Mr Walsh,“), ohne Namen „Dear Sir or Madam,“ („Dear Sirs“ ist veraltet und schließt Frauen aus)."
+        },
+        {
+          "l": "B",
+          "id": "dear",
+          "label": "Greeting B",
+          "text": {
+            "by": "addressee",
+            "map": {
+              "name": "{{Dear Mr Walsh,}}",
+              "team": "{{Dear Sir or Madam,}}"
+            }
+          },
+          "why": "Polite and formal, and it matches the reader we have chosen."
         }
       ]
     },
@@ -291,9 +291,9 @@
           "label": "Practical offers",
           "trap": true,
           "crit": "LSR",
-          "text": "In my first week, I would be happy to help with check-in at the harbour. I would be happy to clean and check the kayaks after each tour. I would also be happy to translate your safety briefing into German, and I would be happy to assist on the tours as soon as possible.",
-          "reject": "Good ideas, but ‘I would be happy to’ four times sounds mechanical and shows no range. Vary the phrases: ‘I would be glad to’, ‘I could also’, ‘I would be more than willing to’.",
-          "rejectDe": "Gute Ideen, aber viermal „I would be happy to“ klingt mechanisch. Formelle Wendungen abwechseln."
+          "text": "I hereby most humbly offer my services for the first week of the internship. It would be the greatest honour to assist with check-in at the harbour and to clean the kayaks after each tour. Should it please you, I shall furthermore translate your safety briefing into German, and I remain at your complete disposal for the hiking tours.",
+          "reject": "Far too stiff and old-fashioned: ‘I hereby most humbly offer my services’, ‘the greatest honour’, ‘Should it please you’ and ‘at your complete disposal’ sound servile, not professional. Formal means polite and clear: ‘I would be glad to …’, ‘I could also …’.",
+          "rejectDe": "Viel zu steif, altmodisch und unterwürfig (hereby most humbly, the greatest honour, at your complete disposal). Formell heißt höflich und klar, nicht übertrieben."
         }
       ]
     },
@@ -333,8 +333,21 @@
       "options": [
         {
           "l": "A",
-          "id": "trap",
+          "id": "match",
           "label": "Sign-off A",
+          "text": {
+            "by": "addressee",
+            "map": {
+              "name": "{{Yours sincerely,}}\n{FULLNAME}",
+              "team": "{{Yours faithfully,}}\n{FULLNAME}"
+            }
+          },
+          "why": "The closing matches the greeting and is followed by the applicant’s full name."
+        },
+        {
+          "l": "B",
+          "id": "trap",
+          "label": "Sign-off B",
           "trap": true,
           "crit": "TA",
           "text": {
@@ -346,19 +359,6 @@
           },
           "reject": "Greeting and closing do not match. ‘Dear Mr Walsh’ (name known) goes with ‘Yours sincerely’; ‘Dear Sir or Madam’ (name unknown) goes with ‘Yours faithfully’.",
           "rejectDe": "Anrede und Grußformel passen nicht zusammen: Name bekannt → Yours sincerely, Name unbekannt → Yours faithfully."
-        },
-        {
-          "l": "B",
-          "id": "match",
-          "label": "Sign-off B",
-          "text": {
-            "by": "addressee",
-            "map": {
-              "name": "{{Yours sincerely,}}\n{FULLNAME}",
-              "team": "{{Yours faithfully,}}\n{FULLNAME}"
-            }
-          },
-          "why": "The closing matches the greeting and is followed by the applicant’s full name."
         }
       ]
     }
@@ -404,7 +404,7 @@
     "prep": "A/B/C/D-Karten austeilen (ohne Karten: 1–4 Finger, die Tasten 1–4 wählen wie A–D), Beamer im Vollbild. Im Gerüst-Modus den eingebauten Timer nutzen: 5 min pro Absatz.",
     "heft": "Neue Seite: rechts oben das Datum, als Überschrift „Email“ (wie am Beamer). Darunter der Kopf: To, From, Date, Subject (der Betreff ist gleich die erste Entscheidung). Anrede in einer eigenen Zeile, danach und nach jedem Absatz eine Zeile frei, am Rand Intro, Body 1, Body 2, Body 3, Conclusion. Vor der Grußformel eine Zeile frei; Grußformel und voller Name stehen auf eigenen Zeilen. Formelle Wendungen grün unterstreichen.",
     "flow": "Volltext (50 min): 3 min Inserat lesen, 2 min Kopf abschreiben, 9 Entscheidungen à ca. 1–2 min, Abschreiben ca. 25 min, 5 min Checkliste. Gerüst (realistisch ca. 60 min): 3 min Aufgabe; Betreff, Adressat:in, Anrede und Grußformel je 1 min; pro Absatz 1 min Entscheidung, 5–6 min eigenes Schreiben, 1 min Vergleich mit dem Modell; am Ende 5 min Checkliste. In einer 50-Minuten-Stunde bei der Conclusion das Modell nur abschreiben, statt selbst zu schreiben, und die Checkliste am Beginn der nächsten Stunde machen.",
-    "traps": "Greeting B (TA): „Dear Mr Ciarán Walsh,“ (mit Titel nur der Nachname) bzw. „Dear Sirs,“ (veraltet, schließt Frauen aus). Body 1 C (TA): keine passende Erfahrung, stattdessen unnötige Details (Urlaub, Onkel, Hund). Body 2 A (LSA): If I would get, explain me, looking forward to improve. Body 3 C (LSR): viermal „I would be happy to“, keine Abwechslung bei den formellen Wendungen. Sign-off A (TA): Grußformel passt nicht zur Anrede. Kürzel: TA = Erfüllung der Aufgabenstellung, CC = Kohärenz und Kohäsion, LSR = Spektrum sprachlicher Mittel, LSA = Sprachrichtigkeit.",
+    "traps": "Greeting A (TA): „Dear Mr Ciarán Walsh,“ (mit Titel nur der Nachname) bzw. „Dear Sirs,“ (veraltet, schließt Frauen aus). Body 1 C (TA): keine passende Erfahrung, stattdessen unnötige Details (Urlaub, Onkel, Hund). Body 2 A (LSA): If I would get, explain me, looking forward to improve. Body 3 C (LSR): viel zu steifer, unterwürfiger Ton (I hereby most humbly offer my services, the greatest honour, at your complete disposal) statt höflich-sachlicher Sprache. Sign-off B (TA): Grußformel passt nicht zur Anrede. Kürzel: TA = Erfüllung der Aufgabenstellung, CC = Kohärenz und Kohäsion, LSR = Spektrum sprachlicher Mittel, LSA = Sprachrichtigkeit.",
     "notes": "Die E-Mail hat fünf Absätze (Einleitung, drei Body Paragraphs mit je einem Inhaltspunkt, Schluss) und wie bei der SRDP eine Länge: ca. 250 Wörter. Greeting und Sign-off haben nur EINE richtige Option: Sobald die Klasse die Empfängerin oder den Empfänger gewählt hat, gibt es nur eine korrekte Anrede und eine passende Grußformel. Die Karten der Adressat:innen-Entscheidung nennen Anrede und Grußformel nicht: Die Klasse soll das passende Paar selbst finden (siehe Checkliste). Die Sign-off-Falle ist die verkehrte Grußformel für dieselbe Anrede. Firma, Adresse und Ansprechperson sind erfunden. Für den vollen Namen nur erfundene Namen, keine Namen von Mitschüler:innen oder Lehrer:innen. Differenzierung: Schnelle ergänzen im Gerüst-Modus einen zusätzlichen Beispielsatz. Hausübung: Bewerbung für eine andere Stelle (z. B. Assistent:in in einem Jugendgästehaus in Schottland) mit derselben Struktur."
   }
 }

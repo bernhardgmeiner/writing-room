@@ -87,7 +87,6 @@ Each step is one decision. The engine shows `q` (English question, big), `de` (G
   "id": "intro",                 // unique within the pack
   "slot": "intro",               // slot name used in `order`; omit for a pure branching step (no text)
   "part": "Introduction",        // label shown on board and in the margin (English); grades 9–12: fixed labels, see §15
-  "len": "both",                 // "both" (default) or "long" = only in the long version
   "q": "How do we open the article?",
   "de": "Vergleicht die Einstiege: Welcher macht neugierig und führt zum Thema?",
   "own": "Write 2–3 sentences of your own that lead to the topic. Use the phrases you copied.",   // frame mode: what students write themselves (English)
@@ -111,7 +110,8 @@ Rules:
   - A trap must look tempting (similar length, plausible), not absurd. Never insult anyone in a trap.
 - `why` (valid options): one short English sentence (max ~20 words) on why this works. `reject` (traps): 1–2 short English sentences. `rejectDe`: German, 1 sentence.
 - Branching: a step without `slot` is a pure choice (e.g. "angle": which position/story). Later texts can depend on it (see `by` below). Use at most 2 branching keys per pack. The first step of a pack is often the choice of angle/story/position.
-- Steps: grade 5: 5–6; grades 6–8: 6–8; grades 9–12: 7–9 (short), up to 12 (long).
+- **One decision = one whole paragraph** (all grades, §15): every option of a paragraph step is a complete paragraph; the class never decides in the middle of a paragraph.
+- Steps (decisions): grade 5: 5–6; grades 6–8: 6–8; grades 9–12: one per paragraph (five) plus title, subject, greeting, sign-off and branching steps (6–10); the long version has the same steps.
 
 ### Text values and dependencies
 
@@ -120,6 +120,8 @@ Rules:
 ```json
 "text": { "by": "angle", "map": { "pro": "…", "con": "…" } }
 ```
+
+In a pack with a short and a long version, an option of a paragraph step can also have `textLong`: the whole paragraph in its long form (§15).
 
 `by` must be the id of an earlier step; `map` must contain every option id of that step except traps. Keep maps small; prefer texts that work for every earlier choice. A text can include `\n` for a line break inside a block. In reports, a block may start with a section heading line: `### Heading text\n` followed by the paragraph.
 
@@ -148,7 +150,7 @@ Rules:
 The final screen renders the text in the right layout; copy screens show the margin labels and tell students where to write.
 
 - `article`: title + paragraphs. `meta.publication` optional (an invented school magazine or youth website, never a real one). Also used for a report on a school website (recount).
-- `blog`: title, then "user · date", paragraphs, call to comment. `meta.user` (invented, neutral username).
+- `blog`: title, then “user · date, time” (the lesson day and its start time, as on matura.bernhardgmeiner.com: “22 March 2026, 19:34”), paragraphs, call to comment. `meta.user` (invented, neutral username).
 - `email`: `meta.to`, `meta.from` (invented addresses; ALWAYS the reserved ending .example, e.g. students `name@classmail.example`, organisations `info@lakeside-club.example`; never a real or registrable domain such as .at, .ie, .eu, .com or the pseudo-ending .mail; the validator rejects other endings), `meta.date` optional ("{TODAY}" or a fixed date such as "3 May 2027"; without it the lesson day). The engine writes the header in the order of the Matura writing guide, in every grade and also for informal e-mails: **To, From, Date, Subject** (final screen, copy text, exercise-book preview, layout screen, copy page). Steps `subject`, `greeting`, paragraphs, `signoff` (line 1 = formula only, line 2 = name).
 - `letter` (letter to the editor): it has the **same e-mail header (To, From, Date, Subject)** as an e-mail. Steps `subject` (like an e-mail; not a paragraph), `greeting` (“Dear Editor,” or “Dear Sir or Madam,”), five paragraphs, `signoff` (line 1 = “Yours faithfully,” only, line 2 = the full name). Under the name the engine adds the town, so the letter ends with formula, full name, town. The **first sentence of the Introduction names the article (its title in “…”), the publication and the date** (“I am writing in response to your article “Young people already travel enough”, which appeared in the Valley Courier on 3 May.”). Schema:
 
@@ -211,9 +213,10 @@ Grades 11–12 follow the format of the Matura writing guide (the validator enfo
 | `essay` | only long: "around 400 words", 360–440 |
 | all other text types (article, blog, report …) | short "around 250 words" 225–275; long "around 400 words" 360–440 |
 
-- Keep the longest path at least 3 words below `max` (class answers to gaps can be longer). Grades 5–8: one length (key `short`); grades 9–10: short and long; grades 11–12: as in the table. Where a pack has both, the long version adds steps with `"len": "long"`: continuation steps (`"join": true`) that make paragraphs longer, never new paragraphs (§15).
-- A pack with one length has only that key in `lengths`, `minutes.full`/`minutes.frame`, `task.words` and `focus.min` (an essay: only `long`; a grade 11–12 e-mail or letter: only `short`). In a long-only essay every step is always used; continuation steps (`"join": true`) are still the way to build a longer paragraph, `"len"` may stay out. The engine then shows one length (library “ca. 400 Wörter”, setup without a length choice).
-- Decisions: grade 5: 5–6; grades 6–8: 6–8; grades 9–12: 7–9 (short), up to 12 (long; also a long-only essay). 50 minutes per short lesson; long lessons: grade 9 about 60 (frame 70–75), grades 10–12 about 100 (one double lesson).
+- Keep the longest path at least 3 words below `max` (class answers to gaps can be longer). Grades 5–8: one length (key `short`); grades 9–10: short and long; grades 11–12: as in the table. Where a pack has both, the long version has the same steps; its paragraphs are longer: the options carry a long text, `textLong` (§15). It never adds a paragraph.
+- A pack with one length has only that key in `lengths`, `minutes.full`/`minutes.frame`, `task.words` and `focus.min` (an essay: only `long`; a grade 11–12 e-mail or letter: only `short`). In a long-only essay each option is a whole paragraph of the long text (`text`, no `textLong`). The engine then shows one length (library “ca. 400 Wörter”, setup without a length choice).
+- Decisions: grade 5: 5–6; grades 6–8: 6–8; grades 9–12: 6–10 (one per paragraph plus title, subject, greeting, sign-off, branching; the same in both lengths).
+- Card length: at most 105 words per option (§15). 50 minutes per short lesson; long lessons: grade 9 about 60 (frame 70–75), grades 10–12 about 100 (one double lesson).
 - Copying speed is ~10–15 words per minute (grade 5: slower, ~6–8).
 
 ## 8. Checks (final screen checklist)
@@ -239,7 +242,7 @@ Concrete and short. `flow` names the minutes per phase for full/frame and short/
 - **Neutral labels:** option labels describe the approach, never the fault ("Start with a definition" is fine; "Keep it simple", "Use the words of the task", "Copy the task" are giveaways). Same for `de` hints: they may tell students WHAT to look at ("Achtet auf Zeitformen und Präpositionen"), but never reveal WHETHER or WHERE a trap is ("Ist eine Option fehlerhaft?" / "Hier gibt es keine Falle" are forbidden).
 - **No school/class/book references on the board:** task, q, de, own, option texts, why/reject and gap questions must not mention class names, page numbers, units or any textbook. Version 2: this applies to `teacher` too (see §0). Avoid "our school" details that only fit one school.
 - **Gaps:** name gaps need the German hint "Keine Namen von Mitschüler:innen oder Lehrer:innen." Gaps that are phrases, not names, set `"cap": false` (the engine only capitalises names). A gap used after its own step must appear in EVERY valid option of its step. Never use gaps in `meta`; `meta.date` may be "{TODAY}" (shows today's date).
-- **Unique step parts:** every `part` label is unique within a pack (it is copied into the margin). Keep them short: Introduction, Body 1, Body 2, Conclusion, Title, Subject, Greeting, Sign-off. Exception: a continuation step (`"join": true`) has the part of the paragraph it continues. Grades 9–12 use the fixed paragraph labels of §15 ("Body paragraph 1" …, no "Body 2b").
+- **Unique step parts:** every `part` label is unique within a pack (it is copied into the margin). Keep them short: Introduction, Body 1, Body 2, Conclusion, Title, Subject, Greeting, Sign-off. Grades 9–12 use the fixed paragraph labels of §15 ("Body paragraph 1" …, no "Body 2b").
 - **Report data:** content that needs the task figures must still read correctly on its own; the engine now offers a Task button, but keep figures in the texts exact.
 - **SRDP criteria for traps (mapping of the Matura writing guide, binding):**
   - **TA** (Task Achievement): irrelevant/off-topic content, missing content point, word count, and text type conventions: layout, header (e-mail: To, From, Date, Subject), form of greeting and sign-off (§6), missing elements such as headings, wrong text type.
@@ -253,9 +256,9 @@ Concrete and short. `flow` names the minutes per phase for full/frame and short/
 - **Hint lines never give traps away:** every step (with or without trap) gets a criterion line in `de` of the same kind ("Achtet auf Zeitformen und Wortwahl."). No taste questions ("Welche gefällt euch?") only on trap-free steps; title/subject steps have neither.
 - **Trap family:** trap labels look like valid labels (no "A clear …", "Lots of …", "Everything …", "Very polite"); a trap is never the shortest card of its step by a clear margin; if the valid options contain a gap blank, the trap contains the same gap; vary the misused linkers between packs of the same class; a trap contains exactly the errors its `reject` names.
 - **Frame mode:** every sentence-initial focus phrase sits inside `{{…}}` (the validator warns). Gaps are never glued to characters inside an own stretch (`{N}%`, `RR-{ORDER})`): put the phrase into the scaffold. `own` must match what the dotted lines ask for ("two sentences", "two examples"); it starts with "Copy the frame." / "Copy the blue words." followed by "Then …" (the compare step quotes the "Then …" part as "Check:"). Facts students need in own parts: tell the teacher in `teacher.flow` to write them on the board. Own stretches above ~50 words need an extra scaffold piece.
-- **Engine-generated instructions (do not duplicate in packs):** e-mail and letter to the editor = header To, From, Date (then the Subject line, decided as a step); blog = title first, then "user · date"; report headings on their own line, underlined, no margin word; sign-off = "Skip one line. Write “<formula>” on its own line and the name on the next line" (line 1 of a sign-off text = formula only); title/subject in frame mode = "Copy it, or write your own". So title/subject `own` gives content guidance only; sign-off `own`: "Copy the closing formula and, on the next line, the full name we chose."
+- **Engine-generated instructions (do not duplicate in packs):** e-mail and letter to the editor = header To, From, Date (then the Subject line, decided as a step); blog = title first, then "user · date, time"; report headings on their own line, underlined, no margin word; sign-off = "Skip one line. Write “<formula>” on its own line and the name on the next line" (line 1 of a sign-off text = formula only); title/subject in frame mode = "Copy it, or write your own". So title/subject `own` gives content guidance only; sign-off `own`: "Copy the closing formula and, on the next line, the full name we chose."
 - **Gaps:** gaps that ask for a first name and a family name set `"minWords": 2`. A text gap whose longer answers could push the longest path over `max` sets `"maxWords"` (the engine rejects longer answers, the validator checks the longest path with that many words; `max` stays the character limit of the input field). Name-like defaults (capital letter, no digit) reject purely numeric answers. Verb-phrase gaps set `"verbPhrase": true` (engine removes "to", turns "my" into "their"). A gap at the start of an own stretch shows inline in frame mode; later gaps only appear in the dotted line's label.
-- **Repetition across paragraphs:** no linker twice in neighbouring paragraphs (or twice in one paragraph) or three times on any path; no paragraph opener repeated; reports: at most two sections start with "The". A continuation block (§15) belongs to its paragraph: its linkers count for that paragraph, and its first word must not repeat the first word of the block it continues.
+- **Repetition across paragraphs:** no linker twice in neighbouring paragraphs (or twice in one paragraph) or three times on any path; no paragraph opener repeated; reports: at most two sections start with "The".
 - **Copyright and facts:** no sentence from any textbook; invented data is presented as an example ("a simplified example"); every person is introduced in the task; e-mail domains use the reserved ending .example.
 - **Focus label:** `focus.label` and `focus.labelDe` are unique inside a Schulstufe (the library shows „Schwerpunkt: labelDe“ and search finds it; the build fails on duplicates).
 - **Teacher notes:** `heft` names the board heading exactly (Story, Description, Email, News report, Article, Blog post, Essay, Report, Postcard, Message, Diary, Letter, Review, Invitation), date on the right; `prep` names what to prepare (cards, exercise books) and, grades 5–8, an "Einsatz ab …" hint (which grammar the class must know); `flow` gives realistic frame times (5–6 min own writing per paragraph at B1); `minutes.frame.short` is 60 if a 50-minute frame lesson is unrealistic, and `flow` says how to fit it (last paragraph or checklist as homework). SRDP criteria in German notes: Erfüllung der Aufgabenstellung, Kohärenz und Kohäsion, Spektrum sprachlicher Mittel, Sprachrichtigkeit.
@@ -277,7 +280,7 @@ Concrete and short. `flow` names the minutes per phase for full/frame and short/
 ### Five paragraphs, always
 
 - In grades 9–12 EVERY text, in every length and on every path, has exactly **five paragraphs**: Introduction, Body paragraph 1, Body paragraph 2, Body paragraph 3, Conclusion. Title, subject line, greeting and sign-off are not paragraphs. This holds for every text type: in an email or a letter the opening paragraph is the Introduction and the closing paragraph the Conclusion; in a report each of the five paragraphs starts with its `### Section heading` (headings stay inside the paragraphs, §6).
-- **The long version never adds a paragraph.** It makes paragraphs longer: a long-only step continues a paragraph (`"join": true`, below). The length targets of §7 stay as they are. Grades 11–12: an e-mail or a letter has only the short version (around 250 words), an essay only the long one (around 400 words, five paragraphs of about 70–90 words, built with continuation steps where a paragraph needs two decisions).
+- **The long version never adds a paragraph.** It has the same decisions; its paragraphs are longer (`textLong`, below). The length targets of §7 stay as they are. Grades 11–12: an e-mail or a letter has only the short version (around 250 words), an essay only the long one (around 400 words, five paragraphs: introduction and conclusion about 55–75 words, body paragraphs about 85–105).
 - The three content points of the task are spread over the three body paragraphs; the conclusion is its own paragraph (it never only repeats one body paragraph).
 - **Letter to the editor:** the first sentence of the Introduction names the article (title in “…”), the publication and the date; then the writer's position. The header (To, From, Date, Subject) and the subject line are not paragraphs.
 - **Essays:** rhetorical questions only in the Introduction; the body paragraphs and the conclusion state their points. The title is a statement, never a question (a question title sounds like an article).
@@ -289,34 +292,35 @@ Concrete and short. `flow` names the minutes per phase for full/frame and short/
 - The `part` of the five paragraph steps is exactly `"Introduction"`, `"Body paragraph 1"`, `"Body paragraph 2"`, `"Body paragraph 3"`, `"Conclusion"`, in this order in `order`. Other steps keep their own parts (Title, Subject, Greeting, Sign-off, branching steps such as Angle or Position).
 - The board shows the full label (big) above the question. In the exercise book the engine uses short margin words, the same everywhere (copy page, "Write … in the margin"): **Intro, Body 1, Body 2, Body 3, Conclusion**. When `teacher` notes name margin words, use these short forms.
 
-### Continuation steps: `"join": true`
+### One decision per paragraph; the long version: `textLong`
 
-A continuation step is a normal decision step (2–4 options, traps allowed, `why`, `own`, gaps, `by` maps as usual) whose block is appended to a paragraph instead of starting a new one:
+Binding since 22.10.2026, for every grade and every text type: **one decision is one whole paragraph.** The class never decides in the middle of a paragraph, and the board never shows a paragraph that grows from two decisions. There are no continuation steps (`"join"`) and no long-only steps (`"len"`); the validator rejects both.
 
-- Its block is added to the **nearest earlier non-join content step in `order`** on the same path, after one space: on the final screen and in the copy text it is the same paragraph (no new line, no margin word, one `<p>`); word and focus counts count it with its paragraph.
-- Copy screens tell the class: full mode "Continue the same paragraph: no new line."; frame mode (blue words + own words) "Continue the same paragraph after your own last sentence: no new line." The decide screen shows the label with "· continued" and the paragraph so far. Do not repeat this in `own`/`ownDe`.
-- `part` = the part of the paragraph it continues (e.g. `"Body paragraph 2"`).
-- `q` is the bare question (the board already shows “· continued” above it): never “Long version: …” or “Body paragraph 2 continued: …”. `de` starts with what goes on (“Der Absatz geht weiter …”, “Body paragraph 1 geht weiter …”), never with “Nur in der langen Fassung” (the class does not know there is a long version) and never names a paragraph by its position (“der erste Absatz” is the Introduction).
-- Usually `"len": "long"`; `"both"` is allowed when a paragraph needs two decisions in both lengths.
-- Its slot is listed in `order` directly after the paragraph it continues (or after an earlier continuation of the same paragraph), and the step comes **after** that paragraph's step in `steps` (the class decides the paragraph first).
-- Not allowed: a continuation as the first content step, a continuation of the title, subject, greeting or sign-off, and a `### heading` in any of its options (a heading would start a new section).
-- Every option must start a new sentence that reads on from the last sentence of EVERY option the class may have chosen before (all paths); write it so that it would also make sense if the reader had not noticed the paragraph break (it has none).
+- Every option of a paragraph step is a complete paragraph: topic sentence, development, last sentence. The class compares whole paragraphs.
+- **Long version:** in a pack with a short and a long version, the long version has exactly the same steps and options. An option of a paragraph step that is longer in the long version has a second text, `textLong`: the same paragraph (same approach, same idea, same label and `why`), written out longer. `textLong` is a complete, smoothly written paragraph, never the short text with an extra block glued on.
+- In one step, either all options (traps too) have `textLong` or none. `textLong` has the same shape as `text` (a string, or a `{by, map}` with the same `by`). Title, subject, greeting, sign-off and branching steps never have one.
+- The long version makes the text longer evenly: the body paragraphs grow by a similar amount (the introduction and conclusion may grow too). A trap keeps its error in both lengths and stays as long as the valid cards of its step (±25 %) in both lengths.
+- Frame mode: a step with `textLong` needs `ownLong`/`ownLongDe`, the writing prompt for the longer paragraph (same form as `own`: “Copy the frame. Then …”). Both texts follow the scaffold rules (§4).
+- Card length: at most 105 words per option in either length (three cards side by side on a 1024×768 board). Four options stand in two rows: a step with four options keeps every card at 70 words or fewer in both lengths; longer paragraphs get at most three options. A text of about 400 words: introduction and conclusion about 55–75 words, body paragraphs about 85–105.
+- Gaps: a gap may appear only in the long texts of a step; if a later step uses it, every valid option of its step contains it in that length.
 
-Example (a long-only continuation of Body paragraph 2; `order`: `[…, "p2", "p2more", "p3", …]`):
+Example (Body paragraph 2 of an article with a short and a long version):
 
 ```json
-{
-  "id": "p2more", "slot": "p2more", "part": "Body paragraph 2", "join": true, "len": "long",
-  "q": "How do we make the point clearer?",
-  "de": "Der Absatz geht weiter: ein Beispiel oder eine Erklärung. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
-  "own": "Copy the frame. Then add one example from your own town in two sentences.",
-  "ownDe": "Schreibt das Gerüst ab und ergänzt ein Beispiel aus eurem Ort (zwei Sätze).",
+{ "id": "p2", "slot": "p2", "part": "Body paragraph 2",
+  "q": "Body paragraph 2: how does the project help the town?",
+  "de": "Zweiter Inhaltspunkt: was das Projekt der Stadt bringt. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+  "own": "Copy the frame. Then give one example in two sentences.",
+  "ownDe": "Gerüst abschreiben, dann ein Beispiel in zwei Sätzen.",
+  "ownLong": "Copy the frame. Then give two examples and say what changed for the town.",
+  "ownLongDe": "Gerüst abschreiben, dann zwei Beispiele und was sich für die Stadt verändert hat.",
   "options": [
-    { "l": "A", "id": "example", "label": "A personal example", "text": "{{To give an example, my younger brother}} …", "why": "A concrete case makes the argument easy to picture." },
-    { "l": "B", "id": "figures", "label": "A comparison", "text": "{{[[In comparison with]] other towns,}} …", "why": "A comparison shows that the idea works elsewhere." },
-    { "l": "C", "id": "trap", "label": "A second argument", "text": "…", "trap": true, "crit": "CC", "reject": "This starts a new argument in the middle of the paragraph.", "rejectDe": "Hier beginnt mitten im Absatz ein neues Argument." }
-  ]
-}
+    { "l": "A", "id": "example", "label": "A concrete example", "why": "A concrete case makes the benefit easy to picture.",
+      "text": "{{The town has changed since the project started.}} …",
+      "textLong": "{{The town has changed since the project started.}} … (the same paragraph, longer)" },
+    { "l": "B", "id": "trap", "label": "A list of benefits", "trap": true, "crit": "CC", "reject": "…", "rejectDe": "…",
+      "text": "…", "textLong": "…" }
+  ] }
 ```
 
 ### Cohesion (binding)
@@ -325,10 +329,10 @@ All options must be built so that, **whatever blocks are chosen, the finished te
 
 - Each body paragraph opens with a **topic sentence that links back** to what came before: a reference ("This problem …", "Apart from money, …"), a linker or a contrast that is true on EVERY path (never "As mentioned above, the price …" when the price may not have been mentioned).
 - The **conclusion picks up the introduction and the three body paragraphs** (their points, not word for word) and rounds them off; it brings no new argument.
-- **No paragraph reads as an isolated block**, and no continuation block reads as an afterthought: it continues the thought of the paragraph it belongs to.
+- **No paragraph reads as an isolated block**, and inside a paragraph every sentence follows from the one before: a long text is one paragraph, never a short paragraph with an added block.
 - Where a link depends on an earlier choice (angle, position, the example chosen in the introduction), use a `by` map (§4) instead of a vague link.
-- Linkers must not repeat (§12): never twice in the same or neighbouring paragraphs, never three times on any path; a continuation block counts for its paragraph.
+- Linkers must not repeat (§12): never twice in the same or neighbouring paragraphs, never three times on any path.
 
 ### What the validator checks (grades 9–12)
 
-Errors: not exactly 5 paragraph steps (content steps with a slot that are not title/subject/greeting/signoff and not join) in every length; paragraph parts other than the five labels in this order; a continuation step whose part differs from its paragraph, that is the first content step, continues a title/subject/greeting/sign-off, comes before its paragraph in `steps`, or contains `###`; `"join"` other than `true`. Warnings: linkers repeated in one paragraph, in neighbouring paragraphs or three times on a path (besides the usual linkers also *while*, *yet*, *though*, *even if*, *then*, *also* at the start of a sentence or after a comma, *too* at the end of a sentence, *now* at the start of a sentence); a continuation block that starts with the same word as the block it continues; **paragraph balance**: on some path a paragraph (with its continuation blocks) is more than 2.5 times as long as the shortest body paragraph (the long version makes all paragraphs longer, not one). The `--samples` output prints one line per paragraph (continuations included). Grades 5–8: no five-paragraph rule (continuation steps may be used there too, with the same rules).
+Every length is checked with its own texts (`textLong` in the long version). Errors: `join` or `len` in a step; `textLong` in a pack with one length, outside paragraph steps, on only some options of a step, with another shape than `text`, or not longer than `text`; a step with `textLong` in frame mode without `ownLong`/`ownLongDe`; more than 115 words on one card; not exactly 5 paragraph steps (content steps with a slot that are not title/subject/greeting/signoff); paragraph parts other than the five labels in this order. Warnings: more than 105 words on one card; linkers repeated in one paragraph, in neighbouring paragraphs or three times on a path (besides the usual linkers also *while*, *yet*, *though*, *even if*, *then*, *also* at the start of a sentence or after a comma, *too* at the end of a sentence, *now* at the start of a sentence); **paragraph balance**: on some path a paragraph is more than 2.5 times as long as the shortest body paragraph; fewer than 4 or more than 6 traps. Grades 5–8: no five-paragraph rule, but one decision per paragraph as everywhere.

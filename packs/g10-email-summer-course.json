@@ -228,12 +228,15 @@
       "de": "Erster Inhaltspunkt: unsere Gründe, das eigene Englisch zu verbessern. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
       "own": "Copy the frame. Then give two reasons the writer might have and explain one of them.",
       "ownDe": "Gerüst abschreiben, dann zwei mögliche Gründe der schreibenden Person nennen und einen davon erklären.",
+      "ownLong": "Copy the frame. Then give two reasons the writer might have and describe their level: one strong point and one difficulty. You can invent them.",
+      "ownLongDe": "Gerüst abschreiben, dann zwei mögliche Gründe der schreibenden Person nennen und ihr Niveau beschreiben: eine Stärke und eine Schwierigkeit. Die Angaben dürfen erfunden sein.",
       "options": [
         {
           "l": "A",
           "id": "confidence",
           "label": "Speaking with confidence",
           "text": "{{My main reason for choosing a course abroad is that}} I want to become more confident when I speak. At school we learn a lot of grammar, but we rarely have the chance to use English outside the classroom. {{What is more,}} good English will be essential for my future, as I hope to study international business.",
+          "textLong": "{{My main reason for choosing a course abroad is that}} I want to become more confident when I speak. {{My reading and listening are quite good:}} I can follow most films in English, and in my last school report I got a ‘Gut’, the second-best mark at Austrian schools. {{However, I still find it difficult to}} use the right tenses in a fast conversation, as we rarely speak English outside the classroom. {{What is more,}} good English will be essential for my future because I hope to study international business.",
           "why": "A clear topic sentence names the main reason, then ‘what is more’ adds a second one."
         },
         {
@@ -241,36 +244,10 @@
           "id": "exams",
           "label": "Exams and travelling",
           "text": "{{There are two reasons why I want to improve my English.}} {{Firstly,}} I will take my school-leaving exams in two years, and I am aiming for a good result. {{Secondly,}} I love travelling, and I have noticed that English helps me to talk to people all over the world.",
+          "textLong": "{{There are two reasons why I want to improve my English.}} {{Firstly,}} I will take my school-leaving exams in two years and am aiming for a good result. {{At the moment, my English is at about}} B1 level: I read and listen well, but writing longer texts without mistakes is still hard for me. {{Secondly,}} I love travelling, and English helps me to talk to people all over the world, but I am often too shy to start a conversation. Two weeks of daily practice would make me braver.",
           "why": "The topic sentence announces two reasons, and ‘firstly’ and ‘secondly’ make the order clear."
         }
       ]
-    },
-    {
-      "id": "level",
-      "slot": "level",
-      "part": "Body paragraph 1",
-      "len": "long",
-      "q": "How good is our English at the moment?",
-      "de": "Body paragraph 1 geht weiter: unser aktuelles Englischniveau, damit die Schule uns richtig einteilen kann. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
-      "own": "Copy the frame. Then describe the writer’s level, strong points and one difficulty. You can invent them.",
-      "ownDe": "Gerüst abschreiben, dann Niveau, Stärken und eine Schwierigkeit der schreibenden Person beschreiben. Die Angaben dürfen erfunden sein.",
-      "options": [
-        {
-          "l": "A",
-          "id": "skills",
-          "label": "Strengths and a weakness",
-          "text": "{{As for my present level,}} I can follow most films and series in English and read short novels without a dictionary. {{In my last school report, I received}} a ‘Gut’ in English, which is the second-best mark in the Austrian system. {{However, I still find it difficult to}} use the right tenses in a fast conversation. {{For this reason,}} a course with plenty of speaking practice would suit me best.",
-          "why": "Explains the Austrian mark for a reader abroad and says what kind of course we need."
-        },
-        {
-          "l": "B",
-          "id": "b1",
-          "label": "Our level, honestly",
-          "text": "{{At the moment, according to my teachers,}} my English is at about B1 level. {{My strong points are}} reading and listening because I often watch videos and series in English without subtitles. {{On the other hand,}} writing longer texts without mistakes is still a challenge for me, and I am sometimes too shy to speak in a group. {{I hope that two weeks of daily practice will help me}} to overcome my shyness and speak more fluently.",
-          "why": "Gives a level the school understands and is honest about what we still need to practise."
-        }
-      ],
-      "join": true
     },
     {
       "id": "course",
@@ -280,6 +257,8 @@
       "de": "Zweiter Inhaltspunkt: unsere Fragen zum Kurs und zur Gastfamilie. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
       "own": "Copy the frame. Then write your own polite questions about the lessons and the host family.",
       "ownDe": "Gerüst abschreiben, dann eigene höfliche Fragen zum Unterricht und zur Gastfamilie formulieren.",
+      "ownLong": "Copy the frame. Then write three or four polite questions of your own about the lessons and the host family.",
+      "ownLongDe": "Gerüst abschreiben, dann drei bis vier eigene höfliche Fragen zum Unterricht und zur Gastfamilie formulieren.",
       "options": [
         {
           "l": "A",
@@ -288,6 +267,7 @@
           "trap": true,
           "crit": "LSA",
           "text": "I have some questions to the course. Could you tell me how many lessons there are every day and how big are the groups? It would be helpful to know whether the teachers have experience with teenagers. I would like to live by a host family with children of my age because then I can speak English at home.",
+          "textLong": "I have some questions to the course. Could you tell me how many lessons there are every day and how big are the groups? It would be helpful to know whether the teachers have experience with teenagers. I would like to live by a host family with children of my age because then I can speak English at home in the evenings. If possible, the family should live near the school, so that I can walk there every morning.",
           "reject": "Three typical mistakes: ‘questions to the course’ (→ questions about), ‘how big are the groups’ (→ how big the groups are) and ‘live by a host family’ (→ live with).",
           "rejectDe": "Drei typische Fehler: questions to → questions about, how big are the groups → how big the groups are (indirekte Frage), live by → live with."
         },
@@ -296,6 +276,7 @@
           "id": "lessons",
           "label": "Lessons first, then the family",
           "text": "{{With these goals in mind, I have a few questions}} about the course and the accommodation. {{[[Could you please tell me]]}} how many lessons there are each day and how large the groups are? {{[[I would also like to know]] whether}} I could stay with a host family, ideally one with teenagers, so that I can practise my English at home.",
+          "textLong": "{{With these goals in mind, I have a few questions}} about the course and the accommodation. {{[[Could you please tell me]]}} how many lessons there are each day and how large the groups are? {{[[It would help me to know]]}} how much time is spent on speaking practice. {{[[I would also like to know]] whether}} I could stay with a host family, ideally one with teenagers, so that I can practise my English at home and not only in class.",
           "why": "The topic sentence links back to our reasons and announces both topics. The questions are polite and indirect."
         },
         {
@@ -303,6 +284,7 @@
           "id": "teachers",
           "label": "Teachers and travel to school",
           "text": "{{To make the most of these two weeks,}} I need a few details about the course and the accommodation. {{[[Please let me know]] whether}} the teachers are experienced with teenagers and how many hours of lessons there are per week. {{[[I would also be interested to know]]}} how far the host families live from the school and whether they provide all meals.",
+          "textLong": "{{To make the most of these two weeks,}} I need a few details about the course and the accommodation. {{[[Please let me know]] whether}} the teachers are experienced with teenagers and how many hours of lessons there are per week. {{[[I would also be interested to know]]}} how far the host families live from the school and whether they provide all meals. I should mention that I am a vegetarian, and I hope that this will not be a problem for the family.",
           "why": "The topic sentence picks up the two weeks from the start. Each question uses a different formal phrase."
         }
       ]
@@ -315,12 +297,15 @@
       "de": "Dritter Inhaltspunkt: unsere Fragen zu Freizeitprogramm und Kosten. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
       "own": "Copy the frame. Then ask your own questions about free time and the price.",
       "ownDe": "Gerüst abschreiben, dann eigene Fragen zu Freizeit und Preis formulieren.",
+      "ownLong": "Copy the frame. Then ask your own questions about free time and the price, and link one of them to the writer’s hobbies.",
+      "ownLongDe": "Gerüst abschreiben, dann eigene Fragen zu Freizeit und Preis formulieren und eine davon mit den Hobbys der schreibenden Person verbinden.",
       "options": [
         {
           "l": "A",
           "id": "free",
           "label": "Free time, then the price",
-          "text": "{{Finally, [[I would like to ask about]]}} the leisure programme, as I am keen to see more of Malta. {{[[I was wondering whether]]}} there are afternoon activities or trips, for example to Valletta or Gozo, and whether they cost extra. {{[[It would be very useful to know]]}} the total cost, including accommodation and meals.",
+          "text": "{{Finally, [[I would like to ask about]]}} the leisure programme: I am keen to see more of Malta. {{[[I was wondering whether]]}} there are afternoon activities or trips, for example to Valletta or Gozo, and whether they cost extra. {{[[It would be very useful to know]]}} the total cost, including accommodation and meals.",
+          "textLong": "{{Finally, [[I would like to ask about]]}} the leisure programme: I am keen to see more of Malta. {{[[I was wondering whether]]}} there are afternoon activities or trips, for example to Valletta or Gozo, and whether they cost extra. Since I love swimming, [[I would be glad to hear]] whether there are any beach or snorkelling afternoons. {{[[It would be very useful to know]]}} the total cost, including accommodation and meals, and when the payment is due.",
           "why": "‘Finally’ signals the last point. First the activities, then the total price."
         },
         {
@@ -329,16 +314,18 @@
           "label": "Price, family and trips",
           "trap": true,
           "crit": "CC",
-          "text": "How much does everything cost, and do I have to pay before the course starts? And is the host family near the school? Then there are the trips. My cousin did a language course last year, and she said the trips were the best part of her stay, so they are important to me too.",
-          "reject": "No topic sentence, and the ideas jump around: the price, the host family again (already asked) and then a cousin’s story. One topic per paragraph, in a clear order.",
+          "text": "It would be useful to know how much everything costs and whether I have to pay before the course starts. I would also like to know if the host family lives near the school. Then there are the trips. My cousin did a language course last year, and she said the trips were the best part of her stay, so they are important to me too.",
+          "textLong": "It would be useful to know how much everything costs and whether I have to pay before the course starts. I would also like to know if the host family lives near the school. Then there are the trips. My cousin did a language course last year, and she said the trips were the best part of her stay. Every Saturday her group visited a different town, and on some evenings they had barbecues with their host families. That is why the trips are important to me too.",
+          "reject": "No topic sentence, and the ideas jump around: the price, the host family again (that belongs in the paragraph before) and then a cousin’s story. One topic per paragraph, in a clear order.",
           "rejectDe": "Kein Topic Sentence, die Gedanken springen (Preis, wieder Gastfamilie, Cousine). Ein Absatz, ein Thema, klare Reihenfolge."
         },
         {
           "l": "C",
           "id": "costs",
           "label": "The price, then free time",
-          "text": "{{Another question concerns the price.}} {{[[Would it be possible to receive]]}} a list of all costs, including the host family stay and the airport transfer? {{When it comes to free time,}} I enjoy sport and music, so [[I would be glad to hear about]] any clubs or trips in the afternoons and at weekends.",
-          "why": "The topic sentence names the price first. The free-time question is linked to our own hobbies."
+          "text": "{{Lastly, I have questions about the price and free time.}} {{[[Would it be possible to receive]]}} a list of all costs, including the host family and the airport transfer? {{As for free time,}} I enjoy sport and music, so [[I would be glad to hear about]] any clubs or trips in the afternoons and at weekends.",
+          "textLong": "{{Lastly, I have questions about the price and free time.}} {{[[Would it be possible to receive]]}} a list of all costs, including the host family and the airport transfer? {{[[I would also appreciate information about]]}} the payment deadline. {{As for free time,}} I enjoy sport and music, so [[I would be glad to hear about]] any clubs or trips in the afternoons and at weekends. A guided tour of the old town of Valletta would interest me, too.",
+          "why": "The topic sentence names both topics; the free-time question is linked to our hobbies."
         }
       ]
     },
@@ -350,19 +337,23 @@
       "de": "Der Schluss bedankt sich und bittet um eine Antwort. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
       "own": "Copy the frame. Then link the end back to the writer’s questions or reasons in your own words.",
       "ownDe": "Gerüst abschreiben, dann mit eigenen Worten auf die Fragen oder die Gründe der schreibenden Person zurückverweisen.",
+      "ownLong": "Copy the frame. Then link the end back to the writer’s questions and reasons in one or two sentences of your own.",
+      "ownLongDe": "Gerüst abschreiben, dann in ein bis zwei eigenen Sätzen auf die Fragen und Gründe der schreibenden Person zurückverweisen.",
       "options": [
         {
           "l": "A",
           "id": "deadline",
           "label": "Thanks and a reason to reply soon",
-          "text": "{{[[Thank you in advance for]]}} answering my questions about the course, the host family and the activities. As my parents and I must decide this month, {{[[I would appreciate a reply]]}} soon.",
+          "text": "{{[[Thank you in advance for]]}} answering my questions about the course, the host family and the activities. {{[[I would appreciate a reply]]}} soon because my parents and I must decide this month.",
+          "textLong": "{{[[Thank you in advance for]]}} answering my questions about the course, the host family and the activities. Your answers will help my parents and me to decide whether a course in Malta is right for me. {{[[I would appreciate a reply]]}} soon because we have to book this month.",
           "why": "It sums up our questions, thanks the reader and gives a good reason for a quick reply."
         },
         {
           "l": "B",
           "id": "forward",
           "label": "Thanks and a classic last line",
-          "text": "{{[[Thank you for taking the time to]] answer}} my questions. A course at your school would be the perfect way to improve my English, {{and [[I look forward to hearing from you]]}} soon.",
+          "text": "{{[[Thank you for taking the time to]] answer}} my questions. A course at your school would be the perfect way to improve my English. {{[[I look forward to hearing from you]]}} soon.",
+          "textLong": "{{[[Thank you for taking the time to]] answer}} my questions about the course, the host family and the costs. Two weeks at your school would be the perfect way to improve my English and to get to know Malta better. {{[[I look forward to hearing from you]]}} soon.",
           "why": "It goes back to our reason for writing and ends with the classic last sentence of a formal email."
         }
       ]
@@ -413,7 +404,6 @@
     "greeting",
     "opening",
     "reasons",
-    "level",
     "course",
     "activities",
     "closing",
@@ -444,10 +434,10 @@
   ],
   "teacher": {
     "aim": "Die Klasse baut gemeinsam eine formelle Anfrage-E-Mail (B1) an eine Sprachschule auf Malta und übt dabei die Konventionen der formellen E-Mail: Betreff, passende Anrede und Grußformel, Zweck im ersten Satz, ein Punkt pro Absatz, höfliche indirekte Fragen.",
-    "prep": "A/B/C/D-Karten austeilen, Beamer im Vollbild. An der Tafel eine kleine Tabelle vorbereiten: „Dear Sir or Madam → Yours faithfully“ und „Dear Ms … → Yours sincerely“. Nach Schritt 1 markieren, welche Zeile für unsere E-Mail gilt. Im Gerüst-Modus den eingebauten Timer nutzen: 5 min pro Absatz, bei Bedarf +1. Hefte bereitlegen. Die Aufgabe am Beamer enthält alles Nötige.",
+    "prep": "A/B/C/D-Karten austeilen, Beamer im Vollbild. An der Tafel eine kleine Tabelle vorbereiten: „Dear Sir or Madam → Yours faithfully“ und „Dear Ms … → Yours sincerely“. Nach Schritt 1 markieren, welche Zeile für unsere E-Mail gilt. Im Gerüst-Modus den eingebauten Timer nutzen: 5 min pro Absatz (lange Fassung: 7–8 min), bei Bedarf +1. Hefte bereitlegen. Die Aufgabe am Beamer enthält alles Nötige.",
     "heft": "Neue Seite: Datum (rechts) und „Email“ als Überschrift (wie am Beamer). Darunter der E-Mail-Kopf mit vier Zeilen (To, From, Date, Subject) wie am Beamer; der Betreff kommt nach der zweiten Entscheidung in die Subject-Zeile, der Name erst unter die Grußformel. Anrede in einer eigenen Zeile, dann eine Zeile frei. Jeder Absatz beginnt nach einer Leerzeile, am Rand steht das Randwort (Intro, Body 1, Body 2, Body 3, Conclusion). Vor der Grußformel eine Zeile frei, dann Grußformel und Name in zwei eigenen Zeilen. Formelle Wendungen und Einleitungen indirekter Fragen grün unterstreichen.",
-    "flow": "Volltext kurz (50 min): 5 min Aufgabe lesen, 9 Entscheidungen (Empfänger:in, Betreff, Anrede und Grußformel gehen schnell, ca. 1 min; Absätze ca. 2 min), Abschreiben ca. 20 min, 5 min Checkliste. Volltext lang (Doppelstunde): wie kurz, zusätzlich eine Fortsetzung von Body 1 (eigenes Englischniveau, ca. 70 Wörter mehr). Das gemeinsame Schreiben dauert ca. 60 min; die restliche Zeit für die Besprechung der Fallen und den Beginn der Hausübung nutzen. Gerüst kurz (geplant 60 min): 5 min Aufgabe; Empfänger:in, Betreff, Anrede und Grußformel je ca. 1 min; pro Absatz 1 min Entscheidung, realistisch 5–6 min eigenes Schreiben, 1 min Vergleich mit dem Modell. In 50 min: beim Schluss nur abstimmen und das Gerüst abschreiben, den eigenen Satz und die Checkliste als Hausübung. Gerüst lang: Doppelstunde mit 100 min, für die Fortsetzung von Body 1 zusätzlich ca. 8 min.",
-    "traps": "Greeting A (TA): „Hi guys,“ bzw. „Hi Claire,“ ist die falsche Anrede für eine formelle E-Mail. Intro C (TA): kein Zweck im ersten Satz, nur private Details (Familie, Hobbys, Essen). Body 2 A (LSA): questions to the course, how big are the groups (Wortstellung in indirekten Fragen), live by a host family. Body 3 B (CC): kein Topic Sentence, springt zwischen Preis, Gastfamilie und Cousine. Sign-off B (TA): Grußformel passt nicht zur Anrede (Dear Sir or Madam … Yours sincerely bzw. Dear Ms Camilleri … Yours faithfully). Kürzel: TA = Erfüllung der Aufgabenstellung, CC = Kohärenz und Kohäsion, LSR = Spektrum sprachlicher Mittel, LSA = Sprachrichtigkeit.",
-    "notes": "Jede Fassung hat fünf Absätze (Einleitung, drei Hauptabsätze, Schluss); die lange Fassung macht Body 1 länger, sie fügt keinen Absatz hinzu. Bei „Greeting“ und „Sign-off“ gibt es nur eine richtige Option: Die eigentliche Entscheidung (Name bekannt oder nicht) fällt in Schritt 1, hier geht es nur um die Falle. Die Sprachschule, die Kontaktperson und die Adressen sind erfunden; Malta ist als Ziel gewählt, weil Englisch dort Amtssprache ist. Valletta und Gozo sind reale Orte. Für den Namen in der Grußformel nur erfundene Namen, keine Namen von Mitschüler:innen oder Lehrer:innen. Differenzierung: Schnelle formulieren eine zusätzliche höfliche Frage, z. B. zum Transfer vom Flughafen. Hausübung: zweite Fassung an die andere Empfängerin bzw. das Büro, mit angepasster Anrede und Grußformel und zwei anderen Entscheidungen."
+    "flow": "Volltext kurz (50 min): 5 min Aufgabe lesen, 9 Entscheidungen (Empfänger:in, Betreff, Anrede und Grußformel gehen schnell, ca. 1 min; die fünf Absätze ca. 2 min), Abschreiben ca. 20 min, 5 min Checkliste. Volltext lang (Doppelstunde): dieselben 9 Entscheidungen, aber längere Absätze (Body 1 bis 3 je ca. 80 Wörter, der Schluss ca. 45); Abschreiben ca. 30 min, zusammen ca. 60 min. Die restliche Zeit für die Besprechung der Fallen und den Beginn der Hausübung nutzen. Gerüst kurz (geplant 60 min): 5 min Aufgabe; Empfänger:in, Betreff, Anrede und Grußformel je ca. 1 min; pro Absatz 1 min Entscheidung, realistisch 5–6 min eigenes Schreiben, 1 min Vergleich mit dem Modell. In 50 min: beim Schluss nur abstimmen und das Gerüst abschreiben, den eigenen Satz und die Checkliste als Hausübung. Gerüst lang (Doppelstunde, 100 min): dieselben Entscheidungen; für Body 1 bis 3 je ca. 8 min eigenes Schreiben, für Einleitung und Schluss je ca. 5 min, dazu je 1 min Entscheidung und 1 min Vergleich; am Ende 5 min Checkliste.",
+    "traps": "Greeting A (TA): „Hi guys,“ bzw. „Hi Claire,“ ist die falsche Anrede für eine formelle E-Mail. Intro C (TA): kein Zweck im ersten Satz, nur private Details (Familie, Hobbys, Essen). Body 2 A (LSA): questions to the course, how big are the groups (Wortstellung in indirekten Fragen), live by a host family. Body 3 B (CC): kein Topic Sentence, springt zwischen Preis, Gastfamilie (gehört in Body 2) und der Geschichte der Cousine. Sign-off B (TA): Grußformel passt nicht zur Anrede (Dear Sir or Madam … Yours sincerely bzw. Dear Ms Camilleri … Yours faithfully). Kürzel: TA = Erfüllung der Aufgabenstellung, CC = Kohärenz und Kohäsion, LSR = Spektrum sprachlicher Mittel, LSA = Sprachrichtigkeit.",
+    "notes": "Jede Fassung hat fünf Absätze (Einleitung, drei Hauptabsätze, Schluss). Die lange Fassung hat dieselben Entscheidungen, nur die Absätze Body 1 bis 3 und der Schluss sind länger; Body 1 beschreibt dort auch das eigene Englischniveau („Gut“ ist die zweitbeste Note in Österreich). Bei „Greeting“ und „Sign-off“ gibt es nur eine richtige Option: Die eigentliche Entscheidung (Name bekannt oder nicht) fällt in Schritt 1, hier geht es nur um die Falle. Die Sprachschule, die Kontaktperson und die Adressen sind erfunden; Malta ist als Ziel gewählt, weil Englisch dort Amtssprache ist. Valletta und Gozo sind reale Orte. Für den Namen in der Grußformel nur erfundene Namen, keine Namen von Mitschüler:innen oder Lehrer:innen. Differenzierung: Schnelle formulieren eine zusätzliche höfliche Frage, z. B. zum Transfer vom Flughafen. Hausübung: zweite Fassung an die andere Empfängerin bzw. das Büro, mit angepasster Anrede und Grußformel und zwei anderen Entscheidungen."
   }
 }

@@ -66,7 +66,7 @@
     },
     {
       "id": "MONEY",
-      "step": "money",
+      "step": "end",
       "q": "How much money did the festival raise? Shout a number of euros.",
       "qDe": "Wie viel Geld hat das Fest eingebracht? Ruft eine Zahl zwischen 300 und 3000 (Euro).",
       "type": "number",
@@ -87,7 +87,7 @@
           "l": "A",
           "id": "scene",
           "label": "Start with a scene",
-          "text": "The tents [[have gone]], and the music [[has stopped]]. Last Friday, our summer festival [[took]] place in the schoolyard.",
+          "text": "Now the tents [[have gone]], and the music [[has stopped]]. Last Friday, our summer festival [[took]] place in the schoolyard.",
           "why": "The present perfect shows how things are now, and the past simple says when the festival was."
         },
         {
@@ -96,7 +96,7 @@
           "label": "Start with a question",
           "trap": true,
           "crit": "TA",
-          "text": "Are you ready for our summer festival? It starts next Friday at 2 pm. There will be music, games and food for everyone!",
+          "text": "Are you ready for our summer festival? It starts next Friday at 2 pm, with music, games and food for everyone!",
           "reject": "This is an invitation, but the festival is over. Our article looks back on it.",
           "rejectDe": "Das ist eine Einladung, aber das Fest ist schon vorbei. Unser Artikel blickt darauf zurück."
         },
@@ -205,43 +205,10 @@
           "id": "talent",
           "label": "The talent show",
           "trap": true,
-          "crit": "CC",
-          "text": "The highlight was the talent show in the gym. First, Sofia sang a song from a musical. After, everybody clapped and cheered for minutes.",
-          "reject": "‘After’ can’t stand alone here. Say ‘After that, everybody clapped’ or ‘Afterwards, everybody clapped’.",
+          "crit": "LSA",
+          "text": "The highlight was the talent show in the gym. First, Sofia sang a song from a musical. After, everybody clapped for minutes.",
+          "reject": "Wrong word: ‘After’ alone does not mean ‘danach’. Say ‘After that, everybody clapped’ or ‘Afterwards, everybody clapped’.",
           "rejectDe": "„After“ allein geht hier nicht: Schreibt „After that“ oder „Afterwards“ (danach)."
-        }
-      ]
-    },
-    {
-      "id": "money",
-      "slot": "money",
-      "part": "The money",
-      "q": "What do we write about the money?",
-      "de": "Vierter Inhaltspunkt: wie viel Geld das Fest eingebracht hat und wer es bekommt. Lest jede Karte genau, bevor ihr abstimmt.",
-      "options": [
-        {
-          "l": "A",
-          "id": "result",
-          "label": "The result first",
-          "text": "So far, the festival [[has raised]] {MONEY} euros for a children’s hospital. The cake stall alone [[made]] almost a third of that!",
-          "why": "The present perfect gives the result, and the past simple adds a detail from the day."
-        },
-        {
-          "l": "B",
-          "id": "counted",
-          "label": "At the end of the day",
-          "trap": true,
-          "crit": "TA",
-          "text": "At the end of the day, we counted {MONEY} euros. Everybody helped to clean the schoolyard, and the last guests went home happy.",
-          "reject": "We say how much money we raised, but not who gets it. The task asks for both.",
-          "rejectDe": "Wir sagen, wie viel Geld wir eingenommen haben, aber nicht, wer es bekommt. Die Aufgabe verlangt beides."
-        },
-        {
-          "l": "C",
-          "id": "cause",
-          "label": "A good cause",
-          "text": "All the fun [[was]] for a good cause. Together, we [[have raised]] {MONEY} euros for new toys and books at a children’s hospital.",
-          "why": "It tells readers why the festival was important, then gives the result."
         }
       ]
     },
@@ -249,29 +216,39 @@
       "id": "end",
       "slot": "end",
       "part": "Conclusion",
-      "q": "How do we end our article?",
-      "de": "Der Schluss rundet den Artikel ab. Lest jede Karte genau, bevor ihr abstimmt.",
+      "q": "How do we end our article? What about the money?",
+      "de": "Vierter Inhaltspunkt und Schluss: wie viel Geld das Fest eingebracht hat, wer es bekommt, und ein guter Abschluss für den Artikel. Lest jede Karte genau, bevor ihr abstimmt.",
       "options": [
         {
           "l": "A",
           "id": "thanks",
-          "label": "Say thank you",
-          "text": "A big thank you to everyone who [[baked]], [[helped]] or simply [[came]]. See you at next year’s festival!",
-          "why": "We thank everybody and look ahead to next year."
+          "label": "The result and a thank-you",
+          "text": "So far, the festival [[has raised]] {MONEY} euros for a children’s hospital. The cake stall alone [[made]] almost a third of that! A big thank you to everyone who [[baked]], [[helped]] or simply [[came]]. See you next year!",
+          "why": "The present perfect gives the result, the past simple adds a detail, and we thank everybody."
         },
         {
           "l": "B",
-          "id": "best",
-          "label": "The best ever",
-          "text": "Everybody agrees: it [[was]] the best summer festival we [[have ever had]]. We can’t wait for next year!",
-          "why": "‘The best … we have ever had’ is a strong way to end."
+          "id": "counted",
+          "label": "At the end of the day",
+          "trap": true,
+          "crit": "TA",
+          "text": "At the end of the day, we counted {MONEY} euros. Everybody helped to clean the schoolyard, and the last guests went home happy. It was a great day, and we can’t wait for next year!",
+          "reject": "We say how much money we raised, but not who gets it. The task asks for both.",
+          "rejectDe": "Wir sagen, wie viel Geld wir eingenommen haben, aber nicht, wer es bekommt. Die Aufgabe verlangt beides."
         },
         {
           "l": "C",
+          "id": "best",
+          "label": "A good cause",
+          "text": "All the fun [[was]] for a good cause. Together, we [[have raised]] {MONEY} euros for new toys and books at a children’s hospital. Everybody agrees: it [[was]] the best summer festival we [[have ever had]]!",
+          "why": "First the good cause and the result, then a strong last sentence: ‘the best … we have ever had’."
+        },
+        {
+          "l": "D",
           "id": "join",
           "label": "Ask readers to join",
-          "text": "Our planning team [[has started]] work on next year’s festival. Do you want to help? Then join us!",
-          "why": "A question at the end speaks to readers directly."
+          "text": "Thanks to our guests, a children’s hospital can now buy new toys and books: we [[have raised]] {MONEY} euros! Our planning team [[has started]] work on next year’s festival. Do you want to help? Then join us!",
+          "why": "The result shows what the money is for, and the question at the end speaks to readers directly."
         }
       ]
     },
@@ -312,7 +289,6 @@
     "prep",
     "programme",
     "highlight",
-    "money",
     "end"
   ],
   "checks": [
@@ -338,9 +314,9 @@
   "teacher": {
     "aim": "Die Klasse schreibt gemeinsam einen Artikel für die Schulwebsite, der auf ein Schulfest zurückblickt, und übt dabei den Unterschied zwischen Past simple (abgeschlossenes Ereignis mit Zeitangabe) und Present perfect (Ergebnis zählt jetzt, ever).",
     "prep": "A/B/C/D-Karten austeilen, Hefte bereitlegen, Beamer im Vollbild. Einsatz ab: Past simple (auch unregelmäßige Verben und Verneinung mit didn’t + Grundform) und Present perfect mit Signalwörtern wie ever, never, already, so far. Bei Bedarf Wörter an die Tafel: stall (Stand), raffle (Tombola), prizes (Preise), choir (Chor), face painting (Kinderschminken), sponge (Schwamm), head teacher (Schulleiter:in), raise money (Geld einnehmen, sammeln), good cause (guter Zweck), planning team (Planungsteam).",
-    "heft": "Neue Seite: Datum rechts oben, darunter „Article“ als Überschrift (wie am Beamer). Dann 2 Zeilen für den Titel frei lassen, der Titel kommt zuletzt. Jeder Absatz beginnt nach einer Leerzeile, am Rand steht der Name des Teils wie am Beamer: Introduction, Preparation, Programme, Highlight, The money, Conclusion. Am Ende die Verben im Past simple blau und im Present perfect grün unterstreichen.",
-    "flow": "Volltext (50 min): 3 min Aufgabe lesen · 6 Entscheidungen zum Text à ca. 2–3 min, zusammen ca. 15 min · Abschreiben nach jeder Entscheidung, zusammen ca. 20 min · Titel 2 min · 5 min Checkliste und Unterstreichen · 5 min Puffer. Wenn die Zeit knapp wird: Unterstreichen als Hausübung.",
-    "traps": "Introduction B (TA, Erfüllung der Aufgabenstellung): Einladung zu einem kommenden Fest statt Rückblick auf das vergangene. Programme C (LSA, Sprachrichtigkeit): „didn’t came“ und „didn’t wanted“, nach didn’t steht die Grundform (didn’t come, didn’t want). Highlight D (CC, Kohärenz und Kohäsion): „After,“ allein als Satzanfang (wie „Danach“), richtig ist „After that,“ oder „Afterwards,“. The money B (TA, Erfüllung der Aufgabenstellung): Der Betrag steht da, aber nicht, wer das Geld bekommt.",
+    "heft": "Neue Seite: Datum rechts oben, darunter „Article“ als Überschrift (wie am Beamer). Dann 2 Zeilen für den Titel frei lassen, der Titel kommt zuletzt. Jeder Absatz beginnt nach einer Leerzeile, am Rand steht der Name des Teils wie am Beamer: Introduction, Preparation, Programme, Highlight, Conclusion (der Schluss enthält auch das Geld und wer es bekommt). Am Ende die Verben im Past simple blau und im Present perfect grün unterstreichen.",
+    "flow": "Volltext (50 min): 3 min Aufgabe lesen · 5 Entscheidungen zum Text à ca. 2–3 min, zusammen ca. 14 min (der Schluss mit Geld und Abschluss braucht etwas länger) · Abschreiben nach jeder Entscheidung, zusammen ca. 20 min · Titel 2 min · 5 min Checkliste und Unterstreichen · 6 min Puffer. Wenn die Zeit knapp wird: Unterstreichen als Hausübung.",
+    "traps": "Introduction B (TA, Erfüllung der Aufgabenstellung): Einladung zu einem kommenden Fest statt Rückblick auf das vergangene. Programme C (LSA, Sprachrichtigkeit): „didn’t came“ und „didn’t wanted“, nach didn’t steht die Grundform (didn’t come, didn’t want). Highlight D (LSA, Sprachrichtigkeit): „After,“ allein als Satzanfang (wie „Danach“), richtig ist „After that,“ oder „Afterwards,“. Conclusion B (TA, Erfüllung der Aufgabenstellung): Der Betrag steht da, aber nicht, wer das Geld bekommt.",
     "notes": "Schule, Personen, Band und Kinderkrankenhaus sind erfunden, es wird keine echte Hilfsorganisation genannt. Markiert sind alle Verbformen im Past simple (auch was / were) und im Present perfect; Present simple und will sind nicht markiert. Die Falle im Programm prüft verneinte Past-simple-Formen (didn’t + Grundform); die Wahl zwischen Past simple und Present perfect üben die gültigen Karten und die Checkliste. Gute Gesprächsanlässe: „The tents have gone“ (Zustand jetzt) gegenüber „Last Friday … took place“ (Zeitpunkt in der Vergangenheit) und „the best … we have ever had“ (Present perfect mit ever nach einem Superlativ). Beim Bandnamen gilt: keine echten Bands und keine Namen von Lehrer:innen. Differenzierung: Schnelle schreiben zwei Sätze über einen weiteren Stand, einen im Past simple und einen im Present perfect. Passt gut zum Paket „Dankes-E-Mail an die Gastfamilie“ (7. Schulstufe, gleicher Grammatikschwerpunkt, andere Textsorte). Hausübung: ein kurzer Artikel (ca. 80 Wörter) über ein anderes Schulereignis (Sportfest, Konzert, Lesenacht) mit mindestens drei Verben im Past simple und zwei im Present perfect."
   }
 }

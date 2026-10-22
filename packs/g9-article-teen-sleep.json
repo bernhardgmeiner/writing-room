@@ -85,12 +85,15 @@
       "de": "Der erste Absatz holt die Leser:innen bei ihrer eigenen Müdigkeit ab. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
       "own": "Copy the frame. Then finish the introduction in your own words: make readers curious.",
       "ownDe": "Gerüst abschreiben, dann den Einstieg mit eigenen Worten fertigschreiben: neugierig machen.",
+      "ownLong": "Copy the frame. Then finish the introduction in your own words: make readers curious and add one more detail about a tired school morning.",
+      "ownLongDe": "Gerüst abschreiben, dann den Einstieg mit eigenen Worten fertigschreiben: neugierig machen und noch ein Detail zu einem müden Schulmorgen ergänzen.",
       "options": [
         {
           "l": "A",
           "id": "question",
           "label": "Ask the readers a question",
           "text": "{{How did you feel when your alarm went off this morning?}} If the answer is ‘like a zombie’, you are in good company. {{Many teenagers are tired}} almost every school day.",
+          "textLong": "{{How did you feel when your alarm went off this morning?}} If the answer is ‘like a zombie’, you are in good company. {{Many teenagers are tired}} almost every school day, and some sit through the first lesson with half-closed eyes.",
           "why": "A question about this morning speaks to every reader, and the zombie picture adds humour."
         },
         {
@@ -98,6 +101,7 @@
           "id": "scene",
           "label": "Start with a scene",
           "text": "{{It is 6.15 on a Monday morning,}} and the alarm is ringing for the third time. Under the duvet, {NAME}, 15, is begging for ten more minutes. {{Sounds familiar?}}",
+          "textLong": "{{It is 6.15 on a Monday morning,}} and the alarm is ringing for the third time. Under the duvet, {NAME}, 15, is begging for ten more minutes. Downstairs, breakfast is getting cold, and the bus leaves in twenty minutes. {{Sounds familiar?}}",
           "why": "A short scene puts readers right into a typical school morning."
         }
       ]
@@ -110,19 +114,23 @@
       "de": "Erster Inhaltspunkt: warum Jugendliche viel Schlaf brauchen. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
       "own": "Copy the frame. Then explain in your own words why sleep matters. Use the facts on the board.",
       "ownDe": "Gerüst abschreiben, dann mit eigenen Worten erklären, warum Schlaf wichtig ist. Die Fakten von der Tafel nutzen.",
+      "ownLong": "Copy the frame. Then explain in your own words why sleep matters and what happens without it. Use the facts on the board.",
+      "ownLongDe": "Gerüst abschreiben, dann mit eigenen Worten erklären, warum Schlaf wichtig ist und was ohne ihn passiert. Die Fakten von der Tafel nutzen.",
       "options": [
         {
           "l": "A",
           "id": "brain",
           "label": "What sleep does",
           "text": "{{Missing sleep matters more than you might think.}} While we sleep, the brain stores what we learnt during the day, and the body grows and repairs itself. {{For this reason, doctors recommend}} eight to ten hours for teenagers.",
-          "why": "The topic sentence links the tired mornings to the topic, then the paragraph explains what happens during sleep."
+          "textLong": "{{Missing sleep matters more than you might think.}} While we sleep, the brain stores what we learnt during the day, and the body grows and repairs itself. {{After a short night,}} we feel moody, forget things and make more mistakes. {{For this reason, doctors recommend}} eight to ten hours of sleep every night for teenagers.",
+          "why": "The topic sentence links the tired mornings to the topic, then the paragraph explains what sleep does."
         },
         {
           "l": "B",
           "id": "clock",
           "label": "A body clock that shifts",
-          "text": "{{Tired teenagers are not simply lazy.}} During puberty, the body clock changes, so most teens only feel sleepy late in the evening. {{However, they still need}} eight to ten hours of sleep to learn and grow.",
+          "text": "{{Tired teenagers are not simply lazy.}} During puberty, the body clock changes, so most teens only feel sleepy late in the evening, often not before eleven. {{However, they still need}} eight to ten hours of sleep to learn and grow.",
+          "textLong": "{{Tired teenagers are not simply lazy.}} During puberty, the body clock changes, so most teens only feel sleepy late in the evening, often not before eleven. {{However, they still need}} eight to ten hours of sleep to learn and grow. {{Without enough sleep,}} they find it hard to concentrate in class and to remember new things.",
           "why": "Picks up the tired teenagers from the introduction, answers a common prejudice and explains the body clock."
         },
         {
@@ -132,98 +140,51 @@
           "trap": true,
           "crit": "CC",
           "text": "Teenagers need about eight to ten hours of sleep a night. Therefore, many of them only sleep six or seven hours on school days. For example, sleep helps the brain to store new information and gives the body time to grow.",
+          "textLong": "Teenagers need about eight to ten hours of sleep a night. Therefore, many of them only sleep six or seven hours on school days. For example, sleep helps the brain to store new information and gives the body time to grow. Without enough of it, students find it hard to concentrate in class.",
           "reject": "The linking words don’t fit: sleeping too little is not a result of needing more sleep (‘Therefore’), and the last sentence is not an example (‘For example’).",
           "rejectDe": "Die Linking words passen nicht: Wenig Schlaf ist keine Folge davon, dass man viel braucht (Therefore), und der letzte Satz ist kein Beispiel (For example)."
         }
       ]
     },
     {
-      "id": "weekend",
-      "slot": "weekend",
-      "part": "Body paragraph 1",
-      "len": "long",
-      "q": "What else should readers know about lost sleep?",
-      "de": "Der Absatz geht weiter: was passiert, wenn Schlaf fehlt. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
-      "own": "Copy the frame. Then explain the effect in your own words.",
-      "ownDe": "Gerüst abschreiben, dann die Folge mit eigenen Worten erklären.",
-      "options": [
-        {
-          "l": "A",
-          "id": "catchup",
-          "label": "Catching up at weekends",
-          "text": "{{Lost sleep is hard to make up for.}} Many teenagers stay in bed until noon at the weekend, but this only confuses the body’s inner clock, {{so Monday mornings often feel}} even harder.",
-          "why": "Shows a habit many readers know and explains why it does not help."
-        },
-        {
-          "l": "B",
-          "id": "classroom",
-          "label": "Tired in class",
-          "text": "{{A lack of sleep soon shows in the classroom.}} Tired students find it harder to concentrate and to remember new things, {{and many of them feel}} moody or get ill more often.",
-          "why": "Shows effects that readers notice every day and backs up the reason for eight to ten hours."
-        }
-      ],
-      "join": true
-    },
-    {
       "id": "phones",
       "slot": "phones",
       "part": "Body paragraph 2",
-      "q": "Body paragraph 2: how do phones affect teenagers’ sleep?",
-      "de": "Zweiter Inhaltspunkt, erster Teil: wie das Handy den Schlaf beeinflusst. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
-      "own": "Copy the frame. Then describe in your own words how phones keep teenagers awake.",
-      "ownDe": "Gerüst abschreiben, dann mit eigenen Worten beschreiben, wie das Handy wach hält.",
+      "q": "Body paragraph 2: how do phones and early school starts affect teenagers’ sleep?",
+      "de": "Zweiter Inhaltspunkt: wie Handy und früher Schulbeginn den Schlaf beeinflussen. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
+      "own": "Copy the frame. Then describe in your own words how phones and early starts affect sleep, and finish the suggestion.",
+      "ownDe": "Gerüst abschreiben, dann mit eigenen Worten beschreiben, wie Handy und früher Schulbeginn den Schlaf beeinflussen, und den Vorschlag fertigschreiben.",
+      "ownLong": "Copy the frame. Then describe in your own words how phones and early starts affect sleep, with one detail for each, and finish the suggestion.",
+      "ownLongDe": "Gerüst abschreiben, dann mit eigenen Worten beschreiben, wie Handy und früher Schulbeginn den Schlaf beeinflussen, mit je einem Detail, und den Vorschlag fertigschreiben.",
       "options": [
         {
           "l": "A",
-          "id": "bed",
-          "label": "The phone next to the bed",
-          "text": "{{Why, then, do so many teenagers sleep too little?}} Often the phone is to blame. One more video can easily turn into an hour, {{and the bright screen tells}} the brain that it is still day.",
-          "why": "The question links back to the hours we need, and two concrete details explain the problem."
-        },
-        {
-          "l": "B",
-          "id": "chats",
-          "label": "Always online",
-          "text": "{{What keeps so many teenagers awake? Often it is}} the phone. Group chats are busy until midnight, and nobody wants to miss anything. {{On top of that, the light from screens}} makes it harder to get to sleep.",
-          "why": "A question as a topic sentence, then two reasons. ‘On top of that’ adds the second one."
-        }
-      ]
-    },
-    {
-      "id": "start",
-      "slot": "start",
-      "part": "Body paragraph 2",
-      "q": "What about early school starts?",
-      "de": "Der Absatz geht weiter, zweiter Teil des Inhaltspunkts: der frühe Schulbeginn. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
-      "own": "Copy the frame. Then describe the problem with early starts and add your own idea.",
-      "ownDe": "Gerüst abschreiben, dann das Problem mit dem frühen Schulbeginn beschreiben und eine eigene Idee ergänzen.",
-      "options": [
-        {
-          "l": "A",
-          "id": "early",
-          "label": "Mornings at school",
+          "id": "real",
+          "label": "Speak to the readers",
           "trap": true,
           "crit": "LSR",
-          "text": "School starts very early in Austria. Lessons start at eight, so students get up very early. Getting up very early is very bad for teenagers. Tired teenagers are very bad at learning. Maybe schools should start later.",
-          "reject": "Too basic and repetitive: ‘very’ five times, ‘early’ three times and ‘bad’ twice. Use a wider range of words (tiring, sleepy, hard to concentrate).",
-          "rejectDe": "Zu einfach und wiederholend: fünfmal very, dreimal early, zweimal bad. Genauere Wörter verwenden."
+          "text": "Okay guys, let’s be real: our phones are total sleep killers. You watch like one more video and suddenly it’s two in the morning, right? And then school starts at eight. Seriously, who thought that was a good idea? Getting up at half past six is just crazy, so schools should totally start later.",
+          "textLong": "Okay guys, let’s be real: our phones are total sleep killers. You watch like one more video and suddenly it’s two in the morning, right? Plus the screen basically tells your brain that it’s still daytime. And then school starts at eight. Seriously, who thought that was a good idea? Getting up at half past six is just crazy, so schools should totally start later.",
+          "reject": "Far too chatty for a magazine article: slang and fillers (‘guys’, ‘let’s be real’, ‘like’, ‘totally’, ‘seriously’). Even for teenage readers, an article explains things in clear, neutral language.",
+          "rejectDe": "Viel zu umgangssprachlich für einen Artikel: Slang und Füllwörter (guys, like, totally, seriously). Auch für Jugendliche erklärt ein Artikel klar und sachlich."
         },
         {
           "l": "B",
-          "id": "worse",
-          "label": "Early starts",
-          "text": "{{Early school starts make things worse.}} In Austria, many lessons begin at around eight, so lots of students get up before half past six. {{Some experts think that schools [[should]] start}} half an hour later.",
-          "why": "Continues the paragraph with a second cause. Concrete times make the problem clear."
+          "id": "bed",
+          "label": "The phone next to the bed",
+          "text": "{{Why, then, do so many teenagers sleep too little?}} Often the phone is to blame: its bright screen tells the brain that it is still day. {{Early school starts make things worse}} because many students have to get up before half past six. {{Some experts think that schools [[should]] start}} half an hour later.",
+          "textLong": "{{Why, then, do so many teenagers sleep too little?}} Often the phone is to blame. One more video can easily turn into an hour, {{and the bright screen tells}} the brain that it is still day. {{Early school starts make things worse.}} Lessons often begin at eight, so many students have to get up before half past six. {{Some experts think that schools [[should]] start}} half an hour later.",
+          "why": "The question links back to the hours we need, and concrete details explain both problems."
         },
         {
           "l": "C",
-          "id": "later",
-          "label": "A later start",
-          "text": "{{School start times play a part, too.}} Most Austrian schools begin at around eight, which is early for a teenage body clock. {{Perhaps schools [[could]] start}} a little later, as some schools abroad already do.",
-          "why": "Links the start time to the body clock and makes a careful suggestion with ‘could’."
+          "id": "chats",
+          "label": "Always online",
+          "text": "{{For many teenagers, the biggest sleep thief is}} the phone. Group chats are busy until midnight, and nobody wants to miss anything. {{School start times play a part, too.}} Most Austrian schools begin at around eight, which is early for a teenage body clock. {{Perhaps schools [[could]] start}} a little later.",
+          "textLong": "{{For many teenagers, the biggest sleep thief is}} the phone. Group chats are busy until midnight, and nobody wants to miss anything. {{On top of that, the light from screens}} makes it harder to get to sleep. {{School start times play a part, too.}} Most Austrian schools begin at around eight, which is early for a teenage body clock. {{Perhaps schools [[could]] start}} a little later.",
+          "why": "A strong topic sentence names the main problem, then the early start and a careful suggestion with ‘could’."
         }
-      ],
-      "join": true
+      ]
     },
     {
       "id": "advice",
@@ -233,19 +194,23 @@
       "de": "Dritter Inhaltspunkt: Ratschläge, wie Jugendliche mehr Schlaf bekommen. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
       "own": "Copy the frame. Then give your own tip and say why it helps.",
       "ownDe": "Gerüst abschreiben, dann einen eigenen Tipp geben und begründen.",
+      "ownLong": "Copy the frame. Then give two tips of your own and say why they help.",
+      "ownLongDe": "Gerüst abschreiben, dann zwei eigene Tipps geben und begründen.",
       "options": [
         {
           "l": "A",
           "id": "tips",
           "label": "Start with the phone",
-          "text": "{{Until that happens, you [[should]] start with}} your own phone. Leave it outside your bedroom or at least put it on silent. {{You [[could]] also try to}} go to bed at the same time every night.",
+          "text": "{{Until that happens, you [[should]] start with}} your own phone. Leave it outside your bedroom, or at least put it on silent so that messages cannot wake you. {{You [[could]] also try to}} go to bed at the same time every night.",
+          "textLong": "{{Until that happens, you [[should]] start with}} your own phone. Leave it outside your bedroom, or at least put it on silent so that messages cannot wake you. {{You [[could]] also try to}} go to bed at the same time every night, even at the weekend. After a week or two, falling asleep usually gets easier.",
           "why": "‘Until that happens’ picks up the later school start. The first tip goes back to the problem with phones."
         },
         {
           "l": "B",
           "id": "routine",
           "label": "An evening routine",
-          "text": "{{Luckily, you can do a lot yourself, starting with your evening.}} An hour before bed, you [[should]] switch off screens and read or listen to music. {{Also, you [[shouldn’t]] drink}} cola or energy drinks late in the day.",
+          "text": "{{Luckily, you can do a lot yourself, starting with your evening.}} An hour before bed, you [[should]] switch off screens and read or listen to music. {{Also, you [[shouldn’t]] drink}} cola or energy drinks late in the day: the caffeine can keep you awake for hours.",
+          "textLong": "{{Luckily, you can do a lot yourself, starting with your evening.}} An hour before bed, you [[should]] switch off screens and read or listen to music. A cool, dark bedroom helps you to sleep more deeply. {{Also, you [[shouldn’t]] drink}} cola or energy drinks late in the day: the caffeine can keep you awake for hours.",
           "why": "‘Luckily’ turns from the problems to what readers can do themselves: one thing to do and one to avoid."
         },
         {
@@ -254,9 +219,10 @@
           "label": "Simple habits",
           "trap": true,
           "crit": "LSA",
-          "text": "If you want to sleep better, you should to start with your phone and leave it outside your bedroom. You mustn’t buy sleep apps for this because simple habits work too. Try to go to the bed at the same time every night.",
-          "reject": "Three typical mistakes: ‘should to start’ (→ should start), ‘mustn’t buy’ (→ don’t have to buy: it is not necessary, not forbidden) and ‘go to the bed’ (→ go to bed).",
-          "rejectDe": "Drei typische Fehler: should to start → should start, mustn’t (verboten) statt don’t have to (nicht nötig), go to the bed → go to bed."
+          "text": "If you want to sleep better, you should to start with your phone and leave it outside your bedroom. You mustn’t buy sleep apps for this because simple habits work too. Try to go to bed at the same time every night, also at the weekend.",
+          "textLong": "If you want to sleep better, you should to start with your phone and leave it outside your bedroom. You mustn’t buy sleep apps for this because simple habits work too. Try to go to bed at the same time every night, also at the weekend. Your body will soon get used to the new rhythm.",
+          "reject": "Three typical mistakes: ‘should to start’ (→ should start), ‘mustn’t buy’ (→ don’t have to buy: it is not necessary, not forbidden) and ‘also at the weekend’ (→ even at the weekend).",
+          "rejectDe": "Drei typische Fehler: should to start → should start, mustn’t (verboten) statt don’t have to (nicht nötig), also at the weekend (wörtlich „auch am Wochenende“) → even at the weekend."
         }
       ]
     },
@@ -268,12 +234,15 @@
       "de": "Der Schluss rundet den Artikel ab und gibt den Leser:innen etwas mit. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
       "own": "Copy the frame. Then finish the ending in your own words with a clear message for readers.",
       "ownDe": "Gerüst abschreiben, dann den Schluss mit eigenen Worten und einer klaren Botschaft fertigschreiben.",
+      "ownLong": "Copy the frame. Then finish the ending in your own words with a clear message and one thing readers win if they sleep more.",
+      "ownLongDe": "Gerüst abschreiben, dann den Schluss mit eigenen Worten fertigschreiben: eine klare Botschaft und ein Gewinn durch mehr Schlaf.",
       "options": [
         {
           "l": "A",
           "id": "tonight",
           "label": "Think of tonight",
           "text": "{{So, the next time you reach for your phone in bed,}} think of tomorrow’s alarm. {{Maybe you [[should]]}} just go to sleep instead. Your brain, your mood and even your marks will thank you.",
+          "textLong": "{{So, the next time you reach for your phone in bed,}} think of tomorrow’s alarm and of that first lesson at eight. {{Maybe you [[should]]}} just go to sleep instead. Your brain, your mood and even your marks will thank you.",
           "why": "Brings back the phone and the morning alarm from the introduction and ends with the benefits of sleep."
         },
         {
@@ -283,6 +252,7 @@
           "trap": true,
           "crit": "TA",
           "text": "To sum up, sleep is very important for teenagers. They should also eat more fruit and vegetables, drink enough water and do sport three times a week. A healthy lifestyle is the best way to feel good.",
+          "textLong": "To sum up, sleep is very important for teenagers. They should also eat more fruit and vegetables, drink enough water and do sport three times a week. A healthy lifestyle is the best way to feel good. Even small changes make a big difference.",
           "reject": "The ending suddenly brings in new topics (food, water, sport). A conclusion sums up the article about sleep; it does not start a new one.",
           "rejectDe": "Der Schluss bringt plötzlich neue Themen (Essen, Wasser, Sport). Ein Schluss fasst den Artikel über Schlaf zusammen."
         },
@@ -291,6 +261,7 @@
           "id": "challenge",
           "label": "Give readers a challenge",
           "text": "{{Here is a challenge:}} for one week, put your phone away and go to bed thirty minutes earlier. {{If your alarm feels less cruel by Friday}} and lessons are easier, you [[should]] keep the new habit.",
+          "textLong": "{{Here is a challenge:}} for one week, switch your phone off at nine and go to sleep thirty minutes earlier. {{If your alarm feels less cruel by Friday}} and lessons are easier to follow, you [[should]] keep the new habit.",
           "why": "A small, concrete challenge that sums up the advice, links back to the alarm in the introduction and names one benefit of sleep."
         }
       ]
@@ -332,9 +303,7 @@
     "title",
     "intro",
     "why",
-    "weekend",
     "phones",
-    "start",
     "advice",
     "concl"
   ],
@@ -364,9 +333,9 @@
   "teacher": {
     "aim": "Die Klasse baut gemeinsam einen Artikel (A2+/B1) für ein Jugendmagazin über Schlaf, Handy und Schulbeginn und übt dabei Modalverben für Ratschläge (should, shouldn’t, could) sowie sachlich richtige, allgemeine Fakten statt erfundener Studien.",
     "prep": "A/B/C/D-Karten austeilen (eine Garnitur pro Person), Hefte bereitlegen. Beamer im Vollbild. Im Gerüst-Modus den eingebauten Timer nutzen: 5 min pro Absatz, bei Bedarf +1. Die Aufgabe am Beamer enthält alles Nötige.",
-    "heft": "Neue Seite: Datum rechts oben, darunter „Article“ als Überschrift (wie am Beamer). Dann 2 Zeilen für den Titel frei lassen, der Titel kommt zuletzt. Fünf Absätze, jeder beginnt nach einer Leerzeile; am Rand stehen die Randwörter Intro, Body 1, Body 2, Body 3, Conclusion. Eine Fortsetzung wird ohne neue Zeile im selben Absatz weitergeschrieben. Modalverben für Ratschläge grün unterstreichen.",
-    "flow": "Volltext kurz (50 min): 5 min Aufgabe lesen, 7 Entscheidungen à ca. 2 min (Body 2 hat zwei: Handy, dann früher Schulbeginn als Fortsetzung), Abschreiben ca. 20 min, 5 min Checkliste. Volltext lang (ca. 60 min): wie kurz, dazu eine Fortsetzung von Body 1 (Schlaf am Wochenende oder Müdigkeit im Unterricht); das sind eine Entscheidung und rund 30 Wörter Abschreiben mehr. In einer Doppelstunde die restliche Zeit für die Besprechung der Fallen nutzen und die Hausübung zu zweit beginnen. Gerüst kurz (realistisch ca. 60 min): 5 min Aufgabe; pro Absatz 1 min Entscheidung, 5–6 min eigenes Schreiben, 1 min Vergleich mit dem Modell; die Fortsetzung in Body 2 braucht ca. 4 min; am Ende 5 min Checkliste. In einer 50-Minuten-Stunde den Schluss noch abstimmen und das Gerüst abschreiben lassen; Schluss fertigschreiben und eigenen Titel finden als Hausübung. Vor dem Schreiben von Body 1 die Fakten an die Tafel schreiben: 8–10 Stunden Schlaf für Jugendliche; im Schlaf speichert das Gehirn Gelerntes; in der Pubertät wird man abends später müde. Gerüst lang (ca. 70 min): gleicher Rhythmus wie kurz, dazu die Fortsetzung von Body 1, ca. 5 min. In einer Doppelstunde danach eine Vergleichsrunde zu zweit.",
-    "traps": "Body 1 C (CC): Therefore und For example ohne passende Logik. Body 2, Fortsetzung A (LSR): very, early und bad in Dauerschleife. Body 3 C (LSA): should to start, mustn’t statt don’t have to, go to the bed. Conclusion B (TA): neues Thema (Ernährung, Sport) im Schluss. Kürzel: TA = Erfüllung der Aufgabenstellung, CC = Kohärenz und Kohäsion, LSR = Spektrum sprachlicher Mittel, LSA = Sprachrichtigkeit.",
-    "notes": "Aufbau: Jeder Text hat genau fünf Absätze (Einleitung, drei Hauptteil-Absätze, Schluss); Inhaltspunkt 2 (Handy und Schulbeginn) bildet gemeinsam Body 2, und die lange Fassung macht Body 1 länger, sie fügt keinen Absatz hinzu. Fakten: Die Empfehlung von etwa 8–10 Stunden Schlaf für 13- bis 18-Jährige entspricht gängigen Empfehlungen von Schlafmediziner:innen; dass sich die innere Uhr in der Pubertät nach hinten verschiebt und helles Bildschirmlicht das Einschlafen erschwert, ist gut belegt. Dass einige Schulen im Ausland später beginnen, stimmt; konkrete Studien werden nicht genannt. Fokus: Nach der LSA-Falle kurz klären: mustn’t = verboten, don’t have to = nicht nötig. Sensibel bleiben: keine persönlichen Schlafprobleme abfragen; wer dauerhaft schlecht schläft, findet Unterstützung bei der Schulärztin oder dem Schularzt, bei der Schulpsychologie oder bei Rat auf Draht (147). Für die Namenslücke nur erfundene Vornamen verwenden, keine Namen von Mitschüler:innen oder Lehrer:innen. Differenzierung: Schnelle ergänzen einen weiteren Tipp mit ought to oder had better. Hausübung: zweite Fassung mit anderen Entscheidungen oder ein Kommentar (ca. 80 Wörter) mit einem weiteren Tipp für besseren Schlaf."
+    "heft": "Neue Seite: Datum rechts oben, darunter „Article“ als Überschrift (wie am Beamer). Dann 2 Zeilen für den Titel frei lassen, der Titel kommt zuletzt. Fünf Absätze, jeder beginnt nach einer Leerzeile; am Rand stehen die Randwörter Intro, Body 1, Body 2, Body 3, Conclusion. Modalverben für Ratschläge grün unterstreichen.",
+    "flow": "Volltext kurz (50 min): 5 min Aufgabe lesen, 6 Entscheidungen (fünf Absätze, zum Schluss der Titel) à ca. 2 min, Abschreiben ca. 20 min, 5 min Checkliste. Volltext lang (ca. 60 min): dieselben 6 Entscheidungen, jeder Absatz ist etwas länger, Abschreiben ca. 25–30 min. In einer Doppelstunde die restliche Zeit für die Besprechung der Fallen nutzen und die Hausübung zu zweit beginnen. Vor dem Schreiben von Body 1 die Fakten an die Tafel schreiben: 8–10 Stunden Schlaf für Jugendliche; im Schlaf speichert das Gehirn Gelerntes; in der Pubertät wird man abends später müde. Gerüst kurz (realistisch ca. 60 min): 5 min Aufgabe; pro Absatz 1 min Entscheidung, 5–6 min eigenes Schreiben, 1 min Vergleich mit dem Modell (Body 2 mit Handy und Schulbeginn eher 7 min); Titel 2 min, am Ende 5 min Checkliste. In einer 50-Minuten-Stunde den Schluss noch abstimmen und das Gerüst abschreiben lassen; Schluss fertigschreiben und eigenen Titel finden als Hausübung. Gerüst lang (ca. 70 min): gleicher Ablauf, pro Absatz 1–2 min mehr für das längere eigene Schreiben. In einer Doppelstunde danach eine Vergleichsrunde zu zweit.",
+    "traps": "Body 1 C (CC): Therefore und For example ohne passende Logik. Body 2 A (LSR): viel zu umgangssprachlich (guys, like, totally, seriously) für einen Artikel. Body 3 C (LSA): should to start, mustn’t statt don’t have to, also at the weekend statt even at the weekend. Conclusion B (TA): neues Thema (Ernährung, Sport) im Schluss. Kürzel: TA = Erfüllung der Aufgabenstellung, CC = Kohärenz und Kohäsion, LSR = Spektrum sprachlicher Mittel, LSA = Sprachrichtigkeit.",
+    "notes": "Aufbau: Jeder Text hat genau fünf Absätze (Einleitung, drei Hauptteil-Absätze, Schluss), und jede Entscheidung ist ein ganzer Absatz. Inhaltspunkt 2 (Handy und Schulbeginn) steht gemeinsam in Body 2, deshalb ist dieser Absatz etwas länger. Die lange Fassung hat dieselben Entscheidungen, nur sind die Absätze länger. Fakten: Die Empfehlung von etwa 8–10 Stunden Schlaf für 13- bis 18-Jährige entspricht gängigen Empfehlungen von Schlafmediziner:innen; dass sich die innere Uhr in der Pubertät nach hinten verschiebt und helles Bildschirmlicht das Einschlafen erschwert, ist gut belegt. Konkrete Studien werden nicht genannt. Nach der LSR-Falle kurz sammeln, wie man dasselbe sachlich sagt. Fokus: Nach der LSA-Falle kurz klären: mustn’t = verboten, don’t have to = nicht nötig. Sensibel bleiben: keine persönlichen Schlafprobleme abfragen; wer dauerhaft schlecht schläft, findet Unterstützung bei der Schulärztin oder dem Schularzt, bei der Schulpsychologie oder bei Rat auf Draht (147). Für die Namenslücke nur erfundene Vornamen verwenden, keine Namen von Mitschüler:innen oder Lehrer:innen. Differenzierung: Schnelle ergänzen einen weiteren Tipp mit ought to oder had better. Hausübung: zweite Fassung mit anderen Entscheidungen oder ein Kommentar (ca. 80 Wörter) mit einem weiteren Tipp für besseren Schlaf."
   }
 }

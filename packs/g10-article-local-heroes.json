@@ -145,9 +145,9 @@
           "text": {
             "by": "hero",
             "map": {
-              "tech": "{{Have you ever tried to explain}} a video call to someone [[who]] has never used a smartphone? It can take a lot of patience. {{In our town, a group of teenagers}} does exactly that once a week, and older people love it.",
-              "sport": "{{Where do you go when}} you are ten, it is Friday evening and there is nothing to do? For many children, the answer used to be ‘nowhere’. {{Thanks to a group of teenagers,}} they now have somewhere to run, play and meet friends [[who]] live nearby.",
-              "reading": "{{Do you remember the first book [[that]] you read}} all on your own? For many children, reading is hard work [[that]] has nothing to do with fun. {{A group of teenagers in our town}} wants to change that, one story at a time."
+              "tech": "{{Have you ever tried to explain}} a video call to someone [[who]] has never used a smartphone? It can take a lot of patience. {{In our town, teenagers}} do exactly that once a week at Tech Tuesday, and older people love it.",
+              "sport": "{{Where do you go when}} you are ten, it is Friday evening and there is nothing to do? For many children, the answer used to be ‘nowhere’. {{Thanks to the teenagers of Friday Kick-Off,}} they now have somewhere to run, play and meet friends [[who]] live nearby.",
+              "reading": "{{Do you remember the first book [[that]] you read}} all on your own? For many children, reading is hard work [[that]] has nothing to do with fun. {{The teenagers of Reading Buddies}} want to change that, one story at a time."
             }
           }
         },
@@ -205,6 +205,14 @@
               "sport": "{{The idea for the project came from}} {NAME}, {AGE}, [[who]] has played football since primary school. Two years ago, {NAME} noticed that younger children had nowhere to play in the evenings, as the sports clubs had long waiting lists. {{With a ball and two friends,}} {NAME} started a weekly game in the park. {{Today, Friday Kick-Off attracts}} around forty children.",
               "reading": "{{The idea for the project came from}} {NAME}, {AGE}, [[whose]] little brother found reading difficult at primary school. {NAME} spent a whole summer reading comics with him, and by September the boy was asking for more books. {{After that, {NAME} asked the library}} for a room and found five classmates [[who]] were happy to help. {{Today, Reading Buddies meets}} twice a week."
             }
+          },
+          "textLong": {
+            "by": "hero",
+            "map": {
+              "tech": "{{The idea for the project came from}} {NAME}, {AGE}, [[who]] has always been good with technology. Two years ago, {NAME} noticed that many older neighbours were afraid of online forms and video calls. {{With the help of the community centre,}} {NAME} found a free room and three friends [[who]] wanted to join in. {{Today, Tech Tuesday opens}} its doors every week. “Many older people think they are too old for technology,” {NAME} {{told us during our visit.}} “They just need someone [[who]] explains things slowly and never laughs at their questions.”",
+              "sport": "{{The idea for the project came from}} {NAME}, {AGE}, [[who]] has played football since primary school. Two years ago, {NAME} noticed that younger children had nowhere to play in the evenings, as the sports clubs had long waiting lists. {{With a ball and two friends,}} {NAME} started a weekly game in the park. {{Today, Friday Kick-Off attracts}} around forty children. “Football teaches you how to win and lose,” {NAME} {{told us during our visit.}} “But my favourite moment is when a shy child scores for the first time.”",
+              "reading": "{{The idea for the project came from}} {NAME}, {AGE}, [[whose]] little brother found reading difficult at primary school. {NAME} spent a whole summer reading comics with him, and by September the boy was asking for more books. {{After that, {NAME} asked the library}} for a room and found five classmates [[who]] were happy to help. {{Today, Reading Buddies meets}} twice a week. “Some children are sure they are bad at reading,” {NAME} {{told us during our visit.}} “But once they find a story [[that]] they really like, they want to know what happens next.”"
+            }
           }
         },
         {
@@ -216,70 +224,22 @@
             "by": "hero",
             "map": {
               "tech": "{{The project was started two years ago by}} {NAME}, {AGE}, [[whose]] grandfather once needed a whole afternoon to buy a train ticket online. Anyone over sixty can bring a phone, tablet or laptop to Tech Tuesday. {{The volunteers explain}} video calls or online forms step by step. {{Questions [[that]] seem silly}} are welcome, and nobody is in a hurry.",
-              "sport": "{{The project was started two years ago by}} {NAME}, {AGE}, a keen footballer [[who]] wanted to give something back. Every Friday from five to seven, children aged eight to twelve can play football or basketball for free at Friday Kick-Off. {{The teenagers bring the balls,}} plan games and make sure that everybody plays, even children [[who]] have never been in a team.",
-              "reading": "{{The project was started two years ago by}} {NAME}, {AGE}, [[who]] has loved books since early childhood. At Reading Buddies, each teenager meets the same younger child at the library twice a week. {{Together they choose a book,}} read it aloud in turns and talk about the story. {{The children, [[who]] are between six and nine,}} can then take the books home."
-            }
-          }
-        }
-      ]
-    },
-    {
-      "id": "start",
-      "slot": "start",
-      "part": "Body paragraph 1",
-      "join": true,
-      "len": "long",
-      "q": "How do we continue the story of the project?",
-      "de": "Der Absatz geht weiter, mit einem Zitat der Person, die das Projekt gestartet hat, oder mit den Hürden am Anfang. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
-      "own": "Copy the frame. Then add two or three sentences of your own about our young hero or the first problems. Use at least one relative clause.",
-      "ownDe": "Gerüst abschreiben, dann zwei bis drei eigene Sätze über die Person oder die ersten Hürden ergänzen, mit mindestens einem Relativsatz.",
-      "options": [
-        {
-          "l": "A",
-          "id": "founder",
-          "label": "The founder speaks",
-          "why": "The person behind the project explains in their own words what drives them. That feels personal.",
-          "text": {
-            "by": "hero",
-            "map": {
-              "tech": "{{During our visit, {NAME} was busy with}} a laptop [[that]] refused to start. “Many older people think they are too old for technology,” {NAME} explained. “{{That is simply not true.}} They just need someone [[who]] explains things slowly and never laughs at their questions.”",
-              "sport": "{{During our visit, {NAME} was busy with}} two nine-year-olds [[who]] were arguing about a goal. “Football teaches you how to win and lose,” {NAME} {{said with a smile.}} “But my favourite moment is when a shy child scores for the first time.”",
-              "reading": "{{During our visit, {NAME} was busy with}} a picture book about a dragon [[that]] cannot fly. “Some children are sure they are bad at reading,” {NAME} {{said with a smile.}} “But once they find a story [[that]] they really like, they want to know what happens next.”"
-            }
-          }
-        },
-        {
-          "l": "B",
-          "id": "problems",
-          "label": "Problems on the way",
-          "why": "Shows that heroes also face problems, and how the team found a solution.",
-          "text": {
-            "by": "hero",
-            "map": {
-              "tech": "{{Of course, it has not always been easy.}} At first, only two visitors came, [[which]] was disappointing. Some older people did not trust strangers with their bank details. {{Instead of giving up, the team}} put up posters at the chemist’s and made one clear rule: volunteers never type in passwords. These days, there is often a queue at the door.",
-              "sport": "{{Of course, it has not always been easy.}} In the first winter, it was too dark and cold to play outside, and many children stopped coming. {{Instead of giving up, the team}} asked a local school, [[which]] lets them use its gym in winter. Last month, a sports shop [[that]] had heard about the project even donated twenty balls.",
-              "reading": "{{Of course, it has not always been easy.}} At first, some children came once and never again, [[which]] worried the team. {{Instead of giving up, the volunteers}} asked the children what they actually wanted to read. The answer was clear: comics, animal facts and funny stories. The library bought a whole box of them, and hardly anyone misses a meeting any more."
-            }
-          }
-        },
-        {
-          "l": "C",
-          "id": "trap",
-          "label": "How the team kept going",
-          "trap": true,
-          "crit": "CC",
-          "text": {
-            "by": "hero",
-            "map": {
-              "tech": "In the beginning, Tech Tuesday had a lot of problems, and the team nearly gave up. Furthermore, the project now has many new ideas and plans for the future. Instead, many people did not trust young volunteers. Similarly, the team asked shops and neighbours for help, and some of them donated money or time.",
-              "sport": "In the beginning, Friday Kick-Off had a lot of problems, and the team nearly gave up. Furthermore, the project now has many new ideas and plans for the future. Instead, many people did not trust young volunteers. Similarly, the team asked shops and neighbours for help, and some of them donated money or time.",
-              "reading": "In the beginning, Reading Buddies had a lot of problems, and the team nearly gave up. Furthermore, the project now has many new ideas and plans for the future. Instead, many people did not trust young volunteers. Similarly, the team asked shops and neighbours for help, and some of them donated money or time."
+              "sport": "{{The project was started two years ago by}} {NAME}, {AGE}, a keen footballer [[who]] saw bored children in the park. Every Friday from five to seven, children aged eight to twelve can play football for free at Friday Kick-Off. {{The teenagers bring the balls,}} plan games and make sure that everybody plays, even children [[who]] have never been in a team.",
+              "reading": "{{The project was started two years ago by}} {NAME}, {AGE}, [[who]] wanted more children to enjoy books. At Reading Buddies, each teenager meets the same younger child at the library twice a week. {{Together they choose a book,}} read it aloud in turns and talk about the story. {{The children, [[who]] are between six and nine,}} can then take the books home."
             }
           },
-          "reject": "The ideas jump back and forth, and the linking words don’t show the real logic: ‘Furthermore’ adds new plans to nearly giving up (a contrast), ‘Instead’ replaces nothing, and ‘Similarly’ links ideas that are not alike.",
-          "rejectDe": "Die Linking words passen nicht zur Logik: Furthermore vor einem Gegensatz, Instead ohne Alternative, Similarly ohne Ähnlichkeit."
+          "textLong": {
+            "by": "hero",
+            "map": {
+              "tech": "{{The project was started two years ago by}} {NAME}, {AGE}, [[whose]] grandfather once needed a whole afternoon to buy a train ticket online. Anyone over sixty can bring a phone, tablet or laptop to Tech Tuesday. {{The volunteers explain}} video calls or online forms step by step. {{Questions [[that]] seem silly}} are welcome, and nobody is in a hurry. {{At first, however, hardly anyone came,}} as many older people did not trust strangers with their bank details. {{The team solved this with one clear rule:}} volunteers never type in passwords. These days, there is often a queue at the door.",
+              "sport": "{{The project was started two years ago by}} {NAME}, {AGE}, a keen footballer [[who]] saw bored children in the park. Every Friday from five to seven, children aged eight to twelve can play football for free at Friday Kick-Off. {{The teenagers bring the balls,}} plan games and make sure that everybody plays, even children [[who]] have never been in a team. {{In the first winter, however, it was}} too dark and cold to play outside. {{The team solved this by asking}} a local school, [[which]] now lets them use its gym from November to March.",
+              "reading": "{{The project was started two years ago by}} {NAME}, {AGE}, [[who]] wanted more children to enjoy books. At Reading Buddies, each teenager meets the same younger child at the library twice a week. {{Together they choose a book,}} read it aloud in turns and talk about the story. {{The children, [[who]] are between six and nine,}} can then take the books home. {{At first, however, some children came only once.}} {{The team solved this by asking}} them what they wanted to read: comics, animal facts and funny stories. The library bought a box of them, and now hardly anyone misses a meeting."
+            }
+          }
         }
-      ]
+      ],
+      "ownLong": "Copy the frame. Then describe in your own words who started the project, what happens there and how it got going. Add one quote or one problem the team solved.",
+      "ownLongDe": "Gerüst abschreiben, dann mit eigenen Worten beschreiben, wer das Projekt gestartet hat, was dort passiert und wie es angelaufen ist; dazu ein Zitat oder eine Hürde, die das Team gelöst hat."
     },
     {
       "id": "why",
@@ -298,9 +258,17 @@
           "text": {
             "by": "hero",
             "map": {
-              "tech": "{{The project does more than fix phones: it brings two generations together.}} Pensioners [[who]] live on their own get company and a reason to leave the house. {{At the same time, teenagers hear}} stories about life before the internet, [[which]] many of them find fascinating. {{In a town [[where]] generations rarely meet,}} contact like this is worth a lot.",
-              "sport": "{{The project does more than organise games: it gives children}} a safe place for their Friday evenings. Children from different schools and backgrounds play in the same team, and parents get to know each other at the side of the pitch. {{For families [[who]] cannot afford club fees,}} the project is a real gift.",
-              "reading": "{{The project does more than teach reading: it creates friendships across age groups.}} The younger children get a role model [[who]] is neither a parent nor a teacher, and they look up to their buddies. {{The teenagers, in turn, feel}} needed and take their job very seriously. {{Some pairs [[that]] met in the first year}} still read together every week."
+              "tech": "{{Apart from fixing phones, Tech Tuesday brings two generations together.}} Pensioners [[who]] live on their own get company and a reason to leave the house. {{At the same time, teenagers hear}} stories about life before the internet, [[which]] many of them find fascinating. {{In a town [[where]] generations rarely meet,}} contact like this is worth a lot.",
+              "sport": "{{Apart from the games, Friday Kick-Off brings}} children and families from the whole area together. Boys and girls from different schools and backgrounds play in the same team, and parents get to know each other at the side of the pitch. {{For families [[who]] cannot afford club fees,}} the project is a real gift.",
+              "reading": "{{Apart from teaching reading, the project creates friendships across age groups.}} The younger children get a role model [[who]] is neither a parent nor a teacher, and they look up to their buddies. {{The teenagers, in turn, feel}} needed and take their job very seriously. {{Some pairs [[that]] met in the first year}} still read together every week."
+            }
+          },
+          "textLong": {
+            "by": "hero",
+            "map": {
+              "tech": "{{Apart from fixing phones, Tech Tuesday brings two generations together.}} Pensioners [[who]] live on their own get company and a reason to leave the house. {{At the same time, teenagers hear}} stories about life before the internet, [[which]] many of them find fascinating. {{In a town [[where]] generations rarely meet,}} contact like this is worth a lot. {{An 82-year-old visitor, for example,}} used to spend Tuesdays alone at home; now he looks forward to it all week, and the young people even ask him for advice.",
+              "sport": "{{Apart from the games, Friday Kick-Off brings}} children and families from the whole area together. Boys and girls from different schools and backgrounds play in the same team, and parents get to know each other at the side of the pitch. {{For families [[who]] cannot afford club fees,}} the project is a real gift. {{A mother [[whose]] two sons come every week}} says that her boys used to sit on the sofa all weekend; now they have friends from all over the neighbourhood, and so does she.",
+              "reading": "{{Apart from teaching reading, the project creates friendships across age groups.}} The younger children get a role model [[who]] is neither a parent nor a teacher, and they look up to their buddies. {{The teenagers, in turn, feel}} needed and take their job very seriously. {{Some pairs [[that]] met in the first year}} still read together every week. {{One father says that his daughter}} talks about her buddy all the time and that the library has become her favourite place in town."
             }
           }
         },
@@ -313,19 +281,27 @@
           "text": {
             "by": "hero",
             "map": {
-              "tech": "Tech Tuesday is very important for our town because it helps people which have problems with technology. Everything what the volunteers explain is useful in everyday life, and the visitors, that come every week, have become real friends of the team. Some of them even bring cake for everyone now.",
-              "sport": "Friday Kick-Off is very important for our area because it helps children which have nowhere to play. Everything what they learn on the pitch is useful in everyday life, and the parents, that come to watch, have become real friends of the team. Some of them even bring drinks for everyone now.",
-              "reading": "Reading Buddies is very important for our town because it helps children which find reading difficult. Everything what they read with their buddies makes them more confident, and the parents, that pick them up, have become real friends of the team. Some of them even bring cake for everyone now."
+              "tech": "Tech Tuesday is very important for our town because it helps people which have problems with technology. Everything what the volunteers explain is useful in everyday life, and the visitors, that come every week, have become real friends of the team. Some of them even bring cake for everyone now, and others tell all their friends about the project.",
+              "sport": "Friday Kick-Off is very important for our area because it helps children which have nowhere to play. Everything what they learn on the pitch is useful in everyday life, and the parents, that come to watch, have become real friends of the team. Some of them even bring drinks for everyone now, and a few have started to help with the games.",
+              "reading": "Reading Buddies is very important for our town because it helps children which find reading difficult. Everything what they read with their buddies makes them more confident, and the parents, that pick them up, have become real friends of the team. Some of them even bring cake for everyone now, and a few help to tidy up the book corner."
             }
           },
           "reject": "Three typical mistakes with relative clauses: ‘which’ for people (→ who), ‘everything what’ (→ everything that) and ‘that’ after a comma (→ who, with no commas).",
-          "rejectDe": "Drei typische Fehler bei Relativsätzen: which für Personen → who, everything what → everything that, that nach einem Beistrich → who ohne Beistriche."
+          "rejectDe": "Drei typische Fehler bei Relativsätzen: which für Personen → who, everything what → everything that, that nach einem Beistrich → who ohne Beistriche.",
+          "textLong": {
+            "by": "hero",
+            "map": {
+              "tech": "Tech Tuesday is very important for our town because it helps people which have problems with technology. Everything what the volunteers explain is useful in everyday life, and the visitors, that come every week, have become real friends of the team. Some of them even bring cake for everyone now, and others tell all their friends about the project. An 82-year-old man can now make video calls to his granddaughter in Canada on his own. Before his first visit, he was always afraid of pressing the wrong button, so he never tried.",
+              "sport": "Friday Kick-Off is very important for our area because it helps children which have nowhere to play. Everything what they learn on the pitch is useful in everyday life, and the parents, that come to watch, have become real friends of the team. Some of them even bring drinks for everyone now, and a few have started to help with the games. One mother says that her two sons used to sit on the sofa all weekend. Now they count the days until Friday and have made friends from all over the neighbourhood.",
+              "reading": "Reading Buddies is very important for our town because it helps children which find reading difficult. Everything what they read with their buddies makes them more confident, and the parents, that pick them up, have become real friends of the team. Some of them even bring cake for everyone now, and a few help to tidy up the book corner. A primary school teacher has noticed the change in her class. Pupils who used to hide behind their books now put up their hands to read aloud."
+            }
+          }
         },
         {
           "l": "C",
           "id": "skills",
           "label": "People grow",
-          "why": "Focuses on what people gain. ‘Above all’ shows what matters most, and a concrete example follows.",
+          "why": "Focuses on what people gain, from independence to new skills, and makes the benefit concrete.",
           "text": {
             "by": "hero",
             "map": {
@@ -333,50 +309,19 @@
               "sport": "{{For the children, Friday Kick-Off is more than a game: it keeps them active.}} Many of them spend hours in front of screens, [[which]] is not good for their health. {{On Friday evenings, they}} run around for two hours and learn to play fairly. {{The teenagers [[who]] lead the games}} learn a lot, too, from planning to staying calm.",
               "reading": "{{For the children, Reading Buddies is more than a story: it helps them to become better readers.}} Reading is the key to almost every school subject, and children [[who]] read for fun usually find school easier. {{In a relaxed setting [[where]] nobody gives marks,}} they lose their fear of making mistakes. {{Many of them have started borrowing}} books on their own."
             }
-          }
-        }
-      ]
-    },
-    {
-      "id": "voice",
-      "slot": "voice",
-      "part": "Body paragraph 2",
-      "join": true,
-      "len": "long",
-      "q": "How do we make the difference even clearer?",
-      "de": "Der Absatz geht weiter, mit einer Stimme von außen oder mit den Plänen des Teams. Prüft jede Option: Aufgabe, Aufbau, Wortschatz, Grammatik.",
-      "own": "Copy the frame. Then add two or three sentences of your own: what someone else says about the project, or what the team plans next. Use at least one relative clause.",
-      "ownDe": "Gerüst abschreiben, dann zwei bis drei eigene Sätze ergänzen: was jemand anderer über das Projekt sagt oder was das Team als Nächstes plant. Mit mindestens einem Relativsatz.",
-      "options": [
-        {
-          "l": "A",
-          "id": "visitor",
-          "label": "Another point of view",
-          "why": "Someone who sees the project from outside confirms the difference. The quote adds a second voice.",
-          "text": {
+          },
+          "textLong": {
             "by": "hero",
             "map": {
-              "tech": "{{The people [[who]] come every week feel the difference.}} An 82-year-old man makes video calls to his granddaughter in Canada every Sunday. “{{I was always afraid of pressing the wrong button,}}” he told us. “These young people never get impatient, and now I even send her photos!”",
-              "sport": "{{Parents can see the difference at home.}} A mother [[whose]] two sons come every Friday told us: “{{Before Friday Kick-Off started,}} my boys spent their Friday evenings on the sofa. Now they count the days until Friday, and they have made friends from all over the neighbourhood.”",
-              "reading": "{{Teachers have noticed the difference.}} A primary school teacher [[who]] sends children to the project told us: “{{Some of my pupils used to hide behind their books.}} Now they put up their hands to read aloud, [[which]] is a huge step for them.”"
-            }
-          }
-        },
-        {
-          "l": "B",
-          "id": "future",
-          "label": "Plans for the future",
-          "why": "Looks ahead and shows that the team wants to help even more people.",
-          "text": {
-            "by": "hero",
-            "map": {
-              "tech": "{{The team now wants to make this difference for even more people.}} From next autumn, the volunteers plan to visit care homes, [[where]] many residents cannot leave the building. {{They are also writing}} a short guide in large print [[that]] explains the ten most common phone problems.",
-              "sport": "{{The team now wants to make this difference for even more children.}} Next summer, they are planning a tournament [[that]] brings together children from every part of town. {{There is also talk of}} a second evening for young teenagers, [[who]] often feel too old for games with the little ones.",
-              "reading": "{{The team now wants to make this difference for even more children.}} Soon, they hope to start a summer club [[that]] keeps children reading during the long holidays. {{The volunteers are also planning}} a small book festival [[where]] the children can present their favourite stories to their families."
+              "tech": "{{For older people, Tech Tuesday means more than a working phone: it helps them to stay independent.}} More and more everyday tasks, such as booking a doctor’s appointment, only work online. {{People [[who]] cannot do this}} often have to wait for help from their families. {{After a few Tuesdays at the centre,}} many visitors manage on their own. One woman, for example, had never written an email before her first visit. Three months later, she booked her own flu jab online and showed her neighbour how to do it.",
+              "sport": "{{For the children, Friday Kick-Off is more than a game: it keeps them active.}} Many of them spend hours in front of screens, [[which]] is not good for their health. {{On Friday evenings, they}} run around for two hours and learn to play fairly. {{The teenagers [[who]] lead the games}} learn a lot, too, from planning to staying calm. Some children have even found their way into a real team: last season, six of them joined football clubs in town, [[where]] they now train twice a week.",
+              "reading": "{{For the children, Reading Buddies is more than a story: it helps them to become better readers.}} Reading is the key to almost every school subject, and children [[who]] read for fun usually find school easier. {{In a relaxed setting [[where]] nobody gives marks,}} they lose their fear of making mistakes. {{Many of them have started borrowing}} books on their own. A primary school teacher has noticed the change: “Some of my pupils used to hide behind their books. Now they put up their hands to read aloud.”"
             }
           }
         }
-      ]
+      ],
+      "ownLong": "Copy the frame. Then explain in your own words what difference the project makes and give one example of a person it has helped.",
+      "ownLongDe": "Gerüst abschreiben, dann mit eigenen Worten erklären, was das Projekt verändert, und ein Beispiel für eine Person geben, der es geholfen hat."
     },
     {
       "id": "involve",
@@ -390,31 +335,47 @@
         {
           "l": "A",
           "id": "trap",
-          "label": "Talk to the readers",
+          "label": "Appeal to the readers",
           "trap": true,
           "crit": "LSR",
           "text": {
             "by": "hero",
             "map": {
-              "tech": "So guys, if you wanna help, just go to Tech Tuesday and see for yourself! It’s super cool, the people are really nice and you can hang out with your mates at the same time. Honestly, it’s the coolest place in town. Trust me, you’ll love it, and you won’t regret it for a second!",
-              "sport": "So guys, if you wanna help, just go to Friday Kick-Off and see for yourself! It’s super cool, the people are really nice and you can hang out with your mates at the same time. Honestly, it’s the coolest place in town. Trust me, you’ll love it, and you won’t regret it for a second!",
-              "reading": "So guys, if you wanna help, just go to Reading Buddies and see for yourself! It’s super cool, the people are really nice and you can hang out with your mates at the same time. Honestly, it’s the coolest place in town. Trust me, you’ll love it, and you won’t regret it for a second!"
+              "tech": "Tech Tuesday is simply the most amazing, wonderful and fantastic project in the whole world, and anybody who does not support it should be ashamed of themselves. Please, please, please help these incredible heroes! They are the kindest, bravest and most generous people anyone has ever met. Believe me, if you do nothing, you will regret it forever!",
+              "sport": "Friday Kick-Off is simply the most amazing, wonderful and fantastic project in the whole world, and anybody who does not support it should be ashamed of themselves. Please, please, please help these incredible heroes! They are the kindest, bravest and most generous people anyone has ever met. Believe me, if you do nothing, you will regret it forever!",
+              "reading": "Reading Buddies is simply the most amazing, wonderful and fantastic project in the whole world, and anybody who does not support it should be ashamed of themselves. Please, please, please help these incredible heroes! They are the kindest, bravest and most generous people anyone has ever met. Believe me, if you do nothing, you will regret it forever!"
             }
           },
-          "reject": "Far too chatty for an article on the town’s website: ‘guys’, ‘wanna’, ‘super cool’ and ‘hang out with your mates’ belong in a text message to friends. An article can sound lively, but it uses standard English.",
-          "rejectDe": "Viel zu umgangssprachlich für einen Artikel auf der Website der Stadt (guys, wanna, super cool, hang out): lebendig ja, aber in Standardenglisch."
+          "reject": "Far too emotional and pushy for an article: ‘the most amazing … in the whole world’, ‘should be ashamed of themselves’, ‘please, please, please’. An article persuades with concrete tips and reasons, not with exaggeration and pressure.",
+          "rejectDe": "Viel zu emotional und aufdringlich für einen Artikel (the most amazing … in the whole world, should be ashamed of themselves, please, please, please): Ein Artikel überzeugt mit konkreten Tipps und Gründen, nicht mit Übertreibung und Druck.",
+          "textLong": {
+            "by": "hero",
+            "map": {
+              "tech": "Tech Tuesday is simply the most amazing, wonderful and fantastic project in the whole world, and anybody who does not support it should be ashamed of themselves. Please, please, please help these incredible heroes! These teenagers are true angels, and the town would be a terrible, lonely place without them. They are the kindest, bravest and most generous people anyone has ever met. Every single person who reads this must do something today, not tomorrow. Believe me, if you do nothing, you will regret it forever!",
+              "sport": "Friday Kick-Off is simply the most amazing, wonderful and fantastic project in the whole world, and anybody who does not support it should be ashamed of themselves. Please, please, please help these incredible heroes! These teenagers are true angels, and the town would be a terrible, lonely place without them. They are the kindest, bravest and most generous people anyone has ever met. Every single person who reads this must do something today, not tomorrow. Believe me, if you do nothing, you will regret it forever!",
+              "reading": "Reading Buddies is simply the most amazing, wonderful and fantastic project in the whole world, and anybody who does not support it should be ashamed of themselves. Please, please, please help these incredible heroes! These teenagers are true angels, and the town would be a terrible, lonely place without them. They are the kindest, bravest and most generous people anyone has ever met. Every single person who reads this must do something today, not tomorrow. Believe me, if you do nothing, you will regret it forever!"
+            }
+          }
         },
         {
           "l": "B",
           "id": "join",
           "label": "Join the team",
-          "why": "Gives readers three concrete ways to take part, starting with the easiest one.",
+          "why": "Gives readers three concrete ways to take part, so that everyone can find one that suits them.",
           "text": {
             "by": "hero",
             "map": {
               "tech": "{{A project like this needs support.}} {{The easiest way to help is to}} tell older relatives or neighbours [[who]] struggle with technology about Tech Tuesday. {{Why not join as a volunteer?}} You do not need to be an expert, just patient and friendly. {{Finally,}} you could give the team old phones [[that]] you no longer use.",
-              "sport": "{{A project like this needs support.}} {{The easiest way to help is to}} come along on a Friday and help with the games, as no coaching experience is needed. {{Why not donate}} sports equipment [[that]] is lying around at home, such as balls, cones or football shirts? {{Finally,}} tell families with younger children about the project.",
-              "reading": "{{A project like this needs support.}} {{The easiest way to help is to}} become a reading buddy yourself: you only need two hours a week, and the team shows newcomers everything. {{Why not give}} children’s books [[that]] you no longer read to the library? {{Finally,}} tell families with young children about Reading Buddies."
+              "sport": "{{A project like this needs support.}} {{One way to help is to}} come along on a Friday and help with the games, as no coaching experience is needed. {{Why not donate}} sports equipment [[that]] is lying around at home, such as balls, cones or football shirts? {{Finally,}} tell families with younger children about the project.",
+              "reading": "{{A project like this needs support.}} {{One way to help is to}} become a reading buddy yourself: you only need two hours a week, and the team shows newcomers everything. {{Why not give}} children’s books [[that]] you no longer read to the library? {{Finally,}} tell families with young children about Reading Buddies."
+            }
+          },
+          "textLong": {
+            "by": "hero",
+            "map": {
+              "tech": "{{A project like this needs support.}} {{The easiest way to help is to}} tell older relatives or neighbours [[who]] struggle with technology about Tech Tuesday. {{A personal tip from someone they trust}} often works better than a poster. {{Why not join as a volunteer?}} You do not need to be an expert, just patient and friendly, and the team shows every newcomer the ropes. {{Finally,}} you could give the team old phones [[that]] you no longer use, so that visitors can practise without being afraid of breaking anything.",
+              "sport": "{{A project like this needs support.}} {{One way to help is to}} come along on a Friday and help with the games, as no coaching experience is needed. {{Even one evening a month helps}} when forty children turn up. {{Why not donate}} sports equipment [[that]] is lying around at home, such as balls, cones or football shirts? A bag of old shirts can quickly become a set of team colours. {{Finally,}} tell families with younger children about the project, especially families [[who]] have just moved to the area.",
+              "reading": "{{A project like this needs support.}} {{One way to help is to}} become a reading buddy yourself: you only need two hours a week, and the team shows newcomers everything. {{What matters most is patience,}} not a love of long novels. {{Why not give}} children’s books [[that]] you no longer read to the library? {{Picture books in good condition}} are always welcome. {{Finally,}} tell families with young children about Reading Buddies, as many parents still do not know that the project exists."
             }
           }
         },
@@ -426,13 +387,23 @@
           "text": {
             "by": "hero",
             "map": {
-              "tech": "{{Even readers [[who]] cannot come along can help a project like this.}} For instance, you can follow Tech Tuesday online and share its posts. {{Why not start at home?}} Show a grandparent one new thing on their phone this week. {{Better still,}} you could help neighbours [[who]] find online banking confusing.",
+              "tech": "{{Even readers [[who]] cannot come along can help a project like this.}} For instance, you can follow Tech Tuesday online and share its posts. {{Why not start at home?}} Show a grandparent one new thing on their phone this week. {{Better still,}} you could help neighbours [[who]] find online forms confusing.",
               "sport": "{{Even readers [[who]] cannot come along can help a project like this.}} For instance, you can follow Friday Kick-Off online and share its posts. {{Why not ask}} a younger brother, sister or neighbour [[who]] is bored on Friday evenings to join in? {{Better still,}} you could start a similar game in a park near you.",
               "reading": "{{Even readers [[who]] cannot come along can help a project like this.}} For instance, you can follow Reading Buddies online and share its posts. {{Why not read}} a story to a younger brother, sister or cousin this week? {{Better still,}} you could start a reading corner at your own school, [[where]] older students read with younger ones."
             }
+          },
+          "textLong": {
+            "by": "hero",
+            "map": {
+              "tech": "{{Even readers [[who]] cannot come along can help a project like this.}} For instance, you can follow Tech Tuesday online and share its posts, so that more families hear about it. {{Why not start at home?}} Show a grandparent one new thing on their phone this week, such as how to make the letters bigger. {{It only takes five minutes,}} and it can save them a lot of stress. {{Better still,}} you could help neighbours [[who]] find online forms confusing. Small steps like these are exactly what the project is about.",
+              "sport": "{{Even readers [[who]] cannot come along can help a project like this.}} For instance, you can follow Friday Kick-Off online and share its posts, so that more families hear about it. {{Why not ask}} a younger brother, sister or neighbour [[who]] is bored on Friday evenings to join in? {{Shy children find it easier to take part}} when they already know someone there. {{Better still,}} you could start a similar game in a park near you. All you need is a ball, a free evening and a few friends.",
+              "reading": "{{Even readers [[who]] cannot come along can help a project like this.}} For instance, you can follow Reading Buddies online and share its posts, so that more families hear about it. {{Why not read}} a story to a younger brother, sister or cousin this week? {{Ten minutes at bedtime are enough,}} and small children love hearing the same story again and again. {{Better still,}} you could start a reading corner at your own school, [[where]] older students read with younger ones once a week."
+            }
           }
         }
-      ]
+      ],
+      "ownLong": "Copy the frame. Then add your own ideas for how readers can help and give a reason for each one.",
+      "ownLongDe": "Gerüst abschreiben, dann eigene Ideen ergänzen, wie Leser:innen helfen können, und jede Idee begründen."
     },
     {
       "id": "concl",
@@ -448,7 +419,7 @@
           "id": "sum",
           "label": "Sum it up",
           "why": "Sums up the message of the article and links back to the award.",
-          "text": "{{All in all, you do not have to be famous to be a hero.}} {NAME} and the team show that one small idea can change a whole neighbourhood. {{Whoever wins the Young Citizen Award,}} this is a project [[that]] deserves our votes and our support."
+          "text": "{{All in all, you do not have to be famous to be a hero.}} {NAME} and the team show that one small idea can change a whole neighbourhood. {{When you vote for this year’s Young Citizen Award,}} remember this project, [[which]] deserves our votes and our support."
         },
         {
           "l": "B",
@@ -513,12 +484,12 @@
         {
           "l": "D",
           "id": "trap",
-          "label": "Hero and place",
+          "label": "Name the award",
           "trap": true,
           "crit": "TA",
-          "text": "A young hero in our town",
-          "reject": "Too general: this could stand above every article on the shortlist, and it says nothing about our project. A good title is specific and makes readers curious.",
-          "rejectDe": "Zu allgemein: Das könnte über jedem Artikel der Shortlist stehen und verrät nichts über unser Projekt."
+          "text": "Why we need the Young Citizen Award",
+          "reject": "This title is about the award, not about our project: readers would expect an article on why the town needs the prize. A title has to say what the article is really about.",
+          "rejectDe": "Der Titel handelt vom Preis, nicht von unserem Projekt: Leser:innen erwarten einen Artikel darüber, warum die Stadt den Preis braucht. Der Titel muss zum Inhalt passen."
         }
       ]
     }
@@ -527,9 +498,7 @@
     "title",
     "intro",
     "what",
-    "start",
     "why",
-    "voice",
     "involve",
     "concl"
   ],
@@ -559,9 +528,9 @@
   "teacher": {
     "aim": "Die Klasse baut gemeinsam einen B1-Artikel über ein erfundenes Jugendprojekt, das für einen Preis der Stadt nominiert ist, und übt dabei Einstieg, Topic Sentences, Register und vor allem Relativsätze (defining und non-defining, who, which, that, whose, where).",
     "prep": "A/B/C/D-Karten austeilen (eine Garnitur pro Person). Beamer im Vollbild. Die Aufgabe am Beamer enthält alles Nötige. Die Klasse sollte Relativsätze schon kennen; kurz an den Unterschied erinnern: ohne Beistriche = notwendige Information (that möglich), mit Beistrichen = Zusatzinformation (nie that). Im Gerüst-Modus den eingebauten Timer nutzen: 5 min pro Absatz, bei Bedarf +1.",
-    "heft": "Neue Seite: Datum rechts oben, darunter „Article“ als Überschrift (wie am Beamer). Dann 2 Zeilen für den Titel frei lassen, der Titel kommt zuletzt. Jeder der fünf Absätze beginnt nach einer Leerzeile, am Rand steht das Kurzwort: Intro, Body 1, Body 2, Body 3, Conclusion. Fortsetzungen (nur lang) gehören ohne neue Zeile zum selben Absatz. Relativpronomen grün unterstreichen, bei non-defining Relativsätzen auch die Beistriche einkreisen.",
-    "flow": "Volltext kurz (50 min): 5 min Aufgabe lesen und Projekt wählen, 6 weitere Entscheidungen à 2 min, Abschreiben ca. 20 min, 5 min Checkliste. Volltext lang (Doppelstunde): wie kurz, dazu zwei Fortsetzungen: Body 1 wird um ein Zitat oder die Hürden am Anfang länger, Body 2 um eine Stimme von außen oder die Pläne des Teams. Das gemeinsame Schreiben dauert ca. 65 min; die restliche Zeit für die Besprechung der Fallen und den Beginn der Hausübung nutzen. Gerüst kurz (realistisch ca. 60 min): 5 min Aufgabe und Projekt; pro Absatz 1 min Entscheidung, 5–6 min eigenes Schreiben, 1 min Vergleich mit dem Modell; am Ende 5 min Checkliste. In einer 50-Minuten-Stunde den Schluss noch abstimmen und das Gerüst abschreiben lassen; Schluss fertigschreiben und eigenen Titel finden als Hausübung. Nach der Abstimmung in Body 1 die wichtigsten Fakten zum Projekt (Name, Ort, Wochentag) kurz an die Tafel schreiben. Gerüst lang: Doppelstunde (100 min), gleicher Rhythmus, dazwischen Zeit für eine Vergleichsrunde zu zweit.",
-    "traps": "Introduction C (TA): Textsorte verfehlt, Anfang eines Leserbriefs statt eines Artikels. Body 1, Fortsetzung C (CC, nur lang): Linking words passen nicht zur Logik (Furthermore vor einem Gegensatz, Instead ohne Alternative, Similarly ohne Ähnlichkeit). Body 2 B (LSA): which für Personen, everything what, that nach einem Beistrich. Body 3 A (LSR): viel zu umgangssprachlich für einen Artikel (guys, wanna, super cool, hang out with your mates). Title D (TA): zu allgemein, Etikett statt Titel. Kürzel: TA = Erfüllung der Aufgabenstellung, CC = Kohärenz und Kohäsion, LSR = Spektrum sprachlicher Mittel, LSA = Sprachrichtigkeit.",
-    "notes": "Der Artikel hat in beiden Längen genau fünf Absätze (Intro, drei Body paragraphs mit je einem Inhaltspunkt, Conclusion); die lange Fassung macht Body 1 und Body 2 länger, statt neue Absätze anzuhängen. Die drei Projekte und der Jugendpreis sind erfunden. Die Person, die das Projekt gestartet hat, bekommt von der Klasse einen Vornamen und ein Alter (16–19): nur erfundene Namen, keine Namen von Mitschüler:innen oder Lehrer:innen. Der Text kommt bei dieser Person ohne er/sie aus, daher passt jeder Name. Die Falle in Body 2 eignet sich gut für eine kurze Wiederholung der Relativpronomen an der Tafel. Differenzierung: Schnelle schreiben im Gerüst-Modus pro Absatz einen zusätzlichen Satz mit einem non-defining Relativsatz. Hausübung: denselben Artikel über ein echtes Projekt in der eigenen Umgebung oder eine zweite Fassung mit einem anderen Projekt."
+    "heft": "Neue Seite: Datum rechts oben, darunter „Article“ als Überschrift (wie am Beamer). Dann 2 Zeilen für den Titel frei lassen, der Titel kommt zuletzt. Jeder der fünf Absätze beginnt nach einer Leerzeile, am Rand steht das Kurzwort: Intro, Body 1, Body 2, Body 3, Conclusion. Relativpronomen grün unterstreichen, bei non-defining Relativsätzen auch die Beistriche einkreisen.",
+    "flow": "7 Entscheidungen: Projekt, fünf Absätze (jede Entscheidung ist ein ganzer Absatz), Titel. Volltext kurz (50 min): 5 min Aufgabe lesen und Projekt wählen, 6 weitere Entscheidungen à ca. 2 min, Abschreiben ca. 20 min, 5 min Checkliste. Volltext lang (Doppelstunde): dieselben 7 Entscheidungen, aber die drei Body paragraphs sind länger, daher ca. 30–35 min Abschreiben; die restliche Zeit für die Besprechung der Fallen und den Beginn der Hausübung nutzen. Gerüst kurz (realistisch ca. 60 min): 5 min Aufgabe und Projekt; pro Absatz 1 min Entscheidung, 5–6 min eigenes Schreiben, 1 min Vergleich mit dem Modell; am Ende 5 min Checkliste. In einer 50-Minuten-Stunde den Schluss noch abstimmen und das Gerüst abschreiben lassen; Schluss fertigschreiben und eigenen Titel finden als Hausübung. Nach der Abstimmung in Body 1 die wichtigsten Fakten zum Projekt (Name, Ort, Wochentag) kurz an die Tafel schreiben. Gerüst lang: Doppelstunde (100 min), gleicher Rhythmus, für jeden Body paragraph 7–8 min eigenes Schreiben, dazwischen eine Vergleichsrunde zu zweit.",
+    "traps": "Introduction C (TA): Textsorte verfehlt, Anfang eines Leserbriefs („Dear Editor“, Bitte um Veröffentlichung) statt eines Artikels. Body 2 B (LSA): which für Personen, everything what, that nach einem Beistrich. Body 3 A (LSR): viel zu emotional und aufdringlich (the most amazing … in the whole world, should be ashamed of themselves, please, please, please): Übertreibung und Druck statt konkreter Tipps und Gründe. Title D (TA): Der Titel handelt vom Preis, nicht von unserem Projekt, und passt nicht zum Inhalt. Kürzel: TA = Erfüllung der Aufgabenstellung, CC = Kohärenz und Kohäsion, LSR = Spektrum sprachlicher Mittel, LSA = Sprachrichtigkeit.",
+    "notes": "Der Artikel hat in beiden Längen genau fünf Absätze (Intro, drei Body paragraphs mit je einem Inhaltspunkt, Conclusion). Die lange Fassung hat dieselben Entscheidungen; die drei Body paragraphs sind länger (ein Zitat, eine Hürde vom Anfang, ein konkretes Beispiel, Gründe für jeden Tipp), Einleitung und Schluss bleiben gleich. Die drei Projekte und der Jugendpreis sind erfunden. Die Person, die das Projekt gestartet hat, bekommt von der Klasse einen Vornamen und ein Alter (16–19): nur erfundene Namen, keine Namen von Mitschüler:innen oder Lehrer:innen. Der Text kommt bei dieser Person ohne er/sie aus, daher passt jeder Name. Die Falle in Body 2 eignet sich gut für eine kurze Wiederholung der Relativpronomen an der Tafel. Differenzierung: Schnelle schreiben im Gerüst-Modus pro Absatz einen zusätzlichen Satz mit einem non-defining Relativsatz. Hausübung: denselben Artikel über ein echtes Projekt in der eigenen Umgebung oder eine zweite Fassung mit einem anderen Projekt."
   }
 }
