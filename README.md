@@ -35,4 +35,4 @@ Die Datei enthält eine Content-Security-Policy mit den Hashes der beiden Skript
 
 ## Regeln in Kürze
 
-Oberstufe (9. bis 12. Schulstufe): jeder Text hat genau fünf Absätze (Introduction, Body paragraph 1 bis 3, Conclusion); die lange Fassung verlängert Absätze, sie fügt keine hinzu. Jede Kombination von Bausteinen ergibt einen zusammenhängenden Text. Keine Bezüge zu Lehrwerken, Klassen oder Schulen. Alle handelnden Personen, Schulen, Firmen, Vereine, Medien und Veranstaltungen sind erfunden; reale Orte und öffentlich bekannte Tatsachen dienen nur als Kulisse. E-Mail-Adressen enden auf `.example`.
+Oberstufe (9. bis 12. Schulstufe): jeder Text hat genau fünf Absätze (Introduction, Body paragraph 1 bis 3, Conclusion); jede Entscheidung gilt einem ganzen Absatz. Die lange Fassung hat dieselben Entscheidungen mit längeren Absätzen; sie fügt keine hinzu. Jede Kombination ergibt einen zusammenhängenden Text. Keine Bezüge zu Lehrwerken, Klassen oder Schulen. Alle handelnden Personen, Schulen, Firmen, Vereine, Medien und Veranstaltungen sind erfunden; reale Orte und öffentlich bekannte Tatsachen dienen nur als Kulisse. E-Mail-Adressen enden auf `.example`.
