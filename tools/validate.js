@@ -489,6 +489,13 @@ if (UPPER && (P.textType === "email" || P.textType === "letter") && slots.greeti
   }));
   pair.forEach(W);
 }
+// (b2) all grades: greeting and sign-off formula both end with a comma (never a comma on one and “!” or nothing on the other)
+if (["email", "letter", "postcard"].includes(P.textType) && slots.greeting && slots.signoff) {
+  const first = t => plainT(t).split("\n")[0].trim();
+  [slots.greeting, slots.signoff].forEach(st => st.options.filter(o => !o.trap).forEach(o => variants(o, st).forEach(v => {
+    const s = first(v.text); if (s && !/,$/.test(s)) W(`${st.slot === "greeting" ? "greeting" : "sign-off"} ${st.id}/${o.id}${v.cond ? "[" + v.cond[1] + "]" : ""}: “${s}” – greeting and sign-off both end with a comma (“Hi Ravi,” … “Take care,”)`);
+  })));
+}
 // (c) letter to the editor: the first sentence names the article (title in “…” or the word article/report), the publication and the date
 if (P.textType === "letter") {
   const DATE = /\b(yesterday|today|this (morning|week|weekend|month)|last (week|month|weekend|year|night|Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday)|Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday|\d{1,2}(st|nd|rd|th)? (January|February|March|April|May|June|July|August|September|October|November|December)|(January|February|March|April|May|June|July|August|September|October|November|December) \d{1,2}|\d{1,2}\/\d{1,2}(\/\d{2,4})?)\b/i;

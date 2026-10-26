@@ -186,13 +186,14 @@ Slots `title` and `subject` are excluded from the word count. All other slots co
 | Informal e-mail: “Hi Tom,” / “Dear Tom,” (first name) | “Best wishes,” / “Take care,” (also “Kind regards,”, “Best regards,” here only) |
 
 - No “Kind regards”, “Best regards”, “Best wishes” in formal texts: when a formal greeting is a valid option, every valid sign-off on the same path must be its pair. A greeting that depends on a branching step (`by` map, e.g. “addressee”: name known / unknown) gets a sign-off `by` map on the same step.
+- Commas: the greeting and the sign-off both end with a comma (“Hi Ravi,” … “Take care,”), in every grade and text type with a sign-off formula (postcard, e-mail, letter). Never a comma on one and an exclamation mark or nothing on the other. The board reminds students when they copy the greeting.
 - “Hello Ms Morgan,” / “Hi Mr Hill,” mixes an informal greeting with a title: never a valid option (it can be a trap, `crit` TA).
 - A wrong greeting or sign-off form is a text type convention (`crit` TA); a too chatty or too stiff tone in the text is register (`crit` LSR).
 
 ### What the validator checks (text types)
 
 - Errors: e-mail/letter addresses that do not end in `.example`; a letter with `meta.to` but without sender address in `meta.from` or without `meta.name`; lengths that do not fit grade and text type (§7).
-- Warnings: e-mail without `meta.to`/`meta.from` or without a subject step; letter (grades 9–12) without the e-mail header, old schema (`meta.from` as the name), a subject step without `meta.to`; greeting/sign-off pairs (table above) and “Hello/Hi + title”; letter to the editor: an Introduction option whose first sentence does not contain a quoted title (“…”) or the word “article”/“report” together with a date expression (yesterday, last week, on Monday, 3 May …); essay: a sentence ending in “?” outside the Introduction and the title; `minutes`, `task.words` or `focus.min` entries for a length the pack does not have.
+- Warnings: e-mail without `meta.to`/`meta.from` or without a subject step; letter (grades 9–12) without the e-mail header, old schema (`meta.from` as the name), a subject step without `meta.to`; greeting/sign-off pairs (table above) and “Hello/Hi + title”; a greeting or sign-off formula without the final comma (e-mail, letter, postcard, all grades); letter to the editor: an Introduction option whose first sentence does not contain a quoted title (“…”) or the word “article”/“report” together with a date expression (yesterday, last week, on Monday, 3 May …); essay: a sentence ending in “?” outside the Introduction and the title; `minutes`, `task.words` or `focus.min` entries for a length the pack does not have.
 ## 7. Length (fixed per grade, the validator enforces label, min and max)
 
 | Grade | Level | Lengths |

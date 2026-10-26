@@ -1656,7 +1656,10 @@ function pressTimer(min){ document.querySelectorAll("[data-min]").forEach(b => b
 function stopTimerUI(){ stopTimer(); const c = $("clock"); if(c){ c.textContent = "0:00"; c.className = "clock idle"; } pressTimer(-1); }
 function pageHTML(){
   const p = P(); const rows = []; const blog = underTitle(p);
-  const metaRow = hasLayout(p) ? `<div class="blk meta old"><div class="tag">${metaTag(p)}</div><div class="t">${metaHTML(metaRows(p, false))}</div></div>` : "";
+  // e-mail, letter to the editor, report: the chosen subject is the header's "Subject:" line (copied: inside the header; being copied: its own yellow row under it)
+  const headSubj = (hasMailHead(p) || p.textType === "report") && !!slotText("subject");
+  const subjNew = headSubj && R.last === "subject";
+  const metaRow = hasLayout(p) ? `<div class="blk meta old"><div class="tag">${metaTag(p)}</div><div class="t">${metaHTML(metaRows(p, headSubj && !subjNew))}</div></div>` : "";
   if(metaRow && !blog) rows.push(metaRow);
   let metaDone = !metaRow || !blog;
   if(!metaDone && !p.order.includes("title")){ rows.push(metaRow); metaDone = true; }
@@ -1664,6 +1667,10 @@ function pageHTML(){
     const st = slotStep(slot);
     if(st && curSteps().includes(st)){
       const t = slotText(slot); const isNew = slot === R.last;
+      if(t && slot === "subject" && headSubj){
+        if(subjNew) rows.push(`<div class="blk meta s-subject subjrow new"><div class="tag"></div><div class="t"><b>Subject:</b> <b>${render_text(t, "final")}</b></div></div>`);
+        return;
+      }
       if(!t){
         if(slot === "title" && stepIndexOfSlot(slot) > R.si) rows.push(`<div class="blk empty s-title"><div class="tag">${esc(st.part)}</div><div class="t">We choose the ${titleWord(p)} at the end. Leave 2 lines free!</div></div>`);
         if(slot === "subject" && stepIndexOfSlot(slot) > R.si) rows.push(`<div class="blk empty s-subject"><div class="tag">${esc(st.part)}</div><div class="t">We choose the subject line later. Leave it open in the header!</div></div>`);
@@ -1760,7 +1767,12 @@ function whereText(st){
   }
   if(st.slot === "subject") return "Write the subject line after ‘Subject:’ in the header.";
   const tt = p.textType;
-  if(st.slot === "greeting") return tt === "postcard" ? "Write the greeting on the left half, on its own line." : tt === "invitation" ? "Write the greeting inside the frame, on its own line." : "Write the greeting on its own line. Then leave one line free.";
+  if(st.slot === "greeting"){
+    // greeting and sign-off: both with a comma (or both without); the board says so when the greeting has one
+    const g = plainText(pickedText(st) || "").split("\n")[0].trim();
+    const comma = tt !== "invitation" && /,$/.test(g) && stepIndexOfSlot("signoff") >= 0 ? " Put a comma after it, and after the sign-off, too." : "";
+    return tt === "postcard" ? "Write the greeting on the left half, on its own line." + comma : tt === "invitation" ? "Write the greeting inside the frame, on its own line." : "Write the greeting on its own line." + comma + " Then leave one line free.";
+  }
   const t = pickedText(st);
   if(st.slot === "signoff"){
     const first = plainText(t).split("\n")[0].trim(); const fromGap = /\{[A-Z]/.test((p.meta && p.meta.from) || "");
@@ -1797,7 +1809,7 @@ function docHTML(){
   const para = g => `<p>${g.map(s => render_text(slotText(s), "final")).join(" ")}</p>`;
   const title = slotText("title"), subject = slotText("subject");
   const date = m.date ? metaFinal(m.date) : today();
-  const mailhead = hasMailHead(p) ? `<dl class="mailhead">${mailHead(p, metaFinal).map(([k, v]) => `<dt>${k}</dt><dd>${esc(v)}</dd>`).join("")}${subject ? `<dt>Subject</dt><dd><b>${render_text(subject, "final")}</b></dd>` : ""}</dl>` : "";
+  const mailhead = hasMailHead(p) ? `<dl class="mailhead">${mailHead(p, metaFinal).map(([k, v]) => `<dt>${k}:</dt><dd>${esc(v)}</dd>`).join("")}${subject ? `<dt>Subject:</dt><dd><b>${render_text(subject, "final")}</b></dd>` : ""}</dl>` : "";
   if(tt === "email") return `<article class="doc email" lang="en-GB">${mailhead}${body.map(para).join("")}</article>`;
   if(tt === "report") return `<article class="doc report" lang="en-GB"><div class="rhead">${m.to ? `<b>To:</b><span>${esc(metaFinal(m.to))}</span>` : ""}${m.from ? `<b>From:</b><span>${esc(metaFinal(m.from))}</span>` : ""}<b>Date:</b><span>${esc(date)}</span>${subject ? `<b>Subject:</b><span><b>${render_text(subject, "final")}</b></span>` : ""}</div>${title ? `<h2>${render_text(title, "final")}</h2>` : ""}${body.map(para).join("")}</article>`;
   if(tt === "blog"){ const user = metaFinal(m.user || "our class");
@@ -1807,7 +1819,7 @@ function docHTML(){
     const addr = addrLines(p);
     return `<article class="doc postcard" lang="en-GB"><div class="pc-msg">${h2}${body.map(para).join("")}</div><div class="pc-side"><div class="pc-stamp" aria-hidden="true">STAMP</div>${addr.length ? `<div class="pc-addr">${addr.map(l => `<span>${esc(metaFinal(l))}</span>`).join("")}</div>` : ""}</div></article>`;
   }
-  if(tt === "message") return `<article class="doc message" lang="en-GB">${m.to || m.from ? `<dl class="mailhead">${m.to ? `<dt>To</dt><dd>${esc(metaFinal(m.to))}</dd>` : ""}${m.from ? `<dt>From</dt><dd>${esc(metaFinal(m.from))}</dd>` : ""}</dl>` : ""}${h2}${body.map(para).join("")}</article>`;
+  if(tt === "message") return `<article class="doc message" lang="en-GB">${m.to || m.from ? `<dl class="mailhead">${m.to ? `<dt>To:</dt><dd>${esc(metaFinal(m.to))}</dd>` : ""}${m.from ? `<dt>From:</dt><dd>${esc(metaFinal(m.from))}</dd>` : ""}</dl>` : ""}${h2}${body.map(para).join("")}</article>`;
   if(tt === "diary") return `<article class="doc diary" lang="en-GB"><div class="ddate">${esc(diaryDate(p))}</div>${m.dear ? `<p>${esc(metaFinal(m.dear))}</p>` : ""}${h2}${body.map(para).join("")}</article>`;
   if(tt === "letter"){ const sender = senderLine(p); return `<article class="doc letter${mailhead ? " email" : ""}" lang="en-GB">${mailhead}${h2}${body.map(para).join("")}${sender ? `<p class="sender">${esc(sender)}</p>` : ""}</article>`; }
   if(tt === "review"){ const n = reviewRating(p), by = reviewBy(p);
