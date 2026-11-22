@@ -2043,4 +2043,14 @@ document.addEventListener("fullscreenchange", refitSoon);
 if(document.fonts){ if(document.fonts.ready) document.fonts.ready.then(refit); try{ document.fonts.addEventListener("loadingdone", refit); }catch(e){} }
 
 try{ render(); }catch(e){ console.error(e); view = "library"; R = null; render(); }
+
+// Besucherzähler (GoatCounter, Site writingroom): zählt nur die Online-Fassung auf writing.bernhardgmeiner.com.
+// Die heruntergeladene Datei sendet nichts. Eine Anfrage pro Aufruf, keine Cookies, kein Browserspeicher.
+// Felder wie in count.v5.js von GoatCounter (p, r, t, s, b, q, rnd); die CSP erlaubt nur diese eine Adresse.
+if(location.protocol === "https:" && location.hostname === "writing.bernhardgmeiner.com" && navigator.sendBeacon){
+  try{
+    const q = { p: location.pathname || "/", t: "Writing Room", r: document.referrer, s: [screen.width, screen.height, window.devicePixelRatio || 1].join(","), b: navigator.webdriver ? 153 : 0, q: location.search, rnd: Math.random().toString(36).slice(2, 7) };
+    navigator.sendBeacon("https://writingroom.goatcounter.com/count?" + Object.keys(q).filter(k => q[k] !== "").map(k => k + "=" + encodeURIComponent(q[k])).join("&"));
+  }catch(e){}
+}
 </script>

@@ -89,12 +89,13 @@ ${body.trim()}
 </body>
 </html>
 `);
-// Content-Security-Policy for the standalone file: only the two inline scripts (by hash) may run, nothing may connect anywhere
+// Content-Security-Policy for the standalone file: only the two inline scripts (by hash) may run; the only connection allowed is the
+// visitor counter (GoatCounter), which the engine fires on writing.bernhardgmeiner.com only, never in a downloaded copy
 const crypto = require("crypto");
 const scripts = [...full.matchAll(/<script\b[^>]*>([\s\S]*?)<\/script>/g)];
 if (scripts.length !== 2 || /<script\s+src/i.test(full)) { console.log("expected exactly two inline scripts (app and old-browser guard)"); process.exit(1); }
 const shas = scripts.map(m => `'sha256-${crypto.createHash("sha256").update(m[1]).digest("base64")}'`).join(" ");
-const CSP = `default-src 'none'; script-src ${shas}; style-src 'unsafe-inline'; font-src data:; img-src data:; connect-src 'none'; frame-src 'none'; object-src 'none'; media-src 'none'; worker-src 'none'; manifest-src 'none'; form-action 'none'; base-uri 'none'`;
+const CSP = `default-src 'none'; script-src ${shas}; style-src 'unsafe-inline'; font-src data:; img-src data:; connect-src https://writingroom.goatcounter.com; frame-src 'none'; object-src 'none'; media-src 'none'; worker-src 'none'; manifest-src 'none'; form-action 'none'; base-uri 'none'`;
 full = full.replace('<meta charset="utf-8">', () => `<meta charset="utf-8">\n<meta http-equiv="Content-Security-Policy" content="${CSP}">\n<meta name="referrer" content="no-referrer">`);
 for (const [name, s] of [["full", full], ["fragment", fragment]]) {
   const left = /\/\*__PACKS__\*\/|__CARDS_PDF__|\/\*__OFL__\*\/|__BUILD_DATE__|<!--__FONTS__-->/.exec(s);
